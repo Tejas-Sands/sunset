@@ -1,0 +1,204 @@
+{
+  "checked_date": "2026-10-22",
+  "sources": [
+    {
+      "id": "vercel-plans",
+      "title": "Vercel pricing and plan eligibility",
+      "url": "https://vercel.com/pricing",
+      "supports": "Hobby is intended for personal non-commercial use. A later real commercial service needs an eligible plan.",
+      "kind": "primary"
+    },
+    {
+      "id": "vercel-hobby",
+      "title": "Vercel Hobby included usage",
+      "url": "https://vercel.com/docs/plans/hobby",
+      "supports": "Current CPU, transfer and invocation allowances informed the small operating envelope.",
+      "kind": "primary"
+    },
+    {
+      "id": "vercel-functions",
+      "title": "Vercel Function limits",
+      "url": "https://vercel.com/docs/functions/limitations",
+      "supports": "Node.js Function duration, body-size and runtime constraints. Short requests and direct uploads avoid depending on large request payloads.",
+      "kind": "primary"
+    },
+    {
+      "id": "vercel-cron",
+      "title": "Vercel cron usage",
+      "url": "https://vercel.com/docs/cron-jobs/usage-and-pricing",
+      "supports": "Hobby has daily cron frequency and imprecise timing. Contract deadlines and refunds must not rely on it.",
+      "kind": "primary"
+    },
+    {
+      "id": "supabase-pricing",
+      "title": "Supabase Free pricing",
+      "url": "https://supabase.com/pricing",
+      "supports": "Free database, file and egress allowances, active project limit and inactivity pause. Checked on 22 October 2026.",
+      "kind": "primary"
+    },
+    {
+      "id": "supabase-storage",
+      "title": "Supabase Storage access control",
+      "url": "https://supabase.com/docs/guides/storage/security/access-control",
+      "supports": "Storage access uses explicit policies. Backend credentials remain privileged; API authorization is still necessary.",
+      "kind": "primary"
+    },
+    {
+      "id": "supabase-uploads",
+      "title": "Supabase signed upload URL",
+      "url": "https://supabase.com/docs/reference/javascript/storage-from-createsigneduploadurl",
+      "supports": "Direct signed uploads bypass application payload limits. Current documented signed upload validity is two hours.",
+      "kind": "primary"
+    },
+    {
+      "id": "turso-pricing",
+      "title": "Turso pricing",
+      "url": "https://turso.tech/pricing",
+      "supports": "A free SQLite option was compared. Supabase was selected to combine the database and file storage in one service; no claim that Turso is unsuitable.",
+      "kind": "primary"
+    },
+    {
+      "id": "near-api",
+      "title": "NEAR API libraries",
+      "url": "https://docs.near.org/tools/near-api",
+      "supports": "Official JavaScript library choices for RPC and transactions. Actual versions remain to be pinned at implementation.",
+      "kind": "primary"
+    },
+    {
+      "id": "near-wallets",
+      "title": "NEAR wallet login",
+      "url": "https://docs.near.org/web3-apps/tutorials/wallet-login",
+      "supports": "Official wallet-connector documentation found through the API library page.",
+      "kind": "primary"
+    },
+    {
+      "id": "wallet-signing",
+      "title": "Wallet Selector signing API",
+      "url": "https://github.com/near/wallet-selector/blob/main/packages/core/docs/api/wallet.md",
+      "supports": "NEP-413 message signing interface, including browser-wallet redirect behavior. Application-specific nonce and session policies are our design.",
+      "kind": "primary"
+    },
+    {
+      "id": "near-rpc",
+      "title": "NEAR RPC providers",
+      "url": "https://docs.near.org/api/rpc/providers",
+      "supports": "Current public testnet endpoint choices. Public endpoints carry rate and availability assumptions.",
+      "kind": "primary"
+    },
+    {
+      "id": "near-cli",
+      "title": "NEAR CLI",
+      "url": "https://docs.near.org/tools/cli",
+      "supports": "Documented testnet faucet account-creation path; no user or contract account was created in this task.",
+      "kind": "primary"
+    },
+    {
+      "id": "near-async",
+      "title": "NEAR cross-contract calls",
+      "url": "https://docs.near.org/smart-contracts/anatomy/crosscontract",
+      "supports": "Independent receipts, callbacks and failure semantics inform withdrawal state and tests.",
+      "kind": "primary"
+    },
+    {
+      "id": "near-keys",
+      "title": "NEAR access keys",
+      "url": "https://docs.near.org/protocol/accounts-contracts/access-keys",
+      "supports": "Restricted keys and locked accounts. Key removal alone is insufficient if contract code can restore authority.",
+      "kind": "primary"
+    },
+    {
+      "id": "kolibri",
+      "title": "Learning Equality about Kolibri",
+      "url": "https://learningequality.org/kolibri/about-kolibri/",
+      "supports": "Existing open offline learning platform with custom resource support. SUNSET integration remains proposed and untested.",
+      "kind": "primary"
+    },
+    {
+      "id": "unicef-offline",
+      "title": "UNICEF Learning Passport offline model",
+      "url": "https://www.unicef.org/learningpassport/offline-learning",
+      "supports": "Existing hub and local network delivery model includes teacher/facilitator support. This is prior work, not a SUNSET partnership.",
+      "kind": "primary"
+    },
+    {
+      "id": "luanti-hosting",
+      "title": "Luanti server hosting documentation",
+      "url": "https://docs.luanti.org/for-server-hosts/setup/",
+      "supports": "Public multiplayer hosting has a distinct server and operating requirement; it is a later provider workload, not the Vercel control application.",
+      "kind": "primary"
+    },
+    {
+      "id": "hackathon",
+      "title": "Official NEAR hackathon instructions",
+      "url": "https://nearhackathon.com/HACKATHON.md",
+      "supports": "Event and submission dates and track/publication requirements. Homepage also describes a development period; pre-event code eligibility is not expressly resolved. See the dedicated timing research.",
+      "kind": "primary"
+    }
+  ],
+  "marketplace_discovery": {
+    "command": "vercel integration discover --category storage --format=json",
+    "read_only": true,
+    "relevant_results": [
+      {
+        "name": "Supabase",
+        "slug": "supabase"
+      },
+      {
+        "name": "Turso",
+        "slug": "tursocloud/database"
+      },
+      {
+        "name": "Neon",
+        "slug": "neon"
+      }
+    ],
+    "installed_or_provisioned": false,
+    "decision": "Select the user-named Supabase option for combined database and object storage under the zero-cost prototype constraint."
+  },
+  "verification_scope": "Official documentation supports platform capabilities and plan conditions. It does not validate the proposed application, cryptographic implementation, classroom deployment or educational outcomes.",
+  "failed_or_replaced_paths": [
+    {
+      "url": "https://docs.near.org/web3-apps/tutorials/wallets",
+      "result": "Not retrievable; replaced with the official wallet-login page linked from the API documentation."
+    }
+  ],
+  "architecture_inferences": [
+    "Reviewer-approved artifact and key binding is a disclosed trust model.",
+    "Buyer-assisted disclosure requires at least one authorized key holder retaining a usable backup.",
+    "A restricted managed release signer is a proposed implementation; its permission boundary must be tested.",
+    "The complete zero-cost core excludes mandatory paid inference and confidential execution."
+  ],
+  "rpc_status_checks": [
+    {
+      "url": "https://test.rpc.fastnear.com",
+      "checked_at": "2026-10-22T13:52:36.052363+00:00",
+      "chain_id": "testnet",
+      "latest_block_height": 274256090,
+      "syncing": false,
+      "read_only": true
+    },
+    {
+      "url": "https://testnet-rpc.intea.rs",
+      "checked_at": "2026-10-22T13:53:33.805870+00:00",
+      "chain_id": "testnet",
+      "latest_block_height": 274256194,
+      "syncing": false,
+      "read_only": true
+    },
+    {
+      "url": "https://archival-rpc.testnet.near.org",
+      "checked_at": "2026-10-22T13:53:37.903219+00:00",
+      "chain_id": "testnet",
+      "latest_block_height": 274256202,
+      "syncing": false,
+      "read_only": true
+    },
+    {
+      "url": "https://near-testnet.drpc.org",
+      "result": "HTTP 403 from this environment; excluded as a configured fallback",
+      "read_only": true
+    }
+  ],
+  "rpc_check_limit": "These status checks establish a response and claimed network identity at the recorded time. They are not a transaction, finality proof, latency benchmark or availability guarantee.",
+  "domain_research_register": "research/2026-10-22/sources.json"
+}
