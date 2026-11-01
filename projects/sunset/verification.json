@@ -1,0 +1,96 @@
+{
+  "verified_at": "2026-10-22T14:58:43.889231+00:00",
+  "verification_type": "Architecture, build-plan and domain-research artifact integrity/consistency; earlier read-only RPC checks retained",
+  "files": [
+    {
+      "name": "README.md",
+      "sha256": "4bbf8e37d71e481775babed8bc87022c3d2c8fd9275dfea878ae79cc210eb3b8",
+      "words": 466
+    },
+    {
+      "name": "ARCHITECTURE.md",
+      "sha256": "1f0afb7d49db8a01eb319e48ef7d095ab3d5bc1e6cd4bd086e290496d4c2d1fa",
+      "words": 2162
+    },
+    {
+      "name": "CONTRACT.md",
+      "sha256": "a1e8079b2640e9249e84d0f0abcd730129dd893f0fa2ee7873f75be24a031f85",
+      "words": 2004
+    },
+    {
+      "name": "WORKFLOWS.md",
+      "sha256": "33c1b8612981a6fde33222d72db107569f127ece0d8c875efdeb072d03b7044f",
+      "words": 2412
+    },
+    {
+      "name": "OPERATIONS.md",
+      "sha256": "34a9eccae822a9445919fbcdf4634d7cc8584ca50d8491828dbda61a9425b731",
+      "words": 2135
+    },
+    {
+      "name": "BUILD_PLAN.md",
+      "sha256": "501e65978c0a1cfb9cee134785425712eb3e5c0d930b894887471aebe41d6d46",
+      "words": 3457
+    },
+    {
+      "name": "sources.json",
+      "sha256": "c01bbecd1fedec8dacb4172bc32e789911c3b535093505f8438ac5f3b6d7ef5a",
+      "words": 809
+    },
+    {
+      "name": "status.json",
+      "sha256": "562aa89ea8ebdcd4b07e7a5cc6834d253e9a00ce4fc1e8b48cbf1842da82a6d7",
+      "words": 187
+    }
+  ],
+  "local_links_checked": 37,
+  "missing_local_links": [],
+  "project_citations_checked": 19,
+  "unique_primary_sources": 19,
+  "architecture_coverage_checks": {
+    "frontend_and_api_on_vercel": true,
+    "database_and_object_storage_selected": true,
+    "zero_cost_boundaries": true,
+    "testnet_only_scope": true,
+    "monetary_accounting_and_reservations": true,
+    "time_bound_refunds": true,
+    "buyer_assisted_release": true,
+    "independent_manifest_discovery": true,
+    "separate_access_budget": true,
+    "child_data_local": true,
+    "offline_export": true,
+    "precision_safe_projection": true,
+    "no_mandatory_paid_inference": true,
+    "real_implementation_checks_listed": true,
+    "no_implementation_success_claim": true
+  },
+  "successful_read_only_testnet_rpc_status_checks": 3,
+  "excluded_rpc_endpoint": "https://near-testnet.drpc.org returned HTTP 403 from this environment",
+  "lifeboat_preserved": true,
+  "product_code_written": false,
+  "resources_provisioned": false,
+  "implementation_tests_run": false,
+  "remaining_validation": "Contract invariants, wallet integration, API authorization, real free-resource deployment, key backups, asynchronous payouts, reproducible build and offline game export are specified but not implemented or verified by this documentation task.",
+  "build_plan_verification": {
+    "checked_at": "2026-10-22T14:37:18.585581+00:00",
+    "file": "BUILD_PLAN.md",
+    "tasks": 11,
+    "unchecked_steps": 57,
+    "local_link_scope": "All Markdown files directly in projects/sunset",
+    "local_links_checked": 17,
+    "missing_local_links": [],
+    "all_implementation_tasks_unstarted": true,
+    "existing_development_window_preserved": true,
+    "automatic_future_execution_configured": false,
+    "implementation_tests_run": false
+  },
+  "domain_research_verification": {
+    "record": "research/2026-10-22/verification.json",
+    "primary_sources_registered": 28,
+    "illustrative_scenarios_checked": 10,
+    "project_recursive_local_links_checked": 35,
+    "missing_local_links": [],
+    "pre_event_eligibility_distinction_recorded": true,
+    "implementation_tests_run": false
+  }
+}

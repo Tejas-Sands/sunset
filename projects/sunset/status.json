@@ -1,0 +1,52 @@
+{
+  "project": "SUNSET",
+  "status": "local_prototype_built",
+  "selected_date": "2026-10-22",
+  "selection_basis": "The user said: We are MAKING IT, and requested a directory and complete architecture.",
+  "final_build_choice": true,
+  "stage": "local_rehearsal_and_compiled_contract_verified",
+  "application": "Immediate capped public-resource sponsorship, independently recoverable encrypted learning pack and standalone offline game",
+  "budget_requirement": "Zero provider charges within free tiers; no mandatory paid inference, compute, domain or mainnet tokens",
+  "hosting_preference": "Frontend and application API together on Vercel",
+  "database_choice": "Supabase Free Postgres with Supabase Storage",
+  "network": "NEAR testnet only",
+  "product_code_written": true,
+  "resources_provisioned": false,
+  "development_window": {
+    "start": "2026-11-01T00:00:00Z",
+    "end": "2026-11-14T23:59:00Z"
+  },
+  "architecture_status": "User approved proceeding after reviewing the architecture overview; implementation verification remains required",
+  "implementation_plan": "docs/BUILD_LEDGER.md",
+  "implementation_execution": "Local product built with council review; live integrations and browser execution remain outstanding",
+  "first_milestone": "Native and compiled-WASM sponsorship/release/refund checks pass; actual NEAR Sandbox milestone remains unverified",
+  "implementation_tasks_completed": null,
+  "automatic_future_execution_configured": false,
+  "domain_research": "research/2026-10-22/README.md",
+  "hackathon_timing_interpretation": {
+    "event_and_submission_start_confirmed": "2026-11-01T00:00:00Z",
+    "pre_event_code_eligibility": "Current official Q-001 allows development since 2026-10-19 announcement",
+    "evidence": "../../research/2026-11-01-council/track-verification.md"
+  },
+  "research_refinements": "Council replaced pending paid-license acceptance with immediate sponsorship; larger Supabase/order architecture deferred.",
+  "last_updated": "2026-11-01",
+  "implemented": [
+    "Next.js static rehearsal UI",
+    "strict encrypted pack schema and offline export",
+    "exact artifact reviewer preview and private backups",
+    "compiled NEAR host ABI contract",
+    "independent offline recovery CLI",
+    "unsigned campaign preparation",
+    "local access-budget and deterministic coordination extensions",
+    "fail-closed pinned testnet viewer"
+  ],
+  "unverified": [
+    "actual browser and offline game execution",
+    "protocol NEAR Sandbox receipts and gas",
+    "live testnet deployment and wallet settlement",
+    "educator content review",
+    "sponsor demand",
+    "provider/public deployment"
+  ],
+  "original_implementation_plan": "BUILD_PLAN.md"
+}

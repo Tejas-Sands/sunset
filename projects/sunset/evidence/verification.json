@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-11-01T04:46:42.577Z",
+  "status": "local_prototype_verified_external_integration_unverified",
+  "network": "testnet_only",
+  "application": {
+    "framework": "Next.js 16.2.10",
+    "runtime": "Node.js 24.17.0",
+    "static_export": "out/",
+    "financial_state": "browser-local rehearsal, never claimed as actual settlement"
+  },
+  "checks": [
+    {
+      "command": "npm test",
+      "status": "passed",
+      "tests": 24,
+      "scope": "JS crypto/schema/accounting/deadlines/grants/policy/receipts/recovery/preparation/RPC block pinning"
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed"
+    },
+    {
+      "command": "NEXT_TELEMETRY_DISABLED=1 npm run build",
+      "status": "passed",
+      "output": "static / and /_not-found"
+    },
+    {
+      "command": "npm run test:contract",
+      "status": "passed",
+      "tests": 3,
+      "scope": "compiled actual WASM with transactional host doubles, not NEAR protocol execution"
+    },
+    {
+      "command": "CARGO_TARGET_DIR=/tmp/sunset-final-target cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml",
+      "status": "passed",
+      "tests": 10
+    },
+    {
+      "command": "cargo fmt --manifest-path contracts/sunset/Cargo.toml --check",
+      "status": "passed"
+    },
+    {
+      "command": "CARGO_TARGET_DIR=/tmp/sunset-final-target cargo clippy --locked --offline --manifest-path contracts/sunset/Cargo.toml --all-targets -- -D warnings",
+      "status": "passed"
+    },
+    {
+      "command": "npm ls --depth=0",
+      "status": "passed"
+    },
+    {
+      "command": "Parse generated standalone HTML runtime with node:vm.Script",
+      "status": "passed",
+      "scope": "syntax and packaging only"
+    }
+  ],
+  "contract_artifact": {
+    "path": "contracts/sunset/res/sunset_contract.wasm",
+    "bytes": 190561,
+    "sha256": "79a647abecd7f04e36d44dcd4b79f8310395e636f6165755e1a74d97887f4837",
+    "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+    "source_to_artifact": "Independent reviewer rebuilt byte-identical artifact",
+    "deployment": null,
+    "api": "new({owner}); owner-curated campaigns, approval, contribution, release, refunds, withdrawals, views"
+  },
+  "reviews": {
+    "council": "../../research/2026-11-01-council/README.md",
+    "contract": "../../research/2026-11-01-council/contract-review.md",
+    "frontend": "../../research/2026-11-01-council/frontend-review.md"
+  },
+  "unverified": [
+    {
+      "item": "Actual browser/mobile and network-disabled standalone HTML execution",
+      "reason": "agent-browser daemon failed; direct Chromium exited -5 with socket setsockopt Operation not permitted"
+    },
+    {
+      "item": "NEAR Sandbox receipt scenarios, protocol gas metering, real balances and callback failure execution",
+      "reason": "No actual protocol runtime used; host doubles deliberately distinguished"
+    },
+    {
+      "item": "Testnet deployment, wallet signing, live contribution/release/refund/withdrawal",
+      "reason": "No deployed contract or signer configured; viewer fails closed and plans remain unsigned"
+    },
+    {
+      "item": "Supabase/Vercel/shared hosted service",
+      "reason": "Not provisioned; reduced initial product needs no database"
+    },
+    {
+      "item": "Independent educator review and sponsor demand",
+      "reason": "Original technical sample, no measured adoption or educational outcome claimed"
+    }
+  ],
+  "limits": {
+    "contract_campaigns": 5,
+    "contract_registered_accounts": 100,
+    "account_capacity_exhaustion": "Residual documented availability risk",
+    "contract_service_grants": false,
+    "contract_agent_budgets": false,
+    "upgradeability": "No immutable deployment claimed",
+    "withdrawal_uncertainty": "Callback failure can leave pending state; no guessed recredit"
+  },
+  "publication": {
+    "repository_pushed": false,
+    "site_deployed": false,
+    "social_posted": false,
+    "hackathon_submitted": false
+  }
+}

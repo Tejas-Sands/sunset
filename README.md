@@ -1,15 +1,16 @@
-# SUNSET
+# NEAR hackathon — SUNSET
 
-**Support once. Share forever.**
+The selected product is now implemented locally. [Run SUNSET](projects/sunset/README.md), [read the council decision](research/2026-11-01-council/README.md), or [inspect verification evidence](projects/sunset/evidence/verification.json).
 
-SUNSET lets adults jointly sponsor a useful learning resource until it can be released for everyone. Its creator receives the capped funding when the committed release key is published on time. If funding or release conditions fail, contributors can claim refunds.
+```sh
+cd projects/sunset
+npm run dev
+```
 
-Learners keep a standalone offline game without a wallet, account, subscription or model API.
+Open http://127.0.0.1:3000. Dependencies are installed in this workspace; use `npm ci` on a fresh checkout. No model key or database is needed for the local rehearsal. A [standalone learning sample](projects/sunset/public/try-lantern-trail.html) is also included.
 
-## NEAR hackathon — November 2026
+SUNSET pools adult sponsorship until a resource's creator is paid for public release, or contributors qualify for refunds. Learners keep a self-contained game without a wallet. The app clearly separates browser rehearsal from real NEAR settlement. The compiled Rust contract still needs protocol Sandbox and live testnet evidence; no hosted service or submission has been published.
 
-The selected prototype combines a Next.js interface, authenticated encrypted content, independent offline recovery and a Rust NEAR testnet contract. Primary track targets are Open Innovation and Social Money. Additional tracks depend on demonstrated behavior and actual settlement evidence.
+Current targets: Open Innovation and Social Money. Real-World Money and agent tracks require additional real settlement evidence. [All thirteen tracks](research/2026-11-01-council/track-verification.md).
 
-Implementation and research commits follow this README. The prototype has not yet been deployed: browser execution, protocol Sandbox receipt scenarios, and live testnet payments remain unverified. No mainnet funds are involved.
-
-Software is MIT; the original sample lesson pack is CC0-1.0. Full setup, checks, council findings and implementation status will accompany the source.
+[Research archive](research/README.md) · [Candidates and selection](projects/README.md)
