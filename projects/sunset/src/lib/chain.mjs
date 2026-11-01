@@ -1,7 +1,7 @@
 export const RPC='https://test.rpc.fastnear.com';
 export const ACCOUNT_STORAGE='10000000000000000000000';
 export const CAMPAIGN_STORAGE='50000000000000000000000';
-const METHODS=['create_campaign','approve_campaign','contribute','publish_release','claim_refund','withdraw'];
+const METHODS=['create_campaign','approve_campaign','contribute','publish_release','claim_refund','withdraw','nft_transfer','nft_transfer_call','set_mirror'];
 export function validContract(id){return typeof id==='string'&&/^[a-z0-9]+(?:[-_][a-z0-9]+)*(?:\.[a-z0-9]+(?:[-_][a-z0-9]+)*)*\.testnet$/.test(id)&&id.length<=64;}
 export function transactionPlan(contract,method,args,deposit='0'){if(!validContract(contract))throw Error('Enter an actual deployed .testnet contract account');if(!METHODS.includes(method))throw Error('Method is outside the SUNSET transaction allowlist');if(!/^(0|[1-9]\d*)$/.test(deposit)||BigInt(deposit)>2n**128n-1n)throw Error('Invalid deposit');return {schema:1,network:'testnet',receiverId:contract,actions:[{type:'FunctionCall',params:{methodName:method,args,gas:'100000000000000',deposit}}],notice:'Unsigned plan. Confirm account, deployed code, terms and deposit before signing. Publishing a key exposes it even if the transaction fails.'};}
 export function verifyOutcome(outcome){if(outcome?.status?.Failure||outcome?.transaction_outcome?.outcome?.status?.Failure||outcome?.receipts_outcome?.some(r=>r.outcome?.status?.Failure))return 'failure';if(!outcome?.transaction_outcome||!outcome?.receipts_outcome?.length||!Object.hasOwn(outcome.status||{},'SuccessValue'))return 'pending';return outcome.receipts_outcome.every(r=>r.outcome?.status&&(Object.hasOwn(r.outcome.status,'SuccessValue')||Object.hasOwn(r.outcome.status,'SuccessReceiptId')))?'success':'pending';}

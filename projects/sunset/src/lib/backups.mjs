@@ -1,0 +1,2 @@
+import{base64ToBytes}from'./demo.mjs';import{keyCommitment}from'./pack.mjs';
+export async function validateReleaseBackup(backup,campaign){if(!backup||typeof backup!=='object'||backup.campaignId!==campaign.id||backup.manifestHash!==campaign.manifestHash||typeof backup.keyBase64!=='string')throw Error('Backup belongs to a different campaign or artifact');const commitment=await keyCommitment(base64ToBytes(backup.keyBase64));if(commitment!==campaign.keyCommitment)throw Error('Backup key does not match the committed resource');return backup.keyBase64;}
