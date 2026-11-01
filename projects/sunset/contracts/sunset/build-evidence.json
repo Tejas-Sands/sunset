@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "artifact": "res/sunset_contract.wasm",
-  "artifact_sha256": "448d107c66f54ec178ff979bba101a26e34c2b5b51f9097eecad636962668ccb",
-  "artifact_bytes": 266718,
+  "artifact_sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf",
+  "artifact_bytes": 266190,
   "source_revision": null,
   "source_revision_note": "Source digests identify this working-tree build; the containing verified publication commit is recorded by Git.",
   "source_sha256": {
@@ -12,7 +12,8 @@
     "src/lib.rs": "5ba7fe6427a3122552531d45e02a9e4ffb5e8ca233d86e8a4316ca881f71c1a0",
     "src/nft.rs": "0f7572447c884c03fa6b6f4cca0b783e970af42f87176cf2e011e38532c0900b",
     "src/tests.rs": "e79fb2a16ca81b0c77e77ef259c0d76ac82d4e32158fba2aedb288318052888b",
-    "tests/wasm.test.mjs": "394534ceb64e59c5aa9c78a2713f1b0e9feb317895219e3d842f72c6dd3a6704"
+    "tests/wasm.test.mjs": "394534ceb64e59c5aa9c78a2713f1b0e9feb317895219e3d842f72c6dd3a6704",
+    "scripts/build.sh": "839f9bed71a1734ea633c93b4d421fe08bf339fc4ed687c80bdea4f84b3faf5e"
   },
   "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
   "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
@@ -34,7 +35,20 @@
     "testnet_deployment": "not run; no network account provisioned",
     "protocol_gas_metering": "not verified",
     "actual_wallet_or_transfer_receipts": "not verified",
-    "test_first_failures": "Observed native unknown-method failures and missing compiled-Wasm NFT exports before implementation; strict token-id regression failed before correction. Native and compiled-Wasm same-account reviewer tests failed before the creator/reviewer distinction guard."
+    "test_first_failures": "Observed native unknown-method failures and missing compiled-Wasm NFT exports before implementation; strict token-id regression failed before correction. Native and compiled-Wasm same-account reviewer tests failed before the creator/reviewer distinction guard.",
+    "build_script_syntax": "passed",
+    "compiler_version_guard": "passed; rejected simulated installed rustc 1.95.0 before Cargo execution",
+    "canonical_path_reproducibility": {
+      "status": "passed",
+      "source_checkout_count": 2,
+      "separate_target_directories": true,
+      "source_and_target_paths_contain_spaces": true,
+      "cargo_home_symlink_with_spaces": true,
+      "ambient_rustflags_replaced": true,
+      "byte_identical": true,
+      "local_home_and_checkout_paths_absent": true,
+      "artifact_sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf"
+    }
   },
   "limitations": [
     "Compiled Wasm tests use transactional host doubles, not NEAR Sandbox.",
@@ -50,5 +64,20 @@
   "state_layout_version": 2,
   "fresh_deployment_required": true,
   "migration_supplied": false,
-  "callable_exports": 22
+  "callable_exports": 22,
+  "build": {
+    "compiler_version_requirement": "1.96.0",
+    "compiler_selection": "Exact installed rustc sysroot binary, selected through RUSTC; no toolchain installation.",
+    "dependency_resolution": [
+      "--locked",
+      "--offline"
+    ],
+    "rustflags": [
+      "--remap-path-prefix=<absolute contract directory>=/sunset-contract",
+      "--remap-path-prefix=<canonical Cargo cache root>=/cargo-cache",
+      "--remap-path-prefix=<exact installed rustc sysroot>=/rust-toolchain"
+    ],
+    "rustflags_encoding": "CARGO_ENCODED_RUSTFLAGS with ASCII unit separator (0x1f); replaces ambient Rust flags.",
+    "reproducibility_scope": "Two different source checkout directories and separate target directories; identical locked dependencies and rustc 1.96.0 (ac68faa20). No cross-compiler reproducibility claim."
+  }
 }

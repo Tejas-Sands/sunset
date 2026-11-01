@@ -10,7 +10,7 @@ The source uses NEAR's stable host ABI directly because this build environment h
 
 ## Build and checks
 
-The initial artifact was built with `rustc 1.96.0 (ac68faa20 2026-05-25)` and Cargo 1.96.0. Dependencies are pinned in Cargo.lock. The `wasm32-unknown-unknown` target must already be installed for an offline build.
+The build script requires an already installed `rustc 1.96.0` compiler and preserves Cargo's locked, offline dependency resolution. The verified compiler is `rustc 1.96.0 (ac68faa20 2026-05-25)` with Cargo 1.96.0. The `wasm32-unknown-unknown` target and dependencies pinned in Cargo.lock must already be installed/cached; the script does not install a toolchain. It replaces ambient Rust flags with three canonical `--remap-path-prefix` flags: the contract directory becomes `/sunset-contract`, the Cargo cache root becomes `/cargo-cache`, and the exact compiler sysroot becomes `/rust-toolchain`. Unit-separator `CARGO_ENCODED_RUSTFLAGS` preserves paths containing spaces. Two builds from different source directories with separate target directories produce the same checked-in Wasm with these locked dependencies and this compiler; this is not a cross-compiler reproducibility claim. Exact evidence and the build-script digest are in `build-evidence.json`.
 
 Use a current protocol-compatible Sandbox when performing network-runtime checks. [Nearcore 2.12 / protocol 84](https://github.com/near/nearcore/releases/tag/2.12.0) introduced the Wasmtime runtime and bulk-memory Wasm support; an older Sandbox can reject instructions emitted by a current Rust target.
 

@@ -10,3 +10,4 @@ private/
 *-private-release-backup.json
 release-args.json
 **/private-release-backup.json
+next-env.d.ts
