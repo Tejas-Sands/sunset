@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T06:37:00.013279+00:00",
+  "checked_at": "2026-11-01T12:50:51.803425+00:00",
   "status": "stewardship_product_locally_verified_external_execution_unverified",
   "network": "testnet_only",
   "application": {
@@ -8,7 +8,9 @@
     "static_export": "out/",
     "financial_state": "browser-local rehearsal, never claimed as actual settlement",
     "tokenization": "One NEP-171 stewardship NFT per released campaign; maintenance mirror only, no content or money rights",
-    "state_migration": "Existing browser packs/backups preserved; onchain layout2 requires fresh deployment"
+    "state_migration": "Existing browser packs/backups preserved; onchain layout2 requires fresh deployment",
+    "public_landing": "/",
+    "workspace_route": "/app/"
   },
   "checks": [
     {
@@ -87,6 +89,12 @@
       "command": "GitHub Actions checks workflow",
       "status": "prepared_not_run",
       "detail": "YAML parses; contains no deployment job"
+    },
+    {
+      "command": "npm run test:pages",
+      "status": "passed",
+      "scope": "server-rendered homepage, static app route, four view destinations, three campaign links, same-page anchors, standalone sample data and 15 local asset/link targets including local font",
+      "browser_execution": false
     }
   ],
   "contract_artifact": {
@@ -151,6 +159,19 @@
     "hackathon_submitted": false,
     "reason": "Existing GitHub account/connector/network access blocker; local verified commits retained"
   },
-  "source_revision": "8397cbf207dc6991dacab5de7748c01bb6b94d86",
-  "deployment_excluded_by_user": true
+  "source_revision": "f8a53ab54e42748270317f6a9f32680cdc5afb0f",
+  "deployment_excluded_by_user": true,
+  "ui_revision": {
+    "source_revision": "f8a53ab54e42748270317f6a9f32680cdc5afb0f",
+    "landing": "src/app/page.tsx",
+    "workspace": "src/app/app/page.tsx",
+    "generated_hero": "public/images/sunset-commons-hero.webp",
+    "hero_sha256": "a9c9c75fca04564fef01d07ca0451f27b50f3b9be1b144f779052eccb6892c37",
+    "hero_prompt": "public/images/README.md",
+    "font": "public/fonts/geist-latin-variable.woff2",
+    "font_license": "public/fonts/OFL-Geist.txt",
+    "design_record": "docs/LANDING_DESIGN.md",
+    "business_logic": "Existing ledger, crypto and game/recovery logic retained; routing/imports and presentation changed",
+    "verification": "Typecheck, 39 app tests, 10 compiled-Wasm scenarios, production export and static route/asset check passed. CSS parses; essential new contrast pairs checked. Browser/mobile rendering remains unverified because sockets are blocked."
+  }
 }

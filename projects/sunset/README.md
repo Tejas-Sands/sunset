@@ -16,9 +16,17 @@ npm ci
 npm run dev
 ```
 
-Open `http://127.0.0.1:3000`. No environment variables, database, model API key or wallet are needed for rehearsal. For a static build, run `npm run build` then `npm start` (uses Python 3's static server for `out/`). Deploying the static `out/` directory to free hosting is a separate action. Hosted browser state remains local to each visitor and does not form a shared service.
+Open `http://127.0.0.1:3000` for the public landing page, or `http://127.0.0.1:3000/app/` for the interactive workspace. Homepage links open the appropriate resource or workspace view. Existing browser-local packs and backups keep the same storage key. No environment variables, database, model API key or wallet are needed for rehearsal. For a static build, run `npm run build` then `npm start` (uses Python 3's static server for `out/`). Deploying the static `out/` directory to free hosting is a separate action. Hosted browser state remains local to each visitor and does not form a shared service.
 
 A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-lantern-trail.html). Its gameplay is self-contained; actual offline browser execution must still be checked on the target machine.
+
+## Landing and workspace
+
+The homepage introduces the commons with a custom SUNSET illustration, locally hosted Geist typography, sample resource scenarios, creator guidance, stewardship explanation and an accessible native FAQ. It renders its content without initializing the financial rehearsal or requiring JavaScript. `/app/` contains the full workspace, with a matching cream/terracotta/deep-green palette, larger text and roomier controls.
+
+The static export uses trailing slashes so `/app/?view=...` resolves through the included Python static server. Views are allowlisted and campaign links select only existing resource IDs. Public sample gameplay stays at `/try-lantern-trail.html`.
+
+`npm run test:pages` checks the exported landing, app route, CTA destinations, same-page anchors, local asset/font references and standalone sample data. It is static-output verification; real browser/mobile appearance and interaction remain unverified in the socket-restricted workspace. [Artwork and exact generation prompt](public/images/README.md); the bundled Geist font keeps its OFL license.
 
 ## Rehearse the complete story
 
@@ -64,6 +72,7 @@ This verifies manifest, ciphertext, key and plaintext commitments before writing
 ```sh
 npm run check
 npm run build
+npm run test:pages
 cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml
 cargo fmt --manifest-path contracts/sunset/Cargo.toml --check
 cargo clippy --locked --offline --manifest-path contracts/sunset/Cargo.toml --all-targets -- -D warnings

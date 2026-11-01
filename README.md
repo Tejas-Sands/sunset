@@ -7,7 +7,7 @@ cd projects/sunset
 npm run dev
 ```
 
-Open http://127.0.0.1:3000. Dependencies are installed in this workspace; use `npm ci` on a fresh checkout. No model key or database is needed for the local rehearsal. A [standalone learning sample](projects/sunset/public/try-lantern-trail.html) is also included.
+Open http://127.0.0.1:3000 for the new public landing page. The interactive workspace is at http://127.0.0.1:3000/app/. Dependencies are installed in this workspace; use `npm ci` on a fresh checkout. No model key or database is needed for the local rehearsal. A [standalone learning sample](projects/sunset/public/try-lantern-trail.html) is also included.
 
 SUNSET pools adult sponsorship until a resource's creator is paid for public release, or contributors qualify for refunds. Learners keep a self-contained game without a wallet. The app clearly separates browser rehearsal from real NEAR settlement. The compiled Rust contract still needs protocol Sandbox and live testnet evidence; no hosted service or submission has been published.
 

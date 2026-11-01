@@ -25,3 +25,9 @@ Implemented NEP-171 core/events, NEP-177 metadata and NEP-181 enumeration, one t
 Implemented exact schema-2 manifests plus adjacent ciphertext.sunset, bounded credential-free mirror retrieval and all original commitment checks, including a supplied onchain license hash. Existing schema-1 files and local packs/backups are preserved. Added stewardship interface, read-only configured-contract public resources, unsigned core/NFT transaction workbench and exact signer/action evidence matching. Supplied RPC files are not chain-authenticity proof.
 
 Prepared nine real local workflow scenarios, source/artifact digest validation, canonical path-remapped binary reproducibility across two separate checkouts, a checks-only CI workflow, demo/threat/content guides and an unsubmitted draft. Current final counts/artifact hashes are in evidence/verification.json. Browser/protocol and live/deployment evidence remain explicitly unverified. No account, hosting, provider, signed transaction or submission was created.
+
+## Public landing and visual refresh
+
+User requested a stronger landing page and said the interface looked mid. Added a static public homepage at `/`, moved the unchanged workspace business logic to `/app/`, and preserved browser-local state. The landing uses original generated book/sunset artwork, locally hosted licensed Geist, distinct resource scenarios, creator/stewardship sections and native FAQ controls. Workspace CSS improves type, spacing, contrast and responsive navigation.
+
+Prototype and sample-funding disclosures remain explicit and readable. No adoption statistics, testimonials, wallet connections, funding events or registered trademark claims were fabricated. Static export trailing-slash routing and allowlisted query destinations are verified after build. App/server browser launch still fails under the current socket restrictions; source/static-output checks do not establish visual browser QA.

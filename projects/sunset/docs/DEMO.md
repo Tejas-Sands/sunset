@@ -29,7 +29,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://127.0.0.1:3000` in a fresh browser profile. For a static demonstration, use `npm run build` followed by `npm start`. Start in **Local rehearsal**. In **How it works**, use **Reset sample rehearsal** only after saving any private backups you want to keep.
+Open `http://127.0.0.1:3000` in a fresh browser profile and select **Open the app**, or go directly to `http://127.0.0.1:3000/app/`. For a static demonstration, use `npm run build` followed by `npm start`. Start in **Local rehearsal**. In **How it works**, use **Reset sample rehearsal** only after saving any private backups you want to keep.
 
 ### 1. Inspect the public-release agreement
 
