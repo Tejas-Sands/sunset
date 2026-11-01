@@ -12,6 +12,7 @@ export async function fetchVerifiedMirror(uri,expected,{fetcher=fetch}={}){
  const manifest=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(rawManifest));
  if(manifest.schema!==2||manifest.ciphertext_path!=='ciphertext.sunset')throw Error('This manifest needs its retained artifact file; network recovery requires schema 2');
  if(manifest.plaintextHash!==expected.plaintextHash||manifest.ciphertextHash!==expected.ciphertextHash||manifest.keyCommitment!==expected.keyCommitment||manifest.license!=='CC0-1.0')throw Error('Manifest identity conflicts with the original agreement');
+ if(expected.licenseHash!==undefined&&(typeof expected.licenseHash!=='string'||expected.licenseHash!==await hashBytes(new TextEncoder().encode(manifest.license))))throw Error('Onchain license commitment differs from the released pack');
  const ciphertextUrl=new URL(manifest.ciphertext_path,url).href;
  const envelope=await bounded(await fetcher(ciphertextUrl,{...options,signal:AbortSignal.timeout(10000)}),5*1024*1024+36);
  if(await hashBytes(envelope)!==expected.ciphertextHash)throw Error('Mirror ciphertext is corrupt or substituted');
