@@ -1,0 +1,63 @@
+{
+  "id": "lantern-trail",
+  "title": "The Lantern Trail",
+  "description": "The lighthouse has gone dark. Follow the forest trail, solve five number puzzles and carry a little light back to the coast. An original technical sample; educational effectiveness has not been evaluated.",
+  "license": "CC0-1.0",
+  "questions": [
+    {
+      "id": "forest-gate",
+      "prompt": "At the forest gate, 7 fireflies join 5 waiting fireflies. How many lights guide your first steps?",
+      "choices": [
+        10,
+        12,
+        14
+      ],
+      "answer": 12,
+      "explanation": "7 + 5 = 12. Your first lantern glows. The gate opens onto a quiet trail."
+    },
+    {
+      "id": "wooden-bridge",
+      "prompt": "A bridge has 16 wooden planks. You cross 7 of them. How many planks are still ahead?",
+      "choices": [
+        8,
+        9,
+        10
+      ],
+      "answer": 9,
+      "explanation": "16 - 7 = 9. Your second lantern lights the rest of the bridge."
+    },
+    {
+      "id": "orchard-path",
+      "prompt": "In the orchard, there are 4 baskets with 3 golden apples in each. How many apples are there altogether?",
+      "choices": [
+        7,
+        12,
+        16
+      ],
+      "answer": 12,
+      "explanation": "4 groups of 3 make 12. Your third lantern shines between the apple trees."
+    },
+    {
+      "id": "river-stones",
+      "prompt": "You share 24 smooth stones equally among 6 stepping places. How many stones go in each place?",
+      "choices": [
+        3,
+        4,
+        6
+      ],
+      "answer": 4,
+      "explanation": "24 divided by 6 is 4. Your fourth lantern shows a safe path over the river."
+    },
+    {
+      "id": "coastal-beacon",
+      "prompt": "The beacon gathers 8 sparks from each of 3 lanterns. Then 5 sparks drift away. How many sparks remain?",
+      "choices": [
+        16,
+        19,
+        24
+      ],
+      "answer": 19,
+      "explanation": "3 times 8 is 24, and 24 - 5 = 19. The last lantern glows. The lighthouse welcomes you home."
+    }
+  ]
+}

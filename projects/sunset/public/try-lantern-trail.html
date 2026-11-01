@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>SUNSET offline learning pack</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f0e6;color:#233a32;font-family:system-ui,sans-serif;line-height:1.65}main{max-width:760px;margin:auto;padding:48px 24px}header{margin-bottom:30px}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:#526b5d}h1{font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.1;margin:.4em 0}h2{font-size:1.45rem;line-height:1.5}p{max-width:64ch}.card{background:#fffdf7;border:1px solid #dcd7c8;border-radius:22px;padding:clamp(22px,5vw,40px);box-shadow:0 12px 40px #233a320a}progress{width:100%;height:12px;accent-color:#39795b}.choices{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}button{font:inherit;cursor:pointer;border:1px solid #bdc9bc;border-radius:12px;padding:12px 22px;background:#edf3e7;color:#233a32;min-width:64px;min-height:48px}button:hover:enabled{background:#d9e8ce}button:focus-visible{outline:3px solid #b45d21;outline-offset:4px}button:disabled{cursor:default;opacity:.6}.primary{background:#244d3a;color:#fff;border-color:#244d3a}.primary:hover:enabled{background:#34664b}#feedback{min-height:3.5em}footer{margin-top:30px;font-size:.84rem;color:#526b5d}small{display:block}#restart{margin-top:18px;background:transparent}[hidden]{display:none!important}@media(prefers-reduced-motion:no-preference){.card{animation:arrive .25s ease-out}@keyframes arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">SUNSET · Your offline copy</div><h1 id="title"></h1><p id="description"></p></header>
+<section class="card" aria-label="Maths adventure">
+<p id="status"></p><progress id="progress" value="0" max="5" aria-label="Lanterns lit"></progress>
+<h2 id="question" tabindex="-1"></h2><div id="choices" class="choices" role="group" aria-labelledby="question"></div>
+<p id="feedback" aria-live="polite" aria-atomic="true"></p>
+<button id="next" class="primary" type="button" disabled>Continue along the trail</button>
+</section>
+<button id="restart" type="button">Start the trail again</button>
+<footer><p>This copy works without SUNSET, a wallet or an internet connection. Progress stays in this browser when local storage is available. Clearing browser data can erase progress.</p><small>Original technical sample · Content: CC0-1.0 · Runtime: MIT. No claim of teacher review or measured learning outcomes.</small><small>CC0-1.0 dedicates the content to the public domain to the extent permitted by law. Full terms: Creative Commons CC0 1.0 Universal.</small></footer>
+</main>
+<script type="application/json" id="pack-data">{"id":"lantern-trail","title":"The Lantern Trail","description":"The lighthouse has gone dark. Follow the forest trail, solve five number puzzles and carry a little light back to the coast. An original technical sample; educational effectiveness has not been evaluated.","license":"CC0-1.0","questions":[{"id":"forest-gate","prompt":"At the forest gate, 7 fireflies join 5 waiting fireflies. How many lights guide your first steps?","choices":[10,12,14],"answer":12,"explanation":"7 + 5 = 12. Your first lantern glows. The gate opens onto a quiet trail."},{"id":"wooden-bridge","prompt":"A bridge has 16 wooden planks. You cross 7 of them. How many planks are still ahead?","choices":[8,9,10],"answer":9,"explanation":"16 - 7 = 9. Your second lantern lights the rest of the bridge."},{"id":"orchard-path","prompt":"In the orchard, there are 4 baskets with 3 golden apples in each. How many apples are there altogether?","choices":[7,12,16],"answer":12,"explanation":"4 groups of 3 make 12. Your third lantern shines between the apple trees."},{"id":"river-stones","prompt":"You share 24 smooth stones equally among 6 stepping places. How many stones go in each place?","choices":[3,4,6],"answer":4,"explanation":"24 divided by 6 is 4. Your fourth lantern shows a safe path over the river."},{"id":"coastal-beacon","prompt":"The beacon gathers 8 sparks from each of 3 lanterns. Then 5 sparks drift away. How many sparks remain?","choices":[16,19,24],"answer":19,"explanation":"3 times 8 is 24, and 24 - 5 = 19. The last lantern glows. The lighthouse welcomes you home."}]}</script>
+<script>
+(() => {
+  'use strict';
+  const pack = JSON.parse(document.getElementById('pack-data').textContent);
+  const byId = (id) => document.getElementById(id);
+  const storageKey = 'sunset-progress:' + pack.id;
+  let index = 0;
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey));
+    if (saved && Number.isInteger(saved.index) && saved.index >= 0 && saved.index <= pack.questions.length && saved.version === JSON.stringify(pack)) index = saved.index;
+  } catch {}
+  byId('title').textContent = pack.title;
+  byId('description').textContent = pack.description;
+  document.title = pack.title + ' · Offline';
+  byId('progress').max = pack.questions.length;
+  function save(completed) {
+    try { localStorage.setItem(storageKey, JSON.stringify({ index: completed, version: JSON.stringify(pack) })); } catch {}
+  }
+  function render() {
+    byId('choices').replaceChildren();
+    byId('feedback').textContent = '';
+    byId('progress').value = index;
+    byId('next').disabled = true;
+    const finished = index === pack.questions.length;
+    byId('next').hidden = finished;
+    if (finished) {
+      byId('status').textContent = 'Trail complete';
+      byId('question').textContent = 'All ' + pack.questions.length + ' lanterns are lit.';
+      byId('feedback').textContent = 'You brought the light home. Keep this copy, share it, or start the adventure again.';
+      return;
+    }
+    const question = pack.questions[index];
+    byId('status').textContent = 'Lantern ' + (index + 1) + ' of ' + pack.questions.length;
+    byId('question').textContent = question.prompt;
+    for (const choice of question.choices) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = String(choice);
+      button.addEventListener('click', () => {
+        if (choice !== question.answer) {
+          byId('feedback').textContent = 'That lantern needs another spark. Try again; there is no hurry.';
+          return;
+        }
+        byId('feedback').textContent = question.explanation;
+        byId('progress').value = index + 1;
+        for (const answer of byId('choices').children) answer.disabled = true;
+        byId('next').disabled = false;
+        save(index + 1);
+        byId('next').focus();
+      });
+      byId('choices').append(button);
+    }
+  }
+  byId('next').addEventListener('click', () => {
+    if (byId('next').disabled) return;
+    index += 1;
+    render();
+    byId('question').focus();
+  });
+  byId('restart').addEventListener('click', () => {
+    index = 0;
+    save(0);
+    render();
+    byId('question').focus();
+  });
+  render();
+})();
+</script>
+</body></html>

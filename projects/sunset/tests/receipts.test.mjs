@@ -1,0 +1,2 @@
+import{test}from'node:test';import assert from'node:assert/strict';import{receiptsCsv}from'../src/lib/receipts.mjs';
+test('CSV receipts quote separators and prevent spreadsheet formula execution',()=>{const csv=receiptsCsv([{type:'Created',actor:'=1+2',details:'@SUM(1,2)',time:0},{type:'Other',actor:'safe.testnet',details:'"quoted"\ntext',time:0}]);assert.match(csv,/'=1\+2/);assert.match(csv,/'@SUM/);assert.match(csv,/""quoted""/);assert.ok(!csv.includes('"=1'));});

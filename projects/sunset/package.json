@@ -1,0 +1,27 @@
+{
+  "name": "sunset-public-goods",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "python3 -m http.server 3000 --bind 127.0.0.1 --directory out",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:contract": "node --test --test-isolation=none contracts/sunset/tests/wasm.test.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
+  },
+  "engines": {
+    "node": ">=22.9"
+  }
+}

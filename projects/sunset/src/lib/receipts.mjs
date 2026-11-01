@@ -1,0 +1,1 @@
+export function receiptsCsv(events){const rows=[['event','actor','details','time'],...events.map(e=>[e.type,e.actor,e.details,new Date(e.time).toISOString()])];return rows.map(row=>row.map(value=>{let cell=String(value);if(/^[\s\u0000-\u001f]*[=+@-]/.test(cell)||/^[\t\r\n]/.test(cell))cell="'"+cell;return '"'+cell.replace(/"/g,'""')+'"';}).join(',')).join('\n');}

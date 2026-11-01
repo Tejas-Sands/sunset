@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+contracts/sunset/target/
+evidence/*.png
+private/
+*-private-release-backup.json
+release-args.json
+**/private-release-backup.json

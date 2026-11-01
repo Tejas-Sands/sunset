@@ -1,0 +1,5 @@
+import { test } from 'node:test';import assert from 'node:assert/strict';
+import { planCoordination, checkPolicy } from '../src/lib/agents.mjs';
+import {toYocto} from '../src/lib/ledger.mjs';
+test('independent agents coordinate within each budget and remaining campaign cap',()=>{const agents=[{id:'a',account:'a.testnet',budget:toYocto('0.4'),maxPerAction:toYocto('0.3'),allowedCampaigns:['one']},{id:'b',account:'b.testnet',budget:toYocto('0.7'),maxPerAction:toYocto('0.7'),allowedCampaigns:['one']}];const p=planCoordination(agents,{id:'one',target:toYocto('8'),raised:toYocto('7.4')});assert.equal(p.reduce((n,x)=>n+BigInt(x.amount),0n),BigInt(toYocto('0.6')));assert.equal(p[0].amount,toYocto('0.3'));});
+test('malicious intent cannot exceed policy or change counterparty',()=>{const a={id:'a',account:'a.testnet',budget:toYocto('1'),maxPerAction:toYocto('0.4'),allowedCampaigns:['one']};for(const p of [{campaignId:'evil',amount:'1'},{campaignId:'one',amount:toYocto('0.5')},{campaignId:'one',amount:'-1'}])assert.throws(()=>checkPolicy(a,p));});
