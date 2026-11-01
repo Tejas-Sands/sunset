@@ -2,6 +2,8 @@
 
 use borsh::{BorshDeserialize, BorshSerialize};
 
+mod nft;
+
 const MAX_CAMPAIGNS: usize = 5;
 const MAX_ACCOUNTS: usize = 100;
 const STORAGE_PRICE: u128 = 10_000_000_000_000_000_000;
@@ -36,6 +38,7 @@ struct Campaign {
     public_key: [u8; 32],
     escrow: u128,
     total_contributed: u128,
+    stewardship: nft::Stewardship,
 }
 
 #[derive(Clone, Default, BorshSerialize, BorshDeserialize)]
@@ -59,6 +62,7 @@ struct State {
     storage_deposits: u128,
     storage_retained: u128,
     withdrawn: u128,
+    security_deposits: u128,
 }
 
 impl State {
@@ -110,6 +114,10 @@ impl State {
             "invalid account",
         )?;
         ensure(
+            terms.reviewer != caller,
+            "reviewer must differ from creator",
+        )?;
+        ensure(
             now > 0 && terms.target > 0 && terms.funding_deadline_ns > now,
             "invalid funding terms",
         )?;
@@ -133,6 +141,7 @@ impl State {
                 .map_err(|_| "cannot encode agreement")?,
         );
         self.campaigns.push(Campaign {
+            stewardship: nft::Stewardship::new(caller, &terms.manifest_uri),
             terms,
             creator: caller.into(),
             digest,
@@ -216,6 +225,12 @@ impl State {
         campaign.public_key = *key;
         campaign.released = true;
         campaign.escrow = 0;
+        campaign.stewardship.issued_at_ns = now;
+        campaign.stewardship.updated_at_ns = now;
+        nft::event(
+            "nft_mint",
+            serde_json::json!([{"owner_id":campaign.creator,"token_ids":[campaign.terms.id]}]),
+        );
         Ok(())
     }
     fn refund(&mut self, id: &str, caller: &str, now: u64) -> Result<()> {
@@ -354,7 +369,10 @@ impl State {
         }
     }
     fn check_accounting(&self) -> Result<()> {
-        let mut liabilities = add(self.storage_retained, self.withdrawn)?;
+        let mut liabilities = add(
+            add(self.storage_retained, self.withdrawn)?,
+            self.security_deposits,
+        )?;
         for c in &self.campaigns {
             liabilities = add(liabilities, c.escrow)?;
         }
@@ -362,7 +380,10 @@ impl State {
             liabilities = add(liabilities, add(a.credit, a.pending_amount)?)?;
         }
         ensure(
-            add(self.economic_deposits, self.storage_deposits)? == liabilities,
+            add(
+                add(self.economic_deposits, self.storage_deposits)?,
+                self.security_deposits,
+            )? == liabilities,
             "accounting invariant violated",
         )
     }
@@ -403,6 +424,7 @@ struct Context {
     remaining_gas: u64,
     callback_result: Option<bool>,
     callback_count: u64,
+    callback_data: Option<Vec<u8>>,
 }
 
 fn hex(bytes: &[u8]) -> String {
@@ -450,6 +472,9 @@ fn execute(
 ) -> Result<serde_json::Value> {
     use base64::{engine::general_purpose::STANDARD, Engine};
     use serde_json::json;
+    if nft::is_method(method) {
+        return nft::execute(state, method, input, ctx);
+    }
     let allowed: &[&str] = match method {
         "create_campaign" => &[
             "id",
@@ -565,7 +590,7 @@ fn execute(
             .map(|c| state.campaign_view(&c.terms.id, ctx.now))
             .collect::<Result<Vec<_>>>()?)),
         "get_config" => Ok(
-            json!({"schema_version":1,"network":"testnet","contract_id":ctx.current,"owner":state.owner,"deployment_mode":"upgradeable", "max_campaigns":MAX_CAMPAIGNS,"max_accounts":MAX_ACCOUNTS,"campaign_count":state.campaigns.len(),"account_count":state.accounts.len(),"account_storage_allowance":ACCOUNT_STORAGE.to_string(),"campaign_storage_allowance":CAMPAIGN_STORAGE.to_string(),"storage_price_per_byte":STORAGE_PRICE.to_string(),"economic_deposits":state.economic_deposits.to_string(),"storage_deposits":state.storage_deposits.to_string(),"storage_retained":state.storage_retained.to_string(),"withdrawn":state.withdrawn.to_string()}),
+            json!({"schema_version":1,"state_layout_version":2,"network":"testnet","contract_id":ctx.current,"owner":state.owner,"deployment_mode":"upgradeable", "max_campaigns":MAX_CAMPAIGNS,"max_accounts":MAX_ACCOUNTS,"campaign_count":state.campaigns.len(),"account_count":state.accounts.len(),"account_storage_allowance":ACCOUNT_STORAGE.to_string(),"campaign_storage_allowance":CAMPAIGN_STORAGE.to_string(),"storage_price_per_byte":STORAGE_PRICE.to_string(),"economic_deposits":state.economic_deposits.to_string(),"storage_deposits":state.storage_deposits.to_string(),"storage_retained":state.storage_retained.to_string(),"withdrawn":state.withdrawn.to_string(),"security_deposits":state.security_deposits.to_string(),"nft_standards":["nep171:1.2.0","nep177:1.0.0","nep181:1.0.0"]}),
         ),
         _ => Err("unknown method"),
     }
@@ -577,7 +602,7 @@ impl State {
         let i = self.campaign_index(id)?;
         let c = &self.campaigns[i];
         Ok(
-            serde_json::json!({"schema_version":1,"id":c.terms.id,"title":c.terms.title,"creator":c.creator,"reviewer":c.terms.reviewer,"manifest_uri":c.terms.manifest_uri,"manifest_hash":hex(&c.terms.manifest_hash),"plaintext_hash":hex(&c.terms.plaintext_hash),"ciphertext_hash":hex(&c.terms.ciphertext_hash),"key_commitment":hex(&c.terms.key_commitment),"license_hash":hex(&c.terms.license_hash),"target":c.terms.target.to_string(),"total_contributed":c.total_contributed.to_string(),"escrow":c.escrow.to_string(),"funding_deadline_ns":c.terms.funding_deadline_ns.to_string(),"release_window_ns":c.terms.release_window_ns.to_string(),"funded_at_ns":c.funded_at_ns.to_string(),"release_deadline_ns":if c.funded_at_ns > 0 {Some((c.funded_at_ns+c.terms.release_window_ns).to_string())}else{None},"agreement_digest":hex(&c.digest),"state":self.status(i,now),"public_key_base64":if c.released {Some(STANDARD.encode(c.public_key))}else{None}}),
+            serde_json::json!({"schema_version":1,"id":c.terms.id,"title":c.terms.title,"creator":c.creator,"reviewer":c.terms.reviewer,"manifest_uri":c.terms.manifest_uri,"manifest_hash":hex(&c.terms.manifest_hash),"plaintext_hash":hex(&c.terms.plaintext_hash),"ciphertext_hash":hex(&c.terms.ciphertext_hash),"key_commitment":hex(&c.terms.key_commitment),"license_hash":hex(&c.terms.license_hash),"target":c.terms.target.to_string(),"total_contributed":c.total_contributed.to_string(),"escrow":c.escrow.to_string(),"funding_deadline_ns":c.terms.funding_deadline_ns.to_string(),"release_window_ns":c.terms.release_window_ns.to_string(),"funded_at_ns":c.funded_at_ns.to_string(),"release_deadline_ns":if c.funded_at_ns > 0 {Some((c.funded_at_ns+c.terms.release_window_ns).to_string())}else{None},"agreement_digest":hex(&c.digest),"state":self.status(i,now),"public_key_base64":if c.released {Some(STANDARD.encode(c.public_key))}else{None},"stewardship":if c.released {Some(serde_json::json!({"token_id":c.terms.id,"owner_id":c.stewardship.owner(),"mirror_uri":c.stewardship.mirror()}))}else{None}}),
         )
     }
     fn account_view(&self, id: &str) -> serde_json::Value {

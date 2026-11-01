@@ -28,6 +28,7 @@ extern "C" {
     ) -> u64;
     fn value_return(value_len: u64, value_ptr: u64);
     fn panic_utf8(value_len: u64, value_ptr: u64);
+    fn log_utf8(value_len: u64, value_ptr: u64);
     fn promise_results_count() -> u64;
     fn promise_result(index: u64, register_id: u64) -> u64;
     fn promise_batch_create(account_id_len: u64, account_id_ptr: u64) -> u64;
@@ -80,6 +81,12 @@ pub(super) fn sha256(bytes: &[u8]) -> [u8; 32] {
         .unwrap_or_else(|_| fail("invalid SHA-256 host result"))
 }
 
+pub(super) fn log_event(message: &str) {
+    unsafe {
+        log_utf8(message.len() as u64, message.as_ptr() as u64);
+    }
+}
+
 fn run(method: &str) {
     unsafe {
         input(0);
@@ -90,7 +97,7 @@ fn run(method: &str) {
     let is_view = matches!(
         method,
         "get_config" | "get_campaign" | "get_account" | "list_campaigns"
-    );
+    ) || nft::is_view(method);
     let predecessor = if is_view {
         String::new()
     } else {
@@ -102,7 +109,7 @@ fn run(method: &str) {
             attached_deposit(amount.as_mut_ptr() as u64);
         }
     }
-    let callback_count = if method == "on_withdraw_complete" {
+    let callback_count = if matches!(method, "on_withdraw_complete" | "nft_resolve_transfer") {
         unsafe { promise_results_count() }
     } else {
         0
@@ -113,6 +120,16 @@ fn run(method: &str) {
             2 => Some(false),
             _ => None,
         }
+    } else {
+        None
+    };
+    // A successful receiver result must be a JSON bool. Oversized results reject
+    // the NFT without copying attacker-controlled return data into Wasm memory.
+    let callback_data = if method == "nft_resolve_transfer"
+        && callback_result == Some(true)
+        && unsafe { register_len(0) } <= 5
+    {
+        Some(register())
     } else {
         None
     };
@@ -128,6 +145,7 @@ fn run(method: &str) {
         },
         callback_count,
         callback_result,
+        callback_data,
     };
     let exists = unsafe { storage_read(STATE_KEY.len() as u64, STATE_KEY.as_ptr() as u64, 0) } == 1;
     if method == "new" {
@@ -164,8 +182,56 @@ fn run(method: &str) {
     if method == "withdraw" {
         let owner = checked(state.account(&ctx.predecessor));
         schedule_transfer(&ctx, owner);
+    } else if method == "nft_transfer_call" {
+        schedule_nft_transfer(&ctx, &args);
     } else {
         output(&result);
+    }
+}
+fn schedule_nft_transfer(ctx: &Context, input: &serde_json::Value) {
+    let remaining = unsafe { prepaid_gas().saturating_sub(used_gas()) };
+    checked(ensure(
+        remaining >= CALLBACK_GAS + 20_000_000_000_000,
+        "insufficient gas to schedule safe NFT callback",
+    ));
+    let receiver = checked(text(input, "receiver_id"));
+    let token_id = checked(text(input, "token_id"));
+    let args = serde_json::to_vec(&serde_json::json!({
+        "sender_id":ctx.predecessor,"previous_owner_id":ctx.predecessor,
+        "token_id":token_id,"msg":checked(text(input,"msg"))
+    }))
+    .unwrap_or_else(|_| fail("receiver serialization failed"));
+    let callback_args = serde_json::to_vec(&serde_json::json!({
+        "previous_owner_id":ctx.predecessor,"receiver_id":receiver,
+        "token_id":token_id,"approved_account_ids":null
+    }))
+    .unwrap_or_else(|_| fail("resolver serialization failed"));
+    let zero = 0u128.to_le_bytes();
+    let receiver_method = b"nft_on_transfer";
+    let resolver_method = b"nft_resolve_transfer";
+    unsafe {
+        let call = promise_batch_create(receiver.len() as u64, receiver.as_ptr() as u64);
+        promise_batch_action_function_call(
+            call,
+            receiver_method.len() as u64,
+            receiver_method.as_ptr() as u64,
+            args.len() as u64,
+            args.as_ptr() as u64,
+            zero.as_ptr() as u64,
+            remaining - CALLBACK_GAS - 10_000_000_000_000,
+        );
+        let callback =
+            promise_batch_then(call, ctx.current.len() as u64, ctx.current.as_ptr() as u64);
+        promise_batch_action_function_call(
+            callback,
+            resolver_method.len() as u64,
+            resolver_method.as_ptr() as u64,
+            callback_args.len() as u64,
+            callback_args.as_ptr() as u64,
+            zero.as_ptr() as u64,
+            CALLBACK_GAS,
+        );
+        promise_return(callback);
     }
 }
 fn save(state: &State) {
@@ -238,5 +304,15 @@ entrypoints!(
     get_config,
     get_campaign,
     get_account,
-    list_campaigns
+    list_campaigns,
+    nft_transfer,
+    nft_transfer_call,
+    nft_resolve_transfer,
+    set_mirror,
+    nft_token,
+    nft_metadata,
+    nft_total_supply,
+    nft_tokens,
+    nft_supply_for_owner,
+    nft_tokens_for_owner
 );

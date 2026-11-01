@@ -1,16 +1,18 @@
 {
   "schema_version": 1,
   "artifact": "res/sunset_contract.wasm",
-  "artifact_sha256": "79a647abecd7f04e36d44dcd4b79f8310395e636f6165755e1a74d97887f4837",
-  "artifact_bytes": 190561,
+  "artifact_sha256": "448d107c66f54ec178ff979bba101a26e34c2b5b51f9097eecad636962668ccb",
+  "artifact_bytes": 266718,
   "source_revision": null,
-  "source_revision_note": "Workspace is not a Git repository; source file digests identify this build.",
+  "source_revision_note": "Source digests identify this working-tree build; the containing verified publication commit is recorded by Git.",
   "source_sha256": {
     "Cargo.lock": "689f6033c51ba9c8e69dbd85b50b5a55d8450d9821c81b4de30eb10654d26bbf",
     "Cargo.toml": "94e3d0a504d947c78abec66b2d59a366cdfb8449e67a8ff34ed862e504b67deb",
-    "src/host.rs": "272ed3d12ebb56ff2949e8d7e1c8dd76d11bff65f02ff3f8401a0f4f7a0249b3",
-    "src/lib.rs": "3b8be30475bead773e5ed18b4e3c78f64feca1fa19f339d1794c50b4e271d3c2",
-    "src/tests.rs": "8f873eca79312f830199cbd08b291c3a27a9ad6042421ca252a14d73e4c1c33b"
+    "src/host.rs": "8bb2720b3e20dbeec9f75362f434c477b114f56d480c303ceb9d96f35ab24de6",
+    "src/lib.rs": "5ba7fe6427a3122552531d45e02a9e4ffb5e8ca233d86e8a4316ca881f71c1a0",
+    "src/nft.rs": "0f7572447c884c03fa6b6f4cca0b783e970af42f87176cf2e011e38532c0900b",
+    "src/tests.rs": "e79fb2a16ca81b0c77e77ef259c0d76ac82d4e32158fba2aedb288318052888b",
+    "tests/wasm.test.mjs": "394534ceb64e59c5aa9c78a2713f1b0e9feb317895219e3d842f72c6dd3a6704"
   },
   "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
   "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
@@ -19,11 +21,11 @@
   "checks": {
     "rust_behavior_tests": {
       "status": "passed",
-      "count": 10
+      "count": 16
     },
     "compiled_wasm_host_double_scenarios": {
       "status": "passed",
-      "count": 3
+      "count": 10
     },
     "rustfmt": "passed",
     "native_clippy": "passed",
@@ -31,12 +33,22 @@
     "near_sandbox": "not run; executable unavailable",
     "testnet_deployment": "not run; no network account provisioned",
     "protocol_gas_metering": "not verified",
-    "actual_wallet_or_transfer_receipts": "not verified"
+    "actual_wallet_or_transfer_receipts": "not verified",
+    "test_first_failures": "Observed native unknown-method failures and missing compiled-Wasm NFT exports before implementation; strict token-id regression failed before correction. Native and compiled-Wasm same-account reviewer tests failed before the creator/reviewer distinction guard."
   },
   "limitations": [
     "Compiled Wasm tests use transactional host doubles, not NEAR Sandbox.",
     "Deployment retains external full-access control until separately verified.",
     "Five campaign slots are owner-controlled; one hundred participant slots are finite.",
-    "Callback failure leaves a withdrawal pending; no timeout-based recredit."
-  ]
+    "Callback failure leaves a withdrawal pending; no timeout-based recredit.",
+    "NFT receiver and resolver gas is unmeasured in the NEAR protocol runtime.",
+    "A failed NFT resolver leaves earlier receiver ownership in place; no pending ownership lock or timeout clawback exists.",
+    "NFT ownership controls only a discovery mirror; every ownership change resets it to the immutable original manifest URI.",
+    "An older NFT callback may return a token reacquired by its original receiver; the resolver follows reference owner-equality semantics, not transfer nonces.",
+    "Distinct creator and reviewer account IDs do not prove different controllers or prevent collusion."
+  ],
+  "state_layout_version": 2,
+  "fresh_deployment_required": true,
+  "migration_supplied": false,
+  "callable_exports": 22
 }

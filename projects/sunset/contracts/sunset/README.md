@@ -1,10 +1,12 @@
 # SUNSET testnet contract
 
-This is the deliberately reduced sponsorship contract. It supports immediate capped contributions, reviewed key publication, both campaign refund outcomes, and pull withdrawals. It has no pending purchase orders, paid prerelease licenses, service grants, administrator payouts, arbitrary transfer methods or upgrade methods. The reviewed pack remains an external artifact whose availability and quality depend on its declared reviewer and retained copies.
+This is the bounded SUNSET sponsorship and public-release stewardship contract. It supports immediate capped contributions, reviewed key publication, both campaign refund outcomes, pull withdrawals, and one transferable stewardship NFT per successful public release. The token gives its current owner authority to choose a discovery mirror for the exact committed manifest. It grants no exclusive access, copyright, licensing, campaign editing, refund, escrow or payout authority. The reviewed pack remains an external artifact whose availability and quality depend on its declared reviewer and retained copies. There are no purchase orders, paid prerelease licenses, service vouchers, administrator payouts or upgrade methods.
 
 `res/sunset_contract.wasm` is a real compiled artifact. Native Rust checks and compiled Wasm tests with transactional host doubles run locally. **NEAR Sandbox, protocol gas metering, wallet signing, real testnet deployment and actual transfer receipts have not been verified here.** The host doubles are not a network simulator. Do not present this artifact as deployed or mainnet reviewed.
 
-The source uses NEAR's stable host ABI directly because this build environment has cached Rust serialization dependencies and no available `near-sdk`. Wasm hashes use NEAR's SHA-256 host. Native tests call the system OpenSSL SHA-256 binary; OpenSSL is not a Wasm dependency. The compiled ABI has twelve callable exports and no hidden test funding bypass.
+The source uses NEAR's stable host ABI directly because this build environment has cached Rust serialization dependencies and no available `near-sdk`. Wasm hashes use NEAR's SHA-256 host. Native tests call the system OpenSSL SHA-256 binary; OpenSSL is not a Wasm dependency. The compiled ABI has 22 callable exports and no hidden test funding bypass. The NFT implementation follows [NEP-171 core and 1.2.0 events](https://github.com/near/NEPs/blob/master/neps/nep-0171.md), [NEP-177 metadata](https://github.com/near/NEPs/blob/master/neps/nep-0177.md), and [NEP-181 enumeration](https://github.com/near/NEPs/blob/master/neps/nep-0181.md). Approval management, royalties, sales and burning are not implemented.
+
+**Fresh deployment required:** the stewardship fields change the Borsh state layout. `get_config.state_layout_version` is `2`; JSON campaign/account `schema_version` remains `1` with additive fields. No migration from the earlier sponsorship-only layout is supplied or claimed. No network deployment has occurred.
 
 ## Build and checks
 
@@ -20,11 +22,11 @@ bash projects/sunset/contracts/sunset/scripts/build.sh
 node --test --test-isolation=none projects/sunset/contracts/sunset/tests/wasm.test.mjs
 ```
 
-The Node runner loads the actual copied Wasm, checks exact callable exports, enforces prohibited view-host access, and exercises release, deadline refunds, fixed-size settlement, transfer promises and callbacks. A failed simulated callback leaves pending credit locked until the real result callback completes. These tests do not prove protocol gas costs, instrumented VM compatibility, or account balance settlement. Run actual Sandbox receipt scenarios before those claims.
+The Node runner loads the actual copied Wasm, checks exact callable exports, enforces prohibited view-host access, and exercises release, deadline refunds, fixed-size settlement, native-transfer promises, NFT receiver promises, standard events and callbacks. NFT scenarios include acceptance, rejection, failed/malformed/oversized receiver results, nested callbacks and onward transfers. A failed withdrawal callback leaves pending credit locked until its result callback completes. These tests do not prove protocol gas costs, instrumented VM compatibility, or account balance settlement. Run actual Sandbox receipt scenarios before those claims.
 
 ## JSON ABI
 
-Every method receives one JSON object. Unknown/missing fields are rejected. All amounts, nanosecond timestamps and operation IDs are **decimal strings**. Hashes are lowercase SHA-256 hex. No mainnet account or deployment identity is supplied by this package.
+Every method receives one JSON object. Unknown fields and missing required fields are rejected. Optional NFT fields can be omitted or null. All financial amounts, nanosecond timestamps, operation IDs, NFT supplies and pagination indices are **decimal strings**. NFT approval IDs, pagination limits and metadata timestamps are JSON numbers; metadata timestamps use Unix milliseconds. Campaign hashes are lowercase SHA-256 hex; NEP-177 reference hashes use base64. No mainnet account or deployment identity is supplied by this package.
 
 | Method | Arguments | Attached deposit and authority |
 | --- | --- | --- |
@@ -40,6 +42,16 @@ Every method receives one JSON object. Unknown/missing fields are rejected. All 
 | `list_campaigns` | `{}` | View; at most five full records |
 | `get_account` | `{account_id}` | View; returns `registered:false` for a new identity |
 | `get_config` | `{}` | View; storage allowances, limits and aggregate accounting |
+| `nft_transfer` | `{receiver_id,token_id,approval_id?,memo?}` | Exactly 1 yoctoNEAR; current token owner |
+| `nft_transfer_call` | `{receiver_id,token_id,msg,approval_id?,memo?}` | Exactly 1 yoctoNEAR; current token owner; use at least 100 Tgas in unsigned plans |
+| `nft_resolve_transfer` | `{previous_owner_id,receiver_id,token_id,approved_account_ids?}` | Zero; private callback with exactly one ready result; optional approvals must be null |
+| `set_mirror` | `{token_id,mirror_uri}` | Exactly 1 yoctoNEAR; current token owner; bounded HTTPS manifest location |
+| `nft_token` | `{token_id}` | View; token or null |
+| `nft_metadata` | `{}` | View; contract metadata with `spec:"nft-1.0.0"` |
+| `nft_total_supply` | `{}` | View; decimal string supply |
+| `nft_tokens` | `{from_index?,limit?}` | View; released tokens in campaign order |
+| `nft_supply_for_owner` | `{account_id}` | View; decimal string supply for a valid account |
+| `nft_tokens_for_owner` | `{account_id,from_index?,limit?}` | View; owner's released tokens in campaign order |
 
 `create_campaign` uses these flat fields:
 
@@ -62,29 +74,44 @@ Every method receives one JSON object. Unknown/missing fields are rejected. All 
 
 The placeholders above are intentionally invalid. Replace them with actual artifact/account values; never describe them as deployed resources. Campaign IDs contain 1–64 ASCII letters, digits, `_` or `-`; titles are 1–120 UTF-8 bytes; manifest URIs use HTTPS and at most 512 bytes. Funding deadlines must be future times. Release windows are positive and at most 30 days; timestamp arithmetic must fit u64.
 
-`get_campaign` returns flat fields: `schema_version`, `id`, `title`, `creator`, `reviewer`, `manifest_uri`, `manifest_hash`, `plaintext_hash`, `ciphertext_hash`, `key_commitment`, `license_hash`, `target`, `total_contributed`, `escrow`, `funding_deadline_ns`, `release_window_ns`, `funded_at_ns`, `release_deadline_ns`, `agreement_digest`, `state`, `public_key_base64`. Money and time fields are strings. `funded_at_ns` is `"0"` before funding; `release_deadline_ns` is null before funding; `public_key_base64` is null before release. Effective states are `Draft`, `Active`, `Funded`, `Released` and `Refundable`.
+`get_campaign` returns flat fields: `schema_version`, `id`, `title`, `creator`, `reviewer`, `manifest_uri`, `manifest_hash`, `plaintext_hash`, `ciphertext_hash`, `key_commitment`, `license_hash`, `target`, `total_contributed`, `escrow`, `funding_deadline_ns`, `release_window_ns`, `funded_at_ns`, `release_deadline_ns`, `agreement_digest`, `state`, `public_key_base64`, `stewardship`. Money and time fields are strings. `funded_at_ns` is `"0"` before funding; `release_deadline_ns` is null before funding; `public_key_base64` and `stewardship` are null before release. Thereafter stewardship is `{token_id,owner_id,mirror_uri}`. Effective states are `Draft`, `Active`, `Funded`, `Released` and `Refundable`.
 
 `get_account` returns `schema_version`, `account_id`, `registered`, `credit`, `paid`, `pending` and `contributions`. `pending` is null or `{amount,operation_id}`. Each contribution is `{campaign_id,amount,refunded}`. Credited storage change is included in `credit`, separately from contribution records.
 
 Create/approve/release return the campaign view. Contribute returns `{campaign,account}`. Refund returns the account view. Withdrawal returns its callback's final account view if that callback succeeds; before completion the canonical account view shows the pending operation. A failed callback is an uncertain operation and must not trigger another withdrawal automatically.
 
+## Public-release stewardship
+
+The token ID equals its campaign ID. Before release, `nft_token` returns null and enumeration excludes the campaign. The first valid release mints to the fixed creator once, without adding storage. `nft_transfer` returns null; `set_mirror` returns the updated token. Receiving a token needs no financial-account registration and consumes no participant slot. Only its current owner can transfer or choose a mirror; optional numeric approval IDs never confer authority because approval management is disabled.
+
+**Every ownership change resets the mirror to the immutable original manifest URI**, including returns from rejected receiver calls. The immutable URI, manifest/content hashes, agreement, released key, creator credit and refund terms are never changed. Token metadata keeps the immutable original `reference` and base64 `reference_hash`; its JSON-string `extra` exposes `mirror_uri`, `original_manifest_uri`, `manifest_hash` and `agreement_digest`. A mirror is a discovery location, not proof of content availability or authenticity. Readers must verify the exact manifest and ciphertext against the campaign commitments before decryption and validate the resulting plaintext. A steward cannot revoke copies already retained.
+
+`nft_transfer_call` first changes ownership, then calls `nft_on_transfer` on the receiver with `{sender_id,previous_owner_id,token_id,msg}` and zero deposit. It reserves 15 Tgas for a private resolver and forwards the available receiver budget after a scheduling margin. A JSON `false` accepts the NFT; `true`, failed execution, malformed data or more than five return bytes requests return. This follows the [official receiver-resolution implementation](https://github.com/near/near-sdk-rs/blob/master/near-contract-standards/src/non_fungible_token/core/core_impl.rs). If the receiver currently owns the token, return resets the mirror and the resolver returns false. If the current owner differs from that callback's receiver, the resolver preserves that owner and returns true. Acceptance returns true and preserves the current mirror. All callbacks use current stored state; nested transfers are supported without an in-flight ownership lock.
+
+The resolver compares current ownership, not a transfer nonce. For example, after A→B `nft_transfer_call`, B→C and C→B can finish before B's original rejection callback. Because B owns the token again, that older callback can return it to A and reset B's newer mirror. This matches the reference implementation. A party reacquiring a token must account for unresolved earlier receipt chains; onward-transfer protection applies only while the current owner differs from the callback's receiver.
+
+A receiver can update the mirror while it owns the token provisionally; a return resets that choice. If the resolver itself fails, its receipt does not roll back the earlier receiver ownership, and there is no timeout clawback or pending lock. Observe actual receipts and canonical ownership. Protocol callback gas and nested receipt behavior remain unverified until Sandbox tests. Mint, transfer, return, and mirror metadata changes emit NEP-171 1.2.0 events. Token minting and ownership changes do not prove educational quality or rights ownership.
+
+NFT arguments are bounded: receiver messages at most 4096 UTF-8 bytes; optional memos at most 512 bytes; mirror URIs at most 512 bytes with HTTPS and a nonempty authority, without credentials, whitespace, control characters or backslashes. Pagination defaults to index `"0"` and all remaining tokens, at most five; limits must be positive integers. Approval IDs must be nonnegative JSON integers below 2^53 when supplied; they are ignored for an authorized owner.
+
 ## Accounting and storage
 
 The hard demonstration ceilings are five campaigns, 100 registered accounts and 64 KiB serialized state. Only the owner fixed during initialization can create campaigns, which prevents another account from consuming all campaign slots. Contribution registration is public; others can consume the finite participant slots by making valid funded contributions. This bounds storage and execution but does not provide a production participant-capacity guarantee. A new deployment is necessary to increase these fixed limits. Do not put real money into this prototype.
 
-Each campaign has at most one creator; creators are preallocated as credit recipients. Each account has five fixed contribution/refund slots, fixed credit counters, and one fixed withdrawal slot. The release key is always a 32-byte array with a separate boolean. Release, refund and callback outcomes allocate no new storage.
+Each campaign has at most one creator; creators are preallocated as credit recipients. Each account has five fixed contribution/refund slots, fixed credit counters, and one fixed withdrawal slot. The release key is always a 32-byte array with a separate boolean. Each campaign also prepays a 64-byte token owner buffer and 512-byte mirror buffer. Release, refund, ownership/mirror updates and callback outcomes allocate no new storage.
 
 Storage allowances are separate from economic prices. The contract charges the actual increase in its single Borsh state value at `10^19` yoctoNEAR per byte. It credits unused allowance to the payer and retains the cost as collateral. The contract account's original code/state collateral must be funded at deployment. There is no cleanup/storage-refund method in this bounded demonstration.
 
 For every committed mutation:
 
 ```text
-economic_deposits + storage_deposits
+economic_deposits + storage_deposits + security_deposits
   = storage_retained + sum(campaign escrow) + sum(account credit)
     + sum(pending withdrawal amounts) + successful withdrawals
+    + retained security_deposits
 ```
 
-Excess cap payment becomes payer credit. Unsolicited native transfers are unallocated surplus and are never added to creator compensation. Gas and original deployment funding sit outside this equation. Checked u128 arithmetic and exclusive deadlines apply throughout.
+Excess cap payment becomes payer credit. NFT transfers and mirror updates retain their exact one-yocto deposits in a dedicated security reserve, reported by `get_config.security_deposits`; this reserve is not withdrawable credit, creator compensation or storage collateral. Unsolicited native transfers are unallocated surplus and are never added to creator compensation. Gas and original deployment funding sit outside this equation. Checked u128 arithmetic and exclusive deadlines apply throughout.
 
 ## Commitments and review
 
@@ -92,7 +119,7 @@ The key commitment is SHA-256 of UTF-8 `SUNSET:KEY:1:` followed by the exact 32 
 
 The agreement digest is SHA-256 of this exact Borsh tuple, in order: `(1u8, "testnet", current_contract_account, creator_account, Terms)`. Strings use Borsh length-prefixed UTF-8. `Terms` order is `id:String`, `title:String`, `reviewer:String`, `manifest_uri:String`, `manifest_hash:[u8;32]`, `plaintext_hash:[u8;32]`, `ciphertext_hash:[u8;32]`, `key_commitment:[u8;32]`, `license_hash:[u8;32]`, `target:u128`, `funding_deadline_ns:u64`, `release_window_ns:u64`. Integers are little endian. The browser can read the resulting digest and exact fields instead of introducing another encoder.
 
-A reviewer must verify the exact ciphertext decrypts with the committed key to the committed plaintext and then inspect the resulting game. The contract checks only the key commitment; it does not evaluate AES, quality, licensing rights or artifact availability. Any authorized key holder can leak the pack early. A secret in a rejected transaction is already public.
+A campaign's named reviewer account must differ from its creator account; creation rejects identical IDs before registering accounts or charging storage. Distinct account IDs do not prove different human controllers or prevent creator–reviewer collusion. A reviewer must verify the exact ciphertext decrypts with the committed key to the committed plaintext and then inspect the resulting game. The contract checks only the key commitment; it does not evaluate AES, quality, licensing rights or artifact availability. Any authorized key holder can leak the pack early. A secret in a rejected transaction is already public.
 
 ## Direct recovery
 

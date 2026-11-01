@@ -14,14 +14,15 @@ const commitment = createHash('sha256').update('SUNSET:KEY:1:').update(key).dige
 function runtime() {
   let storage = new Map();
   return {
-    async call(method, args = {}, { caller = contract, now = 1n, deposit = 0n, result, resultsCount, gas = 100_000_000_000_000n } = {}) {
+    async call(method, args = {}, { caller = contract, now = 1n, deposit = 0n, result, resultData = 'false', resultsCount, gas = 100_000_000_000_000n } = {}) {
       const registers = new Map();
       const previous = new Map(storage);
       const promises = [];
+      const logs = [];
       let instance;
       let response;
       let returnedPromise;
-      const isView = method.startsWith('get_') || method === 'list_campaigns';
+      const isView = method.startsWith('get_') || method === 'list_campaigns' || ['nft_token', 'nft_metadata', 'nft_total_supply', 'nft_tokens', 'nft_supply_for_owner', 'nft_tokens_for_owner'].includes(method);
       const transactionOnly = () => { if (isView) throw new Error('host function prohibited in NEAR view'); };
       const bytes = (pointer, length) => Buffer.from(instance.exports.memory.buffer, Number(pointer), Number(length));
       const value = (pointer, length) => Buffer.from(bytes(pointer, length));
@@ -53,6 +54,7 @@ function runtime() {
           return 1n;
         },
         storage_write: (length, pointer, dataLength, dataPointer, id) => {
+          transactionOnly();
           const name = value(pointer, length).toString('hex');
           const old = storage.get(name);
           if (old) set(id, old);
@@ -61,8 +63,14 @@ function runtime() {
         },
         value_return: (length, pointer) => { response = JSON.parse(value(pointer, length).toString()); },
         panic_utf8: (length, pointer) => { throw new Error(value(pointer, length).toString()); },
+        log_utf8: (length, pointer) => { transactionOnly(); logs.push(value(pointer, length).toString()); },
         promise_results_count: () => resultsCount ?? (result === undefined ? 0n : 1n),
-        promise_result: () => result === undefined ? 0n : result ? 1n : 2n,
+        promise_result: (_index, id) => {
+          if (result === undefined) return 0n;
+          if (!result) return 2n;
+          set(id, resultData);
+          return 1n;
+        },
         promise_batch_create: (length, pointer) => {
           promises.push({ receiver: value(pointer, length).toString() });
           return BigInt(promises.length - 1);
@@ -83,7 +91,7 @@ function runtime() {
       instance = await WebAssembly.instantiate(wasm, { env });
       try {
         instance.exports[method]();
-        return { response, promises, returnedPromise };
+        return { response, promises, returnedPromise, logs };
       } catch (error) {
         storage = previous;
         throw error;
@@ -111,11 +119,179 @@ async function active(target = '100') {
 
 test('compiled Wasm exports only the intended callable ABI and guards initialization', async () => {
   const names = WebAssembly.Module.exports(wasm).filter(entry => entry.kind === 'function').map(entry => entry.name).sort();
-  assert.deepEqual(names, ['approve_campaign', 'claim_refund', 'contribute', 'create_campaign', 'get_account', 'get_campaign', 'get_config', 'list_campaigns', 'new', 'on_withdraw_complete', 'publish_release', 'withdraw'].sort());
+  assert.deepEqual(names, ['approve_campaign', 'claim_refund', 'contribute', 'create_campaign', 'get_account', 'get_campaign', 'get_config', 'list_campaigns', 'new', 'on_withdraw_complete', 'publish_release', 'withdraw', 'nft_transfer', 'nft_transfer_call', 'nft_resolve_transfer', 'set_mirror', 'nft_token', 'nft_metadata', 'nft_total_supply', 'nft_tokens', 'nft_supply_for_owner', 'nft_tokens_for_owner'].sort());
   const vm = runtime();
   await assert.rejects(vm.call('new', {}, { caller: 'attacker.testnet' }), /private/);
   await vm.call('new', { owner: 'creator.testnet' });
   await assert.rejects(vm.call('new'), /already initialized/);
+});
+
+test('compiled Wasm rejects creator as reviewer without registering or charging storage', async () => {
+  const vm = runtime();
+  await vm.call('new', { owner: 'creator.testnet' });
+  const size = vm.size();
+  await assert.rejects(vm.call('create_campaign', { ...terms('self-reviewed'), reviewer: 'creator.testnet' }, { caller: 'creator.testnet', deposit: campaignStorage }), /reviewer must differ/);
+  const config = (await vm.call('get_config')).response;
+  assert.equal(config.campaign_count, 0);
+  assert.equal(config.account_count, 0);
+  assert.equal(config.storage_deposits, '0');
+  assert.equal(config.storage_retained, '0');
+  assert.equal(vm.size(), size);
+  const created = await vm.call('create_campaign', terms(), { caller: 'creator.testnet', deposit: campaignStorage });
+  assert.equal(created.response.reviewer, 'reviewer.testnet');
+});
+
+function events(result) {
+  return result.logs.map(log => {
+    assert.ok(log.startsWith('EVENT_JSON:'));
+    const event = JSON.parse(log.slice('EVENT_JSON:'.length));
+    assert.equal(event.standard, 'nep171');
+    assert.equal(event.version, '1.2.0');
+    return event;
+  });
+}
+async function released() {
+  const vm = await active('50');
+  await vm.call('contribute', { id: 'pack', amount: '50' }, { caller: 'buyer.testnet', now: 3n, deposit: 50n + accountStorage });
+  await vm.call('publish_release', { id: 'pack', key_base64: key.toString('base64') }, { now: 4n });
+  return vm;
+}
+async function tokenView(vm) { return (await vm.call('nft_token', { token_id: 'pack' })).response; }
+async function mirror(vm, caller, uri = 'https://mirror.test/manifest.json') {
+  return vm.call('set_mirror', { token_id: 'pack', mirror_uri: uri }, { caller, deposit: 1n });
+}
+async function transferCall(vm, caller, receiver) {
+  return vm.call('nft_transfer_call', { token_id: 'pack', receiver_id: receiver, msg: 'inspect', approval_id: null, memo: null }, { caller, deposit: 1n });
+}
+async function resolve(vm, started, resultData = 'false', result = true) {
+  const callback = started.promises[1];
+  return vm.call(callback.method, callback.args, { result, resultData });
+}
+
+test('compiled Wasm mints one stewardship on release, exports metadata, and enumerates only released tokens', async () => {
+  const vm = await active('50');
+  assert.equal((await vm.call('nft_total_supply')).response, '0');
+  assert.equal(await tokenView(vm), null);
+  assert.equal((await vm.call('nft_token', { token_id: 'missing' })).response, null);
+  await assert.rejects(vm.call('nft_token', { token_id: 1 }), /string/);
+  await vm.call('contribute', { id: 'pack', amount: '50' }, { caller: 'buyer.testnet', now: 3n, deposit: 50n + accountStorage });
+  const size = vm.size();
+  const release = await vm.call('publish_release', { id: 'pack', key_base64: key.toString('base64') }, { now: 4n });
+  assert.deepEqual(events(release).map(e => e.event), ['nft_mint']);
+  assert.deepEqual(events(release)[0].data, [{ owner_id: 'creator.testnet', token_ids: ['pack'] }]);
+  assert.equal((await vm.call('publish_release', { id: 'pack', key_base64: key.toString('base64') }, { now: 5n })).logs.length, 0);
+  assert.equal(vm.size(), size);
+  const token = await tokenView(vm);
+  assert.equal(token.token_id, 'pack');
+  assert.equal(token.owner_id, 'creator.testnet');
+  assert.equal(token.metadata.reference_hash, Buffer.alloc(32, 1).toString('base64'));
+  assert.equal(token.metadata.copies, 1);
+  assert.equal((await vm.call('nft_metadata')).response.spec, 'nft-1.0.0');
+  assert.equal((await vm.call('nft_total_supply')).response, '1');
+  assert.equal((await vm.call('nft_supply_for_owner', { account_id: 'creator.testnet' })).response, '1');
+  assert.equal((await vm.call('nft_supply_for_owner', { account_id: 'absent.testnet' })).response, '0');
+  assert.deepEqual((await vm.call('nft_tokens', { from_index: null, limit: null })).response, [token]);
+  assert.deepEqual((await vm.call('nft_tokens_for_owner', { account_id: 'creator.testnet', from_index: '1', limit: 1 })).response, []);
+  await assert.rejects(vm.call('nft_tokens', { limit: 0 }), /positive/);
+  await assert.rejects(vm.call('nft_tokens', { from_index: 0 }), /string/);
+  await assert.rejects(vm.call('nft_tokens', { unknown: true }), /unknown/);
+});
+
+test('compiled Wasm transfers a real stewardship right with fixed storage and a separate security reserve', async () => {
+  const vm = await released();
+  const size = vm.size();
+  const before = (await vm.call('get_config')).response;
+  const receiver = 'a'.repeat(64);
+  for (const deposit of [0n, 2n]) await assert.rejects(vm.call('nft_transfer', { token_id: 'pack', receiver_id: receiver }, { caller: 'creator.testnet', deposit }), /exactly 1/);
+  await assert.rejects(vm.call('nft_transfer', { token_id: 'pack', receiver_id: receiver }, { caller: 'attacker.testnet', deposit: 1n }), /owner/);
+  await assert.rejects(mirror(vm, 'attacker.testnet'), /owner/);
+  await assert.rejects(mirror(vm, 'creator.testnet', 'javascript:alert(1)'), /HTTPS/);
+  await mirror(vm, 'creator.testnet', `https://mirror.test/${'p'.repeat(492)}`);
+  const transferred = await vm.call('nft_transfer', { token_id: 'pack', receiver_id: receiver, memo: 'custody', approval_id: 7 }, { caller: 'creator.testnet', deposit: 1n });
+  assert.deepEqual(events(transferred).map(e => e.event), ['nft_transfer', 'nft_metadata_update']);
+  assert.equal(events(transferred)[0].data[0].memo, 'custody');
+  const token = await tokenView(vm);
+  assert.equal(token.owner_id, receiver);
+  assert.equal(JSON.parse(token.metadata.extra).mirror_uri, 'https://example.test/pack.json');
+  assert.equal((await vm.call('get_account', { account_id: receiver })).response.registered, false);
+  const after = (await vm.call('get_config')).response;
+  for (const field of ['account_count', 'storage_retained', 'storage_deposits', 'economic_deposits', 'withdrawn']) assert.equal(after[field], before[field]);
+  assert.equal(after.security_deposits, '2');
+  assert.equal(vm.size(), size);
+  await assert.rejects(mirror(vm, 'creator.testnet'), /owner/);
+  assert.equal((await vm.call('get_campaign', { id: 'pack' })).response.creator, 'creator.testnet');
+});
+
+test('compiled Wasm transfer_call returns on receiver rejection, error, malformed or excessive results', async () => {
+  for (const [result, resultData] of [[true, 'true'], [false, ''], [true, ''], [true, 'null'], [true, '"false"'], [true, 'false '], [true, Buffer.from([255])], [true, Buffer.alloc(100_000, 97)]]) {
+    const vm = await released();
+    const size = vm.size();
+    const started = await transferCall(vm, 'creator.testnet', 'receiver.testnet');
+    assert.equal(started.returnedPromise, 1n);
+    assert.equal(started.promises[0].receiver, 'receiver.testnet');
+    assert.equal(started.promises[0].method, 'nft_on_transfer');
+    assert.equal(started.promises[0].deposit, 0n);
+    assert.deepEqual(started.promises[0].args, { sender_id: 'creator.testnet', previous_owner_id: 'creator.testnet', token_id: 'pack', msg: 'inspect' });
+    assert.equal(started.promises[1].receiver, contract);
+    assert.equal(started.promises[1].gas, 15_000_000_000_000n);
+    await mirror(vm, 'receiver.testnet');
+    const resolved = await resolve(vm, started, resultData, result);
+    assert.equal(resolved.response, false);
+    assert.deepEqual(events(resolved).map(e => e.event), ['nft_transfer', 'nft_metadata_update']);
+    const token = await tokenView(vm);
+    assert.equal(token.owner_id, 'creator.testnet');
+    assert.equal(JSON.parse(token.metadata.extra).mirror_uri, 'https://example.test/pack.json');
+    assert.equal(vm.size(), size);
+  }
+});
+
+test('compiled Wasm acceptance preserves receiver mirror and authenticates resolver callbacks', async () => {
+  const vm = await released();
+  const args = { token_id: 'pack', receiver_id: 'receiver.testnet', msg: '' };
+  await assert.rejects(vm.call('nft_transfer_call', args, { caller: 'creator.testnet', deposit: 1n, gas: 1n }), /40 Tgas/);
+  assert.equal((await tokenView(vm)).owner_id, 'creator.testnet');
+  const started = await transferCall(vm, 'creator.testnet', 'receiver.testnet');
+  const callback = started.promises[1];
+  await assert.rejects(vm.call(callback.method, callback.args, { caller: 'attacker.testnet', result: true }), /private/);
+  await assert.rejects(vm.call(callback.method, callback.args, { resultsCount: 0n }), /one promise result/);
+  await assert.rejects(vm.call(callback.method, callback.args, { resultsCount: 1n }), /not ready/);
+  await mirror(vm, 'receiver.testnet');
+  assert.equal((await resolve(vm, started)).response, true);
+  assert.equal((await tokenView(vm)).owner_id, 'receiver.testnet');
+  assert.equal(JSON.parse((await tokenView(vm)).metadata.extra).mirror_uri, 'https://mirror.test/manifest.json');
+});
+
+test('compiled Wasm nested transfer callbacks preserve onward owners and reset mirrors on each return', async () => {
+  const vm = await released();
+  const outer = await transferCall(vm, 'creator.testnet', 'receiver.testnet');
+  const inner = await transferCall(vm, 'receiver.testnet', 'next.testnet');
+  await mirror(vm, 'next.testnet');
+  assert.equal((await resolve(vm, inner)).response, true);
+  assert.equal((await resolve(vm, outer, 'true')).response, true);
+  assert.equal((await tokenView(vm)).owner_id, 'next.testnet');
+  assert.equal(JSON.parse((await tokenView(vm)).metadata.extra).mirror_uri, 'https://mirror.test/manifest.json');
+  const returnOuter = await transferCall(vm, 'next.testnet', 'receiver.testnet');
+  const returnInner = await transferCall(vm, 'receiver.testnet', 'last.testnet');
+  await mirror(vm, 'last.testnet');
+  assert.equal((await resolve(vm, returnInner, 'true')).response, false);
+  assert.equal((await tokenView(vm)).owner_id, 'receiver.testnet');
+  assert.equal(JSON.parse((await tokenView(vm)).metadata.extra).mirror_uri, 'https://example.test/pack.json');
+  await mirror(vm, 'receiver.testnet');
+  assert.equal((await resolve(vm, returnOuter, '', false)).response, false);
+  assert.equal((await tokenView(vm)).owner_id, 'next.testnet');
+  assert.equal(JSON.parse((await tokenView(vm)).metadata.extra).mirror_uri, 'https://example.test/pack.json');
+});
+
+test('compiled Wasm owner round trip can still be returned by an earlier receiver callback', async () => {
+  const vm = await released();
+  const started = await transferCall(vm, 'creator.testnet', 'receiver.testnet');
+  await vm.call('nft_transfer', { token_id: 'pack', receiver_id: 'next.testnet' }, { caller: 'receiver.testnet', deposit: 1n });
+  await vm.call('nft_transfer', { token_id: 'pack', receiver_id: 'receiver.testnet' }, { caller: 'next.testnet', deposit: 1n });
+  await mirror(vm, 'receiver.testnet');
+  assert.equal((await resolve(vm, started, 'true')).response, false);
+  const token = await tokenView(vm);
+  assert.equal(token.owner_id, 'creator.testnet');
+  assert.equal(JSON.parse(token.metadata.extra).mirror_uri, 'https://example.test/pack.json');
 });
 
 test('compiled Wasm caps funding, reveals once, and routes native transfer through a private bounded callback', async () => {
