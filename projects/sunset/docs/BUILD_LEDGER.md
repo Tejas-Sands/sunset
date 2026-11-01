@@ -31,3 +31,13 @@ Prepared nine real local workflow scenarios, source/artifact digest validation, 
 User requested a stronger landing page and said the interface looked mid. Added a static public homepage at `/`, moved the unchanged workspace business logic to `/app/`, and preserved browser-local state. The landing uses original generated book/sunset artwork, locally hosted licensed Geist, distinct resource scenarios, creator/stewardship sections and native FAQ controls. Workspace CSS improves type, spacing, contrast and responsive navigation.
 
 Prototype and sample-funding disclosures remain explicit and readable. No adoption statistics, testimonials, wallet connections, funding events or registered trademark claims were fabricated. Static export trailing-slash routing and allowlisted query destinations are verified after build. App/server browser launch still fails under the current socket restrictions; source/static-output checks do not establish visual browser QA.
+
+## Deployment authorization and access check
+
+The user has now requested deployment of the whole product. This supersedes the earlier exclusion of deployment work. Keep the initial deployment on free hosting and NEAR testnet; no mainnet or paid resource is requested.
+
+Fresh checks against source revision `5810dddbc647a4d8e0bcfcd970c2bc5df473d51f` passed: `npm run check` (39 application tests, type generation/typecheck, nine local workflow scenarios, source/artifact digests and ten compiled-Wasm host scenarios), `npm run build`, and `npm run test:pages`. These do not establish real browser or protocol execution.
+
+A Vercel Hobby project named `sunset` was created through the connected account. Uploading the frontend was refused with HTTP 403 because the connection lacks the owning team's grant; the provider's team-authorization link was supplied to the user. No deployment or live URL exists. A 54-file static publication payload was prepared privately from the verified export, with content hashes and no release backups/secrets. This can publish the landing and rehearsal; live browser signing still requires implementation and actual receipt reconciliation.
+
+The GitHub connector now responds, but is authenticated as `vedantssj`; lookup of the intended `Tejas-Sands/sunset` returns 404. That does not distinguish a missing repository from inaccessible private contents. Do not publish under a different owner or claim a push succeeded. Actual funded testnet account names and wallet signers remain missing. See [deployment sequence and remaining gates](DEPLOYMENT.md).

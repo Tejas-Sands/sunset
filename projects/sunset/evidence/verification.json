@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T12:50:51.803425+00:00",
+  "checked_at": "2026-11-01T15:01:13.944796+00:00",
   "status": "stewardship_product_locally_verified_external_execution_unverified",
   "network": "testnet_only",
   "application": {
@@ -47,9 +47,9 @@
       "status": "passed"
     },
     {
-      "command": "NEXT_TELEMETRY_DISABLED=1 npm run build",
+      "command": "npm run build",
       "status": "passed",
-      "output": "static / and /_not-found"
+      "output": "static /, /app/ and /_not-found"
     },
     {
       "command": "CARGO_TARGET_DIR=/tmp/sunset-cargo-target cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml",
@@ -130,8 +130,8 @@
       "reason": "No deployed contract or signer configured; viewer fails closed and plans remain unsigned"
     },
     {
-      "item": "Supabase/Vercel/shared hosted service",
-      "reason": "Not provisioned; reduced initial product needs no database"
+      "item": "Public frontend deployment and shared live browser service",
+      "reason": "Vercel Hobby project created; team grant blocks upload. No deployed URL or live wallet signing. Reduced initial product needs no database."
     },
     {
       "item": "Independent educator review and sponsor demand",
@@ -157,10 +157,10 @@
     "site_deployed": false,
     "social_posted": false,
     "hackathon_submitted": false,
-    "reason": "Existing GitHub account/connector/network access blocker; local verified commits retained"
+    "reason": "GitHub connector authenticated as vedantssj; intended repository lookup returns 404. Vercel team grant blocks file upload. No deployed contract/signers."
   },
-  "source_revision": "f8a53ab54e42748270317f6a9f32680cdc5afb0f",
-  "deployment_excluded_by_user": true,
+  "source_revision": "5810dddbc647a4d8e0bcfcd970c2bc5df473d51f",
+  "deployment_excluded_by_user": false,
   "ui_revision": {
     "source_revision": "f8a53ab54e42748270317f6a9f32680cdc5afb0f",
     "landing": "src/app/page.tsx",
@@ -173,5 +173,24 @@
     "design_record": "docs/LANDING_DESIGN.md",
     "business_logic": "Existing ledger, crypto and game/recovery logic retained; routing/imports and presentation changed",
     "verification": "Typecheck, 39 app tests, 10 compiled-Wasm scenarios, production export and static route/asset check passed. CSS parses; essential new contrast pairs checked. Browser/mobile rendering remains unverified because sockets are blocked."
+  },
+  "deployment_authorized_by_user": true,
+  "deployment_readiness": {
+    "checked_at": "2026-11-01T15:01:13.944796+00:00",
+    "source_revision": "5810dddbc647a4d8e0bcfcd970c2bc5df473d51f",
+    "fresh_commands": [
+      "npm run check",
+      "npm run build",
+      "npm run test:pages"
+    ],
+    "fresh_commands_passed": true,
+    "vercel_project_created": true,
+    "vercel_plan": "hobby",
+    "vercel_team_grant": "required; file upload refused with HTTP 403",
+    "frontend_uploaded": false,
+    "deployed_url": null,
+    "live_wallet_signing": "not implemented; current workbench exports unsigned plans",
+    "contract_signer_configured": false,
+    "runbook": "docs/DEPLOYMENT.md"
   }
 }

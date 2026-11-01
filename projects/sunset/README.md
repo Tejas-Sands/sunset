@@ -16,7 +16,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://127.0.0.1:3000` for the public landing page, or `http://127.0.0.1:3000/app/` for the interactive workspace. Homepage links open the appropriate resource or workspace view. Existing browser-local packs and backups keep the same storage key. No environment variables, database, model API key or wallet are needed for rehearsal. For a static build, run `npm run build` then `npm start` (uses Python 3's static server for `out/`). Deploying the static `out/` directory to free hosting is a separate action. Hosted browser state remains local to each visitor and does not form a shared service.
+Open `http://127.0.0.1:3000` for the public landing page, or `http://127.0.0.1:3000/app/` for the interactive workspace. Homepage links open the appropriate resource or workspace view. Existing browser-local packs and backups keep the same storage key. No environment variables, database, model API key or wallet are needed for rehearsal. For a static build, run `npm run build` then `npm start` (uses Python 3's static server for `out/`). Hosted browser state remains local to each visitor and does not form a shared service. The user has now authorized deployment; [the deployment runbook](docs/DEPLOYMENT.md) separates publishing this frontend from completing a live signing dApp.
 
 A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-lantern-trail.html). Its gameplay is self-contained; actual offline browser execution must still be checked on the target machine.
 
