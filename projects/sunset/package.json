@@ -11,7 +11,8 @@
     "test:contract": "node --test --test-isolation=none contracts/sunset/tests/wasm.test.mjs",
     "verify:local": "node scripts/verify-local.mjs",
     "check:artifact": "node scripts/check-artifact.mjs",
-    "check": "npm test && npm run typecheck && npm run verify:local && npm run check:artifact && npm run test:contract"
+    "check": "npm test && npm run typecheck && npm run verify:local && npm run check:artifact && npm run test:contract",
+    "test:pages": "node scripts/check-pages.mjs"
   },
   "dependencies": {
     "next": "16.2.10",
