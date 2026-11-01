@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T15:01:13.944796+00:00",
+  "checked_at": "2026-11-01T17:16:17.469655+00:00",
   "status": "stewardship_product_locally_verified_external_execution_unverified",
   "network": "testnet_only",
   "application": {
@@ -16,8 +16,8 @@
     {
       "command": "npm test",
       "status": "passed",
-      "tests": 39,
-      "scope": "crypto/schema, sponsorship and grants, stewardship/mirror boundaries, signer-bound plans, backup/receipt context helpers, recovery/preparation, RPC catalog and local workflow"
+      "tests": 47,
+      "scope": "crypto/schema, sponsorship and grants, stewardship/mirror boundaries, signer-bound plans, backup/receipt context helpers, recovery/preparation, RPC catalog and local workflow; eight offline GitHub publishing safety scenarios with real local Git histories"
     },
     {
       "command": "npm run typecheck",
@@ -157,7 +157,7 @@
     "site_deployed": false,
     "social_posted": false,
     "hackathon_submitted": false,
-    "reason": "GitHub connector authenticated as vedantssj; intended repository lookup returns 404. Vercel team grant blocks file upload. No deployed contract/signers."
+    "reason": "CLI DNS cannot resolve GitHub, so supplied token validity remains unknown. Connected app uses a different saved identity. Vercel integration/team access and NEAR testnet signers remain pending."
   },
   "source_revision": "5810dddbc647a4d8e0bcfcd970c2bc5df473d51f",
   "deployment_excluded_by_user": false,
@@ -192,5 +192,25 @@
     "live_wallet_signing": "not implemented; current workbench exports unsigned plans",
     "contract_signer_configured": false,
     "runbook": "docs/DEPLOYMENT.md"
+  },
+  "publishing_preparation": {
+    "checked_at": "2026-11-01T17:16:17.469655+00:00",
+    "source_base": "69c9b94e24fee9fa38f10279cdf205d1f6c8aba6",
+    "helper": "scripts/publish-github.sh",
+    "helper_sha256": "29e768bac43dacec81603dfc414bfb11630423f4318d12b1c01377a1f9f1e321",
+    "tests": "tests/publish-github.test.mjs",
+    "tests_sha256": "b88b4bcc6a1ea39fa95cf36535e053d4de5b5302dd0236695fb5fcb10d14f39a",
+    "fresh_commands": [
+      "npm run check",
+      "bash -n scripts/publish-github.sh"
+    ],
+    "fresh_commands_passed": true,
+    "publishing_scenarios": 8,
+    "network_in_publishing_tests": "simulated GitHub and remote transport; actual local Git repositories",
+    "live_token_validated": false,
+    "token_persisted": false,
+    "github_cli_network": "DNS lookup fails for github.com and api.github.com",
+    "new_remote_publication": false,
+    "vercel_setup": "Persistent GitHub integration documented; no new consent link or deployment"
   }
 }

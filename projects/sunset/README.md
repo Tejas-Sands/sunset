@@ -99,6 +99,8 @@ Open **Stewardship** after a pack is released. Transfer its local token, try the
 
 GitHub Actions checks are prepared in the root `.github/workflows/checks.yml`, using the recorded Node/Rust versions. They test and build without deploying. No hosted workflow run is claimed. The current OS rejects TCP/Unix socket creation and has no NEAR protocol runtime; [exact remaining verification gaps](../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md) are recorded rather than replaced by simulated proof.
 
+For publication from a network-enabled terminal, run `bash scripts/publish-github.sh` from this directory. It prompts privately for a temporary GitHub token, verifies Tejas-Sands ownership and remote history, publishes the preserved commits without forcing, and checks the remote commit. The [deployment runbook](docs/DEPLOYMENT.md) includes persistent Vercel Git integration and the separate work still needed for a live NEAR browser dApp.
+
 ## Hackathon positioning
 
 Primary product targets: **Open Innovation**, **Social Money**, and now **NFTs That Do Something** through the implemented transferable maintenance right. NFT fit remains conditional on the required demonstration evidence and organizer judgment. **Real-World Money** requires actual creator-payment/refund/withdrawal evidence. Agent Economy, Security and Swarms remain conditional future claims; local policy simulations do not establish autonomous onchain authority. Do not select Games, Privacy, DeFi, Memecoins or Investment Thesis for superficial associations. [All thirteen tracks and current rules](../../research/2026-11-01-council/track-verification.md).

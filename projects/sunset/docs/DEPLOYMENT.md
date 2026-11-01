@@ -28,6 +28,28 @@ Vercel Hobby account `rajavaiktitva-8002` has project `sunset` (`prj_ezDpbJ9JXkc
 
 GitHub currently authenticates as `vedantssj`. The intended `Tejas-Sands/sunset` repository returned **404** through that access; this does not distinguish an absent repository from an inaccessible private one. Establish authorized Tejas-Sands access, verify ownership and contents, then publish without overwriting unrelated history. No remote publication is claimed. This workspace uses `git --git-dir=.sunset-git --work-tree=.`; ordinary clones use normal Git commands.
 
+### Publish from a normal terminal, then connect Vercel once
+
+This executor currently cannot resolve `github.com` or `api.github.com`. That prevents checking a supplied GitHub token or pushing through the CLI; it does not establish that a token is invalid. The connected GitHub app uses its own saved account and cannot be switched by pasting a token into the conversation.
+
+From the repository root in a network-enabled terminal, run:
+
+```sh
+bash projects/sunset/scripts/publish-github.sh
+```
+
+The helper uses installed Git and GitHub CLI. Enter the temporary token at its hidden prompt, or supply `GH_TOKEN` through your local credential tooling. It checks the authenticated account, creates the intended public repository only after an explicit not-found response, verifies ownership/write access and remote history, pushes existing `main` commits without forcing, and checks the remote commit. It does not save the token, rewrite history or alter unrelated origins. The token needs repository write access and permission to publish the checked-in GitHub Actions workflow; creating a missing repository also requires repository-creation access. Revoke a token shared in conversation after use; no replacement needs to be pasted here.
+
+After the repository is published, complete the persistent Vercel Git integration in the dashboard:
+
+1. In Vercel account settings, ensure the GitHub login connection is `Tejas-Sands`. For a personal GitHub repository, its owner must connect it.
+2. Open the existing **sunset → Settings → Git → Connect Git Repository** and select **Tejas-Sands/sunset**. If it is missing, grant the Vercel GitHub App access to that repository in GitHub's installed-app settings.
+3. Under **Settings → Build and Deployment**, set **Root Directory** to `projects/sunset`, **Framework Preset** to `Next.js`, **Build Command** to `npm run build`, **Install Command** to `npm ci`, **Node.js Version** to `24.x`, and leave **Output Directory override off**. The Next.js integration handles `output: 'export'`; do not override its output directory to `out`.
+4. Verify **Settings → Environments → Production → Branch Tracking** is `main`. For the first build, open **Deployments → Create Deployment** and select `main`. Later pushes trigger deployment automatically. No environment variables, database or Vercel token are required for the current static application.
+5. Check the stable production domain from **Domains** in a signed-out browser. Standard deployment protection can keep generated preview URLs behind login; verify the intended public production domain separately.
+
+This connects GitHub directly to Vercel and does not depend on the assistant connection's expiring consent links. See [Vercel's GitHub integration](https://vercel.com/docs/git/vercel-for-github), [build settings](https://vercel.com/docs/builds/configure-a-build) and [Git deployments](https://vercel.com/docs/git). If Vercel reports an unrecognized commit author, use the actual account's verified GitHub email/noreply setting for future commits; do not rewrite published history to work around it.
+
 ## 1. Verify and host the static site
 
 Run from `projects/sunset` with Node.js 22.9+ (24.17 was tested):
@@ -39,9 +61,9 @@ npm run build
 npm run test:pages
 ```
 
-The latest recorded run on unchanged `5810ddd` source passed: 39 JavaScript tests, typecheck, nine local workflows, artifact checks, ten compiled-Wasm host scenarios, production export and static page checks. These results do not establish browser or protocol execution. See [verification evidence](../evidence/verification.json).
+The `5810ddd` application build passed production export and static page checks. After adding the publishing helper, a fresh `npm run check` passed 47 JavaScript tests (including eight offline publishing scenarios), typecheck, nine local workflows, artifact checks and ten compiled-Wasm host scenarios. `bash -n scripts/publish-github.sh` also passed. Publishing tests use real local Git histories and simulated GitHub responses; no live token or remote publication was verified. These results do not establish browser or protocol execution. See [verification evidence](../evidence/verification.json).
 
-Upload **only `out/`** as the static document root. For a repository-based build, set project root to `projects/sunset`, build command to `npm run build`, and output directory to `out`. Verify `/`, `/app/`, `/app/?view=Discover` and `/try-lantern-trail.html` over HTTPS. No application environment variables are required for the existing rehearsal.
+For a generic static host, upload **only `out/`** as its document root. For Vercel's repository integration, use the **Next.js** preset and leave its output directory at the framework default, as described above. Verify `/`, `/app/`, `/app/?view=Discover` and `/try-lantern-trail.html` over HTTPS. No application environment variables are required for the existing rehearsal.
 
 On a socket-capable local machine, `npm start` serves `out/` at `http://127.0.0.1:3000`. Check desktop/mobile layout, keyboard/dialog behavior, persistence and errors. Download the standalone game, close the application, disable networking and complete the downloaded file in a fresh browser session. A cached website tab is insufficient evidence. See the [demonstration guide](DEMO.md).
 
