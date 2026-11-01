@@ -17,9 +17,9 @@ Provisional receivers mutate rights then reject; former owner keeps mirror autho
 
 ## Tasks
 
-- [ ] Primary-source research and independent product/engineering challenge; save source limits.
-- [ ] Contract failing tests → bounded token/metadata/events/transfer-call implementation → native and actual-Wasm host checks; independent review; commit.
-- [ ] Client mirror/rights tests → strict mirror recovery and rehearsal NFT operations with legacy-state migration; unsigned plans for actual ABI; commit.
-- [ ] Interface stewardship and transfer/recovery actions; integrate exact-pack verification; typecheck/build and review; commit.
-- [ ] Reproducible end-to-end scenarios, browser/Sandbox availability evidence, threat model, demonstration/submission preparation and evidence/track matrix updates; commit.
-- [ ] Run final required checks, verify source/Wasm identity and clean Git tree, refresh portable publication history; push only if existing GitHub access actually works.
+- [x] Primary-source research and independent product/engineering challenge; save source limits.
+- [x] Contract failing tests → bounded token/metadata/events/transfer-call implementation → native and actual-Wasm host checks; independent review; commit.
+- [x] Client mirror/rights tests → strict mirror recovery and rehearsal NFT operations with legacy-state migration; unsigned plans for actual ABI; commit.
+- [x] Interface stewardship and transfer/recovery actions; integrate exact-pack verification; typecheck/build and review; commit.
+- [x] Reproducible end-to-end scenarios, browser/Sandbox availability evidence, threat model, demonstration/submission preparation and evidence/track matrix updates; commit.
+- [x] Run final required checks, verify source/Wasm identity and clean Git tree, refresh portable publication history; push only if existing GitHub access actually works. Existing connection remains blocked; publication is not claimed.

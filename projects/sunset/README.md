@@ -2,7 +2,7 @@
 
 SUNSET pools adult sponsorship for a useful digital resource. The creator receives a capped payment when its committed key is published on time. Missed funding/release conditions allow refunds. Learners can keep a self-contained offline game without a wallet or account.
 
-**Built locally on 1 November 2026:** runnable Next.js application, encrypted learning packs, independent recovery tools and compiled NEAR Wasm contract. **Not yet deployed or submission-ready:** browser execution, NEAR Sandbox receipt scenarios and live testnet settlement remain unverified. The interface labels every local financial action as rehearsal. No actual tokens move there.
+**Built locally on 1 November 2026:** runnable Next.js application, encrypted learning packs, independent recovery tools and compiled NEAR Wasm contract with standard stewardship NFTs. **Not yet deployed or submission-ready:** browser execution, NEAR Sandbox receipt scenarios and live testnet settlement remain unverified. The interface labels every local financial action as rehearsal. No actual tokens move there.
 
 The [LLM council decision](../../research/2026-11-01-council/README.md) explains why SUNSET was retained, why purchase acceptance was replaced with sponsorship, and which hackathon tracks are defensible. The October architecture below is historical planning, not a list of completed features.
 
@@ -35,7 +35,7 @@ How it works can advance the rehearsal clock eight days and reset this browser's
 
 [Contract README and JSON ABI](contracts/sunset/README.md) covers initialization, storage allowances, review, contribution, release, both refund paths, withdrawals and direct recovery. [Compiled contract](contracts/sunset/res/sunset_contract.wasm) is real Wasm. It uses the NEAR host ABI directly, with pinned Borsh/Serde dependencies. Its private one-time initializer is `new {owner}`; only that owner creates campaigns. No real account name is assumed to exist.
 
-Testnet setup in the app reads an actual configured contract only after verifying `chain_id`, pinned code hash and block identity. It is a read-only viewer. The coordination lab exports unsigned `contribute` plans; adults must separately verify and sign with their own wallet/CLI. The UI does not implement live wallet authentication or signing.
+Testnet setup in the app reads an actual configured contract only after verifying `chain_id`, pinned code hash and block identity. It is a read-only viewer. Its public-resource catalog can explicitly recover, verify, play and export a released pack from the original or steward-selected manifest location; the onchain license commitment is checked as well. The coordination lab exports unsigned `contribute` plans. The transaction workbench prepares the complete core/NFT ABI, calculates separate storage/security deposits, optionally binds an expected signer, and checks imported RPC evidence against exact action fields. Supplied evidence files do not prove chain authenticity. Adults must separately verify and sign with their own wallet/CLI; the UI does not implement live wallet authentication or signing.
 
 Prepare the exact artifact/manifest and onchain terms without making any network request:
 
@@ -49,7 +49,7 @@ node scripts/prepare-campaign.mjs \
   --out private/lantern-trail
 ```
 
-Replace placeholders with real identities and hosting. Use an output directory that does not already exist and keep it outside any public document root. The script writes `create-campaign.json`, an encrypted `artifact.json`, exact `manifest.json`, private backup and secret release arguments. **Publish only the encrypted artifact and exact manifest before release. Never upload the private backup or release arguments prematurely.** Add private output directories to your own ignore rules; `private/` is already ignored. The script directory is not itself a deployed resource.
+Replace placeholders with real identities and hosting. Use an output directory that does not already exist and keep it outside any public document root. The script writes `create-campaign.json`, an encrypted recovery `artifact.json`, exact `manifest.json`, raw `ciphertext.sunset`, private backup and secret release arguments. **Publish the exact manifest.json and ciphertext.sunset together in one directory. Retain artifact.json for independent file recovery. Never upload the private backup or release arguments prematurely.** Newly prepared schema-2 manifests commit the fixed relative ciphertext path; older schema-1 retained files remain recoverable without rewriting their commitments. Add private output directories to your own ignore rules; `private/` is already ignored. The script directory is not itself a deployed resource.
 
 Independent offline recovery with the application stopped:
 
@@ -62,10 +62,8 @@ This verifies manifest, ciphertext, key and plaintext commitments before writing
 ## Verification
 
 ```sh
-npm test
-npm run typecheck
+npm run check
 npm run build
-npm run test:contract
 cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml
 cargo fmt --manifest-path contracts/sunset/Cargo.toml --check
 cargo clippy --locked --offline --manifest-path contracts/sunset/Cargo.toml --all-targets -- -D warnings
@@ -76,9 +74,25 @@ The Wasm host tests execute the compiled artifact with transactional host double
 
 Caps: five curated contract campaigns, 100 permanent registered contract accounts, bounded serialized state. Public contributors can exhaust the participant slots. Callback uncertainty leaves a withdrawal pending, without speculative recredit. The contract checks key commitments, not licensing rights, educational quality, decryptability or artifact availability. Development deployments remain upgradeable while full-access keys exist. Testnet only; no mainnet readiness or immutable deployment is claimed.
 
+## Tokenization with a concrete maintenance right
+
+Each successfully released campaign mints one stewardship NFT to its fixed creator. The current holder can maintain a preferred HTTPS mirror for the same committed manifest and ciphertext. Transfer hands that authority to another account and resets the mirror to the original URI; former holders lose maintenance authority. Existing content access, license, hashes, creator compensation and refund claims stay fixed. Learners need no token.
+
+The contract implements **NEP-171 core and events, NEP-177 metadata, and NEP-181 enumeration**, including receiver acceptance/rejection and private transfer resolution. Token transfers and mirror updates require exactly one yoctoNEAR, retained separately from escrow. It omits approvals, royalties, token sales and revenue shares. It requires a **fresh deployment with state layout 2**; no state migration is supplied. A receiver that reacquires a token before an older callback may still have it returned under reference-standard owner-equality semantics; see the contract README.
+
+Open **Stewardship** after a pack is released. Transfer its local token, try the old account's mirror edit, then use the new holder. Save the exact manifest and ciphertext, host them together yourself, and explicitly verify the mirror. Downloads are bounded, redirects rejected and credentials omitted; all original commitments are checked before the strict pack can run. A URL alone is not evidence of availability. Existing browser packs/backups are preserved when their local state gains the new stewardship fields.
+
+[Tokenization research and alternatives](../../research/2026-11-01-tokenization/RESEARCH.md) · [contract review](../../research/2026-11-01-tokenization/CONTRACT_REVIEW.md) · [client review](../../research/2026-11-01-tokenization/CLIENT_REVIEW.md).
+
+## Reproducible checks and demonstration
+
+`npm run check` runs the application suite, typecheck, nine socket-free workflow scenarios, source/artifact digest checks and compiled-Wasm scenarios. `npm run verify:local` exercises retained-file recovery in a separate process, both refund outcomes, token maintenance handover and conservation of **21.8 simulated NEAR**. [Demonstration guide](docs/DEMO.md), [threat model](docs/THREAT_MODEL.md), [sample arithmetic review](docs/CONTENT_REVIEW.md), [unsubmitted preparation draft](docs/SUBMISSION_DRAFT.json).
+
+GitHub Actions checks are prepared in the root `.github/workflows/checks.yml`, using the recorded Node/Rust versions. They test and build without deploying. No hosted workflow run is claimed. The current OS rejects TCP/Unix socket creation and has no NEAR protocol runtime; [exact remaining verification gaps](../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md) are recorded rather than replaced by simulated proof.
+
 ## Hackathon positioning
 
-Primary targets: **Open Innovation**, **Social Money**. **Real-World Money** requires actual creator-payment/refund/withdrawal evidence. Agent Economy, Security and Swarms remain conditional future claims; local policy simulations do not establish autonomous onchain authority. Do not select Games, Privacy, DeFi, NFTs, Memecoins or Investment Thesis for superficial associations. [All thirteen tracks and current rules](../../research/2026-11-01-council/track-verification.md).
+Primary product targets: **Open Innovation**, **Social Money**, and now **NFTs That Do Something** through the implemented transferable maintenance right. NFT fit remains conditional on the required demonstration evidence and organizer judgment. **Real-World Money** requires actual creator-payment/refund/withdrawal evidence. Agent Economy, Security and Swarms remain conditional future claims; local policy simulations do not establish autonomous onchain authority. Do not select Games, Privacy, DeFi, Memecoins or Investment Thesis for superficial associations. [All thirteen tracks and current rules](../../research/2026-11-01-council/track-verification.md).
 
 Before submission: real browser/mobile/offline QA, protocol Sandbox failure scenarios, actual reviewed testnet deployment and independent-user receipts, educator review, real sponsor feedback, public repository, approved public demo and accurate team/payout details. No publication or submission has occurred.
 

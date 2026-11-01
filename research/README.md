@@ -1,5 +1,7 @@
 # NEAR hackathon research
 
+- [Tokenization research and implementation review](2026-11-01-tokenization/RESEARCH.md): meaningful stewardship rights, standards, alternatives and verification limits.
+
 - [1 November council audit and build decision](2026-11-01-council/README.md): independent assessments, blind peer review, current rules and track fit, and links to the local SUNSET implementation.
 
 The [main project candidates](../projects/README.md) are maintained separately from dated research records. **SUNSET is now selected for the build:** see its [complete architecture](../projects/sunset/README.md).

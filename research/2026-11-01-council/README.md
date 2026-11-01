@@ -1,5 +1,7 @@
 # SUNSET council decision — 1 November 2026
 
+> Subsequent authorized work added a functional stewardship NFT. See [the tokenization research/reviews](../2026-11-01-tokenization/RESEARCH.md) and current product README for the implemented feature and updated NFT-track candidate; this council record preserves the earlier scope decision.
+
 **Decision: keep SUNSET, simplify the mechanism, build the proof.** The research is worth using. It supports a plausible hackathon prototype, not demonstrated school demand, educational effectiveness or a validated business.
 
 SUNSET lets adults jointly sponsor one precisely committed resource. The fixed creator receives the capped escrow after the matching decryption key is published on time. If the funding/release conditions fail, contributors can claim refunds. Learners can keep an independently usable offline copy. This shared financial agreement gives NEAR a substantive role.

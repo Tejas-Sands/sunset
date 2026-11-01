@@ -1,22 +1,47 @@
 {
-  "checked_at": "2026-11-01T04:46:42.577Z",
-  "status": "local_prototype_verified_external_integration_unverified",
+  "checked_at": "2026-11-01T06:37:00.013279+00:00",
+  "status": "stewardship_product_locally_verified_external_execution_unverified",
   "network": "testnet_only",
   "application": {
     "framework": "Next.js 16.2.10",
     "runtime": "Node.js 24.17.0",
     "static_export": "out/",
-    "financial_state": "browser-local rehearsal, never claimed as actual settlement"
+    "financial_state": "browser-local rehearsal, never claimed as actual settlement",
+    "tokenization": "One NEP-171 stewardship NFT per released campaign; maintenance mirror only, no content or money rights",
+    "state_migration": "Existing browser packs/backups preserved; onchain layout2 requires fresh deployment"
   },
   "checks": [
     {
       "command": "npm test",
       "status": "passed",
-      "tests": 24,
-      "scope": "JS crypto/schema/accounting/deadlines/grants/policy/receipts/recovery/preparation/RPC block pinning"
+      "tests": 39,
+      "scope": "crypto/schema, sponsorship and grants, stewardship/mirror boundaries, signer-bound plans, backup/receipt context helpers, recovery/preparation, RPC catalog and local workflow"
     },
     {
       "command": "npm run typecheck",
+      "status": "passed",
+      "detail": "next typegen then tsc; verified with generated next-env.d.ts initially absent"
+    },
+    {
+      "command": "npm run verify:local",
+      "status": "passed",
+      "scenarios": 9,
+      "economic_total": "21.8 simulated NEAR",
+      "network_requests": 0
+    },
+    {
+      "command": "npm run check:artifact",
+      "status": "passed",
+      "source_digest_count": 8
+    },
+    {
+      "command": "npm run test:contract",
+      "status": "passed",
+      "tests": 10,
+      "scope": "actual compiled WASM with transactional host doubles, not protocol Sandbox"
+    },
+    {
+      "command": "npm run check",
       "status": "passed"
     },
     {
@@ -25,47 +50,63 @@
       "output": "static / and /_not-found"
     },
     {
-      "command": "npm run test:contract",
+      "command": "CARGO_TARGET_DIR=/tmp/sunset-cargo-target cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml",
       "status": "passed",
-      "tests": 3,
-      "scope": "compiled actual WASM with transactional host doubles, not NEAR protocol execution"
-    },
-    {
-      "command": "CARGO_TARGET_DIR=/tmp/sunset-final-target cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml",
-      "status": "passed",
-      "tests": 10
+      "tests": 16
     },
     {
       "command": "cargo fmt --manifest-path contracts/sunset/Cargo.toml --check",
       "status": "passed"
     },
     {
-      "command": "CARGO_TARGET_DIR=/tmp/sunset-final-target cargo clippy --locked --offline --manifest-path contracts/sunset/Cargo.toml --all-targets -- -D warnings",
+      "command": "CARGO_TARGET_DIR=/tmp/sunset-cargo-target cargo clippy --locked --offline --manifest-path contracts/sunset/Cargo.toml --all-targets -- -D warnings",
       "status": "passed"
     },
     {
-      "command": "npm ls --depth=0",
-      "status": "passed"
-    },
-    {
-      "command": "Parse generated standalone HTML runtime with node:vm.Script",
+      "command": "cargo clippy --locked --offline --target wasm32-unknown-unknown -- -D warnings",
       "status": "passed",
-      "scope": "syntax and packaging only"
+      "provenance": "contract implementation checks; Rust source digests unchanged after canonical build"
+    },
+    {
+      "command": "bash contracts/sunset/scripts/build.sh",
+      "status": "passed",
+      "scope": "Two different source checkout directories and separate target directories; identical locked dependencies and rustc 1.96.0 (ac68faa20). No cross-compiler reproducibility claim.",
+      "result": {
+        "status": "passed",
+        "source_checkout_count": 2,
+        "separate_target_directories": true,
+        "source_and_target_paths_contain_spaces": true,
+        "cargo_home_symlink_with_spaces": true,
+        "ambient_rustflags_replaced": true,
+        "byte_identical": true,
+        "local_home_and_checkout_paths_absent": true,
+        "artifact_sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf"
+      }
+    },
+    {
+      "command": "GitHub Actions checks workflow",
+      "status": "prepared_not_run",
+      "detail": "YAML parses; contains no deployment job"
     }
   ],
   "contract_artifact": {
     "path": "contracts/sunset/res/sunset_contract.wasm",
-    "bytes": 190561,
-    "sha256": "79a647abecd7f04e36d44dcd4b79f8310395e636f6165755e1a74d97887f4837",
+    "bytes": 266190,
+    "sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf",
     "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)",
-    "source_to_artifact": "Independent reviewer rebuilt byte-identical artifact",
+    "source_to_artifact": "Two different source checkout directories and separate target directories; identical locked dependencies and rustc 1.96.0 (ac68faa20). No cross-compiler reproducibility claim.",
     "deployment": null,
-    "api": "new({owner}); owner-curated campaigns, approval, contribution, release, refunds, withdrawals, views"
+    "api": "Owner-curated sponsorship/review/release/refund/withdrawal plus NEP171 core/events, NEP177 metadata, NEP181 enumeration and current-owner-only mirror maintenance",
+    "state_layout_version": 2,
+    "callable_exports": 22,
+    "fresh_deployment_required": true
   },
   "reviews": {
-    "council": "../../research/2026-11-01-council/README.md",
-    "contract": "../../research/2026-11-01-council/contract-review.md",
-    "frontend": "../../research/2026-11-01-council/frontend-review.md"
+    "initial_council": "../../research/2026-11-01-council/README.md",
+    "tokenization_research": "../../research/2026-11-01-tokenization/RESEARCH.md",
+    "contract": "../../research/2026-11-01-tokenization/CONTRACT_REVIEW.md",
+    "frontend": "../../research/2026-11-01-tokenization/CLIENT_REVIEW.md",
+    "environment_gaps": "../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md"
   },
   "unverified": [
     {
@@ -96,12 +137,20 @@
     "contract_service_grants": false,
     "contract_agent_budgets": false,
     "upgradeability": "No immutable deployment claimed",
-    "withdrawal_uncertainty": "Callback failure can leave pending state; no guessed recredit"
+    "withdrawal_uncertainty": "Callback failure can leave pending state; no guessed recredit",
+    "nft_money_rights": false,
+    "nft_public_content_gate": false,
+    "nft_receiver_reacquisition": "Reference-standard owner equality; an older callback may return a token reacquired by its original receiver",
+    "nft_resolver_failure": "Receiver ownership persists if resolver fails; no timeout seizure",
+    "creator_reviewer": "Distinct IDs enforced; human independence/collusion not proved"
   },
   "publication": {
     "repository_pushed": false,
     "site_deployed": false,
     "social_posted": false,
-    "hackathon_submitted": false
-  }
+    "hackathon_submitted": false,
+    "reason": "Existing GitHub account/connector/network access blocker; local verified commits retained"
+  },
+  "source_revision": "8397cbf207dc6991dacab5de7748c01bb6b94d86",
+  "deployment_excluded_by_user": true
 }

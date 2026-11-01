@@ -4,8 +4,8 @@
   "selected_date": "2026-10-22",
   "selection_basis": "The user said: We are MAKING IT, and requested a directory and complete architecture.",
   "final_build_choice": true,
-  "stage": "local_rehearsal_and_compiled_contract_verified",
-  "application": "Immediate capped public-resource sponsorship, independently recoverable encrypted learning pack and standalone offline game",
+  "stage": "stewardship_nft_and_local_product_verified",
+  "application": "Capped public-resource sponsorship with release/refund, wallet-free offline learning and transferable mirror-maintenance NFTs",
   "budget_requirement": "Zero provider charges within free tiers; no mandatory paid inference, compute, domain or mainnet tokens",
   "hosting_preference": "Frontend and application API together on Vercel",
   "database_choice": "Supabase Free Postgres with Supabase Storage",
@@ -38,7 +38,14 @@
     "independent offline recovery CLI",
     "unsigned campaign preparation",
     "local access-budget and deterministic coordination extensions",
-    "fail-closed pinned testnet viewer"
+    "fail-closed pinned testnet viewer",
+    "NEP-171 core/events, NEP-177 metadata, NEP-181 enumeration",
+    "current-owner-only verified resource mirror maintenance",
+    "unsigned core/NFT transaction workbench with signer-bound evidence checks",
+    "configured-contract public resource recovery, play and offline export",
+    "canonical path-remapped contract build reproducibility",
+    "nine socket-free local workflow scenarios",
+    "checks-only GitHub Actions configuration and unsubmitted preparation"
   ],
   "unverified": [
     "actual browser and offline game execution",
@@ -48,5 +55,14 @@
     "sponsor demand",
     "provider/public deployment"
   ],
-  "original_implementation_plan": "BUILD_PLAN.md"
+  "original_implementation_plan": "BUILD_PLAN.md",
+  "candidate_tracks": [
+    "open",
+    "social",
+    "nfts"
+  ],
+  "state_layout_version": 2,
+  "fresh_contract_deployment_required": true,
+  "migration_supplied": false,
+  "deployment_excluded_by_user": true
 }

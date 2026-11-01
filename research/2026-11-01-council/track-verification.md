@@ -1,5 +1,7 @@
 # Track verification: NEAR HACKATHON, 1 November 2026
 
+> Historical initial-scope assessment. The subsequent [tokenization review](../2026-11-01-tokenization/RESEARCH.md) adds an implemented NEP-171 stewardship capability and a conditional NFT-track case. Entries below describe the earlier design, not the final feature set.
+
 **Council seat:** independent event and track evidence review. **Checked:** 2026-11-01, approximately 04:23 UTC. This report changes no product code. Track-fit conclusions are reviewer judgments, not organizer approval or claims of completed implementation.
 
 ## Event and changed rules
