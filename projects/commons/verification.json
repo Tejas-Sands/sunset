@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-22",
+  "scope": "Directory, status, source-record and local-link checks only; no product implementation tested",
+  "checks": {
+    "main_candidate_status": true,
+    "final_build_choice_open": true,
+    "relative_links_resolve": true,
+    "original_research_preserved": true,
+    "source_ids_unique": true,
+    "source_urls_unique": true,
+    "no_product_code_added": true,
+    "followup_observations_present": true
+  },
+  "broken_links": [],
+  "source_entries": 26,
+  "all_passed": true
+}

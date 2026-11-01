@@ -1,0 +1,82 @@
+{
+  "tool": "Crawl4AI",
+  "version": "0.9.5",
+  "robots_check": true,
+  "paid_llm_calls": 0,
+  "raw_output_location": "/tmp/near-frontier-crawl",
+  "pages": [
+    {
+      "label": "unglue-buy-to-release",
+      "url": "https://blog.unglue.it/2013/08/06/a-new-kind-of-ungluing-campaign/",
+      "final_url": "https://blog.unglue.it/2013/08/06/a-new-kind-of-ungluing-campaign/",
+      "status_code": 200,
+      "crawler_success": true,
+      "http_ok": true,
+      "markdown_chars": 14050,
+      "markdown_sha256": "191145f7942e6a58d0e5a3c0d4125f8a1fb97950035a1dc289cc574b49349eee",
+      "html_sha256": "06fab61025121a3a776d288eb6bf70531ef8c8016fd2db73476943a569e65e05",
+      "fetched_at": "2026-10-22T11:52:05.785427+00:00",
+      "subject_markers": {
+        "sales revenue target": true,
+        "Creative Commons Date": true
+      },
+      "subject_verified": true,
+      "use_as_content_source": true
+    },
+    {
+      "label": "fsl",
+      "url": "https://fsl.software/",
+      "final_url": "https://fsl.software/",
+      "status_code": 200,
+      "crawler_success": true,
+      "http_ok": true,
+      "markdown_chars": 5710,
+      "markdown_sha256": "5fcf971a375bad7dd1515ebdf8b36eb6a98f6cb6223025be91d1552b7bc78b5a",
+      "html_sha256": "700d396f882be9e38485761bf6f13db78cd53807e83829b4da347ac7b8de585b",
+      "fetched_at": "2026-10-22T11:52:04.428434+00:00",
+      "subject_markers": {
+        "after two years": true,
+        "MIT": true
+      },
+      "subject_verified": true,
+      "use_as_content_source": true
+    },
+    {
+      "label": "collaction",
+      "url": "https://www.collaction.org/",
+      "final_url": "https://www.collaction.org/",
+      "status_code": 200,
+      "crawler_success": true,
+      "http_ok": true,
+      "markdown_chars": 7809,
+      "markdown_sha256": "aa453d9b09af224389f0c3de97d0500f865f420d0c114250167b276549c95674",
+      "html_sha256": "556485943275a6c46f7cf0dd73383ba2fc0d3a0f4b07cd102ed3a0f916719a55",
+      "fetched_at": "2026-10-22T11:52:05.104136+00:00",
+      "subject_markers": {
+        "CrowdActions": true,
+        "commitments": true
+      },
+      "subject_verified": true,
+      "use_as_content_source": true
+    },
+    {
+      "label": "coordination-markets",
+      "url": "https://hashd.ag/",
+      "final_url": "https://hashd.ag/",
+      "status_code": 200,
+      "crawler_success": true,
+      "http_ok": true,
+      "markdown_chars": 72,
+      "markdown_sha256": "b7388fad7f26455a54e951f49ff1194920e1b770e742e5889dcf5b9d06730e8b",
+      "html_sha256": "1f3aa668906d8a5902c91cfe8fd45aac2ca3d0b26544d9c616a1bc6ddffa7647",
+      "fetched_at": "2026-10-22T11:52:05.522128+00:00",
+      "subject_markers": {
+        "Coordination Markets": false,
+        "assurance contract": false
+      },
+      "subject_verified": false,
+      "use_as_content_source": false,
+      "exclusion": "HTTP 200 contains a private-invitation landing page, not the indexed research text."
+    }
+  ]
+}

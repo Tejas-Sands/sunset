@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-10-22T14:57:08.901374+00:00",
+  "read_only": true,
+  "documents": [
+    {
+      "url": "https://nearhackathon.com/",
+      "checked_at": "2026-10-22T14:48:01.033239+00:00",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 305091,
+      "sha256": "460e1589702f236aca4a538aa5826005e6782c7e31b4de2415fbc12d8ddbc942",
+      "http_last_modified": null,
+      "policy_terms_found": [],
+      "full_source_retained_in_project": false,
+      "targeted_indicators": {
+        "homepage_build_instruction_in_response": true,
+        "homepage_faq_event_start_text_in_response": true,
+        "homepage_faq_two_week_development_text_in_response": true,
+        "agent_submission_window_text_in_response": false,
+        "agent_exact_start_timestamp_in_response": false,
+        "agent_exact_deadline_timestamp_in_response": false
+      }
+    },
+    {
+      "url": "https://nearhackathon.com/HACKATHON.md",
+      "checked_at": "2026-10-22T14:48:01.196999+00:00",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 12588,
+      "sha256": "39fd39392c43c763222bd4b3f184c173817a3998f92cb212630ceba4a67e33bb",
+      "http_last_modified": null,
+      "policy_terms_found": [],
+      "full_source_retained_in_project": false,
+      "targeted_indicators": {
+        "homepage_build_instruction_in_response": false,
+        "homepage_faq_event_start_text_in_response": false,
+        "homepage_faq_two_week_development_text_in_response": false,
+        "agent_submission_window_text_in_response": true,
+        "agent_exact_start_timestamp_in_response": true,
+        "agent_exact_deadline_timestamp_in_response": true
+      }
+    }
+  ],
+  "browser_observation": {
+    "session": "sunset-research-20261022",
+    "url": "https://nearhackathon.com/",
+    "submission_opening_notice_observed": true,
+    "build_during_event_instruction_observed": true,
+    "faq_opened_in_browser": false,
+    "faq_limit": "Question not located in visible DOM; FAQ timing was checked through retrieved HTML and web extraction.",
+    "forms_submitted": false
+  },
+  "interpretation": {
+    "event_start": "2026-11-01T00:00:00Z",
+    "submission_open": "2026-11-01T00:00:00Z",
+    "submission_deadline": "2026-11-14T23:59:00Z",
+    "pre_event_code_eligibility": "Not expressly resolved in reviewed pages",
+    "existing_plan": "Conservative reservation of product coding for the stated development window",
+    "method_limit": "A targeted term scan and two official pages do not establish absence of every policy elsewhere."
+  }
+}

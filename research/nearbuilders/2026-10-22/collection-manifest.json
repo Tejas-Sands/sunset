@@ -1,0 +1,93 @@
+{
+  "created_at": "2026-10-22T08:21:04.542867+00:00",
+  "requested_url": "https://nearbuilders.org/dashboard",
+  "public_board_url": "https://nearbuilders.org/projects",
+  "source_guide_url": "https://nearbuilders.org/skill.md",
+  "native_board": {
+    "records": 125,
+    "unique_source_ids": 125,
+    "kinds": {
+      "idea": 75,
+      "project": 39,
+      "scope": 10,
+      "result": 1
+    },
+    "source_reported_total": 125,
+    "pages": 2,
+    "terminal_has_more": false,
+    "visibility": "public",
+    "created_range": [
+      "2026-05-27T15:52:10.450Z",
+      "2026-10-21T10:26:20.027Z"
+    ],
+    "request_urls": [
+      "https://nearbuilders.org/api/v1/projects?limit=100&sort=newest&visibility=public",
+      "https://nearbuilders.org/api/v1/projects?limit=100&sort=newest&visibility=public&cursor=100"
+    ]
+  },
+  "claimed_catalog": {
+    "records": 11,
+    "terminal_has_more": false,
+    "request_url": "https://nearbuilders.org/api/v1/nearcatalog/claimed-projects"
+  },
+  "combined_records": 136,
+  "github_discussions": {
+    "repository": "NEARBuilders/nearbuilders.org",
+    "open_issues": 16,
+    "comments": 18,
+    "comments_complete_against_issue_counts": true,
+    "issues_request_url": "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues?state=open&per_page=100",
+    "comment_request_urls": [
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/271/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/267/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/254/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/235/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/234/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/221/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/188/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/177/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/124/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/122/comments?per_page=100",
+      "https://api.github.com/repos/NEARBuilders/nearbuilders.org/issues/120/comments?per_page=100"
+    ]
+  },
+  "activity": {
+    "records": 100,
+    "pages": 2,
+    "bounded_sample": true,
+    "terminal_has_more": true,
+    "missing_payloads": 72,
+    "source_counts": {
+      "projects": 11,
+      "builders": 17,
+      "feedback-rounds": 71,
+      "nearbuilders-demo": 1
+    },
+    "created_range": [
+      "2026-10-12T16:34:01.000Z",
+      "2026-10-21T15:22:18.000Z"
+    ],
+    "first_url": "https://nearbuilders.org/api/v1/activity",
+    "second_url": "https://nearbuilders.org/api/v1/activity?cursor=eyJjcmVhdGVkQXQiOjE3OTIwMTc5NDQsImlkIjoiYjg1ZjZlNjNiNzE4ODZlNzNhMWExOTFiNmI5YjFlZDJmMTY2ZDM2N2M1NGVmOThiYzYyOWRkMzc5ZmJiMDJiMCJ9"
+  },
+  "processing": {
+    "summaries": "Assistant-written paraphrases of public listings and issue conversations.",
+    "topic_labels": "Simple keyword heuristics over listing titles and paraphrases; multi-label and not demand measurements.",
+    "duplicates": "All source records are retained. Repeated titles and repository fields are flagged for review.",
+    "external_claims": "Runtime behavior, deployments, market demand, and awards were not independently established by this collection.",
+    "data_minimization": "No full website assets, browser profiles, credentials, email addresses, or full post bodies are included."
+  },
+  "limits": [
+    "Dashboard fetch required sign-in; collection used documented anonymous public APIs.",
+    "The board is not a verified historical hackathon-winner database.",
+    "Activity is an explicit 100-event sample, not an exhausted archive or a transcript of community chats.",
+    "Private Telegram, Discord, and authenticated conversations were not accessed.",
+    "Activity and catalog requests with limit=100 returned HTTP 400 despite the downloaded schema; default page sizes worked.",
+    "The connected browser reported 136 rows but returned zero extracted entries; it is not the source of the dataset."
+  ],
+  "scraper_review": {
+    "path": "/home/citrux/Sides/new_dir/community-explorer/v2",
+    "finding": "Arc House-specific hosts, GraphQL operations, session attachment, and source projections. Original scraper and archive were left untouched.",
+    "chosen_method": "Documented public JSON reads with terminal-pagination and record-count verification."
+  }
+}

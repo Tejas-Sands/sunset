@@ -1,0 +1,117 @@
+{
+  "research_date": "2026-10-22",
+  "candidate_retained": "COMMONS",
+  "new_main_candidates": [],
+  "github_issue_observations": [
+    {
+      "number": 32,
+      "title": "[MPC Feedback] No tx.submit_and_await \u2014 can't easily await transaction status",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-09-14T16:16:06Z",
+      "closed_at": "2026-09-14T16:10:17Z",
+      "html_url": "https://github.com/near/devex/issues/32"
+    },
+    {
+      "number": 34,
+      "title": "[MPC Feedback] Sandbox fast_forward is slow",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-01-14T16:33:58Z",
+      "closed_at": null,
+      "html_url": "https://github.com/near/devex/issues/34"
+    },
+    {
+      "number": 36,
+      "title": "[MPC Feedback] Cannot pause sandbox block production",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-01-14T16:34:12Z",
+      "closed_at": null,
+      "html_url": "https://github.com/near/devex/issues/36"
+    },
+    {
+      "number": 44,
+      "title": "Contract ABI JSON schemas are incompatible with standard tooling",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-03-13T23:14:06Z",
+      "closed_at": null,
+      "html_url": "https://github.com/near/devex/issues/44"
+    }
+  ],
+  "source_revisions": {
+    "opendp": {
+      "sha": "367461d557a8a477558cb3853ff7e7501537b1c8",
+      "reviewed_files": [
+        "rust/Cargo.toml",
+        "rust/src/traits/samplers/mod.rs"
+      ]
+    },
+    "near_recovery": {
+      "sha": "7d2144ad9fe4af9f24a76ebcfbc1c4392294dcbb",
+      "required_protocol_documented": "2.14/v87; testnet first",
+      "deployment_verified": false
+    }
+  },
+  "sources": [
+    {
+      "id": "drivers-seat-history",
+      "url": "https://www.rockefellerfoundation.org/grantee-impact-stories/drivers-seat-puts-data-and-power-in-gig-workers-hands/",
+      "supports": "Historical worker-owned earnings analytics and cooperative profit-sharing model",
+      "limit": "Published 21 June 2023; not evidence of current app availability"
+    },
+    {
+      "id": "wao-current",
+      "url": "https://wao.cs.princeton.edu/",
+      "supports": "Current FairFare description and explicit Driver's Seat sunset status",
+      "limit": "Describes the research group's tools; does not establish that COMMONS offers an advantage"
+    },
+    {
+      "id": "worker-info-exchange",
+      "url": "https://www.workerinfoexchange.org/dynamic-pay-research",
+      "supports": "Collective platform-data research into dynamic pay with results shared with workers and unions",
+      "limit": "No contact, partnership or independent user-outcome verification"
+    },
+    {
+      "id": "opendp-cargo-source",
+      "url": "https://github.com/opendp/opendp/blob/367461d557a8a477558cb3853ff7e7501537b1c8/rust/Cargo.toml",
+      "supports": "OpenSSL included in default features at the inspected revision",
+      "limit": "Source inspection; no WASI build or integration performed"
+    },
+    {
+      "id": "opendp-sampler-source",
+      "url": "https://github.com/opendp/opendp/blob/367461d557a8a477558cb3853ff7e7501537b1c8/rust/src/traits/samplers/mod.rs",
+      "supports": "OpenSSL random-byte path and upstream non-secure fallback label",
+      "limit": "A compatibility and security question, not proof that WASI is unsupported"
+    },
+    {
+      "id": "wfp-building-blocks",
+      "url": "https://www.wfp.org/innovation",
+      "supports": "Existing inter-organization humanitarian coordination using blockchain",
+      "limit": "No new unmet use case or deployment inspection established"
+    },
+    {
+      "id": "near-recovery",
+      "url": "https://github.com/near/recovery",
+      "supports": "Existing recovery registry and documented protocol dependency",
+      "limit": "No deployment or external-chain asset recovery verified"
+    }
+  ],
+  "checks_not_performed": [
+    "Product builds",
+    "Confidential compute executions",
+    "User interviews",
+    "Mainnet transactions"
+  ],
+  "fetch_notes": [
+    {
+      "url": "https://driversseat.co/",
+      "result": "404 from connected fetch; current status instead checked against Princeton WAO"
+    },
+    {
+      "url": "https://getfairfare.org/",
+      "result": "Client-rendered loading shell in web extraction; feature claims based on WAO instead"
+    }
+  ]
+}

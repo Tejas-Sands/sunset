@@ -1,0 +1,57 @@
+{
+  "verified_at": "2026-10-22T14:58:43.889231+00:00",
+  "scope": "Research documents, registered citations, local links, date conversion and illustrative Decimal cash flows only",
+  "primary_sources_registered": 28,
+  "research_markdown_files": 5,
+  "research_prose_words": 5443,
+  "research_external_citations_checked": 32,
+  "unregistered_external_citations": [],
+  "project_recursive_local_links_checked": 35,
+  "missing_local_links": [],
+  "scenario_rows_checked": 10,
+  "scenario_accounting_conservation_checked": true,
+  "rules_time_zone_conversion_checked": true,
+  "implementation_tests_run": false,
+  "live_product_deployments": false,
+  "organizers_contacted": false,
+  "private_sources_accessed": false,
+  "files": [
+    {
+      "name": "HACKATHON_RULES.md",
+      "sha256": "45eade11673591fbd19db1a4907f251da1cd2e108d1659edd527cb5f1880f968"
+    },
+    {
+      "name": "OFFLINE_EDUCATION_AND_ADOPTION.md",
+      "sha256": "a7b46cec53a7223cca2d3c7a2a771f6d9fbbf03b20f3fa37feb1c0b3371d1c4b"
+    },
+    {
+      "name": "PRIOR_ART_AND_ECONOMICS.md",
+      "sha256": "980615cb5d9406d23af139243bc85f411975a2336118a35e48525b8b73f6a724"
+    },
+    {
+      "name": "README.md",
+      "sha256": "844842acea7d826bb6fc512ffbce0d6901c1afe7749da8b702d9e7b54f19d921"
+    },
+    {
+      "name": "TECHNICAL_FEASIBILITY.md",
+      "sha256": "ad1349ef1aa33306b2f635aec654a58749cb8a60a9724ffec1a33393780a0c8f"
+    },
+    {
+      "name": "analyze_economics.py",
+      "sha256": "aaaa728c85f43e1d2a71eb1c060951065a7eb8626f2d8bc7d1909b324c712317"
+    },
+    {
+      "name": "economic_scenarios.csv",
+      "sha256": "f1d25934dece4b57afba7663e67fc00841c24a8b7383f2a26874ccab6e4d8b56"
+    },
+    {
+      "name": "rules-evidence.json",
+      "sha256": "e00b727db1ba2a45121fa4f5e445dfa486349eb7fdf1e513c9fb80e77229bb82"
+    },
+    {
+      "name": "sources.json",
+      "sha256": "b49429dad84bf9ebddb45163305de29a593c564a96c36716bcce43da9b922905"
+    }
+  ],
+  "limitations": "Primary documentation and prior studies do not prove SUNSET demand, classroom outcomes, contract correctness, complete competitive novelty, or eligibility for earlier code."
+}

@@ -1,0 +1,101 @@
+id,source,event_type,actor,created_at,platform_verified_flag,has_payload,project_title,project_slug,source_url
+act_1792596138025_9ua08nw,projects,approved,xerofom.tg,2026-10-21T15:22:18.000Z,True,True,Ajo Agent,ajo-agent-e6nw04,https://nearbuilders.org/activity
+act_1792596131868_go51w9e,projects,approved,poppingbean.near,2026-10-21T15:22:12.000Z,True,True,Safe Near,safe-near-5avcvo,https://nearbuilders.org/activity
+act_1792595170216_z265312,builders,approved,swayam_29.near,2026-10-21T15:06:10.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792595168178_vgx02xz,builders,approved,poppingbean.near,2026-10-21T15:06:08.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792595165989_u7q6chc,builders,approved,candy1600.tg,2026-10-21T15:06:06.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792595163653_huzqxe5,builders,approved,xerofom.tg,2026-10-21T15:06:04.000Z,True,True,,,https://nearbuilders.org/activity
+6669649041640bf92f9dc1f6916f8f13f59bfbf96a9b0fc73c0aef0509242049,feedback-rounds,feedback.posted,23387b92c198449578298eb95af966d14dc4d0c0e6ef056315d6f6245f7ac7be,2026-10-21T05:09:14.000Z,False,False,,,https://nearbuilders.org/activity
+act_1792431199418_j96a9oi,builders,approved,onormal.near,2026-10-19T17:33:19.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792431197517_kamkx0w,builders,approved,penivera.near,2026-10-19T17:33:17.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792431194603_d6e516c,builders,approved,sourvilla5547.near,2026-10-19T17:33:14.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792431184041_wf44wkk,projects,approved,bebekxbt.near,2026-10-19T17:33:04.000Z,True,True,NearBuilder Biweekly Twitter Space (Near Builder Outpost),nearbuilder-biweekly-twitter-space-near-builder-outpost-1clx91,https://nearbuilders.org/activity
+act_1792431177471_g9xwbfg,projects,approved,bebekxbt.near,2026-10-19T17:32:57.000Z,True,True,City Node Apps Product Exploration,city-node-apps-product-exploration-qxtk7a,https://nearbuilders.org/activity
+62e00dfca5961a956a9d02ea7db0d9b15eab6ff9c000f528313c34f441f3a6ae,feedback-rounds,round.opened,playnearia.near,2026-10-19T17:20:31.000Z,False,False,,,https://nearbuilders.org/activity
+aae63ba71693ce6d61822dce54c8f11aeeeff471793178fc9048a9a4a39842b7,feedback-rounds,feedback.accepted,botgal.near,2026-10-18T19:10:28.000Z,False,False,,,https://nearbuilders.org/activity
+81cd3d90695a71ac76de3fe60e5d659308db34e3e909773161b3964b5c7414f2,feedback-rounds,feedback.accepted,23387b92c198449578298eb95af966d14dc4d0c0e6ef056315d6f6245f7ac7be,2026-10-18T19:04:48.000Z,False,False,,,https://nearbuilders.org/activity
+act_1792273072152_cqhgtfm,builders,approved,ninja-dev.near,2026-10-17T21:37:52.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792273068442_q21pggv,builders,approved,wiseuser4664.near,2026-10-17T21:37:48.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792273064664_zshyyix,builders,approved,funoil9856.near,2026-10-17T21:37:44.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792273058872_elmxa03,builders,approved,kinuonnear.near,2026-10-17T21:37:39.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792273055056_rdtk6fd,builders,approved,codedforum.near,2026-10-17T21:37:35.000Z,True,True,,,https://nearbuilders.org/activity
+act_1792272823052_2k165ou,projects,approved,kinuonnear.near,2026-10-17T21:33:43.000Z,True,True,KINU — Liquidity Terminal on NEAR,kinu-liquidity-terminal-on-near-5azzkd,https://nearbuilders.org/activity
+754355459822cbf3905bd6c77b249b1ec6ffa594f9f01449325010ef18e7c224,feedback-rounds,credit.awarded,swapto.near,2026-10-17T20:43:20.000Z,False,False,,,https://nearbuilders.org/activity
+05d2a4a388b9632addb4053c5f1d33c35476b1e421fa5e9e21830673a843ede7,feedback-rounds,round.closed,tradenear.near,2026-10-17T20:43:19.000Z,False,False,,,https://nearbuilders.org/activity
+16b00b50e535e40fe078df320e94554a611c352f9a81b4174c9c97c44318d278,feedback-rounds,round.opened,funoil9856.near,2026-10-16T15:42:15.000Z,False,False,,,https://nearbuilders.org/activity
+d4db046eff6ca8af2ca1673fbf10739b6d740d7c31356bcb86be44ef44dc0f5f,feedback-rounds,round.opened,kinuonnear.near,2026-10-16T15:42:13.000Z,False,False,,,https://nearbuilders.org/activity
+act_1792161404055_f2fk8kd,projects,approved,dulfariz.near,2026-10-16T14:36:44.000Z,True,True,Portfolio risk intelligence for AI agents,portfolio-risk-intelligence-for-ai-agents-rzcc5w,https://nearbuilders.org/activity
+act_1792161399752_domsr2v,projects,approved,bebekxbt.near,2026-10-16T14:36:39.000Z,True,True,Near Talent Pipeline,near-talent-pipeline-ubemnm,https://nearbuilders.org/activity
+act_1792161387356_aaeo1p2,projects,approved,kinuonnear.near,2026-10-16T14:36:27.000Z,True,True,KINU — Liquidity Terminal on NEAR,kinu-liquidity-terminal-on-near-0vp9rs,https://nearbuilders.org/activity
+bc632d8e66f48c9397fbd10f70741747f3444372972f6f069137c420ef2ae467,feedback-rounds,feedback.accepted,bebekxbt.near,2026-10-16T12:32:56.000Z,False,False,,,https://nearbuilders.org/activity
+e15c98c2b47ba1d9c60bfc89a483982ca342ab01e8fe8acbb7a30bfad7fb8021,feedback-rounds,feedback.posted,kinuonnear.near,2026-10-16T06:34:55.000Z,False,False,,,https://nearbuilders.org/activity
+7e31aa27adb232bb00d47980f478e55f060399b3525a49058b15430d9d792688,feedback-rounds,feedback.posted,danseyka.tg,2026-10-15T23:27:17.000Z,False,False,,,https://nearbuilders.org/activity
+2633bdebf034b320e75b508e3d71151fc0c6ebf2e6ea257da17bb2167fc88ce9,feedback-rounds,feedback.posted,horbarr.near,2026-10-15T22:31:33.000Z,False,False,,,https://nearbuilders.org/activity
+480a85d713696001ee101cb649adb7c184d62ca503e8609e7f935ae66f35e962,feedback-rounds,feedback.posted,sergeserge1.tg,2026-10-15T20:00:30.000Z,False,False,,,https://nearbuilders.org/activity
+addd1c52cb93b2a90ccc894b979cae7b634aff3eff4696757fee9c3cd303d373,feedback-rounds,feedback.posted,hossien56.near,2026-10-15T18:34:40.000Z,False,False,,,https://nearbuilders.org/activity
+d316c20d1c92f38988794fc5ff1c4e047a755f6fecd8f5237479e53a84a13eb0,feedback-rounds,feedback.posted,niklauas112.tg,2026-10-15T18:26:30.000Z,False,False,,,https://nearbuilders.org/activity
+6cf252896652d0479e79dff97ae28e1db21b364090eaaed28cae2252bf0be6df,feedback-rounds,feedback.posted,maiye.near,2026-10-15T18:00:59.000Z,False,False,,,https://nearbuilders.org/activity
+ed896776496a69a66a238ae759fa177c4c9d4bc16ce6febb28d76b56e7744fa8,feedback-rounds,feedback.posted,mohsenmanm.near,2026-10-15T18:00:51.000Z,False,False,,,https://nearbuilders.org/activity
+8961e0f17b85224f60bd2a152d5511510221bac8d55a61f0c10329486e564bb6,feedback-rounds,feedback.posted,pn193014.tg,2026-10-15T16:08:21.000Z,False,False,,,https://nearbuilders.org/activity
+f8b7a3c9a4f836c5130478c59454e1f41fe1401978d9f80dbd5d6ab6071571a9,feedback-rounds,feedback.posted,m200_fff.tg,2026-10-15T15:48:45.000Z,False,False,,,https://nearbuilders.org/activity
+03fe1c105ac9c5580825f6d0cd800564d351a26ecde65acf07785d0a2feccea6,feedback-rounds,feedback.posted,olly2.near,2026-10-15T11:06:13.000Z,False,False,,,https://nearbuilders.org/activity
+18f413bdc1818301b929bc54947bd37854a2d9a99bc6d2b0b450b4125e11ee1d,feedback-rounds,feedback.posted,rishuz.near,2026-10-15T09:49:18.000Z,False,False,,,https://nearbuilders.org/activity
+e3540bc09986df3c9c80e70369fac81c805453993a7bb393995634253db281cb,feedback-rounds,feedback.posted,near_gold1.near,2026-10-15T09:40:44.000Z,False,False,,,https://nearbuilders.org/activity
+51d2ea09ab75c86487f37f196ccba7e0358b4beb9c775c80e5553c364a3a78ee,feedback-rounds,feedback.posted,god_of_near.near,2026-10-15T09:39:45.000Z,False,False,,,https://nearbuilders.org/activity
+acb91f70c16b4fa8eced80c9df0ea857f51b7914dcf02f92e4428dcccd5c7d8c,feedback-rounds,feedback.posted,vexel404.near,2026-10-15T09:38:13.000Z,False,False,,,https://nearbuilders.org/activity
+05141c2ffefbc347b14a3ac34b13388a2d1725196017995e3765ecefeeb93e91,feedback-rounds,feedback.posted,noir1.near,2026-10-15T09:37:20.000Z,False,False,,,https://nearbuilders.org/activity
+5251222a420039374e704489e82ca4eaf2f734b13c55e78ad457c2e15d32c959,feedback-rounds,feedback.posted,bgoon.near,2026-10-15T09:36:11.000Z,False,False,,,https://nearbuilders.org/activity
+93b8bfd33dac3cf15116025ec33a6e1f8b304fde2695145ac005f27ae8617c42,feedback-rounds,feedback.posted,work.efiz.near,2026-10-15T06:41:43.000Z,False,False,,,https://nearbuilders.org/activity
+066a57f7c0c327c88a873315c15082b57bc47dfa3774af737020f76b967a0b15,feedback-rounds,feedback.posted,swapto.near,2026-10-15T02:51:56.000Z,False,False,,,https://nearbuilders.org/activity
+3b7014942572841b6210f9f794180f9f3d3390d7b3e3928caf7e13732beba3ea,feedback-rounds,feedback.posted,xerofom.tg,2026-10-14T23:21:03.000Z,False,False,,,https://nearbuilders.org/activity
+b85f6e63b71886e73a1a191b6b9b1ed2f166d367c54ef98bc629dd379fbb02b0,feedback-rounds,feedback.posted,zhw_zx.tg,2026-10-14T22:45:44.000Z,False,False,,,https://nearbuilders.org/activity
+3279044842db3151c53549ecc5fb706632118315c1c8f4b0ae6536cf8839bc6a,feedback-rounds,feedback.posted,marian_h1.tg,2026-10-14T20:10:41.000Z,False,False,,,https://nearbuilders.org/activity
+11f8b660a89fe45369bd9c1962527868b1b78c7c993fa5ed1a84a3b0433e5acf,feedback-rounds,feedback.posted,meeraa.near,2026-10-14T20:02:12.000Z,False,False,,,https://nearbuilders.org/activity
+9712705dc20c2e0eaf5f57d99a9e03d7621e5feec0ad9d889bb6c3445c43e58a,feedback-rounds,round.opened,tradenear.near,2026-10-14T17:57:20.000Z,False,False,,,https://nearbuilders.org/activity
+8a0bbaccaf3515375553319f5f629db52fb73cbc4289d1f2ab716ba2c1994b1a,feedback-rounds,round.opened,veilsurf.near,2026-10-14T17:57:18.000Z,False,False,,,https://nearbuilders.org/activity
+04a7aba52f5ecd109f6911ffc0522cd7ca7908289cfbfcfb8e621cfd191e4ccb,feedback-rounds,feedback.posted,7178321377-hot.tg,2026-10-14T16:36:24.000Z,False,False,,,https://nearbuilders.org/activity
+eeac3c24eb9a53c796b741686436d4a14ba5f9e76eb01e13411bd4cf0a638733,feedback-rounds,feedback.posted,bassoman.tg,2026-10-14T16:26:46.000Z,False,False,,,https://nearbuilders.org/activity
+f38a17715afecb8855adab28893afe6b2b95ab4520eadec2246135c244aff8bb,feedback-rounds,feedback.posted,sarthakz.near,2026-10-14T16:21:34.000Z,False,False,,,https://nearbuilders.org/activity
+9f632b5f8def8a9747f0fae0db3e2275d6f7be32a3f0ff6865c1abd97738b293,feedback-rounds,feedback.posted,marsbark.tg,2026-10-14T15:44:09.000Z,False,False,,,https://nearbuilders.org/activity
+b56a34b79337b7943be35232af1b993d837cecb5676b30e902901dcb8473144e,feedback-rounds,feedback.posted,kampouse.near,2026-10-14T15:41:02.000Z,False,False,,,https://nearbuilders.org/activity
+3b9df36ce99ffc083175d9bf236e9495150b7d448f35d5f4e98f154d92fd4c99,feedback-rounds,feedback.posted,jithumahi07.tg,2026-10-14T15:33:14.000Z,False,False,,,https://nearbuilders.org/activity
+e2570c35d1ca2c3fef57b345d2213bc79a6bea033cdd88dc3d6127f8c5e169cd,feedback-rounds,feedback.posted,jithumahi07.tg,2026-10-14T15:13:36.000Z,False,False,,,https://nearbuilders.org/activity
+8f12719601cc47f1d68c455608d881e98a018147506ac479abc9429aca3ab30d,feedback-rounds,feedback.accepted,efiz.near,2026-10-14T14:53:17.000Z,False,False,,,https://nearbuilders.org/activity
+f686e52fb211d566bee7f474d717c080d2cf490fb54d408eabefa9158cd7e629,feedback-rounds,feedback.posted,i5022803831.tg,2026-10-14T13:36:34.000Z,False,False,,,https://nearbuilders.org/activity
+df6cff7ff4c1d813bc0a3e6e606b8cbda6ef6003afb9e8cb301cfcda8922063e,feedback-rounds,feedback.posted,oscoi.near,2026-10-14T09:36:12.000Z,False,False,,,https://nearbuilders.org/activity
+1ea4be79285eba64588ae01df14d8adceb0a3d55c36758adaa22a9f85045870d,feedback-rounds,feedback.posted,popo_official.near,2026-10-14T08:59:29.000Z,False,False,,,https://nearbuilders.org/activity
+0e2850ec9534649e3993ee8bda3bcb0348e2f776007faa3d8146ffae442bb3b9,feedback-rounds,feedback.posted,nayrbryangaming.near,2026-10-14T07:26:22.000Z,False,False,,,https://nearbuilders.org/activity
+fda07ebb78c69218626e327d69b921097e4c6dabfeb5c1deed9424341347f044,feedback-rounds,feedback.posted,botgal.near,2026-10-14T04:33:07.000Z,False,False,,,https://nearbuilders.org/activity
+8cbc709a534dd9743146e65046101a1e599509996854ef88e6b7b104649c2f37,feedback-rounds,feedback.posted,collinzalfred.tg,2026-10-14T04:12:04.000Z,False,False,,,https://nearbuilders.org/activity
+act_1791910043787_wr6k9ur,builders,approved,neardotmom.near,2026-10-13T16:47:24.000Z,True,True,,,https://nearbuilders.org/activity
+act_1791910042233_89lqpyk,builders,approved,hugeuser7134.near,2026-10-13T16:47:22.000Z,True,True,,,https://nearbuilders.org/activity
+act_1791910039584_1yklzqi,builders,approved,sholx.near,2026-10-13T16:47:19.000Z,True,True,,,https://nearbuilders.org/activity
+act_1791910037099_hxlh179,builders,approved,dulfariz.near,2026-10-13T16:47:17.000Z,True,True,,,https://nearbuilders.org/activity
+act_1791910033588_i1f1mh9,builders,approved,harrydhillon.near,2026-10-13T16:47:13.000Z,True,True,,,https://nearbuilders.org/activity
+eb25c5c507babc1244395187c2cf8700b1b5c1c4084cdd3a48553bcf7bdc0adf,feedback-rounds,feedback.posted,unrealamine_boi01.tg,2026-10-13T15:14:25.000Z,False,False,,,https://nearbuilders.org/activity
+ca9c831a75b5c79305364d84646078c47d6a2ad545b576c79d6accb41b6ecd05,feedback-rounds,feedback.posted,nayrbryangaming.near,2026-10-13T14:50:57.000Z,False,False,,,https://nearbuilders.org/activity
+add967da4db45c5be73ab21143931a23c2e899c839d2b81e32d8aba06cc8e0b0,feedback-rounds,feedback.posted,nayrbryangaming.near,2026-10-13T13:01:56.000Z,False,False,,,https://nearbuilders.org/activity
+657430db66ffe6916ef6265af5097f413cc1ff9fc96df53c2a12d01fdafc5151,feedback-rounds,feedback.posted,nayrbryangaming.near,2026-10-13T11:36:02.000Z,False,False,,,https://nearbuilders.org/activity
+2a744be9233032dbf158c73b20ecfbad82740e490a9d7d3b8e31d312566b6cb5,feedback-rounds,feedback.posted,nayrbryangaming.near,2026-10-13T11:31:09.000Z,False,False,,,https://nearbuilders.org/activity
+4f89b3fbe2dc0735c42d963ea0777eb02ec34711196a8f0a1f5ec38c70038de4,feedback-rounds,feedback.posted,nayrbryangaming.near,2026-10-13T11:02:22.000Z,False,False,,,https://nearbuilders.org/activity
+1070224cfc9fd3c0d8958ea464684344a49d7de54ceb9e842f605542af66099b,feedback-rounds,feedback.posted,23387b92c198449578298eb95af966d14dc4d0c0e6ef056315d6f6245f7ac7be,2026-10-13T10:25:03.000Z,False,False,,,https://nearbuilders.org/activity
+98cf254ade14a2509a35076f9a032d2f012c66c2a11bcf1ded741015163394ab,feedback-rounds,feedback.posted,purre.near,2026-10-13T10:22:46.000Z,False,False,,,https://nearbuilders.org/activity
+d5877ba6abe08c25f4a8562a3ffe4f0406553c53481cded0f4746ccaca51dfb9,feedback-rounds,feedback.posted,nayrbryangaming.near,2026-10-13T09:42:19.000Z,False,False,,,https://nearbuilders.org/activity
+9d5112b762b4c8b2783be57a4c25bb62679f2ea9c471d9c217fc000ef2ac13cb,feedback-rounds,feedback.posted,6695528202.tg,2026-10-13T08:27:03.000Z,False,False,,,https://nearbuilders.org/activity
+0118c4de7c1dde86ba2599ee060ee77a713ccebccde6591cebf4c6f1b75cd1cf,nearbuilders-demo,feature.shipped,coolyam9416.near,2026-10-13T08:21:28.000Z,False,False,,,https://nearbuilders.org/activity
+ccfb91c80ad307317bf0bff77e42dab2e81c7e11d71210027832b513ec1e9c12,feedback-rounds,feedback.posted,gsagar77-hot.tg,2026-10-13T06:53:29.000Z,False,False,,,https://nearbuilders.org/activity
+3ac48f910f4214eb659f5e6636316e88fddfdbe46ea16123020ed58175f7e539,feedback-rounds,feedback.accepted,gsagar77-hot.tg,2026-10-13T06:09:55.000Z,False,False,,,https://nearbuilders.org/activity
+1bef3c68e663de31e8cd1f365b506d65feafb81e44906e5d9fe0e48b798ef671,feedback-rounds,feedback.accepted,gsagar77-hot.tg,2026-10-13T06:09:55.000Z,False,False,,,https://nearbuilders.org/activity
+11619123749d5b04016026664be7df46187e26230ef4751ad69fb274ec5185a5,feedback-rounds,feedback.accepted,gsagar77-hot.tg,2026-10-13T06:09:55.000Z,False,False,,,https://nearbuilders.org/activity
+03a5a7f2f53c2c7b9d3f1f47548bc28a2eed9694c5b941a4cac294fd10731436,feedback-rounds,feedback.accepted,gsagar77-hot.tg,2026-10-13T06:08:55.000Z,False,False,,,https://nearbuilders.org/activity
+b388c7cd089b4f248fe3a8fcc5cfeba6efabc45372c34e6c6ea9385c6490a274,feedback-rounds,feedback.posted,gsagar77-hot.tg,2026-10-13T05:46:16.000Z,False,False,,,https://nearbuilders.org/activity
+d8df2d1656a161ef8ed2c2561651271725e78bd13b20f4298c3fa175276bb8b9,feedback-rounds,feedback.posted,gsagar77-hot.tg,2026-10-13T05:02:27.000Z,False,False,,,https://nearbuilders.org/activity
+8bab700eefd776e45d36f18cf55f03f05cabd675a3fe5eeaaa174c56943a375b,feedback-rounds,feedback.posted,ashworth1.near,2026-10-13T02:24:25.000Z,False,False,,,https://nearbuilders.org/activity
+ac3409e506e50d3973b7d24af06cbdaa159ca9e725007a3b3d04b02d51405868,feedback-rounds,feedback.posted,ilikenear.near,2026-10-13T00:44:24.000Z,False,False,,,https://nearbuilders.org/activity
+8d365766d298f909ab80bcd63b1bc754d88210b21531439cf46f8766362302b7,feedback-rounds,feedback.posted,23387b92c198449578298eb95af966d14dc4d0c0e6ef056315d6f6245f7ac7be,2026-10-12T23:42:28.000Z,False,False,,,https://nearbuilders.org/activity
+f5f48480e45639a650df839097fc71b177a442978c576f2d9a71eec945d256cc,feedback-rounds,round.opened,cudam321.near,2026-10-12T18:25:38.000Z,False,False,,,https://nearbuilders.org/activity
+act_1791825546364_xkx2uqk,projects,approved,imrohitoma.near,2026-10-12T17:19:06.000Z,True,True,NEAR Trust — Project Verification & Reputation,near-trust-project-verification-reputation-zhghbx,https://nearbuilders.org/activity
+act_1791825516569_yf59bag,projects,approved,gaaraji.near,2026-10-12T17:18:36.000Z,True,True,A bot that alerts community members of uprising meme coins.,a-bot-that-alerts-community-members-of-uprising-meme-coins-nph6vy,https://nearbuilders.org/activity
+act_1791825511633_q8yryq6,projects,approved,danseyka.tg,2026-10-12T17:18:31.000Z,True,True,NEAR AI Gift Pass Bot,near-ai-gift-pass-bot-s9cbi0,https://nearbuilders.org/activity
+ca8c8c683020a7b883e10b3ef2dbe32343d09e7b2bab4254708a1446d32074e2,feedback-rounds,feedback.posted,mindbyte.near,2026-10-12T17:15:49.000Z,False,False,,,https://nearbuilders.org/activity
+93652184f5c69c875139b318308e9f10d87e174d63c919c274c81723fffd0c30,feedback-rounds,feedback.posted,jithumahi07.tg,2026-10-12T16:34:01.000Z,False,False,,,https://nearbuilders.org/activity

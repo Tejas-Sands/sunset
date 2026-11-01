@@ -1,0 +1,14 @@
+{
+  "project": "LIFEBOAT",
+  "status": "main_candidate",
+  "status_date": "2026-10-22",
+  "selected_by_user_as": "Keep LIFEBOAT as another candidate while searching for more ambitious ideas",
+  "stage": "research_and_preparation",
+  "final_build_choice": false,
+  "original_research": "../../research/alternatives-2026-10-22/lifeboat.md",
+  "next_decisive_check": "Distinguish owner-directed service and monetary-authority handover from existing Temporal and OutLayer capabilities; test stale-operator rejection during the development window",
+  "development_window": {
+    "start_utc": "2026-11-01T00:00:00Z",
+    "end_utc": "2026-11-14T23:59:59Z"
+  }
+}

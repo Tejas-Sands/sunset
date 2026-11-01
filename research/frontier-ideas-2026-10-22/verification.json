@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-22T12:01:24.730597+00:00",
+  "json_files_parsed": [
+    "research/frontier-ideas-2026-10-22/sources.json",
+    "research/frontier-ideas-2026-10-22/crawl-manifest.json",
+    "research/frontier-ideas-2026-10-22/corpus-comparison.json",
+    "projects/lifeboat/status.json"
+  ],
+  "documents_checked": [
+    "research/frontier-ideas-2026-10-22/README.md",
+    "research/frontier-ideas-2026-10-22/sunset.md",
+    "research/frontier-ideas-2026-10-22/molt.md",
+    "projects/README.md",
+    "projects/lifeboat/README.md",
+    "research/README.md",
+    "research/alternatives-2026-10-22/README.md"
+  ],
+  "local_link_count": 30,
+  "missing_local_links": [],
+  "proposal_external_links_all_in_source_register": true,
+  "primary_source_count": 16,
+  "crawl_pages_fetched": 4,
+  "crawl_pages_with_verified_subject_content": 3,
+  "retained_lifeboat_copy_matches_original": true,
+  "lifeboat_proposal_sha256": "60fea19db7c9aa384a32562ebf3b90e6c29b0aa12a0e4da7deaf1230b0161cb1",
+  "lifeboat_is_main_candidate": true,
+  "lifeboat_is_final_build_choice": false,
+  "product_code_written": false,
+  "implementation_tested": false,
+  "verification_scope": "Research artifact integrity, local links, source-register coverage, crawl subject markers, native-corpus counts and LIFEBOAT preservation. No contract, agent service, automatic key release or real community adoption is validated."
+}

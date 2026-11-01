@@ -1,0 +1,133 @@
+{
+  "checked_date": "2026-10-22",
+  "primary_sources_only": true,
+  "scope": "Prior art, documented primitives and proposed research distinctions; not implementation validation.",
+  "sources": [
+    {
+      "id": "blender",
+      "title": "Blender history",
+      "url": "https://www.blender.org/foundation/history/",
+      "supports": "Blender records a community-financed rights buyout followed by GPL release in 2002. This is prior art for buying a proprietary tool into public reuse.",
+      "retrieval": "Primary organization history; full relevant passage available in web result."
+    },
+    {
+      "id": "unglue",
+      "title": "Unglue.it Buy-to-Unglue introduction",
+      "url": "https://blog.unglue.it/2013/08/06/a-new-kind-of-ungluing-campaign/",
+      "supports": "The 2013 design links sales to earlier open-license release and explicitly discusses buyers waiting near the target. Direct economic prior art for SUNSET.",
+      "retrieval": "Full page opened and independently fetched with Crawl4AI; expected subject markers present."
+    },
+    {
+      "id": "unglue-terms",
+      "title": "Unglue.it terms",
+      "url": "https://unglue.it/terms/",
+      "supports": "The published terms describe campaign parameters and an initial release date that cannot be moved later. They are evidence of an existing model, not a license template for this project.",
+      "retrieval": "Relevant full source passages supplied by web search."
+    },
+    {
+      "id": "fsl",
+      "title": "Functional Source License",
+      "url": "https://fsl.software/",
+      "supports": "A time-based software license conversion precedes SUNSET. The official FAQ describes conversion to MIT or Apache terms after two years.",
+      "retrieval": "Full page opened and independently fetched with Crawl4AI; expected subject markers present."
+    },
+    {
+      "id": "purpose",
+      "title": "Purpose Evergreen Capital",
+      "url": "https://purpose-economy.org/en/pec/",
+      "supports": "The organization describes non-voting investment and capped investor returns. This supports the precedent of finite financial claims, not the proposed contract or any legal equivalence.",
+      "retrieval": "Full official page opened."
+    },
+    {
+      "id": "collaction",
+      "title": "CollAction",
+      "url": "https://www.collaction.org/",
+      "supports": "The current organization describes collective activities, participant commitments and crowd actions. Prior art for collective-action products.",
+      "retrieval": "Full page opened and independently fetched with Crawl4AI; expected subject markers present."
+    },
+    {
+      "id": "snowdrift",
+      "title": "Snowdrift mutual assurance",
+      "url": "https://wiki.snowdrift.coop/about/snowdrift-dilemma",
+      "supports": "Snowdrift discusses mutual assurance and contributions contingent on others. Conditional collective funding is established prior art.",
+      "retrieval": "Full project-authored page opened."
+    },
+    {
+      "id": "assurance",
+      "title": "Tabarrok assurance-contract paper",
+      "url": "https://mason.gmu.edu/~atabarro/PrivateProvision.pdf",
+      "supports": "The 1998 paper studies dominant assurance contracts for public goods. It does not validate MOLT or guarantee outcomes outside its model.",
+      "retrieval": "Author-hosted primary paper; cover, abstract and relevant introductory text retrieved."
+    },
+    {
+      "id": "near-keys",
+      "title": "NEAR access keys",
+      "url": "https://docs.near.org/protocol/accounts-contracts/access-keys",
+      "supports": "Restricted keys and locked contract accounts are documented. Key gas allowances are distinct from application spending caps, and locked account code can retain authority.",
+      "retrieval": "Full current official documentation opened."
+    },
+    {
+      "id": "near-async",
+      "title": "NEAR cross-contract calls",
+      "url": "https://docs.near.org/smart-contracts/anatomy/crosscontract",
+      "supports": "External calls are asynchronous and independent; failure does not undo prior receipt state. Atomic formation claims are confined to a single contract execution.",
+      "retrieval": "Full current official documentation opened."
+    },
+    {
+      "id": "outlayer-secrets",
+      "title": "OutLayer secrets",
+      "url": "https://app.outlayer.ai/docs/secrets",
+      "supports": "The docs describe confidential secrets, exact-WASM binding and owner-controlled access. A revocable creator-owned secret does not prove irreversible public release.",
+      "retrieval": "Full current official documentation opened; binding and access sections inspected."
+    },
+    {
+      "id": "outlayer-trust",
+      "title": "OutLayer trust and verification",
+      "url": "https://app.outlayer.ai/docs/trust-verification",
+      "supports": "Attested execution, approved measurements and hardware trust are documented. Unattended future disclosure, authentic funding inputs and useful asset quality remain separate questions.",
+      "retrieval": "Full current official documentation opened."
+    },
+    {
+      "id": "drand",
+      "title": "drand timelock encryption",
+      "url": "https://docs.drand.love/docs/timelock-encryption/",
+      "supports": "Future-round encryption can support a time-based disclosure fallback subject to network assumptions. It does not implement a revenue trigger.",
+      "retrieval": "Full official documentation opened; old drand.love/docs path returned a general homepage and was not used as the technical reference."
+    },
+    {
+      "id": "hackathon",
+      "title": "Official hackathon agent instructions",
+      "url": "https://nearhackathon.com/HACKATHON.md",
+      "supports": "Development window, public repository, submission boundaries and conditional track fit. Dates checked on 22 October 2026.",
+      "retrieval": "Current file fetched with Python urllib; browser text tool rejected the markdown content type."
+    },
+    {
+      "id": "dependency-insurance",
+      "title": "Dependency Insurance on NEAR Builders",
+      "url": "https://nearbuilders.org/projects/idea/dependency-insurance-w40jzi",
+      "supports": "Existing idea for shared dependency failure response funding. A bounded overlap with migration funding, not evidence of an implemented collective exit service.",
+      "retrieval": "Previously collected native public API body, matched to retained canonical source URL."
+    },
+    {
+      "id": "verdikt",
+      "title": "Verdikt on NEAR Builders",
+      "url": "https://nearbuilders.org/projects/idea/verdikt-2u8yhy",
+      "supports": "Existing idea uses conditional prediction markets around proposed token fundraising. It is distinct from MOLT but prevents a broad claim that conditional launch decisions are missing from NEAR.",
+      "retrieval": "Previously collected native public API body, matched to retained canonical source URL."
+    }
+  ],
+  "excluded_or_unresolved": [
+    {
+      "url": "https://hashd.ag/",
+      "reason": "Search index described coordination markets, but fresh browser retrieval returned only a private-invitation landing page. Excluded as a verified competitor description."
+    },
+    {
+      "url": "https://docs.near.org/smart-contracts/security/upgrade",
+      "reason": "Web tool could not retrieve this guessed path. Upgrade claims instead use the documented access-key and locked-account behavior."
+    },
+    {
+      "url": "https://app.outlayer.ai/docs/encryption-keys",
+      "reason": "Web tool could not retrieve this path in this round; no key-export capability assumed from it."
+    }
+  ]
+}

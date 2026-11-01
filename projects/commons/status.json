@@ -1,0 +1,22 @@
+{
+  "project": "COMMONS",
+  "status": "main_candidate",
+  "selected_by_user_as": "One of the main project candidates for now",
+  "status_date": "2026-10-22",
+  "stage": "research_and_preparation",
+  "final_build_choice": false,
+  "development_window": {
+    "start_utc": "2026-11-01T00:00:00Z",
+    "end_utc": "2026-11-14T23:59:59Z"
+  },
+  "research_snapshot": "../../research/commons-2026-10-22/README.md",
+  "next_decisive_check": "Confidential runtime compatibility and fixed-release privacy construction; community demand remains unvalidated",
+  "latest_research": "RESEARCH_UPDATES.md",
+  "open_questions": [
+    "Direct worker-product differentiation",
+    "Secure confidential-runtime and randomness integration",
+    "Fixed-release consistency under restarts and changed callers",
+    "Demand from a specific community"
+  ],
+  "original_proposal_sha256": "12a8423cf0f4857a91c81af167e2d402fde75352605c76e1dcf3adb16a925879"
+}
