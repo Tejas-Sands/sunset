@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "artifact": "res/sunset_contract.wasm",
+  "artifact_sha256": "79a647abecd7f04e36d44dcd4b79f8310395e636f6165755e1a74d97887f4837",
+  "artifact_bytes": 190561,
+  "source_revision": null,
+  "source_revision_note": "Workspace is not a Git repository; source file digests identify this build.",
+  "source_sha256": {
+    "Cargo.lock": "689f6033c51ba9c8e69dbd85b50b5a55d8450d9821c81b4de30eb10654d26bbf",
+    "Cargo.toml": "94e3d0a504d947c78abec66b2d59a366cdfb8449e67a8ff34ed862e504b67deb",
+    "src/host.rs": "272ed3d12ebb56ff2949e8d7e1c8dd76d11bff65f02ff3f8401a0f4f7a0249b3",
+    "src/lib.rs": "3b8be30475bead773e5ed18b4e3c78f64feca1fa19f339d1794c50b4e271d3c2",
+    "src/tests.rs": "8f873eca79312f830199cbd08b291c3a27a9ad6042421ca252a14d73e4c1c33b"
+  },
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
+  "target": "wasm32-unknown-unknown",
+  "network_deployment": null,
+  "checks": {
+    "rust_behavior_tests": {
+      "status": "passed",
+      "count": 10
+    },
+    "compiled_wasm_host_double_scenarios": {
+      "status": "passed",
+      "count": 3
+    },
+    "rustfmt": "passed",
+    "native_clippy": "passed",
+    "wasm_clippy": "passed",
+    "near_sandbox": "not run; executable unavailable",
+    "testnet_deployment": "not run; no network account provisioned",
+    "protocol_gas_metering": "not verified",
+    "actual_wallet_or_transfer_receipts": "not verified"
+  },
+  "limitations": [
+    "Compiled Wasm tests use transactional host doubles, not NEAR Sandbox.",
+    "Deployment retains external full-access control until separately verified.",
+    "Five campaign slots are owner-controlled; one hundred participant slots are finite.",
+    "Callback failure leaves a withdrawal pending; no timeout-based recredit."
+  ]
+}
