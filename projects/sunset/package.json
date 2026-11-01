@@ -8,7 +8,10 @@
     "start": "python3 -m http.server 3000 --bind 127.0.0.1 --directory out",
     "test": "node --test --test-isolation=none tests/*.test.mjs",
     "typecheck": "tsc --noEmit",
-    "test:contract": "node --test --test-isolation=none contracts/sunset/tests/wasm.test.mjs"
+    "test:contract": "node --test --test-isolation=none contracts/sunset/tests/wasm.test.mjs",
+    "verify:local": "node scripts/verify-local.mjs",
+    "check:artifact": "node scripts/check-artifact.mjs",
+    "check": "npm test && npm run typecheck && npm run verify:local && npm run check:artifact && npm run test:contract"
   },
   "dependencies": {
     "next": "16.2.10",

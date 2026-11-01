@@ -1,0 +1,56 @@
+name: SUNSET checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  application:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: projects/sunset
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.17.0'
+          package-manager-cache: false
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run check
+      - run: npm run build
+  contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      RUSTUP_TOOLCHAIN: '1.96.0'
+      CARGO_TARGET_DIR: /tmp/sunset-ci-target
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.17.0'
+          package-manager-cache: false
+      - name: Install the recorded Rust compiler and target
+        run: rustup toolchain install 1.96.0 --profile minimal --component rustfmt --component clippy --target wasm32-unknown-unknown
+      - run: cargo fetch --locked --manifest-path projects/sunset/contracts/sunset/Cargo.toml
+      - run: cargo fmt --manifest-path projects/sunset/contracts/sunset/Cargo.toml --check
+      - run: cargo test --locked --offline --manifest-path projects/sunset/contracts/sunset/Cargo.toml
+      - run: cargo clippy --locked --offline --manifest-path projects/sunset/contracts/sunset/Cargo.toml --all-targets -- -D warnings
+      - name: Check recorded source and artifact before rebuild
+        run: node projects/sunset/scripts/check-artifact.mjs
+      - name: Rebuild the contract without deploying
+        run: bash projects/sunset/contracts/sunset/scripts/build.sh
+      - run: node --test --test-isolation=none projects/sunset/contracts/sunset/tests/wasm.test.mjs

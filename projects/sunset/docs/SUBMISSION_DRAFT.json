@@ -1,0 +1,42 @@
+{
+  "status": "draft_not_submitted",
+  "format": "Internal preparation document, not an official API payload",
+  "event": "NEAR Hackathon 2026",
+  "title": "SUNSET — Fund a beginning. Keep the commons open.",
+  "short_description": "Pool capped sponsorship to release a verified offline learning resource, or claim a refund. Transfer a stewardship NFT to hand over recovery-mirror maintenance without restricting public access or changing who receives the funds.",
+  "problem": "Shared resources can remain dependent on their original operator even after funding. Communities need an inspectable release agreement and a way to maintain discovery after hosting changes.",
+  "demonstration": [
+    "Play the free sample without an account or wallet.",
+    "Complete capped sponsorship and inspect surplus change.",
+    "Publish a retained key; creator credit and public release occur together.",
+    "Recover the exact pack from independent files and export its standalone game.",
+    "Transfer the maintenance NFT; demonstrate former-owner mirror denial and unchanged public access/payment terms.",
+    "Verify a replacement mirror against the original manifest/ciphertext/key/plaintext commitments.",
+    "Show both funding-expiry and missed-release refunds, plus safe withdrawal state."
+  ],
+  "candidate_tracks": ["open", "social", "nfts"],
+  "conditional_track": "realworld",
+  "track_exclusions": ["defi", "thesis", "business", "privacy", "games", "memecoins", "agents", "swarms", "security"],
+  "evidence_status": "Local application, Rust and compiled-Wasm host checks only; protocol, browser and live settlement evidence remains outstanding.",
+  "differentiation_limits": "Public buyouts, offline education and transferable maintenance authority have prior art. The prototype integrates verifiable release/refund, independent reuse and standard maintenance-token transfer. Demand and educational impact are not validated.",
+  "technical_stack": ["Next.js static export", "Web Crypto AES-GCM/SHA-256", "Rust NEAR host ABI", "NEP-171 core/events", "NEP-177 metadata", "NEP-181 enumeration"],
+  "software_license": "MIT",
+  "original_sample_license": "CC0-1.0",
+  "human_fields": {
+    "team_members": null,
+    "contact": null,
+    "public_repository_url": null,
+    "public_demo_url": null,
+    "public_x_post_url": null,
+    "mainnet_prize_payout_account": null
+  },
+  "submission_gates": [
+    "Verify the final official rules and candidate-track behavior.",
+    "Run real browser/mobile and network-disabled standalone HTML checks.",
+    "Run protocol-appropriate NEAR Sandbox gas/balance/receipt and receiver/callback failure checks.",
+    "Record actual reviewed testnet deployment and independent signer outcomes.",
+    "Obtain original content rights/educator review and adult sponsor feedback.",
+    "Publish real repository/demo with accurate team/payout details and explicit final submission approval."
+  ],
+  "submitted": false
+}
