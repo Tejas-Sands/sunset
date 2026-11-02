@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "artifact": "res/sunset_contract.wasm",
-  "artifact_sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf",
-  "artifact_bytes": 266190,
+  "artifact_sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
+  "artifact_bytes": 270188,
   "source_revision": null,
   "source_revision_note": "Source digests identify this working-tree build; the containing verified publication commit is recorded by Git.",
   "source_sha256": {
     "Cargo.lock": "689f6033c51ba9c8e69dbd85b50b5a55d8450d9821c81b4de30eb10654d26bbf",
     "Cargo.toml": "94e3d0a504d947c78abec66b2d59a366cdfb8449e67a8ff34ed862e504b67deb",
     "src/host.rs": "8bb2720b3e20dbeec9f75362f434c477b114f56d480c303ceb9d96f35ab24de6",
-    "src/lib.rs": "5ba7fe6427a3122552531d45e02a9e4ffb5e8ca233d86e8a4316ca881f71c1a0",
-    "src/nft.rs": "0f7572447c884c03fa6b6f4cca0b783e970af42f87176cf2e011e38532c0900b",
-    "src/tests.rs": "e79fb2a16ca81b0c77e77ef259c0d76ac82d4e32158fba2aedb288318052888b",
-    "tests/wasm.test.mjs": "394534ceb64e59c5aa9c78a2713f1b0e9feb317895219e3d842f72c6dd3a6704",
+    "src/lib.rs": "dcba0cf0874f562c05a2c06ccc88cf7c23985505a188ae6b5758f5892a3c9dd2",
+    "src/nft.rs": "4f62b1f3dee01a00d79c779e21dc8b77f2ad58cae9da49fed36011d7ac97b26b",
+    "src/tests.rs": "a1a9861e930d829461e6f70d206d4fee0216c638a5edf9cedbbbf3a913a56010",
+    "tests/wasm.test.mjs": "d7459ae9e4d0491f104a08918065764853ace695e41e744a3f616442a97062b4",
     "scripts/build.sh": "839f9bed71a1734ea633c93b4d421fe08bf339fc4ed687c80bdea4f84b3faf5e"
   },
   "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
@@ -22,20 +22,20 @@
   "checks": {
     "rust_behavior_tests": {
       "status": "passed",
-      "count": 16
+      "count": 19
     },
     "compiled_wasm_host_double_scenarios": {
       "status": "passed",
-      "count": 10
+      "count": 11
     },
     "rustfmt": "passed",
     "native_clippy": "passed",
     "wasm_clippy": "passed",
     "near_sandbox": "not run; executable unavailable",
-    "testnet_deployment": "not run; no network account provisioned",
+    "testnet_deployment": "not run; CLI absent, RPC DNS blocked and no imported signer verified",
     "protocol_gas_metering": "not verified",
     "actual_wallet_or_transfer_receipts": "not verified",
-    "test_first_failures": "Observed native unknown-method failures and missing compiled-Wasm NFT exports before implementation; strict token-id regression failed before correction. Native and compiled-Wasm same-account reviewer tests failed before the creator/reviewer distinction guard.",
+    "test_first_failures": "Observed native unknown-method failures and missing compiled-Wasm NFT exports before implementation; strict token-id regression failed before correction. Native and compiled-Wasm same-account reviewer tests failed before the creator/reviewer distinction guard. Shared URI regressions failed for empty campaign authority and malformed mirror authority before hardening; rejected calls must preserve complete state.",
     "build_script_syntax": "passed",
     "compiler_version_guard": "passed; rejected simulated installed rustc 1.95.0 before Cargo execution",
     "canonical_path_reproducibility": {
@@ -47,7 +47,7 @@
       "ambient_rustflags_replaced": true,
       "byte_identical": true,
       "local_home_and_checkout_paths_absent": true,
-      "artifact_sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf"
+      "artifact_sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f"
     }
   },
   "limitations": [

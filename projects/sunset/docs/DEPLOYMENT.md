@@ -71,10 +71,10 @@ On a socket-capable local machine, `npm start` serves `out/` at `http://127.0.0.
 
 ## 2. Verify the contract in a real protocol runtime
 
-The prepared artifact is `contracts/sunset/res/sunset_contract.wasm`, **266,190 bytes**, SHA-256:
+The prepared artifact is `contracts/sunset/res/sunset_contract.wasm`, **270,188 bytes**, SHA-256:
 
 ```text
-123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf
+7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f
 ```
 
 It requires a **fresh state-layout-2 deployment**. No migration from an earlier deployment is provided. The hex digest above identifies the file; the frontend asks for the actual deployment's Base58 code hash.

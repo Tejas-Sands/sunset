@@ -6,6 +6,8 @@ This is the bounded SUNSET sponsorship and public-release stewardship contract. 
 
 The source uses NEAR's stable host ABI directly because this build environment has cached Rust serialization dependencies and no available `near-sdk`. Wasm hashes use NEAR's SHA-256 host. Native tests call the system OpenSSL SHA-256 binary; OpenSSL is not a Wasm dependency. The compiled ABI has 22 callable exports and no hidden test funding bypass. The NFT implementation follows [NEP-171 core and 1.2.0 events](https://github.com/near/NEPs/blob/master/neps/nep-0171.md), [NEP-177 metadata](https://github.com/near/NEPs/blob/master/neps/nep-0177.md), and [NEP-181 enumeration](https://github.com/near/NEPs/blob/master/neps/nep-0181.md). Approval management, royalties, sales and burning are not implemented.
 
+The [2 November predeployment review](../../docs/CONTRACT_PREDEPLOY_REVIEW.md) fixed shared original/mirror URL validation and added maximum-capacity accounting coverage. Resource URLs now require lowercase ASCII DNS/punycode authorities, valid bounded ports, HTTPS and at most 512 UTF-8 bytes; credentials, fragments, controls, backslashes, IP/local hosts and malformed DNS labels are rejected. This validates syntax rather than resolution or availability.
+
 **Fresh deployment required:** the stewardship fields change the Borsh state layout. `get_config.state_layout_version` is `2`; JSON campaign/account `schema_version` remains `1` with additive fields. No migration from the earlier sponsorship-only layout is supplied or claimed. No network deployment has occurred.
 
 ## Build and checks

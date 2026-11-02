@@ -20,7 +20,7 @@ Open `http://127.0.0.1:3000` for the public landing page, or `http://127.0.0.1:3
 
 A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-lantern-trail.html). Its gameplay is self-contained; actual offline browser execution must still be checked on the target machine.
 
-For the operator's `shiftultra.testnet` wallet, the [testnet showcase guide](docs/TESTNET_SHOWCASE.md) provides a 0.1-testNEAR campaign, proposed separate contract/reviewer/sponsor accounts, private local release files, and public encrypted resource locations. The contract has not yet been deployed. Two testNEAR is below the prepared Wasm's approximately 2.66-testNEAR code-storage requirement; top up through the free faucet before following the deployment commands.
+For the operator's `shiftultra.testnet` wallet, the [testnet showcase guide](docs/TESTNET_SHOWCASE.md) provides a 0.1-testNEAR campaign, proposed separate contract/reviewer/sponsor accounts, private local release files, and public encrypted resource locations. The contract has not yet been deployed. Two testNEAR is below the prepared Wasm's approximately 2.70-testNEAR code-storage requirement; top up through the free faucet before following the deployment commands.
 
 ## Landing and workspace
 
@@ -82,6 +82,8 @@ bash contracts/sunset/scripts/build.sh
 ```
 
 The Wasm host tests execute the compiled artifact with transactional host doubles. They do **not** simulate NEAR protocol gas, real account balances, actual receipts or Sandbox. [Evidence](evidence/verification.json) records checked and unverified items separately. [Independent contract review](../../research/2026-11-01-council/contract-review.md) and [frontend review](../../research/2026-11-01-council/frontend-review.md) retain findings.
+
+The [2 November predeployment review](docs/CONTRACT_PREDEPLOY_REVIEW.md) covers all production Rust modules, fixes malformed resource-URL acceptance and adds a full-capacity accounting regression. The revised artifact and operator guide are pinned together; actual protocol gas, signatures and settlement remain unverified.
 
 Caps: five curated contract campaigns, 100 permanent registered contract accounts, bounded serialized state. Public contributors can exhaust the participant slots. Callback uncertainty leaves a withdrawal pending, without speculative recredit. The contract checks key commitments, not licensing rights, educational quality, decryptability or artifact availability. Development deployments remain upgradeable while full-access keys exist. Testnet only; no mainnet readiness or immutable deployment is claimed.
 

@@ -105,10 +105,7 @@ impl State {
             !terms.title.is_empty() && terms.title.len() <= 120,
             "invalid title",
         )?;
-        ensure(
-            terms.manifest_uri.starts_with("https://") && terms.manifest_uri.len() <= 512,
-            "invalid manifest URI",
-        )?;
+        ensure(nft::valid_uri(&terms.manifest_uri), "invalid manifest URI")?;
         ensure(
             valid_account(caller) && valid_account(&terms.reviewer),
             "invalid account",

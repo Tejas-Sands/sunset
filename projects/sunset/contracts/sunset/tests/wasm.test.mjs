@@ -348,3 +348,60 @@ test('compiled Wasm refunds each expiration outcome and restores only confirmed 
     assert.equal(after.pending, null);
   }
 });
+
+test('compiled Wasm conserves full-capacity funds when releases credit a pending withdrawal', async () => {
+  // Transactional host doubles exercise accounting and promises, not protocol gas or real transfers.
+  const vm = runtime();
+  const owner = 'a'.repeat(64);
+  const reviewer = 'r'.repeat(64);
+  const buyers = Array.from({ length: 99 }, (_, index) => String(index).padStart(64, '0'));
+  await vm.call('new', { owner });
+  const ids = [];
+  for (let index = 0; index < 5; index++) {
+    const id = String(index) + 'p'.repeat(63);
+    ids.push(id);
+    const created = await vm.call('create_campaign', {
+      ...terms(id, '99'), title: 'T'.repeat(120), reviewer,
+      manifest_uri: 'https://example.test/' + 'm'.repeat(491),
+    }, { caller: owner, deposit: campaignStorage });
+    await vm.call('approve_campaign', { id, agreement_digest: created.response.agreement_digest }, { caller: reviewer, now: 2n });
+  }
+  for (const buyer of buyers) {
+    for (const [index, id] of ids.entries()) {
+      await vm.call('contribute', { id, amount: '1' }, { caller: buyer, now: 3n, deposit: 1n + (index === 0 ? accountStorage : 0n) });
+    }
+  }
+  const size = vm.size();
+  assert.ok(size < 65_536);
+  const getAccount = async account_id => (await vm.call('get_account', { account_id })).response;
+  const initial = BigInt((await getAccount(owner)).credit);
+  const started = await vm.call('withdraw', { amount: initial.toString() }, { caller: owner, now: 4n });
+  const callback = started.promises[1];
+  for (const id of ids.slice(0, 3)) await vm.call('publish_release', { id, key_base64: key.toString('base64') }, { now: 4n });
+  assert.equal((await getAccount(owner)).credit, '297');
+  await vm.call(callback.method, callback.args, { result: false, now: 5n });
+  assert.equal((await getAccount(owner)).credit, String(initial + 297n));
+  assert.equal((await getAccount(owner)).pending, null);
+  for (const buyer of buyers) {
+    for (const id of ids.slice(3)) await vm.call('claim_refund', { id }, { caller: buyer, now: 23n });
+  }
+  let paid = 0n;
+  for (const caller of [...buyers, owner]) {
+    const amount = BigInt((await getAccount(caller)).credit);
+    const started = await vm.call('withdraw', { amount: amount.toString() }, { caller, now: 24n });
+    assert.equal(started.promises[0].transfer, amount);
+    const callback = started.promises[1];
+    await vm.call(callback.method, callback.args, { result: true, now: 24n });
+    const account = await getAccount(caller);
+    assert.equal(account.credit, '0');
+    assert.equal(account.paid, amount.toString());
+    assert.equal(account.pending, null);
+    paid += amount;
+  }
+  const config = (await vm.call('get_config')).response;
+  assert.equal(config.account_count, 100);
+  assert.equal(config.campaign_count, 5);
+  assert.equal(BigInt(config.withdrawn), paid);
+  assert.equal(BigInt(config.economic_deposits) + BigInt(config.storage_deposits), paid + BigInt(config.storage_retained));
+  assert.equal(vm.size(), size);
+});

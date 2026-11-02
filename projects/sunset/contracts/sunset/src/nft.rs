@@ -94,17 +94,52 @@ fn optional_text<'a>(input: &'a Value, key: &str, maximum: usize) -> Result<Opti
         _ => Err("invalid optional text argument"),
     }
 }
-fn valid_uri(uri: &str) -> bool {
+pub(super) fn valid_uri(uri: &str) -> bool {
     let Some(rest) = uri.strip_prefix("https://") else {
         return false;
     };
-    let authority = rest.split(['/', '?', '#']).next().unwrap_or("");
-    uri.len() <= MAX_MIRROR
-        && !authority.is_empty()
-        && !authority.contains('@')
-        && !uri
+    if uri.len() > MAX_MIRROR
+        || uri
             .chars()
-            .any(|c| c.is_control() || c.is_whitespace() || c == '\\')
+            .any(|c| c.is_control() || c.is_whitespace() || matches!(c, '\\' | '#'))
+    {
+        return false;
+    }
+    let authority = rest.split(['/', '?']).next().unwrap_or("");
+    let host = if let Some((host, port)) = authority.split_once(':') {
+        if port.is_empty()
+            || !port.bytes().all(|b| b.is_ascii_digit())
+            || port.starts_with('0')
+            || port.parse::<u16>().is_err()
+        {
+            return false;
+        }
+        host
+    } else {
+        authority
+    };
+    // Public DNS syntax only; this does not establish resolution or availability.
+    if !host.contains('.') || host.len() > 253 {
+        return false;
+    }
+    let suffix = host.rsplit('.').next().unwrap_or("");
+    if matches!(suffix, "localhost" | "local" | "internal")
+        || suffix.bytes().all(|b| b.is_ascii_digit())
+        || suffix
+            .strip_prefix("0x")
+            .is_some_and(|digits| digits.bytes().all(|b| b.is_ascii_hexdigit()))
+    {
+        return false;
+    }
+    host.split('.').all(|label| {
+        !label.is_empty()
+            && label.len() <= 63
+            && !label.starts_with('-')
+            && !label.ends_with('-')
+            && label
+                .bytes()
+                .all(|b| b.is_ascii_lowercase() || b.is_ascii_digit() || b == b'-')
+    })
 }
 fn token_index(state: &State, id: &str) -> Result<usize> {
     let index = state.campaign_index(id)?;

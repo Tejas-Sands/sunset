@@ -5,8 +5,8 @@
   "network": "testnet",
   "owner": "shiftultra.testnet",
   "owner_balance": {
-    "amount_near": "2",
-    "evidence": "user reported; not queried by executor"
+    "amount_near": "7",
+    "evidence": "operator reported after browser faucet; not queried by executor"
   },
   "proposed_contract": "sunset.shiftultra.testnet",
   "proposed_reviewer": "reviewer.shiftultra.testnet",
@@ -22,10 +22,10 @@
     "release_window_hours": 24
   },
   "contract": {
-    "bytes": 266190,
-    "sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf",
-    "expected_base58_code_hash": "2EBDJB32FGm8BaukGLVG9wim5ZHk128vEcREfpEAJoYz",
-    "code_collateral_nominal_near": "2.6619",
+    "bytes": 270188,
+    "sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
+    "expected_base58_code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "code_collateral_nominal_near": "2.70188",
     "code_collateral_excludes": "account allowance adjustment, state and transaction fees",
     "proposed_balance_near": "4",
     "layout": 2,
@@ -69,7 +69,7 @@
   "runbook": "docs/TESTNET_SHOWCASE.md",
   "local_checks": {
     "checked_at": "2026-11-02T09:30:28.896261+00:00",
-    "npm_run_check": "passed: 47 JavaScript tests, types, nine local workflows, source/artifact hashes, ten Wasm host scenarios",
+    "npm_run_check": "passed: 48 JavaScript tests, types, nine local workflows, source/artifact hashes, eleven Wasm host scenarios",
     "production_build": "passed",
     "static_pages": "passed",
     "prepared_package": "passed: public/private exact bytes, all commitment hashes, independent HTML recovery, seven unsigned deposit plans",
@@ -85,6 +85,16 @@
     "fallback": "https://near-faucet.io/",
     "fallback_page": "NEAR/address/amount/request form fetched successfully via web reader",
     "fallback_funding_verified": false,
-    "current_limit_verified": false
+    "current_limit_verified": false,
+    "operator_reported_balance_after_browser_faucet_near": "7"
+  },
+  "predeploy_review": "docs/CONTRACT_PREDEPLOY_REVIEW.md",
+  "predeploy_review_checks": {
+    "native_tests": 19,
+    "compiled_wasm_host_scenarios": 11,
+    "native_and_wasm_clippy": "passed",
+    "artifact_rebuild_and_two_checkout_reproducibility": "passed",
+    "actual_protocol_execution": false,
+    "deployment_transaction_submitted": false
   }
 }

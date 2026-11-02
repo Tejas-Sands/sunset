@@ -21,7 +21,7 @@ Request additional testNEAR through the [browser faucet](https://near-faucet.io/
 
 **API failure observed on 2 November:** the operator's POST to `https://docs-mcp-f18b.onrender.com/api/faucet` returned HTTP 404 with `Not Found`, despite that route appearing in the [agent-tools documentation](https://docs.near.org/getting-started/tools-for-ai#testnet-faucet-api). The cause is not established; the response does not verify an account or credit any funds. Do not keep retrying that route as a funding step. Browser-page availability is also not evidence that a request succeeded; check the actual balance. After any timeout, check balance before retrying because funding may already have completed.
 
-The 266,190-byte Wasm represents approximately 2.6619 NEAR of raw code collateral before account allowances, plus state and gas. **2 NEAR is insufficient.** [Storage pricing](https://docs.near.org/protocol/storage/storage-staking) is `10^19` yoctoNEAR per byte. Four contract NEAR is a working allocation, not a measured maximum-state guarantee.
+The 270,188-byte Wasm represents approximately 2.70188 NEAR of raw code collateral before account allowances, plus state and gas. **2 NEAR is insufficient.** [Storage pricing](https://docs.near.org/protocol/storage/storage-staking) is `10^19` yoctoNEAR per byte. Four contract NEAR is a working allocation, not a measured maximum-state guarantee.
 
 ```sh
 export SUNSET_OWNER=shiftultra.testnet
@@ -30,13 +30,13 @@ export SUNSET_REVIEWER=reviewer.shiftultra.testnet
 export SUNSET_SPONSOR=sponsor.shiftultra.testnet
 export SUNSET_PRIVATE=private/shiftultra-testnet-v1
 export SUNSET_HOST=https://sunset-lemon.vercel.app
-export SUNSET_CODE_HASH=2EBDJB32FGm8BaukGLVG9wim5ZHk128vEcREfpEAJoYz
+export SUNSET_CODE_HASH=9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx
 umask 077
 sha256sum contracts/sunset/res/sunset_contract.wasm
 near account view-account-summary "$SUNSET_OWNER" network-config testnet now
 ```
 
-Expected Wasm SHA-256: `123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf`. Stop on a mismatch. Keep `release-args.json`, `private-release-backup.json`, `artifact.json` and `offline-check.html` private before intended release. Only manifest/ciphertext belong in the public host.
+Expected Wasm SHA-256: `7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f`. Stop on a mismatch. Keep `release-args.json`, `private-release-backup.json`, `artifact.json` and `offline-check.html` private before intended release. Only manifest/ciphertext belong in the public host.
 
 ## 2. Publish and verify the committed public bytes
 
@@ -162,7 +162,7 @@ Record transaction/receipt IDs, finalized blocks, signer/receiver/method/deposit
 
 ## 6. Verify the hosted reader and stewardship handover
 
-Open `https://sunset-lemon.vercel.app/app/`, select **Testnet setup**, enter contract `sunset.shiftultra.testnet` and expected Base58 code hash `2EBDJB32FGm8BaukGLVG9wim5ZHk128vEcREfpEAJoYz`, then connect. Confirm verified network/code/block identity. In Public resources, verify the released pack, play it and export/download its standalone HTML. Close the site, disable networking, open the downloaded file in a fresh browser session and complete the game. Record actual browser results; local recovery alone does not prove this flow.
+Open `https://sunset-lemon.vercel.app/app/`, select **Testnet setup**, enter contract `sunset.shiftultra.testnet` and expected Base58 code hash `9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx`, then connect. Confirm verified network/code/block identity. In Public resources, verify the released pack, play it and export/download its standalone HTML. Close the site, disable networking, open the downloaded file in a fresh browser session and complete the game. Record actual browser results; local recovery alone does not prove this flow.
 
 ```sh
 sunset_call nft_transfer "$SUNSET_PRIVATE/steward-transfer.json" '1 yoctoNEAR' "$SUNSET_OWNER"

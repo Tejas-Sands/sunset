@@ -364,6 +364,144 @@ fn released_state() -> State {
     state
 }
 
+fn invalid_resource_uris() -> Vec<String> {
+    let mut uris: Vec<String> = [
+        "https://",
+        "https://:",
+        "https://[",
+        "https://example.org:",
+        "https://example.org:zero/pack",
+        "https://example.org:0/pack",
+        "https://example.org:65536/pack",
+        "https://example.org:999999999999999999999/pack",
+        "https://name:secret@example.org/pack",
+        "https://example.org/white space",
+        "https://example.org/\npack",
+        "https://example.org/\u{7f}pack",
+        "https://example.org/\\pack",
+        "https://example.org/pack#part",
+        "https://localhost/pack",
+        "https://files.local/pack",
+        "https://files.internal/pack",
+        "https://127.0.0.1/pack",
+        "https://127.1/pack",
+        "https://0x7f.0x0.0x0.0x1/pack",
+        "https://[::1]/pack",
+        "https://example.org./pack",
+        "https://bad..example.org/pack",
+        "https://-bad.example.org/pack",
+        "https://bad-.example.org/pack",
+        "https://bad_host.example.org/pack",
+        "https://éxample.org/pack",
+        "https://EXAMPLE.org/pack",
+    ]
+    .into_iter()
+    .map(String::from)
+    .collect();
+    uris.push(format!("https://{}.org/pack", "a".repeat(64)));
+    uris.push(format!(
+        "https://{}.org/pack",
+        vec!["a".repeat(63); 4].join(".")
+    ));
+    uris.push(format!("https://example.org/{}a", "é".repeat(246)));
+    uris
+}
+
+#[test]
+fn invalid_resource_uris_cannot_create_campaigns_or_charge_storage() {
+    let mut initial = State::new("creator.testnet");
+    for uri in invalid_resource_uris() {
+        let before = borsh::to_vec(&initial).unwrap();
+        let mut terms = fixture_terms("invalid-uri", 50, 100);
+        terms.manifest_uri = uri.clone();
+        assert!(
+            initial
+                .create(
+                    terms,
+                    "creator.testnet",
+                    "sunset.testnet",
+                    1,
+                    CAMPAIGN_STORAGE
+                )
+                .is_err(),
+            "campaign accepted {uri:?}"
+        );
+        assert_eq!(borsh::to_vec(&initial).unwrap(), before);
+    }
+    initial.check_accounting().unwrap();
+}
+
+#[test]
+fn invalid_resource_uris_cannot_change_stewardship_or_money() {
+    use serde_json::json;
+    let mut released = released_state();
+    for uri in invalid_resource_uris() {
+        let before = borsh::to_vec(&released).unwrap();
+        assert!(
+            execute(
+                &mut released,
+                "set_mirror",
+                &json!({"token_id":"pack","mirror_uri":uri}),
+                &context("creator.testnet", 1, 5)
+            )
+            .is_err(),
+            "mirror accepted {uri:?}"
+        );
+        assert_eq!(borsh::to_vec(&released).unwrap(), before);
+    }
+    released.check_accounting().unwrap();
+}
+
+#[test]
+fn resource_uris_allow_dns_ports_paths_queries_and_enforce_utf8_byte_limit() {
+    use serde_json::json;
+    let max_uri = format!("https://example.org/{}", "é".repeat(246));
+    assert_eq!(max_uri.len(), 512);
+    for uri in [
+        "https://example.org".to_string(),
+        "https://cdn-1.example.org:8443/resources/pack.json?version=1&lang=en".to_string(),
+        "https://xn--bcher-kva.example/pack.json".to_string(),
+        max_uri.clone(),
+    ] {
+        let mut terms = fixture_terms("valid-uri", 50, 100);
+        terms.manifest_uri = uri.clone();
+        let mut state = State::new("creator.testnet");
+        state
+            .create(
+                terms,
+                "creator.testnet",
+                "sunset.testnet",
+                1,
+                CAMPAIGN_STORAGE,
+            )
+            .unwrap();
+        state.check_accounting().unwrap();
+        let mut state = released_state();
+        let before_size = state.size();
+        execute(
+            &mut state,
+            "set_mirror",
+            &json!({"token_id":"pack","mirror_uri":uri}),
+            &context("creator.testnet", 1, 5),
+        )
+        .unwrap();
+        assert_eq!(state.campaigns[0].stewardship.mirror(), uri);
+        assert_eq!(state.security_deposits, 1);
+        assert_eq!(state.size(), before_size);
+        let oversized = format!("{max_uri}é");
+        let before = borsh::to_vec(&state).unwrap();
+        assert!(execute(
+            &mut state,
+            "set_mirror",
+            &json!({"token_id":"pack","mirror_uri":oversized}),
+            &context("creator.testnet", 1, 6)
+        )
+        .is_err());
+        assert_eq!(borsh::to_vec(&state).unwrap(), before);
+        state.check_accounting().unwrap();
+    }
+}
+
 #[test]
 fn stewardship_exists_only_after_release_and_mints_once_without_growth() {
     use serde_json::json;

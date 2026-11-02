@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-01T17:16:17.469655+00:00",
-  "status": "stewardship_product_locally_verified_external_execution_unverified",
+  "checked_at": "2026-11-02T10:37:57.840046+00:00",
+  "status": "contract_reviewed_locally_protocol_execution_unverified",
   "network": "testnet_only",
   "application": {
     "framework": "Next.js 16.2.10",
@@ -16,8 +16,8 @@
     {
       "command": "npm test",
       "status": "passed",
-      "tests": 47,
-      "scope": "crypto/schema, sponsorship and grants, stewardship/mirror boundaries, signer-bound plans, backup/receipt context helpers, recovery/preparation, RPC catalog and local workflow; eight offline GitHub publishing safety scenarios with real local Git histories"
+      "tests": 48,
+      "scope": "crypto/schema, sponsorship and grants, stewardship/mirror boundaries, signer-bound plans, backup/receipt context helpers, recovery/preparation, RPC catalog and local workflow; eight offline GitHub publishing safety scenarios with real local Git histories; canonical DNS/port/fragment agreement with contract URL validation"
     },
     {
       "command": "npm run typecheck",
@@ -39,7 +39,7 @@
     {
       "command": "npm run test:contract",
       "status": "passed",
-      "tests": 10,
+      "tests": 11,
       "scope": "actual compiled WASM with transactional host doubles, not protocol Sandbox"
     },
     {
@@ -54,7 +54,7 @@
     {
       "command": "CARGO_TARGET_DIR=/tmp/sunset-cargo-target cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml",
       "status": "passed",
-      "tests": 16
+      "tests": 19
     },
     {
       "command": "cargo fmt --manifest-path contracts/sunset/Cargo.toml --check",
@@ -82,7 +82,7 @@
         "ambient_rustflags_replaced": true,
         "byte_identical": true,
         "local_home_and_checkout_paths_absent": true,
-        "artifact_sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf"
+        "artifact_sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f"
       }
     },
     {
@@ -99,22 +99,24 @@
   ],
   "contract_artifact": {
     "path": "contracts/sunset/res/sunset_contract.wasm",
-    "bytes": 266190,
-    "sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf",
+    "bytes": 270188,
+    "sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
     "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)",
     "source_to_artifact": "Two different source checkout directories and separate target directories; identical locked dependencies and rustc 1.96.0 (ac68faa20). No cross-compiler reproducibility claim.",
     "deployment": null,
     "api": "Owner-curated sponsorship/review/release/refund/withdrawal plus NEP171 core/events, NEP177 metadata, NEP181 enumeration and current-owner-only mirror maintenance",
     "state_layout_version": 2,
     "callable_exports": 22,
-    "fresh_deployment_required": true
+    "fresh_deployment_required": true,
+    "expected_base58_code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx"
   },
   "reviews": {
     "initial_council": "../../research/2026-11-01-council/README.md",
     "tokenization_research": "../../research/2026-11-01-tokenization/RESEARCH.md",
     "contract": "../../research/2026-11-01-tokenization/CONTRACT_REVIEW.md",
     "frontend": "../../research/2026-11-01-tokenization/CLIENT_REVIEW.md",
-    "environment_gaps": "../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md"
+    "environment_gaps": "../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md",
+    "predeployment": "../docs/CONTRACT_PREDEPLOY_REVIEW.md"
   },
   "unverified": [
     {
@@ -160,9 +162,10 @@
     "reason": "Operator will push subsequent commits manually. Prepared testnet assets are not yet published; no deployed NEAR contract or signed settlement is claimed.",
     "repository_pushed_by_agent": false,
     "site_url": "https://sunset-lemon.vercel.app",
-    "publication_evidence": "Operator reports publication; earlier repository metadata was visible. Remote HEAD/live website bytes not verified from this executor."
+    "publication_evidence": "Operator reports publication; earlier repository metadata was visible. Remote HEAD/live website bytes not verified from this executor.",
+    "new_contract_review_commit_pending_user_push": true
   },
-  "source_revision": "5810dddbc647a4d8e0bcfcd970c2bc5df473d51f",
+  "source_revision": "428eba6",
   "deployment_excluded_by_user": false,
   "ui_revision": {
     "source_revision": "f8a53ab54e42748270317f6a9f32680cdc5afb0f",
@@ -216,5 +219,25 @@
     "new_remote_publication": false,
     "vercel_setup": "Persistent GitHub integration documented; no new consent link or deployment"
   },
-  "testnet_showcase_preparation": "testnet-preparation.json"
+  "testnet_showcase_preparation": "testnet-preparation.json",
+  "source_revision_note": "Base revision before reviewed URI hardening; exact working-tree contract identity is in the artifact and eight source digests.",
+  "predeployment_review": {
+    "date": "2026-11-02",
+    "review_agents": 3,
+    "model_family_diversity": false,
+    "all_production_modules_reviewed": true,
+    "fixed_finding": "Shared onchain original/mirror HTTPS authority validation",
+    "rejected_finding": "Numeric metadata timestamps match current NEP177 despite SDK string types",
+    "native_tests": 19,
+    "compiled_wasm_host_scenarios": 11,
+    "max_capacity_scenario": "five campaigns and 100 accounts with credits arriving during pending withdrawal, transfer failure restoration, refunds and conservation",
+    "protocol_gas_verified": false,
+    "rpc_dns": "cannot resolve testnet RPC hosts",
+    "near_cli_available": false,
+    "imported_signer_verified": false,
+    "outside_sandbox_rpc_check": "rejected by execution policy: sandbox escalation disabled",
+    "deployment_transaction_submitted": false,
+    "application_tests": 48,
+    "browser_url_validation_aligned": true
+  }
 }
