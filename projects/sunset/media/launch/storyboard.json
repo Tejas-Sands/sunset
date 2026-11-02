@@ -1,0 +1,147 @@
+{
+  "title": "SUNSET \u2014 Support once. Share forever.",
+  "format": "1920x1080, 25fps, 82 seconds, H264/AAC",
+  "capture_policy": "Genuine browser stills and editorial summaries of finalized public transactions. No recreated wallet UI or simulated financial controls. Captioned refund section describes the contract rule, not an executed live expiry refund.",
+  "scenes": [
+    {
+      "sentence_start": 1,
+      "kind": "hook",
+      "chapter": "Learning should be easy to keep."
+    },
+    {
+      "sentence_start": 2,
+      "kind": "brand",
+      "chapter": "01 / THE COMMONS STARTS WITH US"
+    },
+    {
+      "sentence_start": 4,
+      "kind": "capture",
+      "file": "03-hosted-live-contract-connected.png",
+      "crop": [
+        437,
+        175,
+        1750,
+        1003
+      ],
+      "eyebrow": "One committed public-release agreement",
+      "title": "One resource.\nClear terms.",
+      "detail": "Fixed creator. Funding cap.\nReviewer. Real deadlines.",
+      "chapter": "02 / A SHARED STARTING POINT",
+      "source_label": "ACTUAL HOSTED VIEWER \u00b7 LIVE NEAR TESTNET"
+    },
+    {
+      "sentence_start": 6,
+      "kind": "proof",
+      "title": "Funded\ntogether.",
+      "detail": "Contributions go to the contract.\nThe agreement stays inspectable.",
+      "proof_label": "PUBLIC-RELEASE SPONSORSHIP",
+      "proof_detail": "0.06 sponsor + 0.04 reviewer\nThe Lantern Trail",
+      "tx_short": "HHJndL\u2026nEHd8 + nyoxYN\u2026hePD",
+      "chapter": "03 / ACTUAL NEAR TESTNET SETTLEMENT"
+    },
+    {
+      "sentence_start": 8,
+      "kind": "proof",
+      "title": "Released.\nCreator paid.",
+      "detail": "Matching key published on time.\nCreator credit withdrawn once.",
+      "proof_label": "CREATOR WITHDRAWAL",
+      "proof_detail": "Native transfer completed\nWithdrawal callback finalized",
+      "tx_short": "4tUbpd\u2026ovcL4",
+      "chapter": "04 / ACTUAL NEAR TESTNET SETTLEMENT"
+    },
+    {
+      "sentence_start": 10,
+      "kind": "rule",
+      "chapter": "CONTRACT RULE / LIVE EXPIRY REFUND NOT SHOWN"
+    },
+    {
+      "sentence_start": 11,
+      "kind": "capture",
+      "file": "05-hosted-pack-verified.png",
+      "crop": [
+        437,
+        610,
+        1748,
+        1080
+      ],
+      "eyebrow": "Original commitments verified",
+      "title": "Download it.\nKeep it.",
+      "detail": "Manifest. Ciphertext. Release key.\nPlaintext. Public license.",
+      "title_size": 88,
+      "chapter": "05 / PUBLIC RELEASE \u2192 RETAINED COPY",
+      "source_label": "ACTUAL HOSTED VERIFIED RESOURCE"
+    },
+    {
+      "sentence_start": 12,
+      "kind": "capture",
+      "file": "10-offline-game-answer.png",
+      "crop": [
+        589,
+        75,
+        1330,
+        945
+      ],
+      "contain": true,
+      "eyebrow": "Website closed. Network disabled.",
+      "title": "Internet off.\nGame on.",
+      "detail": "A standalone HTML game.\nNo learner account or wallet.",
+      "chapter": "06 / ACTUAL OFFLINE BROWSER EXECUTION",
+      "source_label": "DOWNLOADED FILE \u00b7 NETWORK DISABLED"
+    },
+    {
+      "sentence_start": 13,
+      "kind": "capture",
+      "file": "11-offline-game-complete.png",
+      "crop": [
+        590,
+        75,
+        1327,
+        875
+      ],
+      "contain": true,
+      "eyebrow": "A real retained copy. A finished adventure.",
+      "title": "No account.\nNo wallet.",
+      "detail": "All five questions completed\nwith networking disabled.",
+      "chapter": "06 / ACTUAL OFFLINE BROWSER EXECUTION",
+      "source_label": "DOWNLOADED FILE \u00b7 NETWORK DISABLED"
+    },
+    {
+      "sentence_start": 14,
+      "kind": "capture",
+      "file": "15-hosted-steward-mirror-verified.png",
+      "crop": [
+        437,
+        95,
+        1748,
+        600
+      ],
+      "eyebrow": "One token. A concrete maintenance right.",
+      "title": "Pass on\nthe care.",
+      "detail": "Maintain a verified discovery mirror.\nTransfer the responsibility.",
+      "chapter": "07 / ACTUAL STEWARDSHIP HANDOVER",
+      "source_label": "ACTUAL HOSTED VIEWER \u00b7 LIVE NEAR TESTNET"
+    },
+    {
+      "sentence_start": 17,
+      "kind": "capture",
+      "file": "07-hosted-game-feedback.png",
+      "crop": [
+        620,
+        300,
+        1300,
+        980
+      ],
+      "contain": true,
+      "eyebrow": "The resource stays public",
+      "title": "Shared\nby design.",
+      "detail": "Copies stay usable.\nCreator compensation stays fixed.",
+      "chapter": "08 / CARE WITHOUT A CONTENT PAYWALL",
+      "source_label": "ACTUAL RELEASED RESOURCE GAMEPLAY"
+    },
+    {
+      "sentence_start": 18,
+      "kind": "close",
+      "chapter": "SUPPORT ONCE. SHARE FOREVER."
+    }
+  ]
+}

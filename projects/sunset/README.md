@@ -22,6 +22,8 @@ A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-
 
 The [testnet showcase guide](docs/TESTNET_SHOWCASE.md) now replays the completed `lantern-trail-testnet-v1` campaign through read-only checks and actual receipt links. Reviewer/sponsor accounts exist, the campaign is `Released`, creator `paid` is 0.1 testNEAR with no pending withdrawal, and the NFT holder is `reviewer.shiftultra.testnet`. Do not repeat its signed actions. Separate campaigns and real waiting are still needed for both expiry refunds.
 
+An 82-second launch film with AI narration, captions and genuine product captures is prepared locally, together with X post/thread and pitch copy. The [launch delivery guide](docs/LAUNCH_VIDEO.md) links its source and verification record; the video has not been posted or submitted.
+
 ## Landing and workspace
 
 The homepage introduces the commons with a custom SUNSET illustration, locally hosted Geist typography, sample resource scenarios, creator guidance, stewardship explanation and an accessible native FAQ. It renders its content without initializing the financial rehearsal or requiring JavaScript. `/app/` contains the full workspace, with a matching cream/terracotta/deep-green palette, larger text and roomier controls.

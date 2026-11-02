@@ -1,0 +1,8 @@
+The sponsors need a wallet. The learners don’t.
+
+Meet SUNSET: fund a learning resource once, pay its creator, then download and keep the game.
+
+Built at NEAR HACKATHON on testnet.
+@NEARProtocol #NEARHackathon
+
+https://sunset-lemon.vercel.app

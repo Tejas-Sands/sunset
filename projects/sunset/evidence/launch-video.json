@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T17:17:48.898092+00:00",
+  "delivery": "Ignored local .publication/sunset-launch-v1/render; generated media is not committed",
+  "artifact": {
+    "file": "sunset-launch.mp4",
+    "bytes": 11334796,
+    "sha256": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    "duration_seconds": 82,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "pixel_format": "yuv420p",
+    "faststart": true
+  },
+  "content": {
+    "format": "Editorial film using genuine browser stills, gentle camera movement, factual testnet transaction cards, synthetic narration and original procedural ambient chords",
+    "narration": "Kokoro-ONNX0.6.1 pretrained af_heart; no voice cloning; local CPU generation",
+    "captions": "Burned in and matching20-cue SRT",
+    "persistent_testnet_label": true,
+    "operator_control_disclosed": true,
+    "refund_card": "Contract rule only; actual expiry-refund execution not claimed"
+  },
+  "checks": {
+    "checked_at": "2026-11-02T17:16:03.153637+00:00",
+    "status": "passed_objective_media_and_visual_keyframe_checks",
+    "file": "sunset-launch.mp4",
+    "sha256": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    "bytes": 11334796,
+    "duration_seconds": 82.0,
+    "video": {
+      "codec": "h264",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 25,
+      "pixel_format": "yuv420p",
+      "faststart_moov_before_mdat": true
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "integrated_loudness_lufs": -16.4,
+      "true_peak_dbfs": -1.5,
+      "clipping_detected": false,
+      "perceptual_listening_verified": false
+    },
+    "full_file_decode": "passed_no_errors",
+    "black_frame_detection": "none_at_0.08s_threshold",
+    "captions": {
+      "cues": 20,
+      "transcript_exact": true,
+      "maximum_lines": 2,
+      "timing": "Exact synthesis sentence boundaries scaled to pitch-preserving 82s master"
+    },
+    "visual_review": {
+      "contact_sheet": "contact-sheet.jpg",
+      "full_resolution_keyframes": [
+        "opening-review.png",
+        "payout-review.png",
+        "mirror-review.png",
+        "closing-review.png"
+      ],
+      "reviewed": "No visible clipping or overlap; captions and NEAR TESTNET label readable; new steward mirror capture and final URL included"
+    },
+    "source_checks": {
+      "actual_capture_hashes_match_browser_evidence": true,
+      "finalized_chain_summary_matches_main_showcase_evidence": true,
+      "all_provenance_input_hashes_match": true,
+      "private_wallet_or_release_backup_inputs": false
+    },
+    "limits": [
+      "Not a continuous screen recording; edited genuine browser stills, camera moves and editorial transaction summaries.",
+      "No perceptual listening check was possible in the tool environment.",
+      "Live expiry refund is not shown; refund section states a contract rule.",
+      "All testnet demo roles share one operator."
+    ]
+  },
+  "proof_sources": [
+    "testnet-showcase.json",
+    "browser-showcase.json"
+  ],
+  "source": "../media/launch/README.md",
+  "source_copy": [
+    "../media/launch/x-post.txt",
+    "../media/launch/x-thread.txt",
+    "../media/launch/pitch.md"
+  ],
+  "publication": {
+    "posted_on_x": false,
+    "submitted_to_hackathon": false,
+    "human_posts_video": true
+  },
+  "limits": [
+    "Perceptual listening requires playback by the operator; this tool environment cannot hear audio.",
+    "No continuous screen recording claimed; the edit animates genuine still captures.",
+    "Same-host mirrors and operator-controlled accounts do not establish independent hosting or adoption."
+  ]
+}
