@@ -17,3 +17,5 @@ Never commit node_modules, framework/build caches, Rust targets, environment sec
 ## Current testnet operator preparation
 
 The operator supplied `shiftultra.testnet` and reported frontend `https://sunset-lemon.vercel.app`. Read `projects/sunset/docs/TESTNET_SHOWCASE.md` and `projects/sunset/evidence/testnet-preparation.json` before live steps. Proposed contract/reviewer/sponsor subaccounts are not evidence that those accounts exist. The matching prepared release backup and arguments are in ignored `projects/sunset/private/shiftultra-testnet-v1/`; retain them privately. No signed deployment or actual protocol execution is established by preparation alone.
+
+The operator explicitly requested avoiding MyNearWallet after the CLI's default browser import failed. Use the installed CLI's direct private-key/recovery-phrase import in the operator's own terminal, with account-key checking and local keychain storage. Never request those secrets or secret-bearing import transcripts in chat, and do not return to the default browser-wallet flow.

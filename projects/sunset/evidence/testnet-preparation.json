@@ -60,8 +60,8 @@
   "cli": {
     "version": "0.30.1",
     "syntax_source": "official docs and near-cli-rs source",
-    "installed_in_executor": false,
-    "commands_executed": false
+    "installed_in_executor": true,
+    "commands_executed": "version/help only; no signing/import"
   },
   "actual_protocol_execution": false,
   "wallet_signatures_obtained": false,
@@ -74,7 +74,7 @@
     "static_pages": "passed",
     "prepared_package": "passed: public/private exact bytes, all commitment hashes, independent HTML recovery, seven unsigned deposit plans",
     "exported_resource_bytes": "match prepared public files at both locations",
-    "guide_syntax": "16 shell blocks pass Bash and Zsh syntax only; CLI not executed",
+    "guide_syntax": "17 shell blocks pass Bash/Zsh syntax; direct import syntax parsed using CLI --help only",
     "secret_exclusion": "private backup permissions checked; actual prepared release key absent from static export"
   },
   "faucet_status": {
@@ -96,5 +96,12 @@
     "artifact_rebuild_and_two_checkout_reproducibility": "passed",
     "actual_protocol_execution": false,
     "deployment_transaction_submitted": false
+  },
+  "wallet_import": {
+    "browser_flow": "operator reported failure: generated public key not found on account",
+    "operator_rejected_wallet": "MyNearWallet",
+    "replacement": "direct interactive private-key or recovery-phrase import with account-key check and keychain storage",
+    "secret_entered_by_agent": false,
+    "signer_verified": false
   }
 }

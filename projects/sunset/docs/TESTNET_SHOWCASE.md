@@ -12,10 +12,18 @@ Run on a network-enabled machine. The first command below assumes the repository
 cd projects/sunset
 npm install -g near-cli-rs@0.30.1
 near --version
-near account import-account using-web-wallet network-config testnet
+near account import-account using-private-key network-config testnet --check-account-id save-to-keychain
 ```
 
-The [official release](https://github.com/near/near-cli-rs/releases/tag/v0.30.1) is pinned here; [installation/import syntax](https://docs.near.org/tools/cli) was checked against official docs, not executed. Authorize **shiftultra.testnet** in the browser. Keys stay in the local CLI keychain; never paste seed phrases/private keys into chat or commands. New role keys below are generated and saved locally by the CLI.
+The [official release](https://github.com/near/near-cli-rs/releases/tag/v0.30.1) is pinned here. The operator's default browser-wallet import failed to add the newly generated public key, and the operator explicitly requested avoiding MyNearWallet. The direct-import command above is accepted by the locally installed CLI's help/parser; it has not been run with a secret here. Export the testnet account's existing private key from the wallet you actually use, enter it only at the local prompt, and enter account **shiftultra.testnet**. Network and keychain storage are preselected; the CLI checks that the derived public key is already on the account.
+
+If your wallet offers recovery words instead of an account-specific private key, use this alternative in your own terminal and enter the recovery words at its prompt:
+
+```sh
+near account import-account using-seed-phrase network-config testnet --check-account-id save-to-keychain
+```
+
+Use the derivation path belonging to your wallet. If the derived key is not on the account, retain the error and verify the wallet/account/path; do not bypass the check. Keys stay in the local CLI keychain. Never paste secrets, secret-bearing commands or import transcripts into chat. New role keys below are generated and saved locally by the CLI. No browser-wallet import is needed for this route.
 
 Request additional testNEAR through the [browser faucet](https://near-faucet.io/), linked by [NEAR's faucet documentation](https://docs.near.org/getting-started/faucet). Select **NEAR**, enter **shiftultra.testnet**, try **Amount = 5**, then select **Request**. Follow any displayed maximum/cooldown; the live limit and successful funding have not been verified here. Confirm the resulting wallet balance before creating accounts. Starting from the reported 2 NEAR, about 7 NEAR funds 4 for the contract and 0.5 each for reviewer/sponsor, leaving owner funds for storage and fees.
 

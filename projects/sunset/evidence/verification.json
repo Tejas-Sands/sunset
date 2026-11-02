@@ -233,11 +233,12 @@
     "max_capacity_scenario": "five campaigns and 100 accounts with credits arriving during pending withdrawal, transfer failure restoration, refunds and conservation",
     "protocol_gas_verified": false,
     "rpc_dns": "cannot resolve testnet RPC hosts",
-    "near_cli_available": false,
+    "near_cli_available": true,
     "imported_signer_verified": false,
     "outside_sandbox_rpc_check": "rejected by execution policy: sandbox escalation disabled",
     "deployment_transaction_submitted": false,
     "application_tests": 48,
-    "browser_url_validation_aligned": true
+    "browser_url_validation_aligned": true,
+    "wallet_import_status": "Browser route failed; direct local import documented, signer not verified"
   }
 }
