@@ -2,6 +2,8 @@
 
 Operator record: **1 November 2026**, application source `5810ddd`. SUNSET is a bounded **NEAR testnet prototype**. Use free static hosting and faucet-funded testnet accounts for this launch; mainnet funds, paid infrastructure and a custom domain are unnecessary.
 
+**2 November update:** the operator supplied wallet `shiftultra.testnet` and reported the frontend at `https://sunset-lemon.vercel.app`. The prepared 0.1-testNEAR campaign and exact CLI steps are in [TESTNET_SHOWCASE.md](TESTNET_SHOWCASE.md). Subsequent local commits are pushed by the operator. External access failures below describe the earlier assistant-side connection check; they do not establish that the operator's website/repository is unpublished. No actual NEAR deployment or settlement is established yet.
+
 ## What each deployment delivers
 
 | Deliverable | Current position |
@@ -22,7 +24,7 @@ No database, Supabase project, model API key, backend signer or managed release 
 - **Campaign terms:** actual pack, target, future funding deadline, release window, reviewer and final HTTPS manifest location. The included original sample can support a technical testnet demonstration; educator review remains separate.
 - **Execution environment:** a browser and compatible NEAR Sandbox on a machine/runner that permits sockets, plus working testnet RPC access. No real protocol runner is currently supplied by this repository.
 
-### Current external access record
+### Historical assistant access record — 1 November
 
 Vercel Hobby account `rajavaiktitva-8002` has project `sunset` (`prj_ezDpbJ9JXkcv81x8T31spnpVx7i4`) in its default team (`team_EB4GR68XaqT5BFFfZwzPXXb3`). Project creation succeeded; deployment/upload did not. The provider returned a team-grant **403**, and its consent flow was sent to the operator. Complete the provider authorization before retrying. There is no verified published site URL.
 

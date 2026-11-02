@@ -2,7 +2,7 @@
 
 SUNSET pools adult sponsorship for a useful digital resource. The creator receives a capped payment when its committed key is published on time. Missed funding/release conditions allow refunds. Learners can keep a self-contained offline game without a wallet or account.
 
-**Built locally on 1 November 2026:** runnable Next.js application, encrypted learning packs, independent recovery tools and compiled NEAR Wasm contract with standard stewardship NFTs. **Not yet deployed or submission-ready:** browser execution, NEAR Sandbox receipt scenarios and live testnet settlement remain unverified. The interface labels every local financial action as rehearsal. No actual tokens move there.
+**Built locally on 1 November 2026:** runnable Next.js application, encrypted learning packs, independent recovery tools and compiled NEAR Wasm contract with standard stewardship NFTs. The operator reports the published frontend at [sunset-lemon.vercel.app](https://sunset-lemon.vercel.app); its live bytes have not been verified from this restricted executor. **Live NEAR settlement and submission evidence remain incomplete:** browser execution, NEAR Sandbox receipt scenarios and signed testnet settlement still need verification. The interface labels every local financial action as rehearsal. No actual tokens move there.
 
 The [LLM council decision](../../research/2026-11-01-council/README.md) explains why SUNSET was retained, why purchase acceptance was replaced with sponsorship, and which hackathon tracks are defensible. The October architecture below is historical planning, not a list of completed features.
 
@@ -19,6 +19,8 @@ npm run dev
 Open `http://127.0.0.1:3000` for the public landing page, or `http://127.0.0.1:3000/app/` for the interactive workspace. Homepage links open the appropriate resource or workspace view. Existing browser-local packs and backups keep the same storage key. No environment variables, database, model API key or wallet are needed for rehearsal. For a static build, run `npm run build` then `npm start` (uses Python 3's static server for `out/`). Hosted browser state remains local to each visitor and does not form a shared service. The user has now authorized deployment; [the deployment runbook](docs/DEPLOYMENT.md) separates publishing this frontend from completing a live signing dApp.
 
 A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-lantern-trail.html). Its gameplay is self-contained; actual offline browser execution must still be checked on the target machine.
+
+For the operator's `shiftultra.testnet` wallet, the [testnet showcase guide](docs/TESTNET_SHOWCASE.md) provides a 0.1-testNEAR campaign, proposed separate contract/reviewer/sponsor accounts, private local release files, and public encrypted resource locations. The contract has not yet been deployed. Two testNEAR is below the prepared Wasm's approximately 2.66-testNEAR code-storage requirement; top up through the free faucet before following the deployment commands.
 
 ## Landing and workspace
 
@@ -105,7 +107,7 @@ For publication from a network-enabled terminal, run `bash scripts/publish-githu
 
 Primary product targets: **Open Innovation**, **Social Money**, and now **NFTs That Do Something** through the implemented transferable maintenance right. NFT fit remains conditional on the required demonstration evidence and organizer judgment. **Real-World Money** requires actual creator-payment/refund/withdrawal evidence. Agent Economy, Security and Swarms remain conditional future claims; local policy simulations do not establish autonomous onchain authority. Do not select Games, Privacy, DeFi, Memecoins or Investment Thesis for superficial associations. [All thirteen tracks and current rules](../../research/2026-11-01-council/track-verification.md).
 
-Before submission: real browser/mobile/offline QA, protocol Sandbox failure scenarios, actual reviewed testnet deployment and independent-user receipts, educator review, real sponsor feedback, public repository, approved public demo and accurate team/payout details. No publication or submission has occurred.
+Before submission: real browser/mobile/offline QA, protocol Sandbox failure scenarios, actual reviewed testnet deployment and independent-user receipts, educator review, real sponsor feedback, a verified public repository/demo and accurate team/payout details. Repository and frontend publication were reported by the operator; no actual hackathon submission or NEAR settlement is claimed.
 
 ## Original design and research
 

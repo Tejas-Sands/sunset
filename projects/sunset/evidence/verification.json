@@ -131,7 +131,7 @@
     },
     {
       "item": "Public frontend deployment and shared live browser service",
-      "reason": "Vercel Hobby project created; team grant blocks upload. No deployed URL or live wallet signing. Reduced initial product needs no database."
+      "reason": "Operator supplied published frontend URL. Hosted browser behaviour/live bytes remain unverified; wallet signing is not implemented."
     },
     {
       "item": "Independent educator review and sponsor demand",
@@ -153,11 +153,14 @@
     "creator_reviewer": "Distinct IDs enforced; human independence/collusion not proved"
   },
   "publication": {
-    "repository_pushed": false,
-    "site_deployed": false,
+    "repository_pushed": true,
+    "site_deployed": true,
     "social_posted": false,
     "hackathon_submitted": false,
-    "reason": "CLI DNS cannot resolve GitHub, so supplied token validity remains unknown. Connected app uses a different saved identity. Vercel integration/team access and NEAR testnet signers remain pending."
+    "reason": "Operator will push subsequent commits manually. Prepared testnet assets are not yet published; no deployed NEAR contract or signed settlement is claimed.",
+    "repository_pushed_by_agent": false,
+    "site_url": "https://sunset-lemon.vercel.app",
+    "publication_evidence": "Operator reports publication; earlier repository metadata was visible. Remote HEAD/live website bytes not verified from this executor."
   },
   "source_revision": "5810dddbc647a4d8e0bcfcd970c2bc5df473d51f",
   "deployment_excluded_by_user": false,
@@ -212,5 +215,6 @@
     "github_cli_network": "DNS lookup fails for github.com and api.github.com",
     "new_remote_publication": false,
     "vercel_setup": "Persistent GitHub integration documented; no new consent link or deployment"
-  }
+  },
+  "testnet_showcase_preparation": "testnet-preparation.json"
 }

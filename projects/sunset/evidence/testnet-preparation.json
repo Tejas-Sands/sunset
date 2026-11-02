@@ -1,0 +1,80 @@
+{
+  "prepared_at": "2026-11-02T09:27:00.133471+00:00",
+  "source_base": "4f4e69e66886c9d675a4e24ad1f1086bbed9e40c",
+  "status": "prepared_locally_not_deployed",
+  "network": "testnet",
+  "owner": "shiftultra.testnet",
+  "owner_balance": {
+    "amount_near": "2",
+    "evidence": "user reported; not queried by executor"
+  },
+  "proposed_contract": "sunset.shiftultra.testnet",
+  "proposed_reviewer": "reviewer.shiftultra.testnet",
+  "proposed_sponsor": "sponsor.shiftultra.testnet",
+  "accounts_created": false,
+  "independent_humans_verified": false,
+  "reported_frontend": "https://sunset-lemon.vercel.app",
+  "host_verification": "user reported; public web fetch unavailable in executor",
+  "campaign": {
+    "id": "lantern-trail-testnet-v1",
+    "target_near": "0.1",
+    "funding_deadline": "2026-11-10T00:00:00Z",
+    "release_window_hours": 24
+  },
+  "contract": {
+    "bytes": 266190,
+    "sha256": "123bc8c0c1917f7fdcaa82f2e95341744e464bc56949956ce95227f7795024cf",
+    "expected_base58_code_hash": "2EBDJB32FGm8BaukGLVG9wim5ZHk128vEcREfpEAJoYz",
+    "code_collateral_nominal_near": "2.6619",
+    "code_collateral_excludes": "account allowance adjustment, state and transaction fees",
+    "proposed_balance_near": "4",
+    "layout": 2,
+    "fresh_deployment_required": true
+  },
+  "public_files": [
+    {
+      "path": "public/testnet/lantern-trail-v1/manifest.json",
+      "bytes": 356,
+      "sha256": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d"
+    },
+    {
+      "path": "public/testnet/lantern-trail-v1/ciphertext.sunset",
+      "bytes": 1618,
+      "sha256": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38"
+    },
+    {
+      "path": "public/testnet/lantern-trail-mirror-v1/manifest.json",
+      "bytes": 356,
+      "sha256": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d"
+    },
+    {
+      "path": "public/testnet/lantern-trail-mirror-v1/ciphertext.sunset",
+      "bytes": 1618,
+      "sha256": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38"
+    }
+  ],
+  "private_files_ignored": true,
+  "private_backup_permissions": "0600",
+  "independent_file_recovery": "passed locally; real offline browser execution still unverified",
+  "second_location": "byte-identical files on the same frontend host, not independent hosting",
+  "cli": {
+    "version": "0.30.1",
+    "syntax_source": "official docs and near-cli-rs source",
+    "installed_in_executor": false,
+    "commands_executed": false
+  },
+  "actual_protocol_execution": false,
+  "wallet_signatures_obtained": false,
+  "public_files_pending_user_push": true,
+  "runbook": "docs/TESTNET_SHOWCASE.md",
+  "local_checks": {
+    "checked_at": "2026-11-02T09:30:28.896261+00:00",
+    "npm_run_check": "passed: 47 JavaScript tests, types, nine local workflows, source/artifact hashes, ten Wasm host scenarios",
+    "production_build": "passed",
+    "static_pages": "passed",
+    "prepared_package": "passed: public/private exact bytes, all commitment hashes, independent HTML recovery, seven unsigned deposit plans",
+    "exported_resource_bytes": "match prepared public files at both locations",
+    "guide_syntax": "17 shell blocks pass Bash and Zsh syntax only; CLI not executed",
+    "secret_exclusion": "private backup permissions checked; actual prepared release key absent from static export"
+  }
+}
