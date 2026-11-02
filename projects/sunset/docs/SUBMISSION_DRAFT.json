@@ -2,41 +2,82 @@
   "status": "draft_not_submitted",
   "format": "Internal preparation document, not an official API payload",
   "event": "NEAR Hackathon 2026",
-  "title": "SUNSET — Fund a beginning. Keep the commons open.",
+  "title": "SUNSET \u2014 Support once. Share forever.",
   "short_description": "Pool capped sponsorship to release a verified offline learning resource, or claim a refund. Transfer a stewardship NFT to hand over recovery-mirror maintenance without restricting public access or changing who receives the funds.",
   "problem": "Shared resources can remain dependent on their original operator even after funding. Communities need an inspectable release agreement and a way to maintain discovery after hosting changes.",
   "demonstration": [
-    "Play the free sample without an account or wallet.",
-    "Complete capped sponsorship and inspect surplus change.",
-    "Publish a retained key; creator credit and public release occur together.",
-    "Recover the exact pack from independent files and export its standalone game.",
-    "Transfer the maintenance NFT; demonstrate former-owner mirror denial and unchanged public access/payment terms.",
-    "Verify a replacement mirror against the original manifest/ciphertext/key/plaintext commitments.",
-    "Show both funding-expiry and missed-release refunds, plus safe withdrawal state."
+    "Open the verified live Released campaign and inspect the pinned contract/code hash.",
+    "Show finalized 0.06 + 0.04 testNEAR funding, matching release and native 0.1-testNEAR creator payout with completed callback.",
+    "Recover the original and steward-selected mirror against the same commitments; download the standalone game.",
+    "Show real NFT handover, former-owner mirror rejection and new-owner mirror selection.",
+    "Open the actual downloaded file in a fresh browser with browser network offline before load; complete all five questions.",
+    "Label both expiry refunds and protocol failure/max-state scenarios as remaining live evidence; local rehearsal covers those mechanisms only."
   ],
-  "candidate_tracks": ["open", "social", "nfts"],
+  "candidate_tracks": [
+    "open",
+    "social",
+    "nfts"
+  ],
   "conditional_track": "realworld",
-  "track_exclusions": ["defi", "thesis", "business", "privacy", "games", "memecoins", "agents", "swarms", "security"],
-  "evidence_status": "Local application, Rust and compiled-Wasm host checks only; protocol, browser and live settlement evidence remains outstanding.",
+  "track_exclusions": [
+    "defi",
+    "thesis",
+    "business",
+    "privacy",
+    "games",
+    "memecoins",
+    "agents",
+    "swarms",
+    "security"
+  ],
+  "evidence_status": "Reviewed byte-identical testnet deployment; finalized exact funding/release/native creator payout and stewardship handover; actual hosted original/mirror recovery and downloaded game completed 5/5 in cold browser with browser offline enabled before file load. Both live expiry refunds, protocol failure/max-state cases and independent-user/educator evidence remain pending.",
   "differentiation_limits": "Public buyouts, offline education and transferable maintenance authority have prior art. The prototype integrates verifiable release/refund, independent reuse and standard maintenance-token transfer. Demand and educational impact are not validated.",
-  "technical_stack": ["Next.js static export", "Web Crypto AES-GCM/SHA-256", "Rust NEAR host ABI", "NEP-171 core/events", "NEP-177 metadata", "NEP-181 enumeration"],
+  "technical_stack": [
+    "Next.js static export",
+    "Web Crypto AES-GCM/SHA-256",
+    "Rust NEAR host ABI",
+    "NEP-171 core/events",
+    "NEP-177 metadata",
+    "NEP-181 enumeration"
+  ],
   "software_license": "MIT",
   "original_sample_license": "CC0-1.0",
   "human_fields": {
     "team_members": null,
     "contact": null,
-    "public_repository_url": null,
-    "public_demo_url": null,
+    "public_repository_url": "https://github.com/Tejas-Sands/sunset",
+    "public_demo_url": "https://sunset-lemon.vercel.app",
     "public_x_post_url": null,
     "mainnet_prize_payout_account": null
   },
   "submission_gates": [
-    "Verify the final official rules and candidate-track behavior.",
-    "Run real browser/mobile and network-disabled standalone HTML checks.",
-    "Run protocol-appropriate NEAR Sandbox gas/balance/receipt and receiver/callback failure checks.",
-    "Record actual reviewed testnet deployment and independent signer outcomes.",
-    "Obtain original content rights/educator review and adult sponsor feedback.",
-    "Publish real repository/demo with accurate team/payout details and explicit final submission approval."
+    "Recheck final official rules and candidate-track behavior.",
+    "Complete both live expiry refunds with real waiting and canonical withdrawal receipts.",
+    "Run NEAR Sandbox/max-state gas and native/NFT transfer/callback failure scenarios.",
+    "Complete mobile homepage, accessibility and broader cross-device QA.",
+    "Obtain educator/content-rights review, independent operators and adult sponsor feedback.",
+    "Verify public repository and final media; fill accurate team/contact/social-post/mainnet-prize-payout fields and obtain final submission approval."
   ],
-  "submitted": false
+  "submitted": false,
+  "contract": {
+    "network": "testnet",
+    "account_id": "sunset.shiftultra.testnet",
+    "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "campaign_id": "lantern-trail-testnet-v1",
+    "campaign_state": "Released",
+    "explorer_url": "https://explorer.testnet.near.org/accounts/sunset.shiftultra.testnet"
+  },
+  "evidence": {
+    "deployment": "../evidence/testnet-deployment.json",
+    "main_showcase": "../evidence/testnet-showcase.json",
+    "hosted_browser_and_offline": "../evidence/browser-showcase.json"
+  },
+  "repository_verification": {
+    "source": "Anonymous GitHub repository API",
+    "full_name": "Tejas-Sands/sunset",
+    "private": false,
+    "default_branch": "main",
+    "pushed_at": "2026-11-02T11:55:56Z",
+    "evidence_scope": "Public repository verified by coordinator; new showcase documentation/media still await operator push."
+  }
 }

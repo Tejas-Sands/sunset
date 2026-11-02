@@ -1,0 +1,1431 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-02T17:11:55.890234+00:00",
+  "status": "main_release_payout_and_stewardship_verified_on_testnet",
+  "network": "testnet",
+  "rpc_endpoint": "https://rpc.testnet.near.org",
+  "contract_id": "sunset.shiftultra.testnet",
+  "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+  "implementation_commit": "85e0284",
+  "deployment_evidence": "testnet-deployment.json",
+  "campaign_id": "lantern-trail-testnet-v1",
+  "roles": {
+    "owner_creator": "shiftultra.testnet",
+    "reviewer": "reviewer.shiftultra.testnet",
+    "sponsor": "sponsor.shiftultra.testnet",
+    "operator_control": "All role accounts are controlled by one operator; not evidence of independent human review or adoption."
+  },
+  "verified_flows": [
+    "draft creation and bound agreement approval",
+    "0.06+0.04 testNEAR contributions; separate first-account storage deposits",
+    "matching key release and one stewardship NFT minted",
+    "0.1 testNEAR native creator payout; successful actual 15Tgas callback; pending null",
+    "stewardship transfer and mirror reset",
+    "former-owner mirror update rejected onchain",
+    "new owner mirror update accepted; exactly two yocto retained outside escrow",
+    "actual hosted reader and original/mirror commitment recovery",
+    "cold-browser downloaded-game completion with browser offline enabled before file loading"
+  ],
+  "transactions": [
+    {
+      "step": "create-reviewer",
+      "transaction_hash": "A3vANFNy6j8Jn6R9u7obESr3vXXWcYTubRYY1wAsa2tk",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "reviewer.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": ""
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        "CreateAccount",
+        {
+          "Transfer": {
+            "deposit": "500000000000000000000000"
+          }
+        },
+        {
+          "AddKey": {
+            "permission": "FullAccess"
+          }
+        }
+      ],
+      "gas_burnt_total": 8573077937500,
+      "tokens_burnt_total_yocto": "7114989537500000000000",
+      "outcomes": [
+        {
+          "id": "A3vANFNy6j8Jn6R9u7obESr3vXXWcYTubRYY1wAsa2tk",
+          "block_hash": "AwDqH8ZGVMi8347AfzShrXXaiPhTuWWRBhiJCmdckQak",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "rTQXBgqc1SokvZYU4joeRrcttQH2uDp9iVxAQTXBtUH"
+          },
+          "gas_burnt": 824947687500,
+          "tokens_burnt": "82494768750000000000",
+          "receipt_ids": [
+            "rTQXBgqc1SokvZYU4joeRrcttQH2uDp9iVxAQTXBtUH"
+          ],
+          "logs": []
+        },
+        {
+          "id": "rTQXBgqc1SokvZYU4joeRrcttQH2uDp9iVxAQTXBtUH",
+          "block_hash": "2u9UFGzBEEYNERnTaVwVwnxJ6qLV28vbppYKQV27rACr",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 7524947687500,
+          "tokens_burnt": "7032494768750000000000",
+          "receipt_ids": [
+            "B4mocj9HTCuqPCRaWbdwJPs5gE7nHr3G4CHgqz2CX1SN"
+          ],
+          "logs": []
+        },
+        {
+          "id": "B4mocj9HTCuqPCRaWbdwJPs5gE7nHr3G4CHgqz2CX1SN",
+          "block_hash": "HznnNQJWPzUza4jyC724weWmYgvwMJyxH65uAFBDp7Bp",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "create-sponsor",
+      "transaction_hash": "CoUcgxzWgAPEiV9h2weV6AkELh7qYL5hwH9DzLH8ey9s",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sponsor.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": ""
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        "CreateAccount",
+        {
+          "Transfer": {
+            "deposit": "500000000000000000000000"
+          }
+        },
+        {
+          "AddKey": {
+            "permission": "FullAccess"
+          }
+        }
+      ],
+      "gas_burnt_total": 8573077937500,
+      "tokens_burnt_total_yocto": "7114989537500000000000",
+      "outcomes": [
+        {
+          "id": "CoUcgxzWgAPEiV9h2weV6AkELh7qYL5hwH9DzLH8ey9s",
+          "block_hash": "JAkyv1Nya7goxtC5Q1vTNYr9XrFVmMmMN7YCEkKGPVVv",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "HYWS3pme6pPGk2ZHAcDPaJnz2xYuxSWYike62a2CNatL"
+          },
+          "gas_burnt": 824947687500,
+          "tokens_burnt": "82494768750000000000",
+          "receipt_ids": [
+            "HYWS3pme6pPGk2ZHAcDPaJnz2xYuxSWYike62a2CNatL"
+          ],
+          "logs": []
+        },
+        {
+          "id": "HYWS3pme6pPGk2ZHAcDPaJnz2xYuxSWYike62a2CNatL",
+          "block_hash": "5Pqk78iL3oRgCEp5PxyMb5vWhsGRVAmCWntEZ1H8cbBM",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 7524947687500,
+          "tokens_burnt": "7032494768750000000000",
+          "receipt_ids": [
+            "3CnThDkUUsKZ61TbQ4svk2haD6HRxQ3CvpUNL9XweRVw"
+          ],
+          "logs": []
+        },
+        {
+          "id": "3CnThDkUUsKZ61TbQ4svk2haD6HRxQ3CvpUNL9XweRVw",
+          "block_hash": "4zFtsJSh27rainrGktmAmJ1EtWyvFRqxYVv2nSeDo9Gc",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "create-campaign",
+      "transaction_hash": "5ffZw3hFKThQvypwrkUEEpHkdFwviXCT921AJ2y5PSfA",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6Ijg2NDAwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJEcmFmdCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IlRoZSBMYW50ZXJuIFRyYWlsIiwidG90YWxfY29udHJpYnV0ZWQiOiIwIn0="
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "50000000000000000000000",
+            "gas": 100000000000000,
+            "method_name": "create_campaign",
+            "args_json": {
+              "id": "lantern-trail-testnet-v1",
+              "title": "The Lantern Trail",
+              "reviewer": "reviewer.shiftultra.testnet",
+              "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+              "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+              "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+              "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+              "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+              "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+              "target": "100000000000000000000000",
+              "funding_deadline_ns": "1794268800000000000",
+              "release_window_ns": "86400000000000"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2574008608809,
+      "tokens_burnt_total_yocto": "235082604630900000000",
+      "outcomes": [
+        {
+          "id": "5ffZw3hFKThQvypwrkUEEpHkdFwviXCT921AJ2y5PSfA",
+          "block_hash": "ADXAk77mpAEDH46fCimE6LA7YVmXn4B2hcsb151PFTTk",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "EGptw9NH5RQyedg1oHf8UfAhysv4DzoFeMr3qgfhQARL"
+          },
+          "gas_burnt": 345681951135,
+          "tokens_burnt": "34568195113500000000",
+          "receipt_ids": [
+            "EGptw9NH5RQyedg1oHf8UfAhysv4DzoFeMr3qgfhQARL"
+          ],
+          "logs": []
+        },
+        {
+          "id": "EGptw9NH5RQyedg1oHf8UfAhysv4DzoFeMr3qgfhQARL",
+          "block_hash": "6sfkEwbCWPXrw6ZKp9jeo3QdCVGaW6QZTEBNyJKWEtGb",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6Ijg2NDAwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJEcmFmdCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IlRoZSBMYW50ZXJuIFRyYWlsIiwidG90YWxfY29udHJpYnV0ZWQiOiIwIn0="
+          },
+          "gas_burnt": 2005144095174,
+          "tokens_burnt": "200514409517400000000",
+          "receipt_ids": [
+            "2YdNQMwJ187XUM4A2ukX8iKRZrFz5jsjtmoY7jEKSigs"
+          ],
+          "logs": []
+        },
+        {
+          "id": "2YdNQMwJ187XUM4A2ukX8iKRZrFz5jsjtmoY7jEKSigs",
+          "block_hash": "AWomS571hPCaf5Jpt9c8idhRHeCkf7miPmXwqZfY7c9e",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "approve-campaign",
+      "transaction_hash": "FD7itSMqfXzxkD6mTPcmPWTryK3sNtqGnfMzPoTuxcsj",
+      "signer_id": "reviewer.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6Ijg2NDAwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJBY3RpdmUiLCJzdGV3YXJkc2hpcCI6bnVsbCwidGFyZ2V0IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwidGl0bGUiOiJUaGUgTGFudGVybiBUcmFpbCIsInRvdGFsX2NvbnRyaWJ1dGVkIjoiMCJ9"
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "0",
+            "gas": 100000000000000,
+            "method_name": "approve_campaign",
+            "args_json": {
+              "id": "lantern-trail-testnet-v1",
+              "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2456589525762,
+      "tokens_burnt_total_yocto": "223340696326200000000",
+      "outcomes": [
+        {
+          "id": "FD7itSMqfXzxkD6mTPcmPWTryK3sNtqGnfMzPoTuxcsj",
+          "block_hash": "7vnv6gYnDz5Kojxg8tX9JTaBDYAaxtt1HTZRg6cssV7s",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "9x8j2fo5FNdvKHqtFreKC164zEN4XK9SgFxdnrnTSvFp"
+          },
+          "gas_burnt": 314973638675,
+          "tokens_burnt": "31497363867500000000",
+          "receipt_ids": [
+            "9x8j2fo5FNdvKHqtFreKC164zEN4XK9SgFxdnrnTSvFp"
+          ],
+          "logs": []
+        },
+        {
+          "id": "9x8j2fo5FNdvKHqtFreKC164zEN4XK9SgFxdnrnTSvFp",
+          "block_hash": "Fk9HJuxi49ps8fGStWVAwppEGAx7pv1bcmh7xynNh7Hh",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6Ijg2NDAwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJBY3RpdmUiLCJzdGV3YXJkc2hpcCI6bnVsbCwidGFyZ2V0IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwidGl0bGUiOiJUaGUgTGFudGVybiBUcmFpbCIsInRvdGFsX2NvbnRyaWJ1dGVkIjoiMCJ9"
+          },
+          "gas_burnt": 1918433324587,
+          "tokens_burnt": "191843332458700000000",
+          "receipt_ids": [
+            "HsQHMj3k6jYxX36CBoHZFaqAxkHNKsLM2g8KUfB6gcbJ"
+          ],
+          "logs": []
+        },
+        {
+          "id": "HsQHMj3k6jYxX36CBoHZFaqAxkHNKsLM2g8KUfB6gcbJ",
+          "block_hash": "DSzXhYmqyFybaE7XarwpzTg3sw9CHi5xtcP6epLbjCUs",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "contribute-sponsor",
+      "transaction_hash": "HHJndL2H5DRXgWoaAg5nndsNwyMS16bqQBGYVc6nEHd8",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJzcG9uc29yLnNoaWZ0dWx0cmEudGVzdG5ldCIsImNvbnRyaWJ1dGlvbnMiOlt7ImFtb3VudCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJsYW50ZXJuLXRyYWlsLXRlc3RuZXQtdjEiLCJyZWZ1bmRlZCI6ZmFsc2V9XSwiY3JlZGl0IjoiODI4MDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhaWQiOiIwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9LCJjYW1wYWlnbiI6eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiNjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJmdW5kZWRfYXRfbnMiOiIwIiwiZnVuZGluZ19kZWFkbGluZV9ucyI6IjE3OTQyNjg4MDAwMDAwMDAwMDAiLCJpZCI6ImxhbnRlcm4tdHJhaWwtdGVzdG5ldC12MSIsImtleV9jb21taXRtZW50IjoiMzkzNzA3MWEwNzQwMzg0ODZmZGE5MTFiMzYyZDg5NGRmYWExODJjMDY2NDVkOWM5ZjRkZjg3ZWRhNGE2OTdjNSIsImxpY2Vuc2VfaGFzaCI6IjZlMjM3YzU1YjA1ODNjYjdiYmEwNTU2MjMxNmM1NGIwYTEwNWFiYTA0Nzc1MDE3ZTIyNTMyMzdiOWE2NDYxM2MiLCJtYW5pZmVzdF9oYXNoIjoiZjgwOGQ3NDcyZjJlNWQzMTc0OWQwMmI0MmY4OTc3MWUxYmUyNmVhODBjOTg1NDIyZmY4ZTNlZDNlN2U5NjU2ZCIsIm1hbmlmZXN0X3VyaSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9sYW50ZXJuLXRyYWlsLXYxL21hbmlmZXN0Lmpzb24iLCJwbGFpbnRleHRfaGFzaCI6IjE3YTNjMWZmZDI5MWQ4NTU4MTIyNzZjNDhjNmI2MDBkZDE5YTQ3MDZiZmE0OGYwNzk3Y2VlMGFmZmM2YTg3NDMiLCJwdWJsaWNfa2V5X2Jhc2U2NCI6bnVsbCwicmVsZWFzZV9kZWFkbGluZV9ucyI6bnVsbCwicmVsZWFzZV93aW5kb3dfbnMiOiI4NjQwMDAwMDAwMDAwMCIsInJldmlld2VyIjoicmV2aWV3ZXIuc2hpZnR1bHRyYS50ZXN0bmV0Iiwic2NoZW1hX3ZlcnNpb24iOjEsInN0YXRlIjoiQWN0aXZlIiwic3Rld2FyZHNoaXAiOm51bGwsInRhcmdldCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiVGhlIExhbnRlcm4gVHJhaWwiLCJ0b3RhbF9jb250cmlidXRlZCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn19"
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "70000000000000000000000",
+            "gas": 100000000000000,
+            "method_name": "contribute",
+            "args_json": {
+              "id": "lantern-trail-testnet-v1",
+              "amount": "60000000000000000000000"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2643039128934,
+      "tokens_burnt_total_yocto": "241985656643400000000",
+      "outcomes": [
+        {
+          "id": "HHJndL2H5DRXgWoaAg5nndsNwyMS16bqQBGYVc6nEHd8",
+          "block_hash": "43GN1udMngeYKEZPCnJ3f277txDdZkYCfFRBp2BFHiPQ",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "6rzejgR6sYSJ9bTXXXCHQFQrAWQ3sn2zecPSZW3jjYii"
+          },
+          "gas_burnt": 312255666920,
+          "tokens_burnt": "31225566692000000000",
+          "receipt_ids": [
+            "6rzejgR6sYSJ9bTXXXCHQFQrAWQ3sn2zecPSZW3jjYii"
+          ],
+          "logs": []
+        },
+        {
+          "id": "6rzejgR6sYSJ9bTXXXCHQFQrAWQ3sn2zecPSZW3jjYii",
+          "block_hash": "AnwosxK221F4eBE6Qyje6RaV2jWy6aTsBfVG8yrzmim5",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJzcG9uc29yLnNoaWZ0dWx0cmEudGVzdG5ldCIsImNvbnRyaWJ1dGlvbnMiOlt7ImFtb3VudCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJsYW50ZXJuLXRyYWlsLXRlc3RuZXQtdjEiLCJyZWZ1bmRlZCI6ZmFsc2V9XSwiY3JlZGl0IjoiODI4MDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhaWQiOiIwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9LCJjYW1wYWlnbiI6eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiNjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJmdW5kZWRfYXRfbnMiOiIwIiwiZnVuZGluZ19kZWFkbGluZV9ucyI6IjE3OTQyNjg4MDAwMDAwMDAwMDAiLCJpZCI6ImxhbnRlcm4tdHJhaWwtdGVzdG5ldC12MSIsImtleV9jb21taXRtZW50IjoiMzkzNzA3MWEwNzQwMzg0ODZmZGE5MTFiMzYyZDg5NGRmYWExODJjMDY2NDVkOWM5ZjRkZjg3ZWRhNGE2OTdjNSIsImxpY2Vuc2VfaGFzaCI6IjZlMjM3YzU1YjA1ODNjYjdiYmEwNTU2MjMxNmM1NGIwYTEwNWFiYTA0Nzc1MDE3ZTIyNTMyMzdiOWE2NDYxM2MiLCJtYW5pZmVzdF9oYXNoIjoiZjgwOGQ3NDcyZjJlNWQzMTc0OWQwMmI0MmY4OTc3MWUxYmUyNmVhODBjOTg1NDIyZmY4ZTNlZDNlN2U5NjU2ZCIsIm1hbmlmZXN0X3VyaSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9sYW50ZXJuLXRyYWlsLXYxL21hbmlmZXN0Lmpzb24iLCJwbGFpbnRleHRfaGFzaCI6IjE3YTNjMWZmZDI5MWQ4NTU4MTIyNzZjNDhjNmI2MDBkZDE5YTQ3MDZiZmE0OGYwNzk3Y2VlMGFmZmM2YTg3NDMiLCJwdWJsaWNfa2V5X2Jhc2U2NCI6bnVsbCwicmVsZWFzZV9kZWFkbGluZV9ucyI6bnVsbCwicmVsZWFzZV93aW5kb3dfbnMiOiI4NjQwMDAwMDAwMDAwMCIsInJldmlld2VyIjoicmV2aWV3ZXIuc2hpZnR1bHRyYS50ZXN0bmV0Iiwic2NoZW1hX3ZlcnNpb24iOjEsInN0YXRlIjoiQWN0aXZlIiwic3Rld2FyZHNoaXAiOm51bGwsInRhcmdldCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiVGhlIExhbnRlcm4gVHJhaWwiLCJ0b3RhbF9jb250cmlidXRlZCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn19"
+          },
+          "gas_burnt": 2107600899514,
+          "tokens_burnt": "210760089951400000000",
+          "receipt_ids": [
+            "DjX2cdtMp5eWgzEDodcn1YUEEjuky25YShCUF9kz5Ybc"
+          ],
+          "logs": []
+        },
+        {
+          "id": "DjX2cdtMp5eWgzEDodcn1YUEEjuky25YShCUF9kz5Ybc",
+          "block_hash": "9MDNzoRF6sof1c4Bg6EqF5M7UmfZVLpS7S1LfF6TCa3j",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "contribute-reviewer",
+      "transaction_hash": "nyoxYNWPnFiiqNakxnENbNQnDz6ANSe52fx8FvahePD",
+      "signer_id": "reviewer.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfV0sImNyZWRpdCI6IjgyNzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwYWlkIjoiMCIsInBlbmRpbmciOm51bGwsInJlZ2lzdGVyZWQiOnRydWUsInNjaGVtYV92ZXJzaW9uIjoxfSwiY2FtcGFpZ24iOnsiYWdyZWVtZW50X2RpZ2VzdCI6IjA3OTFkZTFlMDY5YTQyYjlkODBiNjI1NWRkNzUwMDljMGE1MWQyMDQyNTJhZWIwODNlNDJmMmU1MTJjYmU5NjkiLCJjaXBoZXJ0ZXh0X2hhc2giOiI0NjU1NDJhMDk4NjFlNTNjOTI0NjM0MDdhNTlmNDFjZWRmNzczZjQxMTk5MzdiYTQxM2E2MzcwMWU3NTQzYzM4IiwiY3JlYXRvciI6InNoaWZ0dWx0cmEudGVzdG5ldCIsImVzY3JvdyI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImZ1bmRlZF9hdF9ucyI6IjE3OTM2Mzg5MTQ4NDIxMzEyNzAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjoiMTc5MzcyNTMxNDg0MjEzMTI3MCIsInJlbGVhc2Vfd2luZG93X25zIjoiODY0MDAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IkZ1bmRlZCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IlRoZSBMYW50ZXJuIFRyYWlsIiwidG90YWxfY29udHJpYnV0ZWQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAifX0="
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "50000000000000000000000",
+            "gas": 100000000000000,
+            "method_name": "contribute",
+            "args_json": {
+              "id": "lantern-trail-testnet-v1",
+              "amount": "40000000000000000000000"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2677862169566,
+      "tokens_burnt_total_yocto": "245467960706600000000",
+      "outcomes": [
+        {
+          "id": "nyoxYNWPnFiiqNakxnENbNQnDz6ANSe52fx8FvahePD",
+          "block_hash": "Bi3UHSe6r2L6HtopwRgNpJ9MuR1qX1mem5x2C9bHb4qX",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "8Fz1uaT6LpdNzZ2cqWud8JUp2opSKZVxs87bM3ruoghv"
+          },
+          "gas_burnt": 312255666920,
+          "tokens_burnt": "31225566692000000000",
+          "receipt_ids": [
+            "8Fz1uaT6LpdNzZ2cqWud8JUp2opSKZVxs87bM3ruoghv"
+          ],
+          "logs": []
+        },
+        {
+          "id": "8Fz1uaT6LpdNzZ2cqWud8JUp2opSKZVxs87bM3ruoghv",
+          "block_hash": "EhmgGQ2KnUcafDiXcsZWxCWAdZpw6AE9zeRG3MSh3ofd",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfV0sImNyZWRpdCI6IjgyNzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwYWlkIjoiMCIsInBlbmRpbmciOm51bGwsInJlZ2lzdGVyZWQiOnRydWUsInNjaGVtYV92ZXJzaW9uIjoxfSwiY2FtcGFpZ24iOnsiYWdyZWVtZW50X2RpZ2VzdCI6IjA3OTFkZTFlMDY5YTQyYjlkODBiNjI1NWRkNzUwMDljMGE1MWQyMDQyNTJhZWIwODNlNDJmMmU1MTJjYmU5NjkiLCJjaXBoZXJ0ZXh0X2hhc2giOiI0NjU1NDJhMDk4NjFlNTNjOTI0NjM0MDdhNTlmNDFjZWRmNzczZjQxMTk5MzdiYTQxM2E2MzcwMWU3NTQzYzM4IiwiY3JlYXRvciI6InNoaWZ0dWx0cmEudGVzdG5ldCIsImVzY3JvdyI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImZ1bmRlZF9hdF9ucyI6IjE3OTM2Mzg5MTQ4NDIxMzEyNzAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjoiMTc5MzcyNTMxNDg0MjEzMTI3MCIsInJlbGVhc2Vfd2luZG93X25zIjoiODY0MDAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IkZ1bmRlZCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IlRoZSBMYW50ZXJuIFRyYWlsIiwidG90YWxfY29udHJpYnV0ZWQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAifX0="
+          },
+          "gas_burnt": 2142423940146,
+          "tokens_burnt": "214242394014600000000",
+          "receipt_ids": [
+            "AXXgqWJQzJw8vrbDTQrfbgfZis6uKtibZi1Z7fbNrzkx"
+          ],
+          "logs": []
+        },
+        {
+          "id": "AXXgqWJQzJw8vrbDTQrfbgfZis6uKtibZi1Z7fbNrzkx",
+          "block_hash": "BZUvbiwpmP2nyVdkR6CK1ibSzh8oCPeMmLhPw3QywJHk",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "publish-release",
+      "transaction_hash": "7Z2kZEcTCeHnVC4P59najdsHfZXKNVEn3zumCUAgPUxd",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjE3OTM2Mzg5MTQ4NDIxMzEyNzAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0Ijoic2JYVlpLT0dSVUJ2TktEZ0lVMzB2Wml6ajY3RnFnRStrcHlzZi8xVHorOD0iLCJyZWxlYXNlX2RlYWRsaW5lX25zIjoiMTc5MzcyNTMxNDg0MjEzMTI3MCIsInJlbGVhc2Vfd2luZG93X25zIjoiODY0MDAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IlJlbGVhc2VkIiwic3Rld2FyZHNoaXAiOnsibWlycm9yX3VyaSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9sYW50ZXJuLXRyYWlsLXYxL21hbmlmZXN0Lmpzb24iLCJvd25lcl9pZCI6InNoaWZ0dWx0cmEudGVzdG5ldCIsInRva2VuX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIn0sInRhcmdldCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiVGhlIExhbnRlcm4gVHJhaWwiLCJ0b3RhbF9jb250cmlidXRlZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9"
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "0",
+            "gas": 100000000000000,
+            "method_name": "publish_release",
+            "args_json": {
+              "id": "lantern-trail-testnet-v1",
+              "key_disclosed_onchain": true
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2649905145105,
+      "tokens_burnt_total_yocto": "242672258260500000000",
+      "outcomes": [
+        {
+          "id": "7Z2kZEcTCeHnVC4P59najdsHfZXKNVEn3zumCUAgPUxd",
+          "block_hash": "2p4z4zoqsgsJveBkcwMo9HAxTC6DCMUAn3GE9pe67PWH",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "6wfGaqkKSAt8qCZYNwzi77kfaBuUn2RnMoy9QnG4iuYa"
+          },
+          "gas_burnt": 313209341220,
+          "tokens_burnt": "31320934122000000000",
+          "receipt_ids": [
+            "6wfGaqkKSAt8qCZYNwzi77kfaBuUn2RnMoy9QnG4iuYa"
+          ],
+          "logs": []
+        },
+        {
+          "id": "6wfGaqkKSAt8qCZYNwzi77kfaBuUn2RnMoy9QnG4iuYa",
+          "block_hash": "FBrHq1FTtcw4HJkWCcB8xb7s9EatdvR9coS31rird9Yz",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OSIsImNpcGhlcnRleHRfaGFzaCI6IjQ2NTU0MmEwOTg2MWU1M2M5MjQ2MzQwN2E1OWY0MWNlZGY3NzNmNDExOTkzN2JhNDEzYTYzNzAxZTc1NDNjMzgiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjE3OTM2Mzg5MTQ4NDIxMzEyNzAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5NDI2ODgwMDAwMDAwMDAwMCIsImlkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwia2V5X2NvbW1pdG1lbnQiOiIzOTM3MDcxYTA3NDAzODQ4NmZkYTkxMWIzNjJkODk0ZGZhYTE4MmMwNjY0NWQ5YzlmNGRmODdlZGE0YTY5N2M1IiwibGljZW5zZV9oYXNoIjoiNmUyMzdjNTViMDU4M2NiN2JiYTA1NTYyMzE2YzU0YjBhMTA1YWJhMDQ3NzUwMTdlMjI1MzIzN2I5YTY0NjEzYyIsIm1hbmlmZXN0X2hhc2giOiJmODA4ZDc0NzJmMmU1ZDMxNzQ5ZDAyYjQyZjg5NzcxZTFiZTI2ZWE4MGM5ODU0MjJmZjhlM2VkM2U3ZTk2NTZkIiwibWFuaWZlc3RfdXJpIjoiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTdhM2MxZmZkMjkxZDg1NTgxMjI3NmM0OGM2YjYwMGRkMTlhNDcwNmJmYTQ4ZjA3OTdjZWUwYWZmYzZhODc0MyIsInB1YmxpY19rZXlfYmFzZTY0Ijoic2JYVlpLT0dSVUJ2TktEZ0lVMzB2Wml6ajY3RnFnRStrcHlzZi8xVHorOD0iLCJyZWxlYXNlX2RlYWRsaW5lX25zIjoiMTc5MzcyNTMxNDg0MjEzMTI3MCIsInJlbGVhc2Vfd2luZG93X25zIjoiODY0MDAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IlJlbGVhc2VkIiwic3Rld2FyZHNoaXAiOnsibWlycm9yX3VyaSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9sYW50ZXJuLXRyYWlsLXYxL21hbmlmZXN0Lmpzb24iLCJvd25lcl9pZCI6InNoaWZ0dWx0cmEudGVzdG5ldCIsInRva2VuX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIn0sInRhcmdldCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiVGhlIExhbnRlcm4gVHJhaWwiLCJ0b3RhbF9jb250cmlidXRlZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9"
+          },
+          "gas_burnt": 2113513241385,
+          "tokens_burnt": "211351324138500000000",
+          "receipt_ids": [
+            "C87cCMS517Qxdnm7rJ4B9EVUADUrmce32osVotmnAXwQ"
+          ],
+          "logs": [
+            "EVENT_JSON:{\"data\":[{\"owner_id\":\"shiftultra.testnet\",\"token_ids\":[\"lantern-trail-testnet-v1\"]}],\"event\":\"nft_mint\",\"standard\":\"nep171\",\"version\":\"1.2.0\"}"
+          ]
+        },
+        {
+          "id": "C87cCMS517Qxdnm7rJ4B9EVUADUrmce32osVotmnAXwQ",
+          "block_hash": "HGmVEpJndkAvTq7MAW3FD63xmBYtzcaEefKv3A6U1Gzw",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "creator-withdrawal",
+      "transaction_hash": "4tUbpdnkMV52ET6iLMosYVeRwfipyTMS3wQBDFRovcL4",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJhY2NvdW50X2lkIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiY29udHJpYnV0aW9ucyI6W10sImNyZWRpdCI6IjM3NjcwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBlbmRpbmciOm51bGwsInJlZ2lzdGVyZWQiOnRydWUsInNjaGVtYV92ZXJzaW9uIjoxfQ=="
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "0",
+            "gas": 100000000000000,
+            "method_name": "withdraw",
+            "args_json": {
+              "amount": "100000000000000000000000"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 5132768742700,
+      "tokens_burnt_total_yocto": "446322105520000000000",
+      "outcomes": [
+        {
+          "id": "4tUbpdnkMV52ET6iLMosYVeRwfipyTMS3wQBDFRovcL4",
+          "block_hash": "EmyNJa1ZfQLwo98JTmW2bB8snDXggJje5W844Z6dZU1Z",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "ZyfkGJHJaXCtGo7afc8C81WrAxbShbeDPobCTiqT439"
+          },
+          "gas_burnt": 310491369465,
+          "tokens_burnt": "31049136946500000000",
+          "receipt_ids": [
+            "ZyfkGJHJaXCtGo7afc8C81WrAxbShbeDPobCTiqT439"
+          ],
+          "logs": []
+        },
+        {
+          "id": "ZyfkGJHJaXCtGo7afc8C81WrAxbShbeDPobCTiqT439",
+          "block_hash": "F8bvWxD8b4iZSWC9biqGg8EYP3UALqL8p2NkoUrovUhK",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "2B3uosXs4HYWrcW65StGbBfCtwmjbrVBSgMhBQJyTVxw"
+          },
+          "gas_burnt": 2282474341337,
+          "tokens_burnt": "228247434133700000000",
+          "receipt_ids": [
+            "BmahZn4hsZSkwGRNRRYeF7W2og8vmAvoWC7cuX2xa9c2",
+            "2B3uosXs4HYWrcW65StGbBfCtwmjbrVBSgMhBQJyTVxw",
+            "AM6W3wBLYTevdG1SG3q3K1s122RTosJF5FMHRoyoExfP"
+          ],
+          "logs": []
+        },
+        {
+          "id": "BmahZn4hsZSkwGRNRRYeF7W2og8vmAvoWC7cuX2xa9c2",
+          "block_hash": "2shgf3QtrA2mp84MNU3jYDsBLVaqAbpSdp3bAkv7715h",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "22318256250000000000",
+          "receipt_ids": [
+            "BLpmD4hfy9UA3UN6PPA9fu7vN5BCTJVbnPDiYjFLtthL"
+          ],
+          "logs": []
+        },
+        {
+          "id": "BLpmD4hfy9UA3UN6PPA9fu7vN5BCTJVbnPDiYjFLtthL",
+          "block_hash": "B9bijaamUi8F4va9ua4eEF42zKkFXducT5YY7aeo7UqV",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        },
+        {
+          "id": "2B3uosXs4HYWrcW65StGbBfCtwmjbrVBSgMhBQJyTVxw",
+          "block_hash": "B9bijaamUi8F4va9ua4eEF42zKkFXducT5YY7aeo7UqV",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiY29udHJpYnV0aW9ucyI6W10sImNyZWRpdCI6IjM3NjcwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBlbmRpbmciOm51bGwsInJlZ2lzdGVyZWQiOnRydWUsInNjaGVtYV92ZXJzaW9uIjoxfQ=="
+          },
+          "gas_burnt": 1647072781898,
+          "tokens_burnt": "164707278189800000000",
+          "receipt_ids": [
+            "CKZaL21huggWjgzGxFGgfmChjVXtg67xEzd3JrppY1rq"
+          ],
+          "logs": []
+        },
+        {
+          "id": "CKZaL21huggWjgzGxFGgfmChjVXtg67xEzd3JrppY1rq",
+          "block_hash": "HcLih5oH2mW2SaPR3SdH9kyBY4x1g667J9378WiXXN6C",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        },
+        {
+          "id": "AM6W3wBLYTevdG1SG3q3K1s122RTosJF5FMHRoyoExfP",
+          "block_hash": "2shgf3QtrA2mp84MNU3jYDsBLVaqAbpSdp3bAkv7715h",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "stewardship-transfer",
+      "transaction_hash": "6GL3kPGnE9NyiMQxsgJWfZt1wVS5k49yPdWNT5kVADTp",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "bnVsbA=="
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "1",
+            "gas": 100000000000000,
+            "method_name": "nft_transfer",
+            "args_json": {
+              "receiver_id": "reviewer.shiftultra.testnet",
+              "token_id": "lantern-trail-testnet-v1"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2360763681102,
+      "tokens_burnt_total_yocto": "213758111860200000000",
+      "outcomes": [
+        {
+          "id": "6GL3kPGnE9NyiMQxsgJWfZt1wVS5k49yPdWNT5kVADTp",
+          "block_hash": "AfcuuPy4ogoWoMcyQ7B5nroTxP9Z7SCf46h14ZZKJ2zX",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "8CqgRCVRAGNNfNXCrCuBF7UmwHMRbpek95nX4mZKZQLN"
+          },
+          "gas_burnt": 313066290075,
+          "tokens_burnt": "31306629007500000000",
+          "receipt_ids": [
+            "8CqgRCVRAGNNfNXCrCuBF7UmwHMRbpek95nX4mZKZQLN"
+          ],
+          "logs": []
+        },
+        {
+          "id": "8CqgRCVRAGNNfNXCrCuBF7UmwHMRbpek95nX4mZKZQLN",
+          "block_hash": "8Md31CQcueX1eTcGoohD9KJLKxxoBvfD38aJLzteVTTU",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "bnVsbA=="
+          },
+          "gas_burnt": 1824514828527,
+          "tokens_burnt": "182451482852700000000",
+          "receipt_ids": [
+            "GC2S27eLGg38qLvt8YdngE8ufkvxDvUxvMLAWQgrhrub"
+          ],
+          "logs": [
+            "EVENT_JSON:{\"data\":[{\"new_owner_id\":\"reviewer.shiftultra.testnet\",\"old_owner_id\":\"shiftultra.testnet\",\"token_ids\":[\"lantern-trail-testnet-v1\"]}],\"event\":\"nft_transfer\",\"standard\":\"nep171\",\"version\":\"1.2.0\"}",
+            "EVENT_JSON:{\"data\":[{\"token_ids\":[\"lantern-trail-testnet-v1\"]}],\"event\":\"nft_metadata_update\",\"standard\":\"nep171\",\"version\":\"1.2.0\"}"
+          ]
+        },
+        {
+          "id": "GC2S27eLGg38qLvt8YdngE8ufkvxDvUxvMLAWQgrhrub",
+          "block_hash": "3c7sSMn8rT4Me7FaWCSGbVQmCH5WbjehYPA1EaTnzQXD",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "former-steward-rejected",
+      "transaction_hash": "5oypVSQ8xp6UDgmzB4EyfrFjdDE2SoVYq8ovhnyXfsMn",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "Failure": {
+          "ActionError": {
+            "index": 0,
+            "kind": {
+              "FunctionCallError": {
+                "ExecutionError": "Smart contract panicked: only token owner may update mirror"
+              }
+            }
+          }
+        }
+      },
+      "intentional_authority_failure": true,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "1",
+            "gas": 100000000000000,
+            "method_name": "set_mirror",
+            "args_json": {
+              "token_id": "lantern-trail-testnet-v1",
+              "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2143793179497,
+      "tokens_burnt_total_yocto": "169742805449700000000",
+      "outcomes": [
+        {
+          "id": "5oypVSQ8xp6UDgmzB4EyfrFjdDE2SoVYq8ovhnyXfsMn",
+          "block_hash": "CVEKFc77Qo4CvQNn2CFkZvnoG4YbkBNP8A2ZmTTbL978",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "FJ2C9TdbXfRuCHiqxJvwQXJT5zcGYm1koWEKbQApaYMF"
+          },
+          "gas_burnt": 315307424680,
+          "tokens_burnt": "31530742468000000000",
+          "receipt_ids": [
+            "FJ2C9TdbXfRuCHiqxJvwQXJT5zcGYm1koWEKbQApaYMF"
+          ],
+          "logs": []
+        },
+        {
+          "id": "FJ2C9TdbXfRuCHiqxJvwQXJT5zcGYm1koWEKbQApaYMF",
+          "block_hash": "CjyTrRisXaoedSX9LwaXMZRnqWUtQaVEjcaN2U7Ws8e1",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "Failure": {
+              "ActionError": {
+                "index": 0,
+                "kind": {
+                  "FunctionCallError": {
+                    "ExecutionError": "Smart contract panicked: only token owner may update mirror"
+                  }
+                }
+              }
+            }
+          },
+          "gas_burnt": 1382120629817,
+          "tokens_burnt": "138212062981700000000",
+          "receipt_ids": [
+            "BBoB4V98CMh8GeUKRDX7BShUFGp6JRCWMJdL1McPuvAj",
+            "4JkAEzjeGRrjXYvjJtDDYxKBkufBfvtG55UYnZRGzrth"
+          ],
+          "logs": []
+        },
+        {
+          "id": "BBoB4V98CMh8GeUKRDX7BShUFGp6JRCWMJdL1McPuvAj",
+          "block_hash": "6miEWCCKtaWsjR4KKzCR3Kw8B62VbEA6xsT93unGbdW3",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        },
+        {
+          "id": "4JkAEzjeGRrjXYvjJtDDYxKBkufBfvtG55UYnZRGzrth",
+          "block_hash": "6miEWCCKtaWsjR4KKzCR3Kw8B62VbEA6xsT93unGbdW3",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "step": "new-steward-mirror",
+      "transaction_hash": "Emb7kB4VCUNYa2CaiYb512nJCedofr5GQCEzr3pEepim",
+      "signer_id": "reviewer.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJtZXRhZGF0YSI6eyJjb3BpZXMiOjEsImRlc2NyaXB0aW9uIjoiVHJhbnNmZXJhYmxlIGF1dGhvcml0eSB0byBjaG9vc2UgYSBkaXNjb3ZlcnkgbWlycm9yIGZvciB0aGlzIGNvbW1pdHRlZCBwdWJsaWMgcmVsZWFzZS4gTm8gZXhjbHVzaXZpdHksIGNvcHlyaWdodCwgZXNjcm93LCByZWZ1bmQsIHBheW1lbnQgb3IgbGljZW5zaW5nIGF1dGhvcml0eS4gRXZlcnkgb3duZXJzaGlwIGNoYW5nZSByZXNldHMgdGhlIG1pcnJvciB0byB0aGUgb3JpZ2luYWwgbWFuaWZlc3QgVVJJLiIsImV4cGlyZXNfYXQiOm51bGwsImV4dHJhIjoie1wiYWdyZWVtZW50X2RpZ2VzdFwiOlwiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OVwiLFwibWFuaWZlc3RfaGFzaFwiOlwiZjgwOGQ3NDcyZjJlNWQzMTc0OWQwMmI0MmY4OTc3MWUxYmUyNmVhODBjOTg1NDIyZmY4ZTNlZDNlN2U5NjU2ZFwiLFwibWlycm9yX3VyaVwiOlwiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtbWlycm9yLXYxL21hbmlmZXN0Lmpzb25cIixcIm9yaWdpbmFsX21hbmlmZXN0X3VyaVwiOlwiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvblwiLFwicmlnaHRcIjpcInB1YmxpYy1yZWxlYXNlLW1pcnJvci1zdGV3YXJkc2hpcFwifSIsImlzc3VlZF9hdCI6MTc5MzYzODkyOTQ1NCwibWVkaWEiOm51bGwsIm1lZGlhX2hhc2giOm51bGwsInJlZmVyZW5jZSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9sYW50ZXJuLXRyYWlsLXYxL21hbmlmZXN0Lmpzb24iLCJyZWZlcmVuY2VfaGFzaCI6IitBalhSeTh1WFRGMG5RSzBMNGwzSGh2aWJxZ01tRlFpLzQ0KzArZnBaVzA9Iiwic3RhcnRzX2F0IjpudWxsLCJ0aXRsZSI6IlRoZSBMYW50ZXJuIFRyYWlsIOKAlCBzdGV3YXJkc2hpcCIsInVwZGF0ZWRfYXQiOjE3OTM2MzkyOTU5OTB9LCJvd25lcl9pZCI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInRva2VuX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIn0="
+      },
+      "intentional_authority_failure": false,
+      "actions": [
+        {
+          "FunctionCall": {
+            "deposit": "1",
+            "gas": 100000000000000,
+            "method_name": "set_mirror",
+            "args_json": {
+              "token_id": "lantern-trail-testnet-v1",
+              "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 2474248486857,
+      "tokens_burnt_total_yocto": "225106592435700000000",
+      "outcomes": [
+        {
+          "id": "Emb7kB4VCUNYa2CaiYb512nJCedofr5GQCEzr3pEepim",
+          "block_hash": "7wSu9c9EtraWDijU2RU4ezz7zaDWemYVixUwCTyyhrWX",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "C8Eg9DUwEDVLDW8mU8qfhezE3fwnhsKCTXyYiLdCNo4v"
+          },
+          "gas_burnt": 315307424680,
+          "tokens_burnt": "31530742468000000000",
+          "receipt_ids": [
+            "C8Eg9DUwEDVLDW8mU8qfhezE3fwnhsKCTXyYiLdCNo4v"
+          ],
+          "logs": []
+        },
+        {
+          "id": "C8Eg9DUwEDVLDW8mU8qfhezE3fwnhsKCTXyYiLdCNo4v",
+          "block_hash": "E2K1pN2Ai13wMFS27ztgmyKL4zuGeo5dKRth5vHrPyRW",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJtZXRhZGF0YSI6eyJjb3BpZXMiOjEsImRlc2NyaXB0aW9uIjoiVHJhbnNmZXJhYmxlIGF1dGhvcml0eSB0byBjaG9vc2UgYSBkaXNjb3ZlcnkgbWlycm9yIGZvciB0aGlzIGNvbW1pdHRlZCBwdWJsaWMgcmVsZWFzZS4gTm8gZXhjbHVzaXZpdHksIGNvcHlyaWdodCwgZXNjcm93LCByZWZ1bmQsIHBheW1lbnQgb3IgbGljZW5zaW5nIGF1dGhvcml0eS4gRXZlcnkgb3duZXJzaGlwIGNoYW5nZSByZXNldHMgdGhlIG1pcnJvciB0byB0aGUgb3JpZ2luYWwgbWFuaWZlc3QgVVJJLiIsImV4cGlyZXNfYXQiOm51bGwsImV4dHJhIjoie1wiYWdyZWVtZW50X2RpZ2VzdFwiOlwiMDc5MWRlMWUwNjlhNDJiOWQ4MGI2MjU1ZGQ3NTAwOWMwYTUxZDIwNDI1MmFlYjA4M2U0MmYyZTUxMmNiZTk2OVwiLFwibWFuaWZlc3RfaGFzaFwiOlwiZjgwOGQ3NDcyZjJlNWQzMTc0OWQwMmI0MmY4OTc3MWUxYmUyNmVhODBjOTg1NDIyZmY4ZTNlZDNlN2U5NjU2ZFwiLFwibWlycm9yX3VyaVwiOlwiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtbWlycm9yLXYxL21hbmlmZXN0Lmpzb25cIixcIm9yaWdpbmFsX21hbmlmZXN0X3VyaVwiOlwiaHR0cHM6Ly9zdW5zZXQtbGVtb24udmVyY2VsLmFwcC90ZXN0bmV0L2xhbnRlcm4tdHJhaWwtdjEvbWFuaWZlc3QuanNvblwiLFwicmlnaHRcIjpcInB1YmxpYy1yZWxlYXNlLW1pcnJvci1zdGV3YXJkc2hpcFwifSIsImlzc3VlZF9hdCI6MTc5MzYzODkyOTQ1NCwibWVkaWEiOm51bGwsIm1lZGlhX2hhc2giOm51bGwsInJlZmVyZW5jZSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9sYW50ZXJuLXRyYWlsLXYxL21hbmlmZXN0Lmpzb24iLCJyZWZlcmVuY2VfaGFzaCI6IitBalhSeTh1WFRGMG5RSzBMNGwzSGh2aWJxZ01tRlFpLzQ0KzArZnBaVzA9Iiwic3RhcnRzX2F0IjpudWxsLCJ0aXRsZSI6IlRoZSBMYW50ZXJuIFRyYWlsIOKAlCBzdGV3YXJkc2hpcCIsInVwZGF0ZWRfYXQiOjE3OTM2MzkyOTU5OTB9LCJvd25lcl9pZCI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInRva2VuX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIn0="
+          },
+          "gas_burnt": 1935758499677,
+          "tokens_burnt": "193575849967700000000",
+          "receipt_ids": [
+            "BgeHeNs4Y7kkhpK7QVu1zGJWwQu8Zwxk6kjCmH8Ed91C"
+          ],
+          "logs": [
+            "EVENT_JSON:{\"data\":[{\"token_ids\":[\"lantern-trail-testnet-v1\"]}],\"event\":\"nft_metadata_update\",\"standard\":\"nep171\",\"version\":\"1.2.0\"}"
+          ]
+        },
+        {
+          "id": "BgeHeNs4Y7kkhpK7QVu1zGJWwQu8Zwxk6kjCmH8Ed91C",
+          "block_hash": "7T4EDkFARF1vLVvef5i2KLUMFdSzHEVmKicTGYr8cTsd",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    }
+  ],
+  "state_snapshots": [
+    {
+      "label": "before-approval",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "ADLFmaiB1AP8xpCr2k5WiWWTo7nuy2DPU8LnyTFBDyFV",
+      "block_height": 275927097,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Draft",
+        "stewardship": null,
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "0"
+      }
+    },
+    {
+      "label": "approved",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "BqY5MycA6U5Yip8wEiU4X9vgejNxQ5kbpRqe6xxKrsX7",
+      "block_height": 275927122,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Active",
+        "stewardship": null,
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "0"
+      }
+    },
+    {
+      "label": "sponsor-before-contribution",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "F6N3aAohtwN5eEuD1r9N1RR3NWMrvra5RoBowt84ahoP",
+      "block_height": 275927129,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [],
+        "credit": "0",
+        "paid": "0",
+        "pending": null,
+        "registered": false,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "sponsor-contributed",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "7ehxJshMwqHzZ7dV8by7a3RgV26CAyJtjmRUb6RRY9nt",
+      "block_height": 275927153,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "60000000000000000000000",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Active",
+        "stewardship": null,
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "60000000000000000000000"
+      }
+    },
+    {
+      "label": "reviewer-before-contribution",
+      "method": "get_account",
+      "args": {
+        "account_id": "reviewer.shiftultra.testnet"
+      },
+      "block_hash": "3yyFxQd1NR8sdZC7vvrJLU87G2bAyh8afPZwFCygs1y5",
+      "block_height": 275927161,
+      "value": {
+        "account_id": "reviewer.shiftultra.testnet",
+        "contributions": [],
+        "credit": "0",
+        "paid": "0",
+        "pending": null,
+        "registered": false,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "reviewer-contributed",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "9Vnm3JYYkR5V8MAFnwywWo62os5zxKphzrs1oFprmDDF",
+      "block_height": 275927188,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "100000000000000000000000",
+        "funded_at_ns": "1793638914842131270",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": null,
+        "release_deadline_ns": "1793725314842131270",
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Funded",
+        "stewardship": null,
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "100000000000000000000000"
+      }
+    },
+    {
+      "label": "released",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "CuGcGAHjiSjnyN4vagVxu9CEPdtxpZ82xkMwCbxhaY46",
+      "block_height": 275927213,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "1793638914842131270",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+        "release_deadline_ns": "1793725314842131270",
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Released",
+        "stewardship": {
+          "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+          "owner_id": "shiftultra.testnet",
+          "token_id": "lantern-trail-testnet-v1"
+        },
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "100000000000000000000000"
+      }
+    },
+    {
+      "label": "creator-before-withdrawal",
+      "method": "get_account",
+      "args": {
+        "account_id": "shiftultra.testnet"
+      },
+      "block_hash": "CAh9HPkivjhwMSWo7R8Sj7Gj4B4Xn2E9oGhxkVEPmLsg",
+      "block_height": 275927221,
+      "value": {
+        "account_id": "shiftultra.testnet",
+        "contributions": [],
+        "credit": "137670000000000000000000",
+        "paid": "0",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "creator-after-withdrawal",
+      "method": "get_account",
+      "args": {
+        "account_id": "shiftultra.testnet"
+      },
+      "block_hash": "3DoBRPgSN3TfDV8CG7i7ro71GG9QDWGZ41jA7QEiW45G",
+      "block_height": 275927247,
+      "value": {
+        "account_id": "shiftultra.testnet",
+        "contributions": [],
+        "credit": "37670000000000000000000",
+        "paid": "100000000000000000000000",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "steward-before-transfer",
+      "method": "nft_token",
+      "args": {
+        "token_id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "8E3aGVHRQRoBhSrKrUGy7ATr1r1pbG4LqVZfsDniyWJ2",
+      "block_height": 275927362,
+      "value": {
+        "metadata": {
+          "copies": 1,
+          "description": "Transferable authority to choose a discovery mirror for this committed public release. No exclusivity, copyright, escrow, refund, payment or licensing authority. Every ownership change resets the mirror to the original manifest URI.",
+          "expires_at": null,
+          "extra": "{\"agreement_digest\":\"0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969\",\"manifest_hash\":\"f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d\",\"mirror_uri\":\"https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json\",\"original_manifest_uri\":\"https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json\",\"right\":\"public-release-mirror-stewardship\"}",
+          "issued_at": 1793638929454,
+          "media": null,
+          "media_hash": null,
+          "reference": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+          "reference_hash": "+AjXRy8uXTF0nQK0L4l3HhvibqgMmFQi/44+0+fpZW0=",
+          "starts_at": null,
+          "title": "The Lantern Trail \u2014 stewardship",
+          "updated_at": 1793638929454
+        },
+        "owner_id": "shiftultra.testnet",
+        "token_id": "lantern-trail-testnet-v1"
+      }
+    },
+    {
+      "label": "steward-after-transfer",
+      "method": "nft_token",
+      "args": {
+        "token_id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "BvGWgToeJ1pJdgceMPymRPfLDQQ3ecJGWerYVGMUKXY2",
+      "block_height": 275927385,
+      "value": {
+        "metadata": {
+          "copies": 1,
+          "description": "Transferable authority to choose a discovery mirror for this committed public release. No exclusivity, copyright, escrow, refund, payment or licensing authority. Every ownership change resets the mirror to the original manifest URI.",
+          "expires_at": null,
+          "extra": "{\"agreement_digest\":\"0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969\",\"manifest_hash\":\"f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d\",\"mirror_uri\":\"https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json\",\"original_manifest_uri\":\"https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json\",\"right\":\"public-release-mirror-stewardship\"}",
+          "issued_at": 1793638929454,
+          "media": null,
+          "media_hash": null,
+          "reference": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+          "reference_hash": "+AjXRy8uXTF0nQK0L4l3HhvibqgMmFQi/44+0+fpZW0=",
+          "starts_at": null,
+          "title": "The Lantern Trail \u2014 stewardship",
+          "updated_at": 1793639031818
+        },
+        "owner_id": "reviewer.shiftultra.testnet",
+        "token_id": "lantern-trail-testnet-v1"
+      }
+    },
+    {
+      "label": "campaign-after-steward-transfer",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "JAZRVCghQsngLA3QB9Mxeci1S8eBCtxNYanmsny1DD39",
+      "block_height": 275927391,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "1793638914842131270",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+        "release_deadline_ns": "1793725314842131270",
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Released",
+        "stewardship": {
+          "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+          "owner_id": "reviewer.shiftultra.testnet",
+          "token_id": "lantern-trail-testnet-v1"
+        },
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "100000000000000000000000"
+      }
+    },
+    {
+      "label": "after-former-steward-rejection",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "HfumFnCw1B1Vrkef84YKtee28GjEkwCRSPcMCKa4V1Fh",
+      "block_height": 275927796,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "1793638914842131270",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+        "release_deadline_ns": "1793725314842131270",
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Released",
+        "stewardship": {
+          "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+          "owner_id": "reviewer.shiftultra.testnet",
+          "token_id": "lantern-trail-testnet-v1"
+        },
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "100000000000000000000000"
+      }
+    },
+    {
+      "label": "campaign-after-new-mirror",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "3QEWVFNyqytqNBX3HXxazk3wRSqtRL7x9zg5yDSXqWw5",
+      "block_height": 275927832,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "1793638914842131270",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+        "release_deadline_ns": "1793725314842131270",
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Released",
+        "stewardship": {
+          "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+          "owner_id": "reviewer.shiftultra.testnet",
+          "token_id": "lantern-trail-testnet-v1"
+        },
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "100000000000000000000000"
+      }
+    },
+    {
+      "label": "config-after-stewardship",
+      "method": "get_config",
+      "args": {},
+      "block_hash": "HiNawm4yRjRQuKSeMceqbRrGcGGdSurwsXXCBprBxS7M",
+      "block_height": 275927841,
+      "value": {
+        "account_count": 3,
+        "account_storage_allowance": "10000000000000000000000",
+        "campaign_count": 1,
+        "campaign_storage_allowance": "50000000000000000000000",
+        "contract_id": "sunset.shiftultra.testnet",
+        "deployment_mode": "upgradeable",
+        "economic_deposits": "100000000000000000000000",
+        "max_accounts": 100,
+        "max_campaigns": 5,
+        "network": "testnet",
+        "nft_standards": [
+          "nep171:1.2.0",
+          "nep177:1.0.0",
+          "nep181:1.0.0"
+        ],
+        "owner": "shiftultra.testnet",
+        "schema_version": 1,
+        "security_deposits": "2",
+        "state_layout_version": 2,
+        "storage_deposits": "70000000000000000000000",
+        "storage_price_per_byte": "10000000000000000000",
+        "storage_retained": "15780000000000000000000",
+        "withdrawn": "100000000000000000000000"
+      }
+    }
+  ],
+  "finalized_verification_block": {
+    "block_hash": "mov7MQZu9qJdvDgaPEXP5v2RXnKQZ9G8bQbQYLRqxUz",
+    "block_height": 275928158
+  },
+  "final_state": {
+    "campaign": {
+      "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+      "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+      "creator": "shiftultra.testnet",
+      "escrow": "0",
+      "funded_at_ns": "1793638914842131270",
+      "funding_deadline_ns": "1794268800000000000",
+      "id": "lantern-trail-testnet-v1",
+      "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+      "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+      "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+      "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+      "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+      "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+      "release_deadline_ns": "1793725314842131270",
+      "release_window_ns": "86400000000000",
+      "reviewer": "reviewer.shiftultra.testnet",
+      "schema_version": 1,
+      "state": "Released",
+      "stewardship": {
+        "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+        "owner_id": "reviewer.shiftultra.testnet",
+        "token_id": "lantern-trail-testnet-v1"
+      },
+      "target": "100000000000000000000000",
+      "title": "The Lantern Trail",
+      "total_contributed": "100000000000000000000000"
+    },
+    "creator_account": {
+      "account_id": "shiftultra.testnet",
+      "contributions": [],
+      "credit": "37670000000000000000000",
+      "paid": "100000000000000000000000",
+      "pending": null,
+      "registered": true,
+      "schema_version": 1
+    },
+    "nft": {
+      "metadata": {
+        "copies": 1,
+        "description": "Transferable authority to choose a discovery mirror for this committed public release. No exclusivity, copyright, escrow, refund, payment or licensing authority. Every ownership change resets the mirror to the original manifest URI.",
+        "expires_at": null,
+        "extra": "{\"agreement_digest\":\"0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969\",\"manifest_hash\":\"f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d\",\"mirror_uri\":\"https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json\",\"original_manifest_uri\":\"https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json\",\"right\":\"public-release-mirror-stewardship\"}",
+        "issued_at": 1793638929454,
+        "media": null,
+        "media_hash": null,
+        "reference": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "reference_hash": "+AjXRy8uXTF0nQK0L4l3HhvibqgMmFQi/44+0+fpZW0=",
+        "starts_at": null,
+        "title": "The Lantern Trail \u2014 stewardship",
+        "updated_at": 1793639295990
+      },
+      "owner_id": "reviewer.shiftultra.testnet",
+      "token_id": "lantern-trail-testnet-v1"
+    },
+    "config": {
+      "account_count": 3,
+      "account_storage_allowance": "10000000000000000000000",
+      "campaign_count": 1,
+      "campaign_storage_allowance": "50000000000000000000000",
+      "contract_id": "sunset.shiftultra.testnet",
+      "deployment_mode": "upgradeable",
+      "economic_deposits": "100000000000000000000000",
+      "max_accounts": 100,
+      "max_campaigns": 5,
+      "network": "testnet",
+      "nft_standards": [
+        "nep171:1.2.0",
+        "nep177:1.0.0",
+        "nep181:1.0.0"
+      ],
+      "owner": "shiftultra.testnet",
+      "schema_version": 1,
+      "security_deposits": "2",
+      "state_layout_version": 2,
+      "storage_deposits": "70000000000000000000000",
+      "storage_price_per_byte": "10000000000000000000",
+      "storage_retained": "15780000000000000000000",
+      "withdrawn": "100000000000000000000000"
+    }
+  },
+  "native_creator_transfer": {
+    "receipt_id": "BmahZn4hsZSkwGRNRRYeF7W2og8vmAvoWC7cuX2xa9c2",
+    "predecessor_id": "sunset.shiftultra.testnet",
+    "receiver_id": "shiftultra.testnet",
+    "amount_yocto": "100000000000000000000000"
+  },
+  "actual_withdrawal_callback": {
+    "receipt_id": "2B3uosXs4HYWrcW65StGbBfCtwmjbrVBSgMhBQJyTVxw",
+    "method": "on_withdraw_complete",
+    "scheduled_gas": 15000000000000,
+    "gas_burnt": 1647072781898,
+    "status": {
+      "SuccessValue": "eyJhY2NvdW50X2lkIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiY29udHJpYnV0aW9ucyI6W10sImNyZWRpdCI6IjM3NjcwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBlbmRpbmciOm51bGwsInJlZ2lzdGVyZWQiOnRydWUsInNjaGVtYV92ZXJzaW9uIjoxfQ=="
+    }
+  },
+  "browser_evidence": "browser-showcase.json",
+  "limitations": [
+    "Both real expiry refund paths still require separate campaigns and actual waiting; not performed in this run.",
+    "This successful small-state withdrawal callback does not prove maximum-state gas or callback-failure recovery.",
+    "Maximum-state protocol metering, failed-native-transfer and NFT receiver/resolver callback scenarios remain unverified.",
+    "Retained full-access keys make the contract upgradeable.",
+    "Same-host mirror paths demonstrate maintenance selection, not independent hosting resilience.",
+    "All demo accounts are operator-controlled; no independent educator review, sponsor demand or mainnet readiness claimed.",
+    "Browser network disabling used Chrome DevTools offline emulation; no operating-system network adapter toggle claimed."
+  ]
+}

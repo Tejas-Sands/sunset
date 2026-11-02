@@ -1,13 +1,14 @@
 {
   "prepared_at": "2026-11-02T09:27:00.133471+00:00",
   "source_base": "4f4e69e66886c9d675a4e24ad1f1086bbed9e40c",
-  "status": "contract_deployed_campaign_prepared_not_executed",
+  "status": "main_testnet_showcase_completed_actual_expiry_refunds_pending",
   "network": "testnet",
   "owner": "shiftultra.testnet",
   "owner_balance": {
     "amount_near_before_deployment": "8",
     "amount_yocto_after_deployment": "3992885010462500000000000",
-    "evidence": "Finalized RPC account queries; exact blocks in testnet-deployment.json"
+    "evidence": "Finalized RPC account queries; exact blocks in testnet-deployment.json",
+    "record_scope": "Historical deployment-only balances; not current balances after the showcase."
   },
   "proposed_contract": "sunset.shiftultra.testnet",
   "proposed_reviewer": "reviewer.shiftultra.testnet",
@@ -15,8 +16,8 @@
   "accounts_created": {
     "shiftultra.testnet": true,
     "sunset.shiftultra.testnet": true,
-    "reviewer.shiftultra.testnet": false,
-    "sponsor.shiftultra.testnet": false
+    "reviewer.shiftultra.testnet": true,
+    "sponsor.shiftultra.testnet": true
   },
   "independent_humans_verified": false,
   "reported_frontend": "https://sunset-lemon.vercel.app",
@@ -25,7 +26,13 @@
     "id": "lantern-trail-testnet-v1",
     "target_near": "0.1",
     "funding_deadline": "2026-11-10T00:00:00Z",
-    "release_window_hours": 24
+    "release_window_hours": 24,
+    "state": "Released",
+    "total_contributed_near": "0.1",
+    "creator_paid_near": "0.1",
+    "creator_pending": null,
+    "current_steward": "reviewer.shiftultra.testnet",
+    "current_mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json"
   },
   "contract": {
     "bytes": 270188,
@@ -61,13 +68,13 @@
   ],
   "private_files_ignored": true,
   "private_backup_permissions": "0600",
-  "independent_file_recovery": "passed locally; real offline browser execution still unverified",
+  "independent_file_recovery": "Independent local recovery and actual browser original/mirror recovery/download passed; actual downloaded game completed 5/5 in fresh browser with Chrome DevTools offline set before file load.",
   "second_location": "byte-identical files on the same frontend host, not independent hosting",
   "cli": {
     "version": "0.30.1",
     "syntax_source": "official docs and near-cli-rs source",
     "installed_in_executor": true,
-    "commands_executed": "version/help, account reads, unsent signing probe, signed contract account creation and atomic deployment/initialization"
+    "commands_executed": "Deployment plus eleven finalized showcase transactions: ten successful and one intentional former-steward authority rejection; no unknown-outcome blind retries."
   },
   "actual_protocol_execution": true,
   "wallet_signatures_obtained": true,
@@ -112,5 +119,10 @@
     "signer_verification_evidence": "Successful secure-keychain signing and finalized transactions; no private key exported by agent"
   },
   "deployment_evidence": "testnet-deployment.json",
-  "actual_protocol_execution_scope": "Contract account creation, deployment, initialization and read-only views only"
+  "actual_protocol_execution_scope": "Contract/role creation, deployment/init, campaign creation/approval, exact contributions, key release, native creator payout and successful 15-Tgas callback, NFT transfer, rejected former owner and accepted new-owner mirror. Both expiry refunds and failure/max-state protocol scenarios remain pending.",
+  "executed_at": "2026-11-02T17:11:55.890234+00:00",
+  "showcase_evidence": "testnet-showcase.json",
+  "browser_evidence": "browser-showcase.json",
+  "actual_expiry_refunds_verified": false,
+  "all_roles_one_operator": true
 }

@@ -39,8 +39,8 @@
     "wasm_clippy": "passed",
     "near_sandbox": "not run; executable unavailable",
     "testnet_deployment": "passed: finalized atomic deployment and private initialization; remote Wasm byte-identical",
-    "protocol_gas_metering": "Creation/deployment/initialization gas recorded; campaign and callback gas unverified",
-    "actual_wallet_or_transfer_receipts": "Signed creation/funding and deployment receipts verified; campaign payments and withdrawals not executed",
+    "protocol_gas_metering": "Deployment and normal small-state campaign/NFT calls recorded. Actual successful withdrawal callback scheduled 15 Tgas burned 1647072781898 gas. Maximum-state, failure paths and NFT callbacks remain unverified.",
+    "actual_wallet_or_transfer_receipts": "Finalized deployment plus main campaign release/payout/NFT handover verified; native creator transfer of 0.1 testNEAR and callback succeeded. Both actual expiry refunds remain unverified.",
     "test_first_failures": "Observed native unknown-method failures and missing compiled-Wasm NFT exports before implementation; strict token-id regression failed before correction. Native and compiled-Wasm same-account reviewer tests failed before the creator/reviewer distinction guard. Shared URI regressions failed for empty campaign authority and malformed mirror authority before hardening; rejected calls must preserve complete state.",
     "build_script_syntax": "passed",
     "compiler_version_guard": "passed; rejected simulated installed rustc 1.95.0 before Cargo execution",
@@ -54,6 +54,10 @@
       "byte_identical": true,
       "local_home_and_checkout_paths_absent": true,
       "artifact_sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f"
+    },
+    "testnet_showcase": {
+      "status": "main_flow_passed_refund_phase_pending",
+      "evidence": "../../evidence/testnet-showcase.json"
     }
   },
   "limitations": [

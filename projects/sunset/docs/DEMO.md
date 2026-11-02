@@ -22,7 +22,7 @@ An invariant or subprocess error exits nonzero. The script does not start a webs
 
 ## Rehearse in a local browser
 
-These are instructions for a browser-capable machine. This workspace's browser/server launch is blocked by OS socket restrictions; the steps are not a claim that browser QA has passed. See [the verification gaps](../../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md).
+These are local rehearsal instructions. Separately, [actual hosted/browser evidence](../evidence/browser-showcase.json) now proves the desktop live reader, original/mirror recovery and actual downloaded game completed in a fresh browser with Chrome DevTools offline enabled before file load. This is not an OS network-adapter toggle. The offline game fits 390 pixels; mobile homepage navigation timed out, and broad browser/accessibility QA remains open.
 
 ```sh
 npm ci
@@ -89,4 +89,6 @@ The final integration record must point to the current UI labels, contract ABI a
 
 ## Record evidence honestly
 
-Retain source revision, Wasm hash, command results and any actual browser screenshots. Record a browser walkthrough and a genuine protocol receipt run as separate evidence. Keep deployment, real wallet signing, independent educator review, sponsor feedback and final submission marked pending until each actually occurs. The [threat model](THREAT_MODEL.md) identifies the remaining trust boundaries.
+The [main testnet record](../evidence/testnet-showcase.json) now has eleven finalized transactions: ten successes and one intentional former-steward rejection. The campaign is `Released`; its native creator payout is 0.1 testNEAR, `paid` matches and `pending` is null. Its 15-Tgas withdrawal callback burned 1.647072781898 Tgas and succeeded. The NFT holder is `reviewer.shiftultra.testnet`, whose new mirror recovers the same pack. All roles share one operator and both artifact paths share a host.
+
+The [browser record](../evidence/browser-showcase.json) separately proves actual hosted original/mirror recovery, browser download, cold-browser offline completion (5/5) and restart. Do not rerun the completed signed actions for a recording: show finalized receipts and read-only views. Both live expiry refunds need separate campaigns and actual waiting; failure/max-state protocol cases, independent educator review, sponsor feedback and final submission remain pending. The [threat model](THREAT_MODEL.md) identifies the remaining trust boundaries.

@@ -2,14 +2,14 @@
 
 Operator record: **1 November 2026**, application source `5810ddd`. SUNSET is a bounded **NEAR testnet prototype**. Use free static hosting and faucet-funded testnet accounts for this launch; mainnet funds, paid infrastructure and a custom domain are unnecessary.
 
-**2 November update:** `sunset.shiftultra.testnet` is deployed and initialized for owner `shiftultra.testnet`, with finalized successful receipts and byte-identical reviewed code; see [deployment evidence](../evidence/testnet-deployment.json). Code hash: `9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx`. The four prepared public resource files on `https://sunset-lemon.vercel.app` returned HTTP 200 with matching hashes. The prepared 0.1-testNEAR campaign and remaining CLI steps are in [TESTNET_SHOWCASE.md](TESTNET_SHOWCASE.md); reviewer/sponsor accounts and campaign settlement remain incomplete. Do not rerun completed contract creation/deployment. Subsequent local commits are pushed by the operator. Earlier access failures below are historical.
+**2 November update:** [main testnet showcase](../evidence/testnet-showcase.json) is complete on `sunset.shiftultra.testnet`: agreement approval, 0.1-testNEAR exact funding/release/native creator payout, successful withdrawal callback, NFT handover and mirror authority. Code hash: `9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx`. The actual hosted reader, original/mirror recovery and downloaded game passed [narrow browser/offline checks](../evidence/browser-showcase.json). The [showcase guide](TESTNET_SHOWCASE.md) replays those results without repeating signed actions. Both real expiry refunds and failure/max-state protocol checks remain open. The initial [deployment record](../evidence/testnet-deployment.json) remains a historical zero-campaign snapshot. Subsequent local commits are pushed by the operator; earlier access failures below are historical.
 
 ## What each deployment delivers
 
 | Deliverable | Current position |
 | --- | --- |
 | Public website | The Next.js static export serves the landing page, `/app/` rehearsal and standalone sample. Financial rehearsal state stays in each visitor's browser. Hosting it does not create shared balances or move tokens. |
-| Shared testnet contract | Reviewed Wasm is deployed at `sunset.shiftultra.testnet`; creation, initialization, signatures and exact code are verified. Campaign settlement, callback/failure paths and maximum-state gas still need real protocol checks. Adults use their own wallet/CLI with the documented ABI. |
+| Shared testnet contract | Reviewed Wasm at `sunset.shiftultra.testnet` completed exact funding, public release, native creator payout and NFT mirror handover. Its normal small-state withdrawal callback succeeded. Both live expiry refunds, failure paths and maximum-state gas remain open. |
 | Full browser dApp | Additional implementation is required: wallet connection and signing, live action flows, account credit/pending reads, canonical receipt checks and published deployment configuration. The current testnet panel reads a pinned deployment; its workbench exports unsigned plans. |
 
 The current contract is **owner-curated**: only its configured owner creates campaigns, and that owner is their fixed creator/beneficiary. It is not an open multi-creator marketplace. Limits are five campaigns and 100 permanent registered accounts; public contributors can exhaust the account slots. Access budgets and coordination agents remain local demonstrations.
@@ -18,8 +18,8 @@ No database, Supabase project, model API key, backend signer or managed release 
 
 ## Access and inputs still needed
 
-- **Hosting:** the supplied frontend host already serves the prepared manifest/ciphertext files with verified hashes. Browser/mobile/offline checks remain.
-- **Actual testnet identities:** owner `shiftultra.testnet` and contract `sunset.shiftultra.testnet` exist and have verified local signing. Reviewer/sponsor accounts still need creation or independent operators; one can receive the stewardship NFT. Independent-user evidence requires independently controlled accounts; different names alone do not establish independence.
+- **Hosting/QA:** desktop hosted reader/recovery/download and cold-browser offline gameplay passed. The offline game fits 390 pixels; mobile homepage/accessibility/cross-device checks remain.
+- **Independent testnet operators:** owner, contract, reviewer and sponsor accounts all exist and signed the main showcase, but share one operator. Independently controlled humans, educator review and sponsor feedback remain to be established.
 - **Signing and testNEAR:** each adult uses their own wallet or locally configured CLI. Fund contract code/state collateral, storage allowances, contributions and transaction fees with testNEAR. Do not paste wallet private keys, seed phrases, access tokens or private release backups into chat, commits or deployment settings.
 - **Campaign terms:** actual pack, target, future funding deadline, release window, reviewer and final HTTPS manifest location. The included original sample can support a technical testnet demonstration; educator review remains separate.
 - **Execution environment:** a browser and compatible NEAR Sandbox on a machine/runner that permits sockets, plus working testnet RPC access. No real protocol runner is currently supplied by this repository.
@@ -98,7 +98,7 @@ npm run test:contract
 
 Rebuilding requires the pinned installed Rust 1.96.0 toolchain, Wasm target and cached locked dependencies; see [build evidence](../contracts/sunset/build-evidence.json). These commands use native tests and transactional Wasm host doubles. **None starts NEAR Sandbox.**
 
-Before collecting live settlement evidence, run actual Sandbox scenarios for initialization/authority, cap change and storage deposits, release once, both expiry refunds, native transfer success/failure, callback failure and NFT receiver acceptance/rejection/onward transfers. Measure gas and storage at the maximum supported state. The workbench currently proposes 100 Tgas for most calls and 150 Tgas for `nft_transfer_call`; the contract reserves 15 Tgas for callbacks. These budgets are not yet validated by protocol metering. Retain runtime/protocol version, source/artifact identity, full receipts and balances. [Detailed remaining scenarios](../../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md).
+Normal small-state testnet settlement now has real receipts, including the successful native payout callback. Remaining protocol work is both expiry refunds, native transfer failure, callback failure, cap-change edge cases and NFT receiver/resolver scenarios, plus gas/storage at maximum supported state. Use actual Sandbox scenarios for controlled failure cases. The workbench currently proposes 100 Tgas for most calls and 150 Tgas for `nft_transfer_call`; the contract reserves 15 Tgas for callbacks. The successful small-state withdrawal callback used 1.647072781898 of its scheduled 15 Tgas; the broader budgets still need maximum-state and failure-path metering. Retain runtime/protocol version, source/artifact identity, full receipts and balances. [Detailed remaining scenarios](../../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md).
 
 ## 3. Prepare artifacts for the existing deployment or a separate fresh contract
 
@@ -124,7 +124,9 @@ Deploy the verified Wasm to the fresh funded testnet contract account. Initializ
 
 Use the [contract JSON ABI](../contracts/sunset/README.md) with the actual wallet/CLI. There is no deployment/signing script here, and an exported workbench plan is not a signed transaction.
 
-## 4. Prove the live story, then connect the browser
+## 4. Future independently operated demonstrations
+
+The operator-controlled main flow is complete; replay its receipts and read-only state through [TESTNET_SHOWCASE.md](TESTNET_SHOWCASE.md). The steps below describe a new campaign with actual independent participants. Do not repeat the completed campaign's signed actions.
 
 1. The owner signs `create_campaign` using `create-campaign.json`, with exactly **0.05 testNEAR** storage allowance. The named reviewer verifies and inspects the exact decrypted pack, reads the actual agreement digest and signs `approve_campaign` for that digest.
 2. An independent sponsor signs `contribute`. A new registered account adds **0.01 testNEAR** storage allowance to its contribution; an already registered account attaches the contribution only. Read `get_account` before choosing the deposit. Demonstrate cap change becoming credit.

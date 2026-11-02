@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T17:10:14.409370+00:00",
+  "status": "passed_hosted_reader_original_and_steward_mirror_recovery_and_cold_browser_offline_game",
+  "browser": {
+    "automation": "agent-browser0.37.1",
+    "engine": "HeadlessChrome156.0.0.0",
+    "desktop_viewport": [
+      1920,
+      1080
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "context": "Owned isolated task session; fresh temporary profile, no user auth/profile or restore state used."
+  },
+  "hosted": {
+    "landing_url": "https://sunset-lemon.vercel.app/",
+    "viewer_url": "https://sunset-lemon.vercel.app/app/",
+    "contract": "sunset.shiftultra.testnet",
+    "expected_code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "network_code_block_verified": true,
+    "first_snapshot_height": 275927391,
+    "final_snapshot_height": 275927827,
+    "campaign_id": "lantern-trail-testnet-v1",
+    "campaign_state": "Released",
+    "creator": "shiftultra.testnet",
+    "current_maintenance_holder": "reviewer.shiftultra.testnet",
+    "original_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+    "steward_mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+    "original_pack_verification": true,
+    "steward_mirror_pack_verification": true,
+    "hosted_gameplay_first_correct_answer": true,
+    "browser_download_original": true,
+    "browser_download_steward_mirror": true,
+    "downloaded_html_byte_identical": true,
+    "wallet_signing_implemented": false,
+    "browser_errors": [],
+    "browser_console_output": []
+  },
+  "offline": {
+    "source": "Actual browser download after verified recovery of live Released campaign, not the independent public sample.",
+    "html_file": "lantern-trail-testnet-v1-offline.html",
+    "mirror_html_file": "lantern-trail-testnet-v1-mirror-offline.html",
+    "html_bytes": 7246,
+    "html_sha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738",
+    "fresh_browser_steps": [
+      "Closed entire prior browser without restore/profile persistence.",
+      "Launched new browser at about:blank.",
+      "Enabled browser network offline before navigating to downloaded file URI.",
+      "Opened actual downloaded standalone HTML as file://.",
+      "Answered all five questions through actual buttons, then restarted."
+    ],
+    "network_disable_scope": "Chrome DevTools offline emulation, not an operating-system network-adapter change.",
+    "navigator_onLine": false,
+    "performance_resource_entries": 0,
+    "resource_request_urls": [],
+    "all_five_correct": true,
+    "completion_text": "Trail complete; All 5 lanterns are lit.",
+    "restart_returned_to": "Lantern1of5",
+    "desktop_gameplay_passed": true,
+    "mobile_layout_no_horizontal_overflow": true,
+    "mobile_inner_width": 390,
+    "mobile_scroll_width": 390,
+    "browser_errors": [],
+    "browser_console_output": []
+  },
+  "capture_files": [
+    {
+      "file": "01-hosted-landing.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 527750,
+      "sha256": "0694eaba3b82c28bb35f8e18cf4bb2e41e2d5943115b10058df259524d73e87b",
+      "captured_at": "2026-11-02T17:00:16.489802+00:00",
+      "scope": "Hosted landing hero and original SUNSET logo; branding, not settlement proof."
+    },
+    {
+      "file": "02-hosted-commons.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 126144,
+      "sha256": "5abf6f211f1dd5f0f187a9298de6c153df40dcb213aab42b03fc933f83a6e07c",
+      "captured_at": "2026-11-02T17:00:23.311906+00:00",
+      "scope": "Hosted sample resource collection; sample/rehearsal labels remain visible."
+    },
+    {
+      "file": "03-hosted-live-contract-connected.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 178239,
+      "sha256": "38c19dda0145cb66530e4824f7bb7277640061a3a646d531e02d5801bd8a2494",
+      "captured_at": "2026-11-02T17:04:19.218877+00:00",
+      "scope": "Actual hosted reader verified testnet account and pinned code hash."
+    },
+    {
+      "file": "04-hosted-released-resource.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 174312,
+      "sha256": "e7316b73c43b712dca32700c9fbd601c4b99bf37479bca032de0c29e45480439",
+      "captured_at": "2026-11-02T17:04:29.658437+00:00",
+      "scope": "Actual Released campaign read from configured verified testnet contract."
+    },
+    {
+      "file": "05-hosted-pack-verified.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 179812,
+      "sha256": "2efde8ffe578f6615e280df68f27af6e3dcdd24e2e78d639479b84380505af1e",
+      "captured_at": "2026-11-02T17:04:45.222289+00:00",
+      "scope": "Actual original-host commitment verification succeeded; Play and Download available."
+    },
+    {
+      "file": "06-hosted-verified-game.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 201479,
+      "sha256": "c789b3cececcc2221dbe0392e33c26414de1f3d8313c9bfad301edfaca59e4d3",
+      "captured_at": "2026-11-02T17:04:58.714428+00:00",
+      "scope": "Actual released pack opened in hosted gameplay dialog."
+    },
+    {
+      "file": "07-hosted-game-feedback.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 198281,
+      "sha256": "412615e2404e1b7a8838346c27d77a461a81f14b46b7cd1894ae7f07c996cec6",
+      "captured_at": "2026-11-02T17:04:59.193362+00:00",
+      "scope": "Actual hosted first-question correct-answer feedback."
+    },
+    {
+      "file": "08-hosted-steward-owner.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 159018,
+      "sha256": "a0bb175cfc4757d85fb5834b16246f3cdad49fef98cf92eebfe70dfe6bd4977a",
+      "captured_at": "2026-11-02T17:05:45.468719+00:00",
+      "scope": "Actual current maintenance holder reviewer.shiftultra.testnet after root NFT transfer."
+    },
+    {
+      "file": "09-offline-game-start.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 92008,
+      "sha256": "664d8c4f74085500428f8cef8472669dd91595f000441babcfe88b045b9793d7",
+      "captured_at": "2026-11-02T17:06:06.702952+00:00",
+      "scope": "Browser-downloaded actual released pack opened as file in fresh browser with offline enabled before load."
+    },
+    {
+      "file": "10-offline-game-answer.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 97969,
+      "sha256": "a0f5ced28892b39b92a25695546edb46782627d7038256beceda51c9ee8baaf5",
+      "captured_at": "2026-11-02T17:06:06.943959+00:00",
+      "scope": "Actual correct-answer feedback with browser network disabled."
+    },
+    {
+      "file": "11-offline-game-complete.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 81303,
+      "sha256": "048c158a6fc3feb4acbc33d5dec6a20c7f7e35d4276c765424f1661faf95392c",
+      "captured_at": "2026-11-02T17:06:25.209502+00:00",
+      "scope": "All five actual offline questions completed correctly."
+    },
+    {
+      "file": "12-offline-mobile-complete.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 55920,
+      "sha256": "15a1c270efb599717223ec7e8e86b7f72a318d74208cd6f30ebaa539e07bfc23",
+      "captured_at": "2026-11-02T17:06:47.899175+00:00",
+      "scope": "Completed offline game at mobile390x844; no horizontal overflow."
+    },
+    {
+      "file": "13-offline-mobile-restart.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 52722,
+      "sha256": "d64358f1a80db282dd3b4c0d306c0172a0110ecc836a4d6dce793d93d54280f6",
+      "captured_at": "2026-11-02T17:06:48.070180+00:00",
+      "scope": "Actual offline restart returned to Lantern1of5 at390x844."
+    },
+    {
+      "file": "15-hosted-steward-mirror-verified.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 158355,
+      "sha256": "ecd3de8972d5c052c5e668b298fb1cb6888c0906cc706e822ca1ca8fdb9945c1",
+      "captured_at": "2026-11-02T17:08:52.592561+00:00",
+      "scope": "Actual new steward mirror selected and cryptographically verified; current holder reviewer."
+    },
+    {
+      "file": "16-hosted-mirror-game.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 201524,
+      "sha256": "048acc576a9b5c176c66893638c82cfa5f6650c7ebdc3bc4797c34b1b83362be",
+      "captured_at": "2026-11-02T17:09:15.215551+00:00",
+      "scope": "Actual identical released pack played after retrieval from new steward mirror."
+    }
+  ],
+  "limits": [
+    "No blockchain signing performed by this browser agent; transaction receipt evidence belongs to the root operator.",
+    "Distinct reviewer/sponsor identities do not prove independently controlled humans.",
+    "Same host mirror is not an independent availability provider.",
+    "No full browser financial wallet signing implemented or claimed.",
+    "Screenshots are genuine browser captures. Browser recording engine hung on stop; zero-byte WebM was moved to debug and must not be used.",
+    "A single later mobile landing navigation timed out; its error screenshot was moved to debug and excluded from usable footage. Desktop landing and hosted viewer loads succeeded. No mobile homepage verification claimed.",
+    "No broad browser accessibility/cross-device or production-readiness audit claimed."
+  ]
+}
