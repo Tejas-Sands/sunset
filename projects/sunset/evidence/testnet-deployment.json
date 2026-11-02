@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-02T11:50:51.021966+00:00",
+  "status": "deployed_and_initialized_no_campaign_settlement_yet",
+  "network": "testnet",
+  "rpc_endpoint": "https://rpc.testnet.near.org",
+  "node_version": "2.14.0-rc.5",
+  "protocol_version": 88,
+  "contract_id": "sunset.shiftultra.testnet",
+  "owner": "shiftultra.testnet",
+  "source_review_commit": "5fdc0e71e65d492ca68368f77ffa4cbb30365ba1",
+  "artifact": {
+    "bytes": 270188,
+    "sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
+    "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "remote_code_byte_identical": true
+  },
+  "finalized_verification_block": {
+    "block_hash": "HVEPDZtTF988rMM7Jn6pjmJcGUbqG7QqioXtougtBGiy",
+    "block_height": 275894689
+  },
+  "transactions": [
+    {
+      "purpose": "create_contract_account",
+      "transaction_hash": "HMwHTAPTPegRH9D8wcsqgsVzWTnVw3cfTVCm3CCxBEWn",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": ""
+      },
+      "actions": [
+        "CreateAccount",
+        {
+          "Transfer": {
+            "deposit": "4000000000000000000000000"
+          }
+        },
+        {
+          "AddKey": {
+            "permission": "FullAccess"
+          }
+        }
+      ],
+      "gas_burnt_total": 8573077937500,
+      "tokens_burnt_total_yocto": "7114989537500000000000",
+      "outcomes": [
+        {
+          "id": "HMwHTAPTPegRH9D8wcsqgsVzWTnVw3cfTVCm3CCxBEWn",
+          "block_hash": "DsHDqt7qDp6TuySVQWkUMr2Uond3FgcHTEN2znCBj9Qo",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "GAraTsbFahGnYdURsakEoJumf4nEaMTpNBxvkr2APJ8b"
+          },
+          "gas_burnt": 824947687500,
+          "tokens_burnt": "82494768750000000000",
+          "receipt_ids": [
+            "GAraTsbFahGnYdURsakEoJumf4nEaMTpNBxvkr2APJ8b"
+          ],
+          "logs": []
+        },
+        {
+          "id": "GAraTsbFahGnYdURsakEoJumf4nEaMTpNBxvkr2APJ8b",
+          "block_hash": "4RhkS4wATtn1Jfp9DnytyhRs6fZJYY531SRFyrbWjRig",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 7524947687500,
+          "tokens_burnt": "7032494768750000000000",
+          "receipt_ids": [
+            "3kYxPTb6SGZF2mJFEAt53yU6bpuJkPC2ZxmT4uNA7CrM"
+          ],
+          "logs": []
+        },
+        {
+          "id": "3kYxPTb6SGZF2mJFEAt53yU6bpuJkPC2ZxmT4uNA7CrM",
+          "block_hash": "Bv4vrzMTvhQedxhwzPqpR2Qf7s1RMo4GxTBBKoB8VJNx",
+          "executor_id": "shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "purpose": "deploy_and_initialize",
+      "transaction_hash": "BXT7Z3ENkUBFpSPBkiN28x8pqbsoKhNifvinz1r9Eqw7",
+      "signer_id": "sunset.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "final_execution_status": "FINAL",
+      "status": {
+        "SuccessValue": "eyJjb250cmFjdF9pZCI6InN1bnNldC5zaGlmdHVsdHJhLnRlc3RuZXQiLCJuZXR3b3JrIjoidGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxfQ=="
+      },
+      "actions": [
+        {
+          "DeployContract": {
+            "rpc_code_field": "base64 SHA256 digest",
+            "bytes": 270188,
+            "sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f"
+          }
+        },
+        {
+          "FunctionCall": {
+            "deposit": "0",
+            "gas": 100000000000000,
+            "method_name": "new",
+            "args_json": {
+              "owner": "shiftultra.testnet"
+            }
+          }
+        }
+      ],
+      "gas_burnt_total": 21597139772292,
+      "tokens_burnt_total_yocto": "2137395720979200000000",
+      "outcomes": [
+        {
+          "id": "BXT7Z3ENkUBFpSPBkiN28x8pqbsoKhNifvinz1r9Eqw7",
+          "block_hash": "98JVR8xJgAuqEuGbYBqZcHYJDKkg6cWP41uhHZGCcMDo",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessReceiptId": "FNeY4V2AogAkcdHTNGkNnLPQosmS54WFMVXt8iai5DAo"
+          },
+          "gas_burnt": 2333703025238,
+          "tokens_burnt": "233370302523800000000",
+          "receipt_ids": [
+            "FNeY4V2AogAkcdHTNGkNnLPQosmS54WFMVXt8iai5DAo"
+          ],
+          "logs": []
+        },
+        {
+          "id": "FNeY4V2AogAkcdHTNGkNnLPQosmS54WFMVXt8iai5DAo",
+          "block_hash": "98JVR8xJgAuqEuGbYBqZcHYJDKkg6cWP41uhHZGCcMDo",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": "eyJjb250cmFjdF9pZCI6InN1bnNldC5zaGlmdHVsdHJhLnRlc3RuZXQiLCJuZXR3b3JrIjoidGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxfQ=="
+          },
+          "gas_burnt": 19040254184554,
+          "tokens_burnt": "1904025418455400000000",
+          "receipt_ids": [
+            "AijhSJHERs2SGXdp8hgXmJVejuvi527i1zQX29yb2PfT"
+          ],
+          "logs": []
+        },
+        {
+          "id": "AijhSJHERs2SGXdp8hgXmJVejuvi527i1zQX29yb2PfT",
+          "block_hash": "ADM21EEGot99eLrwAEB4VtujUydFqUcmoXH1prKqSkon",
+          "executor_id": "sunset.shiftultra.testnet",
+          "status": {
+            "SuccessValue": ""
+          },
+          "gas_burnt": 223182562500,
+          "tokens_burnt": "0",
+          "receipt_ids": [],
+          "logs": []
+        }
+      ]
+    }
+  ],
+  "get_config": {
+    "value": {
+      "account_count": 0,
+      "account_storage_allowance": "10000000000000000000000",
+      "campaign_count": 0,
+      "campaign_storage_allowance": "50000000000000000000000",
+      "contract_id": "sunset.shiftultra.testnet",
+      "deployment_mode": "upgradeable",
+      "economic_deposits": "0",
+      "max_accounts": 100,
+      "max_campaigns": 5,
+      "network": "testnet",
+      "nft_standards": [
+        "nep171:1.2.0",
+        "nep177:1.0.0",
+        "nep181:1.0.0"
+      ],
+      "owner": "shiftultra.testnet",
+      "schema_version": 1,
+      "security_deposits": "0",
+      "state_layout_version": 2,
+      "storage_deposits": "0",
+      "storage_price_per_byte": "10000000000000000000",
+      "storage_retained": "0",
+      "withdrawn": "0"
+    },
+    "block_hash": "HVEPDZtTF988rMM7Jn6pjmJcGUbqG7QqioXtougtBGiy",
+    "block_height": 275894689,
+    "logs": [],
+    "query_gas_metering": "not returned by RPC"
+  },
+  "preflight": {
+    "rpc_endpoint": "https://rpc.testnet.near.org",
+    "block_hash": "CxmrnWQasjZWshudA6bL8268F7q9KcPVcT1ShM469c2M",
+    "block_height": 275893917,
+    "owner_balance_yocto": "8000000000000000000000000",
+    "owner_storage_usage": 182,
+    "contract_account_existed": false
+  },
+  "accounts_at_verification_block": {
+    "shiftultra.testnet": {
+      "exists": true,
+      "amount": "3992885010462500000000000",
+      "block_hash": "HVEPDZtTF988rMM7Jn6pjmJcGUbqG7QqioXtougtBGiy",
+      "block_height": 275894689,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "sunset.shiftultra.testnet": {
+      "exists": true,
+      "amount": "3997862604279020800000000",
+      "block_hash": "HVEPDZtTF988rMM7Jn6pjmJcGUbqG7QqioXtougtBGiy",
+      "block_height": 275894689,
+      "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 270525
+    },
+    "reviewer.shiftultra.testnet": {
+      "exists": false,
+      "rpc_error": "UNKNOWN_ACCOUNT",
+      "block_hash": "HVEPDZtTF988rMM7Jn6pjmJcGUbqG7QqioXtougtBGiy",
+      "block_height": 275894689
+    },
+    "sponsor.shiftultra.testnet": {
+      "exists": false,
+      "rpc_error": "UNKNOWN_ACCOUNT",
+      "block_hash": "HVEPDZtTF988rMM7Jn6pjmJcGUbqG7QqioXtougtBGiy",
+      "block_height": 275894689
+    }
+  },
+  "signer_verification": {
+    "method": "near-cli-rs 0.30.1 secure keychain; unsent zero-value self-transfer signing probe, then successful signed creation/deployment",
+    "private_key_exported": false
+  },
+  "limitations": [
+    "Only deployment and initialization executed; no campaign, contribution, release, withdrawal, refund or NFT transfer yet.",
+    "Reviewer and sponsor accounts do not exist at the recorded verification block.",
+    "Real callback gas and failure paths, maximum-state protocol scenarios and NEAR Sandbox remain unverified.",
+    "Contract full-access key retained locally; deployment is upgradeable.",
+    "Browser/mobile/offline execution and independent-human review remain unverified."
+  ],
+  "hosted_resources": {
+    "verified_at": "2026-11-02T11:52:19.939003+00:00",
+    "files": [
+      {
+        "url": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "http_status": 200,
+        "bytes": 356,
+        "sha256": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "matches_prepared_commitment": true,
+        "redirects_followed": false
+      },
+      {
+        "url": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/ciphertext.sunset",
+        "http_status": 200,
+        "bytes": 1618,
+        "sha256": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "matches_prepared_commitment": true,
+        "redirects_followed": false
+      },
+      {
+        "url": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+        "http_status": 200,
+        "bytes": 356,
+        "sha256": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "matches_prepared_commitment": true,
+        "redirects_followed": false
+      },
+      {
+        "url": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/ciphertext.sunset",
+        "http_status": 200,
+        "bytes": 1618,
+        "sha256": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "matches_prepared_commitment": true,
+        "redirects_followed": false
+      }
+    ],
+    "browser_execution_verified": false
+  },
+  "live_reader": {
+    "verified_at": "2026-11-02T11:52:19.539044+00:00",
+    "command": "node --input-type=module calling readTestnet from src/lib/chain.mjs",
+    "rpc_endpoint": "https://test.rpc.fastnear.com",
+    "result": {
+      "network": "testnet",
+      "contract": "sunset.shiftultra.testnet",
+      "codeHash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+      "campaigns": [],
+      "height": 275894664
+    },
+    "scope": "Actual reader functions against testnet RPC; not browser execution or proof of hosted frontend update",
+    "frontend_fix_pending_user_push": true,
+    "rpc_schema_fix": "view_code.hash, not view_account.code_hash"
+  }
+}

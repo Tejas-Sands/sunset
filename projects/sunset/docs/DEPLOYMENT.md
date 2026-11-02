@@ -2,14 +2,14 @@
 
 Operator record: **1 November 2026**, application source `5810ddd`. SUNSET is a bounded **NEAR testnet prototype**. Use free static hosting and faucet-funded testnet accounts for this launch; mainnet funds, paid infrastructure and a custom domain are unnecessary.
 
-**2 November update:** the operator supplied wallet `shiftultra.testnet` and reported the frontend at `https://sunset-lemon.vercel.app`. The prepared 0.1-testNEAR campaign and exact CLI steps are in [TESTNET_SHOWCASE.md](TESTNET_SHOWCASE.md). Subsequent local commits are pushed by the operator. External access failures below describe the earlier assistant-side connection check; they do not establish that the operator's website/repository is unpublished. No actual NEAR deployment or settlement is established yet.
+**2 November update:** `sunset.shiftultra.testnet` is deployed and initialized for owner `shiftultra.testnet`, with finalized successful receipts and byte-identical reviewed code; see [deployment evidence](../evidence/testnet-deployment.json). Code hash: `9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx`. The four prepared public resource files on `https://sunset-lemon.vercel.app` returned HTTP 200 with matching hashes. The prepared 0.1-testNEAR campaign and remaining CLI steps are in [TESTNET_SHOWCASE.md](TESTNET_SHOWCASE.md); reviewer/sponsor accounts and campaign settlement remain incomplete. Do not rerun completed contract creation/deployment. Subsequent local commits are pushed by the operator. Earlier access failures below are historical.
 
 ## What each deployment delivers
 
 | Deliverable | Current position |
 | --- | --- |
 | Public website | The Next.js static export serves the landing page, `/app/` rehearsal and standalone sample. Financial rehearsal state stays in each visitor's browser. Hosting it does not create shared balances or move tokens. |
-| Shared testnet contract | Compiled Wasm supports reviewed sponsorship, capped creator credit, release, both expiry refunds, withdrawals and stewardship NFTs. It still needs real protocol checks, a fresh deployment and signed receipts. Adults can use their own wallet/CLI with the documented ABI. |
+| Shared testnet contract | Reviewed Wasm is deployed at `sunset.shiftultra.testnet`; creation, initialization, signatures and exact code are verified. Campaign settlement, callback/failure paths and maximum-state gas still need real protocol checks. Adults use their own wallet/CLI with the documented ABI. |
 | Full browser dApp | Additional implementation is required: wallet connection and signing, live action flows, account credit/pending reads, canonical receipt checks and published deployment configuration. The current testnet panel reads a pinned deployment; its workbench exports unsigned plans. |
 
 The current contract is **owner-curated**: only its configured owner creates campaigns, and that owner is their fixed creator/beneficiary. It is not an open multi-creator marketplace. Limits are five campaigns and 100 permanent registered accounts; public contributors can exhaust the account slots. Access budgets and coordination agents remain local demonstrations.
@@ -18,8 +18,8 @@ No database, Supabase project, model API key, backend signer or managed release 
 
 ## Access and inputs still needed
 
-- **Hosting access:** an authorized free static-host project and its HTTPS URL. A provider subdomain is sufficient.
-- **Actual testnet identities:** a fresh contract account with deployment/initialization authority, the owner/creator, a different reviewer account, a sponsor, and an account to receive the stewardship NFT. The sponsor can also receive the NFT. Independent-user evidence requires independently controlled accounts; different account names alone do not establish independence.
+- **Hosting:** the supplied frontend host already serves the prepared manifest/ciphertext files with verified hashes. Browser/mobile/offline checks remain.
+- **Actual testnet identities:** owner `shiftultra.testnet` and contract `sunset.shiftultra.testnet` exist and have verified local signing. Reviewer/sponsor accounts still need creation or independent operators; one can receive the stewardship NFT. Independent-user evidence requires independently controlled accounts; different names alone do not establish independence.
 - **Signing and testNEAR:** each adult uses their own wallet or locally configured CLI. Fund contract code/state collateral, storage allowances, contributions and transaction fees with testNEAR. Do not paste wallet private keys, seed phrases, access tokens or private release backups into chat, commits or deployment settings.
 - **Campaign terms:** actual pack, target, future funding deadline, release window, reviewer and final HTTPS manifest location. The included original sample can support a technical testnet demonstration; educator review remains separate.
 - **Execution environment:** a browser and compatible NEAR Sandbox on a machine/runner that permits sockets, plus working testnet RPC access. No real protocol runner is currently supplied by this repository.
@@ -32,7 +32,13 @@ GitHub currently authenticates as `vedantssj`. The intended `Tejas-Sands/sunset`
 
 ### Publish from a normal terminal, then connect Vercel once
 
-This executor currently cannot resolve `github.com` or `api.github.com`. That prevents checking a supplied GitHub token or pushing through the CLI; it does not establish that a token is invalid. The connected GitHub app uses its own saved account and cannot be switched by pasting a token into the conversation.
+The earlier restricted executor could not resolve GitHub hosts. The operator subsequently published the repository and now pushes from the laptop's normal terminal; keep GitHub authentication local there. Do not reconnect the shared Codex GitHub plugin or paste tokens into the conversation. For subsequent committed batches, run from the repository root:
+
+```sh
+git --git-dir=.sunset-git --work-tree=. push origin main
+```
+
+The initial publishing helper below is retained for setup on another machine; it is not needed for routine pushes.
 
 From the repository root in a network-enabled terminal, run:
 
@@ -94,7 +100,9 @@ Rebuilding requires the pinned installed Rust 1.96.0 toolchain, Wasm target and 
 
 Before collecting live settlement evidence, run actual Sandbox scenarios for initialization/authority, cap change and storage deposits, release once, both expiry refunds, native transfer success/failure, callback failure and NFT receiver acceptance/rejection/onward transfers. Measure gas and storage at the maximum supported state. The workbench currently proposes 100 Tgas for most calls and 150 Tgas for `nft_transfer_call`; the contract reserves 15 Tgas for callbacks. These budgets are not yet validated by protocol metering. Retain runtime/protocol version, source/artifact identity, full receipts and balances. [Detailed remaining scenarios](../../../research/2026-11-01-tokenization/VERIFICATION_GAPS.md).
 
-## 3. Prepare artifacts and deploy a fresh testnet contract
+## 3. Prepare artifacts for the existing deployment or a separate fresh contract
+
+The operator's contract is already deployed; use [TESTNET_SHOWCASE.md](TESTNET_SHOWCASE.md) for its matching retained private package and remaining steps. The generic preparation/deployment instructions below apply to a separate fresh deployment, not a command to overwrite `sunset.shiftultra.testnet`.
 
 Choose the final public artifact URL before creating immutable campaign terms. From `projects/sunset`, replace the placeholders with real inputs:
 

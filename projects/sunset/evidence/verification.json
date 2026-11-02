@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-02T10:37:57.840046+00:00",
-  "status": "contract_reviewed_locally_protocol_execution_unverified",
+  "checked_at": "2026-11-02T11:52:19.539044+00:00",
+  "status": "testnet_contract_deployed_initialized_campaign_settlement_unverified",
   "network": "testnet_only",
   "application": {
     "framework": "Next.js 16.2.10",
@@ -16,8 +16,8 @@
     {
       "command": "npm test",
       "status": "passed",
-      "tests": 48,
-      "scope": "crypto/schema, sponsorship and grants, stewardship/mirror boundaries, signer-bound plans, backup/receipt context helpers, recovery/preparation, RPC catalog and local workflow; eight offline GitHub publishing safety scenarios with real local Git histories; canonical DNS/port/fragment agreement with contract URL validation"
+      "tests": 49,
+      "scope": "crypto/schema, sponsorship and grants, stewardship/mirror boundaries, signer-bound plans, backup/receipt context helpers, recovery/preparation, RPC catalog and local workflow; eight offline GitHub publishing safety scenarios with real local Git histories; canonical DNS/port/fragment agreement with contract URL validation; realistic NEAR view_code.hash schema, verified-block pinning and network/hash/block/catalog rejection"
     },
     {
       "command": "npm run typecheck",
@@ -95,6 +95,13 @@
       "status": "passed",
       "scope": "server-rendered homepage, static app route, four view destinations, three campaign links, same-page anchors, standalone sample data and 15 local asset/link targets including local font",
       "browser_execution": false
+    },
+    {
+      "command": "readTestnet(sunset.shiftultra.testnet, reviewed code hash)",
+      "status": "passed",
+      "scope": "Actual testnet RPC; verifies network/hash and reads empty campaign catalog from pinned block",
+      "block_height": 275894664,
+      "browser_execution": false
     }
   ],
   "contract_artifact": {
@@ -103,7 +110,18 @@
     "sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
     "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)",
     "source_to_artifact": "Two different source checkout directories and separate target directories; identical locked dependencies and rustc 1.96.0 (ac68faa20). No cross-compiler reproducibility claim.",
-    "deployment": null,
+    "deployment": {
+      "account_id": "sunset.shiftultra.testnet",
+      "network": "testnet",
+      "owner": "shiftultra.testnet",
+      "transaction_hash": "BXT7Z3ENkUBFpSPBkiN28x8pqbsoKhNifvinz1r9Eqw7",
+      "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+      "finalized_block": {
+        "block_hash": "HVEPDZtTF988rMM7Jn6pjmJcGUbqG7QqioXtougtBGiy",
+        "block_height": 275894689
+      },
+      "evidence": "testnet-deployment.json"
+    },
     "api": "Owner-curated sponsorship/review/release/refund/withdrawal plus NEP171 core/events, NEP177 metadata, NEP181 enumeration and current-owner-only mirror maintenance",
     "state_layout_version": 2,
     "callable_exports": 22,
@@ -124,16 +142,16 @@
       "reason": "agent-browser daemon failed; direct Chromium exited -5 with socket setsockopt Operation not permitted"
     },
     {
-      "item": "NEAR Sandbox receipt scenarios, protocol gas metering, real balances and callback failure execution",
-      "reason": "No actual protocol runtime used; host doubles deliberately distinguished"
+      "item": "NEAR Sandbox, maximum-state campaign/callback gas, transfer/callback failure execution",
+      "reason": "Real testnet creation/deployment/initialization verified; host-double business/failure scenarios still need protocol execution"
     },
     {
-      "item": "Testnet deployment, wallet signing, live contribution/release/refund/withdrawal",
-      "reason": "No deployed contract or signer configured; viewer fails closed and plans remain unsigned"
+      "item": "Live campaign contribution/release/refund/withdrawal and NFT handover",
+      "reason": "Contract and local signer verified; no campaign or reviewer/sponsor accounts created yet"
     },
     {
-      "item": "Public frontend deployment and shared live browser service",
-      "reason": "Operator supplied published frontend URL. Hosted browser behaviour/live bytes remain unverified; wallet signing is not implemented."
+      "item": "Hosted browser behavior and live browser wallet signing",
+      "reason": "Prepared resource URLs return exact committed bytes. Corrected reader works against RPC locally; frontend fix awaits user push. Browser signing is not implemented."
     },
     {
       "item": "Independent educator review and sponsor demand",
@@ -159,13 +177,13 @@
     "site_deployed": true,
     "social_posted": false,
     "hackathon_submitted": false,
-    "reason": "Operator will push subsequent commits manually. Prepared testnet assets are not yet published; no deployed NEAR contract or signed settlement is claimed.",
+    "reason": "Operator pushes subsequent local commits. Four prepared resource files verified hosted; reviewed contract deployed and initialized. Campaign settlement remains incomplete.",
     "repository_pushed_by_agent": false,
     "site_url": "https://sunset-lemon.vercel.app",
-    "publication_evidence": "Operator reports publication; earlier repository metadata was visible. Remote HEAD/live website bytes not verified from this executor.",
+    "publication_evidence": "Repository publication reported by operator; exact four public resource files verified via HTTPS. Frontend reader correction pending operator push.",
     "new_contract_review_commit_pending_user_push": true
   },
-  "source_revision": "428eba6",
+  "source_revision": "fd6f57a",
   "deployment_excluded_by_user": false,
   "ui_revision": {
     "source_revision": "f8a53ab54e42748270317f6a9f32680cdc5afb0f",
@@ -197,7 +215,8 @@
     "deployed_url": null,
     "live_wallet_signing": "not implemented; current workbench exports unsigned plans",
     "contract_signer_configured": false,
-    "runbook": "docs/DEPLOYMENT.md"
+    "runbook": "docs/DEPLOYMENT.md",
+    "record_scope": "Historical 1 November assistant access check; superseded for contract/signing by deployment_state and testnet-deployment.json"
   },
   "publishing_preparation": {
     "checked_at": "2026-11-01T17:16:17.469655+00:00",
@@ -220,7 +239,7 @@
     "vercel_setup": "Persistent GitHub integration documented; no new consent link or deployment"
   },
   "testnet_showcase_preparation": "testnet-preparation.json",
-  "source_revision_note": "Base revision before reviewed URI hardening; exact working-tree contract identity is in the artifact and eight source digests.",
+  "source_revision_note": "Base before live deployment/reader fix; reviewed contract source identity remains 5fdc0e7 and the eight source digests.",
   "predeployment_review": {
     "date": "2026-11-02",
     "review_agents": 3,
@@ -232,13 +251,25 @@
     "compiled_wasm_host_scenarios": 11,
     "max_capacity_scenario": "five campaigns and 100 accounts with credits arriving during pending withdrawal, transfer failure restoration, refunds and conservation",
     "protocol_gas_verified": false,
-    "rpc_dns": "cannot resolve testnet RPC hosts",
+    "rpc_dns": "Working: official testnet RPC and test.rpc.fastnear.com verified",
     "near_cli_available": true,
-    "imported_signer_verified": false,
-    "outside_sandbox_rpc_check": "rejected by execution policy: sandbox escalation disabled",
-    "deployment_transaction_submitted": false,
-    "application_tests": 48,
+    "imported_signer_verified": true,
+    "outside_sandbox_rpc_check": "Historical denial before restart; current deployment uses allowed network access without escalation",
+    "deployment_transaction_submitted": true,
+    "application_tests": 49,
     "browser_url_validation_aligned": true,
-    "wallet_import_status": "Browser route failed; direct local import documented, signer not verified"
-  }
+    "wallet_import_status": "Operator-local signer available in secure keychain; signed creation/deployment finalized"
+  },
+  "deployment_state": {
+    "checked_at": "2026-11-02T11:50:51.021966+00:00",
+    "contract_deployed": true,
+    "contract_initialized": true,
+    "secure_local_signer_verified": true,
+    "campaign_count": 0,
+    "reviewer_account_created": false,
+    "sponsor_account_created": false,
+    "campaign_settlement_verified": false,
+    "evidence": "testnet-deployment.json"
+  },
+  "testnet_deployment": "testnet-deployment.json"
 }

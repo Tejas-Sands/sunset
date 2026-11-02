@@ -1,20 +1,26 @@
 {
   "prepared_at": "2026-11-02T09:27:00.133471+00:00",
   "source_base": "4f4e69e66886c9d675a4e24ad1f1086bbed9e40c",
-  "status": "prepared_locally_not_deployed",
+  "status": "contract_deployed_campaign_prepared_not_executed",
   "network": "testnet",
   "owner": "shiftultra.testnet",
   "owner_balance": {
-    "amount_near": "7",
-    "evidence": "operator reported after browser faucet; not queried by executor"
+    "amount_near_before_deployment": "8",
+    "amount_yocto_after_deployment": "3992885010462500000000000",
+    "evidence": "Finalized RPC account queries; exact blocks in testnet-deployment.json"
   },
   "proposed_contract": "sunset.shiftultra.testnet",
   "proposed_reviewer": "reviewer.shiftultra.testnet",
   "proposed_sponsor": "sponsor.shiftultra.testnet",
-  "accounts_created": false,
+  "accounts_created": {
+    "shiftultra.testnet": true,
+    "sunset.shiftultra.testnet": true,
+    "reviewer.shiftultra.testnet": false,
+    "sponsor.shiftultra.testnet": false
+  },
   "independent_humans_verified": false,
   "reported_frontend": "https://sunset-lemon.vercel.app",
-  "host_verification": "user reported; public web fetch unavailable in executor",
+  "host_verification": "All four prepared public files fetched HTTP200 without redirects; exact committed SHA256 hashes verified",
   "campaign": {
     "id": "lantern-trail-testnet-v1",
     "target_near": "0.1",
@@ -61,11 +67,11 @@
     "version": "0.30.1",
     "syntax_source": "official docs and near-cli-rs source",
     "installed_in_executor": true,
-    "commands_executed": "version/help only; no signing/import"
+    "commands_executed": "version/help, account reads, unsent signing probe, signed contract account creation and atomic deployment/initialization"
   },
-  "actual_protocol_execution": false,
-  "wallet_signatures_obtained": false,
-  "public_files_pending_user_push": true,
+  "actual_protocol_execution": true,
+  "wallet_signatures_obtained": true,
+  "public_files_pending_user_push": false,
   "runbook": "docs/TESTNET_SHOWCASE.md",
   "local_checks": {
     "checked_at": "2026-11-02T09:30:28.896261+00:00",
@@ -74,7 +80,7 @@
     "static_pages": "passed",
     "prepared_package": "passed: public/private exact bytes, all commitment hashes, independent HTML recovery, seven unsigned deposit plans",
     "exported_resource_bytes": "match prepared public files at both locations",
-    "guide_syntax": "17 shell blocks pass Bash/Zsh syntax; direct import syntax parsed using CLI --help only",
+    "guide_syntax": "Updated runbook shell blocks parsed in Bash/Zsh; actual completed creation/deployment receipts recorded separately",
     "secret_exclusion": "private backup permissions checked; actual prepared release key absent from static export"
   },
   "faucet_status": {
@@ -94,14 +100,17 @@
     "compiled_wasm_host_scenarios": 11,
     "native_and_wasm_clippy": "passed",
     "artifact_rebuild_and_two_checkout_reproducibility": "passed",
-    "actual_protocol_execution": false,
-    "deployment_transaction_submitted": false
+    "actual_protocol_execution": true,
+    "deployment_transaction_submitted": true
   },
   "wallet_import": {
     "browser_flow": "operator reported failure: generated public key not found on account",
     "operator_rejected_wallet": "MyNearWallet",
     "replacement": "direct interactive private-key or recovery-phrase import with account-key check and keychain storage",
     "secret_entered_by_agent": false,
-    "signer_verified": false
-  }
+    "signer_verified": true,
+    "signer_verification_evidence": "Successful secure-keychain signing and finalized transactions; no private key exported by agent"
+  },
+  "deployment_evidence": "testnet-deployment.json",
+  "actual_protocol_execution_scope": "Contract account creation, deployment, initialization and read-only views only"
 }

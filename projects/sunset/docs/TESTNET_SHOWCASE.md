@@ -1,12 +1,12 @@
 # SUNSET testnet showcase — shiftultra
 
-Prepared 2 November 2026. `shiftultra.testnet` and `https://sunset-lemon.vercel.app` were supplied by the operator. The contract, reviewer and sponsor below are **planned accounts, not verified deployments**. The hosted files, CLI commands, protocol gas, signed transactions and browser/offline flow have not been executed here. Local Wasm host tests do not establish protocol compatibility. This runbook uses testNEAR only.
+Updated 2 November 2026. **Contract deployment is complete:** `sunset.shiftultra.testnet`, owner `shiftultra.testnet`, code hash `9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx`. [Deployment transaction](https://explorer.testnet.near.org/transactions/BXT7Z3ENkUBFpSPBkiN28x8pqbsoKhNifvinz1r9Eqw7) and account creation are finalized successfully; [deployment evidence](../evidence/testnet-deployment.json) records receipts and exact deployed bytes. All four prepared resource URLs on `https://sunset-lemon.vercel.app` returned HTTP 200 with matching hashes. Reviewer/sponsor accounts remain planned, and no campaign settlement or browser/offline flow is verified. Deployment/initialization do not establish callback gas sufficiency or the remaining business flows. This runbook uses testNEAR only.
 
-The commands below would create three accounts controlled by the same operator as `shiftultra.testnet`. This demonstrates separate contract authorities, not independent review, sponsors or adoption. The configured owner is also the fixed creator and payout beneficiary. Browser financial controls remain rehearsal/unsigned planning; real signatures below use the local CLI.
+The contract account was created with four testNEAR. The remaining reviewer/sponsor commands would create accounts controlled by the same operator as `shiftultra.testnet`; separate account authorities do not prove independent review, sponsors or adoption. The configured owner is also the fixed creator and payout beneficiary. Browser financial controls remain rehearsal/unsigned planning; real signatures below use the local CLI. **Do not rerun contract creation or deployment.**
 
 ## 1. Install, fund and identify the exact package
 
-Run on a network-enabled machine. The first command below assumes the repository root; all subsequent commands run from `projects/sunset`. Use the existing private package only on the machine where it was prepared; `private/` is ignored and is absent from fresh clones. A fresh clone must prepare a new campaign/package using [DEPLOYMENT.md](DEPLOYMENT.md), with a new ID, future deadline and final hosting URL. Never regenerate encrypted bytes or change committed terms after campaign creation.
+CLI 0.30.1 and the local keychain signer are already verified on the deployment machine; skip installation/import there. These setup commands are for a new machine. Run on a network-enabled machine. The first command below assumes the repository root; all subsequent commands run from `projects/sunset`. Use the existing private package only on the machine where it was prepared; `private/` is ignored and is absent from fresh clones. A fresh clone must prepare a new campaign/package using [DEPLOYMENT.md](DEPLOYMENT.md), with a new ID, future deadline and final hosting URL. Never regenerate encrypted bytes or change committed terms after campaign creation.
 
 ```sh
 cd projects/sunset
@@ -25,7 +25,7 @@ near account import-account using-seed-phrase network-config testnet --check-acc
 
 Use the derivation path belonging to your wallet. If the derived key is not on the account, retain the error and verify the wallet/account/path; do not bypass the check. Keys stay in the local CLI keychain. Never paste secrets, secret-bearing commands or import transcripts into chat. New role keys below are generated and saved locally by the CLI. No browser-wallet import is needed for this route.
 
-Request additional testNEAR through the [browser faucet](https://near-faucet.io/), linked by [NEAR's faucet documentation](https://docs.near.org/getting-started/faucet). Select **NEAR**, enter **shiftultra.testnet**, try **Amount = 5**, then select **Request**. Follow any displayed maximum/cooldown; the live limit and successful funding have not been verified here. Confirm the resulting wallet balance before creating accounts. Starting from the reported 2 NEAR, about 7 NEAR funds 4 for the contract and 0.5 each for reviewer/sponsor, leaving owner funds for storage and fees.
+Before deployment, RPC independently showed **8 testNEAR** in `shiftultra.testnet`; four were then allocated to the contract. Check the current balance before further account creation or funding. Only if additional tokens are needed, use the [browser faucet](https://near-faucet.io/), linked by [NEAR's faucet documentation](https://docs.near.org/getting-started/faucet): select **NEAR**, enter **shiftultra.testnet**, and follow its displayed amount limit/cooldown. The earlier faucet request itself was not verified by the executor.
 
 **API failure observed on 2 November:** the operator's POST to `https://docs-mcp-f18b.onrender.com/api/faucet` returned HTTP 404 with `Not Found`, despite that route appearing in the [agent-tools documentation](https://docs.near.org/getting-started/tools-for-ai#testnet-faucet-api). The cause is not established; the response does not verify an account or credit any funds. Do not keep retrying that route as a funding step. Browser-page availability is also not evidence that a request succeeded; check the actual balance. After any timeout, check balance before retrying because funding may already have completed.
 
@@ -48,7 +48,7 @@ Expected Wasm SHA-256: `7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5
 
 ## 2. Publish and verify the committed public bytes
 
-Push the prepared public files with the normal verified Git workflow, wait for the Vercel production build, then fetch the actual production URLs. A local commit or successful build does not prove they are hosted. The primary directory is `/testnet/lantern-trail-v1/`; the identical mirror is `/testnet/lantern-trail-mirror-v1/`.
+The prepared public files are already hosted and their exact hashes were verified on 2 November. Recheck these URLs before creating the campaign; after any future file changes, push through the normal Git workflow and wait for the Vercel production build. A local commit or build does not prove hosting. The primary directory is `/testnet/lantern-trail-v1/`; the identical mirror is `/testnet/lantern-trail-mirror-v1/`.
 
 ```sh
 SUNSET_FETCH_DIR="$(mktemp -d)"
@@ -61,32 +61,28 @@ sha256sum "$SUNSET_FETCH_DIR/"*
 
 Both manifest hashes must equal `f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d`; both ciphertext hashes must equal `465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38`. No redirects are followed; stop if any download fails or hash differs. Open the hosted frontend and confirm `/app/` loads.
 
-## 3. Create fresh accounts; deploy and initialize atomically
+## 3. Create the remaining role accounts; verify the existing deployment
 
-Check each planned ID with `near account view-account-summary ID network-config testnet now`. An explicit account-not-found result confirms it is unused; a network error does not. If any exists, inspect ownership/code/state and choose fresh IDs plus a freshly reviewed package where needed. Do not overwrite an existing deployment.
+The contract account creation and atomic deploy/initialization are complete. **Do not repeat those signed actions.** Account creation transaction: `HMwHTAPTPegRH9D8wcsqgsVzWTnVw3cfTVCm3CCxBEWn`. Deployment transaction: `BXT7Z3ENkUBFpSPBkiN28x8pqbsoKhNifvinz1r9Eqw7`.
+
+Reviewer and sponsor returned explicit `UNKNOWN_ACCOUNT` before deployment and remain uncreated in the recorded evidence. Recheck each planned ID with `near account view-account-summary ID network-config testnet now` before creating it. An explicit account-not-found result confirms it is unused; a network error does not. If either exists, inspect ownership and its local signer before proceeding; do not overwrite unrelated accounts.
 
 ```sh
-near account create-account fund-myself "$SUNSET_CONTRACT" '4 NEAR' autogenerate-new-keypair save-to-keychain sign-as "$SUNSET_OWNER" network-config testnet sign-with-keychain send
 near account create-account fund-myself "$SUNSET_REVIEWER" '0.5 NEAR' autogenerate-new-keypair save-to-keychain sign-as "$SUNSET_OWNER" network-config testnet sign-with-keychain send
 near account create-account fund-myself "$SUNSET_SPONSOR" '0.5 NEAR' autogenerate-new-keypair save-to-keychain sign-as "$SUNSET_OWNER" network-config testnet sign-with-keychain send
-
-near contract deploy "$SUNSET_CONTRACT" use-file contracts/sunset/res/sunset_contract.wasm \
-  with-init-call new file-args "$SUNSET_PRIVATE/init.json" \
-  prepaid-gas '100 Tgas' attached-deposit '0 NEAR' \
-  network-config testnet sign-with-keychain send
 ```
 
-Deploy signs as `sunset.shiftultra.testnet`, satisfying private `new`; `init.json` sets owner to `shiftultra.testnet`. [Official deployment source](https://raw.githubusercontent.com/near/near-cli-rs/main/src/commands/contract/deploy/mod.rs) and [batched initializer](https://raw.githubusercontent.com/near/near-cli-rs/main/src/commands/contract/deploy/initialize_mode/call_function_type/mod.rs) confirm this behavior. The deployment remains upgradeable while full-access keys exist.
+The completed deployment signed as `sunset.shiftultra.testnet`, satisfying private `new`; `init.json` set owner to `shiftultra.testnet`. [Official deployment source](https://raw.githubusercontent.com/near/near-cli-rs/main/src/commands/contract/deploy/mod.rs) and [batched initializer](https://raw.githubusercontent.com/near/near-cli-rs/main/src/commands/contract/deploy/initialize_mode/call_function_type/mod.rs) confirm this behavior. The deployment remains upgradeable while full-access keys exist.
 
 ```sh
 near contract call-function as-read-only "$SUNSET_CONTRACT" get_config json-args '{}' network-config testnet now
 curl --fail --silent --show-error --max-time 30 https://test.rpc.fastnear.com \
   -H 'Content-Type: application/json' \
   --data '{"jsonrpc":"2.0","id":"sunset-code","method":"query","params":{"request_type":"view_code","finality":"final","account_id":"sunset.shiftultra.testnet"}}' \
-  | python3 -c 'import json,os,sys; r=json.load(sys.stdin)["result"]; assert r["code_hash"]==os.environ["SUNSET_CODE_HASH"], "Wrong deployed code hash"; print(json.dumps({k:r[k] for k in ("code_hash","block_hash","block_height")},indent=2))'
+  | python3 -c 'import json,os,sys; r=json.load(sys.stdin)["result"]; assert r["hash"]==os.environ["SUNSET_CODE_HASH"], "Wrong deployed code hash"; print(json.dumps({k:r[k] for k in ("hash","block_hash","block_height")},indent=2))'
 ```
 
-Confirm network `testnet`, owner `shiftultra.testnet`, state layout `2`, and initially zero campaigns. Preserve the finalized block/hash output and deployment transaction ID. [RPC `view_code`](https://docs.near.org/api/rpc/contracts#view-contract-code) returns the actual deployed code hash; a local file hash alone is insufficient.
+Confirm network `testnet`, owner `shiftultra.testnet`, state layout `2`, and initially zero campaigns. Preserve the finalized block/hash output and deployment transaction ID. `view_code` returns the Base58 code digest in **`hash`**; `view_account` uses a different field, `code_hash`. [RPC `view_code`](https://docs.near.org/api/rpc/contracts#view-contract-code) returns the actual deployed code hash; a local file hash alone is insufficient.
 
 ## 4. Create, inspect and approve the exact agreement
 
@@ -169,6 +165,8 @@ near transaction view-status ACTUAL_TRANSACTION_HASH network-config testnet
 Record transaction/receipt IDs, finalized blocks, signer/receiver/method/deposit, gas and balances. If execution/callback status is unknown or `pending` persists, retain `(contract,account_id,operation_id)` and investigate the original receipts. No timeout recredit exists; never infer that retrying a withdrawal is safe. These 100-Tgas budgets remain unvalidated by protocol metering; failures must be recorded accurately.
 
 ## 6. Verify the hosted reader and stewardship handover
+
+Push the local reader correction and wait for the production build before connecting: the live RPC exposed a `view_code.hash` field mismatch that is fixed locally and covered by regression tests. The corrected reader was verified against the real contract from Node; hosted browser execution remains to be checked.
 
 Open `https://sunset-lemon.vercel.app/app/`, select **Testnet setup**, enter contract `sunset.shiftultra.testnet` and expected Base58 code hash `9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx`, then connect. Confirm verified network/code/block identity. In Public resources, verify the released pack, play it and export/download its standalone HTML. Close the site, disable networking, open the downloaded file in a fresh browser session and complete the game. Record actual browser results; local recovery alone does not prove this flow.
 

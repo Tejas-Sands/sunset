@@ -18,7 +18,13 @@
   "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
   "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
   "target": "wasm32-unknown-unknown",
-  "network_deployment": null,
+  "network_deployment": {
+    "network": "testnet",
+    "account_id": "sunset.shiftultra.testnet",
+    "transaction_hash": "BXT7Z3ENkUBFpSPBkiN28x8pqbsoKhNifvinz1r9Eqw7",
+    "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "evidence": "../../evidence/testnet-deployment.json"
+  },
   "checks": {
     "rust_behavior_tests": {
       "status": "passed",
@@ -32,9 +38,9 @@
     "native_clippy": "passed",
     "wasm_clippy": "passed",
     "near_sandbox": "not run; executable unavailable",
-    "testnet_deployment": "not run; CLI absent, RPC DNS blocked and no imported signer verified",
-    "protocol_gas_metering": "not verified",
-    "actual_wallet_or_transfer_receipts": "not verified",
+    "testnet_deployment": "passed: finalized atomic deployment and private initialization; remote Wasm byte-identical",
+    "protocol_gas_metering": "Creation/deployment/initialization gas recorded; campaign and callback gas unverified",
+    "actual_wallet_or_transfer_receipts": "Signed creation/funding and deployment receipts verified; campaign payments and withdrawals not executed",
     "test_first_failures": "Observed native unknown-method failures and missing compiled-Wasm NFT exports before implementation; strict token-id regression failed before correction. Native and compiled-Wasm same-account reviewer tests failed before the creator/reviewer distinction guard. Shared URI regressions failed for empty campaign authority and malformed mirror authority before hardening; rejected calls must preserve complete state.",
     "build_script_syntax": "passed",
     "compiler_version_guard": "passed; rejected simulated installed rustc 1.95.0 before Cargo execution",
