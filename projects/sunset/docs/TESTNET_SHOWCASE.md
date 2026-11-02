@@ -17,16 +17,9 @@ near account import-account using-web-wallet network-config testnet
 
 The [official release](https://github.com/near/near-cli-rs/releases/tag/v0.30.1) is pinned here; [installation/import syntax](https://docs.near.org/tools/cli) was checked against official docs, not executed. Authorize **shiftultra.testnet** in the browser. Keys stay in the local CLI keychain; never paste seed phrases/private keys into chat or commands. New role keys below are generated and saved locally by the CLI.
 
-Request **5 additional testNEAR for existing account `shiftultra.testnet`** through the documented [Testnet Faucet API](https://docs.near.org/getting-started/tools-for-ai#testnet-faucet-api):
+Request additional testNEAR through the [browser faucet](https://near-faucet.io/), linked by [NEAR's faucet documentation](https://docs.near.org/getting-started/faucet). Select **NEAR**, enter **shiftultra.testnet**, try **Amount = 5**, then select **Request**. Follow any displayed maximum/cooldown; the live limit and successful funding have not been verified here. Confirm the resulting wallet balance before creating accounts. Starting from the reported 2 NEAR, about 7 NEAR funds 4 for the contract and 0.5 each for reviewer/sponsor, leaving owner funds for storage and fees.
 
-```sh
-curl --fail-with-body --max-time 120 \
-  --request POST 'https://docs-mcp-f18b.onrender.com/api/faucet' \
-  --header 'Content-Type: application/json' \
-  --data '{"accountId":"shiftultra.testnet"}'
-```
-
-The documented success response is HTTP 200 with `success:true` and a message confirming 5 NEAR. Confirm the resulting balance rather than assuming a request succeeded; after a timeout, check balance before retrying because funding may already have completed. Starting from the reported 2 NEAR, about 7 NEAR funds 4 for the contract and 0.5 each for reviewer/sponsor, leaving owner funds for storage and fees. The [browser faucet](https://docs.near.org/getting-started/faucet) is an alternative, but its amount/availability can differ.
+**API failure observed on 2 November:** the operator's POST to `https://docs-mcp-f18b.onrender.com/api/faucet` returned HTTP 404 with `Not Found`, despite that route appearing in the [agent-tools documentation](https://docs.near.org/getting-started/tools-for-ai#testnet-faucet-api). The cause is not established; the response does not verify an account or credit any funds. Do not keep retrying that route as a funding step. Browser-page availability is also not evidence that a request succeeded; check the actual balance. After any timeout, check balance before retrying because funding may already have completed.
 
 The 266,190-byte Wasm represents approximately 2.6619 NEAR of raw code collateral before account allowances, plus state and gas. **2 NEAR is insufficient.** [Storage pricing](https://docs.near.org/protocol/storage/storage-staking) is `10^19` yoctoNEAR per byte. Four contract NEAR is a working allocation, not a measured maximum-state guarantee.
 

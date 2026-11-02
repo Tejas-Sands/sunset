@@ -74,7 +74,17 @@
     "static_pages": "passed",
     "prepared_package": "passed: public/private exact bytes, all commitment hashes, independent HTML recovery, seven unsigned deposit plans",
     "exported_resource_bytes": "match prepared public files at both locations",
-    "guide_syntax": "17 shell blocks pass Bash and Zsh syntax only; CLI not executed",
+    "guide_syntax": "16 shell blocks pass Bash and Zsh syntax only; CLI not executed",
     "secret_exclusion": "private backup permissions checked; actual prepared release key absent from static export"
+  },
+  "faucet_status": {
+    "documented_api": "https://docs-mcp-f18b.onrender.com/api/faucet",
+    "operator_reported_http_status": 404,
+    "operator_reported_body": "Not Found",
+    "failure_cause": "not established",
+    "fallback": "https://near-faucet.io/",
+    "fallback_page": "NEAR/address/amount/request form fetched successfully via web reader",
+    "fallback_funding_verified": false,
+    "current_limit_verified": false
   }
 }
