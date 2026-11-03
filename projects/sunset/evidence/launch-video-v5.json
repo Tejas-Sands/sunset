@@ -1,0 +1,342 @@
+{
+  "version": 5,
+  "checked_at": "2026-11-03T08:53:21.030480+00:00",
+  "status": "prepared_locally_verified_not_posted",
+  "film_path": ".publication/sunset-launch-v5/sunset-launch-v5.mp4",
+  "bytes": 5966642,
+  "sha256": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+  "duration_seconds": 24,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "format": "H.264 yuv420p BT709 limited / AAC48kHz stereo MP4 faststart",
+  "script": {
+    "file": "../media/launch-v5/SCRIPT.md",
+    "words": 44,
+    "measured_cues": 9,
+    "voice": "Fresh Kokoro am_michael,0.98natural synthesis speed, no cloning/pitch shift/time compression",
+    "voice_end_seconds": 22.328,
+    "tail_seconds": 1.6720000000000006
+  },
+  "direction": "Original resource\u2192community NEAR escrow\u2192on-time key/creator withdrawal\u2192missed-deadline sponsor claims\u2192actual downloaded offline copy\u2192original mark/URL; native macro handoffs and protected read windows.",
+  "reference_research": "../media/launch-v4/RESEARCH.md",
+  "reference_media_or_audio_reused": false,
+  "skills_used": "../media/launch-v5/SKILLS_USED.md",
+  "screenplay": "../media/launch-v5/SCRIPT.md",
+  "storyboard": "../media/launch-v5/STORYBOARD.md",
+  "source_hashes": {
+    "narration-script.json": "ef71b2a4934a0f3810726df3caf58587055519dd1b7ab793d693940df212818c",
+    "prepare_audio.py": "79d3ff091282a835b7bff3e53bbdb5caf6590aa9cd180bad440b3d362a0e5f6d",
+    "render_launch.py": "43b312928dc011371f835055a9e131682844f386a6b17d22f81c9e4113a7611e",
+    "render_scene.mjs": "66b8e26dde1fc8e8c727c1478c9b0c2e5f6657fcfea0c162625d6d9b0431c7d4",
+    "scene.mjs": "b04115454913ce16911d182da4ea71afc466edcd9ad233d63ce15c01af39a2f5",
+    "verify.py": "6c79905866aee58499aedea014eaa7ab4f519b46873bcfdb48da3559cff48e6c"
+  },
+  "native_capture": {
+    "frames": 528,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "format": "PNG",
+    "actual_msaa_samples": 4,
+    "source_time": "Exact n/30seconds for0..485 and588..629",
+    "omitted_cg_intervals": [
+      {
+        "start_frame": 486,
+        "end_exclusive": 588,
+        "reason": "Opaque genuineDPR2UI"
+      },
+      {
+        "start_frame": 630,
+        "end_exclusive": 720,
+        "reason": "Clean original-mark endcard"
+      }
+    ],
+    "motion_interpolation": false,
+    "jpeg": false,
+    "lower_resolution_cg_upscale": false,
+    "crc_hash_dimensions": "All528passed",
+    "manifest_sha256": "103cf0adfa4e00f09d2df2f9a87f6a44ee865fdf21a99d6a1332f14603b5c122",
+    "sequence_sha256": "eedefae818bf2c8daef94558108137fe1ed6bbb39c0b1e467031e1603cd1530e",
+    "sequence_hash_method": "SHA256 of sorted lines <six-digit-index>:<fileSHA256>\\n",
+    "texture_dimensions": [
+      2048,
+      1536
+    ],
+    "texture_source": "Original product landscape SVG and native Geist text; no enlarged screenshot",
+    "renderer": "WebGL2/ANGLE/VulkanSwiftShader software; actual AA4 checked perframe"
+  },
+  "actual_browser_capture": {
+    "captured_at": "2026-11-03T08:14:55.001Z",
+    "source_site": "https://sunset-lemon.vercel.app/app/",
+    "css_viewport": [
+      1920,
+      1080
+    ],
+    "dpr": 2,
+    "captures": [
+      {
+        "file": "01-hosted-resource-before@2x.png",
+        "selector": "#sunset-capture-resource",
+        "css_box": {
+          "x": 436,
+          "y": 1124.578125,
+          "width": 1312,
+          "height": 421.390625
+        },
+        "device_scale_factor": 2,
+        "pixel_dimensions": [
+          2624,
+          842
+        ],
+        "bytes": 99542,
+        "sha256": "4ba2658523f941c58a5b58c4a386931066c4195e1562463c662b8baab63a83b7",
+        "scope": "Actual pinned read-only released campaign"
+      },
+      {
+        "file": "02-hosted-download-context@2x.png",
+        "selector": "#sunset-capture-resource",
+        "css_box": {
+          "x": 436,
+          "y": 1124.578125,
+          "width": 1312,
+          "height": 504.390625
+        },
+        "device_scale_factor": 2,
+        "pixel_dimensions": [
+          2624,
+          1008
+        ],
+        "bytes": 115946,
+        "sha256": "d89837c53eaffb8a11ec2b8309548dc16f87d064565047bb4a5ea19a4dd51140",
+        "scope": "Actual recovered committed pack and Download standalone game control"
+      },
+      {
+        "file": "03-hosted-game-start@2x.png",
+        "selector": ".game-modal",
+        "css_box": {
+          "x": 620,
+          "y": 1039.609375,
+          "width": 680,
+          "height": 674.765625
+        },
+        "device_scale_factor": 2,
+        "pixel_dimensions": [
+          1360,
+          1348
+        ],
+        "bytes": 102132,
+        "sha256": "bbba21c589b47bbe962e38b6618ae7fc1ecd12e535d3f4b4fc94da0b8b6b08b3",
+        "scope": "Actual recovered game before first answer"
+      },
+      {
+        "file": "04-hosted-game-feedback@2x.png",
+        "selector": ".game-modal",
+        "css_box": {
+          "x": 620,
+          "y": 933.296875,
+          "width": 680,
+          "height": 887.40625
+        },
+        "device_scale_factor": 2,
+        "pixel_dimensions": [
+          1360,
+          1774
+        ],
+        "bytes": 129496,
+        "sha256": "16ebcf7492d30ef652367d391706a73acdc05a3a821dcfdb513ac22b768e3c72",
+        "scope": "Actual answer12 and success feedback"
+      },
+      {
+        "file": "05-actual-download-offline-start@2x.png",
+        "selector": "main",
+        "css_box": {
+          "x": 580,
+          "y": 0,
+          "width": 760,
+          "height": 1042.984375
+        },
+        "device_scale_factor": 2,
+        "pixel_dimensions": [
+          1520,
+          2084
+        ],
+        "bytes": 194994,
+        "sha256": "5c44d60054266cc1ec26c3054bf9f5197f94c02e9a357cb745c8626b6c23455c",
+        "scope": "Actual downloaded HTML after browser offline enabled"
+      },
+      {
+        "file": "06-actual-download-offline-feedback@2x.png",
+        "selector": "main",
+        "css_box": {
+          "x": 580,
+          "y": 0,
+          "width": 760,
+          "height": 1042.984375
+        },
+        "device_scale_factor": 2,
+        "pixel_dimensions": [
+          1520,
+          2084
+        ],
+        "bytes": 211412,
+        "sha256": "43ca736d28cd1dd977e6f2c07cce141bf397f4ba416e30d3fd7f9f25070f05d0",
+        "scope": "Actual downloaded HTML answer/feedback with browser offline"
+      }
+    ],
+    "chain": {
+      "network": "testnet",
+      "contract": "sunset.shiftultra.testnet",
+      "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+      "height": 276022733,
+      "campaigns": [
+        {
+          "id": "lantern-trail-testnet-v1",
+          "state": "Released"
+        },
+        {
+          "id": "refund-funding-20261103-v1",
+          "state": "Refundable"
+        },
+        {
+          "id": "refund-release-20261103-v1",
+          "state": "Refundable"
+        }
+      ]
+    },
+    "download": {
+      "file": "downloads/lantern-trail-testnet-v1-offline.html",
+      "bytes": 7246,
+      "sha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738"
+    },
+    "offline": {
+      "onLine": false,
+      "resources": 0,
+      "scheme": "file:"
+    },
+    "console_errors": [],
+    "scope": "Dedicated task-owned profile. Read-only public contract verification/recovery/download/gameplay; no wallet, signing, transaction, secret backup or user profile accessed."
+  },
+  "authored_text": {
+    "records": 2133,
+    "source_contrast_minimum": 16.344226568370733,
+    "encoded_contrast_minimum": 16.0533,
+    "method": "Every encoded frame: interior opaque glyph/controlled plane RGB probes; all promised headline records verified through stable windows. Antialiased edges/incidental UI text excluded.",
+    "safe_bbox": [
+      192,
+      108,
+      1728,
+      972
+    ],
+    "url_stable_seconds": 3,
+    "proof_sha256": "448b1e50c2fbd2e773848a0f5286c27c79c667304856cc84bf5ffe4142d172c6"
+  },
+  "encoding": {
+    "delivered_video_generations": 1,
+    "input": "Native RGB frames and mastered WAV directly",
+    "crf": 14,
+    "aac_target_bitrate": 320000,
+    "bt709_tags_verified": true,
+    "faststart": true,
+    "discarded_initial_export": {
+      "sha256": "2bb11d09e81e68699b43908c30dd0e904f3d6a3f0dc002ce4a813384bdb4cc88",
+      "reason": "Primaries/transfer tags were absent; tiny reproducer proved explicit filter setparams fix. Fresh native-source export replaces it."
+    },
+    "lossy_repair_chain": false,
+    "composite_provenance_sha256": "aaf0836f8decdb94235939ef00ad7bf22854775820db6bcbba41d47bbf57bf31"
+  },
+  "audio": {
+    "master_sha256": "2cf8c3e055d5830f88d69a53185b78a60f50157649efcbac0b75e8bd995564f1",
+    "narration_sha256": "d7c334e17336ad76a13d55882d28a50e7f1b523caba619e81d27ebb79c0b8c69",
+    "loudness_lufs": -16.01,
+    "true_peak_dbtp": -2.9,
+    "voice_overlap": false,
+    "perceptual_listening_verified": false,
+    "music": {
+      "title": "Computations in a Snowstorm",
+      "variant": "No Cello",
+      "artist": "Scott Buckley",
+      "page": "https://www.scottbuckley.com.au/library/computations/",
+      "download": "https://www.scottbuckley.com.au/library/wp-content/uploads/2019/01/sb_computations_altmix.mp3",
+      "file": "scott-buckley-computations-no-cello.mp3",
+      "artist_description": "Ambient electronics, strings and solo cello; no cello alternate transforms it into atmospheric underscore.",
+      "sha256": "678dabce348ecd305ee4c998b258275acd1f4731a858083d11535467207bc5e0",
+      "bytes": 14468976,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "'Computations in a Snowstorm' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au",
+      "changes_to_disclose": "No Cello alternate mix excerpt205\u2013229s; edited with fades, EQ and ducking beneath narration.",
+      "perceptual_listening": "Not performed by this tool; selection based on official artist description and measured signal.",
+      "selected": true,
+      "excerpt_start_seconds": 205.0,
+      "excerpt_end_seconds": 229.0,
+      "excerpt_duration_seconds": 24.0,
+      "selection_basis": "Artist describes no-cello atmospheric electronic/strings underscore; 205\u2013229s has measurable stable energy and avoids the opening. No perceptual listening claim.",
+      "one_second_rms_range_db_in_excerpt": 6.16,
+      "excerpt_first_second_rms_db": -17.7,
+      "processing": {
+        "music_highpass_hz": 50,
+        "music_presence_eq_hz": 2500,
+        "music_presence_eq_db": -2.5,
+        "fade_in_seconds": 0.18,
+        "fade_out_seconds": 0.75,
+        "speech_duck_attack_seconds": 0.08,
+        "speech_duck_release_seconds": 0.34,
+        "speech_duck_gain": 0.5,
+        "overall_bed_gain": 1.3682660236855195,
+        "voice_processing": "70Hz highpass, -1.5dB at250Hz, 2:1 compressor, loudness normalization; no pitch shift or time stretch",
+        "master": "loudnorm=I=-16:TP=-2.2:LRA=8:linear=true:measured_I=-15.30:measured_TP=-2.20:measured_LRA=2.90:measured_thresh=-25.93:offset=0.32"
+      },
+      "attribution_required": true,
+      "attribution_placement": "Burned-in end-card credit plus post/video description and CREDITS.",
+      "reference_audio_used": false
+    },
+    "credits": "../media/launch-v5/CREDITS.md",
+    "post_copy": "../media/launch-v5/x-post.txt",
+    "burned_credit_seconds": 1.6,
+    "added_or_procedural_sound_effects": false
+  },
+  "verification": {
+    "command": "python3 projects/sunset/media/launch-v5/verify.py",
+    "exit_code": 0,
+    "full_decode": "passed",
+    "unexpected_black_intervals": 0,
+    "blackdetect": {
+      "duration": 0.2,
+      "pixel_threshold": 0.01,
+      "picture_threshold": 0.98
+    },
+    "exact_nine_captions": true,
+    "native_sources_verified": true,
+    "actual_ui_hashes_verified": true,
+    "objective_qa_sha256": "cda420ae0fdc1bdee3bfb786f5f1ed9ca9e3f357b46ad9dee278559c9648cc35"
+  },
+  "visual_review": {
+    "root_and_fresh_context_reviewer": true,
+    "final_p0": 0,
+    "final_p1": 0,
+    "sheets": [
+      "review/beat-sheet.jpg",
+      "review/phone-sheet.jpg",
+      "review/cut-sheet.jpg"
+    ],
+    "review_file": "../media/launch-v5/REVIEW.md",
+    "first_time_captioned_story_comprehension": "Passed agent review; no human audience validation claimed.",
+    "full_subjective_audio_playback": false
+  },
+  "preserved_versions": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b"
+  },
+  "generated_media_models_music_dependencies_skills_and_private_files_ignored": true,
+  "public_x_post_url": null,
+  "submission_sent": false,
+  "chain_mutations": 0,
+  "application_or_contract_changes": false
+}

@@ -1,6 +1,7 @@
 Funded onchain. Kept offline.
 
 SUNSET funds public learning packs on @NEARProtocol.
+Built at NEAR HACKATHON.
 Testnet demo: https://sunset-lemon.vercel.app
 #NEARHackathon
 

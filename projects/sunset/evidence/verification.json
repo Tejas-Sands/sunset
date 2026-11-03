@@ -115,13 +115,13 @@
     {
       "command": "Actual hosted browser reader and original/steward mirror recovery",
       "status": "passed",
-      "scope": "HeadlessChrome 156 desktop 1920×1080; pinned network/code/block, live Released campaign, exact original/mirror pack recovery, gameplay and browser downloads; no browser wallet signing",
+      "scope": "HeadlessChrome 156 desktop 1920\u00d71080; pinned network/code/block, live Released campaign, exact original/mirror pack recovery, gameplay and browser downloads; no browser wallet signing",
       "evidence": "browser-showcase.json"
     },
     {
       "command": "Cold browser standalone file with offline enabled before load",
       "status": "passed",
-      "scope": "Actual downloaded 7,246-byte game; fresh browser, Chrome DevTools offline before file load, all five answers correct, completion/restart, zero external resource entries; 390×844 offline game no horizontal overflow. No operating-system network toggle or mobile homepage verification.",
+      "scope": "Actual downloaded 7,246-byte game; fresh browser, Chrome DevTools offline before file load, all five answers correct, completion/restart, zero external resource entries; 390\u00d7844 offline game no horizontal overflow. No operating-system network toggle or mobile homepage verification.",
       "evidence": "browser-showcase.json"
     }
   ],
@@ -308,12 +308,13 @@
   "browser_showcase": "browser-showcase.json",
   "operator_control": "All financial roles share one operator; separate IDs prove authority checks, not independent people.",
   "launch_media": {
-    "status": "current_v4_prepared_locally_not_posted",
+    "status": "current_v5_prepared_locally_verified_not_posted",
     "duration_seconds": 24,
     "delivery_guide": "../docs/LAUNCH_VIDEO.md",
-    "evidence": "launch-video-v4.json",
-    "source": "../media/launch-v4/README.md",
+    "evidence": "launch-video-v5.json",
+    "source": "../media/launch-v5/README.md",
     "previous_version_evidence": [
+      "launch-video-v4.json",
       "launch-video-v3.json",
       "launch-video-v2.json",
       "launch-video.json"

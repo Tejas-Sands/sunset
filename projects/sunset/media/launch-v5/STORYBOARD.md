@@ -49,7 +49,7 @@ The same pack enters the escrow capsule. A small number of substantial sponsor o
 - voiceover: Publish the matching key on time.
 - reads: AGREED KEY at 8.20–10.10s; minimum 1.1s for two words
 - sound: licensed Scott Buckley score under calm male narration; no added sound effects
-- transition_in: the capsule's existing seam becomes the release point
+- transition_in: full-canvas native material macro at 7.80–8.16s; title plane stays off until the camera returns, then the full read lands at 8.20s
 
 The resource enclosure opens as the narration states the matching-key requirement. This is a mechanism illustration, not a recorded cryptographic-verification UI. Keep the pack continuous between shots. A macro pass can fill the frame, then a clear arrival shows the open state. The visible open state carries the transition; no unrelated colour flash is needed.
 
@@ -71,7 +71,7 @@ Show an editorial credit moving from the released campaign to the creator's clai
 - voiceover: Miss a deadline, sponsors can claim refunds.
 - reads: DEADLINES ENFORCED at 13.30–14.55s; then CLAIM REFUNDS at 14.70–16.00s
 - sound: licensed Scott Buckley score under calm male narration; no added sound effects
-- transition_in: a brief alternate outcome, clearly distinct from the successful release
+- transition_in: full-canvas clock/material macro at 13.00–13.27s; title plane stays off until the camera returns, then the full read lands at 13.30s
 
 Use a concise branch of the same funding mechanism: the release remains closed and the sponsor contribution returns to a claimable state. This illustrates the applicable missed-deadline rule. It is not a rollback of the already Released showcase campaign. Retain the same object scale and camera direction so the safety condition is understood without starting an unrelated scene.
 
