@@ -22,7 +22,7 @@ A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-
 
 The [testnet showcase guide](docs/TESTNET_SHOWCASE.md) now replays the completed `lantern-trail-testnet-v1` campaign through read-only checks and actual receipt links. Reviewer/sponsor accounts exist, the campaign is `Released`, creator `paid` is 0.1 testNEAR with no pending withdrawal, and the NFT holder is `reviewer.shiftultra.testnet`. Do not repeat its signed actions. Separate campaigns and real waiting are still needed for both expiry refunds.
 
-An 82-second launch film with AI narration, captions and genuine product captures is prepared locally, together with X post/thread and pitch copy. The [launch delivery guide](docs/LAUNCH_VIDEO.md) links its source and verification record; the video has not been posted or submitted.
+The current launch cut is a 30-second kinetic film with sparse AI narration, animated type, short genuine app moments and captions. The earlier 82-second explainer is preserved separately. The [launch delivery guide](docs/LAUNCH_VIDEO.md) links current media, post copy, source and verification; no social post or submission has been sent by the assistant.
 
 ## Landing and workspace
 

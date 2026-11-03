@@ -1,40 +1,37 @@
-# SUNSET launch video and post
+# SUNSET launch video — current kinetic cut
 
-Keep `https://sunset-lemon.vercel.app`. The existing hosted site works; a custom domain adds nothing required for this demonstration.
+The current X launch film is **v2: 30 seconds, 1920×1080 at 30fps, about 3 MB**. It replaces the earlier 82-second narrated-card format for the public launch. The original film and its evidence are preserved as v1.
 
-The delivery is an **82-second, 1920×1080 H.264/AAC MP4**, about **11.3 MB**, with local AI narration, burned-in captions, original ambient chords, the existing SUNSET identity and genuine product captures. The film shows the successful 0.1-testNEAR release/payout, real offline gameplay and stewardship mirror handover. The refund card describes the contract rule and clearly says that a live expiry-refund run is not shown. The film is an edited sequence of genuine captures rather than a continuous screen recording.
+## Watch and post
 
-## Open the delivery
-
-Generated media stays in the ignored repository-root directory `.publication/sunset-launch-v1/render/`:
-
-- `sunset-launch.mp4` — upload this video.
-- `sunset-launch-poster.png` — cover image.
-- `sunset-launch.srt` — matching subtitle sidecar; the video already has visible captions.
-- `contact-sheet.jpg`, `media-qa.json`, `media-provenance.json`, `sunset-launch-credits.md` — review and provenance.
-
-From the repository root on the Linux laptop:
+From the repository root:
 
 ```sh
-xdg-open .publication/sunset-launch-v1/render/sunset-launch.mp4
+xdg-open .publication/sunset-launch-v2/sunset-launch-v2.mp4
 ```
 
-Listen through once and check pacing on a phone before posting. The tools verified codecs, duration, captions, keyframes, full decode, no black frames, loudness and peak levels; perceptual listening was unavailable. Do not replace this with a claim that listening was verified.
+The ignored local delivery directory `.publication/sunset-launch-v2/` contains:
 
-## Publish on X
+- `sunset-launch-v2.mp4` — the current video to upload natively to X.
+- `sunset-launch-v2-poster.png` — cover image.
+- `sunset-launch-v2.srt` — exact six-phrase subtitles; captions are also visible in the film.
+- `full-motion-contact-sheet.jpg`, decoded review frames, `media-qa.json`, `media-provenance.json` and `CREDITS.md`.
+- `sunset-motion-proof.mp4` — the separate 9.6-second style test.
 
-Use [the main post](../media/launch/x-post.txt), attach the MP4 as a native video, and optionally follow with [the five-post thread](../media/launch/x-thread.txt). [The pitch and launch story](../media/launch/pitch.md) provide the longer narrative. Each draft post fits 280 weighted characters, with URLs treated as 23 characters; confirm the composer preview before sending.
+Use the [current X post copy](../media/launch-v2/x-post.txt). Preview the film with sound and in a phone-sized player before posting; perceptual listening was unavailable to the tools. The edit uses 40 words of AI narration with deliberate gaps, independent type/artwork/UI layers, masks, camera movement and original 128 BPM sound design. The app moments show a real answer/feedback state and a retained offline game rather than a full protocol walkthrough.
 
-The [official event instructions](https://nearhackathon.com/HACKATHON.md) ask the human to post the demo, explicitly say it was built at NEAR HACKATHON, include `@NEARProtocol` and `#NEARHackathon`, and attach the video or screenshots. The supplied main post includes those details. The current [X upload guidance](https://help.x.com/en/using-x/x-videos) permits non-Premium uploads up to 140 seconds and 512 MB; this export is within both limits. No paid X plan, domain or rendering service is needed for this delivery.
+## Why this format fits
 
-After posting, retain the actual public X post URL. The [unsubmitted draft](SUBMISSION_DRAFT.json) still needs that URL, real team/contact information, the prize payout account and explicit approval of the final submission payload. The repository is public at `https://github.com/Tejas-Sands/sunset`. Keep the hosted demo available through 18 November, preferably 25 November, as requested by the event instructions.
+The [official event guidance](https://nearhackathon.com/HACKATHON.md) asks for a complete user action with a visible result and discourages long introductions, architecture slides and setup. It does not require a full end-to-end workflow or prescribe a minimum clip duration. The main answer-selection/feedback moment supplies that visible result. The post must say it was built at NEAR HACKATHON, include @NEARProtocol and #NEARHackathon, and attach the demo media. The provided copy includes those details and NEAR’s concrete release/payout role.
 
-## Proof and scope
+The chosen 30-second length is a creative decision. It also fits the current [non-Premium X upload limits](https://help.x.com/en/using-x/x-videos) of 140 seconds and 512 MB. Keep the existing Vercel URL; no domain purchase or paid renderer is needed.
 
-[Live showcase evidence](../evidence/testnet-showcase.json) records eleven finalized transactions: ten successful steps and the intentional rejected former-steward edit. It includes the native 0.1-testNEAR creator transfer, successful withdrawal callback, pending-null account state, NFT handover and accepted new mirror.
+[Reference research](../media/launch-v2/RESEARCH.md) explains the Brag examples actually inspected, the written primary sources, the problem with the v1 renderer and the replacement’s motion grammar. [Source/edit recipe](../media/launch-v2/README.md) and [current media verification](../evidence/launch-video-v2.json) identify the exact film.
 
-[Browser evidence](../evidence/browser-showcase.json) records actual hosted reader/hash verification, original/mirror recovery and identical browser downloads. A fresh browser had offline emulation enabled before opening the downloaded file, completed all five questions and restarted with no resource requests. Offline mobile layout passed at 390×844. No operating-system network-adapter toggle, mobile-homepage pass, broad device audit or browser wallet signing is claimed.
+## Truthful scope
 
-All demo roles share one operator. Real expiry refunds, maximum-state/callback-failure protocol checks, independent educator review and sponsor demand remain open. The contract retains full-access upgrade control. A second path on the same Vercel host demonstrates mirror selection rather than independent hosting.
+The UI pixels come from the [verified hosted/offline captures](../evidence/browser-showcase.json). Pointer actions are choreographed replays of the recorded answer and download actions; the HTML tile and copy fan are illustrations. This is an edited launch film, not an uninterrupted screen recording. No financial browser action, new wallet feature, adoption claim or new onchain event is invented. The underlying [testnet payout and stewardship evidence](../evidence/testnet-showcase.json) remains unchanged.
 
-[Media verification](../evidence/launch-video.json) · [renderer and source](../media/launch/README.md). The model, voice-bank, raw audio/video and browser captures stay local in the ignored delivery directory. No wallet keys or private release backups belong in this package.
+V1 stays in `.publication/sunset-launch-v1/render/` with its [original source](../media/launch/README.md) and [historical media evidence](../evidence/launch-video.json). Both actual expiry refunds, failure/max-state protocol tests and independent human validation remain open; the current trailer omits those demonstrations.
+
+No social post or final submission has been sent by the assistant. After the human posts the video, retain its public X URL for the [unsubmitted draft](SUBMISSION_DRAFT.json), along with actual team/contact/payout details and approval of the final submission payload. Keep the hosted demo available through the event’s judging period.

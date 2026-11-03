@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "version": 2,
+  "checked_at": "2026-11-03T04:25:57.145793+00:00",
+  "status": "current_kinetic_launch_cut_prepared_locally_not_posted",
+  "artifact": {
+    "file": "sunset-launch-v2.mp4",
+    "bytes": 2989860,
+    "sha256": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    "duration_seconds": 30.0,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "faststart": true
+  },
+  "creative_changes": {
+    "previous_format": "82-second narrated static-card film, preserved as v1",
+    "current_format": "30-second frame-driven motion launch film with independent text/artwork/UI/mask/cursor layers",
+    "voice_words": 40,
+    "spoken_time_seconds": 14.6885,
+    "music_bpm": 128,
+    "actual_app_moments": [
+      "answer12 to genuine successful feedback",
+      "download to retained HTML illustration and genuine offline game/completion"
+    ],
+    "first_frame": "identified SUNSET learning poster",
+    "full_protocol_walkthrough": false
+  },
+  "checks": {
+    "checked_at": "2026-11-03T04:22:43.592045+00:00",
+    "status": "passed_objective_checks_and_visual_keyframe_review",
+    "film": "sunset-launch-v2.mp4",
+    "sha256": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    "bytes": 2989860,
+    "duration": 30.0,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "video_codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "faststart": true,
+    "full_decode": "passed",
+    "black_frames": "none",
+    "loudness_lufs": -17.4,
+    "true_peak_dbfs": -1.5,
+    "captions": {
+      "cues": 6,
+      "exact_phrase_text": true,
+      "last_phrase_end": 29.447791666666667,
+      "end_tail_seconds": 0.5522083333333327
+    },
+    "capture_hashes_match_verified_browser_evidence": true,
+    "voice_hashes_match": true,
+    "perceptual_listening_verified": false,
+    "source_layout": "Native independent text/image/mask/cursor layers; no static card PNG/zoompan pipeline.",
+    "product_and_v1_preserved": true,
+    "new_wallet_or_chain_actions": false,
+    "visual_review": {
+      "reviewed_frames": [
+        "opening-final.png",
+        "answer-action-final.png",
+        "actual-feedback-final.png",
+        "download-action-final.png",
+        "offline-file-final.png",
+        "actual-offline-completion-final.png",
+        "closing-final.png"
+      ],
+      "contact_sheet": "full-motion-contact-sheet.jpg",
+      "assessment": "Main animated type, regional answer12/feedback crops, download action, offline result and final URL are legible. UI camera crops intentionally leave non-focal source regions outside the frame. No unwanted headline/caption overlap in reviewed settled frames.",
+      "first_frame": "Identified SUNSET/FUND LEARNING poster, not blank.",
+      "perceptual_audio_listening_verified": false
+    },
+    "v1_movie_sha256_unchanged": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0"
+  },
+  "sources": {
+    "source": "../media/launch-v2/README.md",
+    "research": "../media/launch-v2/RESEARCH.md",
+    "edit": "../media/launch-v2/edit.json",
+    "post_copy": "../media/launch-v2/x-post.txt",
+    "browser": "browser-showcase.json",
+    "testnet": "testnet-showcase.json"
+  },
+  "previous_video_evidence": "launch-video.json",
+  "delivery": "Ignored local .publication/sunset-launch-v2/; generated media and raw source captures are not committed",
+  "publication": {
+    "posted_by_assistant": false,
+    "submitted": false
+  },
+  "limitations": [
+    "Perceptual listening remains an operator playback check.",
+    "The film uses genuine captured states with choreographed pointer/camera movement, not a continuous screen recording.",
+    "No new chain action, browser wallet-signing feature, independent adopter or live expiry refund is claimed."
+  ]
+}
