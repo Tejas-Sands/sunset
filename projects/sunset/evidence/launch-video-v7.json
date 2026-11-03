@@ -1,0 +1,157 @@
+{
+  "version": 7,
+  "checked_at": "2026-11-03T10:03:11.755521+00:00",
+  "status": "prepared_locally_verified_not_posted",
+  "film_path": ".publication/sunset-launch-v7/sunset-launch-v7.mp4",
+  "sha256": "8c1f850dce269c420ca9553b548a3a030107a2be2dec31864cf30819a210de44",
+  "bytes": 3079765,
+  "duration_seconds": 20,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "format": "H.264 yuv420p BT709 limited / AAC48kHz stereo MP4 faststart",
+  "requested_change": "Improve audio/background music; remove product URL and entire on-screen music-credit block while preserving approved v6 visuals.",
+  "source": "../media/launch-v7/README.md",
+  "review": "../media/launch-v7/REVIEW.md",
+  "source_hashes": {
+    "fonts-provenance.json": "5d4c03fcd43dd89605dd7b604219add26f20651572cc3b5e6ec02002326a135a",
+    "narration-script.json": "93db9039892d539134a4d7114aa4eee8fcc59c46777b50b0298a6035c34d967c",
+    "prepare_audio.py": "9a2c11fec0ebee08aacf8f873aaee6749d8384472918546dff8521fdeb748fda",
+    "render_launch.py": "7c39e033a360c4fb72db27f6fcaf291174c02932b39a7a637ef1251618039695",
+    "verify.py": "2d1feb4abc457efbd64ec5366ff4b831ff6f5159cb75bd1fe719d8319446672f"
+  },
+  "source_visual_diff": "Only output/cache/version paths and requested end-card text deletions; approved visual geometry/type/palette/timing definitions unchanged.",
+  "onscreen_product_url": false,
+  "onscreen_music_credit": false,
+  "narration_and_cue_times_identical_to_approved_v6": true,
+  "narration_sha256": "debcf3fa3291eaecdbb02da58eea1037ed804b5fe3613d1e2d754efa5d18da5c",
+  "master_sha256": "51dd9af6ccbb2f5453627b7025efe43ed0f2489c18dcb1d5afec04cd63dd438c",
+  "audio": {
+    "music": {
+      "title": "Backbay Lounge",
+      "artist": "Kevin MacLeod",
+      "album": "Teh Jazzes",
+      "isrc": "USUAN1700068",
+      "tempo_bpm": 120,
+      "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700068",
+      "primary_detail": "https://remote.incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1700068",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Backbay%20Lounge.mp3",
+      "file": "kevin-macleod-backbay-lounge.mp3",
+      "sha256": "9567e71a213b0026341b2c0ecd226950e7653abd235cf520fb9aee4247d74d96",
+      "bytes": 8531962,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist_description": "Jazz; bright, grooving and relaxed; piano, guitar, drums and bass.",
+      "excerpt_start_seconds": 16.0,
+      "excerpt_end_seconds": 36.0,
+      "excerpt_duration_seconds": 20.0,
+      "selection_basis": "New recording fits the requested relaxed groove based on the primary artist metadata;120bpm and20s allow ten4/4bars. No perceptual listening claim.",
+      "attribution": "Backbay Lounge by Kevin MacLeod (incompetech.com), licensed under CC BY4.0.",
+      "changes_to_disclose": "Edited16\u201336s excerpt, EQ, fades and speech ducking.",
+      "attribution_required": true,
+      "attribution_placement": "Accompanying post/video description plus CREDITS.md; no burned-in credit.",
+      "on_screen_credit_required": false,
+      "processing": {
+        "voice_filter": "highpass=f=75,equalizer=f=520:t=q:w=0.9:g=-1.6,equalizer=f=3000:t=q:w=0.8:g=1.0,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.11:ratio=2:attack=16:release=120:makeup=1.2,loudnorm=I=-17:TP=-3:LRA=6,aresample=48000,apad=whole_len=960000,atrim=end_sample=960000",
+        "music_filter": "highpass=f=55,equalizer=f=2500:t=q:w=0.8:g=-3,lowpass=f=14000,loudnorm=I=-24:TP=-4:LRA=8",
+        "music_active_target_separation_db": 9,
+        "minimum_phrase_separation_db": 8.5,
+        "duck_depth": 0.32,
+        "attack_seconds": 0.06,
+        "release_seconds": 0.28,
+        "fade_in_seconds": 0.09,
+        "fade_out_seconds": 0.6,
+        "overall_music_gain": 1.2826687119476259,
+        "master": "loudnorm=I=-15:TP=-2:LRA=7:linear=true:measured_I=-15.13:measured_TP=-1.25:measured_LRA=5.70:measured_thresh=-25.51:offset=0.53"
+      },
+      "reference_audio_used": false,
+      "perceptual_listening_verified": false
+    },
+    "voice_processing": "highpass=f=75,equalizer=f=520:t=q:w=0.9:g=-1.6,equalizer=f=3000:t=q:w=0.8:g=1.0,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.11:ratio=2:attack=16:release=120:makeup=1.2,loudnorm=I=-17:TP=-3:LRA=6,aresample=48000,apad=whole_len=960000,atrim=end_sample=960000",
+    "voice_to_music_rms": [
+      {
+        "phrase": 1,
+        "voice_above_music_rms_db": 9.47
+      },
+      {
+        "phrase": 2,
+        "voice_above_music_rms_db": 8.5
+      },
+      {
+        "phrase": 3,
+        "voice_above_music_rms_db": 8.86
+      },
+      {
+        "phrase": 4,
+        "voice_above_music_rms_db": 8.5
+      },
+      {
+        "phrase": 5,
+        "voice_above_music_rms_db": 10.36
+      },
+      {
+        "phrase": 6,
+        "voice_above_music_rms_db": 9.49
+      },
+      {
+        "phrase": 7,
+        "voice_above_music_rms_db": 11.69
+      },
+      {
+        "phrase": 8,
+        "voice_above_music_rms_db": 8.5
+      },
+      {
+        "phrase": 9,
+        "voice_above_music_rms_db": 11.5
+      }
+    ],
+    "encoded_loudness_lufs": -15.37,
+    "encoded_true_peak_dbtp": -1.97,
+    "voice_overlap": false,
+    "voice_end_seconds": 17.6645,
+    "tail_seconds": 2.3354999999999997,
+    "perceptual_listening_verified": false,
+    "attribution_placement": "Accompanying post/description and source credits; no on-screen overlay.",
+    "credits": "../media/launch-v7/CREDITS.md",
+    "post_copy": "../media/launch-v7/x-post.txt"
+  },
+  "verification": {
+    "command": "python3 projects/sunset/media/launch-v7/verify.py",
+    "exit_code": 0,
+    "full_decode": true,
+    "frames": 600,
+    "authored_text_probes": 1606,
+    "minimum_decoded_text_contrast": 5.123,
+    "all_promised_reads_bounds_and_separation_pass": true,
+    "exact_caption_text_timing_and_sources": true,
+    "font_and_ui_hashes_verified": true,
+    "four_colour_tags_and_faststart_verified": true,
+    "unexpected_black_intervals": 0,
+    "no_url_or_music_credit_records_in_any_frame": true,
+    "qa_sha256": "334082fab095f30a542bb7eb9e16c36f17aa31de477a2506427683a636aef862",
+    "composite_provenance_sha256": "3aa44bae7e25047e67d21018d678b9ee43c3a5d41c4d0a8b672dcd1f597f406e"
+  },
+  "visual_review": {
+    "root_and_separate_reviewer_inspected_actual_final_endcard": true,
+    "endcard_sample_seconds": 19.5,
+    "p0": 0,
+    "p1": 0,
+    "continuous_human_playback": false
+  },
+  "preserved_versions": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+    ".publication/sunset-launch-v6/sunset-launch-v6.mp4": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1"
+  },
+  "generated_media_music_fonts_voice_models_caches_private_files_ignored": true,
+  "application_or_contract_changes": false,
+  "chain_mutations": 0,
+  "public_x_post_url": null,
+  "submission_sent": false
+}
