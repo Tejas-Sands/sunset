@@ -1,0 +1,294 @@
+{
+  "schema": 1,
+  "duration_seconds": 56.0,
+  "sample_rate": 48000,
+  "channels": 2,
+  "voice": null,
+  "voice_instructions": "No generated narration, speech clips, TTS runtime or voice model. Human recording is outside this export.",
+  "source_media_policy": "Only the listed licensed instrumental recording and CC0 recorded Foley; generated media remains ignored.",
+  "music_filter": "highpass=f=50,equalizer=f=2500:t=q:w=0.8:g=-1,lowpass=f=15000,loudnorm=I=-15:TP=-3.5:LRA=9",
+  "music_gain_db": [
+    [
+      0,
+      -8
+    ],
+    [
+      0.8,
+      -7
+    ],
+    [
+      5.5,
+      -7
+    ],
+    [
+      6.5,
+      -4.5
+    ],
+    [
+      10.8,
+      -4.5
+    ],
+    [
+      11.3,
+      -5
+    ],
+    [
+      17.2,
+      -4
+    ],
+    [
+      18.5,
+      -2.5
+    ],
+    [
+      20.5,
+      -2.5
+    ],
+    [
+      20.8,
+      -5
+    ],
+    [
+      21.5,
+      0
+    ],
+    [
+      28.5,
+      -0.5
+    ],
+    [
+      29.2,
+      -3.5
+    ],
+    [
+      34.5,
+      -3.5
+    ],
+    [
+      35.2,
+      -7
+    ],
+    [
+      43.7,
+      -7
+    ],
+    [
+      44.3,
+      -2
+    ],
+    [
+      50.4,
+      -1.5
+    ],
+    [
+      51.5,
+      0
+    ],
+    [
+      54.3,
+      0
+    ],
+    [
+      56,
+      0
+    ]
+  ],
+  "arrangement": "Continuous 16\u201372 s instrumental excerpt (28 nominal 2-second bars at 120 bpm); restrained/narrow initial work texture; gathers with sponsors; brief contact dip then open at 21.5 s; conditional rule lowers; 35\u201344 s lowers for actual UI; copies widen/rise; mark on beat at 51.5 s; 1.7 s final fade.",
+  "clock_basis": "Music-only 56 s timeline; 120 bpm published track tempo, half-second nominal beat grid. Picture motion timings supplied by v9 motion director. No algorithmic beat-analysis claim.",
+  "realproof_clock": {
+    "actual_offline_input_seconds": 38.611570199,
+    "first_captured_feedback_seconds": 38.968585201,
+    "foley_peak_seconds": 39.001918534,
+    "native_cursor_captured": false,
+    "recording_cadence": "~3 screenshot samples/s held by true capture time at 30 fps delivery",
+    "source": "v9_realproof agent measured actual sample/click manifest"
+  },
+  "effects": [
+    {
+      "id": "work-page",
+      "source_id": "page-turn-2",
+      "peak_seconds": 0.633333333,
+      "source_crop_seconds": [
+        0.65,
+        1.07
+      ],
+      "cause": "Sun-to-page handoff within initial visible page movement.",
+      "stereo_channel_gains": [
+        1,
+        0.85
+      ],
+      "above_local_music_rms_db": 2,
+      "max_peak_dbfs": -12
+    },
+    {
+      "id": "pack-flip",
+      "source_id": "page-turn-1",
+      "peak_seconds": 3.333333333,
+      "source_crop_seconds": [
+        0,
+        0.46
+      ],
+      "cause": "Same pack flips across the foreground at 3.1\u20133.5 seconds.",
+      "stereo_channel_gains": [
+        0.9,
+        1
+      ],
+      "above_local_music_rms_db": 3,
+      "max_peak_dbfs": -10
+    },
+    {
+      "id": "matching-key-contact",
+      "source_id": "metallic-latch-release",
+      "peak_seconds": 20.833333333,
+      "source_crop_seconds": [
+        0.1,
+        0.4
+      ],
+      "cause": "Matching key contacts at 20.8 seconds; recorded latch peak one delivery frame later.",
+      "stereo_channel_gains": [
+        1,
+        1
+      ],
+      "above_local_music_rms_db": 4,
+      "max_peak_dbfs": -8
+    },
+    {
+      "id": "real-offline-answer",
+      "source_id": "mouse-clicks",
+      "peak_seconds": 39.001918534,
+      "source_crop_seconds": [
+        0.38,
+        0.47
+      ],
+      "cause": "Licensed mouse Foley at first captured genuine offline answer result plus one frame. Native cursor/audio were not recorded.",
+      "stereo_channel_gains": [
+        1,
+        1
+      ],
+      "above_local_music_rms_db": 3,
+      "max_peak_dbfs": -12
+    },
+    {
+      "id": "retained-copy-left",
+      "source_id": "page-turn-1",
+      "peak_seconds": 44.233333333,
+      "source_crop_seconds": [
+        0,
+        0.46
+      ],
+      "cause": "First visible copy fans outward at 44.2 seconds.",
+      "stereo_channel_gains": [
+        1,
+        0.65
+      ],
+      "above_local_music_rms_db": 2,
+      "max_peak_dbfs": -11
+    },
+    {
+      "id": "retained-copy-right",
+      "source_id": "page-turn-2",
+      "peak_seconds": 45.233333333,
+      "source_crop_seconds": [
+        0.65,
+        1.07
+      ],
+      "cause": "Second visible copy fans outward at 45.2 seconds; a different recorded page take.",
+      "stereo_channel_gains": [
+        0.65,
+        1
+      ],
+      "above_local_music_rms_db": 2,
+      "max_peak_dbfs": -12
+    },
+    {
+      "id": "retained-copy-front",
+      "source_id": "page-turn-1",
+      "peak_seconds": 46.233333333,
+      "source_crop_seconds": [
+        0,
+        0.46
+      ],
+      "cause": "Third visible copy settles at 46.2 seconds.",
+      "stereo_channel_gains": [
+        0.85,
+        0.9
+      ],
+      "above_local_music_rms_db": 1,
+      "max_peak_dbfs": -13
+    }
+  ],
+  "sources": [
+    {
+      "id": "music",
+      "title": "Backbay Lounge",
+      "artist": "Kevin MacLeod",
+      "isrc": "USUAN1700068",
+      "tempo_bpm": 120,
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700068",
+      "detail": "https://remote.incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1700068",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Backbay%20Lounge.mp3",
+      "file": ".publication/sunset-launch-v9/audio-research/music/kevin-macleod-backbay-lounge.mp3",
+      "sha256": "9567e71a213b0026341b2c0ecd226950e7653abd235cf520fb9aee4247d74d96",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "excerpt_start_seconds": 16,
+      "excerpt_end_seconds": 72,
+      "changes": "56-second excerpt; EQ, smooth story-level gain, stereo-width automation, fades and mastering. No voice ducking.",
+      "attribution_required": true,
+      "attribution_placement": "Accompanying public post/video description and CREDITS.md; no onscreen credit"
+    },
+    {
+      "id": "page-turn-1",
+      "author": "OwlStorm",
+      "sound_id": 151220,
+      "source": "https://freesound.org/people/OwlStorm/sounds/151220/",
+      "download": "https://cdn.freesound.org/previews/151/151220_140737-hq.mp3",
+      "file": ".publication/sunset-launch-v9/audio-research/page-turn-1.mp3",
+      "sha256": "41f51725007894483999812091faf74d0d341092c0a24c55c0778fe245ea45f4",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV",
+      "source_page_snapshot": ".publication/sunset-launch-v9/audio-research/page-turn-1-source.html"
+    },
+    {
+      "id": "page-turn-2",
+      "author": "OwlStorm",
+      "sound_id": 151221,
+      "source": "https://freesound.org/people/OwlStorm/sounds/151221/",
+      "download": "https://cdn.freesound.org/previews/151/151221_140737-hq.mp3",
+      "file": ".publication/sunset-launch-v9/audio-research/page-turn-2.mp3",
+      "sha256": "0e6737d635998d90f015249c0215691d3cb63d2ff37d49949914284160b6e9e0",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV",
+      "source_page_snapshot": ".publication/sunset-launch-v9/audio-research/page-turn-2-source.html"
+    },
+    {
+      "id": "metallic-latch-release",
+      "author": "Crinkem",
+      "sound_id": 481789,
+      "source": "https://freesound.org/people/Crinkem/sounds/481789/",
+      "download": "https://cdn.freesound.org/previews/481/481789_3544425-hq.mp3",
+      "file": ".publication/sunset-launch-v9/audio-research/metallic-latch-release.mp3",
+      "sha256": "6be8b0e548f45f9574fcaa2d77571371224898e5512fe2f16db91890856273c9",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV",
+      "source_page_snapshot": ".publication/sunset-launch-v9/audio-research/metallic-latch-release-source.html"
+    },
+    {
+      "id": "mouse-clicks",
+      "author": "Breviceps",
+      "sound_id": 447938,
+      "source": "https://freesound.org/people/Breviceps/sounds/447938/",
+      "download": "https://cdn.freesound.org/previews/447/447938_9159316-hq.mp3",
+      "file": ".publication/sunset-launch-v9/audio-research/mouse-clicks.mp3",
+      "sha256": "bbbddc66710313d67f0c8d8dc37f68c62728c041ccb3820f04c45554dd9f46e5",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV",
+      "source_page_snapshot": ".publication/sunset-launch-v9/audio-research/mouse-clicks-source.html"
+    }
+  ],
+  "perceptual_listening_verified": false
+}

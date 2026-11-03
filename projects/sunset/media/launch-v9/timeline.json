@@ -1,0 +1,577 @@
+{
+  "schema": 1,
+  "duration": 56,
+  "frames": 1680,
+  "fps": 30,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "voice": "None. Background music and causal SFX only.",
+  "beats": [
+    {
+      "id": "work",
+      "start": 0,
+      "end": 3.3,
+      "read_start": 0.65,
+      "lines": [
+        "Good learning",
+        "takes work."
+      ],
+      "bg": [
+        255,
+        243,
+        221
+      ]
+    },
+    {
+      "id": "need",
+      "start": 3.3,
+      "end": 6,
+      "read_start": 3.7,
+      "lines": [
+        "Who pays",
+        "for it?"
+      ],
+      "bg": [
+        221,
+        79,
+        43
+      ]
+    },
+    {
+      "id": "public",
+      "start": 6,
+      "end": 11,
+      "read_start": 6.45,
+      "lines": [
+        "Fund a",
+        "public release."
+      ],
+      "bg": [
+        36,
+        77,
+        221
+      ]
+    },
+    {
+      "id": "review",
+      "start": 11,
+      "end": 14,
+      "read_start": 11.42,
+      "lines": [
+        "Reviewed",
+        "before funding."
+      ],
+      "bg": [
+        203,
+        229,
+        213
+      ]
+    },
+    {
+      "id": "terms",
+      "start": 14,
+      "end": 17,
+      "read_start": 14.4,
+      "lines": [
+        "One target.",
+        "Clear deadlines."
+      ],
+      "bg": [
+        255,
+        243,
+        221
+      ]
+    },
+    {
+      "id": "escrow",
+      "start": 17,
+      "end": 20,
+      "read_start": 17.4,
+      "lines": [
+        "Funds held",
+        "on NEAR."
+      ],
+      "bg": [
+        36,
+        77,
+        221
+      ]
+    },
+    {
+      "id": "release",
+      "start": 20,
+      "end": 23.5,
+      "read_start": 20.4,
+      "read_end": 22.3,
+      "lines": [
+        "Release the",
+        "matching key."
+      ],
+      "bg": [
+        242,
+        210,
+        103
+      ]
+    },
+    {
+      "id": "credit",
+      "start": 23.5,
+      "end": 25.5,
+      "read_start": 23.75,
+      "lines": [
+        "Creator credit."
+      ],
+      "bg": [
+        203,
+        229,
+        213
+      ]
+    },
+    {
+      "id": "withdraw",
+      "start": 25.5,
+      "end": 29,
+      "read_start": 25.9,
+      "lines": [
+        "Creator can",
+        "withdraw."
+      ],
+      "bg": [
+        255,
+        190,
+        151
+      ]
+    },
+    {
+      "id": "alternative",
+      "start": 29,
+      "end": 32,
+      "read_start": 29.35,
+      "lines": [
+        "Target missed?",
+        "Release late?"
+      ],
+      "bg": [
+        255,
+        243,
+        221
+      ]
+    },
+    {
+      "id": "refund",
+      "start": 32,
+      "end": 35,
+      "read_start": 32.35,
+      "lines": [
+        "Sponsors can",
+        "claim refunds."
+      ],
+      "bg": [
+        203,
+        229,
+        213
+      ]
+    },
+    {
+      "id": "download",
+      "start": 35,
+      "end": 38,
+      "read_start": 35.3,
+      "lines": [
+        "Download a working copy"
+      ],
+      "bg": [
+        255,
+        243,
+        221
+      ]
+    },
+    {
+      "id": "offline",
+      "start": 38,
+      "end": 44,
+      "read_start": 38.3,
+      "lines": [
+        "Works without SUNSET"
+      ],
+      "bg": [
+        255,
+        243,
+        221
+      ]
+    },
+    {
+      "id": "keep",
+      "start": 44,
+      "end": 47.5,
+      "read_start": 44.4,
+      "lines": [
+        "Keep",
+        "your copy."
+      ],
+      "bg": [
+        255,
+        243,
+        221
+      ]
+    },
+    {
+      "id": "wallet",
+      "start": 47.5,
+      "end": 51,
+      "read_start": 47.9,
+      "lines": [
+        "No wallet",
+        "to learn."
+      ],
+      "bg": [
+        36,
+        77,
+        221
+      ]
+    },
+    {
+      "id": "brand",
+      "start": 51,
+      "end": 56,
+      "read_start": 51.55,
+      "lines": [
+        "SUNSET",
+        "Support once. Share forever."
+      ],
+      "bg": [
+        255,
+        243,
+        221
+      ]
+    }
+  ],
+  "approved_script": "projects/sunset/media/launch-v9/SCRIPT_DRAFT.md",
+  "story": "One pack from creator work, reviewed public release deal and NEAR custody through key release/credit/withdrawal or alternate refunds to actual downloaded offline use and retained copies.",
+  "motion": "Changing composition, macro crops, independent glyphs, camera-like quarter turns, foreground pack passes, matchcuts and one opening payoff.",
+  "essential_read_windows": [
+    {
+      "id": "work",
+      "lines": [
+        "Good learning",
+        "takes work."
+      ],
+      "window": [
+        0.6666666666666666,
+        3.3
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "need",
+      "lines": [
+        "Who pays",
+        "for it?"
+      ],
+      "window": [
+        3.7,
+        6
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "public",
+      "lines": [
+        "Fund a",
+        "public release."
+      ],
+      "window": [
+        6.466666666666667,
+        11
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "review",
+      "lines": [
+        "Reviewed",
+        "before funding."
+      ],
+      "window": [
+        11.433333333333334,
+        14
+      ],
+      "minimum_read_seconds": 1.4
+    },
+    {
+      "id": "terms",
+      "lines": [
+        "One target.",
+        "Clear deadlines."
+      ],
+      "window": [
+        14.4,
+        17
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "escrow",
+      "lines": [
+        "Funds held",
+        "on NEAR."
+      ],
+      "window": [
+        17.4,
+        20
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "release",
+      "lines": [
+        "Release the",
+        "matching key."
+      ],
+      "window": [
+        20.4,
+        22.3
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "credit",
+      "lines": [
+        "Creator credit."
+      ],
+      "window": [
+        23.766666666666666,
+        25.5
+      ],
+      "minimum_read_seconds": 1.1
+    },
+    {
+      "id": "withdraw",
+      "lines": [
+        "Creator can",
+        "withdraw."
+      ],
+      "window": [
+        25.9,
+        29
+      ],
+      "minimum_read_seconds": 1.4
+    },
+    {
+      "id": "alternative",
+      "lines": [
+        "Target missed?",
+        "Release late?",
+        "ALTERNATIVE \u00b7 BEFORE RELEASE"
+      ],
+      "window": [
+        29.366666666666667,
+        32
+      ],
+      "minimum_read_seconds": 2.6
+    },
+    {
+      "id": "refund",
+      "lines": [
+        "Sponsors can",
+        "claim refunds.",
+        "ALTERNATIVE \u00b7 BEFORE RELEASE"
+      ],
+      "window": [
+        32.36666666666667,
+        35
+      ],
+      "minimum_read_seconds": 2.6
+    },
+    {
+      "id": "download",
+      "lines": [
+        "Download a working copy"
+      ],
+      "window": [
+        35.3,
+        38
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "offline",
+      "lines": [
+        "Works without SUNSET"
+      ],
+      "window": [
+        38.3,
+        44
+      ],
+      "minimum_read_seconds": 1.4
+    },
+    {
+      "id": "keep",
+      "lines": [
+        "Keep",
+        "your copy."
+      ],
+      "window": [
+        44.4,
+        47.5
+      ],
+      "minimum_read_seconds": 1.4
+    },
+    {
+      "id": "wallet",
+      "lines": [
+        "No wallet",
+        "to learn."
+      ],
+      "window": [
+        47.9,
+        51
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "brand",
+      "lines": [
+        "SUNSET",
+        "Support once. Share forever."
+      ],
+      "window": [
+        51.56666666666667,
+        56
+      ],
+      "minimum_read_seconds": 2.0
+    },
+    {
+      "id": "release-payoff",
+      "lines": [
+        "PUBLIC COPY"
+      ],
+      "window": [
+        22.3,
+        23.5
+      ],
+      "minimum_read_seconds": 1.1
+    }
+  ],
+  "actual_proof_manifest": ".publication/sunset-launch-v9/footage/compositor.json",
+  "actual_proof_manifest_sha256": "ffd64d62fd0db18a85b11c136e2a9d4e06ce8ae52f65a7a9a026d397283c33a0",
+  "audio_master_sha256": "78602a740699d7facad58dc48a5e8c5b927013d23cc8956fa89f2164a10eabb8",
+  "delivery": {
+    "encode_passes": 1,
+    "source": "Native RGB1920x1080 at30fps",
+    "video": "libx264 CRF14 yuv420p limited BT.709 primaries/trc/matrix",
+    "audio": "AAC320kbps48kHz stereo",
+    "faststart": true
+  },
+  "key_actions": [
+    {
+      "time": 0,
+      "action": "Literal warm setting sun; match to same sun printed on pack by0.6s"
+    },
+    {
+      "time": 7.1,
+      "action": "Community interest lines progressively converge; one agreement boundary forms"
+    },
+    {
+      "time": 10.4,
+      "action": "Foreground pack quarter-turn carries into reviewer plane"
+    },
+    {
+      "time": 16.4,
+      "action": "Empty agreed target boundary carries into NEAR custody composition"
+    },
+    {
+      "time": 17.25,
+      "action": "Reviewed contributions begin; gauge fills only as packets arrive"
+    },
+    {
+      "time": 20.8,
+      "action": "Matching key/contact alignment"
+    },
+    {
+      "time": 21.1,
+      "action": "Single opening begins; full-canvas inner lesson revealed by21.5"
+    },
+    {
+      "time": 23.5,
+      "action": "Creator credit appears before withdrawal"
+    },
+    {
+      "time": 26,
+      "action": "Separate creator withdrawal travel"
+    },
+    {
+      "time": 29,
+      "action": "Explicit alternate pre-release funding/release failure branch"
+    },
+    {
+      "time": 35,
+      "action": "Actual native sampled download/open proof begins"
+    },
+    {
+      "time": 38.611570199,
+      "action": "Actual offline12input"
+    },
+    {
+      "time": 38.968585201,
+      "action": "First genuine visible feedback capture"
+    },
+    {
+      "time": 44,
+      "action": "Genuine retained result foreground; host leaves behind"
+    },
+    {
+      "time": 51,
+      "action": "Original mark clean resolution"
+    }
+  ],
+  "editorial_recording_focus": {
+    "policy": "Genuine native PNG source pixels may be enlarged with LANCZOS to2.2x. This adds no native detail or invented UI states. Actual source capture times and event clocks remain unchanged.",
+    "download": {
+      "window": [
+        35,
+        36.791438387
+      ],
+      "scale": 2.0
+    },
+    "answer_controls": {
+      "window": [
+        38,
+        39.0
+      ],
+      "scale": 2.2,
+      "crop_tracks_actual_browser_scroll": true
+    },
+    "pan_to_feedback": {
+      "window": [
+        39,
+        39.2
+      ],
+      "kind": "Geometric editorial viewport pan on genuine post-input sample"
+    },
+    "read_feedback": {
+      "window": [
+        39.2,
+        42
+      ],
+      "scale": 2.2,
+      "actual_visible_copy": "7 + 5 = 12. Your first lantern glows."
+    },
+    "wider_result": {
+      "window": [
+        42,
+        44
+      ],
+      "max_scale": 1
+    },
+    "retained_copy": {
+      "window": [
+        44,
+        47.5
+      ],
+      "kind": "Final genuine source feedback sample held honestly; recorded identity and mapped playback clock disclosed"
+    }
+  }
+}

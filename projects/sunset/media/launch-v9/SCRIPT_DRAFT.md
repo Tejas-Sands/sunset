@@ -1,6 +1,6 @@
 # SUNSET — script draft for review
 
-**Status: proposed script only. Not approved for production. No new video, voice or soundtrack has been generated.** The operator explicitly requested the script before another video, background sound only for the next picture export, and voice through a different method later.
+**Status: script approved by the operator on 3 November 2026.** Their instruction was: “yeah looks good!! please make it happen!!!! with god tier animation!!” Production follows the approved story with background music/effects only; no generated voice. The draft filename is retained so the approval refers to the exact reviewed artifact.
 
 ## The story
 
@@ -43,7 +43,7 @@ Approximate spoken word count: **111**. This is a reference script for a human r
 | **44–51s: why the result matters** | Return to the same pack. Copies travel into different learner contexts while the host window falls away. One actual retained copy remains usable in the foreground. | **Keep your copy** → **No wallet to learn** | Fan the copies through macro crops and changing compositions. The host’s departure cannot remove the copy already kept. |
 | **51–55s: brand** | The copies align into the original SUNSET mark. The brand and line land cleanly. | **SUNSET** / **Support once. Share forever.** | A deliberate visual resolution. Hold the last line for at least three seconds. No product URL or music-credit block in the picture. |
 
-The ranges will move once the story is approved and an actual human read is available. On-screen text is its own short, self-contained story; it is not a transcript of every proposed spoken sentence.
+The operator approved this story. Production is locked at 56 seconds so the retained 120bpm recording can resolve on a full bar; the final brand hold extends to56s. An actual future human read can inform a separate voiced edit. On-screen text is its own short, self-contained story; it is not a transcript of every proposed spoken sentence.
 
 ## Directing — what returns from v3/v4
 
@@ -76,6 +76,6 @@ Keep the human voiceover on a separate future track. Provide room for it and ret
 2. **The website disappears, then rewind.** Start on the surviving offline copy and reveal its funding afterward. Visually striking, but the time jump makes the deal harder to follow.
 3. **Sponsor’s decision.** Follow one sponsor from “what am I funding?” through the agreement and release. Clear for funders, but weaker at showing creator work and universal access.
 
-The recommendation is the author’s proposal, not an operator-approved direction. The next step is script feedback; no render or voice generation proceeds from this draft alone.
+The operator approved the recommended one-pack story after reviewing this draft. Music/effects-only production is authorized; generated narration is excluded. No new signing, deployment, social post or submission is authorized by the media approval.
 
 Craft references used: local Brand messaging framework; current official HyperFrames story, motion and review guidance applied to the existing workflow; [v4 reference study](../launch-v4/RESEARCH.md). These inform the draft; no HyperFrames engine/render checks were run for a script-only task.

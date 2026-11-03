@@ -1,0 +1,13 @@
+Good learning takes work. But who pays for it when everyone should be able to use it?
+
+SUNSET lets a community fund a pack’s public release.
+
+First, the pack and release terms are reviewed. Sponsors can check the funding goal and deadlines. A NEAR smart contract holds the funds and enforces those rules.
+
+Meet the goal and publish the matching key on time. The pack opens for everyone, and the creator can withdraw the agreed payment.
+
+If funding falls short by the deadline, or release is late, sponsors can claim refunds.
+
+Download a copy. It works offline—even if SUNSET disappears. Learners don’t need a wallet.
+
+SUNSET. Support once. Share forever.

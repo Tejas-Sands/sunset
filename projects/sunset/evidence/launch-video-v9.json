@@ -1,0 +1,240 @@
+{
+  "version": 9,
+  "checked_at": "2026-11-03T12:27:05.174972+00:00",
+  "status": "prepared_locally_verified_not_posted",
+  "film_path": ".publication/sunset-launch-v9/render/sunset-launch-v9.mp4",
+  "sha256": "f2f4d2e9cc7733af1c7dfa2491b2148217ba9857addd544931e1d710c5592319",
+  "bytes": 11914290,
+  "duration_seconds": 56,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "frames": 1680,
+  "format": "H.264 yuv420p BT709 limited / AAC48kHz stereo MP4 faststart",
+  "user_request": "Produce the approved creator-first story with more dynamic 2D animation, readable real action/result, background music/effects only and no generated narration.",
+  "source": "../media/launch-v9/README.md",
+  "approved_script": "../media/launch-v9/SCRIPT_DRAFT.md",
+  "review": "../media/launch-v9/REVIEW.md",
+  "source_hashes": {
+    "fonts-provenance.json": "5d4c03fcd43dd89605dd7b604219add26f20651572cc3b5e6ec02002326a135a",
+    "prepare_audio.py": "04c8fe3fd0b1383fa40840d54de293aa8b16a2a9a1275901cadb3b8b3da3ae13",
+    "prepare_proof.py": "451e0fc99c7fd1a9f4b9fcb5688c37caf62671c2c9dbbe3ff3b4390aa6ce5c69",
+    "render_launch.py": "85c579452dfc0849fb62feae11ab07f86734d73b2f43ac2f98c9a42a17881592",
+    "sound-cues.json": "5928498b390dc62a1a836aa528479281765bae352f6b824a29bc315326878950",
+    "timeline.json": "2da493d09c5b8cd87e4894ef01380cd64f258a489e0f641e58da98fccecc363e",
+    "verify.py": "989c0abe3e8b50fbede37cd0766ea759eaa5bdd0d5dba200448786d4b5c4d757"
+  },
+  "requirements": {
+    "problem": {
+      "seconds": [
+        0,
+        6
+      ],
+      "message": "Good learning takes work. Who funds a pack everyone can keep?"
+    },
+    "near_role": {
+      "seconds": [
+        11,
+        35
+      ],
+      "mechanism": "Review before funding; target/deadlines; NEAR escrow; matching timely key opens the pack; creator credit then separate withdrawal; conditional pre-release refund claims.",
+      "financial_scenes": "Labelled protocol illustrations, not browser financial signing."
+    },
+    "actual_action_result": {
+      "seconds": [
+        35,
+        44
+      ],
+      "action": "Genuine Download control, opened standalone file and answer12 input",
+      "result": "7 + 5 = 12. Your first lantern glows.",
+      "input_seconds": 38.611570199,
+      "first_captured_visible_feedback_seconds": 38.968585201
+    },
+    "retained_copy": {
+      "seconds": [
+        44,
+        47.5
+      ],
+      "method": "Actual result endpoint hold remains in front while illustrated host falls away."
+    },
+    "posting": {
+      "main_post": "../media/launch-v9/x-post.txt",
+      "credit_reply": "../media/launch-v9/x-reply-credits.txt",
+      "demo": "https://sunset-lemon.vercel.app",
+      "repository": "https://github.com/Tejas-Sands/sunset",
+      "feedback": "What would you fund?",
+      "main_post_url_weighted_characters": 262,
+      "credit_reply_url_weighted_characters": 210
+    }
+  },
+  "style": {
+    "flat_2d": true,
+    "native_graphics_dimensions": [
+      1920,
+      1080
+    ],
+    "fonts": [
+      "Bricolage Grotesque",
+      "Space Grotesk"
+    ],
+    "sunset_first": true,
+    "original_logo": true,
+    "onscreen_product_url": false,
+    "onscreen_music_credit": false,
+    "video_encode_passes": 1,
+    "crf": 14
+  },
+  "actual_recording": {
+    "source_version": 8,
+    "source_capture_provenance_sha256": "cfb0d52bcedc8d0e7a770ec1a0073a7c05ae85c88544a533d863887d9ef7e5f9",
+    "compositor_manifest_sha256": "ffd64d62fd0db18a85b11c136e2a9d4e06ce8ae52f65a7a9a026d397283c33a0",
+    "source_dimensions": [
+      2560,
+      1800
+    ],
+    "actual_png_samples": 21,
+    "unique_pixel_states": 6,
+    "method": "~3 genuine samples/s held by original elapsed timestamps at30fps delivery",
+    "output_frames": 375,
+    "editorial_magnification": {
+      "allowed": true,
+      "maximum_scale": 2.2,
+      "resampling": "LANCZOS",
+      "native_detail_added": false
+    },
+    "retained_endpoint_film_clock": 43.5,
+    "interpolation": false,
+    "invented_ui_or_cursor": false,
+    "offline_before_after": {
+      "onLine": false,
+      "resources": 0,
+      "scheme": "file:"
+    },
+    "download": {
+      "bytes": 7246,
+      "sha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738",
+      "path": ".publication/sunset-launch-v9/footage/downloads-native/lantern-trail-testnet-v1-offline.html"
+    },
+    "higher_dpr_attempts": "Two failed optional takes excluded; no new capture claimed."
+  },
+  "audio": {
+    "voice_present": false,
+    "voice_generated": false,
+    "tts_or_voice_models_used": false,
+    "master_sha256": "78602a740699d7facad58dc48a5e8c5b927013d23cc8956fa89f2164a10eabb8",
+    "duration_seconds": 56,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_count_per_channel": 2688000,
+    "licensed_sources": [
+      {
+        "id": "music",
+        "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700068",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "9567e71a213b0026341b2c0ecd226950e7653abd235cf520fb9aee4247d74d96"
+      },
+      {
+        "id": "page-turn-1",
+        "source": "https://freesound.org/people/OwlStorm/sounds/151220/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "41f51725007894483999812091faf74d0d341092c0a24c55c0778fe245ea45f4"
+      },
+      {
+        "id": "page-turn-2",
+        "source": "https://freesound.org/people/OwlStorm/sounds/151221/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "0e6737d635998d90f015249c0215691d3cb63d2ff37d49949914284160b6e9e0"
+      },
+      {
+        "id": "metallic-latch-release",
+        "source": "https://freesound.org/people/Crinkem/sounds/481789/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "6be8b0e548f45f9574fcaa2d77571371224898e5512fe2f16db91890856273c9"
+      },
+      {
+        "id": "mouse-clicks",
+        "source": "https://freesound.org/people/Breviceps/sounds/447938/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "bbbddc66710313d67f0c8d8dc37f68c62728c041ccb3820f04c45554dd9f46e5"
+      }
+    ],
+    "music_excerpt_seconds": [
+      16,
+      72
+    ],
+    "recorded_effect_cues": 7,
+    "encoded_loudness_lufs": -14.8,
+    "encoded_true_peak_dbtp": -2.45,
+    "stems": {
+      "music-arranged.wav": {
+        "sha256": "b2d88937fa73c506b9821b3bb8089b7951d4f06d019764ee10d063b8bc5c9bdc",
+        "stage": "pre-master"
+      },
+      "sfx.wav": {
+        "sha256": "ad61c958c785547e4ab9b6541789d2fe9466af42c9387f8f0703f4b0a313025a",
+        "stage": "pre-master"
+      }
+    },
+    "attribution": "Accompanying post/reply/description and CREDITS.md; outside picture.",
+    "native_browser_audio": false,
+    "perceptual_listening_verified": false
+  },
+  "verification": {
+    "full_decode": "passed",
+    "essential_read_windows": 17,
+    "read_window_frame_assertions": 1484,
+    "essential_text_probes": 2786,
+    "minimum_decoded_text_contrast": 5.9839,
+    "decoded_actual_roi_identity_checks": 375,
+    "maximum_ui_roi_mean_absolute_channel_error": 2.6884,
+    "font_source_hashes_verified": true,
+    "faststart": true,
+    "unexpected_black_intervals": 0
+  },
+  "visual_review": {
+    "root_decoded_review": true,
+    "fresh_reviewer_decoded_review": true,
+    "status": "Root and fresh reviewer found no P0/P1 in decoded samples and dense sequences.",
+    "artifacts": [
+      "review/beat-sheet.jpg",
+      "review/phone-sheet-390.jpg",
+      "review/cut-sheet.jpg",
+      "review/community-7-12-6fps.jpg",
+      "review/release-20-24-6fps.jpg",
+      "review/offline-38-44-6fps.jpg",
+      "review/actual-proof-sheet.jpg"
+    ],
+    "human_continuous_playback_or_listening": false,
+    "p0": 0,
+    "p1": 0,
+    "p2": [
+      "Individual glyph entrances are still repetitive.",
+      "Secondary labels and full-question detail remain small at phone width."
+    ],
+    "essential_action_result_readable_at_390px": true
+  },
+  "preserved_versions": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+    ".publication/sunset-launch-v6/sunset-launch-v6.mp4": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1",
+    ".publication/sunset-launch-v7/sunset-launch-v7.mp4": "8c1f850dce269c420ca9553b548a3a030107a2be2dec31864cf30819a210de44",
+    ".publication/sunset-launch-v8/sunset-launch-v8.mp4": "b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2"
+  },
+  "qa_sha256": "42c5eda84dd3084b4aaf0915784fc3313031df6483ea8f1a58edf30a1a40f358",
+  "composite_provenance_sha256": "8f190d94c1adc53ee7dee55ab97cf2fd10eab226557d41bf89e2420c04cf4969",
+  "generated_media_recordings_audio_fonts_cache_and_private_files_ignored": true,
+  "application_or_contract_changes": false,
+  "chain_mutations": 0,
+  "public_x_post_url": null,
+  "submission_sent": false
+}

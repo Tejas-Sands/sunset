@@ -308,12 +308,13 @@
   "browser_showcase": "browser-showcase.json",
   "operator_control": "All financial roles share one operator; separate IDs prove authority checks, not independent people.",
   "launch_media": {
-    "status": "current_v8_prepared_locally_verified_not_posted",
-    "duration_seconds": 24,
+    "status": "current_v9_background_only_prepared_locally_verified_not_posted",
+    "duration_seconds": 56,
     "delivery_guide": "../docs/LAUNCH_VIDEO.md",
-    "evidence": "launch-video-v8.json",
-    "source": "../media/launch-v8/README.md",
+    "evidence": "launch-video-v9.json",
+    "source": "../media/launch-v9/README.md",
     "previous_version_evidence": [
+      "launch-video-v8.json",
       "launch-video-v7.json",
       "launch-video-v6.json",
       "launch-video-v5.json",
@@ -323,7 +324,9 @@
       "launch-video.json"
     ],
     "public_x_post_url": null,
-    "perceptual_listening_verified": false
+    "perceptual_listening_verified": false,
+    "voice_present": false,
+    "tts_or_voice_models_used": false
   },
   "fresh_e2e_audit": "e2e-2026-11-03.json",
   "testnet_refunds": "testnet-refunds.json"
