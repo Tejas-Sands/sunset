@@ -1,0 +1,466 @@
+{
+  "version": 4,
+  "checked_at": "2026-11-03T06:38:30.242919+00:00",
+  "status": "prepared_locally_verified_not_posted",
+  "film_path": ".publication/sunset-launch-v4/sunset-launch-v4.mp4",
+  "bytes": 7745159,
+  "sha256": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+  "duration_seconds": 24,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "format": "H.264 yuv420p/AAC48kHz MP4 faststart",
+  "reference_study": "../media/launch-v4/RESEARCH.md",
+  "reference_inputs": [
+    {
+      "file": "SaasWAVE motion design course is out 🔥 Find it on profile!No AI 🚫#aftereffects #blender #motio.mp4",
+      "sha256": "87b8c2aea999ad253b4383b3eae9c0fa42109a8ea3cbbe071fda5c6002decfd3",
+      "bytes": 5014158,
+      "video_seconds": 26.333333,
+      "video_dimensions": [
+        1276,
+        718
+      ],
+      "fps": "24/1",
+      "video_frames": 632,
+      "audio_rate": "44100",
+      "audio_channels": 2,
+      "assets_reused": false
+    },
+    {
+      "file": "LILIUM — Experimental Motion StudyThis personal project explores the combination of digital aest.mp4",
+      "sha256": "03bf1585f9dddfcc5d1c56cd3863ed922d964fc1094a3690a3981409c838a8bf",
+      "bytes": 1767977,
+      "video_seconds": 6.7,
+      "video_dimensions": [
+        1280,
+        720
+      ],
+      "fps": "30/1",
+      "video_frames": 201,
+      "audio_rate": "48000",
+      "audio_channels": 2,
+      "assets_reused": false
+    }
+  ],
+  "reference_assets_or_audio_reused": false,
+  "creative_direction": "Original solid SUNSET geometry, physical release capsule and maintenance credential; perspective camera choreography, per-glyph typography, macro image strips, whole-frame cream/coral/black hierarchy changes and a short genuine app action.",
+  "three_capture": {
+    "source_sha256": "cf716f16210266ae2ed239feb0dd38caf7bef6b5dee0881b403d0dfbb334f5da",
+    "base_renderer_sha256": "fb676c6718e42b996753b7c753b6f9f1d3a17ba2b265c769cf2c4f2d07f047e7",
+    "current_renderer_sha256": "c7c693171fc60093159930c04891fa0938784ada252506b51149a6a717a97c4d",
+    "native_base": {
+      "width": 1280,
+      "height": 720,
+      "fps": 15,
+      "frames": 360,
+      "duration": 24,
+      "format": "jpeg",
+      "folder": "native-frames",
+      "method": "Actual deterministic Three.js WebGL2/SwiftShader renders at n/15 seconds",
+      "renderer_sha256": "fb676c6718e42b996753b7c753b6f9f1d3a17ba2b265c769cf2c4f2d07f047e7"
+    },
+    "capture_summary": {
+      "base_actual_15fps_frames": 360,
+      "additional_actual_30fps_samples": 57,
+      "total_distinct_actual_3d_times": 417,
+      "delivered_sequence_frames": 720,
+      "stewardship_window_actual_30fps_frames": 114
+    },
+    "delivered_sequence": {
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "frames": 720,
+      "duration": 24,
+      "format": "png",
+      "folder": "frames",
+      "method": "Hybrid background: actual15fps3D base with cut-aware30fpsMCI; stewardship frames474..587 are actual30fps3D samples (57 base even frames plus57 fresh odd captures), with no interpolation in that window."
+    },
+    "interpolation_filter": "tpad=stop_mode=clone:stop_duration=0.266667,minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:me=epzs:search_param=16:scd=fdiff:scd_threshold=10",
+    "detail_window": {
+      "start_frame": 474,
+      "end_frame_exclusive": 588,
+      "start_seconds": 15.8,
+      "end_seconds": 19.6,
+      "fps": 30
+    },
+    "sequence_validation": {
+      "native_exact_count": 360,
+      "sequence_exact_count": 720,
+      "all_png_dimensions": [
+        1280,
+        720
+      ],
+      "all_png_crc_verified": true,
+      "native_sequence_sha256": "3f2d091b7fe41695077df11c0c1dbca72b8f3fe700765198c34ac9ee39d38a39",
+      "delivered_sequence_sha256": "76f2f802a4bc57f68ad09c3044d7016d0c74c3cbcd7b6024a4cf25b96557c151",
+      "first_frame_sha256": "8cda1ce51a8e2f9fbdfef544af3beac7958d01926b71b2f913917f283cd8058c",
+      "last_frame_sha256": "4d08df1b92b7bbc795492899ec3ae8f753fd3390943f4566ba8d12f4d47f62ad",
+      "source_and_dependency_hashes_match": true,
+      "full_3d_source_unchanged_during_capture": true,
+      "final_frames_folder_contains_png_only": true,
+      "detail_pass_complete": true
+    },
+    "dependencies": [
+      {
+        "url": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "path": ".publication/sunset-launch-v4/scene/deps/three.module.js",
+        "bytes": 603113,
+        "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.core.js",
+        "path": ".publication/sunset-launch-v4/scene/deps/three.core.js",
+        "bytes": 1403455,
+        "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/npm/three@0.180.0/LICENSE",
+        "path": ".publication/sunset-launch-v4/scene/deps/LICENSE",
+        "bytes": 1081,
+        "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+      }
+    ],
+    "scene_manifest_sha256": "1a6f90282298c2019a8ee9eb1f3aaefb44ae001fbbea7324a327607a39f475c4",
+    "rendering_limits": "Software-rasterized PBR/procedural scene, not ray-traced studio production. Most backgrounds interpolate15fps samples to30fps; text-critical handover is actual30fps. Final foreground type/UI/captions are native1080p30."
+  },
+  "qa": {
+    "checked_at": "2026-11-03T06:36:39.444030+00:00",
+    "status": "objective_checks_passed_visual_review_separate",
+    "sha256": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    "bytes": 7745159,
+    "duration": 24.0,
+    "frames": 720,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "video_codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "faststart": true,
+    "top_level_atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ],
+    "full_decode": "passed",
+    "unexpected_black_intervals": 0,
+    "blackdetect_thresholds": {
+      "duration": 0.2,
+      "pixel": 0.01,
+      "picture": 0.98
+    },
+    "caption_cues": 5,
+    "exact_caption_text": true,
+    "voice_sources_and_edits_verified": true,
+    "voice_overlap": false,
+    "final_voice_tail_seconds": 0.47095833333333204,
+    "capture_hashes_match_browser_evidence": {
+      "06-hosted-verified-game.png": "c789b3cececcc2221dbe0392e33c26414de1f3d8313c9bfad301edfaca59e4d3",
+      "07-hosted-game-feedback.png": "412615e2404e1b7a8838346c27d77a461a81f14b46b7cd1894ae7f07c996cec6",
+      "11-offline-game-complete.png": "048c158a6fc3feb4acbc33d5dec6a20c7f7e35d4276c765424f1661faf95392c"
+    },
+    "loudness_lufs": -16.45,
+    "true_peak_dbtp": -1.77,
+    "decoded_review_samples": [
+      {
+        "name": "opening",
+        "seconds": 0.7,
+        "file": "decoded-opening.png"
+      },
+      {
+        "name": "sculpture",
+        "seconds": 2.8,
+        "file": "decoded-sculpture.png"
+      },
+      {
+        "name": "release",
+        "seconds": 6.6,
+        "file": "decoded-release.png"
+      },
+      {
+        "name": "fragments",
+        "seconds": 9.05,
+        "file": "decoded-fragments.png"
+      },
+      {
+        "name": "answer",
+        "seconds": 10.35,
+        "file": "decoded-answer.png"
+      },
+      {
+        "name": "feedback",
+        "seconds": 11.8,
+        "file": "decoded-feedback.png"
+      },
+      {
+        "name": "offline",
+        "seconds": 14.4,
+        "file": "decoded-offline.png"
+      },
+      {
+        "name": "stewardship",
+        "seconds": 17.7,
+        "file": "decoded-stewardship.png"
+      },
+      {
+        "name": "type",
+        "seconds": 20.3,
+        "file": "decoded-type.png"
+      },
+      {
+        "name": "close",
+        "seconds": 22.8,
+        "file": "decoded-close.png"
+      }
+    ],
+    "perceptual_listening_verified": false,
+    "scope": "Original 3D/editorial animation, genuine UI capture excerpts, graphical answer reenactment; no financial signing or new chain action."
+  },
+  "visual_review": {
+    "checked": true,
+    "samples": "Ten final decoded points/contact sheet, plus full-size final credential, feedback and closing frames.",
+    "fixes": [
+      "Replaced credential motion-interpolation artifacts with57 direct30fps samples and restored57 base even samples.",
+      "Removed overlapping decorative3D fragment from the clean original-logo closing."
+    ],
+    "frame_exact_replacements": [
+      [
+        474,
+        588
+      ],
+      [
+        648,
+        720
+      ]
+    ],
+    "full_frame_by_frame_playback": false,
+    "perceptual_listening_verified": false
+  },
+  "narration": {
+    "phrases": [
+      {
+        "index": 1,
+        "source_sentence_index": 2,
+        "text": "This is SUNSET.",
+        "start": 0.4,
+        "end": 1.5507083333333336,
+        "duration": 1.1507083333333334,
+        "audio_file": "sentence-02.wav",
+        "rendered_file": "voice/sentence-02.wav",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-02.wav",
+        "source_sha256": "8044fdbd5ce7ab1914963b1e9ad3f94a2f62a2b025b9b0ffb392fcf8376f74ff",
+        "sha256": "a558c839a2a305926c95ff74fdff838978d249dd4e23fd685faba70adafc610c",
+        "rendered_sha256": "a558c839a2a305926c95ff74fdff838978d249dd4e23fd685faba70adafc610c",
+        "pitch_preserving_tempo": 1.12,
+        "sample_rate": 48000
+      },
+      {
+        "index": 2,
+        "source_sentence_index": 8,
+        "text": "A matching release key, published on time, credits the agreed creator.",
+        "start": 4.8,
+        "end": 8.681916666666666,
+        "duration": 3.8819166666666667,
+        "audio_file": "sentence-08.wav",
+        "rendered_file": "voice/sentence-08.wav",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-08.wav",
+        "source_sha256": "5ca51f0bcb3ccc3113747f1ae8278e8003c63185c2ba6975aef5fe876929618d",
+        "sha256": "38e45656e68fe5bf640e5e54fb20f5469640832d4e949e65cdce6415e5db2f00",
+        "rendered_sha256": "38e45656e68fe5bf640e5e54fb20f5469640832d4e949e65cdce6415e5db2f00",
+        "pitch_preserving_tempo": 1.12,
+        "sample_rate": 48000
+      },
+      {
+        "index": 3,
+        "source_sentence_index": 12,
+        "text": "Close the website. Turn off the internet. Keep playing.",
+        "start": 12.6,
+        "end": 15.701958333333334,
+        "duration": 3.101958333333333,
+        "audio_file": "sentence-12.wav",
+        "rendered_file": "voice/sentence-12.wav",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-12.wav",
+        "source_sha256": "59ec103f35f00b07ddbeb1637bebb0af62032ad1b05052d046fe14ac80c78de0",
+        "sha256": "45aa319b204dba2b22454e92db36a6679764629b2d64f41af7d16196821fba3e",
+        "rendered_sha256": "45aa319b204dba2b22454e92db36a6679764629b2d64f41af7d16196821fba3e",
+        "pitch_preserving_tempo": 1.12,
+        "sample_rate": 48000
+      },
+      {
+        "index": 4,
+        "source_sentence_index": 16,
+        "text": "Transfer it, and pass on maintenance responsibility.",
+        "start": 16.4,
+        "end": 19.390666666666664,
+        "duration": 2.990666666666667,
+        "audio_file": "sentence-16.wav",
+        "rendered_file": "voice/sentence-16.wav",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-16.wav",
+        "source_sha256": "293c2991c8fb1591b99867c54a4d79295474b9695c04e0dfd86c7f38dcd85756",
+        "sha256": "161f67e77b48b3c9d4b3a0b0e3e5f934ff0b9db436126e758c2c96642c3a0ac7",
+        "rendered_sha256": "161f67e77b48b3c9d4b3a0b0e3e5f934ff0b9db436126e758c2c96642c3a0ac7",
+        "pitch_preserving_tempo": 1.12,
+        "sample_rate": 48000
+      },
+      {
+        "index": 5,
+        "source_sentence_index": 20,
+        "text": "Explore the prototype. Built on NEAR testnet.",
+        "start": 20.8,
+        "end": 23.529041666666668,
+        "duration": 2.729041666666667,
+        "audio_file": "sentence-20.wav",
+        "rendered_file": "voice/sentence-20.wav",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-20.wav",
+        "source_sha256": "ac668b4595c2f837aec316313fa4f37775be0cebc7d585c142907590ac0350c6",
+        "sha256": "e3afdcaaa12cd908185cfaade54580b1c8c873d5fc08f41e76028810417ea415",
+        "rendered_sha256": "e3afdcaaa12cd908185cfaade54580b1c8c873d5fc08f41e76028810417ea415",
+        "pitch_preserving_tempo": 1.12,
+        "sample_rate": 48000
+      }
+    ],
+    "words": 37,
+    "method": "Five whole retained Kokoro af_heart synthetic sentences; no fresh synthesis or cloning.",
+    "final_tail_seconds": 0.47095833333333204
+  },
+  "audio": {
+    "duration_seconds": 24.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "bpm": 150,
+    "bars": 15,
+    "phrase_count": 5,
+    "voice_overlap": false,
+    "last_voice_end": 23.529041666666668,
+    "final_voice_tail_seconds": 0.47095833333333204,
+    "integrated_lufs": -16.36,
+    "true_peak_dbtp": -2.01,
+    "mix_sha256": "c9721916ceccb42b9af05cb4590bda75f9e707611849f8b2db4e957badae6468",
+    "mix_bytes": 6912102,
+    "voice_to_music_rms": [
+      {
+        "phrase": 1,
+        "voice_above_music_rms_db": 10.07
+      },
+      {
+        "phrase": 2,
+        "voice_above_music_rms_db": 9.72
+      },
+      {
+        "phrase": 3,
+        "voice_above_music_rms_db": 9.72
+      },
+      {
+        "phrase": 4,
+        "voice_above_music_rms_db": 9.53
+      },
+      {
+        "phrase": 5,
+        "voice_above_music_rms_db": 9.17
+      }
+    ],
+    "source_hashes_checked": true,
+    "aac_192k_roundtrip_lufs": -16.46,
+    "aac_192k_roundtrip_true_peak_dbtp": -1.77,
+    "reference_audio_used": false,
+    "perceptual_listening_verified": false,
+    "scope": "Original deterministic150BPM synthesis plus five whole retained synthetic narration sentences."
+  },
+  "source_files": [
+    {
+      "path": "projects/sunset/media/launch-v4/RESEARCH.md",
+      "bytes": 4977,
+      "sha256": "af925be8025810e3b7285e170a515bd3782f8b38c87480e283e0b87828745b4c"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/scene.mjs",
+      "bytes": 12539,
+      "sha256": "cf716f16210266ae2ed239feb0dd38caf7bef6b5dee0881b403d0dfbb334f5da"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/x-post.txt",
+      "bytes": 290,
+      "sha256": "a0dd17bf12ac922a7aba61f70f70ad0096bf9b8006e8389e7bc2223637ad5a71"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/PLAN.md",
+      "bytes": 1986,
+      "sha256": "103903a79d3c539ca6c2088609d4798ac154a81ba106bacb0f7e4a3f392e5c22"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/prepare_audio.py",
+      "bytes": 13956,
+      "sha256": "04edeb144414782b4816e54e08acf00f6e3af7a231071a3ae44a84767b63499e"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/references.json",
+      "bytes": 1493,
+      "sha256": "bb6a729741a670cd842386db38419fcf28b205cdb16eb7c5ed0d4a4661645b1e"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/render_launch.py",
+      "bytes": 21249,
+      "sha256": "7637bc3ebfa32b0423df529c5b1a35c4f5386fd23d895d5319ace7f9a913bc84"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/verify.py",
+      "bytes": 6890,
+      "sha256": "4be79b7556583bc9448c662f4706085f70ecbd9adcf7606a11152d6e4629cd22"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/render_scene.mjs",
+      "bytes": 15688,
+      "sha256": "c7c693171fc60093159930c04891fa0938784ada252506b51149a6a717a97c4d"
+    },
+    {
+      "path": "projects/sunset/media/launch-v4/README.md",
+      "bytes": 5897,
+      "sha256": "431d9ab870c7e90528a095055a5bd861c3d73ff300033dcb328f6962c5b35a94"
+    }
+  ],
+  "original_UI_capture_hashes": {
+    "06-hosted-verified-game.png": "c789b3cececcc2221dbe0392e33c26414de1f3d8313c9bfad301edfaca59e4d3",
+    "07-hosted-game-feedback.png": "412615e2404e1b7a8838346c27d77a461a81f14b46b7cd1894ae7f07c996cec6",
+    "11-offline-game-complete.png": "048c158a6fc3feb4acbc33d5dec6a20c7f7e35d4276c765424f1661faf95392c"
+  },
+  "source": "../media/launch-v4/README.md",
+  "post_copy": "../media/launch-v4/x-post.txt",
+  "post_weighted_characters": 267,
+  "previous_versions_preserved": [
+    {
+      "path": ".publication/sunset-launch-v1/render/sunset-launch.mp4",
+      "sha256": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0"
+    },
+    {
+      "path": ".publication/sunset-launch-v2/sunset-launch-v2.mp4",
+      "sha256": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/sunset-launch-v3.mp4",
+      "sha256": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb"
+    }
+  ],
+  "product_scope": "MOTION VISUALIZATION for editorial objects, ACTUAL GAME for verified UI. Graphical pointer reenacts a previously observed answer. No financial browser signing or new onchain event. Creator credit requires separate withdrawal; NFT transfers mirror authority while public copies stay usable.",
+  "publication": {
+    "generated_media_and_reference_samples_ignored": true,
+    "source_and_public_evidence_tracked": true,
+    "public_x_post_url": null,
+    "posted": false,
+    "submitted": false,
+    "operator_pushes_local_commits": true
+  },
+  "limits": [
+    "Reference studio sets, lighting/material detail and depth-of-field polish are richer than this procedural treatment.",
+    "Subjective audio listening remains a human preview step.",
+    "Existing browser financial controls remain rehearsal/unsigned plans; CLI signs actual settlement.",
+    "No product, contract or testnet mutation occurred in this media batch."
+  ]
+}
