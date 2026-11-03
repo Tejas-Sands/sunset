@@ -1,19 +1,22 @@
-# SUNSET launch video
+# SUNSET launch demo
 
-Current: **v7 —20 seconds, 1920×1080/30fps**. It preserves the approved sunset-first playful 2D direction and removes the product URL and entire music-credit overlay.
+Current: **v8 —24 seconds,1920×1080 at 30fps**. It combines the approved warm sunset-first flat 2D direction with a clear problem, concrete NEAR role, genuine app action/result and ready public-post copy.
 
 ```sh
-xdg-open .publication/sunset-launch-v7/sunset-launch-v7.mp4
+xdg-open .publication/sunset-launch-v8/sunset-launch-v8.mp4
 ```
 
-The delivery includes MP4, exact nine-cue SRT, clean poster, audio/provenance/QA and decoded review sheets. Play the complete file with sound before posting; technical measurements and visual samples do not establish human audio preference.
+The movie starts with a short sunset/host-disappearance hook, then shows named NEAR escrow, a real showcase cap/key commitment, separate creator credit/withdrawal and sponsor refund routes. These financial scenes are labelled protocol illustrations. A real downloaded standalone pack then runs with browser offline: the actual12click produces visible explanation/progress. Full [requirement mapping/source](../media/launch-v8/README.md) and [final review](../media/launch-v8/REVIEW.md) document exact times and limits.
 
-The narration is byte-identical to the approved v6 voice, with the same 44words and timings. New restrained EQ, de-essing and compression clean up the voice. A new relaxed instrumental recording, **Backbay Lounge by Kevin MacLeod**, replaces Origami. Music is more audible beneath speech (8.50–11.69dB voice/music RMS separation). Delivered audio measures−15.37 LUFS/−1.97 dBTP.
+The genuine proof uses native 2560×1800 browser PNG captures sampled by wallclock (~3fps), held honestly at 30fps delivery; it is not 30 unique browser frames per second. The native1424×475 crop is not enlarged. Input15.3246s aligns with “Try it”; the first captured result/editorial pulse is15.6816s, then the real result remains through the quiet reading window. Browser offline before/after, zero resources and the exact downloaded-file hash are verified. No wallet or financial action was rerun.
 
-The picture contains only the original logo/SUNSET/tagline and animated dots on the end card. Required music attribution is outside the video in [current post copy](../media/launch-v7/x-post.txt) and [CREDITS](../media/launch-v7/CREDITS.md). The post also omits the product link. Keep the title/artist/source/license/edit disclosure alongside the upload; no burned credit is needed. YouTube attribution goes in its description.
+## Posting
 
-[Source/reproduction](../media/launch-v7/README.md), [final review](../media/launch-v7/REVIEW.md) and [artifact evidence](../evidence/launch-video-v7.json) record the exact file and checks:600-frame full decode, 1,606 authored text probes (minimum 5.123:1), ten promised reads, exact voice/caption/source/font/UI/music identities, safe bounds/separation, all four BT709 limited-range tags, faststart and no unexpected black interval. Root and another reviewer inspected the actual decoded 19.5s end card; all 600 records contain no URL or music-credit kind. Subjective listening and continuous human playback remain unassessed.
+1. Play the full film with sound and at phone size before posting. Human subjective audio/continuous playback remain unassessed.
+2. Attach the movie natively to the [main X post draft](../media/launch-v8/x-post.txt). It includes the problem, NEAR escrow, build-at-event wording, required tags, hosted demo/repo links and a feedback question.
+3. Add the [full recording-credit reply](../media/launch-v8/x-reply-credits.txt) with source/license/edit disclosure. Music is retained Backbay Lounge by Kevin MacLeod, CC BY4.0, edited16–40s. No URLs or credits are burned into the movie.
+4. Retain the public X-post URL for final submission. [Submission instructions](SUBMISSION.md) list remaining human fields. The assistant has not posted or submitted anything.
 
-Upload natively to one public X post with the credited copy and retain its public URL; a thread is optional. [Submission instructions](SUBMISSION.md) list remaining human fields. The assistant has not posted or submitted anything.
+[Artifact evidence](../evidence/launch-video-v8.json) records24s/720frames, full decode, 1,745 authored text probes (minimum 5.1455:1), eight static reads, exact 48 words/10cues, source/font/UI/music/capture hashes, input-time mapping, safe bounds/separation, BT709 tags/faststart and no unexpected black interval. Encoded audio −15.40LUFS/−1.96dBTP; voice tail 2.662917s. Root/fresh reviewer found no P0/P1 in decoded samples; incidental feedback/account/hash text is small on phones.
 
-All six old movies remain byte-identical, including the [approved v6](../media/launch-v6/README.md). Generated video/audio/music/fonts/models/caches and private material stay ignored. Sources and public evidence are committed locally; the operator pushes. No app, contract, signing or settled chain action was changed or repeated. Existing [E2E](E2E_AUDIT_2026-11-03.md), [main receipts](../evidence/testnet-showcase.json) and [refund receipts](../evidence/testnet-refunds.json) remain product proof.
+All seven old films remain unchanged. Generated video/audio/captures/downloads/fonts/models/music/caches and private material remain ignored. Original source, public evidence and post drafts are committed locally; the operator pushes. No app/contract/deployment/signing/social/submission action occurs in this media revision. Existing [E2E](E2E_AUDIT_2026-11-03.md), [main settlement](../evidence/testnet-showcase.json) and [refund receipts](../evidence/testnet-refunds.json) remain product proof.

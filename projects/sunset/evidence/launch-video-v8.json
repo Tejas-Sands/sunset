@@ -1,0 +1,387 @@
+{
+  "version": 8,
+  "checked_at": "2026-11-03T10:41:00.166726+00:00",
+  "status": "prepared_locally_verified_not_posted",
+  "film_path": ".publication/sunset-launch-v8/sunset-launch-v8.mp4",
+  "sha256": "b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2",
+  "bytes": 3009859,
+  "duration_seconds": 24,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "format": "H.264 yuv420p BT709 limited / AAC48kHz stereo MP4 faststart",
+  "user_request": "Cover problem, genuine user action/result, concrete NEAR role, short introduction, demo/repository links and feedback; stronger web3-ish animation within approved warmflat2D style.",
+  "source": "../media/launch-v8/README.md",
+  "review": "../media/launch-v8/REVIEW.md",
+  "source_hashes": {
+    "capture_demo.mjs": "358ffe99a77aa7c583c9438d4c25f666e906d3a185c27a440839ca267a2849ce",
+    "fonts-provenance.json": "5d4c03fcd43dd89605dd7b604219add26f20651572cc3b5e6ec02002326a135a",
+    "narration-script.json": "c2392d945f646882dcb888606e3e2b9477094bdb52c2398db4fc4fe5d325e207",
+    "prepare_audio.py": "d9a179511b62ea6a015a5348fdaef31f8ef77a1a145bf1208ffebe7319facbae",
+    "render_launch.py": "62c6a022a8fe1f4955f699b22fce18586e654c24e6b4f4af67aa5d9959227b8e",
+    "verify.py": "f02d1f392ddb2289fd0aa188aa77a556da4a3ccab72ff006504c17962926d0a5"
+  },
+  "requirements": {
+    "problem": {
+      "seconds": [
+        0,
+        2.521333
+      ],
+      "message": "When a website disappears, learning should persist."
+    },
+    "real_action_result": {
+      "seconds": [
+        13.780625,
+        19.1685
+      ],
+      "action": "Actual offline answer12 click",
+      "result": "7 + 5 = 12. Your first lantern glows. The gate opens onto a quiet trail.",
+      "input_seconds": 15.324583333333333,
+      "first_captured_result_and_editorial_pulse_seconds": 15.681598335333334
+    },
+    "near_role": {
+      "seconds": [
+        2.521333,
+        13.780625
+      ],
+      "mechanism": "Bounded native NEAR escrow, committed matching timely release key, separate creator withdrawal and sponsor refund claims.",
+      "protocol_visuals": "Labelled illustrations using public account/cap/key-commitment data; no fake financial browser signing."
+    },
+    "short_intro": {
+      "sunset_hook_seconds": 1.05,
+      "setup_or_architecture_slides": false
+    },
+    "next_step": {
+      "main_post": "../media/launch-v8/x-post.txt",
+      "demo": "https://sunset-lemon.vercel.app",
+      "repository": "https://github.com/Tejas-Sands/sunset",
+      "feedback_question": "What would you fund?",
+      "full_music_credit_reply": "../media/launch-v8/x-reply-credits.txt"
+    }
+  },
+  "style": {
+    "flat_2d": true,
+    "three_d_input": false,
+    "native_graphics_dimensions": [
+      1920,
+      1080
+    ],
+    "fonts": [
+      "Bricolage Grotesque",
+      "Space Grotesk"
+    ],
+    "sunset_first": true,
+    "clean_endcard": true,
+    "onscreen_product_url": false,
+    "onscreen_music_credit": false
+  },
+  "actual_recording": {
+    "capture_provenance_sha256": "cfb0d52bcedc8d0e7a770ec1a0073a7c05ae85c88544a533d863887d9ef7e5f9",
+    "capture_script_sha256": "358ffe99a77aa7c583c9438d4c25f666e906d3a185c27a440839ca267a2849ce",
+    "compositor_manifest_sha256": "a6b91fbdcf817fa9817c9d528812b5ea51ac9b36a4dc1277b804cf23cd59a53d",
+    "source_clip_sha256": "15051332cf3f7c60992485ee59e1608534ff716babe92e0e5b43f236dd8d418b",
+    "source_dimensions": [
+      2560,
+      1800
+    ],
+    "actual_png_samples": 10,
+    "method": "Actual wallclock viewport PNG sampling ~3fps; static holds at30fps output, not30 unique UI frames per second.",
+    "final_demo_frames": 162,
+    "crop": [
+      568,
+      660,
+      1992,
+      1135
+    ],
+    "display_dimensions": [
+      1424,
+      475
+    ],
+    "scale": 1,
+    "source_sample_hashes_verified": true,
+    "no_interpolation_or_invented_ui": true,
+    "editorial_click_highlight": {
+      "kind": "Pulse at logged actual browser input position on first captured post-click state",
+      "real_input_film_seconds": 15.324583333333333,
+      "annotation_start_film_seconds": 15.681598335333334,
+      "duration_seconds": 0.42,
+      "reason": "The actual browser scrolls the clicked control before input; highlighting the stale pre-click sample would misplace the ring. No invented cursor or UI state."
+    },
+    "endpoint_holds": "First actual sample holds before playback; last available actual sample holds after recording.",
+    "offline_before": {
+      "onLine": false,
+      "resources": 0,
+      "scheme": "file:",
+      "feedback": "",
+      "buttons": [
+        "10",
+        "12",
+        "14"
+      ]
+    },
+    "offline_after": {
+      "onLine": false,
+      "resources": 0,
+      "scheme": "file:",
+      "feedback": "7 + 5 = 12. Your first lantern glows. The gate opens onto a quiet trail.",
+      "progress": 1
+    },
+    "download": {
+      "file": "downloads-native/lantern-trail-testnet-v1-offline.html",
+      "bytes": 7246,
+      "sha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738"
+    },
+    "public_chain_read": {
+      "network": "testnet",
+      "contract": "sunset.shiftultra.testnet",
+      "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+      "height": 276036042,
+      "campaigns": [
+        {
+          "id": "lantern-trail-testnet-v1",
+          "state": "Released"
+        },
+        {
+          "id": "refund-funding-20261103-v1",
+          "state": "Refundable"
+        },
+        {
+          "id": "refund-release-20261103-v1",
+          "state": "Refundable"
+        }
+      ]
+    },
+    "source_frame_uses_sha256": "fa953767317192179f21f2ce9027460752a19e7a4544f78b257dfbc4fd4b56b8",
+    "console_errors": []
+  },
+  "audio": {
+    "voice": "Fresh am_puck natural1.0,48words/10cues",
+    "narration_sha256": "f19d0f62630aad398b1197576c01d8bb49f93b1bd9e8e3e3ffd0016d719efe8a",
+    "master_sha256": "3f5ace063f6453027573f3bcc251a971a2e377c26360961a3e1dec3598e12eff",
+    "music": {
+      "title": "Backbay Lounge",
+      "artist": "Kevin MacLeod",
+      "album": "Teh Jazzes",
+      "isrc": "USUAN1700068",
+      "tempo_bpm": 120,
+      "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700068",
+      "primary_detail": "https://remote.incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1700068",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Backbay%20Lounge.mp3",
+      "file": "kevin-macleod-backbay-lounge.mp3",
+      "sha256": "9567e71a213b0026341b2c0ecd226950e7653abd235cf520fb9aee4247d74d96",
+      "bytes": 8531962,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist_description": "Jazz; bright, grooving and relaxed; piano, guitar, drums and bass.",
+      "excerpt_start_seconds": 16.0,
+      "excerpt_end_seconds": 40.0,
+      "excerpt_duration_seconds": 24.0,
+      "selection_basis": "Retained approved relaxed120bpm recording; bar-aligned excerpt starts16s, extended to the measured picture/voice runtime. No perceptual listening claim.",
+      "attribution": "Backbay Lounge by Kevin MacLeod (incompetech.com), licensed under CC BY4.0.",
+      "changes_to_disclose": "Edited16\u201340s excerpt, EQ, fades and speech ducking.",
+      "attribution_required": true,
+      "attribution_placement": "Accompanying post/video description plus CREDITS.md; no burned-in credit.",
+      "on_screen_credit_required": false,
+      "processing": {
+        "voice_filter": "highpass=f=75,equalizer=f=520:t=q:w=0.9:g=-1.6,equalizer=f=3000:t=q:w=0.8:g=1.0,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.11:ratio=2:attack=16:release=120:makeup=1.2,loudnorm=I=-17:TP=-3:LRA=6,aresample=48000,apad=whole_len=1152000,atrim=end_sample=1152000",
+        "music_filter": "highpass=f=55,equalizer=f=2500:t=q:w=0.8:g=-3,lowpass=f=14000,loudnorm=I=-24:TP=-4:LRA=8",
+        "music_active_target_separation_db": 9,
+        "minimum_phrase_separation_db": 8.5,
+        "duck_depth": 0.32,
+        "attack_seconds": 0.06,
+        "release_seconds": 0.28,
+        "fade_in_seconds": 0.09,
+        "fade_out_seconds": 0.6,
+        "overall_music_gain": 1.2920092650929622,
+        "master": "loudnorm=I=-15:TP=-2:LRA=7:linear=true:measured_I=-15.54:measured_TP=-1.25:measured_LRA=9.00:measured_thresh=-25.86:offset=0.73"
+      },
+      "reference_audio_used": false,
+      "perceptual_listening_verified": false
+    },
+    "voice_music_separation": [
+      {
+        "phrase": 1,
+        "voice_above_music_rms_db": 8.72
+      },
+      {
+        "phrase": 2,
+        "voice_above_music_rms_db": 8.5
+      },
+      {
+        "phrase": 3,
+        "voice_above_music_rms_db": 8.5
+      },
+      {
+        "phrase": 4,
+        "voice_above_music_rms_db": 10.5
+      },
+      {
+        "phrase": 5,
+        "voice_above_music_rms_db": 9.83
+      },
+      {
+        "phrase": 6,
+        "voice_above_music_rms_db": 9.06
+      },
+      {
+        "phrase": 7,
+        "voice_above_music_rms_db": 8.5
+      },
+      {
+        "phrase": 8,
+        "voice_above_music_rms_db": 9.72
+      },
+      {
+        "phrase": 9,
+        "voice_above_music_rms_db": 12.04
+      },
+      {
+        "phrase": 10,
+        "voice_above_music_rms_db": 11.07
+      }
+    ],
+    "encoded_loudness_lufs": -15.4,
+    "encoded_true_peak_dbtp": -1.96,
+    "voice_end_seconds": 21.337083333333332,
+    "voice_tail_seconds": 2.6629166666666677,
+    "proof_quiet_gap_seconds": 2.0,
+    "perceptual_listening_verified": false,
+    "attribution_placement": "Post/reply/description and source credits, outside picture"
+  },
+  "verification": {
+    "command": "python3 projects/sunset/media/launch-v8/verify.py",
+    "exit_code": 0,
+    "full_decode": true,
+    "frames": 720,
+    "text_probes": 1745,
+    "minimum_decoded_contrast": 5.1455,
+    "stable_read_windows": [
+      {
+        "id": "sunset",
+        "lines": [
+          "Learning",
+          "should stay."
+        ],
+        "window": [
+          1.05,
+          2.521333333333333
+        ],
+        "minimum_read_seconds": 1.4
+      },
+      {
+        "id": "fund",
+        "lines": [
+          "NEAR escrow."
+        ],
+        "window": [
+          2.761333333333333,
+          6.545333333333334
+        ],
+        "minimum_read_seconds": 1.1
+      },
+      {
+        "id": "key",
+        "lines": [
+          "Publish",
+          "the key."
+        ],
+        "window": [
+          6.785333333333334,
+          8.499306666666667
+        ],
+        "minimum_read_seconds": 1.4
+      },
+      {
+        "id": "payout",
+        "lines": [
+          "Creators",
+          "can withdraw."
+        ],
+        "window": [
+          8.739306666666668,
+          10.782666666666666
+        ],
+        "minimum_read_seconds": 1.4
+      },
+      {
+        "id": "miss",
+        "lines": [
+          "Missed?"
+        ],
+        "window": [
+          11.022666666666666,
+          11.987958333333333
+        ],
+        "minimum_read_seconds": 0.8
+      },
+      {
+        "id": "refund",
+        "lines": [
+          "Sponsors",
+          "claim refunds."
+        ],
+        "window": [
+          12.227958333333333,
+          13.780624999999999
+        ],
+        "minimum_read_seconds": 1.4
+      },
+      {
+        "id": "demo",
+        "lines": [
+          "Try it offline."
+        ],
+        "window": [
+          14.030624999999999,
+          19.1685
+        ],
+        "minimum_read_seconds": 1.4
+      },
+      {
+        "id": "support",
+        "lines": [
+          "Support once."
+        ],
+        "window": [
+          19.172125,
+          20.297125
+        ],
+        "minimum_read_seconds": 1.1
+      }
+    ],
+    "all_caption_text_times_and_source_hashes_match": true,
+    "native_source_png_hashes_crc_dimensions": true,
+    "genuine_event_time_alignment_verified": true,
+    "all_four_bt709_tags_and_faststart": true,
+    "unexpected_black_intervals": 0,
+    "qa_sha256": "c0c1c34a15fb82255c0a9720d0cd7c96fb237300f5e8c1bc1372450cc679c793"
+  },
+  "visual_review": {
+    "root_and_fresh_context_reviewer": true,
+    "decoded_sheets": [
+      "review/beat-sheet.jpg",
+      "review/phone-sheet.jpg",
+      "review/cut-sheet.jpg"
+    ],
+    "p0": 0,
+    "p1": 0,
+    "p2": "Incidental full feedback/account/hash text remains small at phone width; main action/controls/headings remain understandable.",
+    "full_subjective_audio_or_continuous_human_playback": false
+  },
+  "preserved_versions": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+    ".publication/sunset-launch-v6/sunset-launch-v6.mp4": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1",
+    ".publication/sunset-launch-v7/sunset-launch-v7.mp4": "8c1f850dce269c420ca9553b548a3a030107a2be2dec31864cf30819a210de44"
+  },
+  "generated_media_models_music_fonts_cache_and_private_files_ignored": true,
+  "chain_mutations": 0,
+  "application_or_contract_changes": false,
+  "public_x_post_url": null,
+  "submission_sent": false
+}

@@ -1,0 +1,11 @@
+# SUNSET v8 final review
+
+Artifact SHA-256: `b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2` (3,009,859bytes;24s; 1920×1080/30fps).
+
+Root and a fresh-context reviewer inspected actual decoded beat/cut/360px phone sheets, plus native actual-demo before/pulse/result samples. No P0/P1 found; all five requested demo recommendations are represented. Clear first-time story: website loss threatens learning access; community funding sits in NEAR escrow; a matching timely key permits creator withdrawal, otherwise applicable deadlines permit sponsor refund claims; a real downloaded copy works offline. Warm flat 2D, original mark and expressive fonts remain, with more causal funding/key/credit/refund/copy motion rather than generic perimeter confetti.
+
+The real action is answer12→actual explanation/progress1 in the actual downloaded HTML while browser offline is false onLine before/after and external resource entries are zero. Native recordings contain10 real timestamped states held by actual elapsed time, not 30 unique browser frames per second. Final demo uses162 native output frames at1.0 crop scale; actualinput15.324583s, first captured postclick/pulse15.681598s. A2s quiet voice gap lets the result remain visible. Financial scenes are labelled protocol illustrations and use recorded public data; no new wallet/signing action occurred.
+
+Independent checks passed720-frame full decode, 1,745 authored text probes (minimum decoded 5.1455:1), eight actual stable reads, bounds/separation, ten exact cues/48 words, source/font/music/rawPNG identities, source timestamp mapping, offline state/download identity, click alignment, BT709/limited tags, AAC stereo and faststart. Delivered audio −15.40LUFS/−1.96dBTP, no overlap,2.662917s tail. All seven previous movie hashes are unchanged.
+
+P2: full gameplay explanation and incidental contract/account/hash details are small at phone size; main headings, number controls, click highlight and appearance of the actual feedback remain understandable. No blocker or extra source change was requested. Full subjective audio listening, continuous human playback, physical-device/offline-network testing and audience validation remain unassessed. The operator should play the complete film with sound and retain the music-credit reply when posting.
