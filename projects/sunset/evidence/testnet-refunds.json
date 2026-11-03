@@ -1,0 +1,1857 @@
+{
+  "checked_at": "2026-11-03T05:05:04.057887+00:00",
+  "network": "testnet",
+  "rpc": "https://rpc.testnet.near.org",
+  "contract": "sunset.shiftultra.testnet",
+  "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+  "status": "both_real_expiry_refunds_and_native_principal_withdrawals_finalized",
+  "operator_control": "All roles share one operator; not independent reviewers/sponsors.",
+  "scope": "Two fresh isolated campaigns. Original Released showcase not rerun. Short positive 90-second raw-ABI release window is allowed by reviewed contract; whole-hour preparation helper unchanged. No clock simulation or contract upgrade.",
+  "final_block": {
+    "hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+    "height": 276002928,
+    "timestamp_ns": "1793682269958472374"
+  },
+  "transactions": [
+    {
+      "case": "funding",
+      "step": "create",
+      "transaction_hash": "77iptzTaEXd77xiZPbXfkeGjggyLsNsrR39WkWjTw3We",
+      "explorer_url": "https://testnet.nearblocks.io/txns/77iptzTaEXd77xiZPbXfkeGjggyLsNsrR39WkWjTw3We",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T04:57:44.691439+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZGE1NGI2MTFkYmRkMjhhMjE0MDI1ZTI1NzQwMzJkYjdjYzBjOWI2NzEyYzBiOTAwNTlkMjExNzdjOWIyZTkyOSIsImNpcGhlcnRleHRfaGFzaCI6ImY2MjhlZTQzY2Q5NDViNmIyNzdhM2RkYTA3YWViNGQyMDk1MWU1NzYwZjJjOGQxZTdhODU5ZDQ0Y2FmMTY3NjkiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjAwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6IjdhM2VjMzljMzMzOTQ3MGE1ZGVhZGM2M2ZhYzk2YTBmYTcwODFmMzUyZWYwMjlkMTc3NjhiNzkyNDAxMWM3YTEiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6ImI0ZTI0ZWZkOTYyNjlmZDFhYjcwNTc2ZTA2NzhhYmY4MjAwMThkNGZjMWJjMTI0MzZiOTZlMmI4NjU4ZDFiMTQiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiZjMwM2Y4NWE5MzAzYzQ5MDVmNDA1Mzc4NDI5MWVmNTQyYjMxODQxYzI3MmMzYmY2ZjRkZTc1ZmYzMDc2NzgwMiIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJEcmFmdCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogZnVuZGluZyB0YXJnZXQgbWlzc2VkIiwidG90YWxfY29udHJpYnV0ZWQiOiIwIn0="
+      },
+      "actions": [
+        {
+          "method_name": "create_campaign",
+          "args": {
+            "id": "refund-funding-20261103-v1",
+            "title": "E2E refund: funding target missed",
+            "reviewer": "reviewer.shiftultra.testnet",
+            "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+            "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+            "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+            "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+            "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+            "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+            "target": "20000000000000000000000",
+            "funding_deadline_ns": "1793682004634000000",
+            "release_window_ns": "90000000000"
+          },
+          "deposit": "50000000000000000000000",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2776220364759,
+      "receipt_outcomes": [
+        {
+          "id": "EEEsJwoXNrxMMth2WJiNeuW2Lsm1TXkcLZTZComUFXmh",
+          "block_hash": "9JqpNoZuReNK1cnimDvCYBv9r9vzR9u6NuSwDf4haVwS",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2206211441964,
+          "status": {
+            "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZGE1NGI2MTFkYmRkMjhhMjE0MDI1ZTI1NzQwMzJkYjdjYzBjOWI2NzEyYzBiOTAwNTlkMjExNzdjOWIyZTkyOSIsImNpcGhlcnRleHRfaGFzaCI6ImY2MjhlZTQzY2Q5NDViNmIyNzdhM2RkYTA3YWViNGQyMDk1MWU1NzYwZjJjOGQxZTdhODU5ZDQ0Y2FmMTY3NjkiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjAwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6IjdhM2VjMzljMzMzOTQ3MGE1ZGVhZGM2M2ZhYzk2YTBmYTcwODFmMzUyZWYwMjlkMTc3NjhiNzkyNDAxMWM3YTEiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6ImI0ZTI0ZWZkOTYyNjlmZDFhYjcwNTc2ZTA2NzhhYmY4MjAwMThkNGZjMWJjMTI0MzZiOTZlMmI4NjU4ZDFiMTQiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiZjMwM2Y4NWE5MzAzYzQ5MDVmNDA1Mzc4NDI5MWVmNTQyYjMxODQxYzI3MmMzYmY2ZjRkZTc1ZmYzMDc2NzgwMiIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJEcmFmdCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogZnVuZGluZyB0YXJnZXQgbWlzc2VkIiwidG90YWxfY29udHJpYnV0ZWQiOiIwIn0="
+          },
+          "logs": []
+        },
+        {
+          "id": "ECzuFGRt794nd12cBJENk5UkdNLU549Q9TfqrKRB6dAE",
+          "block_hash": "BwfWPBtQPrmirjR4nfU1Mzo1oLme2DGvw43qxqe2vf3d",
+          "executor_id": "shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "funding",
+      "step": "approve",
+      "transaction_hash": "2Cdz5w8UwC83jVyYLfpdf56bUVoWmCZvnsjh1FGYxyfJ",
+      "explorer_url": "https://testnet.nearblocks.io/txns/2Cdz5w8UwC83jVyYLfpdf56bUVoWmCZvnsjh1FGYxyfJ",
+      "signer_id": "reviewer.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T04:57:59.538592+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZGE1NGI2MTFkYmRkMjhhMjE0MDI1ZTI1NzQwMzJkYjdjYzBjOWI2NzEyYzBiOTAwNTlkMjExNzdjOWIyZTkyOSIsImNpcGhlcnRleHRfaGFzaCI6ImY2MjhlZTQzY2Q5NDViNmIyNzdhM2RkYTA3YWViNGQyMDk1MWU1NzYwZjJjOGQxZTdhODU5ZDQ0Y2FmMTY3NjkiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjAwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6IjdhM2VjMzljMzMzOTQ3MGE1ZGVhZGM2M2ZhYzk2YTBmYTcwODFmMzUyZWYwMjlkMTc3NjhiNzkyNDAxMWM3YTEiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6ImI0ZTI0ZWZkOTYyNjlmZDFhYjcwNTc2ZTA2NzhhYmY4MjAwMThkNGZjMWJjMTI0MzZiOTZlMmI4NjU4ZDFiMTQiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiZjMwM2Y4NWE5MzAzYzQ5MDVmNDA1Mzc4NDI5MWVmNTQyYjMxODQxYzI3MmMzYmY2ZjRkZTc1ZmYzMDc2NzgwMiIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJBY3RpdmUiLCJzdGV3YXJkc2hpcCI6bnVsbCwidGFyZ2V0IjoiMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IkUyRSByZWZ1bmQ6IGZ1bmRpbmcgdGFyZ2V0IG1pc3NlZCIsInRvdGFsX2NvbnRyaWJ1dGVkIjoiMCJ9"
+      },
+      "actions": [
+        {
+          "method_name": "approve_campaign",
+          "args": {
+            "id": "refund-funding-20261103-v1",
+            "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929"
+          },
+          "deposit": "0",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2617167465421,
+      "receipt_outcomes": [
+        {
+          "id": "4V3v6gGFxqMUXpncg8zQA8AzgQviKmFYqRLaGXypNC2Z",
+          "block_hash": "DCywoXGfQhyPnHc5XEz5gnbcwM5qseCnJdjEwyQH6xD4",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2079249682821,
+          "status": {
+            "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZGE1NGI2MTFkYmRkMjhhMjE0MDI1ZTI1NzQwMzJkYjdjYzBjOWI2NzEyYzBiOTAwNTlkMjExNzdjOWIyZTkyOSIsImNpcGhlcnRleHRfaGFzaCI6ImY2MjhlZTQzY2Q5NDViNmIyNzdhM2RkYTA3YWViNGQyMDk1MWU1NzYwZjJjOGQxZTdhODU5ZDQ0Y2FmMTY3NjkiLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjAwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6IjdhM2VjMzljMzMzOTQ3MGE1ZGVhZGM2M2ZhYzk2YTBmYTcwODFmMzUyZWYwMjlkMTc3NjhiNzkyNDAxMWM3YTEiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6ImI0ZTI0ZWZkOTYyNjlmZDFhYjcwNTc2ZTA2NzhhYmY4MjAwMThkNGZjMWJjMTI0MzZiOTZlMmI4NjU4ZDFiMTQiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLWZ1bmRpbmctMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiZjMwM2Y4NWE5MzAzYzQ5MDVmNDA1Mzc4NDI5MWVmNTQyYjMxODQxYzI3MmMzYmY2ZjRkZTc1ZmYzMDc2NzgwMiIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJBY3RpdmUiLCJzdGV3YXJkc2hpcCI6bnVsbCwidGFyZ2V0IjoiMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IkUyRSByZWZ1bmQ6IGZ1bmRpbmcgdGFyZ2V0IG1pc3NlZCIsInRvdGFsX2NvbnRyaWJ1dGVkIjoiMCJ9"
+          },
+          "logs": []
+        },
+        {
+          "id": "31m3ev624dEySyFSi7iVJXoojcsuMNPSkQKDg23T1MiC",
+          "block_hash": "8Pm8hmcLTqsuYjUXxxKZ2A1AXkV1jyWm3TsQa8i2grmq",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "funding",
+      "step": "contribute",
+      "transaction_hash": "AicUn2K5EwcyMr7iKVtUnUjGDZdvfD94PNUaaNTY22hK",
+      "explorer_url": "https://testnet.nearblocks.io/txns/AicUn2K5EwcyMr7iKVtUnUjGDZdvfD94PNUaaNTY22hK",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T04:58:10.308671+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJzcG9uc29yLnNoaWZ0dWx0cmEudGVzdG5ldCIsImNvbnRyaWJ1dGlvbnMiOlt7ImFtb3VudCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJsYW50ZXJuLXRyYWlsLXRlc3RuZXQtdjEiLCJyZWZ1bmRlZCI6ZmFsc2V9LHsiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJjYW1wYWlnbl9pZCI6InJlZnVuZC1mdW5kaW5nLTIwMjYxMTAzLXYxIiwicmVmdW5kZWQiOmZhbHNlfV0sImNyZWRpdCI6IjgyODAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwYWlkIjoiMCIsInBlbmRpbmciOm51bGwsInJlZ2lzdGVyZWQiOnRydWUsInNjaGVtYV92ZXJzaW9uIjoxfSwiY2FtcGFpZ24iOnsiYWdyZWVtZW50X2RpZ2VzdCI6ImRhNTRiNjExZGJkZDI4YTIxNDAyNWUyNTc0MDMyZGI3Y2MwYzliNjcxMmMwYjkwMDU5ZDIxMTc3YzliMmU5MjkiLCJjaXBoZXJ0ZXh0X2hhc2giOiJmNjI4ZWU0M2NkOTQ1YjZiMjc3YTNkZGEwN2FlYjRkMjA5NTFlNTc2MGYyYzhkMWU3YTg1OWQ0NGNhZjE2NzY5IiwiY3JlYXRvciI6InNoaWZ0dWx0cmEudGVzdG5ldCIsImVzY3JvdyI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiZnVuZGVkX2F0X25zIjoiMCIsImZ1bmRpbmdfZGVhZGxpbmVfbnMiOiIxNzkzNjgyMDA0NjM0MDAwMDAwIiwiaWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsImtleV9jb21taXRtZW50IjoiN2EzZWMzOWMzMzM5NDcwYTVkZWFkYzYzZmFjOTZhMGZhNzA4MWYzNTJlZjAyOWQxNzc2OGI3OTI0MDExYzdhMSIsImxpY2Vuc2VfaGFzaCI6IjZlMjM3YzU1YjA1ODNjYjdiYmEwNTU2MjMxNmM1NGIwYTEwNWFiYTA0Nzc1MDE3ZTIyNTMyMzdiOWE2NDYxM2MiLCJtYW5pZmVzdF9oYXNoIjoiYjRlMjRlZmQ5NjI2OWZkMWFiNzA1NzZlMDY3OGFiZjgyMDAxOGQ0ZmMxYmMxMjQzNmI5NmUyYjg2NThkMWIxNCIsIm1hbmlmZXN0X3VyaSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9yZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MS9tYW5pZmVzdC5qc29uIiwicGxhaW50ZXh0X2hhc2giOiJmMzAzZjg1YTkzMDNjNDkwNWY0MDUzNzg0MjkxZWY1NDJiMzE4NDFjMjcyYzNiZjZmNGRlNzVmZjMwNzY3ODAyIiwicHVibGljX2tleV9iYXNlNjQiOm51bGwsInJlbGVhc2VfZGVhZGxpbmVfbnMiOm51bGwsInJlbGVhc2Vfd2luZG93X25zIjoiOTAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IkFjdGl2ZSIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogZnVuZGluZyB0YXJnZXQgbWlzc2VkIiwidG90YWxfY29udHJpYnV0ZWQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
+      },
+      "actions": [
+        {
+          "method_name": "contribute",
+          "args": {
+            "id": "refund-funding-20261103-v1",
+            "amount": "10000000000000000000000"
+          },
+          "deposit": "10000000000000000000000",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2847292771609,
+      "receipt_outcomes": [
+        {
+          "id": "7ySMXpqddrXx7sth1H1ZPV7HJq87k4PcW5nBkWnps9Fg",
+          "block_hash": "3RsQYi1jEqT292rdhgN1bUBQRE7wNmdP3CJHqSb8SNJ3",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2312236011909,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJzcG9uc29yLnNoaWZ0dWx0cmEudGVzdG5ldCIsImNvbnRyaWJ1dGlvbnMiOlt7ImFtb3VudCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJsYW50ZXJuLXRyYWlsLXRlc3RuZXQtdjEiLCJyZWZ1bmRlZCI6ZmFsc2V9LHsiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJjYW1wYWlnbl9pZCI6InJlZnVuZC1mdW5kaW5nLTIwMjYxMTAzLXYxIiwicmVmdW5kZWQiOmZhbHNlfV0sImNyZWRpdCI6IjgyODAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwYWlkIjoiMCIsInBlbmRpbmciOm51bGwsInJlZ2lzdGVyZWQiOnRydWUsInNjaGVtYV92ZXJzaW9uIjoxfSwiY2FtcGFpZ24iOnsiYWdyZWVtZW50X2RpZ2VzdCI6ImRhNTRiNjExZGJkZDI4YTIxNDAyNWUyNTc0MDMyZGI3Y2MwYzliNjcxMmMwYjkwMDU5ZDIxMTc3YzliMmU5MjkiLCJjaXBoZXJ0ZXh0X2hhc2giOiJmNjI4ZWU0M2NkOTQ1YjZiMjc3YTNkZGEwN2FlYjRkMjA5NTFlNTc2MGYyYzhkMWU3YTg1OWQ0NGNhZjE2NzY5IiwiY3JlYXRvciI6InNoaWZ0dWx0cmEudGVzdG5ldCIsImVzY3JvdyI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiZnVuZGVkX2F0X25zIjoiMCIsImZ1bmRpbmdfZGVhZGxpbmVfbnMiOiIxNzkzNjgyMDA0NjM0MDAwMDAwIiwiaWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsImtleV9jb21taXRtZW50IjoiN2EzZWMzOWMzMzM5NDcwYTVkZWFkYzYzZmFjOTZhMGZhNzA4MWYzNTJlZjAyOWQxNzc2OGI3OTI0MDExYzdhMSIsImxpY2Vuc2VfaGFzaCI6IjZlMjM3YzU1YjA1ODNjYjdiYmEwNTU2MjMxNmM1NGIwYTEwNWFiYTA0Nzc1MDE3ZTIyNTMyMzdiOWE2NDYxM2MiLCJtYW5pZmVzdF9oYXNoIjoiYjRlMjRlZmQ5NjI2OWZkMWFiNzA1NzZlMDY3OGFiZjgyMDAxOGQ0ZmMxYmMxMjQzNmI5NmUyYjg2NThkMWIxNCIsIm1hbmlmZXN0X3VyaSI6Imh0dHBzOi8vc3Vuc2V0LWxlbW9uLnZlcmNlbC5hcHAvdGVzdG5ldC9yZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MS9tYW5pZmVzdC5qc29uIiwicGxhaW50ZXh0X2hhc2giOiJmMzAzZjg1YTkzMDNjNDkwNWY0MDUzNzg0MjkxZWY1NDJiMzE4NDFjMjcyYzNiZjZmNGRlNzVmZjMwNzY3ODAyIiwicHVibGljX2tleV9iYXNlNjQiOm51bGwsInJlbGVhc2VfZGVhZGxpbmVfbnMiOm51bGwsInJlbGVhc2Vfd2luZG93X25zIjoiOTAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IkFjdGl2ZSIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogZnVuZGluZyB0YXJnZXQgbWlzc2VkIiwidG90YWxfY29udHJpYnV0ZWQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
+          },
+          "logs": []
+        },
+        {
+          "id": "12G1GJa2PrVByNcVcfc9AX3HFMMcYqcDaQbCbGgRzz5R",
+          "block_hash": "7iBT4P4s9YhCCpzBseoXW5n1ESeQuXWcT7L81dfLYU4s",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "release",
+      "step": "create",
+      "transaction_hash": "ASw3361TQEq6QgwR7Hnc2757hoB7ABDmTAXWSwjjRDR3",
+      "explorer_url": "https://testnet.nearblocks.io/txns/ASw3361TQEq6QgwR7Hnc2757hoB7ABDmTAXWSwjjRDR3",
+      "signer_id": "shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T04:58:23.418893+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZjMzMWJkZTA3ZGFjZGE3ZTEyODliODc2NTY4YzQ4ZjJlM2YxZTdhYTU3YzVjMWM0ZjZjZTQ2YTFiYmY5MDQ4OCIsImNpcGhlcnRleHRfaGFzaCI6IjBlMGJlODU2ZDlkODlhMWUxZTE4NDRiMjQwMGEwOWI5OTQ2Y2ZmOTlhNzI2MDRhMGZkNmEyNzhmMjZjNjFjYzciLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjkwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6Ijk5MDkwN2JjMzNmOWYxN2ExN2IyNDRjMmExNjVmNzJmYmNmZmI3MDRmMWRiZTM3ODJkMzY5M2RhMTM2MzRiMDMiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6IjFlNTJmNDBkNDdhMWZkYjYxZjNkYjMyNDFiYjU2ZjdmM2RlZjQxM2RjYTEwYzBkOTQzMGQzNjFjYTE2NWY5YWIiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTM5M2UzMDc1N2M2YjlkMDM5YTBmZGI3ZmZmMmMzNWQ1ZTc2YTc4YTY1OWJkODIyMmYzODA4MjYwNjZmNmNkYSIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJEcmFmdCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogcmVsZWFzZSBkZWFkbGluZSBtaXNzZWQiLCJ0b3RhbF9jb250cmlidXRlZCI6IjAifQ=="
+      },
+      "actions": [
+        {
+          "method_name": "create_campaign",
+          "args": {
+            "id": "refund-release-20261103-v1",
+            "title": "E2E refund: release deadline missed",
+            "reviewer": "reviewer.shiftultra.testnet",
+            "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+            "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+            "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+            "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+            "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+            "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+            "target": "20000000000000000000000",
+            "funding_deadline_ns": "1793682904634000000",
+            "release_window_ns": "90000000000"
+          },
+          "deposit": "50000000000000000000000",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2908149846148,
+      "receipt_outcomes": [
+        {
+          "id": "75nd8vGvyPGbqhe16VPERtxnVPJhTJgtZ6rEbuhcSqTN",
+          "block_hash": "7xBTeyqa9UM1kbUPiHE5L87mGzKStYpZSNpXLwJ1bRZy",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2338045555923,
+          "status": {
+            "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZjMzMWJkZTA3ZGFjZGE3ZTEyODliODc2NTY4YzQ4ZjJlM2YxZTdhYTU3YzVjMWM0ZjZjZTQ2YTFiYmY5MDQ4OCIsImNpcGhlcnRleHRfaGFzaCI6IjBlMGJlODU2ZDlkODlhMWUxZTE4NDRiMjQwMGEwOWI5OTQ2Y2ZmOTlhNzI2MDRhMGZkNmEyNzhmMjZjNjFjYzciLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjkwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6Ijk5MDkwN2JjMzNmOWYxN2ExN2IyNDRjMmExNjVmNzJmYmNmZmI3MDRmMWRiZTM3ODJkMzY5M2RhMTM2MzRiMDMiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6IjFlNTJmNDBkNDdhMWZkYjYxZjNkYjMyNDFiYjU2ZjdmM2RlZjQxM2RjYTEwYzBkOTQzMGQzNjFjYTE2NWY5YWIiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTM5M2UzMDc1N2M2YjlkMDM5YTBmZGI3ZmZmMmMzNWQ1ZTc2YTc4YTY1OWJkODIyMmYzODA4MjYwNjZmNmNkYSIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJEcmFmdCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogcmVsZWFzZSBkZWFkbGluZSBtaXNzZWQiLCJ0b3RhbF9jb250cmlidXRlZCI6IjAifQ=="
+          },
+          "logs": []
+        },
+        {
+          "id": "HAJAH73d3ramPYiZxofxUL9yHQ7s9vgLHgvbQUXpiWT6",
+          "block_hash": "3z1mRnKYkedh7cknS1nNPcSL9uJRi3hSdf7QxeFaDAPB",
+          "executor_id": "shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "release",
+      "step": "approve",
+      "transaction_hash": "8y4kqussYgSkQi252j1DvFyd8NperQNo3CF9UfSSjUr4",
+      "explorer_url": "https://testnet.nearblocks.io/txns/8y4kqussYgSkQi252j1DvFyd8NperQNo3CF9UfSSjUr4",
+      "signer_id": "reviewer.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T04:58:36.114120+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZjMzMWJkZTA3ZGFjZGE3ZTEyODliODc2NTY4YzQ4ZjJlM2YxZTdhYTU3YzVjMWM0ZjZjZTQ2YTFiYmY5MDQ4OCIsImNpcGhlcnRleHRfaGFzaCI6IjBlMGJlODU2ZDlkODlhMWUxZTE4NDRiMjQwMGEwOWI5OTQ2Y2ZmOTlhNzI2MDRhMGZkNmEyNzhmMjZjNjFjYzciLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjkwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6Ijk5MDkwN2JjMzNmOWYxN2ExN2IyNDRjMmExNjVmNzJmYmNmZmI3MDRmMWRiZTM3ODJkMzY5M2RhMTM2MzRiMDMiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6IjFlNTJmNDBkNDdhMWZkYjYxZjNkYjMyNDFiYjU2ZjdmM2RlZjQxM2RjYTEwYzBkOTQzMGQzNjFjYTE2NWY5YWIiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTM5M2UzMDc1N2M2YjlkMDM5YTBmZGI3ZmZmMmMzNWQ1ZTc2YTc4YTY1OWJkODIyMmYzODA4MjYwNjZmNmNkYSIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJBY3RpdmUiLCJzdGV3YXJkc2hpcCI6bnVsbCwidGFyZ2V0IjoiMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IkUyRSByZWZ1bmQ6IHJlbGVhc2UgZGVhZGxpbmUgbWlzc2VkIiwidG90YWxfY29udHJpYnV0ZWQiOiIwIn0="
+      },
+      "actions": [
+        {
+          "method_name": "approve_campaign",
+          "args": {
+            "id": "refund-release-20261103-v1",
+            "agreement_digest": "f331bde07dacda7e1289b876568c48f2e3f1e7aa57c5c1c4f6ce46a1bbf90488"
+          },
+          "deposit": "0",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2731852787742,
+      "receipt_outcomes": [
+        {
+          "id": "D8trfSzeC6hECM297ZuwNE3p4pZJSPRK83jYVYsGdnGs",
+          "block_hash": "2vtxdxKmpYizrf7Ko1pca2gJAi6WPYzpUM5k7U7LtbGd",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2193935005142,
+          "status": {
+            "SuccessValue": "eyJhZ3JlZW1lbnRfZGlnZXN0IjoiZjMzMWJkZTA3ZGFjZGE3ZTEyODliODc2NTY4YzQ4ZjJlM2YxZTdhYTU3YzVjMWM0ZjZjZTQ2YTFiYmY5MDQ4OCIsImNpcGhlcnRleHRfaGFzaCI6IjBlMGJlODU2ZDlkODlhMWUxZTE4NDRiMjQwMGEwOWI5OTQ2Y2ZmOTlhNzI2MDRhMGZkNmEyNzhmMjZjNjFjYzciLCJjcmVhdG9yIjoic2hpZnR1bHRyYS50ZXN0bmV0IiwiZXNjcm93IjoiMCIsImZ1bmRlZF9hdF9ucyI6IjAiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjkwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6Ijk5MDkwN2JjMzNmOWYxN2ExN2IyNDRjMmExNjVmNzJmYmNmZmI3MDRmMWRiZTM3ODJkMzY5M2RhMTM2MzRiMDMiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6IjFlNTJmNDBkNDdhMWZkYjYxZjNkYjMyNDFiYjU2ZjdmM2RlZjQxM2RjYTEwYzBkOTQzMGQzNjFjYTE2NWY5YWIiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTM5M2UzMDc1N2M2YjlkMDM5YTBmZGI3ZmZmMmMzNWQ1ZTc2YTc4YTY1OWJkODIyMmYzODA4MjYwNjZmNmNkYSIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjpudWxsLCJyZWxlYXNlX3dpbmRvd19ucyI6IjkwMDAwMDAwMDAwIiwicmV2aWV3ZXIiOiJyZXZpZXdlci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJzY2hlbWFfdmVyc2lvbiI6MSwic3RhdGUiOiJBY3RpdmUiLCJzdGV3YXJkc2hpcCI6bnVsbCwidGFyZ2V0IjoiMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJ0aXRsZSI6IkUyRSByZWZ1bmQ6IHJlbGVhc2UgZGVhZGxpbmUgbWlzc2VkIiwidG90YWxfY29udHJpYnV0ZWQiOiIwIn0="
+          },
+          "logs": []
+        },
+        {
+          "id": "CZk8uaTnNvFM3C9Z1eFcYL4Lz9PhjupUhGHbQEJ6ZdT9",
+          "block_hash": "j5fUU8q4cDsCtPcjCnK5npDK3Pyr5X1dFST9SHAeWGG",
+          "executor_id": "reviewer.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "release",
+      "step": "contribute",
+      "transaction_hash": "CQvydaGbfwbWC3mX79czSUFx7gnyqnZUdxArECatdkx",
+      "explorer_url": "https://testnet.nearblocks.io/txns/CQvydaGbfwbWC3mX79czSUFx7gnyqnZUdxArECatdkx",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T04:58:44.512925+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJzcG9uc29yLnNoaWZ0dWx0cmEudGVzdG5ldCIsImNvbnRyaWJ1dGlvbnMiOlt7ImFtb3VudCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJsYW50ZXJuLXRyYWlsLXRlc3RuZXQtdjEiLCJyZWZ1bmRlZCI6ZmFsc2V9LHsiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJjYW1wYWlnbl9pZCI6InJlZnVuZC1mdW5kaW5nLTIwMjYxMTAzLXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiI4MjgwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjAiLCJwZW5kaW5nIjpudWxsLCJyZWdpc3RlcmVkIjp0cnVlLCJzY2hlbWFfdmVyc2lvbiI6MX0sImNhbXBhaWduIjp7ImFncmVlbWVudF9kaWdlc3QiOiJmMzMxYmRlMDdkYWNkYTdlMTI4OWI4NzY1NjhjNDhmMmUzZjFlN2FhNTdjNWMxYzRmNmNlNDZhMWJiZjkwNDg4IiwiY2lwaGVydGV4dF9oYXNoIjoiMGUwYmU4NTZkOWQ4OWExZTFlMTg0NGIyNDAwYTA5Yjk5NDZjZmY5OWE3MjYwNGEwZmQ2YTI3OGYyNmM2MWNjNyIsImNyZWF0b3IiOiJzaGlmdHVsdHJhLnRlc3RuZXQiLCJlc2Nyb3ciOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImZ1bmRlZF9hdF9ucyI6IjE3OTM2ODE5Mjg4MDMwODM3MjYiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjkwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6Ijk5MDkwN2JjMzNmOWYxN2ExN2IyNDRjMmExNjVmNzJmYmNmZmI3MDRmMWRiZTM3ODJkMzY5M2RhMTM2MzRiMDMiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6IjFlNTJmNDBkNDdhMWZkYjYxZjNkYjMyNDFiYjU2ZjdmM2RlZjQxM2RjYTEwYzBkOTQzMGQzNjFjYTE2NWY5YWIiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTM5M2UzMDc1N2M2YjlkMDM5YTBmZGI3ZmZmMmMzNWQ1ZTc2YTc4YTY1OWJkODIyMmYzODA4MjYwNjZmNmNkYSIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjoiMTc5MzY4MjAxODgwMzA4MzcyNiIsInJlbGVhc2Vfd2luZG93X25zIjoiOTAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IkZ1bmRlZCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogcmVsZWFzZSBkZWFkbGluZSBtaXNzZWQiLCJ0b3RhbF9jb250cmlidXRlZCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn19"
+      },
+      "actions": [
+        {
+          "method_name": "contribute",
+          "args": {
+            "id": "refund-release-20261103-v1",
+            "amount": "20000000000000000000000"
+          },
+          "deposit": "20000000000000000000000",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 3004616495670,
+      "receipt_outcomes": [
+        {
+          "id": "5hbEYmx9m38s9rzmk84m4ACRvgA228qXJJKicWFQgzE6",
+          "block_hash": "H6KkziZZJJun42RFFniDqmcN9LoeqCjZHwdPyXVtbn46",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2469559735970,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50Ijp7ImFjY291bnRfaWQiOiJzcG9uc29yLnNoaWZ0dWx0cmEudGVzdG5ldCIsImNvbnRyaWJ1dGlvbnMiOlt7ImFtb3VudCI6IjYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJsYW50ZXJuLXRyYWlsLXRlc3RuZXQtdjEiLCJyZWZ1bmRlZCI6ZmFsc2V9LHsiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJjYW1wYWlnbl9pZCI6InJlZnVuZC1mdW5kaW5nLTIwMjYxMTAzLXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiI4MjgwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjAiLCJwZW5kaW5nIjpudWxsLCJyZWdpc3RlcmVkIjp0cnVlLCJzY2hlbWFfdmVyc2lvbiI6MX0sImNhbXBhaWduIjp7ImFncmVlbWVudF9kaWdlc3QiOiJmMzMxYmRlMDdkYWNkYTdlMTI4OWI4NzY1NjhjNDhmMmUzZjFlN2FhNTdjNWMxYzRmNmNlNDZhMWJiZjkwNDg4IiwiY2lwaGVydGV4dF9oYXNoIjoiMGUwYmU4NTZkOWQ4OWExZTFlMTg0NGIyNDAwYTA5Yjk5NDZjZmY5OWE3MjYwNGEwZmQ2YTI3OGYyNmM2MWNjNyIsImNyZWF0b3IiOiJzaGlmdHVsdHJhLnRlc3RuZXQiLCJlc2Nyb3ciOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImZ1bmRlZF9hdF9ucyI6IjE3OTM2ODE5Mjg4MDMwODM3MjYiLCJmdW5kaW5nX2RlYWRsaW5lX25zIjoiMTc5MzY4MjkwNDYzNDAwMDAwMCIsImlkIjoicmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEiLCJrZXlfY29tbWl0bWVudCI6Ijk5MDkwN2JjMzNmOWYxN2ExN2IyNDRjMmExNjVmNzJmYmNmZmI3MDRmMWRiZTM3ODJkMzY5M2RhMTM2MzRiMDMiLCJsaWNlbnNlX2hhc2giOiI2ZTIzN2M1NWIwNTgzY2I3YmJhMDU1NjIzMTZjNTRiMGExMDVhYmEwNDc3NTAxN2UyMjUzMjM3YjlhNjQ2MTNjIiwibWFuaWZlc3RfaGFzaCI6IjFlNTJmNDBkNDdhMWZkYjYxZjNkYjMyNDFiYjU2ZjdmM2RlZjQxM2RjYTEwYzBkOTQzMGQzNjFjYTE2NWY5YWIiLCJtYW5pZmVzdF91cmkiOiJodHRwczovL3N1bnNldC1sZW1vbi52ZXJjZWwuYXBwL3Rlc3RuZXQvcmVmdW5kLXJlbGVhc2UtMjAyNjExMDMtdjEvbWFuaWZlc3QuanNvbiIsInBsYWludGV4dF9oYXNoIjoiMTM5M2UzMDc1N2M2YjlkMDM5YTBmZGI3ZmZmMmMzNWQ1ZTc2YTc4YTY1OWJkODIyMmYzODA4MjYwNjZmNmNkYSIsInB1YmxpY19rZXlfYmFzZTY0IjpudWxsLCJyZWxlYXNlX2RlYWRsaW5lX25zIjoiMTc5MzY4MjAxODgwMzA4MzcyNiIsInJlbGVhc2Vfd2luZG93X25zIjoiOTAwMDAwMDAwMDAiLCJyZXZpZXdlciI6InJldmlld2VyLnNoaWZ0dWx0cmEudGVzdG5ldCIsInNjaGVtYV92ZXJzaW9uIjoxLCJzdGF0ZSI6IkZ1bmRlZCIsInN0ZXdhcmRzaGlwIjpudWxsLCJ0YXJnZXQiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRpdGxlIjoiRTJFIHJlZnVuZDogcmVsZWFzZSBkZWFkbGluZSBtaXNzZWQiLCJ0b3RhbF9jb250cmlidXRlZCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn19"
+          },
+          "logs": []
+        },
+        {
+          "id": "5xCtxfQivhLMeu8Xj24YFjnZ7uTVSeSFGdDzb73HqcP2",
+          "block_hash": "9Ttij2py5E4dm95Pw9r8WLJtBcH6PpgBMD3uSbGxVTbd",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "funding",
+      "step": "claim",
+      "transaction_hash": "5zTJtUY1qa8Fev8t3tfpB4JgQVaxNjWb1ZBDRQyEKsum",
+      "explorer_url": "https://testnet.nearblocks.io/txns/5zTJtUY1qa8Fev8t3tfpB4JgQVaxNjWb1ZBDRQyEKsum",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T05:01:07.773392+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiIxODI4MDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhaWQiOiIwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+      },
+      "actions": [
+        {
+          "method_name": "claim_refund",
+          "args": {
+            "id": "refund-funding-20261103-v1"
+          },
+          "deposit": "0",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2467682104233,
+      "receipt_outcomes": [
+        {
+          "id": "eSTLGaSGzvejgn15PgJAr1NTPuuhPY9Nes67wABDRUk",
+          "block_hash": "xub5dFCegmHM2XncQ2HacAm6L8j5mQbYQvFAdTM4mJC",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 1934198907128,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiIxODI4MDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhaWQiOiIwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+          },
+          "logs": []
+        },
+        {
+          "id": "GSkEawN75SL5RexHUkrpcU8SwKZBeN6aaYaDAmyvmTXv",
+          "block_hash": "5r4zZjZ2fo6MyyErWPzTzBRPNy93qkxiCzVQUeRRvBS4",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "funding",
+      "step": "claim-repeat",
+      "transaction_hash": "HvJQAPhy1VH6PFdRzj21khEjViAjkf6M58xXW5cQH8pi",
+      "explorer_url": "https://testnet.nearblocks.io/txns/HvJQAPhy1VH6PFdRzj21khEjViAjkf6M58xXW5cQH8pi",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T05:01:23.575788+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiIxODI4MDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhaWQiOiIwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+      },
+      "actions": [
+        {
+          "method_name": "claim_refund",
+          "args": {
+            "id": "refund-funding-20261103-v1"
+          },
+          "deposit": "0",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2466921054933,
+      "receipt_outcomes": [
+        {
+          "id": "ExvANYyVDiVc9zR97CnM82FVBV51gHkiXFuQKZHWayqn",
+          "block_hash": "FRptFjimw9T2wcWXfAPghJ2k4NejwfDFnnH1SZBRePog",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 1933437857828,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiIxODI4MDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhaWQiOiIwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+          },
+          "logs": []
+        },
+        {
+          "id": "BVagSJkC37RMCCHqwB1YujgGA77GtgaSy52WzyJAz7Pp",
+          "block_hash": "9LKmeBpTfqVSshqTjUp7jgnCLZJoyUbbRXuQW3HAaag",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "funding",
+      "step": "withdraw",
+      "transaction_hash": "AT6nuVmzNoj9zghYkDPNWSU8uWLjxtx3fMthZJkjbBRt",
+      "explorer_url": "https://testnet.nearblocks.io/txns/AT6nuVmzNoj9zghYkDPNWSU8uWLjxtx3fMthZJkjbBRt",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T05:02:16.986847+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiI4MjgwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+      },
+      "actions": [
+        {
+          "method_name": "withdraw",
+          "args": {
+            "amount": "10000000000000000000000"
+          },
+          "deposit": "0",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 5706359415380,
+      "receipt_outcomes": [
+        {
+          "id": "4Whna1B6ERx7dgsGLFFFVWtWGX3EdeXhm8S9J9t7B52D",
+          "block_hash": "5GasSedX5hzXgXcsHvqpjPjT8WKT26dxnX4C4ceeef5Y",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2557599283821,
+          "status": {
+            "SuccessReceiptId": "AAXXiYaZiyNwii7ifC2o19Hh9NHR7VdB3wM6zDtibssT"
+          },
+          "logs": []
+        },
+        {
+          "id": "42FBYRtLshWgq22ZBxKrABRnJKUUd5N9Wbt7zBpUw74g",
+          "block_hash": "AH4W3SybeAj1NemEmZeKP4wrzAmWinAgoJe79WyFUXeN",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        },
+        {
+          "id": "E5EAd2Ndz2XQGqy99Vrxsrtwe66zKyq5vRTRi1G8rkiR",
+          "block_hash": "75CmoBpztfQRF4faC6K9icvCE1DH3hc2TH8yGgYufHm6",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        },
+        {
+          "id": "AAXXiYaZiyNwii7ifC2o19Hh9NHR7VdB3wM6zDtibssT",
+          "block_hash": "75CmoBpztfQRF4faC6K9icvCE1DH3hc2TH8yGgYufHm6",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 1945872298099,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiI4MjgwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+          },
+          "logs": []
+        },
+        {
+          "id": "FjvepnikfdeuNwrnbdQ2r2TG46mVbVSujpfWe55c4UWq",
+          "block_hash": "8oFuBHEh9muSdG9DGzfqjGtjL7zrGYYV8sLEK4ZDx9Bv",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        },
+        {
+          "id": "Dhv8JuJpct7oNPhTanyMbYCDw3BtBvoukrKFhbcZ5hdC",
+          "block_hash": "AH4W3SybeAj1NemEmZeKP4wrzAmWinAgoJe79WyFUXeN",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ],
+      "native_principal_transfers": [
+        {
+          "receipt_id": "42FBYRtLshWgq22ZBxKrABRnJKUUd5N9Wbt7zBpUw74g",
+          "from": "sunset.shiftultra.testnet",
+          "to": "sponsor.shiftultra.testnet",
+          "amount": "10000000000000000000000",
+          "status": {
+            "SuccessValue": ""
+          }
+        }
+      ],
+      "callbacks": [
+        {
+          "receipt_id": "AAXXiYaZiyNwii7ifC2o19Hh9NHR7VdB3wM6zDtibssT",
+          "predecessor": "sunset.shiftultra.testnet",
+          "receiver": "sunset.shiftultra.testnet",
+          "method": "on_withdraw_complete",
+          "scheduled_gas": 15000000000000,
+          "gas_burnt": 1945872298099,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjpmYWxzZX1dLCJjcmVkaXQiOiI4MjgwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+          }
+        }
+      ]
+    },
+    {
+      "case": "release",
+      "step": "claim",
+      "transaction_hash": "7BG69qjBayR2R55cecAof7jSgApdDZydC3HDUWfAnpYN",
+      "explorer_url": "https://testnet.nearblocks.io/txns/7BG69qjBayR2R55cecAof7jSgApdDZydC3HDUWfAnpYN",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T05:02:36.025043+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfV0sImNyZWRpdCI6IjI4MjgwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+      },
+      "actions": [
+        {
+          "method_name": "claim_refund",
+          "args": {
+            "id": "refund-release-20261103-v1"
+          },
+          "deposit": "0",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 2469794962302,
+      "receipt_outcomes": [
+        {
+          "id": "7zyW7kCuaRerMANPqAbZFg7R6v1rH6PGtqpHU4rfGp93",
+          "block_hash": "2PcocVJuXBKCG4aSdNJm2GYrELvdNKZRw699aWeveEGC",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 1936311765197,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfV0sImNyZWRpdCI6IjI4MjgwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGFpZCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicGVuZGluZyI6bnVsbCwicmVnaXN0ZXJlZCI6dHJ1ZSwic2NoZW1hX3ZlcnNpb24iOjF9"
+          },
+          "logs": []
+        },
+        {
+          "id": "A39zuhncWJfRuF7jzzJzxxfapLR8ujVBC5osQqQLrE5c",
+          "block_hash": "JCcXL3fFhDjMuqFHSwkXbamSpbdyu9PC1LTLqQZP2YNd",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ]
+    },
+    {
+      "case": "release",
+      "step": "withdraw",
+      "transaction_hash": "HoMNLX1M1hKyiux77xjAq7oJbP2v8MwxRyeaki7CeRnG",
+      "explorer_url": "https://testnet.nearblocks.io/txns/HoMNLX1M1hKyiux77xjAq7oJbP2v8MwxRyeaki7CeRnG",
+      "signer_id": "sponsor.shiftultra.testnet",
+      "receiver_id": "sunset.shiftultra.testnet",
+      "submitted_at": "2026-11-03T05:02:52.433558+00:00",
+      "final_execution_status": "FINAL",
+      "transaction_status": {
+        "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfV0sImNyZWRpdCI6IjgyODAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwYWlkIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwZW5kaW5nIjpudWxsLCJyZWdpc3RlcmVkIjp0cnVlLCJzY2hlbWFfdmVyc2lvbiI6MX0="
+      },
+      "actions": [
+        {
+          "method_name": "withdraw",
+          "args": {
+            "amount": "20000000000000000000000"
+          },
+          "deposit": "0",
+          "gas": 100000000000000
+        }
+      ],
+      "gas_burnt": 5706934834271,
+      "receipt_outcomes": [
+        {
+          "id": "Bwk5yVH79Stm9FtzExA7hN6995vWuefYLjWno87JfRgV",
+          "block_hash": "9K5sMjwom6z3et1PNWMkrQpeNnzcs73fBqvMZn5zChQN",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 2558179326801,
+          "status": {
+            "SuccessReceiptId": "VgCLHsh5CueqXyGzmA14itHWZ5Z3UrBkuiQZSsjDteK"
+          },
+          "logs": []
+        },
+        {
+          "id": "BsMYPrCYaBhseVzsvYrsbTyhLd3JwqSP5Zu8e9tdNt2u",
+          "block_hash": "HMgVA968NELrWKRpCWgAn4LzpCUGSJAX4HrhQ1yww4Pd",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        },
+        {
+          "id": "DVcHUVSR3LMTwJNanAKz3pfasygxcSUeJUDsVYr8Zb5G",
+          "block_hash": "CcfijF9bF7RqrYm44TpZ8A8xUx4M7B1YDXZPwdRQ1uo5",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        },
+        {
+          "id": "VgCLHsh5CueqXyGzmA14itHWZ5Z3UrBkuiQZSsjDteK",
+          "block_hash": "CcfijF9bF7RqrYm44TpZ8A8xUx4M7B1YDXZPwdRQ1uo5",
+          "executor_id": "sunset.shiftultra.testnet",
+          "gas_burnt": 1945867674010,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfV0sImNyZWRpdCI6IjgyODAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwYWlkIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwZW5kaW5nIjpudWxsLCJyZWdpc3RlcmVkIjp0cnVlLCJzY2hlbWFfdmVyc2lvbiI6MX0="
+          },
+          "logs": []
+        },
+        {
+          "id": "G1Zw2WeumWBXGLhAW6siuuGYa2Wyi439gUeEBbgnJTyv",
+          "block_hash": "FApd1GUMb6YhYKC1f9qeqE5h9kAXPzHgu8gCVbzuoeq9",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        },
+        {
+          "id": "6z31L8Lb6buCq6MBnbP5L7UWMDo5SeyhddW4LKtz1LkW",
+          "block_hash": "HMgVA968NELrWKRpCWgAn4LzpCUGSJAX4HrhQ1yww4Pd",
+          "executor_id": "sponsor.shiftultra.testnet",
+          "gas_burnt": 223182562500,
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": []
+        }
+      ],
+      "native_principal_transfers": [
+        {
+          "receipt_id": "BsMYPrCYaBhseVzsvYrsbTyhLd3JwqSP5Zu8e9tdNt2u",
+          "from": "sunset.shiftultra.testnet",
+          "to": "sponsor.shiftultra.testnet",
+          "amount": "20000000000000000000000",
+          "status": {
+            "SuccessValue": ""
+          }
+        }
+      ],
+      "callbacks": [
+        {
+          "receipt_id": "VgCLHsh5CueqXyGzmA14itHWZ5Z3UrBkuiQZSsjDteK",
+          "predecessor": "sunset.shiftultra.testnet",
+          "receiver": "sunset.shiftultra.testnet",
+          "method": "on_withdraw_complete",
+          "scheduled_gas": 15000000000000,
+          "gas_burnt": 1945867674010,
+          "status": {
+            "SuccessValue": "eyJhY2NvdW50X2lkIjoic3BvbnNvci5zaGlmdHVsdHJhLnRlc3RuZXQiLCJjb250cmlidXRpb25zIjpbeyJhbW91bnQiOiI2MDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNhbXBhaWduX2lkIjoibGFudGVybi10cmFpbC10ZXN0bmV0LXYxIiwicmVmdW5kZWQiOmZhbHNlfSx7ImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtZnVuZGluZy0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfSx7ImFtb3VudCI6IjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2FtcGFpZ25faWQiOiJyZWZ1bmQtcmVsZWFzZS0yMDI2MTEwMy12MSIsInJlZnVuZGVkIjp0cnVlfV0sImNyZWRpdCI6IjgyODAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwYWlkIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJwZW5kaW5nIjpudWxsLCJyZWdpc3RlcmVkIjp0cnVlLCJzY2hlbWFfdmVyc2lvbiI6MX0="
+          }
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "refund-funding-20261103-v1",
+      "mode": "target_missed",
+      "principal_near": "0.01",
+      "committed_terms": {
+        "id": "refund-funding-20261103-v1",
+        "title": "E2E refund: funding target missed",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+        "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+        "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+        "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+        "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "target": "20000000000000000000000",
+        "funding_deadline_ns": "1793682004634000000",
+        "release_window_ns": "90000000000"
+      },
+      "expired_view_block": "Frm6BvHztHJU5G46gjvY9PfN1CmMuHCMJZDMoDNPH8R1",
+      "expired_view_timestamp_ns": "1793682053219617318",
+      "deadline_ns": "1793682004634000000",
+      "real_time_expiry_confirmed": true,
+      "final_state": {
+        "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929",
+        "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1793682004634000000",
+        "id": "refund-funding-20261103-v1",
+        "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+        "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Refundable",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: funding target missed",
+        "total_contributed": "10000000000000000000000"
+      },
+      "key_published": false,
+      "stewardship_minted": false,
+      "resource_host_status": "Exact encrypted fixture prepared locally, independent local recovery passed; not claimed hosted before operator push."
+    },
+    {
+      "id": "refund-release-20261103-v1",
+      "mode": "release_key_withheld",
+      "principal_near": "0.02",
+      "committed_terms": {
+        "id": "refund-release-20261103-v1",
+        "title": "E2E refund: release deadline missed",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+        "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+        "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+        "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+        "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "target": "20000000000000000000000",
+        "funding_deadline_ns": "1793682904634000000",
+        "release_window_ns": "90000000000"
+      },
+      "expired_view_block": "9YkqMwicyUS8fAkW6o7HXjNsS5APigpFVYCRDnYa2NHg",
+      "expired_view_timestamp_ns": "1793682149195132227",
+      "deadline_ns": "1793682018803083726",
+      "real_time_expiry_confirmed": true,
+      "final_state": {
+        "agreement_digest": "f331bde07dacda7e1289b876568c48f2e3f1e7aa57c5c1c4f6ce46a1bbf90488",
+        "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "1793681928803083726",
+        "funding_deadline_ns": "1793682904634000000",
+        "id": "refund-release-20261103-v1",
+        "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+        "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+        "public_key_base64": null,
+        "release_deadline_ns": "1793682018803083726",
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Refundable",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: release deadline missed",
+        "total_contributed": "20000000000000000000000"
+      },
+      "key_published": false,
+      "stewardship_minted": false,
+      "resource_host_status": "Exact encrypted fixture prepared locally, independent local recovery passed; not claimed hosted before operator push."
+    }
+  ],
+  "duplicate_refund": {
+    "transaction_hash": "HvJQAPhy1VH6PFdRzj21khEjViAjkf6M58xXW5cQH8pi",
+    "behavior": "FINAL_SUCCESS idempotent no-op: exact account unchanged; no second refund credit.",
+    "harness_correction": "The first harness expected rejection, then inspected actual finalized result and reviewed implementation. Expectation corrected without resubmitting the completed claim."
+  },
+  "principal_paid_near": "0.03",
+  "contributor_before": {
+    "account_id": "sponsor.shiftultra.testnet",
+    "contributions": [
+      {
+        "amount": "60000000000000000000000",
+        "campaign_id": "lantern-trail-testnet-v1",
+        "refunded": false
+      }
+    ],
+    "credit": "8280000000000000000000",
+    "paid": "0",
+    "pending": null,
+    "registered": true,
+    "schema_version": 1
+  },
+  "contributor_after": {
+    "account_id": "sponsor.shiftultra.testnet",
+    "contributions": [
+      {
+        "amount": "60000000000000000000000",
+        "campaign_id": "lantern-trail-testnet-v1",
+        "refunded": false
+      },
+      {
+        "amount": "10000000000000000000000",
+        "campaign_id": "refund-funding-20261103-v1",
+        "refunded": true
+      },
+      {
+        "amount": "20000000000000000000000",
+        "campaign_id": "refund-release-20261103-v1",
+        "refunded": true
+      }
+    ],
+    "credit": "8280000000000000000000",
+    "paid": "30000000000000000000000",
+    "pending": null,
+    "registered": true,
+    "schema_version": 1
+  },
+  "final_config": {
+    "account_count": 3,
+    "account_storage_allowance": "10000000000000000000000",
+    "campaign_count": 3,
+    "campaign_storage_allowance": "50000000000000000000000",
+    "contract_id": "sunset.shiftultra.testnet",
+    "deployment_mode": "upgradeable",
+    "economic_deposits": "130000000000000000000000",
+    "max_accounts": 100,
+    "max_campaigns": 5,
+    "network": "testnet",
+    "nft_standards": [
+      "nep171:1.2.0",
+      "nep177:1.0.0",
+      "nep181:1.0.0"
+    ],
+    "owner": "shiftultra.testnet",
+    "schema_version": 1,
+    "security_deposits": "2",
+    "state_layout_version": 2,
+    "storage_deposits": "170000000000000000000000",
+    "storage_price_per_byte": "10000000000000000000",
+    "storage_retained": "37740000000000000000000",
+    "withdrawn": "130000000000000000000000"
+  },
+  "final_accounts": [
+    {
+      "account_id": "shiftultra.testnet",
+      "contributions": [],
+      "credit": "115710000000000000000000",
+      "paid": "100000000000000000000000",
+      "pending": null,
+      "registered": true,
+      "schema_version": 1
+    },
+    {
+      "account_id": "reviewer.shiftultra.testnet",
+      "contributions": [
+        {
+          "amount": "40000000000000000000000",
+          "campaign_id": "lantern-trail-testnet-v1",
+          "refunded": false
+        }
+      ],
+      "credit": "8270000000000000000000",
+      "paid": "0",
+      "pending": null,
+      "registered": true,
+      "schema_version": 1
+    },
+    {
+      "account_id": "sponsor.shiftultra.testnet",
+      "contributions": [
+        {
+          "amount": "60000000000000000000000",
+          "campaign_id": "lantern-trail-testnet-v1",
+          "refunded": false
+        },
+        {
+          "amount": "10000000000000000000000",
+          "campaign_id": "refund-funding-20261103-v1",
+          "refunded": true
+        },
+        {
+          "amount": "20000000000000000000000",
+          "campaign_id": "refund-release-20261103-v1",
+          "refunded": true
+        }
+      ],
+      "credit": "8280000000000000000000",
+      "paid": "30000000000000000000000",
+      "pending": null,
+      "registered": true,
+      "schema_version": 1
+    }
+  ],
+  "main_showcase_preserved": {
+    "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+    "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+    "creator": "shiftultra.testnet",
+    "escrow": "0",
+    "funded_at_ns": "1793638914842131270",
+    "funding_deadline_ns": "1794268800000000000",
+    "id": "lantern-trail-testnet-v1",
+    "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+    "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+    "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+    "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+    "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+    "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+    "release_deadline_ns": "1793725314842131270",
+    "release_window_ns": "86400000000000",
+    "reviewer": "reviewer.shiftultra.testnet",
+    "schema_version": 1,
+    "state": "Released",
+    "stewardship": {
+      "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+      "owner_id": "reviewer.shiftultra.testnet",
+      "token_id": "lantern-trail-testnet-v1"
+    },
+    "target": "100000000000000000000000",
+    "title": "The Lantern Trail",
+    "total_contributed": "100000000000000000000000"
+  },
+  "ledger": {
+    "unit": "yoctoNEAR",
+    "deposits_total": "300000000000000000000002",
+    "accounted_total": "300000000000000000000002",
+    "storage_retained": "37740000000000000000000",
+    "escrow": "0",
+    "credits": "132260000000000000000000",
+    "pending": "0",
+    "withdrawn": "130000000000000000000000",
+    "security_deposits": "2",
+    "balanced": true,
+    "native_contract_balance": "4167862604279020800000002",
+    "storage_stake_floor": "2742990000000000000000000",
+    "outstanding_liabilities": "132260000000000000000000",
+    "balance_covers_storage_and_liabilities": true
+  },
+  "snapshots": [
+    {
+      "label": "before-refund-tests",
+      "method": "get_config",
+      "args": {},
+      "block_hash": "8MnUwCFUYTQ2K4SdF8fdcFqqzsdsmdwjrGxQ3LemTUhy",
+      "block_height": 276002196,
+      "value": {
+        "account_count": 3,
+        "account_storage_allowance": "10000000000000000000000",
+        "campaign_count": 1,
+        "campaign_storage_allowance": "50000000000000000000000",
+        "contract_id": "sunset.shiftultra.testnet",
+        "deployment_mode": "upgradeable",
+        "economic_deposits": "100000000000000000000000",
+        "max_accounts": 100,
+        "max_campaigns": 5,
+        "network": "testnet",
+        "nft_standards": [
+          "nep171:1.2.0",
+          "nep177:1.0.0",
+          "nep181:1.0.0"
+        ],
+        "owner": "shiftultra.testnet",
+        "schema_version": 1,
+        "security_deposits": "2",
+        "state_layout_version": 2,
+        "storage_deposits": "70000000000000000000000",
+        "storage_price_per_byte": "10000000000000000000",
+        "storage_retained": "15780000000000000000000",
+        "withdrawn": "100000000000000000000000"
+      }
+    },
+    {
+      "label": "contributor-before-tests",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "HkvJUeTKaqk5nU8BrzNny2bXTCCA32DpkX5uQ7grwQPK",
+      "block_height": 276002202,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "8280000000000000000000",
+        "paid": "0",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "funding-draft",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-funding-20261103-v1"
+      },
+      "block_hash": "D6hFNLK8Djy4fsxaFHLby421Tzd7rVjsA1sx9C6Em41B",
+      "block_height": 276002222,
+      "value": {
+        "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929",
+        "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1793682004634000000",
+        "id": "refund-funding-20261103-v1",
+        "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+        "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Draft",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: funding target missed",
+        "total_contributed": "0"
+      }
+    },
+    {
+      "label": "funding-contributed",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-funding-20261103-v1"
+      },
+      "block_hash": "3fL2hdAGMfY1uYrnEpJNZWYxvTp7KL5qbds1MsK1KmMB",
+      "block_height": 276002270,
+      "value": {
+        "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929",
+        "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+        "creator": "shiftultra.testnet",
+        "escrow": "10000000000000000000000",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1793682004634000000",
+        "id": "refund-funding-20261103-v1",
+        "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+        "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Active",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: funding target missed",
+        "total_contributed": "10000000000000000000000"
+      }
+    },
+    {
+      "label": "release-draft",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-release-20261103-v1"
+      },
+      "block_hash": "69T5X5wXPh4MCFRo72BNCRSj7cRiUeGSsuJNHhBLgvNT",
+      "block_height": 276002294,
+      "value": {
+        "agreement_digest": "f331bde07dacda7e1289b876568c48f2e3f1e7aa57c5c1c4f6ce46a1bbf90488",
+        "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1793682904634000000",
+        "id": "refund-release-20261103-v1",
+        "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+        "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Draft",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: release deadline missed",
+        "total_contributed": "0"
+      }
+    },
+    {
+      "label": "release-contributed",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-release-20261103-v1"
+      },
+      "block_hash": "AjdFbvjc9hD2mJmKpY1Efwk2kdNDS6AFKMXYEMezgHcW",
+      "block_height": 276002332,
+      "value": {
+        "agreement_digest": "f331bde07dacda7e1289b876568c48f2e3f1e7aa57c5c1c4f6ce46a1bbf90488",
+        "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+        "creator": "shiftultra.testnet",
+        "escrow": "20000000000000000000000",
+        "funded_at_ns": "1793681928803083726",
+        "funding_deadline_ns": "1793682904634000000",
+        "id": "refund-release-20261103-v1",
+        "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+        "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+        "public_key_base64": null,
+        "release_deadline_ns": "1793682018803083726",
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Funded",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: release deadline missed",
+        "total_contributed": "20000000000000000000000"
+      }
+    },
+    {
+      "label": "funding-real-expiry",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-funding-20261103-v1"
+      },
+      "block_hash": "Frm6BvHztHJU5G46gjvY9PfN1CmMuHCMJZDMoDNPH8R1",
+      "block_height": 276002535,
+      "value": {
+        "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929",
+        "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+        "creator": "shiftultra.testnet",
+        "escrow": "10000000000000000000000",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1793682004634000000",
+        "id": "refund-funding-20261103-v1",
+        "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+        "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Refundable",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: funding target missed",
+        "total_contributed": "10000000000000000000000"
+      }
+    },
+    {
+      "label": "funding-before-claim",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "GjnSPmX5jrhofBJs6vP4Udf6gj3o6XpZcZhVFQXR9oLh",
+      "block_height": 276002546,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": false
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "8280000000000000000000",
+        "paid": "0",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "funding-after-claim",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "94f8rs3MUh44nyfVRMstp2SDpYohCxkh5JaaCGJxvQdV",
+      "block_height": 276002573,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "18280000000000000000000",
+        "paid": "0",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "funding-after-refund",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-funding-20261103-v1"
+      },
+      "block_hash": "9Eq2ePpPxtnypfT9a676EU5t6LUMm7qbexUyQVyJ7E1T",
+      "block_height": 276002579,
+      "value": {
+        "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929",
+        "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1793682004634000000",
+        "id": "refund-funding-20261103-v1",
+        "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+        "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Refundable",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: funding target missed",
+        "total_contributed": "10000000000000000000000"
+      }
+    },
+    {
+      "label": "funding-after-idempotent-repeat",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "BJM1iX78d1atBd2hDYtwS1XhvPqajKfVPFtvCTZxdmo8",
+      "block_height": 276002650,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "18280000000000000000000",
+        "paid": "0",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "funding-claim-confirmed",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "5kiccifPVLHrc3EyMvgMjzPt8Tin3qPrwMAmziQce3Bu",
+      "block_height": 276002670,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "18280000000000000000000",
+        "paid": "0",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "funding-escrow-returned",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-funding-20261103-v1"
+      },
+      "block_hash": "AU8SeGmmDMGQC3wFVzEDbiyVQrFS1BstpkgnhwXgYXpR",
+      "block_height": 276002677,
+      "value": {
+        "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929",
+        "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "0",
+        "funding_deadline_ns": "1793682004634000000",
+        "id": "refund-funding-20261103-v1",
+        "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+        "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+        "public_key_base64": null,
+        "release_deadline_ns": null,
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Refundable",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: funding target missed",
+        "total_contributed": "10000000000000000000000"
+      }
+    },
+    {
+      "label": "funding-after-withdraw",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "6zXWzksVmCMoGTNwiAs66BZ5v5S4AY2k7sVGGWwMjBEi",
+      "block_height": 276002699,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "8280000000000000000000",
+        "paid": "10000000000000000000000",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "release-real-expiry",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-release-20261103-v1"
+      },
+      "block_hash": "9YkqMwicyUS8fAkW6o7HXjNsS5APigpFVYCRDnYa2NHg",
+      "block_height": 276002706,
+      "value": {
+        "agreement_digest": "f331bde07dacda7e1289b876568c48f2e3f1e7aa57c5c1c4f6ce46a1bbf90488",
+        "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+        "creator": "shiftultra.testnet",
+        "escrow": "20000000000000000000000",
+        "funded_at_ns": "1793681928803083726",
+        "funding_deadline_ns": "1793682904634000000",
+        "id": "refund-release-20261103-v1",
+        "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+        "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+        "public_key_base64": null,
+        "release_deadline_ns": "1793682018803083726",
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Refundable",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: release deadline missed",
+        "total_contributed": "20000000000000000000000"
+      }
+    },
+    {
+      "label": "release-before-claim",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "G2AGLhy6djQJgGApuCiMM3XuYy3cD1D2s3WsB6JPxYbg",
+      "block_height": 276002712,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "8280000000000000000000",
+        "paid": "10000000000000000000000",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "release-claim-confirmed",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "2Wxx9P1kA2VR6y2MTcqXDSwRHt92eM2gbsVxFG5UggZD",
+      "block_height": 276002736,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": true
+          }
+        ],
+        "credit": "28280000000000000000000",
+        "paid": "10000000000000000000000",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "release-escrow-returned",
+      "method": "get_campaign",
+      "args": {
+        "id": "refund-release-20261103-v1"
+      },
+      "block_hash": "9piAM4YL4RopvixTiZqXEhVUuJakb4jMpuBdBFZ1LJRP",
+      "block_height": 276002744,
+      "value": {
+        "agreement_digest": "f331bde07dacda7e1289b876568c48f2e3f1e7aa57c5c1c4f6ce46a1bbf90488",
+        "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "1793681928803083726",
+        "funding_deadline_ns": "1793682904634000000",
+        "id": "refund-release-20261103-v1",
+        "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+        "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+        "public_key_base64": null,
+        "release_deadline_ns": "1793682018803083726",
+        "release_window_ns": "90000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Refundable",
+        "stewardship": null,
+        "target": "20000000000000000000000",
+        "title": "E2E refund: release deadline missed",
+        "total_contributed": "20000000000000000000000"
+      }
+    },
+    {
+      "label": "release-after-withdraw",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "6r1eZPfTsaaVn78LUHKi46Ub9my2vu3LtjdyKtupxyeg",
+      "block_height": 276002768,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": true
+          }
+        ],
+        "credit": "8280000000000000000000",
+        "paid": "30000000000000000000000",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "after-refund-tests",
+      "method": "get_config",
+      "args": {},
+      "block_hash": "2aQ6SvkJs8yus5wkQjh1iSNZm3f5rcRCJRURb3bGdW6J",
+      "block_height": 276002775,
+      "value": {
+        "account_count": 3,
+        "account_storage_allowance": "10000000000000000000000",
+        "campaign_count": 3,
+        "campaign_storage_allowance": "50000000000000000000000",
+        "contract_id": "sunset.shiftultra.testnet",
+        "deployment_mode": "upgradeable",
+        "economic_deposits": "130000000000000000000000",
+        "max_accounts": 100,
+        "max_campaigns": 5,
+        "network": "testnet",
+        "nft_standards": [
+          "nep171:1.2.0",
+          "nep177:1.0.0",
+          "nep181:1.0.0"
+        ],
+        "owner": "shiftultra.testnet",
+        "schema_version": 1,
+        "security_deposits": "2",
+        "state_layout_version": 2,
+        "storage_deposits": "170000000000000000000000",
+        "storage_price_per_byte": "10000000000000000000",
+        "storage_retained": "37740000000000000000000",
+        "withdrawn": "130000000000000000000000"
+      }
+    },
+    {
+      "label": "main-showcase-preserved",
+      "method": "get_campaign",
+      "args": {
+        "id": "lantern-trail-testnet-v1"
+      },
+      "block_hash": "8QYNECFv7FimDCJdt7V7pYVL5vK9KD1jEA6fs2FykaPz",
+      "block_height": 276002781,
+      "value": {
+        "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+        "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "creator": "shiftultra.testnet",
+        "escrow": "0",
+        "funded_at_ns": "1793638914842131270",
+        "funding_deadline_ns": "1794268800000000000",
+        "id": "lantern-trail-testnet-v1",
+        "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+        "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+        "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+        "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+        "release_deadline_ns": "1793725314842131270",
+        "release_window_ns": "86400000000000",
+        "reviewer": "reviewer.shiftultra.testnet",
+        "schema_version": 1,
+        "state": "Released",
+        "stewardship": {
+          "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+          "owner_id": "reviewer.shiftultra.testnet",
+          "token_id": "lantern-trail-testnet-v1"
+        },
+        "target": "100000000000000000000000",
+        "title": "The Lantern Trail",
+        "total_contributed": "100000000000000000000000"
+      }
+    },
+    {
+      "label": "nft-supply-preserved",
+      "method": "nft_total_supply",
+      "args": {},
+      "block_hash": "FWwvAjjoqstTB39U9wfZtb9pZJzT3NguyYuxMpjnd3UF",
+      "block_height": 276002788,
+      "value": "1"
+    },
+    {
+      "label": "final-config",
+      "method": "get_config",
+      "args": {},
+      "block_hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+      "block_height": 276002928,
+      "value": {
+        "account_count": 3,
+        "account_storage_allowance": "10000000000000000000000",
+        "campaign_count": 3,
+        "campaign_storage_allowance": "50000000000000000000000",
+        "contract_id": "sunset.shiftultra.testnet",
+        "deployment_mode": "upgradeable",
+        "economic_deposits": "130000000000000000000000",
+        "max_accounts": 100,
+        "max_campaigns": 5,
+        "network": "testnet",
+        "nft_standards": [
+          "nep171:1.2.0",
+          "nep177:1.0.0",
+          "nep181:1.0.0"
+        ],
+        "owner": "shiftultra.testnet",
+        "schema_version": 1,
+        "security_deposits": "2",
+        "state_layout_version": 2,
+        "storage_deposits": "170000000000000000000000",
+        "storage_price_per_byte": "10000000000000000000",
+        "storage_retained": "37740000000000000000000",
+        "withdrawn": "130000000000000000000000"
+      }
+    },
+    {
+      "label": "final-campaigns",
+      "method": "list_campaigns",
+      "args": {},
+      "block_hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+      "block_height": 276002928,
+      "value": [
+        {
+          "agreement_digest": "0791de1e069a42b9d80b6255dd75009c0a51d204252aeb083e42f2e512cbe969",
+          "ciphertext_hash": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+          "creator": "shiftultra.testnet",
+          "escrow": "0",
+          "funded_at_ns": "1793638914842131270",
+          "funding_deadline_ns": "1794268800000000000",
+          "id": "lantern-trail-testnet-v1",
+          "key_commitment": "3937071a074038486fda911b362d894dfaa182c06645d9c9f4df87eda4a697c5",
+          "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+          "manifest_hash": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+          "manifest_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+          "plaintext_hash": "17a3c1ffd291d855812276c48c6b600dd19a4706bfa48f0797cee0affc6a8743",
+          "public_key_base64": "sbXVZKOGRUBvNKDgIU30vZizj67FqgE+kpysf/1Tz+8=",
+          "release_deadline_ns": "1793725314842131270",
+          "release_window_ns": "86400000000000",
+          "reviewer": "reviewer.shiftultra.testnet",
+          "schema_version": 1,
+          "state": "Released",
+          "stewardship": {
+            "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+            "owner_id": "reviewer.shiftultra.testnet",
+            "token_id": "lantern-trail-testnet-v1"
+          },
+          "target": "100000000000000000000000",
+          "title": "The Lantern Trail",
+          "total_contributed": "100000000000000000000000"
+        },
+        {
+          "agreement_digest": "da54b611dbdd28a214025e2574032db7cc0c9b6712c0b90059d21177c9b2e929",
+          "ciphertext_hash": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+          "creator": "shiftultra.testnet",
+          "escrow": "0",
+          "funded_at_ns": "0",
+          "funding_deadline_ns": "1793682004634000000",
+          "id": "refund-funding-20261103-v1",
+          "key_commitment": "7a3ec39c3339470a5deadc63fac96a0fa7081f352ef029d17768b7924011c7a1",
+          "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+          "manifest_hash": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+          "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-funding-20261103-v1/manifest.json",
+          "plaintext_hash": "f303f85a9303c4905f4053784291ef542b31841c272c3bf6f4de75ff30767802",
+          "public_key_base64": null,
+          "release_deadline_ns": null,
+          "release_window_ns": "90000000000",
+          "reviewer": "reviewer.shiftultra.testnet",
+          "schema_version": 1,
+          "state": "Refundable",
+          "stewardship": null,
+          "target": "20000000000000000000000",
+          "title": "E2E refund: funding target missed",
+          "total_contributed": "10000000000000000000000"
+        },
+        {
+          "agreement_digest": "f331bde07dacda7e1289b876568c48f2e3f1e7aa57c5c1c4f6ce46a1bbf90488",
+          "ciphertext_hash": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+          "creator": "shiftultra.testnet",
+          "escrow": "0",
+          "funded_at_ns": "1793681928803083726",
+          "funding_deadline_ns": "1793682904634000000",
+          "id": "refund-release-20261103-v1",
+          "key_commitment": "990907bc33f9f17a17b244c2a165f72fbcffb704f1dbe3782d3693da13634b03",
+          "license_hash": "6e237c55b0583cb7bba05562316c54b0a105aba04775017e2253237b9a64613c",
+          "manifest_hash": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+          "manifest_uri": "https://sunset-lemon.vercel.app/testnet/refund-release-20261103-v1/manifest.json",
+          "plaintext_hash": "1393e30757c6b9d039a0fdb7fff2c35d5e76a78a659bd8222f380826066f6cda",
+          "public_key_base64": null,
+          "release_deadline_ns": "1793682018803083726",
+          "release_window_ns": "90000000000",
+          "reviewer": "reviewer.shiftultra.testnet",
+          "schema_version": 1,
+          "state": "Refundable",
+          "stewardship": null,
+          "target": "20000000000000000000000",
+          "title": "E2E refund: release deadline missed",
+          "total_contributed": "20000000000000000000000"
+        }
+      ]
+    },
+    {
+      "label": "final-account-shiftultra.testnet",
+      "method": "get_account",
+      "args": {
+        "account_id": "shiftultra.testnet"
+      },
+      "block_hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+      "block_height": 276002928,
+      "value": {
+        "account_id": "shiftultra.testnet",
+        "contributions": [],
+        "credit": "115710000000000000000000",
+        "paid": "100000000000000000000000",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "final-account-reviewer.shiftultra.testnet",
+      "method": "get_account",
+      "args": {
+        "account_id": "reviewer.shiftultra.testnet"
+      },
+      "block_hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+      "block_height": 276002928,
+      "value": {
+        "account_id": "reviewer.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "40000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          }
+        ],
+        "credit": "8270000000000000000000",
+        "paid": "0",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "final-account-sponsor.shiftultra.testnet",
+      "method": "get_account",
+      "args": {
+        "account_id": "sponsor.shiftultra.testnet"
+      },
+      "block_hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+      "block_height": 276002928,
+      "value": {
+        "account_id": "sponsor.shiftultra.testnet",
+        "contributions": [
+          {
+            "amount": "60000000000000000000000",
+            "campaign_id": "lantern-trail-testnet-v1",
+            "refunded": false
+          },
+          {
+            "amount": "10000000000000000000000",
+            "campaign_id": "refund-funding-20261103-v1",
+            "refunded": true
+          },
+          {
+            "amount": "20000000000000000000000",
+            "campaign_id": "refund-release-20261103-v1",
+            "refunded": true
+          }
+        ],
+        "credit": "8280000000000000000000",
+        "paid": "30000000000000000000000",
+        "pending": null,
+        "registered": true,
+        "schema_version": 1
+      }
+    },
+    {
+      "label": "final-nft-supply",
+      "method": "nft_total_supply",
+      "args": {},
+      "block_hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+      "block_height": 276002928,
+      "value": "1"
+    }
+  ],
+  "remaining_unverified": [
+    "Protocol maximum-state gas and native-transfer/callback failures",
+    "NEAR Sandbox and NFT receiver/resolver protocol callbacks",
+    "Independent human review/demand",
+    "Live browser wallet signing"
+  ],
+  "artifact_publication": "New encrypted refund fixtures and this evidence are local until operator pushes. Main original/mirror hosting separately browser-verified."
+}

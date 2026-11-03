@@ -1,0 +1,502 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-03T05:07:08.933311+00:00",
+  "audit_date": "2026-11-03",
+  "status": "checked_testnet_main_flow_both_expiry_refunds_and_hosted_recovery_passed_with_limits",
+  "assessment": "A testnet prototype with real CLI-settled release, creator payout, both deadline refunds and a transferable maintenance right, plus read-only browser recovery and downloaded offline play. Browser finance remains local rehearsal and unsigned plans.",
+  "implementation_head_checked": "fa69118232f91c3a9d96ad7f37300e6713ed547f",
+  "local_verification": {
+    "checked_at": "2026-11-03T04:50:02.648459+00:00",
+    "all_requested_checks_completed": true,
+    "all_passed": true,
+    "javascript_tests": 49,
+    "compiled_wasm_host_scenarios": 11,
+    "native_rust_tests": 19,
+    "local_workflow_scenarios": 9,
+    "simulated_near_conserved": "21.8",
+    "typecheck": "passed",
+    "source_digests_verified": 8,
+    "checks": [
+      {
+        "name": "npm-check",
+        "command": "npm run check",
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 18.588,
+        "local_log_sha256": "f4b02b60ac0940c43547e95dd308dffdafaeeaf864403999c94da524b9242c35"
+      },
+      {
+        "name": "rust-tests",
+        "command": "cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml",
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 14.209,
+        "local_log_sha256": "6e6d1c1108a0a0ee914ce9b3d044cb7b96c77acc6dcfd140aff4e481ac1dc393"
+      },
+      {
+        "name": "rustfmt",
+        "command": "cargo fmt --manifest-path contracts/sunset/Cargo.toml --check",
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 0.304,
+        "local_log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "name": "native-clippy",
+        "command": "cargo clippy --locked --offline --manifest-path contracts/sunset/Cargo.toml --all-targets -- -D warnings",
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.144,
+        "local_log_sha256": "2860aa3174bf1c61077144c612295734088ee6728501362e753a62e8c17c5524"
+      },
+      {
+        "name": "production-build",
+        "command": "npm run build",
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 28.965,
+        "local_log_sha256": "aadf2b168e622926c0c12d874b770513ef9cb2ba3bfdaf0b7f339ffe328d45e1"
+      },
+      {
+        "name": "static-pages",
+        "command": "npm run test:pages",
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 0.361,
+        "local_log_sha256": "9e4583d1930bf7d7f7d86cb259d2f38e70fb29ea1fb5869bd56e9bb66b39e3f0"
+      }
+    ],
+    "execution_order": "Sequential; no overlapping Next.js type generation, production build or static-page checks.",
+    "wasm_rebuilt_or_replaced": false,
+    "protocol_execution_scope": "None from local checks. Compiled-WASM tests use transactional host doubles; they do not meter NEAR protocol gas or create real receipts.",
+    "post_refund_fixture_build": {
+      "checked_at": "2026-11-03T05:05:24.015835+00:00",
+      "reason": "Two new public refund fixtures were added after the earlier build; no source/business-logic changes.",
+      "all_passed": true,
+      "checks": [
+        {
+          "name": "production-build-with-refund-fixtures",
+          "command": "npm run build",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 28.025,
+          "local_log_sha256": "e1339e6e3566b862d545f5e830f2ba1322a92cc3838b08b31284f5c57a45687e"
+        },
+        {
+          "name": "static-pages-with-refund-fixtures",
+          "command": "npm run test:pages",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 0.345,
+          "local_log_sha256": "1a814f50eaf1c6133992db787f8d3a62ffdd1ac9d88dd4a12bae7f95721062c9"
+        }
+      ],
+      "fixture_hashes": [
+        {
+          "file": "testnet/refund-funding-20261103-v1/manifest.json",
+          "bytes": 358,
+          "sha256": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+          "export_sha256": "b4e24efd96269fd1ab70576e0678abf820018d4fc1bc12436b96e2b8658d1b14",
+          "source_and_export_byte_identical": true
+        },
+        {
+          "file": "testnet/refund-funding-20261103-v1/ciphertext.sunset",
+          "bytes": 1636,
+          "sha256": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+          "export_sha256": "f628ee43cd945b6b277a3dda07aeb4d20951e5760f2c8d1e7a859d44caf16769",
+          "source_and_export_byte_identical": true
+        },
+        {
+          "file": "testnet/refund-release-20261103-v1/manifest.json",
+          "bytes": 358,
+          "sha256": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+          "export_sha256": "1e52f40d47a1fdb61f3db3241bb56f7f3def413dca10c0d9430d361ca165f9ab",
+          "source_and_export_byte_identical": true
+        },
+        {
+          "file": "testnet/refund-release-20261103-v1/ciphertext.sunset",
+          "bytes": 1638,
+          "sha256": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+          "export_sha256": "0e0be856d9d89a1e1e1844b2400a09b9946cff99a72604a0fd6a278f26c61cc7",
+          "source_and_export_byte_identical": true
+        }
+      ],
+      "exported_files_match_onchain_commitments": true,
+      "site_deployed_by_this_check": false
+    }
+  },
+  "artifact": {
+    "path": "../contracts/sunset/res/sunset_contract.wasm",
+    "bytes": 270188,
+    "sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
+    "base58_code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "source_to_artifact_record": "../contracts/sunset/build-evidence.json",
+    "source_sha256": {
+      "Cargo.lock": "689f6033c51ba9c8e69dbd85b50b5a55d8450d9821c81b4de30eb10654d26bbf",
+      "Cargo.toml": "94e3d0a504d947c78abec66b2d59a366cdfb8449e67a8ff34ed862e504b67deb",
+      "src/host.rs": "8bb2720b3e20dbeec9f75362f434c477b114f56d480c303ceb9d96f35ab24de6",
+      "src/lib.rs": "dcba0cf0874f562c05a2c06ccc88cf7c23985505a188ae6b5758f5892a3c9dd2",
+      "src/nft.rs": "4f62b1f3dee01a00d79c779e21dc8b77f2ad58cae9da49fed36011d7ac97b26b",
+      "src/tests.rs": "a1a9861e930d829461e6f70d206d4fee0216c638a5edf9cedbbbf3a913a56010",
+      "tests/wasm.test.mjs": "d7459ae9e4d0491f104a08918065764853ace695e41e744a3f616442a97062b4",
+      "scripts/build.sh": "839f9bed71a1734ea633c93b4d421fe08bf339fc4ed687c80bdea4f84b3faf5e"
+    },
+    "fresh_remote_bytes_match_local": true
+  },
+  "fresh_finalized_chain_read": {
+    "checked_at": "2026-11-03T04:50:11.974530+00:00",
+    "network": "testnet",
+    "rpc": "https://rpc.testnet.near.org",
+    "protocol_version": 88,
+    "block_hash": "6ajrUZQXNLiU3ovA4byfn3c1KPQeSZzZfEu5FUHSLJBk",
+    "block_height": 276001371,
+    "transactions_signed": false,
+    "snapshot_scope": "Before the separate 3 November expiry-refund scenarios; campaign counts and totals below are this finalized snapshot, not a claim about later state.",
+    "contract_id": "sunset.shiftultra.testnet",
+    "state_layout_version": 2,
+    "deployment_mode": "upgradeable",
+    "campaign_count": 1,
+    "main_campaign": {
+      "id": "lantern-trail-testnet-v1",
+      "state": "Released",
+      "total_contributed_yocto_near": "100000000000000000000000",
+      "escrow_yocto_near": "0",
+      "stewardship": {
+        "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+        "owner_id": "reviewer.shiftultra.testnet",
+        "token_id": "lantern-trail-testnet-v1"
+      }
+    },
+    "creator": {
+      "account_id": "shiftultra.testnet",
+      "paid_yocto_near": "100000000000000000000000",
+      "pending": null
+    },
+    "security_deposits_yocto_near": "2"
+  },
+  "prior_signed_main_showcase": {
+    "verified_at": "2026-11-02T17:11:55.890234+00:00",
+    "evidence": "testnet-showcase.json",
+    "execution": "Operator-local CLI signing; completed actions were not rerun for this audit.",
+    "finalized_transactions": 11,
+    "successful_transactions": 10,
+    "intentional_authority_failures": 1,
+    "flows": [
+      "draft creation and bound agreement approval",
+      "0.06+0.04 testNEAR contributions; separate first-account storage deposits",
+      "matching key release and one stewardship NFT minted",
+      "0.1 testNEAR native creator payout; successful actual 15Tgas callback; pending null",
+      "stewardship transfer and mirror reset",
+      "former-owner mirror update rejected onchain",
+      "new owner mirror update accepted; exactly two yocto retained outside escrow",
+      "actual hosted reader and original/mirror commitment recovery",
+      "cold-browser downloaded-game completion with browser offline enabled before file loading"
+    ],
+    "native_creator_transfer": {
+      "receipt_id": "BmahZn4hsZSkwGRNRRYeF7W2og8vmAvoWC7cuX2xa9c2",
+      "predecessor_id": "sunset.shiftultra.testnet",
+      "receiver_id": "shiftultra.testnet",
+      "amount_yocto": "100000000000000000000000"
+    },
+    "withdrawal_callback": {
+      "receipt_id": "2B3uosXs4HYWrcW65StGbBfCtwmjbrVBSgMhBQJyTVxw",
+      "scheduled_gas": 15000000000000,
+      "gas_burnt": 1647072781898,
+      "status": "succeeded; creator pending is null"
+    },
+    "operator_control": "All role accounts are controlled by one operator; not evidence of independent human review or adoption."
+  },
+  "fresh_hosted_browser": {
+    "checkedAt": "2026-11-03T04:55:22.954787+00:00",
+    "site": "https://sunset-lemon.vercel.app",
+    "verdict": "passed-with-transient-mirror-timeout",
+    "scope": "Fresh actual hosted public browser flow and actual downloaded standalone file, no signing or chain mutation. Responsive viewport QA, not a full accessibility audit or physical-device test.",
+    "desktopLanding": {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "horizontalOverflow": false,
+      "imagesLoaded": true,
+      "navigationAndCTAsPresent": true
+    },
+    "mobileLanding": {
+      "viewport": [
+        390,
+        844
+      ],
+      "resizeChecked": true,
+      "subsequentNavigationChecked": true,
+      "horizontalOverflow": false,
+      "imagesLoaded": true,
+      "note": "Mobile-width navigation succeeded; physical mobile device/UA was not emulated."
+    },
+    "testnetReader": {
+      "contract": "sunset.shiftultra.testnet",
+      "codeHash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+      "finalizedHeight": 276001454,
+      "campaignId": "lantern-trail-testnet-v1",
+      "state": "Released",
+      "escrowYoctoNear": "0",
+      "totalContributedYoctoNear": "100000000000000000000000",
+      "maintenanceHolder": "reviewer.shiftultra.testnet"
+    },
+    "recovery": {
+      "original": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+      "mirror": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+      "originalRecovered": true,
+      "mirrorRecovered": true,
+      "browserDownloadsByteIdentical": true,
+      "downloadBytes": 7246,
+      "downloadSha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738",
+      "observation": "First mirror manifest request timed out and UI displayed signal timed out. One bounded retry succeeded. No commitment mismatch or JavaScript exception observed."
+    },
+    "hostedPlayer": {
+      "wrongFirstAnswer": {
+        "selected": 10,
+        "feedback": "Keep exploring.",
+        "score": "0 lit so far",
+        "otherChoicesDisabledAfterAnswer": true
+      },
+      "reopenedCorrectFirstAnswer": {
+        "selected": 12,
+        "feedback": "A little brighter!",
+        "score": "1 lit so far"
+      },
+      "mobileViewport": [
+        390,
+        844
+      ],
+      "mobilePageScrollWidth": 390,
+      "mobileDialogBounds": {
+        "x": 12,
+        "y": 12,
+        "width": 366,
+        "height": 820
+      },
+      "mobileControlsFit": true,
+      "fullFiveQuestionHostedRun": false
+    },
+    "coldOffline": {
+      "freshProfileOpened": "about:blank",
+      "offlineEnabledBeforeFileNavigation": true,
+      "networkScope": "Chromium DevTools offline emulation; OS/network adapter was not disabled",
+      "navigatorOnLine": false,
+      "allFiveCorrect": true,
+      "completion": "All 5 lanterns are lit.",
+      "restartReturnedTo": "Lantern 1 of 5",
+      "resourceEntries": 0,
+      "httpRequests": 0,
+      "documentRequestScheme": "file",
+      "consoleMessages": 0,
+      "pageErrors": 0,
+      "downloadSource": "Actual original-resource Download standalone game UI"
+    },
+    "hostedPageErrors": 0,
+    "limitations": [
+      "One transient mirror manifest timeout occurred before successful retry.",
+      "Browser financial rehearsal and new refund campaigns were not exercised in this run.",
+      "No wallet signing, private backups, secrets, posts, or production changes."
+    ],
+    "isolation": {
+      "separate_hosted_and_cold_offline_profiles": true,
+      "user_browser_data_accessed": false
+    },
+    "captures": [
+      {
+        "file": "01-desktop-landing.png",
+        "bytes": 527750,
+        "sha256": "0694eaba3b82c28bb35f8e18cf4bb2e41e2d5943115b10058df259524d73e87b",
+        "publication": "local ignored QA capture; image is not included in this public record"
+      },
+      {
+        "file": "02-mobile-landing.png",
+        "bytes": 53823,
+        "sha256": "b2d1b5678a6b9f5ebc904a79733ce436f1f8774f22a94556312136252bb8d142",
+        "publication": "local ignored QA capture; image is not included in this public record"
+      },
+      {
+        "file": "03-hosted-pinned-reader.png",
+        "bytes": 178239,
+        "sha256": "38c19dda0145cb66530e4824f7bb7277640061a3a646d531e02d5801bd8a2494",
+        "publication": "local ignored QA capture; image is not included in this public record"
+      },
+      {
+        "file": "04-mobile-live-player.png",
+        "bytes": 57177,
+        "sha256": "5fe462fd48fad362890fc4bdce9fc8d11a0f760305a2baee8da0ff0c18249a83",
+        "publication": "local ignored QA capture; image is not included in this public record"
+      },
+      {
+        "file": "05-mobile-navigated-landing.png",
+        "bytes": 53823,
+        "sha256": "b2d1b5678a6b9f5ebc904a79733ce436f1f8774f22a94556312136252bb8d142",
+        "publication": "local ignored QA capture; image is not included in this public record"
+      },
+      {
+        "file": "06-cold-offline-completion.png",
+        "bytes": 47569,
+        "sha256": "18fbee8c3e429ae1e97b50d9f57b1b2e809f7b7909b1541a42e0de05b6ab4c7c",
+        "publication": "local ignored QA capture; image is not included in this public record"
+      }
+    ]
+  },
+  "expiry_refund_phase": {
+    "status": "passed_actual_testnet_deadlines_and_native_principal_withdrawals",
+    "evidence": "testnet-refunds.json",
+    "checked_at": "2026-11-03T05:05:04.057887+00:00",
+    "final_block": {
+      "hash": "5fT8k6yscErahFJ7fB2zLmr71y6XKWzuHiVDGPLzYBcF",
+      "height": 276002928,
+      "timestamp_ns": "1793682269958472374"
+    },
+    "scope": "Two fresh isolated campaigns. Original Released showcase not rerun. Short positive 90-second raw-ABI release window is allowed by reviewed contract; whole-hour preparation helper unchanged. No clock simulation or contract upgrade.",
+    "additional_finalized_successful_transactions": 11,
+    "transaction_steps": {
+      "setup": 6,
+      "refund_claims": 2,
+      "idempotent_repeat": 1,
+      "native_withdrawals": 2
+    },
+    "cases": [
+      {
+        "id": "refund-funding-20261103-v1",
+        "mode": "target_missed",
+        "principal_near": "0.01",
+        "real_time_expiry_confirmed": true,
+        "deadline_ns": "1793682004634000000",
+        "expired_view_timestamp_ns": "1793682053219617318",
+        "final_state": "Refundable",
+        "escrow_yocto_near": "0",
+        "key_published": false,
+        "stewardship_minted": false
+      },
+      {
+        "id": "refund-release-20261103-v1",
+        "mode": "release_key_withheld",
+        "principal_near": "0.02",
+        "real_time_expiry_confirmed": true,
+        "deadline_ns": "1793682018803083726",
+        "expired_view_timestamp_ns": "1793682149195132227",
+        "final_state": "Refundable",
+        "escrow_yocto_near": "0",
+        "key_published": false,
+        "stewardship_minted": false
+      }
+    ],
+    "principal_paid_near": "0.03",
+    "contributor": {
+      "account_id": "sponsor.shiftultra.testnet",
+      "paid_yocto_near": "30000000000000000000000",
+      "pending": null,
+      "preexisting_storage_credit_preserved": true,
+      "credit_yocto_near": "8280000000000000000000"
+    },
+    "withdrawals": [
+      {
+        "case": "funding",
+        "transaction_hash": "AT6nuVmzNoj9zghYkDPNWSU8uWLjxtx3fMthZJkjbBRt",
+        "explorer_url": "https://testnet.nearblocks.io/txns/AT6nuVmzNoj9zghYkDPNWSU8uWLjxtx3fMthZJkjbBRt",
+        "native_principal_transfers": [
+          {
+            "receipt_id": "42FBYRtLshWgq22ZBxKrABRnJKUUd5N9Wbt7zBpUw74g",
+            "from": "sunset.shiftultra.testnet",
+            "to": "sponsor.shiftultra.testnet",
+            "amount": "10000000000000000000000",
+            "status": {
+              "SuccessValue": ""
+            }
+          }
+        ],
+        "callbacks": [
+          {
+            "receipt_id": "AAXXiYaZiyNwii7ifC2o19Hh9NHR7VdB3wM6zDtibssT",
+            "method": "on_withdraw_complete",
+            "scheduled_gas": 15000000000000,
+            "gas_burnt": 1945872298099,
+            "status": "SuccessValue"
+          }
+        ]
+      },
+      {
+        "case": "release",
+        "transaction_hash": "HoMNLX1M1hKyiux77xjAq7oJbP2v8MwxRyeaki7CeRnG",
+        "explorer_url": "https://testnet.nearblocks.io/txns/HoMNLX1M1hKyiux77xjAq7oJbP2v8MwxRyeaki7CeRnG",
+        "native_principal_transfers": [
+          {
+            "receipt_id": "BsMYPrCYaBhseVzsvYrsbTyhLd3JwqSP5Zu8e9tdNt2u",
+            "from": "sunset.shiftultra.testnet",
+            "to": "sponsor.shiftultra.testnet",
+            "amount": "20000000000000000000000",
+            "status": {
+              "SuccessValue": ""
+            }
+          }
+        ],
+        "callbacks": [
+          {
+            "receipt_id": "VgCLHsh5CueqXyGzmA14itHWZ5Z3UrBkuiQZSsjDteK",
+            "method": "on_withdraw_complete",
+            "scheduled_gas": 15000000000000,
+            "gas_burnt": 1945867674010,
+            "status": "SuccessValue"
+          }
+        ]
+      }
+    ],
+    "duplicate_refund": {
+      "transaction_hash": "HvJQAPhy1VH6PFdRzj21khEjViAjkf6M58xXW5cQH8pi",
+      "behavior": "FINAL_SUCCESS idempotent no-op: exact account unchanged; no second refund credit.",
+      "harness_correction": "The first harness expected rejection, then inspected actual finalized result and reviewed implementation. Expectation corrected without resubmitting the completed claim."
+    },
+    "ledger": {
+      "unit": "yoctoNEAR",
+      "deposits_total": "300000000000000000000002",
+      "accounted_total": "300000000000000000000002",
+      "storage_retained": "37740000000000000000000",
+      "escrow": "0",
+      "credits": "132260000000000000000000",
+      "pending": "0",
+      "withdrawn": "130000000000000000000000",
+      "security_deposits": "2",
+      "balanced": true,
+      "native_contract_balance": "4167862604279020800000002",
+      "storage_stake_floor": "2742990000000000000000000",
+      "outstanding_liabilities": "132260000000000000000000",
+      "balance_covers_storage_and_liabilities": true
+    },
+    "final_campaign_count": 3,
+    "main_campaign_preserved": {
+      "id": "lantern-trail-testnet-v1",
+      "state": "Released",
+      "escrow": "0",
+      "stewardship": {
+        "mirror_uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+        "owner_id": "reviewer.shiftultra.testnet",
+        "token_id": "lantern-trail-testnet-v1"
+      }
+    },
+    "nft_total_supply": "1",
+    "artifact_publication": "New encrypted refund fixtures and this evidence are local until operator pushes. Main original/mirror hosting separately browser-verified.",
+    "historical_snapshots_preserved": true
+  },
+  "limits": [
+    "Browser financial controls are rehearsal or unsigned transaction plans; live viewer is read-only and does not implement wallet authentication or signing.",
+    "All creator, reviewer and sponsor accounts share one operator. Separate account IDs demonstrate authority checks, not independent review or user demand.",
+    "Both original and selected mirror are paths on one Vercel host; independent hosting resilience is not demonstrated.",
+    "First mirror recovery timed out once; one bounded retry succeeded without a commitment mismatch or JavaScript exception.",
+    "Cold offline playback used Chromium DevTools offline emulation before navigating to the actual downloaded file; the OS network adapter was not disabled.",
+    "Mobile QA covers a 390 by 844 viewport with navigation and overflow checks, not a physical mobile device or a full accessibility/cross-browser audit.",
+    "Maximum-state protocol gas, failed-native-transfer/callback recovery, NFT receiver/resolver callbacks and NEAR Sandbox remain pending. Local host tests do not close those gaps.",
+    "Retained full-access keys make the deployed contract upgradeable; no immutable, audited or mainnet-ready deployment is claimed.",
+    "Capacity remains five campaigns, 100 permanent registered accounts and bounded state. Public participant registration can exhaust account slots.",
+    "Key and hash commitments do not establish licensing rights, educational quality, decryptability or long-term artifact availability."
+  ],
+  "historical_evidence": {
+    "initial_deployment": "testnet-deployment.json",
+    "main_showcase": "testnet-showcase.json",
+    "previous_browser_run": "browser-showcase.json"
+  },
+  "public_safe_record": "Contains public account IDs, artifact/capture/log hashes and scoped results only; no signing material, private release arguments or browser profile data.",
+  "rolling_verification_summary": "verification.json"
+}

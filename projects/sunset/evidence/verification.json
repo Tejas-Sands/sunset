@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-02T17:11:55.890234+00:00",
-  "status": "testnet_release_payout_stewardship_and_hosted_offline_recovery_verified_refund_phase_pending",
+  "checked_at": "2026-11-03T05:06:40.135547+00:00",
+  "status": "testnet_release_payout_stewardship_both_live_expiry_refunds_and_hosted_offline_recovery_verified_with_limits",
   "network": "testnet_only",
   "application": {
     "framework": "Next.js 16.2.10",
@@ -115,13 +115,13 @@
     {
       "command": "Actual hosted browser reader and original/steward mirror recovery",
       "status": "passed",
-      "scope": "HeadlessChrome 156 desktop 1920\u00d71080; pinned network/code/block, live Released campaign, exact original/mirror pack recovery, gameplay and browser downloads; no browser wallet signing",
+      "scope": "HeadlessChrome 156 desktop 1920×1080; pinned network/code/block, live Released campaign, exact original/mirror pack recovery, gameplay and browser downloads; no browser wallet signing",
       "evidence": "browser-showcase.json"
     },
     {
       "command": "Cold browser standalone file with offline enabled before load",
       "status": "passed",
-      "scope": "Actual downloaded 7,246-byte game; fresh browser, Chrome DevTools offline before file load, all five answers correct, completion/restart, zero external resource entries; 390\u00d7844 offline game no horizontal overflow. No operating-system network toggle or mobile homepage verification.",
+      "scope": "Actual downloaded 7,246-byte game; fresh browser, Chrome DevTools offline before file load, all five answers correct, completion/restart, zero external resource entries; 390×844 offline game no horizontal overflow. No operating-system network toggle or mobile homepage verification.",
       "evidence": "browser-showcase.json"
     }
   ],
@@ -159,16 +159,12 @@
   },
   "unverified": [
     {
-      "item": "Both actual expiry refund paths",
-      "reason": "Released campaign cannot refund. Separate underfunded and funded-unreleased campaigns need fresh commitments and actual deadline waiting; neither live refund path ran."
-    },
-    {
       "item": "NEAR Sandbox, maximum-state gas, native-transfer failure, callback failure and NFT receiver/resolver scenarios",
       "reason": "Normal small-state native withdrawal and its scheduled 15-Tgas callback succeeded; that does not prove failure recovery, NFT callbacks or maximum-state gas."
     },
     {
-      "item": "Mobile homepage, broad accessibility and cross-device browser QA",
-      "reason": "Hosted desktop reader/recovery and 390-pixel offline game passed. A later mobile landing navigation timed out; no mobile homepage or comprehensive browser audit claimed."
+      "item": "Broad accessibility, physical-device and cross-browser QA",
+      "reason": "Fresh 3 November desktop and 390x844 viewport landing navigation/player checks passed without overflow; not a physical-device or full accessibility audit."
     },
     {
       "item": "Live browser wallet signing",
@@ -198,7 +194,7 @@
     "site_deployed": true,
     "social_posted": false,
     "hackathon_submitted": false,
-    "reason": "Operator pushes subsequent local commits. Hosted reader revision 85e0284 and main testnet release/payout/stewardship flow verified; showcase evidence/documentation awaits normal user publication.",
+    "reason": "Operator pushes subsequent local commits. Main hosted recovery reverified; fresh E2E/refund evidence and new encrypted fixtures are local pending user push.",
     "repository_pushed_by_agent": false,
     "site_url": "https://sunset-lemon.vercel.app",
     "publication_evidence": "Public Tejas-Sands/sunset verified anonymously. Hosted reader revision 85e0284, exact original/mirror recovery and downloaded offline gameplay verified; new showcase evidence/docs await user push.",
@@ -211,7 +207,8 @@
       "private": false,
       "default_branch": "main",
       "pushed_at": "2026-11-02T11:55:56Z"
-    }
+    },
+    "current_e2e_and_refund_evidence_pending_user_push": true
   },
   "source_revision": "85e0284",
   "deployment_excluded_by_user": false,
@@ -226,7 +223,7 @@
     "font_license": "public/fonts/OFL-Geist.txt",
     "design_record": "docs/LANDING_DESIGN.md",
     "business_logic": "Existing ledger, crypto and game/recovery logic retained; routing/imports and presentation changed",
-    "verification": "Historical static/type/build checks passed. Current hosted desktop reader, original/mirror recovery, downloads and cold-browser offline game passed; 390-pixel offline game fits. Mobile homepage navigation timed out; broad accessibility/cross-device QA remains open. See browser-showcase.json."
+    "verification": "Fresh hosted desktop/mobile-width navigation, pinned live reader, original/mirror recovery and cold offline 5/5 completion passed on 3 November. One mirror request timed out and passed on one bounded retry; broad accessibility/physical-device/cross-browser QA remains open. See e2e-2026-11-03.json."
   },
   "deployment_authorized_by_user": true,
   "deployment_readiness": {
@@ -292,18 +289,19 @@
     "protocol_gas_scope": "Deployment and normal small-state campaign/NFT calls measured; successful native withdrawal callback burned 1647072781898 of 15000000000000 scheduled gas. Maximum-state/failure/NFT-callback coverage remains unverified."
   },
   "deployment_state": {
-    "checked_at": "2026-11-02T17:11:55.890234+00:00",
+    "checked_at": "2026-11-03T05:06:40.135547+00:00",
     "contract_deployed": true,
     "contract_initialized": true,
     "secure_local_signer_verified": true,
-    "campaign_count": 1,
+    "campaign_count": 3,
     "reviewer_account_created": true,
     "sponsor_account_created": true,
     "campaign_settlement_verified": true,
     "evidence": "testnet-showcase.json",
-    "campaign_settlement_scope": "Main release and native creator payout; both expiry refunds remain unverified.",
+    "campaign_settlement_scope": "Main release/native creator payout/stewardship plus two isolated actual-expiry refunds and exact 0.03 native testNEAR principal withdrawals; successful callbacks and pending null.",
     "current_campaign_state": "Released",
-    "initial_deployment_evidence": "testnet-deployment.json"
+    "initial_deployment_evidence": "testnet-deployment.json",
+    "refund_evidence": "testnet-refunds.json"
   },
   "testnet_deployment": "testnet-deployment.json",
   "testnet_showcase": "testnet-showcase.json",
@@ -318,5 +316,7 @@
     "previous_version_evidence": "launch-video.json",
     "public_x_post_url": null,
     "perceptual_listening_verified": false
-  }
+  },
+  "fresh_e2e_audit": "e2e-2026-11-03.json",
+  "testnet_refunds": "testnet-refunds.json"
 }

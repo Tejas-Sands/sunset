@@ -1,8 +1,8 @@
 # SUNSET testnet showcase — shiftultra
 
-Updated 2 November 2026. The main release, native creator payout and stewardship handover are complete on **`sunset.shiftultra.testnet`**. [Finalized showcase evidence](../evidence/testnet-showcase.json) records eleven transactions: ten successes and one intentional former-owner authority rejection. [Browser evidence](../evidence/browser-showcase.json) records actual hosted original/mirror recovery, downloads and cold-browser offline completion. The earlier [deployment record](../evidence/testnet-deployment.json) preserves its initial zero-campaign snapshot.
+Updated 3 November 2026. The main release, native creator payout and stewardship handover are complete on **`sunset.shiftultra.testnet`**. [Finalized showcase evidence](../evidence/testnet-showcase.json) records eleven transactions: ten successes and one intentional former-owner authority rejection. [Browser evidence](../evidence/browser-showcase.json) records actual hosted original/mirror recovery, downloads and cold-browser offline completion. The earlier [deployment record](../evidence/testnet-deployment.json) preserves its initial zero-campaign snapshot.
 
-**Do not repeat the completed account creation, contribution, release, withdrawal, NFT transfer or mirror-update commands.** Demonstrate this campaign through read-only views and existing finalized receipts. Both actual expiry refunds remain a separate phase below.
+**Do not repeat the completed account creation, contribution, release, withdrawal, NFT transfer or mirror-update commands.** Demonstrate this campaign through read-only views and existing finalized receipts. Both actual expiry refunds and their native principal withdrawals are also completed; see section 5.
 
 All role accounts are controlled by one operator. They demonstrate distinct contract authorities, not independent human review, sponsorship or adoption. Both public artifact locations share one host. Browser financial controls remain rehearsal/unsigned planning; actual signatures used the local CLI. TestNEAR only; full-access keys remain retained and the deployment is upgradeable.
 
@@ -84,16 +84,31 @@ In **Public resources**, verify the released pack from the original location, pl
 
 Close the entire prior browser, open a fresh browser at a blank page, disable browser networking **before** opening the downloaded file, then complete all five questions and restart. Recorded verification used Chrome DevTools offline emulation (`navigator.onLine=false`), not an operating-system adapter toggle. There were zero external resource entries. Offline gameplay also fit a 390×844 viewport without horizontal overflow.
 
-Hosted desktop reader/recovery and downloaded-file gameplay passed. A later mobile homepage navigation timed out; no mobile homepage, broad accessibility or cross-device audit is claimed. Same-host mirror paths demonstrate maintenance selection, not independent hosting resilience.
+Fresh desktop and 390×844 viewport navigation, reader/recovery and downloaded-file gameplay passed on 3 November. One mirror fetch timed out and succeeded on a bounded retry. Broad accessibility, physical-device and cross-browser QA remain open. See the [fresh E2E review](E2E_AUDIT_2026-11-03.md). Same-host mirror paths demonstrate maintenance selection, not independent hosting resilience.
 
 Retain the matching private package at ignored `private/shiftultra-testnet-v1/`. The sample release key is now public by intentional onchain disclosure; that does not make wallet keys or other unreleased backups public. Do not upload private CLI logs or wallet credentials.
 
-## 5. Remaining live expiry/refund phase
+## 5. Completed actual expiry refunds
 
-The Released campaign cannot demonstrate expiry refunds. Prepare **two additional campaigns** with unused IDs, fresh packages/URLs and future deadlines (five-campaign contract cap). Each input pack needs its own matching `pack.id`; prepare its own manifest, ciphertext, terms and private backup. Changing only a campaign ID in old terms would break content binding. Use [deployment preparation](DEPLOYMENT.md) and the [contract ABI](../contracts/sunset/README.md).
+Two fresh isolated campaigns passed real onchain expiry checks on 3 November. [Refund evidence](../evidence/testnet-refunds.json) records all eleven finalized transactions, exact terms, expiry-block timestamps, account credit, native principal transfers and successful withdrawal callbacks.
 
-For one campaign, approve and contribute below target, then wait until its real funding deadline. For the other, approve and reach target, withhold its key, then wait until its real release deadline (minimum preparation window: one hour). Do not advance the browser rehearsal clock as evidence of onchain time.
+| Campaign | Condition | Principal returned | Final escrow |
+| --- | --- | --- | --- |
+| refund-funding-20261103-v1 | 0.01 contributed below a 0.02 target; real funding deadline passed | 0.01 testNEAR | 0 |
+| refund-release-20261103-v1 | 0.02 target reached; key deliberately withheld beyond real release deadline | 0.02 testNEAR | 0 |
 
-After each actual campaign becomes `Refundable`, contributing accounts call `claim_refund {id}` with zero deposit, read their credit, then withdraw the exact desired amount with zero deposit. Prepare arguments from that campaign's actual terms and credit, not this completed campaign's old files. Preserve all finalized receipts and balances; verify the native transfer, callback, paid amount and `pending:null`, and ensure duplicate claims cannot repay. Unknown outcomes require receipt investigation before any retry.
+The second campaign uses a 90-second release window permitted by the reviewed raw contract ABI; the preparation helper's whole-hour policy remains unchanged. No rehearsal clock or contract change was used. Both cases have no published release key and no minted stewardship token.
 
-Both refund paths remain **unperformed**. Native-transfer failure, callback failure, NFT receiver/resolver scenarios, maximum-state gas and NEAR Sandbox also remain unverified. Independent educator review, independently controlled reviewers/sponsors, demand validation and final submission details remain open. Capture an honest demo distinguishing actual CLI settlement, the read-only browser viewer and local financial rehearsal. Current event rules are linked in the [rules review](../../../research/2026-11-01-council/track-verification.md).
+Sponsor paid increased by exactly 0.03 testNEAR, existing storage credit stayed unchanged, and pending is null. A repeated claim finalized as the contract's intended idempotent no-op, with the exact account unchanged. The test harness initially expected rejection; finalized receipts and implementation review corrected that expectation without resubmitting completed steps.
+
+**Do not rerun creation, approval, contribution, claims or withdrawals for these cases.** Demonstrate them with read-only views:
+
+```sh
+near contract call-function as-read-only "$SUNSET_CONTRACT" get_campaign json-args '{"id":"refund-funding-20261103-v1"}' network-config testnet now
+near contract call-function as-read-only "$SUNSET_CONTRACT" get_campaign json-args '{"id":"refund-release-20261103-v1"}' network-config testnet now
+near contract call-function as-read-only "$SUNSET_CONTRACT" get_account json-args '{"account_id":"sponsor.shiftultra.testnet"}' network-config testnet now
+```
+
+The contract now contains three of its five allowed campaigns. Exact encrypted refund fixtures are prepared under public/testnet/ and independently recovered locally, but their new hosting is pending the operator's push. These isolated financial tests do not claim HTTP availability for those new paths. Original and mirror recovery for the main Released pack are separately browser-verified.
+
+Native-transfer failure, callback failure, NFT receiver/resolver scenarios, maximum-state protocol gas and NEAR Sandbox remain unverified. Independent educator review, independently controlled reviewers/sponsors and demand validation remain product goals. Final submission still needs actual human details and a public X post; [official requirements](SUBMISSION.md) are separate from our internal engineering goals.

@@ -2,7 +2,7 @@
   "status": "draft_not_submitted",
   "format": "Internal preparation document, not an official API payload",
   "event": "NEAR Hackathon 2026",
-  "title": "SUNSET \u2014 Support once. Share forever.",
+  "title": "SUNSET — Support once. Share forever.",
   "short_description": "Pool capped sponsorship to release a verified offline learning resource, or claim a refund. Transfer a stewardship NFT to hand over recovery-mirror maintenance without restricting public access or changing who receives the funds.",
   "problem": "Shared resources can remain dependent on their original operator even after funding. Communities need an inspectable release agreement and a way to maintain discovery after hosting changes.",
   "demonstration": [
@@ -11,7 +11,7 @@
     "Recover the original and steward-selected mirror against the same commitments; download the standalone game.",
     "Show real NFT handover, former-owner mirror rejection and new-owner mirror selection.",
     "Open the actual downloaded file in a fresh browser with browser network offline before load; complete all five questions.",
-    "Label both expiry refunds and protocol failure/max-state scenarios as remaining live evidence; local rehearsal covers those mechanisms only."
+    "Inspect both finalized deadline-expiry refund paths and their native withdrawals; keep protocol failure/max-state scenarios explicitly unverified."
   ],
   "candidate_tracks": [
     "open",
@@ -30,7 +30,7 @@
     "swarms",
     "security"
   ],
-  "evidence_status": "Reviewed byte-identical testnet deployment; finalized exact funding/release/native creator payout and stewardship handover; actual hosted original/mirror recovery and downloaded game completed 5/5 in cold browser with browser offline enabled before file load. Both live expiry refunds, protocol failure/max-state cases and independent-user/educator evidence remain pending.",
+  "evidence_status": "Reviewed byte-identical testnet deployment; finalized exact funding/release/native creator payout, stewardship handover, and both actual expiry-refund paths with native withdrawals. Actual hosted original/mirror recovery and downloaded game completed 5/5 in a cold browser with browser offline enabled before file load. Protocol failure/max-state cases and independent-user/educator evidence remain pending.",
   "differentiation_limits": "Public buyouts, offline education and transferable maintenance authority have prior art. The prototype integrates verifiable release/refund, independent reuse and standard maintenance-token transfer. Demand and educational impact are not validated.",
   "technical_stack": [
     "Next.js static export",
@@ -43,21 +43,17 @@
   "software_license": "MIT",
   "original_sample_license": "CC0-1.0",
   "human_fields": {
-    "team_members": null,
-    "contact": null,
+    "team_lead_name": null,
+    "contact_email": null,
+    "team_size": null,
+    "final_track_selection": null,
     "public_repository_url": "https://github.com/Tejas-Sands/sunset",
-    "public_demo_url": "https://sunset-lemon.vercel.app",
+    "hosted_demo_url": "https://sunset-lemon.vercel.app",
     "public_x_post_url": null,
-    "mainnet_prize_payout_account": null
+    "mainnet_prize_payout_account": null,
+    "contact_notice_accepted": null,
+    "exact_payload_approved": false
   },
-  "submission_gates": [
-    "Recheck final official rules and candidate-track behavior.",
-    "Complete both live expiry refunds with real waiting and canonical withdrawal receipts.",
-    "Run NEAR Sandbox/max-state gas and native/NFT transfer/callback failure scenarios.",
-    "Complete mobile homepage, accessibility and broader cross-device QA.",
-    "Obtain educator/content-rights review, independent operators and adult sponsor feedback.",
-    "Verify public repository and final media; fill accurate team/contact/social-post/mainnet-prize-payout fields and obtain final submission approval."
-  ],
   "submitted": false,
   "contract": {
     "network": "testnet",
@@ -70,7 +66,8 @@
   "evidence": {
     "deployment": "../evidence/testnet-deployment.json",
     "main_showcase": "../evidence/testnet-showcase.json",
-    "hosted_browser_and_offline": "../evidence/browser-showcase.json"
+    "hosted_browser_and_offline": "../evidence/browser-showcase.json",
+    "live_expiry_refunds": "../evidence/testnet-refunds.json"
   },
   "repository_verification": {
     "source": "Anonymous GitHub repository API",
@@ -79,5 +76,39 @@
     "default_branch": "main",
     "pushed_at": "2026-11-02T11:55:56Z",
     "evidence_scope": "Public repository verified by coordinator; new showcase documentation/media still await operator push."
-  }
+  },
+  "official_rules": {
+    "checked_on": "2026-11-03",
+    "source": "https://nearhackathon.com/HACKATHON.md",
+    "checklist": "https://github.com/nearai/near-hackathon-prompt-examples/blob/main/SUBMITTING.md",
+    "submission_form": "https://nearhackathon.com/#apply",
+    "submission_api": "https://nearhackathon.com/api/applications",
+    "deadline_utc": "2026-11-14T23:59:00Z",
+    "deadline_ist": "2026-11-15T05:29:00+05:30",
+    "guide": "SUBMISSION.md",
+    "testnet_eligible": true,
+    "submission_limit": "One submission per project; final submissions cannot be edited."
+  },
+  "official_submission_requirements": [
+    "Public repository by the deadline, remaining public through judging, with a license and reproducible README; check history for secrets.",
+    "Human-published public X demo post with attached video or screenshots, the statement that it was built at NEAR HACKATHON, @NEARProtocol and #NEARHackathon.",
+    "Human-confirmed project name, lead name, contact email, exact team-size option, defensible track IDs, public repository URL, public X demo-post URL, mainnet prize-payout account and project description.",
+    "Read the exact contact notice, obtain consent, and obtain explicit approval of the full final payload before an agent sends it.",
+    "Submit once through the official form or API during the development window; do not commit a payload containing personal data."
+  ],
+  "remaining_engineering_validation_goals": {
+    "interpretation": "Internal quality goals, not additional organizer eligibility requirements. Disclose unverified behavior accurately.",
+    "pending": [
+      "Run NEAR Sandbox/max-state gas and native/NFT transfer/callback failure scenarios.",
+      "Complete broader accessibility, physical-device and cross-browser QA.",
+      "Obtain independent operators, educator/content-rights review and adult sponsor feedback."
+    ]
+  },
+  "posting_plan": {
+    "recommendation": "One public anchor post with the launch video; an explanatory thread is optional.",
+    "demo_url_mapping": "Use the public X anchor-post URL as the official demoUrl; the hosted website is a separate demo link.",
+    "human_publishes": true,
+    "posted": false
+  },
+  "contact_notice": "I agree that the organizers may use these details to review our submission and contact us about this hackathon."
 }
