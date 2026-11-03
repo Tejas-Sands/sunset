@@ -1,0 +1,53 @@
+{
+  "voice": "am_puck",
+  "speed": 1.0,
+  "language": "en-us",
+  "voice_type": "Pretrained synthetic voice, no custom cloning or imitation",
+  "sentences": [
+    {
+      "index": 1,
+      "text": "Good learning deserves to stick around.",
+      "tts_text": "Good learning deserves to stick around."
+    },
+    {
+      "index": 2,
+      "text": "With SUNSET, communities fund public learning packs through NEAR escrow.",
+      "tts_text": "With Sunset, communities fund public learning packs through Near escrow."
+    },
+    {
+      "index": 3,
+      "text": "Release the key on time, and creators can claim their payout.",
+      "tts_text": "Release the key on time, and creators can claim their payout."
+    },
+    {
+      "index": 4,
+      "text": "Miss the deadline?",
+      "tts_text": "Miss the deadline?"
+    },
+    {
+      "index": 5,
+      "text": "Sponsors can claim refunds.",
+      "tts_text": "Sponsors can claim refunds."
+    },
+    {
+      "index": 6,
+      "text": "Download a copy.",
+      "tts_text": "Download a copy."
+    },
+    {
+      "index": 7,
+      "text": "Keep it offline.",
+      "tts_text": "Keep it offline."
+    },
+    {
+      "index": 8,
+      "text": "Support once.",
+      "tts_text": "Support once."
+    },
+    {
+      "index": 9,
+      "text": "Share forever.",
+      "tts_text": "Share forever."
+    }
+  ]
+}

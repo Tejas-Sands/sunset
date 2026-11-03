@@ -1,0 +1,457 @@
+{
+  "version": 6,
+  "checked_at": "2026-11-03T09:32:57.494569+00:00",
+  "status": "prepared_locally_verified_not_posted",
+  "operator_style_acceptance": "Awaiting operator playback; follows their explicit warm kinetic2D/sunset direction.",
+  "film_path": ".publication/sunset-launch-v6/sunset-launch-v6.mp4",
+  "sha256": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1",
+  "bytes": 3155435,
+  "duration_seconds": 20,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "format": "H.264 yuv420p BT709 limited / AAC48kHz stereo MP4 faststart",
+  "user_direction": "Chill narration, fun kinetic2D objects and expressive fonts; start with a sunset, then the kinetic sequence.",
+  "opening": "Original flat coral sun descending behind warm horizon bands, then a circular shape/type handoff.",
+  "flat_2d": true,
+  "three_d_input": false,
+  "motion_interpolation": false,
+  "source_native_dimensions": [
+    1920,
+    1080
+  ],
+  "source": "../media/launch-v6/README.md",
+  "design": "../media/launch-v6/DESIGN.md",
+  "review": "../media/launch-v6/REVIEW.md",
+  "source_hashes": {
+    "fonts-provenance.json": "5d4c03fcd43dd89605dd7b604219add26f20651572cc3b5e6ec02002326a135a",
+    "narration-script.json": "93db9039892d539134a4d7114aa4eee8fcc59c46777b50b0298a6035c34d967c",
+    "prepare_audio.py": "50b92141e04110963205e335bc573c8b6cf487d8ba6ac28600054975b9fec7bc",
+    "render_launch.py": "809cc6463f279ef1649a3954dcbac8c50aa8f26b45c385a1e24787af5428be5e",
+    "verify.py": "7011935ae90cc667d4b6c260c9026ef7f7ab5a1666e83a53949dfd5a6f4d930f"
+  },
+  "fonts": {
+    "checked_at": "2026-11-03T09:06:22.051488+00:00",
+    "source_policy": "Official google/fonts GitHub repository; exact commit pinned per family. Original unmodified TrueType variable files; no conversion.",
+    "generated_font_files_ignored": true,
+    "fonts": [
+      {
+        "family": "Bricolage Grotesque",
+        "google_fonts_directory": "https://github.com/google/fonts/tree/6ce172f74aa355ea43eb964fa4a91570a4d3064d/ofl/bricolagegrotesque",
+        "upstream_commit": "6ce172f74aa355ea43eb964fa4a91570a4d3064d",
+        "license": "SIL Open Font License 1.1",
+        "files": {
+          "font": {
+            "path": ".publication/sunset-launch-v6/fonts/BricolageGrotesque-VF.ttf",
+            "source_url": "https://raw.githubusercontent.com/google/fonts/6ce172f74aa355ea43eb964fa4a91570a4d3064d/ofl/bricolagegrotesque/BricolageGrotesque%5Bopsz%2Cwdth%2Cwght%5D.ttf",
+            "bytes": 408496,
+            "sha256": "413e7357809ddd12fd80a96a8a396de0e401638d4acd3cb3e37532f0472ac682"
+          },
+          "license": {
+            "path": ".publication/sunset-launch-v6/fonts/bricolagegrotesque-OFL.txt",
+            "source_url": "https://raw.githubusercontent.com/google/fonts/6ce172f74aa355ea43eb964fa4a91570a4d3064d/ofl/bricolagegrotesque/OFL.txt",
+            "bytes": 4403,
+            "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba"
+          },
+          "metadata": {
+            "path": ".publication/sunset-launch-v6/fonts/bricolagegrotesque-METADATA.pb",
+            "source_url": "https://raw.githubusercontent.com/google/fonts/6ce172f74aa355ea43eb964fa4a91570a4d3064d/ofl/bricolagegrotesque/METADATA.pb",
+            "bytes": 1211,
+            "sha256": "b15e69738219507699f04337a3d6e8f2a22cfac5a81d0a6106c343355cca456c"
+          }
+        },
+        "pillow_axes": [
+          {
+            "minimum": 12,
+            "default": 96,
+            "maximum": 96,
+            "name": "Optical size"
+          },
+          {
+            "minimum": 200,
+            "default": 800,
+            "maximum": 800,
+            "name": "Weight"
+          },
+          {
+            "minimum": 75,
+            "default": 100,
+            "maximum": 100,
+            "name": "Width"
+          }
+        ],
+        "proof_axis_values": [
+          96,
+          800,
+          100
+        ],
+        "proof_text": "Good learning sticks.",
+        "proof_bbox": [
+          0,
+          27,
+          1195,
+          140
+        ],
+        "pillow_variation_test": "passed"
+      },
+      {
+        "family": "Space Grotesk",
+        "google_fonts_directory": "https://github.com/google/fonts/tree/00a38a53f92aef923b9353f40128e8f4552ddae4/ofl/spacegrotesk",
+        "upstream_commit": "00a38a53f92aef923b9353f40128e8f4552ddae4",
+        "license": "SIL Open Font License 1.1",
+        "files": {
+          "font": {
+            "path": ".publication/sunset-launch-v6/fonts/SpaceGrotesk-VF.ttf",
+            "source_url": "https://raw.githubusercontent.com/google/fonts/00a38a53f92aef923b9353f40128e8f4552ddae4/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+            "bytes": 136676,
+            "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+          },
+          "license": {
+            "path": ".publication/sunset-launch-v6/fonts/spacegrotesk-OFL.txt",
+            "source_url": "https://raw.githubusercontent.com/google/fonts/00a38a53f92aef923b9353f40128e8f4552ddae4/ofl/spacegrotesk/OFL.txt",
+            "bytes": 4495,
+            "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+          },
+          "metadata": {
+            "path": ".publication/sunset-launch-v6/fonts/spacegrotesk-METADATA.pb",
+            "source_url": "https://raw.githubusercontent.com/google/fonts/00a38a53f92aef923b9353f40128e8f4552ddae4/ofl/spacegrotesk/METADATA.pb",
+            "bytes": 1509,
+            "sha256": "3713adf5c1a21affdbede103b6bb23f551d4195771fa8bc1b91ce813bd1623ee"
+          }
+        },
+        "pillow_axes": [
+          {
+            "minimum": 300,
+            "default": 300,
+            "maximum": 700,
+            "name": "Weight"
+          }
+        ],
+        "proof_axis_values": [
+          600
+        ],
+        "proof_text": "Download a copy. Keep it offline.",
+        "proof_bbox": [
+          0,
+          36,
+          2019,
+          152
+        ],
+        "pillow_variation_test": "passed"
+      }
+    ]
+  },
+  "composition": {
+    "source_sha256": "809cc6463f279ef1649a3954dcbac8c50aa8f26b45c385a1e24787af5428be5e",
+    "provenance_sha256": "3eec249a200eaa7277fcd8be10cd5c992182a29c2d7b8577d46692d2692f7951",
+    "video_encode_passes": 1,
+    "input": "Native flat2D RGB layers plus mastered WAV; no previous movie/3D-render input.",
+    "crf": 14,
+    "aac_target_bitrate": 320000,
+    "actual_ui": {
+      "download": {
+        "kind": "download",
+        "source": {
+          "path": ".publication/sunset-launch-v5/footage/02-hosted-download-context@2x.png",
+          "sha256": "d89837c53eaffb8a11ec2b8309548dc16f87d064565047bb4a5ea19a4dd51140",
+          "scope": "Literal excerpt of actual DPR2 capture, no invented UI",
+          "focus": [
+            680,
+            850
+          ],
+          "zoom_start": 16.35,
+          "zoom_duration": 0.65,
+          "focus_crop": [
+            32,
+            770,
+            1150,
+            970
+          ]
+        },
+        "display_bbox": [
+          401,
+          540,
+          1519,
+          740
+        ],
+        "source_dimensions": [
+          1118,
+          200
+        ],
+        "scale": 1
+      },
+      "offline": {
+        "kind": "offline",
+        "source": {
+          "path": ".publication/sunset-launch-v5/footage/06-actual-download-offline-feedback@2x.png",
+          "sha256": "43ca736d28cd1dd977e6f2c07cce141bf397f4ba416e30d3fd7f9f25070f05d0",
+          "scope": "Literal excerpt of actual DPR2 capture, no invented UI",
+          "crop": [
+            0,
+            0,
+            1520,
+            350
+          ],
+          "detail_crop": [
+            35,
+            1745,
+            1485,
+            1900
+          ],
+          "detail_scope": "Actual downloaded resource's explanatory retention paragraph"
+        },
+        "display_bbox": [
+          255,
+          350,
+          1665,
+          675
+        ],
+        "source_dimensions": [
+          1520,
+          350
+        ],
+        "scale": 0.9276315789473685
+      }
+    },
+    "ui_capture_evidence": "launch-video-v5.json",
+    "ui_source_manifest_sha256": "6290a90a8873ae55a6010a896e51c815145cff00e366590e8bdcfaab057cb151",
+    "ui_enlargement": false,
+    "scope": "Reused actualDPR2 public resource/download/offline pixels; editorial cursor gesture reenacts prior observed download. No new financial action."
+  },
+  "authored_text": {
+    "instances": 1840,
+    "minimum_decoded_contrast": 5.123,
+    "method": "All encoded frames: opaque interior-glyph and controlled local-plane RGB probes; not every antialiased edge or incidental UI word.",
+    "safe_bbox": [
+      192,
+      108,
+      1728,
+      972
+    ],
+    "read_windows": [
+      {
+        "id": "sunset",
+        "lines": [
+          "Good",
+          "learning."
+        ],
+        "window": [
+          1.1,
+          2.234
+        ],
+        "minimum_read_seconds": 1.1
+      },
+      {
+        "id": "fund",
+        "lines": [
+          "Funded",
+          "together."
+        ],
+        "window": [
+          2.534,
+          4.550533333333334
+        ],
+        "minimum_read_seconds": 1.1
+      },
+      {
+        "id": "near",
+        "lines": [
+          "On NEAR."
+        ],
+        "window": [
+          4.850533333333334,
+          6.1706666666666665
+        ],
+        "minimum_read_seconds": 1.1
+      },
+      {
+        "id": "key",
+        "lines": [
+          "Key out.",
+          "Pack open."
+        ],
+        "window": [
+          6.370666666666667,
+          8.134106666666668
+        ],
+        "minimum_read_seconds": 1.7
+      },
+      {
+        "id": "payout",
+        "lines": [
+          "Creators",
+          "can withdraw."
+        ],
+        "window": [
+          8.434106666666668,
+          9.946666666666667
+        ],
+        "minimum_read_seconds": 1.4
+      },
+      {
+        "id": "miss",
+        "lines": [
+          "Missed it?"
+        ],
+        "window": [
+          9.971958333333333,
+          11.151958333333333
+        ],
+        "minimum_read_seconds": 1.1
+      },
+      {
+        "id": "refund",
+        "lines": [
+          "Sponsors",
+          "claim refunds."
+        ],
+        "window": [
+          11.451958333333334,
+          12.944625
+        ],
+        "minimum_read_seconds": 1.4
+      },
+      {
+        "id": "download",
+        "lines": [
+          "Download."
+        ],
+        "window": [
+          13.244625000000001,
+          14.225291666666667
+        ],
+        "minimum_read_seconds": 0.8
+      },
+      {
+        "id": "offline",
+        "lines": [
+          "Yours, offline."
+        ],
+        "window": [
+          14.225291666666667,
+          15.485916666666666
+        ],
+        "minimum_read_seconds": 1.1
+      },
+      {
+        "id": "support",
+        "lines": [
+          "Support",
+          "once."
+        ],
+        "window": [
+          15.485916666666666,
+          16.6
+        ],
+        "minimum_read_seconds": 1.1
+      }
+    ],
+    "caption_raster_pixels": 48,
+    "url_stable_seconds": 3.4
+  },
+  "audio": {
+    "voice": "Fresh Kokoro am_puck pretrained male, natural1.0 synthesis speed; no cloning, pitch shift or time compression.",
+    "words": 44,
+    "cues": 9,
+    "last_voice_end": 17.6645,
+    "tail_seconds": 2.3354999999999997,
+    "voice_overlap": false,
+    "narration_sha256": "debcf3fa3291eaecdbb02da58eea1037ed804b5fe3613d1e2d754efa5d18da5c",
+    "master_sha256": "ff942167e15a9014c510e048cba908cd6715c4b44e4eecf06e8b715b1ec21148",
+    "encoded_loudness_lufs": -16.05,
+    "encoded_true_peak_dbtp": -2.46,
+    "music": {
+      "title": "Origami",
+      "artist": "Scott Buckley",
+      "page": "https://www.scottbuckley.com.au/library/origami/",
+      "download": "https://www.scottbuckley.com.au/library/wp-content/uploads/2025/10/Origami.mp3",
+      "retrieval_url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2025/10/Origami.mp3?download=1",
+      "retrieval_note": "Official download with browser-compatible Accept and Referer; unqualified fetch returned406.",
+      "file": "scott-buckley-origami.mp3",
+      "sha256": "8b8edd81ee2110a62169b48e3233e1556c0f9de10003b21f41a28e5b4bcbfe14",
+      "bytes": 7572590,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist_description": "Smooth upbeat electro-jazz with an off-kilter groove; artist also labels it Chill Electro-Jazz.",
+      "attribution": "'Origami' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au",
+      "verified_primary_sources": [
+        "https://www.scottbuckley.com.au/library/origami/",
+        "https://www.scottbuckley.com.au/library/using-this-music/"
+      ],
+      "perceptual_listening": "Not performed by this tool; primary-source style description and objective signal checks only.",
+      "selected": true,
+      "excerpt_start_seconds": 48.0,
+      "excerpt_end_seconds": 68.0,
+      "excerpt_duration_seconds": 20.0,
+      "selection_basis": "Artist describes smooth upbeat chill electro-jazz with an off-kilter groove; the 48\u201368s excerpt has stable measured energy. No perceptual listening claim.",
+      "one_second_rms_range_db_in_excerpt": 7.29,
+      "excerpt_first_second_rms_db": -12.07,
+      "processing": {
+        "music_highpass_hz": 50,
+        "music_presence_eq_hz": 2500,
+        "music_presence_eq_db": -2.5,
+        "fade_in_seconds": 0.18,
+        "fade_out_seconds": 0.75,
+        "speech_duck_attack_seconds": 0.08,
+        "speech_duck_release_seconds": 0.34,
+        "speech_duck_gain": 0.5,
+        "overall_bed_gain": 1.4877873702967017,
+        "voice_processing": "70Hz highpass, -1.5dB at250Hz, 2:1 compressor, loudness normalization; no pitch shift or time stretch",
+        "master": "loudnorm=I=-16:TP=-2.2:LRA=8:linear=true:measured_I=-15.84:measured_TP=-2.24:measured_LRA=5.30:measured_thresh=-26.42:offset=0.40"
+      },
+      "changes_to_disclose": "Full-mix excerpt48\u201368s; edited with fades, EQ and ducking beneath narration.",
+      "attribution_required": true,
+      "attribution_placement": "Burned-in end-card credit plus post/video description and CREDITS.",
+      "reference_audio_used": false
+    },
+    "music_credit_burned_seconds": 2.2,
+    "credits": "../media/launch-v6/CREDITS.md",
+    "post_copy": "../media/launch-v6/x-post.txt",
+    "perceptual_listening_verified": false
+  },
+  "verification": {
+    "command": "python3 projects/sunset/media/launch-v6/verify.py",
+    "exit_code": 0,
+    "all_frames_decoded": 600,
+    "full_decode": "passed",
+    "unexpected_black_intervals": 0,
+    "blackdetect": {
+      "minimum_duration": 0.2,
+      "pixel_threshold": 0.01,
+      "picture_threshold": 0.98
+    },
+    "exact_nine_caption_times_text_and_sources": true,
+    "font_license_hashes_verified": true,
+    "all_promised_read_lines_present": true,
+    "essential_text_bounds_and_overlap_checked": true,
+    "all_four_colour_tags_verified": true,
+    "faststart": true,
+    "qa_sha256": "02d7dfbd36040a91a5143cc2939d1e111b5c0ed26816a1e75b963860a434c700"
+  },
+  "visual_review": {
+    "root_and_fresh_context_reviewer": true,
+    "decoded_sheets": [
+      "review/beat-sheet.jpg",
+      "review/phone-sheet.jpg",
+      "review/cut-sheet.jpg"
+    ],
+    "final_p0": 0,
+    "final_p1": 0,
+    "continuous_real_time_playback": false,
+    "human_audience_validation": false
+  },
+  "preserved_versions": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d"
+  },
+  "generated_media_fonts_music_models_cache_and_private_files_ignored": true,
+  "chain_mutations": 0,
+  "application_or_contract_changes": false,
+  "public_x_post_url": null,
+  "submission_sent": false
+}

@@ -16,3 +16,5 @@
 **/*-private-release-backup.json
 **/release-args.json
 **/*.log
+**/__pycache__/
+**/*.py[cod]
