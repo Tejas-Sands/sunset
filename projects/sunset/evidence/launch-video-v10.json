@@ -1,0 +1,225 @@
+{
+  "checked_at": "2026-11-03T13:51:02.129914+00:00",
+  "film_path": ".publication/sunset-launch-v10/render/sunset-launch-v10.mp4",
+  "sha256": "107eae578f8f4f5b3e6a7b356c2ec6590f9f66485ca090d15d46617248860ec0",
+  "bytes": 5029889,
+  "duration_seconds": 44,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "frames": 1320,
+  "video_codec": "h264",
+  "pixel_format": "yuv420p",
+  "color": "BT709 limited",
+  "audio_codec": "aac",
+  "audio_sample_rate": 48000,
+  "audio_channels": 2,
+  "faststart": true,
+  "version": 10,
+  "status": "prepared_locally_verified_not_posted",
+  "source": "../media/launch-v10/README.md",
+  "script": "../media/launch-v10/SCRIPT.md",
+  "review": "../media/launch-v10/REVIEW.md",
+  "operator_selected_example": "Open-source Maintainer Handbook",
+  "feature_evidence": "handbook-guide.json",
+  "feature_commit": "16cb3b5",
+  "source_hashes": {
+    "capture_handbook.mjs": "bc8014990a024db49080f52db47e7b0db3f19b84d8b1a2251acec3c64244c7fa",
+    "fonts-provenance.json": "5d4c03fcd43dd89605dd7b604219add26f20651572cc3b5e6ec02002326a135a",
+    "prepare_audio.py": "52755d842c5d192da7b3a13c270e80d20e3ea767518ac2d0a5e20da0fe211be0",
+    "prepare_proof.py": "fbdb7c03c4b19241ff2e734b9e2bdcaff45854fac29d0e96c68f6fe291dcc954",
+    "render_launch.py": "7e74ef82f82500488c634dec7f0efce834cc7cb935cdea2da4d1977ee2db4636",
+    "sound-cues.json": "4f762b34f96caaba8cec13f9243cafbee59e634b3b61037d62d07ba56fb9a8e7",
+    "timeline.json": "d68745cb3629ed7ac2cb6e54c66a43e214044c442035fcadde2c928b5133d923",
+    "verify.py": "f95c58eecabb51784e6fd753f1841ba0e134dcbf73852679a5ca2a89d4c74282"
+  },
+  "requirements": {
+    "problem": "Useful documentation takes work; community sponsorship funds its public release.",
+    "near_role": "Reviewed terms, target/deadlines and NEAR escrow; timely matching key enables public access/creator credit; withdrawal is separate; missed funding/release conditions allow sponsor refund claims.",
+    "actual_action_result": {
+      "seconds": [
+        28,
+        36
+      ],
+      "download": "Actual app Download opens the exact self-contained handbook file.",
+      "useful_result": "Recovery procedure and inspected-commit reference text, followed by an actual checked step, saved progress and reload retention.",
+      "network_context": "Online app download is labelled separately from verified offline-file use."
+    },
+    "retained_copy": {
+      "seconds": [
+        36,
+        40
+      ],
+      "source_clock": 35.9666666667,
+      "method": "Genuine post-reload endpoint hold remains as illustrated host leaves."
+    },
+    "posting": {
+      "main_post": "../media/launch-v10/x-post.txt",
+      "credit_reply": "../media/launch-v10/x-reply-credits.txt",
+      "demo": "https://sunset-lemon.vercel.app",
+      "repository": "https://github.com/Tejas-Sands/sunset",
+      "feedback": "What would you fund?",
+      "main_post_url_weighted_characters": 262,
+      "credit_reply_url_weighted_characters": 197
+    }
+  },
+  "style": {
+    "native_2d": true,
+    "whole_phrase_entries": true,
+    "sunset_first": true,
+    "professional_handbook_example": true,
+    "repeated_glyph_scatter": false,
+    "spinning_pack_or_hopping_coins": false,
+    "arithmetic_example": false,
+    "onscreen_product_url": false,
+    "onscreen_music_credit": false,
+    "video_encode_passes": 1,
+    "crf": 14
+  },
+  "actual_recording": {
+    "capture_provenance_sha256": "ea94abea8db8e1cec01335d9da42399a99e34a7b1ef24c37965226c5109350f0",
+    "compositor_manifest_sha256": "935881674b12a097c590d03f73a6a02ef3de41521ec41add3932a5430ef5011d",
+    "dimensions": [
+      4320,
+      2700
+    ],
+    "dpr": 3,
+    "timed_native_pngs": 11,
+    "additional_retained_reload_still": true,
+    "timed_unique_pixel_states": 7,
+    "method": "Native browser-owner screenshots interleaved with real input at recorded elapsed times. Honest held states and cuts, not 30 unique UI frames per second or uninterrupted full-rate recording.",
+    "selected_timed_samples": 10,
+    "unused_passed_sample": "Last Download sample lies after the editorial cut.",
+    "failed_takes_used": false,
+    "actual_output_frames": 360,
+    "editorial_magnification": {
+      "allowed": true,
+      "maximum_scale": 1.964705882352941,
+      "resampling": "LANCZOS",
+      "native_detail_added": false
+    },
+    "download": {
+      "path": ".publication/sunset-launch-v10/footage/downloads-146396/maintainer-handbook-offline.html",
+      "bytes": 17862,
+      "sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a"
+    },
+    "browser_offline_before_file_navigation": true,
+    "file_before_after": {
+      "onLine": false,
+      "resources": 0,
+      "scheme": "file:"
+    },
+    "final_progress": "1 of 16 checks complete. Saved on this device.",
+    "retained_after_reload": {
+      "path": ".publication/sunset-launch-v10/footage/retained-after-reload.png",
+      "sha256": "5dec9a30e8071701a47446f77812be3f3c9573131f6f91939e699486988a47f7",
+      "dimensions": [
+        4320,
+        2700
+      ]
+    },
+    "native_cursor_or_audio_recorded": false,
+    "underlying_git_steps_executed": false,
+    "guide_onchain_release_claimed": false
+  },
+  "audio": {
+    "master_sha256": "7944591e28c2433a086183184312a98503d30b5c5c6e55ce95dac07301d555f2",
+    "voice_present": false,
+    "tts_or_voice_models_used": false,
+    "music": "Backbay Lounge by Kevin MacLeod, CC BY4.0, edited16\u201360s",
+    "recorded_page_effects": 4,
+    "licensed_sources": [
+      {
+        "id": "music",
+        "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700068",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "9567e71a213b0026341b2c0ecd226950e7653abd235cf520fb9aee4247d74d96"
+      },
+      {
+        "id": "page-turn-1",
+        "source": "https://freesound.org/people/OwlStorm/sounds/151220/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "41f51725007894483999812091faf74d0d341092c0a24c55c0778fe245ea45f4"
+      },
+      {
+        "id": "page-turn-2",
+        "source": "https://freesound.org/people/OwlStorm/sounds/151221/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "0e6737d635998d90f015249c0215691d3cb63d2ff37d49949914284160b6e9e0"
+      },
+      {
+        "id": "mouse-clicks",
+        "source": "https://freesound.org/people/Breviceps/sounds/447938/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "bbbddc66710313d67f0c8d8dc37f68c62728c041ccb3820f04c45554dd9f46e5"
+      }
+    ],
+    "unused_listed_source": "mouse-clicks has no cue in this master",
+    "encoded_loudness_lufs": -14.89,
+    "encoded_true_peak_dbtp": -2.44,
+    "stems": {
+      "music-arranged.wav": {
+        "sha256": "c45321ade1e5f34e3ad7b02f703d29d15272836a9d4f00cb7525d28d4f3f266d",
+        "stage": "pre-master"
+      },
+      "sfx.wav": {
+        "sha256": "e7e4669c04bd10fe43e8123ab06b5fdd5d520a68a2bcac5e8d82aa5e019e6a66",
+        "stage": "pre-master"
+      }
+    },
+    "perceptual_listening_verified": false,
+    "attribution": "Accompanying post/reply/description and CREDITS.md; outside picture."
+  },
+  "verification": {
+    "full_decode": "passed",
+    "essential_read_windows": 16,
+    "read_window_frame_assertions": 1234,
+    "essential_text_probes": 1903,
+    "minimum_decoded_text_contrast": 9.3337,
+    "decoded_actual_roi_identity_checks": 360,
+    "maximum_ui_roi_mean_absolute_channel_error": 2.4263,
+    "font_source_hashes_verified": true,
+    "unexpected_black_intervals": 0
+  },
+  "visual_review": {
+    "root_and_fresh_reviewer_decoded_review": true,
+    "p0": 0,
+    "p1": 0,
+    "scope": "Seven decoded sheets, dense opening/release/offline sequences and individual390px proof frames. Not continuous human playback.",
+    "p2": "Full paragraphs and secondary captions remain small on phones.",
+    "human_continuous_playback_or_listening": false,
+    "artifacts": [
+      "review/beat-sheet.jpg",
+      "review/phone-sheet-390.jpg",
+      "review/cut-sheet.jpg",
+      "review/opening-0-10-6fps.jpg",
+      "review/release-15-20-6fps.jpg",
+      "review/offline-28-36-6fps.jpg",
+      "review/actual-proof-sheet.jpg"
+    ]
+  },
+  "preserved_versions": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+    ".publication/sunset-launch-v6/sunset-launch-v6.mp4": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1",
+    ".publication/sunset-launch-v7/sunset-launch-v7.mp4": "8c1f850dce269c420ca9553b548a3a030107a2be2dec31864cf30819a210de44",
+    ".publication/sunset-launch-v8/sunset-launch-v8.mp4": "b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2",
+    ".publication/sunset-launch-v9/render/sunset-launch-v9.mp4": "f2f4d2e9cc7733af1c7dfa2491b2148217ba9857addd544931e1d710c5592319"
+  },
+  "qa_sha256": "88b69f0fe9ebbf670d459d6d419ad67cf4fcbc95fc867d700084684dcc223450",
+  "composite_provenance_sha256": "ec9f5d10829a825b84724f4dd97c0c0b1d41a0dcaa5c98897c141a8158cf1b24",
+  "generated_media_captures_audio_fonts_cache_and_private_material_ignored": true,
+  "contract_changes": false,
+  "chain_mutations": 0,
+  "public_x_post_url": null,
+  "submission_sent": false
+}

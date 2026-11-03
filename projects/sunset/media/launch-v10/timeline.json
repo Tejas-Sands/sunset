@@ -1,0 +1,385 @@
+{
+  "status": "Direction gate passed; full compositor implementation. Final encoding awaits actual reader footage, source guards and source-frame review.",
+  "proposed_full_duration": 44,
+  "opening_duration": 10,
+  "fps": 30,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "voice": null,
+  "opening": [
+    {
+      "window": [
+        0,
+        0.8
+      ],
+      "action": "Brief warm sunset; straight page edge reveals real procedure"
+    },
+    {
+      "window": [
+        0.6,
+        3.3
+      ],
+      "copy": [
+        "Good documentation takes work."
+      ],
+      "read_window": [
+        0.8,
+        3.3
+      ],
+      "action": "Full-frame recovery excerpt and read-only inspection commands, then meaningful pullback into whole handbook"
+    },
+    {
+      "window": [
+        3.3,
+        5.7
+      ],
+      "copy": [
+        "Who pays for it?"
+      ],
+      "read_window": [
+        3.5,
+        5.7
+      ],
+      "action": "Whole handbook and chapter rail establish substantial authored work"
+    },
+    {
+      "window": [
+        5.7,
+        7.9
+      ],
+      "copy": [
+        "Fund its",
+        "public release."
+      ],
+      "read_window": [
+        5.9,
+        7.9
+      ],
+      "action": "Page edge reveals one public-release agreement"
+    },
+    {
+      "window": [
+        7.9,
+        10
+      ],
+      "action": "Agreement promoted to full canvas; reviewed terms then community interest revealed causally",
+      "phrases": [
+        {
+          "text": "Reviewed before funding.",
+          "stable": [
+            8.5,
+            10
+          ]
+        },
+        {
+          "text": "Community sponsorship.",
+          "stable": [
+            8.85,
+            10
+          ]
+        }
+      ]
+    }
+  ],
+  "proposed_remaining": [
+    {
+      "window": [
+        10,
+        12.5
+      ],
+      "copy": "One target. Clear deadlines."
+    },
+    {
+      "window": [
+        12.5,
+        15
+      ],
+      "copy": "Funds held on NEAR."
+    },
+    {
+      "window": [
+        15,
+        18
+      ],
+      "copy": "Matching key. On time."
+    },
+    {
+      "window": [
+        18,
+        19.8
+      ],
+      "copy": "Public handbook opens."
+    },
+    {
+      "window": [
+        19.8,
+        21.6
+      ],
+      "copy": "Creator credit."
+    },
+    {
+      "window": [
+        21.6,
+        24
+      ],
+      "copy": "Creator can withdraw."
+    },
+    {
+      "window": [
+        24,
+        28
+      ],
+      "copy": [
+        "Before release",
+        "Target missed? Release late?",
+        "Sponsors can claim refunds."
+      ],
+      "stable": [
+        24.2,
+        28
+      ]
+    },
+    {
+      "window": [
+        28,
+        36
+      ],
+      "copy": [
+        "Keep a working handbook.",
+        "Works offline."
+      ],
+      "action": "Genuine guide-reader footage pending"
+    },
+    {
+      "window": [
+        36,
+        40
+      ],
+      "copy": "Keep your copy. No wallet to read."
+    },
+    {
+      "window": [
+        40,
+        44
+      ],
+      "copy": [
+        "SUNSET",
+        "Support once. Share forever."
+      ]
+    }
+  ],
+  "motion_rules": [
+    "Whole phrases enter together in200ms and hold",
+    "Straight page-edge occlusion, meaningful pan/crop and restrained parallax",
+    "Every movement reveals work, agreement, access, money or retained copy",
+    "No rotations, glyph scattering, hopping tokens, math, decorative wobble or generated voice"
+  ],
+  "guide_sha256": "7333ed5587248cbca671806dd67548d7b8088380f427bed7161734e34d16e72e",
+  "final_frames": 1320,
+  "audio_master_sha256": "7944591e28c2433a086183184312a98503d30b5c5c6e55ce95dac07301d555f2",
+  "font_provenance_sha256": "5d4c03fcd43dd89605dd7b604219add26f20651572cc3b5e6ec02002326a135a",
+  "logo_sha256": "e13224dda7197d21676b400eb3bb4331d4a5e7d9462443d2f01f1e0d50752ba9",
+  "essential_read_windows": [
+    {
+      "id": "work",
+      "window": [
+        0.8,
+        3.3
+      ],
+      "lines": [
+        "Good documentation takes work."
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "need",
+      "window": [
+        3.5,
+        5.7
+      ],
+      "lines": [
+        "Who pays for it?"
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "public-deal",
+      "window": [
+        5.9,
+        7.9
+      ],
+      "lines": [
+        "Fund its",
+        "public release."
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "review",
+      "window": [
+        8.5,
+        10
+      ],
+      "lines": [
+        "Reviewed before funding."
+      ],
+      "minimum_read_seconds": 1.4
+    },
+    {
+      "id": "sponsorship",
+      "window": [
+        8.866666666666667,
+        10
+      ],
+      "lines": [
+        "Community sponsorship."
+      ],
+      "minimum_read_seconds": 1.1
+    },
+    {
+      "id": "terms",
+      "window": [
+        10.2,
+        12.5
+      ],
+      "lines": [
+        "One target.",
+        "Clear deadlines."
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "custody",
+      "window": [
+        12.7,
+        15
+      ],
+      "lines": [
+        "Funds held on NEAR."
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "matching",
+      "window": [
+        15.2,
+        18
+      ],
+      "lines": [
+        "Matching key.",
+        "On time."
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "access",
+      "window": [
+        18.2,
+        19.8
+      ],
+      "lines": [
+        "Public handbook opens."
+      ],
+      "minimum_read_seconds": 1.4
+    },
+    {
+      "id": "credit",
+      "window": [
+        20.0,
+        21.6
+      ],
+      "lines": [
+        "Creator credit."
+      ],
+      "minimum_read_seconds": 1.1
+    },
+    {
+      "id": "withdraw",
+      "window": [
+        21.8,
+        24
+      ],
+      "lines": [
+        "Creator can withdraw."
+      ],
+      "minimum_read_seconds": 1.4
+    },
+    {
+      "id": "refund",
+      "window": [
+        24.2,
+        28
+      ],
+      "lines": [
+        "Before release",
+        "Target missed? Release late?",
+        "Sponsors can claim refunds."
+      ],
+      "minimum_read_seconds": 3.5
+    },
+    {
+      "id": "actual-copy",
+      "window": [
+        28.2,
+        32
+      ],
+      "lines": [
+        "Keep a working handbook."
+      ],
+      "minimum_read_seconds": 1.7
+    },
+    {
+      "id": "offline",
+      "window": [
+        32.2,
+        36
+      ],
+      "lines": [
+        "Works offline."
+      ],
+      "minimum_read_seconds": 1.1
+    },
+    {
+      "id": "retained",
+      "window": [
+        36.2,
+        40
+      ],
+      "lines": [
+        "Keep your copy.",
+        "No wallet to read."
+      ],
+      "minimum_read_seconds": 2.6
+    },
+    {
+      "id": "brand",
+      "window": [
+        40.2,
+        44
+      ],
+      "lines": [
+        "SUNSET",
+        "Support once. Share forever."
+      ],
+      "minimum_read_seconds": 2.0
+    }
+  ],
+  "sound_cues_sha256": "4f762b34f96caaba8cec13f9243cafbee59e634b3b61037d62d07ba56fb9a8e7",
+  "delivery": {
+    "native_dimensions": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "frames": 1320,
+    "seconds": 44,
+    "video": "Single native RGB to H.264 CRF14, limited BT.709 matrix/primaries/trc, yuv420p, faststart",
+    "audio": "AAC320kbps stereo48kHz, original licensed music + recorded Foley only"
+  },
+  "actual_manifest_sha256": "935881674b12a097c590d03f73a6a02ef3de41521ec41add3932a5430ef5011d",
+  "capture_provenance_sha256": "ea94abea8db8e1cec01335d9da42399a99e34a7b1ef24c37965226c5109350f0",
+  "actual_sampling": "Native browser-owner screenshots interleaved with real input at recorded elapsed times. Honest held states and cuts, not 30 unique UI frames per second or uninterrupted full-rate recording.",
+  "actual_download_sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a"
+}

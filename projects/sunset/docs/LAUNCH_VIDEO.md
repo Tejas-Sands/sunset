@@ -1,34 +1,25 @@
 # SUNSET launch film
 
-**V9 was rejected by the operator for its motion and child-oriented example.** It remains an archived render, not the recommended public launch asset. The selected [v10 correction](../media/launch-v10/DIRECTION.md) uses an Open-source Maintainer Handbook and a real offline guide reader; production is in progress. The v9 delivery details below are retained for provenance.
-
-Current: **v9 — 56 seconds, 1920×1080 at 30 fps**, with background music and recorded effects only. No generated narration is included.
+Current delivery: **v10 —44 seconds,1920×1080 at30fps**, music and recorded effects only. The example is the new Open-source Maintainer Handbook. V9 was rejected by the operator; its technical evidence is retained separately and is not creative approval.
 
 ```sh
-xdg-open .publication/sunset-launch-v9/render/sunset-launch-v9.mp4
+xdg-open .publication/sunset-launch-v10/render/sunset-launch-v10.mp4
 ```
 
-The approved creator-first story starts with the work and funding need, follows one pack through reviewed terms and NEAR escrow, opens it with the matching key, separates creator credit from withdrawal, and explains conditional refunds. A genuine Download → standalone file → answer 12 → feedback sequence leads into the copy surviving its host. Changing scale, pack passes, letter assembly and object handoffs retain the warm, playful flat 2D direction.
+The film starts with useful recovery documentation, pulls back to the handbook and asks who funds the work. A public-release agreement leads through reviewed terms, NEAR escrow, a timely matching key, creator credit then separate withdrawal, and conditional pre-release refunds. Actual download/offline procedure/check/save footage completes the retained-copy payoff. Whole phrases and controlled document transitions replace scattered letters, spinning packs and the arithmetic demo.
 
-[Source and timing](../media/launch-v9/README.md), [approved script](../media/launch-v9/SCRIPT_DRAFT.md), [final review](../media/launch-v9/REVIEW.md), and [artifact evidence](../evidence/launch-video-v9.json) record the film and its limits.
+[Source and timing](../media/launch-v10/README.md), [script](../media/launch-v10/SCRIPT.md), [review](../media/launch-v10/REVIEW.md), and [artifact evidence](../evidence/launch-video-v10.json) record the delivery.
 
-## Sound and future voice
+## Posting and audio
 
-The ignored version directory contains `audio/mix.wav`, plus separate pre-master `audio/music-arranged.wav` and `audio/sfx.wav`. The [optional voice reference](../media/launch-v9/voiceover-reference.txt) is text only. Record a real read, adjust timing if needed, and make a new audio master when adding it. There is no robotic voice in this export.
+Play the film with sound before posting. Attach it natively with [the main post](../media/launch-v10/x-post.txt), then [the full music credit reply](../media/launch-v10/x-reply-credits.txt). The post contains demo/repository links, event wording/tags and a feedback invitation. No URL or music credit is burned into the movie. Retain the public post URL for [submission](SUBMISSION.md); nothing has been posted or submitted by the assistant.
 
-Backbay Lounge by Kevin MacLeod (CC BY4.0), edited 16–72s, supplies the instrumental bed. Seven causal effects use CC0 recordings of pages, a latch and a mouse. [Full source credits](../media/launch-v9/CREDITS.md) document licenses and edits. Final encoded audio measures −14.80 LUFS / −2.45 dBTP. Human listening remains unassessed.
+Backbay Lounge by Kevin MacLeod(CC BY4.0), edited16–60s, and four CC0 recorded page effects supply the background. [Credits](../media/launch-v10/CREDITS.md) disclose source/license/edits. Encoded audio measures−14.89LUFS/−2.44dBTP. No voice was generated. Separate pre-master stems and the master are in `.publication/sunset-launch-v10/audio/`; a later voice needs a fresh mix. Human listening remains unassessed.
 
-## Posting
+## Verified scope
 
-1. Play the film with sound and at phone size before posting.
-2. Attach it natively with the [main X post](../media/launch-v9/x-post.txt): problem, NEAR role, event wording/tags, demo/repository links and a feedback invitation are included.
-3. Add the [full music attribution reply](../media/launch-v9/x-reply-credits.txt), with source, license and edit disclosure. No URL or credit is burned into the movie.
-4. Keep the public X-post URL for [final submission](SUBMISSION.md). Nothing has been posted or submitted by the assistant.
+All 1,320decoded frames,16 read windows,1,903 glyph probes(minimum 9.3337:1), source identities, safe bounds, BT709tags, faststart and black detection passed. All 360 displayed actual-footage frames match genuine source crops within codec tolerance. Root/fresh decoded review found no P0/P1; secondary paragraph/caption text is small on phones.
 
-## Evidence and scope
+Eleven native4320×2700 PNGs plus a retained reload still record real browser states. They are interleaved screenshots held honestly by elapsed time, not continuous30fps footage. Actual editorial magnification reaches1.965×. Download is an online app action; the file was loaded after browser networking was disabled and retained its checklist on reload with zero external resources. Commands are reference text, not executed Git actions. Financial scenes are illustrations.
 
-Independent verification passed all 1,680 decoded frames, 17 stable read windows, 2,786 authored text probes (minimum decoded contrast 5.9839:1), safe bounds/separation, source/font/audio identities, BT709 tags, faststart and no unexpected black interval. All 375 displayed actual-footage frames match their genuine source crops within measured codec tolerance.
-
-Actual UI uses 21 retained native 2560×1800 PNG samples and six distinct states, sampled at approximately 3 fps and held honestly at 30 fps delivery. Documented LANCZOS close-ups magnify genuine pixels up to 2.2×; they add no detail or UI states. Browser offline before/after, zero external resources and exact downloaded-file identity are verified from the recorded session. The retained-copy shot freezes an actual result. Financial scenes are labelled illustrations; mouse sound is added Foley. No wallet or settled transaction was rerun.
-
-All eight older film hashes remain unchanged. Generated media, recordings, downloaded assets, fonts, caches and private files remain ignored. Only source recipes, public evidence, documentation and post drafts are committed locally; the operator pushes. Existing [E2E review](E2E_AUDIT_2026-11-03.md), [main settlement](../evidence/testnet-showcase.json) and [refund receipts](../evidence/testnet-refunds.json) remain product proof. This media revision makes no app, contract, deployment or signing changes.
+The [working guide feature](../evidence/handbook-guide.json) also passed independent encrypted recovery and390px search/check/reload. It is a new locally verified example, not the resource named by earlier onchain receipts. No new campaign, contract, signing or deployment occurred. Generated media/captures/audio/fonts/caches/private preparation remain ignored; source and evidence are committed locally for the operator to push. All nine older movies are unchanged.
