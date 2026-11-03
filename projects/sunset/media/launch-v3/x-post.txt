@@ -1,0 +1,8 @@
+Funded onchain. Kept offline.
+
+SUNSET funds public learning packs with NEAR escrow. Creators get paid. Learners keep a copy without a wallet.
+
+Built at NEAR HACKATHON on testnet.
+@NEARProtocol #NEARHackathon
+Demo: https://sunset-lemon.vercel.app
+Code: https://github.com/Tejas-Sands/sunset

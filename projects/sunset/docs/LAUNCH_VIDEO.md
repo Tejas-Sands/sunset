@@ -1,37 +1,35 @@
-# SUNSET launch video — current kinetic cut
+# SUNSET launch video — onchain mechanics cut
 
-The current X launch film is **v2: 30 seconds, 1920×1080 at 30fps, about 3 MB**. It replaces the earlier 82-second narrated-card format for the public launch. The original film and its evidence are preserved as v1.
+The current X launch film is **v3: 30 seconds, 1920×1080 at 30fps**. It keeps the warm SUNSET mark and uses dark forest/obsidian scenes, amber network paths, capped escrow, a matching-key unlock, public copies and transferable mirror authority. Versions 1 and 2 remain preserved.
 
 ## Watch and post
 
 From the repository root:
 
 ```sh
-xdg-open .publication/sunset-launch-v2/sunset-launch-v2.mp4
+xdg-open .publication/sunset-launch-v3/sunset-launch-v3.mp4
 ```
 
-The ignored local delivery directory `.publication/sunset-launch-v2/` contains:
+The ignored local delivery directory `.publication/sunset-launch-v3/` contains the film, poster, exact seven-phrase SRT captions, contact sheet, decoded review frames, objective media checks and source/voice provenance. Captions are also visible in the film. Preview with sound in a phone-sized player before posting; perceptual listening remains a human playback check.
 
-- `sunset-launch-v2.mp4` — the current video to upload natively to X.
-- `sunset-launch-v2-poster.png` — cover image.
-- `sunset-launch-v2.srt` — exact six-phrase subtitles; captions are also visible in the film.
-- `full-motion-contact-sheet.jpg`, decoded review frames, `media-qa.json`, `media-provenance.json` and `CREDITS.md`.
-- `sunset-motion-proof.mp4` — the separate 9.6-second style test.
+Use the [current anchor-post copy](../media/launch-v3/x-post.txt). Upload the video natively to one public X post. A thread is optional: two or three replies can add the finalized receipts, offline-copy result and stewardship explanation. Use the anchor post's public URL as the submission demoUrl; the website is a separate link. Nothing has been posted or submitted by the assistant.
 
-Use the [current X post copy](../media/launch-v2/x-post.txt). Preview the film with sound and in a phone-sized player before posting; perceptual listening was unavailable to the tools. The edit uses 40 words of AI narration with deliberate gaps, independent type/artwork/UI layers, masks, camera movement and original 128 BPM sound design. The app moments show a real answer/feedback state and a retained offline game rather than a full protocol walkthrough.
+## What changed
 
-## Why this format fits
+The opening lands on **FUNDED ONCHAIN**. Sponsor packets feed an isometric escrow that stops at its cap; the actual 0.10 testNEAR target and contract ID ground the illustration. A matching committed key unlocks the resource and lights creator credit. Camera pushes carry the viewer into the real game's answer-12 and visible feedback, then into the actual offline completion. Public-copy connections stay open while a maintenance credential passes from holder A to B and its mirror-authority edge switches. The original mark and stable URL close the film.
 
-The [official event guidance](https://nearhackathon.com/HACKATHON.md) asks for a complete user action with a visible result and discourages long introductions, architecture slides and setup. It does not require a full end-to-end workflow or prescribe a minimum clip duration. The main answer-selection/feedback moment supplies that visible result. The post must say it was built at NEAR HACKATHON, include @NEARProtocol and #NEARHackathon, and attach the demo media. The provided copy includes those details and NEAR’s concrete release/payout role.
+These protocol scenes are labeled **PROTOCOL VISUALIZATION** and the testnet badge stays visible. They are editorial illustrations, not financial signing screens or transaction recordings. Genuine UI pixels come from [verified hosted/offline captures](../evidence/browser-showcase.json); the pointer reenacts the already observed answer. Matching-key publication credits the creator; a separate withdrawal is required. The token controls mirror maintenance, with no exclusive content or financial rights. No investment, adoption, independent hosting or automatic-payout claim is made.
 
-The chosen 30-second length is a creative decision. It also fits the current [non-Premium X upload limits](https://help.x.com/en/using-x/x-videos) of 140 seconds and 512 MB. Keep the existing Vercel URL; no domain purchase or paid renderer is needed.
+Seven whole retained AI-generated voice sentences are edited at pitch-preserving 1.12×. No new model download, cloning or paid service is used. Music and sound effects are original procedural 128 BPM synthesis. [Source and reproduction notes](../media/launch-v3/README.md), [edit recipe](../media/launch-v3/edit.json) and [current media evidence](../evidence/launch-video-v3.json) identify the exact delivery. Generated video/audio, recordings and private release files are ignored; renderer sources, edit recipes and public verification records are intentionally tracked.
 
-[Reference research](../media/launch-v2/RESEARCH.md) explains the Brag examples actually inspected, the written primary sources, the problem with the v1 renderer and the replacement’s motion grammar. [Source/edit recipe](../media/launch-v2/README.md) and [current media verification](../evidence/launch-video-v2.json) identify the exact film.
+## Event format and final submission
 
-## Truthful scope
+The [organizer's live instructions](https://nearhackathon.com/HACKATHON.md) ask for an actual action and visible result; the real answer and feedback supply that moment. They do not prescribe a minimum clip duration or require a complete protocol walkthrough. The post says it was built at NEAR HACKATHON, includes @NEARProtocol and #NEARHackathon, and attaches the video. Thirty seconds is an editorial choice. The existing Vercel host is sufficient; no paid domain is needed.
 
-The UI pixels come from the [verified hosted/offline captures](../evidence/browser-showcase.json). Pointer actions are choreographed replays of the recorded answer and download actions; the HTML tile and copy fan are illustrations. This is an edited launch film, not an uninterrupted screen recording. No financial browser action, new wallet feature, adoption claim or new onchain event is invented. The underlying [testnet payout and stewardship evidence](../evidence/testnet-showcase.json) remains unchanged.
+[Official submission steps and missing human details](SUBMISSION.md) cover the public repository, X post, mainnet prize account, consent and immutable final payload. Deadline: **14 November 2026, 23:59 UTC / 15 November, 05:29 IST**. No social publication or final submission has been sent.
 
-V1 stays in `.publication/sunset-launch-v1/render/` with its [original source](../media/launch/README.md) and [historical media evidence](../evidence/launch-video.json). Both actual expiry refunds and native principal withdrawals were verified on 3 November in [refund evidence](../evidence/testnet-refunds.json); this trailer does not show those transactions. Failure/max-state protocol tests and independent human validation remain open.
+## Verified product scope
 
-No social post or final submission has been sent by the assistant. After the human posts the video, retain its public X URL for the [unsubmitted draft](SUBMISSION_DRAFT.json), along with actual team/contact/payout details and approval of the final submission payload. Keep the hosted demo available through the event’s judging period.
+[Fresh E2E review](E2E_AUDIT_2026-11-03.md) and [main testnet receipts](../evidence/testnet-showcase.json) cover actual release, creator payout, stewardship and hosted/offline recovery. [Separate live refund evidence](../evidence/testnet-refunds.json) verifies both actual deadlines and native 0.01 + 0.02 testNEAR principal withdrawals; these transactions are not replayed in the trailer. Browser financial controls remain rehearsal/unsigned plans; actual settlement uses the local CLI. Failure/max-state protocol scenarios and independent human validation remain open.
+
+V2 stays under `.publication/sunset-launch-v2/` with [its source](../media/launch-v2/README.md) and [media evidence](../evidence/launch-video-v2.json). V1 stays under `.publication/sunset-launch-v1/render/` with [its source](../media/launch/README.md) and [media evidence](../evidence/launch-video.json).

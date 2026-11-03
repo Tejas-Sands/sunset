@@ -1,0 +1,131 @@
+{
+  "duration": 30.0,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "bpm": 128,
+  "scope": "Editorial protocol visualization; genuine UI excerpts; no new wallet, chain or social action.",
+  "voice": [
+    {
+      "source_sentence_index": 1,
+      "text": "The sponsors need a wallet. The learners don't.",
+      "source_file": ".publication/sunset-launch-v1/voice/sentence-01.wav",
+      "source_sha256": "e0acd31ef7ea82e1eb097dd7b634e789a81b3fb168711cf75eb1b19f3a8cef07",
+      "rendered_file": "voice/sentence-01.wav",
+      "start": 0.46875,
+      "end": 3.0107083333333335,
+      "duration": 2.5419583333333335,
+      "pitch_preserving_tempo": 1.12
+    },
+    {
+      "source_sentence_index": 6,
+      "text": "Contributions go into a contract on NEAR testnet.",
+      "source_file": ".publication/sunset-launch-v1/voice/sentence-06.wav",
+      "source_sha256": "a5c030afc834e7541901fad21908b63063190266f91e5331738282c976118249",
+      "rendered_file": "voice/sentence-06.wav",
+      "start": 3.75,
+      "end": 6.863208333333333,
+      "duration": 3.113208333333333,
+      "pitch_preserving_tempo": 1.12
+    },
+    {
+      "source_sentence_index": 8,
+      "text": "A matching release key, published on time, credits the agreed creator.",
+      "source_file": ".publication/sunset-launch-v1/voice/sentence-08.wav",
+      "source_sha256": "5ca51f0bcb3ccc3113747f1ae8278e8003c63185c2ba6975aef5fe876929618d",
+      "rendered_file": "voice/sentence-08.wav",
+      "start": 7.5,
+      "end": 11.381916666666667,
+      "duration": 3.8819166666666667,
+      "pitch_preserving_tempo": 1.12
+    },
+    {
+      "source_sentence_index": 12,
+      "text": "Close the website. Turn off the internet. Keep playing.",
+      "source_file": ".publication/sunset-launch-v1/voice/sentence-12.wav",
+      "source_sha256": "59ec103f35f00b07ddbeb1637bebb0af62032ad1b05052d046fe14ac80c78de0",
+      "rendered_file": "voice/sentence-12.wav",
+      "start": 15.0,
+      "end": 18.101958333333332,
+      "duration": 3.101958333333333,
+      "pitch_preserving_tempo": 1.12
+    },
+    {
+      "source_sentence_index": 16,
+      "text": "Transfer it, and pass on maintenance responsibility.",
+      "source_file": ".publication/sunset-launch-v1/voice/sentence-16.wav",
+      "source_sha256": "293c2991c8fb1591b99867c54a4d79295474b9695c04e0dfd86c7f38dcd85756",
+      "rendered_file": "voice/sentence-16.wav",
+      "start": 18.75,
+      "end": 21.740666666666666,
+      "duration": 2.990666666666667,
+      "pitch_preserving_tempo": 1.12
+    },
+    {
+      "source_sentence_index": 19,
+      "text": "Support once. Share forever.",
+      "source_file": ".publication/sunset-launch-v1/voice/sentence-19.wav",
+      "source_sha256": "feb6a29725cb471a73a7249bc85a61aee87d4be4a57ad532e30c2c54c61e2400",
+      "rendered_file": "voice/sentence-19.wav",
+      "start": 23.4375,
+      "end": 25.407625,
+      "duration": 1.970125,
+      "pitch_preserving_tempo": 1.12
+    },
+    {
+      "source_sentence_index": 20,
+      "text": "Explore the prototype. Built on NEAR testnet.",
+      "source_file": ".publication/sunset-launch-v1/voice/sentence-20.wav",
+      "source_sha256": "ac668b4595c2f837aec316313fa4f37775be0cebc7d585c142907590ac0350c6",
+      "rendered_file": "voice/sentence-20.wav",
+      "start": 26.71875,
+      "end": 29.447791666666667,
+      "duration": 2.729041666666667,
+      "pitch_preserving_tempo": 1.12
+    }
+  ],
+  "shots": [
+    {
+      "start": 0.0,
+      "end": 3.75,
+      "name": "community resource"
+    },
+    {
+      "start": 3.75,
+      "end": 7.5,
+      "name": "capped escrow"
+    },
+    {
+      "start": 7.5,
+      "end": 11.25,
+      "name": "committed-key public release and creator credit"
+    },
+    {
+      "start": 11.25,
+      "end": 15.0,
+      "name": "genuine game answer and feedback"
+    },
+    {
+      "start": 15.0,
+      "end": 18.75,
+      "name": "actual offline copy and public mesh"
+    },
+    {
+      "start": 18.75,
+      "end": 22.5,
+      "name": "maintenance authority handover"
+    },
+    {
+      "start": 22.5,
+      "end": 26.25,
+      "name": "public copies remain open"
+    },
+    {
+      "start": 26.25,
+      "end": 30.0,
+      "name": "SUNSET URL close"
+    }
+  ]
+}

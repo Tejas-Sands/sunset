@@ -1,0 +1,318 @@
+{
+  "version": 3,
+  "checked_at": "2026-11-03T05:24:27.753611+00:00",
+  "status": "prepared_locally_verified_not_posted",
+  "film_path": ".publication/sunset-launch-v3/sunset-launch-v3.mp4",
+  "bytes": 5894127,
+  "sha256": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+  "duration_seconds": 30,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "format": "H.264 yuv420p + AAC 48kHz, MP4 faststart",
+  "creative_direction": "Original warm SUNSET mark, obsidian/forest/amber, sponsor packets into capped NEAR escrow, committed-key release/creator credit, real answer12 feedback, offline public-copy mesh, moving mirror-maintenance authority and stable URL.",
+  "scope": "Protocol objects are editorial illustrations labeled PROTOCOL VISUALIZATION. UI is genuine verified capture with graphical pointer reenactment; not financial browser signing or uninterrupted screen recording.",
+  "qa": {
+    "checked": true,
+    "duration": "30.000000",
+    "frames": 900,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "fps": "30/1",
+    "decodeErrors": 0,
+    "faststartMoovBeforeMdat": true,
+    "topLevelAtoms": [
+      [
+        "ftyp",
+        0
+      ],
+      [
+        "moov",
+        32
+      ],
+      [
+        "free",
+        33966
+      ],
+      [
+        "mdat",
+        33974
+      ]
+    ],
+    "blackIntervals": 0,
+    "blackdetectThresholds": {
+      "duration": 0.2,
+      "pixel": 0.02,
+      "picture": 0.98
+    },
+    "lastVoiceEnds": 29.447791666666667,
+    "finalVoiceTailSeconds": 0.5522083333333327,
+    "genuineCaptureHashes": {
+      "06-hosted-verified-game.png": "c789b3cececcc2221dbe0392e33c26414de1f3d8313c9bfad301edfaca59e4d3",
+      "07-hosted-game-feedback.png": "412615e2404e1b7a8838346c27d77a461a81f14b46b7cd1894ae7f07c996cec6",
+      "11-offline-game-complete.png": "048c158a6fc3feb4acbc33d5dec6a20c7f7e35d4276c765424f1661faf95392c"
+    },
+    "voiceCues": 7,
+    "voiceSourceHashesVerified": true,
+    "voiceOverlap": false,
+    "captionTextExact": true,
+    "integratedLufs": -16.63,
+    "truePeakDbtp": -1.41,
+    "sha256": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    "bytes": 5894127,
+    "perceptualListeningVerified": false,
+    "note": "Editorial animation and genuine UI excerpts; objective checks do not prove subjective visual/audio quality."
+  },
+  "visual_review": {
+    "checked": true,
+    "samples": "Nine final decoded frames, decoded contact sheet and opening poster reviewed; opening/font labels, exact cap, real answer/result, offline completion, A-to-B authority, stable URL.",
+    "font_correction": "Unsupported arrow glyphs replaced with readable ASCII labels before final encode.",
+    "full_frame_by_frame_playback": false,
+    "perceptual_listening_verified": false
+  },
+  "narration": {
+    "sentences": 7,
+    "words": 54,
+    "engine": "Prior Kokoro af_heart synthetic narration; seven whole sentences edited at pitch-preserving tempo1.12; no new synthesis or cloning.",
+    "last_phrase_end": 29.447791666666667,
+    "voice_and_captions": [
+      {
+        "source_sentence_index": 1,
+        "text": "The sponsors need a wallet. The learners don't.",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-01.wav",
+        "source_sha256": "e0acd31ef7ea82e1eb097dd7b634e789a81b3fb168711cf75eb1b19f3a8cef07",
+        "rendered_file": "voice/sentence-01.wav",
+        "start": 0.46875,
+        "end": 3.0107083333333335,
+        "duration": 2.5419583333333335,
+        "pitch_preserving_tempo": 1.12
+      },
+      {
+        "source_sentence_index": 6,
+        "text": "Contributions go into a contract on NEAR testnet.",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-06.wav",
+        "source_sha256": "a5c030afc834e7541901fad21908b63063190266f91e5331738282c976118249",
+        "rendered_file": "voice/sentence-06.wav",
+        "start": 3.75,
+        "end": 6.863208333333333,
+        "duration": 3.113208333333333,
+        "pitch_preserving_tempo": 1.12
+      },
+      {
+        "source_sentence_index": 8,
+        "text": "A matching release key, published on time, credits the agreed creator.",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-08.wav",
+        "source_sha256": "5ca51f0bcb3ccc3113747f1ae8278e8003c63185c2ba6975aef5fe876929618d",
+        "rendered_file": "voice/sentence-08.wav",
+        "start": 7.5,
+        "end": 11.381916666666667,
+        "duration": 3.8819166666666667,
+        "pitch_preserving_tempo": 1.12
+      },
+      {
+        "source_sentence_index": 12,
+        "text": "Close the website. Turn off the internet. Keep playing.",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-12.wav",
+        "source_sha256": "59ec103f35f00b07ddbeb1637bebb0af62032ad1b05052d046fe14ac80c78de0",
+        "rendered_file": "voice/sentence-12.wav",
+        "start": 15.0,
+        "end": 18.101958333333332,
+        "duration": 3.101958333333333,
+        "pitch_preserving_tempo": 1.12
+      },
+      {
+        "source_sentence_index": 16,
+        "text": "Transfer it, and pass on maintenance responsibility.",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-16.wav",
+        "source_sha256": "293c2991c8fb1591b99867c54a4d79295474b9695c04e0dfd86c7f38dcd85756",
+        "rendered_file": "voice/sentence-16.wav",
+        "start": 18.75,
+        "end": 21.740666666666666,
+        "duration": 2.990666666666667,
+        "pitch_preserving_tempo": 1.12
+      },
+      {
+        "source_sentence_index": 19,
+        "text": "Support once. Share forever.",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-19.wav",
+        "source_sha256": "feb6a29725cb471a73a7249bc85a61aee87d4be4a57ad532e30c2c54c61e2400",
+        "rendered_file": "voice/sentence-19.wav",
+        "start": 23.4375,
+        "end": 25.407625,
+        "duration": 1.970125,
+        "pitch_preserving_tempo": 1.12
+      },
+      {
+        "source_sentence_index": 20,
+        "text": "Explore the prototype. Built on NEAR testnet.",
+        "source_file": ".publication/sunset-launch-v1/voice/sentence-20.wav",
+        "source_sha256": "ac668b4595c2f837aec316313fa4f37775be0cebc7d585c142907590ac0350c6",
+        "rendered_file": "voice/sentence-20.wav",
+        "start": 26.71875,
+        "end": 29.447791666666667,
+        "duration": 2.729041666666667,
+        "pitch_preserving_tempo": 1.12
+      }
+    ]
+  },
+  "music": "Original deterministic procedural128BPM score and effects; no third-party recording; reduced during speech.",
+  "source": "../media/launch-v3/README.md",
+  "post_copy": "../media/launch-v3/x-post.txt",
+  "post_weighted_characters_with_23_character_URLs": 267,
+  "source_files": [
+    {
+      "path": "projects/sunset/media/launch-v3/edit.json",
+      "bytes": 4212,
+      "sha256": "4b7b1693f86f36866bd314991afb3860841fe0bc285227bf1516c7f67a7dfe68"
+    },
+    {
+      "path": "projects/sunset/media/launch-v3/x-post.txt",
+      "bytes": 290,
+      "sha256": "a0dd17bf12ac922a7aba61f70f70ad0096bf9b8006e8389e7bc2223637ad5a71"
+    },
+    {
+      "path": "projects/sunset/media/launch-v3/PLAN.md",
+      "bytes": 2495,
+      "sha256": "79b39884a3b9894acde5f46127bb6b7034adf1c880ea2dd789d1f3706d6ad8b9"
+    },
+    {
+      "path": "projects/sunset/media/launch-v3/render_launch.py",
+      "bytes": 21214,
+      "sha256": "45060c78320353adf7c39fbd9e5c44b8159c4f0c878b40259b3eca8a7d9ed241"
+    },
+    {
+      "path": "projects/sunset/media/launch-v3/verify.py",
+      "bytes": 4568,
+      "sha256": "bdaf17bdcafd4c6ccd3efda41bd0c6f108254ccc1f793584a03924a07649c090"
+    },
+    {
+      "path": "projects/sunset/media/launch-v3/README.md",
+      "bytes": 2978,
+      "sha256": "6e81a68d2e38f5bcc1edcb212e8b7df9047e80b3754069059c7159b6a7c1afed"
+    },
+    {
+      "path": "projects/sunset/public/icon.svg",
+      "bytes": 268,
+      "sha256": "9b4f0a6f633385739440c96a9ab7c8f6b72ad065557a9d5538d7f2194a1e6cf5"
+    },
+    {
+      "path": "projects/sunset/public/fonts/OFL-Geist.txt",
+      "bytes": 4387,
+      "sha256": "f12f59163d92084b0473315ae4566cde0c1233d940ae464f5225a69c347cc691"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/render/logo.png",
+      "bytes": 5724,
+      "sha256": "e13224dda7197d21676b400eb3bb4331d4a5e7d9462443d2f01f1e0d50752ba9"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/render/Geist.ttf",
+      "bytes": 65532,
+      "sha256": "bf9f16bf572900fbdaf975b87e8c7b6abfe4b071c3bbb82a8d8f33357f3276ef"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/voice/sentence-01.wav",
+      "bytes": 136872,
+      "sha256": "e0acd31ef7ea82e1eb097dd7b634e789a81b3fb168711cf75eb1b19f3a8cef07"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/voice/sentence-01.wav",
+      "bytes": 122092,
+      "sha256": "3f0df51a3d06f612c61e6ec7f168d96dba891c27a5ae4a0cfd90b0659f1ac7ac"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/voice/sentence-06.wav",
+      "bytes": 167596,
+      "sha256": "a5c030afc834e7541901fad21908b63063190266f91e5331738282c976118249"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/voice/sentence-06.wav",
+      "bytes": 149512,
+      "sha256": "4b58856b73268846b109377d06f9ba13c86290288bc8a783342dbcd8230389af"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/voice/sentence-08.wav",
+      "bytes": 209036,
+      "sha256": "5ca51f0bcb3ccc3113747f1ae8278e8003c63185c2ba6975aef5fe876929618d"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/voice/sentence-08.wav",
+      "bytes": 186410,
+      "sha256": "6714f90adc39982bd7def085bacdbf2d6d4421797fab1dab4c187f3a3e275c24"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/voice/sentence-12.wav",
+      "bytes": 167270,
+      "sha256": "59ec103f35f00b07ddbeb1637bebb0af62032ad1b05052d046fe14ac80c78de0"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/voice/sentence-12.wav",
+      "bytes": 148972,
+      "sha256": "e32cccd6c885fa0f9ad58c7a6d0ee85ce499524d490f40b0b0f255dd15c97332"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/voice/sentence-16.wav",
+      "bytes": 161036,
+      "sha256": "293c2991c8fb1591b99867c54a4d79295474b9695c04e0dfd86c7f38dcd85756"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/voice/sentence-16.wav",
+      "bytes": 143630,
+      "sha256": "cae6f27e3e9935b1ae80d5ade7b00539adcf4b2042535a6101330dfca307095a"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/voice/sentence-19.wav",
+      "bytes": 106314,
+      "sha256": "feb6a29725cb471a73a7249bc85a61aee87d4be4a57ad532e30c2c54c61e2400"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/voice/sentence-19.wav",
+      "bytes": 94644,
+      "sha256": "70ded4a58012ca7d6ca6d0922f0225e6fad5dfa0d5d3fa37075cd44ac42d2996"
+    },
+    {
+      "path": ".publication/sunset-launch-v1/voice/sentence-20.wav",
+      "bytes": 147116,
+      "sha256": "ac668b4595c2f837aec316313fa4f37775be0cebc7d585c142907590ac0350c6"
+    },
+    {
+      "path": ".publication/sunset-launch-v3/voice/sentence-20.wav",
+      "bytes": 131072,
+      "sha256": "5bb0ccb5bee996d6cc210ca8251129a3fb55c5933c57d1b3be5f0406fc547633"
+    }
+  ],
+  "previous_versions_preserved": [
+    {
+      "path": ".publication/sunset-launch-v1/render/sunset-launch.mp4",
+      "sha256": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0"
+    },
+    {
+      "path": ".publication/sunset-launch-v2/sunset-launch-v2.mp4",
+      "sha256": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934"
+    }
+  ],
+  "publication": {
+    "generated_media_ignored": true,
+    "renderer_and_edit_sources_tracked": true,
+    "public_x_url": null,
+    "posted": false,
+    "submitted": false,
+    "push_workflow": "Verified local commits; operator pushes from laptop."
+  },
+  "product_evidence": {
+    "fresh_e2e": "e2e-2026-11-03.json",
+    "live_refunds": "testnet-refunds.json",
+    "main_release_and_stewardship": "testnet-showcase.json",
+    "source_UI_captures": "browser-showcase.json"
+  },
+  "limitations": [
+    "Subjective audio playback remains a human preview step.",
+    "Browser finance remains rehearsal or unsigned plans; actual settlement through CLI.",
+    "All financial roles controlled by one operator; mirrors on one host.",
+    "Maximum-state/failure protocol scenarios and independent human validation remain pending."
+  ]
+}

@@ -498,5 +498,50 @@
     "previous_browser_run": "browser-showcase.json"
   },
   "public_safe_record": "Contains public account IDs, artifact/capture/log hashes and scoped results only; no signing material, private release arguments or browser profile data.",
-  "rolling_verification_summary": "verification.json"
+  "rolling_verification_summary": "verification.json",
+  "actual_client_catalog_after_refunds": {
+    "checked_at": "2026-11-03T05:10:54.299Z",
+    "status": "passed_actual_client_read_with_three_live_campaigns",
+    "implementation_head": "ac04a3f",
+    "client_module": "projects/sunset/src/lib/chain.mjs",
+    "client_module_sha256": "50437a64178c6429285667bb8151e475ed15cfab404f9bd9d747ad76506d382a",
+    "function": "readTestnet",
+    "rpc": "https://test.rpc.fastnear.com",
+    "network": "testnet",
+    "contract": "sunset.shiftultra.testnet",
+    "code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "finalized_catalog_height": 276003606,
+    "catalog_count": 3,
+    "campaigns": [
+      {
+        "id": "lantern-trail-testnet-v1",
+        "state": "Released",
+        "escrow_yocto_near": "0",
+        "public_key_present": true,
+        "stewardship_present": true,
+        "stewardship_holder": "reviewer.shiftultra.testnet",
+        "release_window_ns": "86400000000000"
+      },
+      {
+        "id": "refund-funding-20261103-v1",
+        "state": "Refundable",
+        "escrow_yocto_near": "0",
+        "public_key_present": false,
+        "stewardship_present": false,
+        "stewardship_holder": null,
+        "release_window_ns": "90000000000"
+      },
+      {
+        "id": "refund-release-20261103-v1",
+        "state": "Refundable",
+        "escrow_yocto_near": "0",
+        "public_key_present": false,
+        "stewardship_present": false,
+        "stewardship_holder": null,
+        "release_window_ns": "90000000000"
+      }
+    ],
+    "scope": "Actual unmodified readTestnet function and configured FastNear RPC; native fetch, no mocked responses. Verifies network, reviewed code hash and same-block catalog internally. No signing, mutation or private backup access.",
+    "limitation": "Client catalog read only; does not exercise browser controls or independently query total NFT supply."
+  }
 }
