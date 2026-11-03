@@ -181,3 +181,10 @@ Captured an actual public resource download and genuine answer12→feedback in i
 Final24-second1920×1080/30fps MP4:3,009,859bytes; SHA-256 `b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2`. Independent checks passed720-frame full decode,1,745 authored probes (minimum5.1455:1), eight stable reads, exact captions/source/music/font hashes, actualcapturePNGCRCs/timing/state/download identities, safe bounds/separation, BT709 tags/faststart and no unexpected black interval. Encoded audio−15.40LUFS/−1.96dBTP, no voice overlap,2.662917s tail. Root and fresh reviewer found no P0/P1 in actual decoded beat/cut/phone samples; incidental fine print is small. Human sound/continuous playback remain unassessed.
 
 [V8 source/mapping](../media/launch-v8/README.md), [review](../media/launch-v8/REVIEW.md) and [evidence](../evidence/launch-video-v8.json) distinguish illustration, actual recording and measurements. All seven old movie identities remain unchanged. All generated media/fonts/music/models/caches/private files stay ignored. No app/contract/deployment/social/submission mutation; operator pushes local commits.
+
+
+## Script-first reset after creative feedback — 3 November
+
+The operator found v8 dull and insufficiently explanatory, referenced v3/v4’s stronger visual energy, and explicitly requested a script before another video. They also rejected further robotic narration: the next picture should have background sound only, with voice added through another method. Prepared a proposed creator/community/public-release story and a timed shot map in [the script draft](../media/launch-v9/SCRIPT_DRAFT.md). It establishes the funding need before escrow, distinguishes review/key release/creator withdrawal/refund conditions, and reserves an actual action/result payoff. Direction borrows v4 macro/object/type transitions around readable holds.
+
+This is a draft for operator feedback, not approved production. No new movie, voice, soundtrack, recording, app/contract change, signature, social post or submission was made. Existing renders and current evidence remain preserved. The next step is review of the script, not automatic rendering.
