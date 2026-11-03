@@ -1,7 +1,7 @@
 {
   "version": 9,
   "checked_at": "2026-11-03T12:27:05.174972+00:00",
-  "status": "prepared_locally_verified_not_posted",
+  "status": "operator_rejected_creative_replacement_in_progress",
   "film_path": ".publication/sunset-launch-v9/render/sunset-launch-v9.mp4",
   "sha256": "f2f4d2e9cc7733af1c7dfa2491b2148217ba9857addd544931e1d710c5592319",
   "bytes": 11914290,
@@ -236,5 +236,11 @@
   "application_or_contract_changes": false,
   "chain_mutations": 0,
   "public_x_post_url": null,
-  "submission_sent": false
+  "submission_sent": false,
+  "operator_feedback": {
+    "reason": "Arbitrary-looking motion and elementary arithmetic trivialize a serious product.",
+    "selected_replacement": "Open-source Maintainer Handbook with a real guide reader",
+    "notes": "../media/launch-v10/FEEDBACK.md",
+    "technical_verification_preserved": true
+  }
 }

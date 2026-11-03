@@ -1,0 +1,113 @@
+{
+  "checked_at": "2026-11-03T13:41:19.614985+00:00",
+  "status": "local_guide_feature_verified_not_deployed",
+  "resource": "Open-source Maintainer Handbook",
+  "format": {
+    "schema": 2,
+    "kind": "guide",
+    "license": "CC0-1.0",
+    "chapters": 4,
+    "checklist_items": 16,
+    "content_words": 991,
+    "validation": "Exact fields; bounded inert plain text; unique IDs; 1\u201364 sections; 0\u201332 items/section; existing five-MiB limit; no uploaded runtime/markup/resource URLs."
+  },
+  "source_hashes": {
+    "src/lib/pack.mjs": "fe13d0de949d29ffd22143e09d452d5b04860decfa9245967ede15cbd17ca424",
+    "src/lib/guide.mjs": "3c7b7bf67c6588c87b6c0ac41a7ab4805be2bd6f519fbc09b92a99f7e4cb40a5",
+    "src/components/GuideReader.tsx": "9b5cce40c6686c2243c730aa135ea7c9d06826912c973093fc3d5a108aa1bfec",
+    "src/components/LiveResources.tsx": "d34da7d7b4497636228ffc348272c392166c6a70d56e55a1c098cce89bdbc5c7",
+    "src/components/Stewardship.tsx": "3a3b541b103b3783867e0c0f203f58e70fcbaf067510ef7376181f19444c927b",
+    "src/app/app/page.tsx": "c256a870faf67d2c86f57684a10e595c5dbeb3c90f6bbfcec601ec6bc38abcab",
+    "src/app/page.tsx": "3b5ebd666ee1da8b38774b372592a660227bd1504cf13167c931dbef2bde702e",
+    "scripts/export-handbook.mjs": "7a6349639c65a27cd1ea60b26936f7fa5fe5086ae58d0ec0621f6b3d83f9f97b",
+    "scripts/recover-pack.mjs": "0500e7130d47e3e360785e3882550ef665dd5a5b8d53931a28002f002cc862d2",
+    "public/packs/maintainer-handbook.json": "7333ed5587248cbca671806dd67548d7b8088380f427bed7161734e34d16e72e",
+    "public/try-maintainer-handbook.html": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a"
+  },
+  "checks": {
+    "application_tests": 60,
+    "typecheck": "passed",
+    "local_workflow_scenarios": 9,
+    "compiled_wasm_scenarios": 11,
+    "artifact_and_rust_digests": "passed",
+    "production_build": "passed",
+    "static_targets": 16,
+    "independent_code_review": "No P0/P1 found in frozen reader diff; no duplicate test rerun",
+    "local_encrypted_preparation_and_independent_recovery": {
+      "status": "passed",
+      "mode": "local encrypted preparation and independent retained-file recovery; no network/signature/chain action",
+      "recovered_html_bytes": 17862,
+      "recovered_html_sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a",
+      "matches_public_standalone_sample_exactly": true,
+      "private_preparation_ignored": true,
+      "private_directory_mode": "0700",
+      "private_files_mode": "0600",
+      "manifest_uri": "Deliberately unresolvable example.invalid; no hosting claim"
+    }
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:4407",
+    "download": {
+      "path": ".publication/sunset-launch-v10/footage/downloads-146396/maintainer-handbook-offline.html",
+      "bytes": 17862,
+      "sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a"
+    },
+    "network_scope": "Browser-owner Chrome networking disabled before file navigation and verified before/after. Not an OS network adapter toggle.",
+    "offline_before_file_load": true,
+    "file_before_after": {
+      "onLine": false,
+      "resources": 0,
+      "scheme": "file:"
+    },
+    "actual_action": "Open recovery chapter and check its inspection step; reload preserves chapter and one completed step. No underlying Git procedure executed.",
+    "final_progress": "1 of 16 checks complete. Saved on this device.",
+    "console_errors": [],
+    "desktop_dimensions": [
+      4320,
+      2700
+    ],
+    "native_png_samples": 11,
+    "capture_method": "Native browser-owner screenshots interleaved with real input at recorded elapsed times. Honest held states and cuts, not 30 unique UI frames per second or uninterrupted full-rate recording.",
+    "capture_provenance_sha256": "ea94abea8db8e1cec01335d9da42399a99e34a7b1ef24c37965226c5109350f0",
+    "capture_source_sha256": "bc8014990a024db49080f52db47e7b0db3f19b84d8b1a2251acec3c64244c7fa",
+    "retained_after_reload": {
+      "path": ".publication/sunset-launch-v10/footage/retained-after-reload.png",
+      "sha256": "5dec9a30e8071701a47446f77812be3f3c9573131f6f91939e699486988a47f7",
+      "dimensions": [
+        4320,
+        2700
+      ]
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "search_chapter_check_reload": "passed",
+      "state": {
+        "online": false,
+        "resources": 0,
+        "chapter": "Recover a lost commit",
+        "progress": "1 of 16 checks complete. Saved on this device.",
+        "checked": true,
+        "overflow": false
+      }
+    }
+  },
+  "legacy_exports": {
+    "public_sample_sha256": "806c63b034d07a55820e9576d039ca4f9464cfbe53486e459665944769f5393d",
+    "committed_campaign_export_sha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738",
+    "unchanged": true
+  },
+  "source_notes": "../docs/MAINTAINER_HANDBOOK_SOURCES.md",
+  "limitations": [
+    "New example is locally verified; no hosted update or handbook-specific onchain funded release claimed.",
+    "Checks demonstrate local reader state, not execution or certification of the handbook procedures.",
+    "Browser emulation is not a physical-device, OS-network or cross-browser test.",
+    "Original content is not independent expert validation or user adoption."
+  ],
+  "contract_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "generated_recordings_and_private_preparation_ignored": true
+}

@@ -1,3 +1,4 @@
+import {createGuideHtml} from './guide.mjs';
 const encoder = new TextEncoder();
 const decoder = new TextDecoder('utf-8', { fatal: true });
 const header = encoder.encode('SUNSET01');
@@ -34,8 +35,32 @@ function identifier(value, label) {
   }
 }
 
+
+function validateGuide(pack) {
+  exactFields(pack,['schema','kind','id','title','description','license','sections'],'Guide');
+  if (pack.schema!==2 || pack.kind!=='guide') throw new TypeError('Unsupported guide schema.');
+  identifier(pack.id,'Pack ID');plainText(pack.title,'Title',120);plainText(pack.description,'Description',4096);
+  if (pack.license!=='CC0-1.0') throw new TypeError('This pack format supports CC0-1.0 only.');
+  if (!Array.isArray(pack.sections) || pack.sections.length<1 || pack.sections.length>64) throw new TypeError('A guide needs 1 to 64 sections.');
+  const sectionIds=new Set(),itemIds=new Set();
+  for (const section of pack.sections) {
+    exactFields(section,['id','title','body','checklist'],'Guide section');identifier(section.id,'Section ID');
+    if (sectionIds.has(section.id)) throw new TypeError('Section IDs must be unique.');
+    sectionIds.add(section.id);plainText(section.title,'Section title',160);plainText(section.body,'Section body',32768);
+    if (!Array.isArray(section.checklist) || section.checklist.length>32) throw new TypeError('A section supports up to 32 checklist items.');
+    for (const item of section.checklist) {
+      exactFields(item,['id','text'],'Checklist item');identifier(item.id,'Checklist ID');
+      if (itemIds.has(item.id)) throw new TypeError('Checklist IDs must be unique across the guide.');
+      itemIds.add(item.id);plainText(item.text,'Checklist text',1024);
+    }
+  }
+  if (encoder.encode(JSON.stringify(pack)).length>maxPlaintextBytes) throw new RangeError('The plaintext pack exceeds 5 MiB.');
+  return pack;
+}
+
 /** Validate data only: no uploaded runtime, markup, remote assets or learner identity. */
 export function validatePack(pack) {
+  if (pack?.schema===2 || pack?.kind==='guide') return validateGuide(pack);
   exactFields(pack, ['id', 'title', 'description', 'license', 'questions'], 'Pack');
   identifier(pack.id, 'Pack ID');
   plainText(pack.title, 'Title', 120);
@@ -163,6 +188,7 @@ export const introPack = {
 /** A standalone data-and-runtime artifact. It makes no network requests. */
 export function createOfflineHtml(input) {
   const pack = validatePack(input);
+  if (pack.kind==='guide') return createGuideHtml(pack);
   const embedded = JSON.stringify(pack).replaceAll('<', '\\u003c').replaceAll('\u2028', '\\u2028').replaceAll('\u2029', '\\u2029');
   return `<!doctype html>
 <html lang="en">

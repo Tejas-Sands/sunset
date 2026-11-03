@@ -1,0 +1,102 @@
+{
+  "schema": 2,
+  "kind": "guide",
+  "id": "maintainer-handbook",
+  "title": "Open-source Maintainer Handbook",
+  "description": "Practical procedures for public releases, lost-commit recovery, maintainer handover, and offline continuity. An original CC0 example resource; commands are displayed reference text, never executed.",
+  "license": "CC0-1.0",
+  "sections": [
+    {
+      "id": "prepare-release",
+      "title": "Prepare a public release",
+      "body": "A release is a promise about a particular version. Start by naming the intended commit and recording what this release includes. Separate required fixes from improvements that can wait. Give one person responsibility for assembling the release and another for checking it.\n\nTest the downloadable package that users will receive, not just the development checkout. Open it in a clean environment and follow the installation or reading instructions from the beginning. Record the runtime versions, commands used, results, and anything the test did not cover. A passing build does not establish that upgrades, offline use, or every supported platform work.\n\nPrepare release notes with the important changes, upgrade steps, compatibility limits, and known problems. Include the project license and relevant third-party notices with the distributed files. Check that required examples and documentation are present and that temporary files or private configuration have not entered the package.\n\nOn GitHub, keep the release as a draft while checking its tag, target, notes, and attached assets. Review the final package and notes together before publishing. Keep the exact reviewed files and their version identity afterward, so a later report can be compared with what users actually downloaded.",
+      "checklist": [
+        {
+          "id": "release-commit",
+          "text": "Confirm the release commit and test results."
+        },
+        {
+          "id": "release-package",
+          "text": "Test the downloadable package in a clean environment."
+        },
+        {
+          "id": "release-notes",
+          "text": "Write upgrade steps and record known limits."
+        },
+        {
+          "id": "release-review",
+          "text": "Have a second maintainer review the final release notes."
+        }
+      ]
+    },
+    {
+      "id": "recover-commit",
+      "title": "Recover a lost commit",
+      "body": "Use this procedure when a committed change seems to have disappeared after a branch switch, rebase, or reset. It does not promise recovery of files that were never committed. Pause cleanup and further history changes. Preserve a private copy of the working files and repository metadata before investigating; uncommitted work needs its own protection.\n\nIn the local repository where the work happened, inspect the recent reference history:\ngit reflog --date=iso\n\nLook for a plausible commit near the relevant operation. Reflogs belong to that local repository; a fresh clone does not import another clone's reflog. Entries can expire, and the referenced objects may eventually be removed, so this is a recovery aid rather than a backup policy.\n\nReplace COMMIT_ID below with the candidate commit identifier. Inspect both its summary and actual changes before choosing it:\ngit show --stat COMMIT_ID\ngit show COMMIT_ID\n\nIf the contents are correct, preserve that commit under a new, unused branch name:\ngit branch recovered-work COMMIT_ID\n\nThis creates a branch without switching the current working tree. If the name already exists, choose another name rather than forcing an overwrite. Confirm the saved branch points where expected:\ngit log -1 --oneline recovered-work\n\nKeep the current branch intact. Decide separately, with the relevant maintainer, whether to merge or otherwise integrate the recovered work. Recovery is complete when the intended commit has a durable name and its contents have been inspected, not when unrelated history has been replaced.",
+      "checklist": [
+        {
+          "id": "recovery-copy",
+          "text": "Preserve working files and repository metadata privately."
+        },
+        {
+          "id": "recovery-inspect",
+          "text": "Inspect the candidate commit summary and actual changes."
+        },
+        {
+          "id": "recovery-branch",
+          "text": "Create an unused recovery branch at the inspected commit."
+        },
+        {
+          "id": "recovery-confirm",
+          "text": "Confirm the recovered branch before planning integration."
+        }
+      ]
+    },
+    {
+      "id": "maintainer-handover",
+      "title": "Hand over maintainership",
+      "body": "Transfer a working process, not just a repository role. Write down who reviews changes, approves releases, handles incoming reports, and covers an unavailable maintainer. Include the next planned release, unfinished work, known operational problems.\n\nMake an access inventory covering the repository, package registry, build system, documentation host, domain administration, and any other service the project actually uses. For each entry, record its purpose, current owner, successor, required permission, and recovery route. Record where an approved secret is managed, never its value. Keep private keys, passwords, recovery codes, and tokens out of the handbook, issues, and public handover notes.\n\nGive the successor the permissions needed for the agreed job. GitHub organization repository roles differ: maintainership does not automatically include every administrative action. Have the successor verify access with their own account and rehearse the documented release process without publishing a real release.\n\nReview automation separately from personal access. A GitHub deploy key can remain active after its creator loses repository access. Identify its purpose and arrange any replacement or revocation through the responsible administrator. After confirming the successor can operate, review departing access, record what changed, and leave a clear contact route for unresolved questions.",
+      "checklist": [
+        {
+          "id": "handover-roles",
+          "text": "Record responsibilities, coverage, and the handover date."
+        },
+        {
+          "id": "handover-inventory",
+          "text": "Inventory services and permissions without copying secrets."
+        },
+        {
+          "id": "handover-rehearse",
+          "text": "Have the successor rehearse with their own account."
+        },
+        {
+          "id": "handover-automation",
+          "text": "Review deploy keys and automation separately from people."
+        }
+      ]
+    },
+    {
+      "id": "offline-continuity",
+      "title": "Keep a usable offline copy",
+      "body": "A bookmarked host is not a retained copy. Keep the actual documentation, release files, source, and instructions needed for the version you depend on. Give the retained set a version name and record when it was checked. Keep a second copy in another place that is appropriate for the project's public or private material.\n\nFor reachable Git history, a complete local clone can produce a portable bundle:\ngit bundle create project-history.bundle --all\n\nUse a new output filename. The bundle contains Git objects reachable from the included references; it is not a complete copy of a hosted project. Save working files, release attachments, important issue context, and operational notes separately. Large File Storage content and submodule repositories also need their own retained copies when the project uses them.\n\nTest the retained material in a separate location with network access unavailable. Open the documentation, locate a real procedure, and check that its required files are present. For a guide, verify search and navigation; for software, distinguish reading its instructions from successfully building it offline. Record missing dependencies instead of assuming they were bundled.\n\nTreat a successful check as evidence for that version and environment. Repeat it when the retained package changes.",
+      "checklist": [
+        {
+          "id": "offline-files",
+          "text": "Retain versioned source, documentation, and release files."
+        },
+        {
+          "id": "offline-extras",
+          "text": "Save required external assets and operational context separately."
+        },
+        {
+          "id": "offline-check",
+          "text": "Test a real procedure with network access unavailable."
+        },
+        {
+          "id": "offline-limits",
+          "text": "Record the checked version, environment, and missing dependencies."
+        }
+      ]
+    }
+  ]
+}

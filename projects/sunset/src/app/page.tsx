@@ -48,7 +48,7 @@ export default function Landing(){
           <div className="lp-eyebrow"><span className="lp-small-dot"/> THE COMMONS STARTS WITH US</div>
           <h1 id="hero-title">Good things<br/>belong to<br/><em>everyone.</em></h1>
           <p className="lp-hero-description">Help useful learning resources become free for everyone. Fund the beginning. Share what comes after.</p>
-          <div className="lp-hero-actions"><a className="lp-button lp-button-orange" href="/app/?view=Discover">Explore the commons <Arrow/></a><a className="lp-play-link" href="/try-lantern-trail.html"><span><Symbol name="play"/></span>Try a free adventure</a></div>
+          <div className="lp-hero-actions"><a className="lp-button lp-button-orange" href="/app/?view=Discover">Explore the commons <Arrow/></a><a className="lp-play-link" href="/app/?view=Handbook"><span><Symbol name="offline"/></span>Read the example handbook</a></div>
           <p className="lp-prototype"><span/> Interactive prototype · Simulated NEAR · No wallet needed to learn</p>
         </div>
         <div className="lp-hero-visual">
@@ -67,7 +67,7 @@ export default function Landing(){
       </div>
 
       <section id="commons" className="lp-commons lp-container" aria-labelledby="commons-title">
-        <div className="lp-section-heading"><div><span className="lp-eyebrow">A FEW GOOD THINGS TO GET BEHIND</span><h2 id="commons-title">Small resources.<br/><em>Wide-open possibilities.</em></h2></div><div className="lp-section-aside"><p>Start with a little learning adventure.<br/>See how the whole story works.</p><a className="lp-text-link" href="/app/?view=Discover">Explore all demo resources <Arrow/></a></div></div>
+        <div className="lp-section-heading"><div><span className="lp-eyebrow">A FEW GOOD THINGS TO GET BEHIND</span><h2 id="commons-title">Small resources.<br/><em>Wide-open possibilities.</em></h2></div><div className="lp-section-aside"><p>Read a practical maintainer handbook.<br/>Then explore the separate financial rehearsals.</p><a className="lp-text-link" href="/app/?view=Discover">Explore all demo resources <Arrow/></a></div></div>
         <div className="lp-resource-grid">{resources.map(r=><a className="lp-resource" key={r.id} href={`/app/?view=Discover&campaign=${r.id}`}><div className={`lp-resource-art lp-resource-art-${r.variant}`}><Cover variant={r.variant}/><span className="lp-cover-label">THE LEARNING COLLECTION / 0{r.variant+1}</span><span className="lp-resource-cta" aria-hidden="true"><Arrow diagonal/></span></div><div className="lp-resource-content"><span className={`lp-status lp-status-${r.tone}`}><span/>{r.status}</span><h3>{r.name}</h3><p>{r.description}</p><div className="lp-resource-foot"><span>{r.footer}</span><Arrow/></div></div></a>)}</div>
         <p className="lp-sample-caption">Three demonstration scenarios using one original maths sample. Campaign amounts are illustrative, not live funding.</p>
       </section>
@@ -87,6 +87,6 @@ export default function Landing(){
       <section className="lp-final lp-container" aria-labelledby="final-title"><div className="lp-final-top"><span className="lp-eyebrow">SOME THINGS GET BETTER WHEN THEY’RE SHARED.</span><Sun/></div><div className="lp-final-row"><h2 id="final-title">Let’s make room<br/>for <em>everyone.</em></h2><div><p>A little contribution can be<br/>the start of a much longer story.</p><a className="lp-button lp-button-dark" href="/app/?view=Discover">Explore the rehearsal <Arrow diagonal/></a></div></div></section>
     </main>
 
-    <footer className="lp-footer lp-container"><div className="lp-footer-top"><a className="lp-brand" href="/" aria-label="SUNSET home"><Sun/><span>SUNSET</span></a><p>Good things shouldn’t have an expiry date.</p><a href="#content" className="lp-text-link">Back to the beginning <Arrow diagonal/></a></div><div className="lp-footer-bottom"><span>AN OPEN RESOURCE EXPERIMENT · NOVEMBER 2026</span><div><a href="/app/?view=Discover">Explore</a><a href="/try-lantern-trail.html">Free sample</a><a href="/app/?view=How%20it%20works">How it works</a></div><span>BUILT FOR NEAR · TESTNET PROTOTYPE</span></div></footer>
+    <footer className="lp-footer lp-container"><div className="lp-footer-top"><a className="lp-brand" href="/" aria-label="SUNSET home"><Sun/><span>SUNSET</span></a><p>Good things shouldn’t have an expiry date.</p><a href="#content" className="lp-text-link">Back to the beginning <Arrow diagonal/></a></div><div className="lp-footer-bottom"><span>AN OPEN RESOURCE EXPERIMENT · NOVEMBER 2026</span><div><a href="/app/?view=Discover">Explore</a><a href="/try-lantern-trail.html">Legacy sample</a><a href="/try-maintainer-handbook.html">Handbook sample</a><a href="/app/?view=How%20it%20works">How it works</a></div><span>BUILT FOR NEAR · TESTNET PROTOTYPE</span></div></footer>
   </div>;
 }

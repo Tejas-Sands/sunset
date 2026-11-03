@@ -1,5 +1,7 @@
 # SUNSET v9 final review
 
+**Operator rejected this creative iteration after delivery.** The elementary arithmetic example and arbitrary-looking motion missed the intended seriousness. The sampled technical/visual findings below remain historical; they do not establish creative approval. See [replacement direction](../launch-v10/DIRECTION.md).
+
 Final: 56 seconds, 1920×1080, 30 fps; 11,914,290 bytes. SHA-256: `f2f4d2e9cc7733af1c7dfa2491b2148217ba9857addd544931e1d710c5592319`.
 
 The approved creator-first story is implemented with background music and recorded effects only. No voice was generated. Root and a fresh reviewer inspected the actual decoded beat/cut/390px phone sheets, dense community/release/offline sequences and native proof images. **No P0/P1 issue was found in that review.** This is sampled and dense-sequence visual review, not a claim of human continuous playback or audience validation.

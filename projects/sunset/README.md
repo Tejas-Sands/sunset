@@ -1,6 +1,6 @@
 # SUNSET — Support once. Share forever.
 
-SUNSET pools adult sponsorship for a useful digital resource. The creator receives a capped payment when its committed key is published on time. Missed funding/release conditions allow refunds. Learners can keep a self-contained offline game without a wallet or account.
+SUNSET pools adult sponsorship for a useful digital resource. The creator receives a capped payment when its committed key is published on time. Missed funding/release conditions allow refunds. Readers can keep a self-contained learning pack or practical handbook without a wallet or account.
 
 **Main testnet showcase verified on 2 November 2026:** reviewed contract `sunset.shiftultra.testnet` accepted 0.06 + 0.04 testNEAR, released the committed pack, paid its fixed creator 0.1 testNEAR, and transferred stewardship with enforced mirror authority. [Finalized transactions and state](evidence/testnet-showcase.json) include the successful native payout callback. The hosted [SUNSET app](https://sunset-lemon.vercel.app/app/) recovered the original and steward mirror; its actual downloaded game completed all five questions in a fresh browser with browser offline enabled before file load. [Browser evidence and limits](evidence/browser-showcase.json) distinguish this from an OS network toggle. All demo roles share one operator, and both mirror paths share one host. **Both actual expiry refunds and native principal withdrawals were verified on 3 November:** 0.01 + 0.02 testNEAR returned, with successful callbacks and no pending withdrawal. [Fresh end-to-end review](docs/E2E_AUDIT_2026-11-03.md) and [refund receipts](evidence/testnet-refunds.json) record the scope. Protocol failure/max-state scenarios and independent human validation remain open. Browser financial controls remain rehearsal/unsigned plans; its live testnet reader is read-only.
 
@@ -22,7 +22,7 @@ A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-
 
 The [testnet showcase guide](docs/TESTNET_SHOWCASE.md) now replays the completed `lantern-trail-testnet-v1` campaign through read-only checks and actual receipt links. Reviewer/sponsor accounts exist, the campaign is `Released`, creator `paid` is 0.1 testNEAR with no pending withdrawal, and the NFT holder is `reviewer.shiftultra.testnet`. Do not repeat its signed actions. Two separate campaigns now verify both real-time expiry paths and exact native refunds; do not repeat their completed actions either.
 
-The current launch cut is v9: a 56-second sunset-first kinetic 2D story about funding a useful learning pack’s public release. It explains reviewed terms, NEAR escrow, matching-key release, separate creator credit/withdrawal and conditional refunds, then shows a genuine download/offline answer/result. Music and licensed recorded effects only; no generated narration. All 1,680 delivered frames, 17 readable windows and actual-footage identities passed independent checks. Demo/repository links and feedback remain in the accompanying post; the picture has no URL/credit overlay. The [launch delivery guide](docs/LAUNCH_VIDEO.md) links the film, optional human voice reference, stems, post and credits. Generated media remains ignored; nothing has been posted or submitted.
+The last rendered launch cut, v9, was rejected by the operator for arbitrary-looking motion and its child-oriented arithmetic example. A [selected handbook correction](media/launch-v10/DIRECTION.md) is in progress: a real Open-source Maintainer Handbook reader and purposeful editorial motion, with music/effects only. Earlier video checks remain evidence of technical delivery, not creative approval. The [delivery guide](docs/LAUNCH_VIDEO.md) records the current status. Nothing has been posted or submitted.
 
 ## Landing and workspace
 
@@ -31,6 +31,14 @@ The homepage introduces the commons with a custom SUNSET illustration, locally h
 The static export uses trailing slashes so `/app/?view=...` resolves through the included Python static server. Views are allowlisted and campaign links select only existing resource IDs. Public sample gameplay stays at `/try-lantern-trail.html`.
 
 `npm run test:pages` checks exported routes, links, assets and sample data. Actual hosted desktop reader/recovery/download and fresh-browser offline gameplay now passed; the offline game also fits a 390-pixel viewport. Fresh 3 November desktop and 390×844 viewport navigation passed without horizontal overflow; broad accessibility, physical-device and cross-browser QA remains incomplete. One mirror fetch timed out and succeeded on a bounded retry. [Artwork and exact generation prompt](public/images/README.md); the bundled Geist font keeps its OFL license.
+
+## Practical handbooks
+
+The new [Open-source Maintainer Handbook](public/packs/maintainer-handbook.json) contains four original procedures and sixteen checks: prepare a release, recover a lost commit, hand over maintainership and retain useful material offline. Open `/app/?view=Handbook` or [the standalone sample](public/try-maintainer-handbook.html). Native chapter search and checklists work locally; selected chapter and progress survive reload when browser storage is available. Commands are reference text and never execute.
+
+Creator Studio and the existing encryption/recovery pipeline accept the strictly validated `schema:2, kind:"guide"` format alongside unchanged numeric quiz packs. Content remains inert bounded plain text; no uploaded scripts, markup or remote resources. The same reader handles verified guides and reviewer previews. No contract rewrite is needed because commitments bind content bytes rather than parse lessons.
+
+This is a locally verified new example. It does not replace the content named by earlier finalized testnet transactions, and no handbook-specific onchain release or hosted update is claimed. [Guide checks and actual browser evidence](evidence/handbook-guide.json) include desktop/mobile download/offline/search/check/reload, exact independent encrypted-file recovery, and legacy byte preservation. [Content sources and limits](docs/MAINTAINER_HANDBOOK_SOURCES.md) explain the original CC0 material.
 
 ## Rehearse the complete story
 

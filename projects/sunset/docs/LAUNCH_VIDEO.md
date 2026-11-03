@@ -1,5 +1,7 @@
 # SUNSET launch film
 
+**V9 was rejected by the operator for its motion and child-oriented example.** It remains an archived render, not the recommended public launch asset. The selected [v10 correction](../media/launch-v10/DIRECTION.md) uses an Open-source Maintainer Handbook and a real offline guide reader; production is in progress. The v9 delivery details below are retained for provenance.
+
 Current: **v9 — 56 seconds, 1920×1080 at 30 fps**, with background music and recorded effects only. No generated narration is included.
 
 ```sh

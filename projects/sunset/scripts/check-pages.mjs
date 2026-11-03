@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {resolve, relative, sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {validatePack} from '../src/lib/pack.mjs';
+import {validatePack,createOfflineHtml} from '../src/lib/pack.mjs';
 
 const output = fileURLToPath(new URL('../out/', import.meta.url));
 const origin = 'https://sunset.invalid';
@@ -27,7 +27,7 @@ assert.doesNotMatch(text, /\b(?:trusted by|\d[\d,.+]*\s+(?:active learners|happy
 const links = [...body.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)]
   .map(match => new URL(decode(match[1]), origin));
 const appLinks = links.filter(url => url.origin === origin && url.pathname === '/app/');
-for (const view of ['Discover', 'Creator studio', 'Stewardship', 'How it works']) {
+for (const view of ['Discover', 'Handbook', 'Creator studio', 'Stewardship', 'How it works']) {
   assert.ok(appLinks.some(url => url.searchParams.get('view') === view), `Missing app link: ${view}`);
 }
 for (const id of ['lantern-trail', 'river-routes', 'pebble-market']) {
@@ -35,14 +35,21 @@ for (const id of ['lantern-trail', 'river-routes', 'pebble-market']) {
 }
 assert.ok(links.some(url => url.origin === origin && url.pathname === '/try-lantern-trail.html'),
   'Landing must link to the standalone sample');
+assert.ok(links.some(url => url.origin === origin && url.pathname === '/try-maintainer-handbook.html'), 'Landing must expose the original handbook sample');
 const app = await readFile(resolve(output, 'app/index.html'), 'utf8');
 const sample = await readFile(resolve(output, 'try-lantern-trail.html'), 'utf8');
 const packData = sample.match(/<script\b[^>]*\bid="pack-data"[^>]*>([\s\S]*?)<\/script>/i)?.[1];
 assert.ok(packData, 'Standalone sample must contain its own pack data');
 assert.equal(validatePack(JSON.parse(packData)).id, 'lantern-trail');
 
+const handbook = await readFile(resolve(output, 'try-maintainer-handbook.html'), 'utf8');
+const guide = validatePack(JSON.parse(handbook.match(/<script type="application\/json" id="pack-data">([\s\S]*?)<\/script>/)[1]));
+assert.equal(guide.kind, 'guide');
+assert.equal(guide.id, 'maintainer-handbook');
+assert.equal(handbook, createOfflineHtml(guide), 'Public download must be the exact offline export');
+
 // Inspect exported HTML and its CSS dependencies without starting a socket.
-const pages = new Map([['/', landing], ['/app/', app], ['/try-lantern-trail.html', sample]]);
+const pages = new Map([['/', landing], ['/app/', app], ['/try-lantern-trail.html', sample], ['/try-maintainer-handbook.html', handbook]]);
 const queue = [...pages].map(([path, content]) => ({url: new URL(path, origin), content, html: true}));
 const checked = new Set();
 let fonts = 0;

@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import Module from 'node:module';
+import {fileURLToPath} from 'node:url';
+const require=createRequire(import.meta.url);
+const ts=require('typescript'),React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
+test('the real React guide reader renders procedures, chapter navigation and native labelled checks',async()=>{
+  const path=fileURLToPath(new URL('../src/components/GuideReader.tsx',import.meta.url));
+  const code=await readFile(path,'utf8').catch(()=>null);
+  assert.ok(code,'The approved guide reader must exist.');
+  const js=ts.transpileModule(code,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const module=new Module(path);module.filename=path;module.paths=Module._nodeModulePaths(fileURLToPath(new URL('../src/components/',import.meta.url)));module._compile(js,path);
+  const pack={schema:2,kind:'guide',id:'reader-example',title:'An adult handbook',description:'Original example content.',license:'CC0-1.0',sections:[{id:'release',title:'Prepare a release',body:'Record the exact commit.\nReview the changes.',checklist:[{id:'record-commit',text:'Record the release commit.'}]},{id:'recover',title:'Recover a commit',body:'Inspect before restoring.',checklist:[]}]};
+  const html=renderToStaticMarkup(React.createElement(module.exports.default,{pack}));
+  assert.ok(html.includes('An adult handbook')&&html.includes('Record the exact commit.'));
+  assert.match(html,/id="guide-reader"/);assert.match(html,/type="search"/);
+  assert.match(html,/aria-label="Handbook chapters"/);assert.ok(html.includes('Recover a commit'));
+  assert.match(html,/type="checkbox"/);assert.match(html,/id="check-record-commit"/);
+  assert.ok(html.includes('Record the release commit.'));
+  assert.doesNotMatch(html,/Maths adventure|Lantern 1|game\.questions/);
+});

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>SUNSET offline handbook</title><style>body{margin:0;background:#f5f0e6}.modal-backdrop .modal.guide-modal{width:1240px}.guide-modal .guide-toolbar{padding:24px 80px 0 28px}.sunset-guide{--guide-ink:#233a32;--guide-paper:#fffdf7;--guide-muted:#526458;--guide-line:#d9ded1;color:var(--guide-ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;max-width:1260px;margin:0 auto;padding:32px 28px;box-sizing:border-box;container-type:inline-size}
+.sunset-guide *{box-sizing:border-box}.sunset-guide .guide-eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--guide-muted);font-weight:650}
+.sunset-guide .guide-title{font-size:clamp(30px,4.1vw,52px);line-height:1.12;letter-spacing:-.035em;margin:12px 0 16px;max-width:25ch;color:var(--guide-ink);font-family:inherit}
+.sunset-guide .guide-description{max-width:78ch;margin:0 0 28px;font-size:17px;line-height:1.65}
+.sunset-guide .guide-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
+.sunset-guide .guide-rail{position:sticky;top:20px;min-width:0}.sunset-guide .guide-search-label{display:block;font-size:14px;font-weight:650;margin-bottom:7px}
+.sunset-guide input[type=search]{width:100%;min-height:46px;border:1px solid #99a993;border-radius:8px;background:var(--guide-paper);padding:10px 12px;font:inherit;color:inherit;margin:0}
+.sunset-guide .guide-search-status{font-size:13px;color:var(--guide-muted);margin:9px 0 14px;min-height:22px}.sunset-guide .guide-nav{display:flex;flex-direction:column;gap:6px}
+.sunset-guide .guide-nav button{width:100%;min-height:48px;border:1px solid transparent;border-radius:8px;background:transparent;padding:12px;text-align:left;font:inherit;font-size:14px;line-height:1.45;color:inherit;cursor:pointer;white-space:normal}
+.sunset-guide .guide-nav button:hover{background:#e7eddf}.sunset-guide .guide-nav button[aria-current=page]{background:#e1eadc;border-color:#99a993;font-weight:650}
+.sunset-guide .guide-chapter-number{display:block;font-size:11px;color:var(--guide-muted);letter-spacing:.1em;margin-bottom:4px}
+.sunset-guide .guide-chapter{min-width:0;background:var(--guide-paper);border:1px solid var(--guide-line);border-radius:12px;padding:30px 34px}
+.sunset-guide .guide-chapter .guide-section-title{font:700 clamp(25px,3vw,34px)/1.2 system-ui,sans-serif;letter-spacing:-.025em;margin:0 0 24px;color:var(--guide-ink)}
+.sunset-guide .guide-body{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.75;max-width:72ch;margin:0 0 30px}
+.sunset-guide fieldset{padding:18px 0 0;border:0;border-top:1px solid var(--guide-line);margin:0;min-width:0}.sunset-guide legend{font-size:14px;font-weight:700;padding:0 12px 0 0}
+.sunset-guide .guide-check{display:flex;gap:12px;align-items:flex-start;padding:12px 0;min-height:48px;font-size:16px;font-weight:400;line-height:1.6;cursor:pointer;margin:0;overflow-wrap:anywhere}
+.sunset-guide input[type=checkbox]{accent-color:#2b6149;width:21px;height:21px;min-width:21px;margin:3px 0 0;cursor:pointer}
+.sunset-guide .guide-progress{font-size:14px;line-height:1.6;margin:22px 0 0;color:var(--guide-muted);border-top:1px solid var(--guide-line);padding-top:17px}
+.sunset-guide .guide-footer{margin-top:28px;font-size:13px;color:var(--guide-muted);max-width:90ch}
+.sunset-guide :is(button,input):focus-visible{outline:3px solid #bc4829;outline-offset:3px}.sunset-guide .guide-section-title:focus{outline:none}
+@media(max-width:760px){.sunset-guide{padding:24px 18px}.sunset-guide .guide-layout{grid-template-columns:1fr;gap:22px}.sunset-guide .guide-rail{position:static}.sunset-guide .guide-nav{display:grid;grid-template-columns:1fr 1fr}.sunset-guide .guide-chapter{padding:24px 20px}.sunset-guide .guide-description{font-size:16px}.sunset-guide .guide-body{font-size:17px}.sunset-guide .guide-nav button{padding:10px;font-size:13px}}
+@container(max-width:760px){.sunset-guide .guide-layout{grid-template-columns:1fr;gap:22px}.sunset-guide .guide-rail{position:static}.sunset-guide .guide-nav{display:grid;grid-template-columns:1fr 1fr}}
+@media print{.sunset-guide .guide-rail{display:none}.sunset-guide .guide-layout{display:block}.sunset-guide .guide-chapter{border:0;padding:0}.sunset-guide .guide-footer{display:none}}</style></head><body><main class="sunset-guide" id="guide-reader"><header><div class="guide-eyebrow">SUNSET · Your offline copy</div><h1 class="guide-title" id="guide-title"></h1><p class="guide-description" id="guide-description"></p></header><div class="guide-layout"><aside class="guide-rail"><label class="guide-search-label" for="guide-search">Search handbook</label><input id="guide-search" type="search" placeholder="Find a procedure" autocomplete="off"><p class="guide-search-status" id="guide-search-status" role="status" aria-live="polite"></p><nav class="guide-nav" id="guide-chapters" aria-label="Handbook chapters"></nav></aside><div><article class="guide-chapter" id="guide-chapter" aria-labelledby="guide-section-title"></article><p class="guide-progress" id="guide-progress" role="status" aria-live="polite" aria-atomic="true"></p></div></div><footer class="guide-footer">Content: CC0-1.0 · Runtime: MIT. This self-contained guide needs no SUNSET server, wallet, account or network connection. Checklist progress stays on this device when browser storage is available. Commands are plain text; this guide never runs them.</footer></main><script type="application/json" id="pack-data">{"schema":2,"kind":"guide","id":"maintainer-handbook","title":"Open-source Maintainer Handbook","description":"Practical procedures for public releases, lost-commit recovery, maintainer handover, and offline continuity. An original CC0 example resource; commands are displayed reference text, never executed.","license":"CC0-1.0","sections":[{"id":"prepare-release","title":"Prepare a public release","body":"A release is a promise about a particular version. Start by naming the intended commit and recording what this release includes. Separate required fixes from improvements that can wait. Give one person responsibility for assembling the release and another for checking it.\n\nTest the downloadable package that users will receive, not just the development checkout. Open it in a clean environment and follow the installation or reading instructions from the beginning. Record the runtime versions, commands used, results, and anything the test did not cover. A passing build does not establish that upgrades, offline use, or every supported platform work.\n\nPrepare release notes with the important changes, upgrade steps, compatibility limits, and known problems. Include the project license and relevant third-party notices with the distributed files. Check that required examples and documentation are present and that temporary files or private configuration have not entered the package.\n\nOn GitHub, keep the release as a draft while checking its tag, target, notes, and attached assets. Review the final package and notes together before publishing. Keep the exact reviewed files and their version identity afterward, so a later report can be compared with what users actually downloaded.","checklist":[{"id":"release-commit","text":"Confirm the release commit and test results."},{"id":"release-package","text":"Test the downloadable package in a clean environment."},{"id":"release-notes","text":"Write upgrade steps and record known limits."},{"id":"release-review","text":"Have a second maintainer review the final release notes."}]},{"id":"recover-commit","title":"Recover a lost commit","body":"Use this procedure when a committed change seems to have disappeared after a branch switch, rebase, or reset. It does not promise recovery of files that were never committed. Pause cleanup and further history changes. Preserve a private copy of the working files and repository metadata before investigating; uncommitted work needs its own protection.\n\nIn the local repository where the work happened, inspect the recent reference history:\ngit reflog --date=iso\n\nLook for a plausible commit near the relevant operation. Reflogs belong to that local repository; a fresh clone does not import another clone's reflog. Entries can expire, and the referenced objects may eventually be removed, so this is a recovery aid rather than a backup policy.\n\nReplace COMMIT_ID below with the candidate commit identifier. Inspect both its summary and actual changes before choosing it:\ngit show --stat COMMIT_ID\ngit show COMMIT_ID\n\nIf the contents are correct, preserve that commit under a new, unused branch name:\ngit branch recovered-work COMMIT_ID\n\nThis creates a branch without switching the current working tree. If the name already exists, choose another name rather than forcing an overwrite. Confirm the saved branch points where expected:\ngit log -1 --oneline recovered-work\n\nKeep the current branch intact. Decide separately, with the relevant maintainer, whether to merge or otherwise integrate the recovered work. Recovery is complete when the intended commit has a durable name and its contents have been inspected, not when unrelated history has been replaced.","checklist":[{"id":"recovery-copy","text":"Preserve working files and repository metadata privately."},{"id":"recovery-inspect","text":"Inspect the candidate commit summary and actual changes."},{"id":"recovery-branch","text":"Create an unused recovery branch at the inspected commit."},{"id":"recovery-confirm","text":"Confirm the recovered branch before planning integration."}]},{"id":"maintainer-handover","title":"Hand over maintainership","body":"Transfer a working process, not just a repository role. Write down who reviews changes, approves releases, handles incoming reports, and covers an unavailable maintainer. Include the next planned release, unfinished work, known operational problems.\n\nMake an access inventory covering the repository, package registry, build system, documentation host, domain administration, and any other service the project actually uses. For each entry, record its purpose, current owner, successor, required permission, and recovery route. Record where an approved secret is managed, never its value. Keep private keys, passwords, recovery codes, and tokens out of the handbook, issues, and public handover notes.\n\nGive the successor the permissions needed for the agreed job. GitHub organization repository roles differ: maintainership does not automatically include every administrative action. Have the successor verify access with their own account and rehearse the documented release process without publishing a real release.\n\nReview automation separately from personal access. A GitHub deploy key can remain active after its creator loses repository access. Identify its purpose and arrange any replacement or revocation through the responsible administrator. After confirming the successor can operate, review departing access, record what changed, and leave a clear contact route for unresolved questions.","checklist":[{"id":"handover-roles","text":"Record responsibilities, coverage, and the handover date."},{"id":"handover-inventory","text":"Inventory services and permissions without copying secrets."},{"id":"handover-rehearse","text":"Have the successor rehearse with their own account."},{"id":"handover-automation","text":"Review deploy keys and automation separately from people."}]},{"id":"offline-continuity","title":"Keep a usable offline copy","body":"A bookmarked host is not a retained copy. Keep the actual documentation, release files, source, and instructions needed for the version you depend on. Give the retained set a version name and record when it was checked. Keep a second copy in another place that is appropriate for the project's public or private material.\n\nFor reachable Git history, a complete local clone can produce a portable bundle:\ngit bundle create project-history.bundle --all\n\nUse a new output filename. The bundle contains Git objects reachable from the included references; it is not a complete copy of a hosted project. Save working files, release attachments, important issue context, and operational notes separately. Large File Storage content and submodule repositories also need their own retained copies when the project uses them.\n\nTest the retained material in a separate location with network access unavailable. Open the documentation, locate a real procedure, and check that its required files are present. For a guide, verify search and navigation; for software, distinguish reading its instructions from successfully building it offline. Record missing dependencies instead of assuming they were bundled.\n\nTreat a successful check as evidence for that version and environment. Repeat it when the retained package changes.","checklist":[{"id":"offline-files","text":"Retain versioned source, documentation, and release files."},{"id":"offline-extras","text":"Save required external assets and operational context separately."},{"id":"offline-check","text":"Test a real procedure with network access unavailable."},{"id":"offline-limits","text":"Record the checked version, environment, and missing dependencies."}]}]}</script><script>
+function filterGuideSections(pack, query) {
+  const needle=query.trim().toLocaleLowerCase();
+  return pack.sections.filter(s=>[s.title,s.body,...s.checklist.map(i=>i.text)].join('\n').toLocaleLowerCase().includes(needle));
+}
+function loadGuideProgress(pack, storage) {
+  const fresh={section:pack.sections[0].id,checked:[],persistent:false};
+  try {
+    const saved=JSON.parse(storage.getItem('sunset-guide-progress:'+pack.id));
+    fresh.persistent=true;
+    if (!saved || saved.version!==JSON.stringify(pack) || !Array.isArray(saved.checked) || saved.checked.length>2048) return fresh;
+    const valid=new Set(pack.sections.flatMap(s=>s.checklist.map(i=>i.id)));
+    return {section:pack.sections.some(s=>s.id===saved.section)?saved.section:fresh.section,
+      checked:[...new Set(saved.checked.filter(id=>typeof id==='string'&&valid.has(id)))],persistent:true};
+  } catch { return fresh; }
+}
+function saveGuideProgress(pack, state, storage) {
+  try {
+    storage.setItem('sunset-guide-progress:'+pack.id,JSON.stringify({version:JSON.stringify(pack),section:state.section,checked:state.checked}));
+    return true;
+  } catch { return false; }
+}
+(function startGuideReader() {
+  const pack=JSON.parse(document.getElementById('pack-data').textContent),byId=id=>document.getElementById(id);
+  let storage;
+  try { storage=localStorage; } catch {}
+  let state=loadGuideProgress(pack,storage);
+  const total=pack.sections.reduce((n,s)=>n+s.checklist.length,0);
+  byId('guide-title').textContent=pack.title;
+  byId('guide-description').textContent=pack.description;
+  document.title=pack.title+' · Offline';
+  function status() {
+    byId('guide-progress').textContent=state.checked.length+' of '+total+' checks complete. '+(state.persistent?'Saved on this device.':'Browser storage is unavailable. Checks stay for this open tab only.');
+  }
+  function save() { state.persistent=saveGuideProgress(pack,state,storage);status(); }
+  function render() {
+    const matches=filterGuideSections(pack,byId('guide-search').value),section=matches.find(s=>s.id===state.section)||matches[0];
+    if (section) state.section=section.id;
+    byId('guide-search-status').textContent=matches.length+' of '+pack.sections.length+' chapters';
+    const nav=byId('guide-chapters');nav.replaceChildren();
+    for (const s of matches) {
+      const b=document.createElement('button');b.type='button';b.dataset.sectionId=s.id;
+      if (s===section) b.setAttribute('aria-current','page');
+      const n=document.createElement('span');n.className='guide-chapter-number';n.textContent='CHAPTER '+String(pack.sections.indexOf(s)+1).padStart(2,'0');
+      const label=document.createElement('span');label.textContent=s.title;b.append(n,label);
+      b.addEventListener('click',()=>{state.section=s.id;save();render();byId('guide-section-title').focus()});nav.append(b);
+    }
+    const article=byId('guide-chapter');article.replaceChildren();
+    const heading=document.createElement('h2');heading.id='guide-section-title';heading.className='guide-section-title';heading.tabIndex=-1;
+    heading.textContent=section?section.title:'No matching chapters';article.append(heading);
+    if (section) {
+      const body=document.createElement('p');body.className='guide-body';body.textContent=section.body;article.append(body);
+      if (section.checklist.length) {
+        const list=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent='Procedure checklist';list.append(legend);
+        for (const item of section.checklist) {
+          const label=document.createElement('label');label.className='guide-check';
+          const input=document.createElement('input');input.type='checkbox';input.id='check-'+item.id;input.dataset.checkId=item.id;input.checked=state.checked.includes(item.id);
+          const text=document.createElement('span');text.textContent=item.text;label.append(input,text);
+          input.addEventListener('change',()=>{state.checked=input.checked?[...state.checked.filter(id=>id!==item.id),item.id]:state.checked.filter(id=>id!==item.id);save()});list.append(label);
+        }
+        article.append(list);
+      }
+    }
+    status();
+  }
+  byId('guide-search').addEventListener('input',render);
+  render();
+})();
+</script></body></html>
