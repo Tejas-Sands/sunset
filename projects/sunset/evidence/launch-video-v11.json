@@ -1,0 +1,297 @@
+{
+  "checked_at": "2026-11-04T05:52:57.948757+00:00",
+  "version": 11,
+  "status": "prepared_locally_verified_not_posted",
+  "film_path": ".publication/sunset-launch-v11/render/sunset-launch-v11.mp4",
+  "sha256": "e2e438b46dd73aeffeb0ccdc46a2935f8bdfa8501bbbc953c8a8ccba67680b1d",
+  "bytes": 9995783,
+  "duration_seconds": 34,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "frames": 1020,
+  "video_codec": "h264",
+  "pixel_format": "yuv420p",
+  "color": "BT709 limited",
+  "audio_codec": "aac",
+  "audio_sample_rate": 48000,
+  "audio_channels": 2,
+  "faststart": true,
+  "source": "../media/launch-v11/README.md",
+  "script": "../media/launch-v11/SCRIPT.md",
+  "review": "../media/launch-v11/REVIEW.md",
+  "feature_evidence": "handbook-guide.json",
+  "feature_commit": "16cb3b5",
+  "operator_request": "Real spongy3D objects, kinetic/dynamic motion, no solid intersections or objects passing through one another.",
+  "source_hashes": {
+    "motion-full.mjs": "a40653d3b7e37c4a697a571944594186754adcdceb31170c048ececcbd6fba8a",
+    "motion.mjs": "4453a3ddff995d410980add4dc9a29ee96de8de45f4edfcea092fdf943cfd504",
+    "prepare_audio.py": "15653060c519d3603d7536fed5582e280a905c329c23cdc4c8ed8e1b6f89cec3",
+    "prepare_full_audio.py": "2d2564c5948ee4dafd0744503348670d0ad11468cea9f7733656de2daf561607",
+    "render_full_scene.mjs": "6bd29b6440dff380e8afa76db48e773c8e14be42cae5210ee5af4bcd98b5123c",
+    "render_launch.py": "74cdeeccf0415ec4c81bcaae44fb3fa05758d91df53776e15f3c9171fe20cfee",
+    "render_scene.mjs": "361ac38396d4ee16bcb7e1b2e9d62816c8bd86f3456864363b47d02826925732",
+    "scene-full.mjs": "b1c48414882543d3bb7c7b2cc417918224c9f02a067ccd83c36b30b998251ba9",
+    "scene.mjs": "665fd540eceee426e9a1b2c4f81c2df3b71355414c1a754ae4d49703db15fe17",
+    "sound-cues-proof.json": "30ba1a863907d049a2a9b1cbe209e4ebe84b81574c7c07f29a157d68b282d638",
+    "sound-cues.json": "5d8ebeea22e3f834010666cb713de4fe2b0c30083d9b4dc4bc633ae035a7c2ae",
+    "timeline.json": "48668e5618be11de8135d0ebc29af99f3c41686f04d20740f69fd4dda6cde82b",
+    "verify_delivery.py": "1beb904aaad844cbf9def0daaa215897a88fafef578aa30ac62207ff0487a334",
+    "verify_full_motion.mjs": "e493f9559af9af742cdf139d6ef71a884cd8ab24c2d202790f40ce29b9cf66d3",
+    "verify_motion.mjs": "76919439241ea9afb4294f62dff700c7b986e029c67a82a84286b85d2668e83a"
+  },
+  "style": {
+    "native_3d": true,
+    "new_rounded_meshes": true,
+    "satin_cream_coral_mint_materials": true,
+    "whole_phrase_copy": true,
+    "softness": "Authored volume-preserving affine compression, lateral bulge and damped recovery. Not a full soft-body solver.",
+    "purposeful_camera_travel": true,
+    "original_sunset_mark": true,
+    "onscreen_product_url": false,
+    "onscreen_music_credit": false,
+    "generated_voice": false,
+    "video_encode_passes": 1,
+    "crf": 14,
+    "old_movie_pixels_used": false,
+    "interpolation": false,
+    "native_3d_upscaled": false
+  },
+  "requirements": {
+    "problem": "Good work needs backing; public handbooks need sponsorship.",
+    "near_role": "Sponsorship custody on NEAR; matching key and on-time release enable creator withdrawal. Missed funding/release conditions enable pre-release sponsor refunds.",
+    "actual_action_result": {
+      "interval_seconds": [
+        19,
+        24
+      ],
+      "action": "Real checklist input in the downloaded offline handbook.",
+      "result": "Checked step and saved progress retained through actual reload.",
+      "speed": 1,
+      "commands_executed": false
+    },
+    "payoff": "Keep a usable copy; read without a wallet.",
+    "financial_images_are_illustrations": true,
+    "handbook_onchain_funded_release_established": false
+  },
+  "native_picture": {
+    "proof_frames": 240,
+    "continuation_frames": 510,
+    "native_3d_total": 750,
+    "genuine_ui_output_frames": 150,
+    "original_brand_hold_frames": 120,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "msaa_samples": 4,
+    "source_method": "Exact n/30 native WebGL2 PNGs, actual UI PNG holds and original raster logo/type.",
+    "proof_capture": {
+      "path": ".publication/sunset-launch-v11/scene/native-render.json",
+      "sha256": "3b9a29dedae62b8b0bce35f0ae361094c06ce736cf2e5aa656a6dc0a45a16f0d"
+    },
+    "continuation_capture": {
+      "path": ".publication/sunset-launch-v11/scene/full-native-render.json",
+      "sha256": "55fb151cef9701e3aee2bf57109d29c00d58b896161c80b081090e09588d9a73"
+    }
+  },
+  "geometry": {
+    "pass": true,
+    "proof_actual_mesh_frames": 240,
+    "proof_solids": 6,
+    "proof_vertex_reads": 4731840,
+    "continuation_actual_mesh_frames": 510,
+    "continuation_solids": 8,
+    "continuation_vertex_reads": 13406880,
+    "dense_states": 8161,
+    "continuous_intervals": 8160,
+    "pairs_per_interval": 28,
+    "minimum_certified_gaps": {
+      "floor": 0.00399999998535974,
+      "pair": 0.003999999973599433,
+      "camera": 1.4931443451705952
+    },
+    "certification": "PASS: original240proof frames +510continuation frames, dense and continuous support certificates",
+    "scope": "Actual0\u20138s proof has6bodies under the original source. Continuation capture has8bodies at8\u201319s and24\u201330s. The8body mathematical model at0\u20138s is not claimed as actual8body capture. Opaque genuine UI19\u201324s and endcard30\u201334s are separate composition gates.",
+    "camera_and_offscreen_policy": "Every solid has spatial camera near-plane clearance. Deliberately offscreen copies may lie outside the view frustum; essential text/framing is a separate review gate.",
+    "regression_checks": {
+      "passed": true,
+      "counterexamples": {
+        "stale_undeformed_pair_gap": 0.1,
+        "deformed_pair_gap": -0.2999999999999998,
+        "volume_preserving_floor_stretch_bottom": -0.25,
+        "thirty_fps_endpoint_gap": 1,
+        "between_frame_crossing_gap": -1
+      },
+      "checks": [
+        "deformed support",
+        "volume-preserving bulge",
+        "floor anchoring",
+        "30fps tunnelling",
+        "continuous peak enclosure",
+        "live geometry containment",
+        "camera identity"
+      ]
+    },
+    "report": {
+      "path": ".publication/sunset-launch-v11/qa/full-motion-verification.json",
+      "sha256": "8f7ca6b6e8c25632e8d5e6241e118edddc06868444caef6cb0195072184a3b0f"
+    },
+    "proof_report": {
+      "path": ".publication/sunset-launch-v11/qa/proof-native-verification.json",
+      "sha256": "1054e2a20b161f56db429c77d97abc376b222996cdce82d2d8a033b8838feb4b"
+    }
+  },
+  "actual_recording": {
+    "source_provenance": {
+      "path": ".publication/sunset-launch-v10/footage/capture-provenance.json",
+      "sha256": "ea94abea8db8e1cec01335d9da42399a99e34a7b1ef24c37965226c5109350f0"
+    },
+    "compositor_source": {
+      "path": ".publication/sunset-launch-v10/footage/compositor.json",
+      "sha256": "935881674b12a097c590d03f73a6a02ef3de41521ec41add3932a5430ef5011d"
+    },
+    "dimensions": [
+      4320,
+      2700
+    ],
+    "dpr": 3,
+    "method": "Passed native browser-owner screenshots interleaved with real input at recorded elapsed times. Honest holds, not uninterrupted30unique-frame UI recording.",
+    "source_elapsed_interval_seconds": [
+      1.873185997,
+      6.873185997
+    ],
+    "final_interval_seconds": [
+      19,
+      24
+    ],
+    "playback_speed": 1,
+    "networking": "Browser networking disabled before downloaded-file load; navigator.onLine false and zero external resources through input/reload.",
+    "failed_takes_used": false,
+    "genuine_output_roi_checks": 150,
+    "maximum_mean_channel_error_per_255": 2.0831,
+    "mapping": {
+      "source_manifest": ".publication/sunset-launch-v10/footage/compositor.json",
+      "source_v10_film_start": 30.657285278,
+      "source_capture_elapsed_start": 1.873185997,
+      "final_start": 19,
+      "final_end": 24,
+      "speed": 1,
+      "capture_sampling": "Honest native browser-owner screenshot holds interleaved with real input; not uninterrupted30fps UI capture.",
+      "meaningful_final_times": {
+        "check_started": 20.698816577,
+        "post_check_capture": 21.313333389,
+        "reload_started": 22.448702236,
+        "post_reload_capture": 23.096566018
+      }
+    }
+  },
+  "decoded_verification": {
+    "pass": true,
+    "decoded_frames": 1020,
+    "reading_windows": 10,
+    "reading_frame_assertions": 861,
+    "stable_glyph_probes": 1248,
+    "minimum_contrast": 10.4231,
+    "safe_bbox": [
+      100,
+      70,
+      1820,
+      1010
+    ],
+    "unexpected_black_intervals": 0,
+    "codec_source_font_audio_identity_checks": true,
+    "independent_report": {
+      "path": ".publication/sunset-launch-v11/qa/delivery-verification.json",
+      "sha256": "9486c905ec924801a9b6238be3ab21bd64203f061df9b094d0d161bc3d0caf8c"
+    },
+    "compositor_manifest": {
+      "path": ".publication/sunset-launch-v11/composite/composite-provenance.json",
+      "sha256": "16ac69e34a14740d14b42a457f4e0baa560402ea1d75b8d79b77fa82bab884f3"
+    }
+  },
+  "audio": {
+    "voice_present": false,
+    "tts_or_voice_models_used": false,
+    "music": "Backbay Lounge \u2014 Kevin MacLeod, CC BY4.0; continuous16\u201350s excerpt.",
+    "effects": "Ten edited real pillow contacts and one recorded page movement.",
+    "native_browser_audio": false,
+    "recorded_foley_only": true,
+    "integrated_lufs": -15.05,
+    "true_peak_dbtp": -2.48,
+    "separate_pre_master_stems": true,
+    "perceptual_listening_verified": false,
+    "qa": {
+      "path": ".publication/sunset-launch-v11/audio/qa.json",
+      "sha256": "7c89afa242621caeb2a5d5e8724ba360cc7f149953bd812b66c011017db04366"
+    },
+    "credits": "../media/launch-v11/CREDITS.md"
+  },
+  "visual_review": {
+    "pass": true,
+    "status": "sampled_decoded_visual_review_passed_with_cosmetic_limits",
+    "film_sha256": "e2e438b46dd73aeffeb0ccdc46a2935f8bdfa8501bbbc953c8a8ccba67680b1d",
+    "root_inspected": [
+      "actual native and corrected proof poses",
+      "dense decoded proof contact/gather/open strips",
+      "final decoded24-beat sheet",
+      "final decoded22-cut sheet",
+      "final decoded390px phone sheet",
+      "creator12.9-14.1s decoded100ms strip",
+      "copies26.3-27.7s decoded100ms strip"
+    ],
+    "separate_scene_reviewer": "Inspected the final dense creator/copy strips and beat/cut/390px sheets; no blocking spatial, camera or sampled pacing defect found.",
+    "editor_review": "Inspected actual decoded contact strips and beat sheet; no blocking spatial defect found.",
+    "observations": [
+      "Contact-driven seal compression, lateral bulge and damped settle are visible.",
+      "Copy approaches/landings have distinct lanes and clear silhouettes.",
+      "Brief side/rear orbit remains coherent dimensional parallax.",
+      "Creator landing stays above its essential caption.",
+      "Main phrases and genuine checklist/saved-result payoff read at390px.",
+      "Conditional refunds are labelled as a pre-release alternative.",
+      "Original mark and final brand resolve cleanly."
+    ],
+    "cosmetic_limits": [
+      "Empty cream caption plate briefly precedes fading text at exact phase boundaries, especially13.0/27.0s.",
+      "Incidental UV paragraphs and secondary UI text remain small on phones."
+    ],
+    "continuous_human_playback_verified": false,
+    "perceptual_listening_verified": false,
+    "audience_validation_claimed": false,
+    "creative_user_approval_claimed": false
+  },
+  "preserved_movies": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+    ".publication/sunset-launch-v6/sunset-launch-v6.mp4": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1",
+    ".publication/sunset-launch-v7/sunset-launch-v7.mp4": "8c1f850dce269c420ca9553b548a3a030107a2be2dec31864cf30819a210de44",
+    ".publication/sunset-launch-v8/sunset-launch-v8.mp4": "b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2",
+    ".publication/sunset-launch-v9/render/sunset-launch-v9.mp4": "f2f4d2e9cc7733af1c7dfa2491b2148217ba9857addd544931e1d710c5592319",
+    ".publication/sunset-launch-v10/render/sunset-launch-v10.mp4": "107eae578f8f4f5b3e6a7b356c2ec6590f9f66485ca090d15d46617248860ec0"
+  },
+  "posting": {
+    "main_post": "../media/launch-v11/x-post.txt",
+    "credit_reply": "../media/launch-v11/x-reply-credits.txt",
+    "demo": "https://sunset-lemon.vercel.app",
+    "repository": "https://github.com/Tejas-Sands/sunset",
+    "feedback": "What would you fund?",
+    "public_x_post_url": null
+  },
+  "generated_media_ignored": true,
+  "app_changes": false,
+  "contract_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "submission_sent": false,
+  "limits": [
+    "Subjective audience response and human continuous playback remain unassessed.",
+    "Perceptual sound listening remains unassessed.",
+    "Incidental UV paragraphs and secondary UI text are small on a phone.",
+    "The handbook is locally verified; it does not replace old finalized testnet campaign content."
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "stage": "full_launch",
+  "duration_seconds": 34,
+  "voice": null,
+  "sources": [
+    {
+      "id": "music",
+      "title": "Backbay Lounge",
+      "artist": "Kevin MacLeod",
+      "isrc": "USUAN1700068",
+      "tempo_bpm": 120,
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700068",
+      "detail": "https://remote.incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1700068",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Backbay%20Lounge.mp3",
+      "file": ".publication/sunset-launch-v9/audio-research/music/kevin-macleod-backbay-lounge.mp3",
+      "sha256": "9567e71a213b0026341b2c0ecd226950e7653abd235cf520fb9aee4247d74d96",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution_required": true,
+      "attribution_placement": "Accompanying public post/video description and CREDITS.md; no onscreen credit",
+      "excerpt_start_seconds": 16,
+      "excerpt_end_seconds": 50,
+      "changes": "Continuous 34-second excerpt, EQ, smooth gain and stereo-width arrangement, fades and mastering."
+    },
+    {
+      "id": "pillow-impact",
+      "title": "Soft Impact - Pillow Hit",
+      "author": "KoimeMatsuchiya",
+      "source": "https://freesound.org/people/KoimeMatsuchiya/sounds/872227/",
+      "download": "https://cdn.freesound.org/previews/872/872227_19256798-hq.mp3",
+      "file": ".publication/sunset-launch-v11/audio-research/pillow-impact.mp3",
+      "sha256": "244a081dd0e32e77559e8f0ce6adf5a01b694fb9ac6413a494d9c277924d9d5f",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_page_snapshot": ".publication/sunset-launch-v11/audio-research/pillow-impact-source.html",
+      "source_description": "A practical Foley recording of hitting a pillow.",
+      "representation": "Official HQ MP3 preview, not original WAV",
+      "perceptual_listening_verified": false
+    },
+    {
+      "id": "page-turn-1",
+      "author": "OwlStorm",
+      "sound_id": 151220,
+      "source": "https://freesound.org/people/OwlStorm/sounds/151220/",
+      "download": "https://cdn.freesound.org/previews/151/151220_140737-hq.mp3",
+      "file": ".publication/sunset-launch-v9/audio-research/page-turn-1.mp3",
+      "sha256": "41f51725007894483999812091faf74d0d341092c0a24c55c0778fe245ea45f4",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV",
+      "source_page_snapshot": ".publication/sunset-launch-v9/audio-research/page-turn-1-source.html"
+    }
+  ],
+  "music_filter": "highpass=f=45,lowpass=f=15000,loudnorm=I=-20:TP=-4:LRA=8",
+  "music_gain_db": [
+    [
+      0,
+      -2
+    ],
+    [
+      2.4,
+      0
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      13,
+      0.5
+    ],
+    [
+      18.5,
+      0
+    ],
+    [
+      19,
+      -3.5
+    ],
+    [
+      23.7,
+      -3.5
+    ],
+    [
+      24.2,
+      1.5
+    ],
+    [
+      30,
+      1
+    ],
+    [
+      34,
+      0
+    ]
+  ],
+  "effects": [
+    {
+      "id": "seal-contact",
+      "source_id": "pillow-impact",
+      "peak_seconds": 0.55,
+      "measured_peak_seconds": 0.55,
+      "start_seconds": 0.4443958333333333,
+      "end_seconds": 0.8403958333333333,
+      "stereo_channel_gains": [
+        1,
+        1
+      ],
+      "max_peak_dbfs_before_master": -10,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "community-left",
+      "source_id": "pillow-impact",
+      "peak_seconds": 2.9,
+      "measured_peak_seconds": 2.9,
+      "start_seconds": 2.794395833333333,
+      "end_seconds": 3.1903958333333335,
+      "stereo_channel_gains": [
+        1,
+        0.7
+      ],
+      "max_peak_dbfs_before_master": -10,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "community-right",
+      "source_id": "pillow-impact",
+      "peak_seconds": 3.3,
+      "measured_peak_seconds": 3.3,
+      "start_seconds": 3.1943958333333335,
+      "end_seconds": 3.5903958333333335,
+      "stereo_channel_gains": [
+        0.7,
+        1
+      ],
+      "max_peak_dbfs_before_master": -10,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "community-rear",
+      "source_id": "pillow-impact",
+      "peak_seconds": 3.7,
+      "measured_peak_seconds": 3.7,
+      "start_seconds": 3.5943958333333335,
+      "end_seconds": 3.9903958333333334,
+      "stereo_channel_gains": [
+        0.9,
+        0.9
+      ],
+      "max_peak_dbfs_before_master": -10,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "cover-clears",
+      "source_id": "page-turn-1",
+      "peak_seconds": 6.2,
+      "measured_peak_seconds": 6.2,
+      "start_seconds": 6.014666666666667,
+      "end_seconds": 6.474666666666667,
+      "stereo_channel_gains": [
+        1,
+        1
+      ],
+      "max_peak_dbfs_before_master": -17,
+      "source_crop_seconds": [
+        0,
+        0.46
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "creator-lane-landing",
+      "source_id": "pillow-impact",
+      "peak_seconds": 13.2,
+      "measured_peak_seconds": 13.2,
+      "start_seconds": 13.094395833333333,
+      "end_seconds": 13.490395833333332,
+      "stereo_channel_gains": [
+        1,
+        0.65
+      ],
+      "max_peak_dbfs_before_master": -11,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "refund-left-landing",
+      "source_id": "pillow-impact",
+      "peak_seconds": 18.3,
+      "measured_peak_seconds": 18.3,
+      "start_seconds": 18.194395833333335,
+      "end_seconds": 18.590395833333332,
+      "stereo_channel_gains": [
+        1,
+        0.5
+      ],
+      "max_peak_dbfs_before_master": -17,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "refund-right-landing",
+      "source_id": "pillow-impact",
+      "peak_seconds": 18.3,
+      "measured_peak_seconds": 18.3,
+      "start_seconds": 18.194395833333335,
+      "end_seconds": 18.590395833333332,
+      "stereo_channel_gains": [
+        0.5,
+        1
+      ],
+      "max_peak_dbfs_before_master": -17,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "refund-rear-landing",
+      "source_id": "pillow-impact",
+      "peak_seconds": 18.7,
+      "measured_peak_seconds": 18.7,
+      "start_seconds": 18.594395833333333,
+      "end_seconds": 18.990395833333334,
+      "stereo_channel_gains": [
+        0.8,
+        0.8
+      ],
+      "max_peak_dbfs_before_master": -15,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "retained-copy-left",
+      "source_id": "pillow-impact",
+      "peak_seconds": 26.7,
+      "measured_peak_seconds": 26.7,
+      "start_seconds": 26.594395833333333,
+      "end_seconds": 26.990395833333334,
+      "stereo_channel_gains": [
+        1,
+        0.7
+      ],
+      "max_peak_dbfs_before_master": -11,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    },
+    {
+      "id": "retained-copy-right",
+      "source_id": "pillow-impact",
+      "peak_seconds": 27,
+      "measured_peak_seconds": 27.0,
+      "start_seconds": 26.894395833333334,
+      "end_seconds": 27.290395833333335,
+      "stereo_channel_gains": [
+        0.7,
+        1
+      ],
+      "max_peak_dbfs_before_master": -11,
+      "source_crop_seconds": [
+        0,
+        0.396
+      ],
+      "added_recorded_foley": true
+    }
+  ],
+  "master_filter": "loudnorm=I=-15:TP=-2.5:LRA=8:linear=true:measured_I=-20.73:measured_TP=-5.58:measured_LRA=5.40:measured_thresh=-30.82:offset=0.61",
+  "shared_helper_sha256": "52755d842c5d192da7b3a13c270e80d20e3ea767518ac2d0a5e20da0fe211be0",
+  "editing_note": "Foley is added practical sound. No browser audio, synthesized effects or generated narration."
+}

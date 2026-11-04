@@ -308,12 +308,13 @@
   "browser_showcase": "browser-showcase.json",
   "operator_control": "All financial roles share one operator; separate IDs prove authority checks, not independent people.",
   "launch_media": {
-    "status": "current_v10_handbook_prepared_locally_verified_not_posted",
-    "duration_seconds": 44,
+    "status": "current_v11_tactile_3d_prepared_locally_verified_not_posted",
+    "duration_seconds": 34,
     "delivery_guide": "../docs/LAUNCH_VIDEO.md",
-    "evidence": "launch-video-v10.json",
-    "source": "../media/launch-v10/README.md",
+    "evidence": "launch-video-v11.json",
+    "source": "../media/launch-v11/README.md",
     "previous_version_evidence": [
+      "launch-video-v10.json",
       "launch-video-v9.json",
       "launch-video-v8.json",
       "launch-video-v7.json",
@@ -324,11 +325,14 @@
       "launch-video-v2.json",
       "launch-video.json"
     ],
+    "native_3d": true,
+    "geometry_verified": true,
+    "decoded_frames_verified": 1020,
     "public_x_post_url": null,
     "perceptual_listening_verified": false,
     "voice_present": false,
     "tts_or_voice_models_used": false,
-    "replacement_direction": "../media/launch-v10/DIRECTION.md"
+    "replacement_direction": "../media/launch-v11/DIRECTION.md"
   },
   "fresh_e2e_audit": "e2e-2026-11-03.json",
   "testnet_refunds": "testnet-refunds.json",

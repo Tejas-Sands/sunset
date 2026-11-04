@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "duration": 34,
+  "fps": 30,
+  "dimensions": [1920, 1080],
+  "status": "Root-locked34s layout; final delivery follows the eight-second tactile feel gate and independent decoded-motion review.",
+  "intro_overlay": {"start": 0.4, "end": 2.4, "stable_read_start": 0.6, "text": "Good work needs backing.", "physical_source": "Unchanged opening proof PNGs; compositor-owned protected screen phrase only."},
+  "financial_images": "Protocol illustrations. The handbook has no separately established onchain funding or release.",
+  "phases": [
+    {"id": "touch-gather-open", "start": 0, "end": 8, "picture": "Unchanged accepted native proof PNGs at exact original timestamps", "text": []},
+    {"id": "custody", "start": 8, "end": 10.5, "picture": "Native pullback on the open guide and mint sponsorship pieces", "text": ["Sponsorship held on NEAR."]},
+    {"id": "matching-key", "start": 10.5, "end": 13, "picture": "Native coral seal clears into its separate left lane", "text": ["Matching key.", "On-time release."]},
+    {"id": "withdrawal", "start": 13, "end": 15.4, "picture": "Native coral landing, compression and settlement in the creator lane", "text": ["Creator can withdraw."]},
+    {"id": "conditional-refunds", "start": 15.4, "end": 19, "picture": "Alternative pre-release outcome: mint pieces reverse along separated original lanes", "text": ["Before release", "Target missed? Release late?", "Sponsors claim refunds."]},
+    {"id": "genuine-handbook", "start": 19, "end": 24, "picture": "Passed actual downloaded-file procedure, checklist input and saved result at original elapsed speed", "text": ["Your handbook. Offline."]},
+    {"id": "retained-copies", "start": 24, "end": 27, "picture": "Native original and two preexisting separated padded copies", "text": ["Keep a usable copy."]},
+    {"id": "wallet-free-reader", "start": 27, "end": 30, "picture": "Native camera travel resolves the three useful copies", "text": ["Read without a wallet."]},
+    {"id": "brand", "start": 30, "end": 34, "picture": "Original SUNSET mark and a clean native1080 static landing", "text": ["SUNSET", "Support once. Share forever."]}
+  ],
+  "actual_ui_mapping": {
+    "source_manifest": ".publication/sunset-launch-v10/footage/compositor.json",
+    "source_v10_film_start": 30.657285278,
+    "source_capture_elapsed_start": 1.873185997,
+    "final_start": 19,
+    "final_end": 24,
+    "speed": 1,
+    "capture_sampling": "Honest native browser-owner screenshot holds interleaved with real input; not uninterrupted30fps UI capture.",
+    "meaningful_final_times": {"check_started": 20.698816577, "post_check_capture": 21.313333389, "reload_started": 22.448702236, "post_reload_capture": 23.096566018}
+  },
+  "native_continuation_frames": [[240, 570], [720, 900]],
+  "native_continuation_intervals_are_end_exclusive": true,
+  "audio": "Licensed instrumental and recorded Foley only; no generated voice.",
+  "picture_exclusions": ["product URL", "music-credit block", "architecture tables", "quiz arithmetic"],
+  "review_limit": "Source, geometry and codec checks support review. Tactile contact, motion, camera and pacing require separate decoded-motion inspection."
+}

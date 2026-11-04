@@ -18,7 +18,7 @@
   "audio_channels": 2,
   "faststart": true,
   "version": 10,
-  "status": "prepared_locally_verified_not_posted",
+  "status": "operator_requested_tactile_3d_revision",
   "source": "../media/launch-v10/README.md",
   "script": "../media/launch-v10/SCRIPT.md",
   "review": "../media/launch-v10/REVIEW.md",
@@ -221,5 +221,10 @@
   "contract_changes": false,
   "chain_mutations": 0,
   "public_x_post_url": null,
-  "submission_sent": false
+  "submission_sent": false,
+  "operator_feedback": {
+    "request": "A kinetic, dynamic launch video with spongy real 3D objects that do not intersect or pass through one another.",
+    "replacement_direction": "../media/launch-v11/DIRECTION.md",
+    "technical_evidence_preserved": true
+  }
 }
