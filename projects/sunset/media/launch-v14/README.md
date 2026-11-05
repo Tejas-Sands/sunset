@@ -2,6 +2,8 @@
 
 The operator rejected V13 because three poster layouts and wipes looked unlike the supplied films. V14 follows each film separately instead of mixing their styles. The [595-frame study](../reference-study-2026-11-05/README.md) supplies exact source identities and timings; [fidelity review](FIDELITY.md) records the visual gate and its limits.
 
+**Subsequent operator review:** both V14 styles were explicitly approved and their fusion requested. The resulting full cut is [V15](../launch-v15/README.md). The original test files and technical records below remain unchanged; the approval concerns these styles, not an unreviewed new final film.
+
 | Test | Source scope | Original-only output |
 | --- | --- | --- |
 | Collage | Feel Good f000–159, 8 seconds at 20 fps | `.publication/sunset-launch-v14/collage/sunset-collage-motion-match-8s.mp4` |
@@ -15,4 +17,4 @@ Neither test has a persistent headline, footer or explanatory overlay. The colla
 
 All videos, reference extractions, comparison images, generated assets and cached fonts remain ignored. Reproduction needs those locally retained inputs, Pillow, NumPy and FFmpeg; these are developer media tools, not requirements for using SUNSET. Render gates first with `python projects/sunset/media/launch-v14/collage-match.py --gate --compare` and `python projects/sunset/media/launch-v14/minimal-match.py --gates`. Inspect source-matched comparisons before rendering full output with the respective `--render` and `--frames --encode` options. `python projects/sunset/media/launch-v14/verify-and-compare.py` independently decodes both finished files, checks their identity/format and the thirteen older movies, and creates separately labelled private comparison videos.
 
-The [35-second creator-first script](../launch-v12/SCRIPT_DRAFT.md) remains a proposal: valuable work can be free to use while its creator is compensated and able to keep creating. These tests do not demonstrate a workshop release, financial settlement or browser interaction. No application, contract, campaign, signature, deployment, social post or submission changes are part of this batch. Operator creative approval is not claimed.
+The earlier [35-second creator-first script](../launch-v12/SCRIPT_DRAFT.md) motivated these tests; the [V15 script](../launch-v15/SCRIPT.md) supersedes its timing. The tests themselves do not demonstrate a workshop release, financial settlement or browser interaction. No application, contract, campaign, signature, deployment, social post or submission changes were part of the V14 batch.

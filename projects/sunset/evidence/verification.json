@@ -308,27 +308,18 @@
   "browser_showcase": "browser-showcase.json",
   "operator_control": "All financial roles share one operator; separate IDs prove authority checks, not independent people.",
   "launch_media": {
-    "status": "v13_operator_rejected; separate_v14_reference_timed_tests_rendered_with_qualified_visual_review",
+    "status": "40_second_fusion_rendered; qualified_final_visual_review; independent_export_and_genuine_UI_checks_passed",
     "reference_study": "reference-study-2026-11-05.json",
-    "native_reference_frames_studied": 595,
     "delivery_guide": "../docs/LAUNCH_VIDEO.md",
-    "proposed_main_script": "../media/launch-v12/SCRIPT_DRAFT.md",
-    "current_style_evidence": "launch-motion-v14.json",
-    "style_test_seconds": [
-      8,
-      10.833333333333334
-    ],
-    "full_new_launch_film_rendered": false,
-    "previous_style_evidence": "launch-concept-v13.json",
-    "previous_style_status": "operator_rejected_reference_fidelity",
-    "latest_full_film": {
-      "version": 11,
-      "evidence": "launch-video-v11.json",
-      "status": "operator_requested_usecase_and_script_reset"
-    },
-    "public_x_post_url": null,
+    "current_script": "../media/launch-v15/SCRIPT.md",
+    "current_film_evidence": "launch-video-v15.json",
+    "duration_seconds": 40,
+    "previous_style_evidence": "launch-motion-v14.json",
+    "previous_styles_approved_by_operator": true,
+    "current_film_approved_by_operator": false,
     "voice_present": false,
-    "operator_creative_approval_claimed": false
+    "public_x_post_url": null,
+    "posting_or_submission_performed": false
   },
   "fresh_e2e_audit": "e2e-2026-11-03.json",
   "testnet_refunds": "testnet-refunds.json",

@@ -1,0 +1,168 @@
+{
+  "checked_at": "2026-11-05T10:01:57.281982+00:00",
+  "status": "40_second_fusion_rendered; qualified_final_visual_review; independent_export_and_genuine_UI_checks_passed",
+  "source": "../media/launch-v15/README.md",
+  "script": "../media/launch-v15/SCRIPT.md",
+  "review": "../media/launch-v15/REVIEW.md",
+  "credits": "../media/launch-v15/CREDITS.md",
+  "post_draft": "../media/launch-v15/x-post.txt",
+  "credit_reply": "../media/launch-v15/x-reply-credits.txt",
+  "operator_approval": {
+    "scope": "Both V14 styles approved; fusion explicitly requested. New V15 final-film approval is not claimed.",
+    "quote": "collage one is really impresive!!! and the minmal is the cherry on top , the fusion would be worth the effort, KEEP COOKING !!!!"
+  },
+  "movie": {
+    "path": ".publication/sunset-launch-v15/sunset-launch-fusion.mp4",
+    "sha256": "c68e17876b78c29f352d066279333780c3defeb16a100bb900c7485255a34046",
+    "bytes": 10494346,
+    "duration": 40,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 1200,
+    "codec": "H264/yuv420p limited BT709; AAC48kHz stereo; faststart",
+    "atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ]
+  },
+  "verification": {
+    "full_decode": true,
+    "video_packet_identity_with_silent_master": true,
+    "source_inputs_verified": true,
+    "encoded_integrated_lufs": -15.1,
+    "encoded_true_peak_dbtp": -2.5,
+    "method": "Full-scope FFmpeg ebur128 truepeak; rounded summary",
+    "genuine_UI_frames": 162,
+    "max_genuine_UI_mean_channel_error_255": 2.421778802643161,
+    "older_movie_identities_verified": 15,
+    "segment_identities_verified": 11
+  },
+  "actual_renderer_sha256": "e641f449d0bcda75e181f18a85ffe2d7b92c588bfc33d6ee969aacd968e1858d",
+  "render_manifest_sha256": "e5148444f42a50b80e583d00f68b46307147814d072e27308df047589ad79524",
+  "source_snapshot": "renderer-source-e641f449d0bc.py",
+  "per_segment_provenance": ".publication/sunset-launch-v15/segments/provenance.json",
+  "source_hashes_at_verification": {
+    "projects/sunset/media/launch-v15/CREDITS.md": "eccad7b36b44fcf4975a0e90979f8a483b9787870bcd80bc9688b69d269f8667",
+    "projects/sunset/media/launch-v15/DIRECTION.md": "ed19925402674494791f3a6d9f9ed0ac01caa80adfc565c6635a943364929fc6",
+    "projects/sunset/media/launch-v15/PLAN.md": "ec16beced14d7fca53de3a361d9e215e4d263630bf7e0351653eb798069dc0b9",
+    "projects/sunset/media/launch-v15/README.md": "682aeceda9c54d9afa531b8afd6cbea775735c74d8fd5412841c1967711f0d35",
+    "projects/sunset/media/launch-v15/REVIEW.md": "7d0d1034c0050e27959e2e68b9b386641953a0ce6344c2608bd7a3cfbc16d752",
+    "projects/sunset/media/launch-v15/SCRIPT.md": "58455c9dc2f79ee0e26c1418bee5ddfaa2ced25c14ad344bdd66f80d76b31e98",
+    "projects/sunset/media/launch-v15/audio-fusion.py": "75860dcfdcc69d7023a94f72a3b39eef8dfff5fbd64729b5526980c51138db2a",
+    "projects/sunset/media/launch-v15/render-fusion.py": "e641f449d0bcda75e181f18a85ffe2d7b92c588bfc33d6ee969aacd968e1858d",
+    "projects/sunset/media/launch-v15/verify-fusion.py": "968c66b497dc2b8944ba1253b528906b5625bb4738331af3227c520218e86263",
+    "projects/sunset/media/launch-v15/x-post.txt": "12e76851a0457ef51bc9332fe6044f32f587c4583d695e60eb882fed7196604a",
+    "projects/sunset/media/launch-v15/x-reply-credits.txt": "6221fd56a4920301bfbb6d435fd51050dfa28fe4972065f27e036889a92ee9af"
+  },
+  "original_asset_inputs": [
+    {
+      "path": ".publication/sunset-launch-v14/assets/creator-portrait.png",
+      "sha256": "a68f23e7b9578f569cfdbaeb5bd2cef4efa31e8d3052f2ae4815ab5710d08d47"
+    },
+    {
+      "path": ".publication/sunset-launch-v14/assets/workroom.png",
+      "sha256": "5838dbf289d795b5e900e9d26241afc1c00fe1318ce81e808c79f1561bbc0465"
+    },
+    {
+      "path": ".publication/sunset-launch-v13/assets/creator-cutout.png",
+      "sha256": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f"
+    }
+  ],
+  "helper_inputs": [
+    {
+      "path": "projects/sunset/media/launch-v14/collage-match.py",
+      "sha256": "0d08b1c0516d079e9e768a095f83f0e9d649d6832e34c595a4bfec974c0db7fa"
+    },
+    {
+      "path": "projects/sunset/media/launch-v14/minimal-match.py",
+      "sha256": "55094ba1d6e9c78b2cfd8fcae74fef01db8d18f5dcbc25ccf7666c3f13bfe854"
+    }
+  ],
+  "audio": {
+    "source_master_sha256": "0ccd4a0a9c324bf61f975ee37724a6bda74e65fc6c2ad05c34c6c81ac0923976",
+    "master_integrated_lufs": -15.29,
+    "master_true_peak_dbtp": -2.49,
+    "cue_count": 15,
+    "voice_present": false,
+    "perceptual_listening_assessed": false
+  },
+  "genuine_browser": {
+    "resource": "Open-source Maintainer Handbook",
+    "existing_downloaded_HTML_sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a",
+    "native_samples": [
+      {
+        "path": ".publication/sunset-launch-v15/capture/unchecked.png",
+        "sha256": "db312ca87fb82aeff8fbd2683bf8f46b4d2c65061a06ba6146688eef89e8b7e1",
+        "at": 0.0
+      },
+      {
+        "path": ".publication/sunset-launch-v15/capture/checked.png",
+        "sha256": "3df2cdf571d86334dd0709ecc1a1c20dd0dfd0c589537666fe77b087ef219cfa",
+        "at": 1.4736603630008176
+      },
+      {
+        "path": ".publication/sunset-launch-v15/capture/retained.png",
+        "sha256": "3df2cdf571d86334dd0709ecc1a1c20dd0dfd0c589537666fe77b087ef219cfa",
+        "at": 3.357672915000876
+      }
+    ],
+    "capture_manifest_sha256": "f9d9f9b858bee7596777aa31a775507209c584dd073893aaa22b0a1c3379339e",
+    "source_window": [
+      0,
+      5
+    ],
+    "film_window": [
+      26,
+      31
+    ],
+    "playback_speed": 1,
+    "retained_editorial_hold": [
+      31,
+      31.4
+    ],
+    "crops": [
+      [
+        650,
+        760,
+        1240,
+        820
+      ],
+      [
+        630,
+        925,
+        1040,
+        975
+      ],
+      [
+        665,
+        778,
+        686,
+        799
+      ]
+    ],
+    "offline_scope": "Browser offline emulation enabled before file open; file: and zero-resource checks before/after, not an OS network-adapter toggle.",
+    "capture_method": "Three native PNG states interleaved with actual checkbox/reload input, held at completed capture timestamps. Failed screencast excluded; not continuous 30 fps browser footage.",
+    "performed_underlying_handbook_procedure": false,
+    "new_funded_handbook_campaign": false
+  },
+  "visual_review": {
+    "root": "Actual native story/transition/phone gates and final decoded story sheet; independent UI readback.",
+    "independent": "Final decoded story, 66 boundary samples, native UI frames and production sources; qualified pass with no blocking findings.",
+    "limits": [
+      "Subsidiary annotations remain small.",
+      "Fictional makers and still-image layers are authored illustrations, not testimonials or natural filmed people.",
+      "No continuous human playback, perceptual listening or operator V15 creative approval is claimed."
+    ]
+  },
+  "financial_scope": "Labelled NEAR testnet illustration: timely release creates credit; a separate confirmed withdrawal precedes Paid. A separate missed-conditions branch allows sponsor refund claims; no automatic refunds.",
+  "reference_pixels_or_audio_in_output": false,
+  "old_proof_movies_concatenated": false,
+  "generated_media_ignored": true,
+  "app_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_or_submission_sent": false
+}

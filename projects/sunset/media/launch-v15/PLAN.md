@@ -32,9 +32,9 @@
 ## Tasks
 
 - [x] Lock the timed script before renderer implementation. Story agent owns `SCRIPT.md`, `DIRECTION.md` and `x-post.txt`; root checked scope and timing. The 40-second script precedes the renderer implementation.
-- [ ] Capture/audio agent records the existing offline handbook in one isolated browser session and prepares the licensed 40-second instrumental/Foley master. It owns `audio-fusion.py` and `CREDITS.md`; ignored manifests pin capture/source/cue identities.
-- [ ] Renderer agent implements `render-fusion.py` using existing helpers and the locked script. Inspect native chapter poses and handoff strips before the full silent encode; then inspect decoded output.
-- [ ] Root independently verifies/muxes final media, records evidence and delivery instructions, checks source/Git hygiene, and makes a verified local commit. Provide the operator's push command.
+- [x] Capture/audio agent recorded the existing offline handbook in one isolated browser session and prepared the licensed 40-second instrumental/Foley master. Ignored manifests pin actual capture/source/cue identities.
+- [x] Renderer implemented `render-fusion.py` using existing helpers and the locked script. Native/phone/handoff gates preceded encoding; root and an independent reviewer inspected actual decoded output.
+- [x] Root independently muxed/verified final media, recorded evidence/delivery instructions and checked source/Git hygiene. Source is saved in verified local commits; the operator pushes.
 
 ## Decisions
 

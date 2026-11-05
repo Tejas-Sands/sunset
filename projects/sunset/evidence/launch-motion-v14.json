@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-11-05T08:46:25.934631+00:00",
-  "status": "two_separate_reference_timed_tests_rendered; qualified_visual_review_with_departures",
+  "status": "operator_approved_both_styles; requested_fusion",
   "reason": "Operator rejected V13 as unlike the supplied references; its technical passes are preserved separately.",
   "source": "../media/launch-v14/README.md",
   "visual_review": "../media/launch-v14/FIDELITY.md",
@@ -114,7 +114,7 @@
       "Longer FREE/FAIR/PAID wording widens bracket groups; coral replaces source accent."
     ],
     "continuous_human_playback_assessed": false,
-    "operator_creative_approval_claimed": false
+    "operator_creative_approval_claimed": true
   },
   "original_asset_hashes": {
     ".publication/sunset-launch-v13/assets/creator-cutout.png": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f",
@@ -149,5 +149,11 @@
   "app_changes": false,
   "chain_mutations": 0,
   "deployment_performed": false,
-  "public_post_or_submission_sent": false
+  "public_post_or_submission_sent": false,
+  "operator_review": {
+    "scope": "Both V14 styles approved; fusion explicitly requested. New V15 final-film approval is not claimed.",
+    "quote": "collage one is really impresive!!! and the minmal is the cherry on top , the fusion would be worth the effort, KEEP COOKING !!!!",
+    "date": "2026-11-05",
+    "follow_up": "launch-video-v15.json"
+  }
 }
