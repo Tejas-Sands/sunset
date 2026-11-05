@@ -1,0 +1,211 @@
+{
+  "checked_at": "2026-11-05T06:26:05.882755+00:00",
+  "status": "researched_script_proposal_and_verified_style_concept_only",
+  "requested_order": [
+    "research actual uses",
+    "main script",
+    "animation style"
+  ],
+  "why": "Valuable work can be free to use while its creator is compensated and can keep creating.",
+  "scope_examples": [
+    "lessons",
+    "workshop kits",
+    "useful guides"
+  ],
+  "concrete_example": "First Community Workshop Kit; proposed content, not an implemented/funded new resource",
+  "research": "../media/launch-v12/RESEARCH.md",
+  "script": "../media/launch-v12/SCRIPT_DRAFT.md",
+  "proposed_full_script_seconds": 35,
+  "full_v12_film_rendered": false,
+  "style": "../media/launch-v12/STYLE.md",
+  "preview": {
+    "pass": true,
+    "concept": true,
+    "silent": true,
+    "path": ".publication/sunset-launch-v12/sunset-style-concept.mp4",
+    "sha256": "6194ac262950683c78e731574cb951dfd8d065cee931289d5b2e0ab4f1ae8d79",
+    "bytes": 1806425,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration": 5.5,
+    "decoded_frames": 165,
+    "codec": "h264",
+    "bt709": true,
+    "faststart": true,
+    "atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ],
+    "native_manifest": ".publication/sunset-launch-v12/scene/native-render.json",
+    "sheets": [
+      {
+        "path": ".publication/sunset-launch-v12/decoded-beat-sheet.jpg",
+        "sha256": "02119171ee09b8330046d21627cc33f9ef51690c59632c0ee101004e00730449"
+      },
+      {
+        "path": ".publication/sunset-launch-v12/decoded-contact-sheet.jpg",
+        "sha256": "b20aa9c3a460a841c017e4ccc075aa848811edf331ec3aef92a29cf902095c1e"
+      }
+    ],
+    "limitations": [
+      "Visual concept only; no real browser interaction, financial execution or newly implemented resource.",
+      "Authored affine squash and stretch; no general soft-body solver.",
+      "Unchanged V11 continuous certificate covers physical trajectory; playback speed is multiplied by 8/5.5.",
+      "Automated geometry and delivery checks do not establish audience response or creative approval."
+    ]
+  },
+  "preview_headline": "Free to use. Creators paid.",
+  "preview_label": "Concept preview",
+  "source_hashes": {
+    "wrapper": {
+      "path": "projects/sunset/media/launch-v12/style-preview.mjs",
+      "sha256": "3ad5ecc2b7ba8c1f8ee2059085b7d64d5ba2d1a96fe8740fd1306c28d604308e"
+    },
+    "renderer": {
+      "path": "projects/sunset/media/launch-v12/render-style.mjs",
+      "sha256": "2ebc163c87a608aaac3eb88c9ecb48c78132da932e2c8d24f88a9b24c1fcb081"
+    },
+    "scene": {
+      "path": "projects/sunset/media/launch-v11/scene.mjs",
+      "sha256": "665fd540eceee426e9a1b2c4f81c2df3b71355414c1a754ae4d49703db15fe17"
+    },
+    "motion": {
+      "path": "projects/sunset/media/launch-v11/motion.mjs",
+      "sha256": "4453a3ddff995d410980add4dc9a29ee96de8de45f4edfcea092fdf943cfd504"
+    },
+    "verifier": {
+      "path": "projects/sunset/media/launch-v11/verify_motion.mjs",
+      "sha256": "76919439241ea9afb4294f62dff700c7b986e029c67a82a84286b85d2668e83a"
+    }
+  },
+  "proposal_hashes": {
+    "RESEARCH.md": "b6799ac7fa8ad509075a2a3298d4a6e44e5b74276e44e62c420a606af70a88ed",
+    "SCRIPT_DRAFT.md": "840c4db287e3091f3b50adf622018f6cdcad8571c30361f7e92107f2c93ae2c3",
+    "STYLE.md": "c3e6afa489c17d722e5edb9e785899e697660d041e5c27b0ecbd3324574584ea"
+  },
+  "native_capture": {
+    "path": ".publication/sunset-launch-v12/scene/native-render.json",
+    "sha256": "d6dab46712a1777633e8cb9e3499ad9406c203554f2934783f903d161ed17e35"
+  },
+  "live_geometry": {
+    "path": ".publication/sunset-launch-v12/qa/native-live.json",
+    "sha256": "c4821a288089ce2b81c795625b3888c94e26de6dcbfa92fad795155880c53523"
+  },
+  "geometry": {
+    "pass": true,
+    "solid_count": 6,
+    "frames": 165,
+    "vertex_reads": 3253140,
+    "continuous": {
+      "pass": true,
+      "failures": [],
+      "failure_count": 0,
+      "samples": 1921,
+      "intervals": 1920,
+      "substep_hz": 240,
+      "min_gaps": {
+        "floor": 0.003999999993999999,
+        "pair": 0.003999999973599433,
+        "camera": 1.4931443451705952
+      },
+      "derived_world_surface_speed_bounds": {
+        "handbook-core": 0,
+        "handbook-cover": 12.403231706404291,
+        "sunset-seal": 13.029475715037895,
+        "support-left": 17.29098873572909,
+        "support-right": 17.29098873572909,
+        "support-rear": 17.29098873572909
+      },
+      "derived_camera_speed_bound": 10.729100614683412,
+      "max_half_substep_surface_displacement": {
+        "handbook-core": 0,
+        "handbook-cover": 0.02584006605500894,
+        "sunset-seal": 0.027144741072995617,
+        "support-left": 0.03602289319943561,
+        "support-right": 0.03602289319943561,
+        "support-rear": 0.03602289319943561
+      },
+      "certificate": "Independent interval enclosure of reviewed analytic equations; exact shared-support cancellations; every1920 interval covered; unresolved intervals reject."
+    },
+    "realtime_speed_multiplier": 1.4545454545454546
+  },
+  "time_mapping": {
+    "output_seconds": [
+      0,
+      5.5
+    ],
+    "physical_path_seconds": [
+      0,
+      8
+    ],
+    "speed": 1.4545454545454546,
+    "basis": "Exact unchanged V11 geometry/transform/camera path; continuous separation is invariant under this monotonic retiming."
+  },
+  "initial_pose_scope": "Earlier four poses precede the WHY phrase change; only the corrected12-frame probe and full165-frame native capture represent the final preview source.",
+  "real_browser_footage_used": false,
+  "new_signed_financial_action_shown": false,
+  "script_claim_conditions": [
+    "Prepared reviewed edition before campaign.",
+    "Creator credit follows timely matching-key publication.",
+    "Paid follows represented successful separate withdrawal, not automatic release or claim submission.",
+    "Eligible refunds require claims/withdrawals.",
+    "Reader needs no terminal or wallet."
+  ],
+  "visual_review": {
+    "pass": true,
+    "status": "sampled_decoded_style_review_complete; operator_approval_not_claimed",
+    "preview_sha256": "6194ac262950683c78e731574cb951dfd8d065cee931289d5b2e0ab4f1ae8d79",
+    "root_inspected": [
+      "corrected native contact probe frame14",
+      "native frame120 with full resource title and chapter tabs",
+      "actual decoded9-beat sheet",
+      "actual decoded15-frame contact strip"
+    ],
+    "separate_renderer_review": "Inspected both decoded sheets; nontechnical publication, why phrase, material, compression/rebound and separation are clear.",
+    "observations": [
+      "Free to use. Creators paid. remains the clear protected headline.",
+      "The guide and printed checklist contain no terminal or Git subject matter.",
+      "Page-edge graphics and chapter tabs make the publication recognisable.",
+      "Contact shortens/widens the seal, followed by rebound and settling.",
+      "Camera movement and cover clearance preserve the scene's spatial continuity.",
+      "Concept preview labelling is retained; no actual app input or payment is shown."
+    ],
+    "limits": [
+      "The seal partly occludes the title during contact; it resolves fully during the lift. The full script must establish resource identity clearly at the start.",
+      "Printed checklist text is illustrative and is not a newly implemented workshop reader.",
+      "This is sampled visual review, not human continuous playback or audience validation.",
+      "Preview is silent; no audio review is claimed."
+    ],
+    "creative_user_approval_claimed": false,
+    "full_v12_film_rendered": false
+  },
+  "preserved_movies": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+    ".publication/sunset-launch-v6/sunset-launch-v6.mp4": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1",
+    ".publication/sunset-launch-v7/sunset-launch-v7.mp4": "8c1f850dce269c420ca9553b548a3a030107a2be2dec31864cf30819a210de44",
+    ".publication/sunset-launch-v8/sunset-launch-v8.mp4": "b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2",
+    ".publication/sunset-launch-v9/render/sunset-launch-v9.mp4": "f2f4d2e9cc7733af1c7dfa2491b2148217ba9857addd544931e1d710c5592319",
+    ".publication/sunset-launch-v10/render/sunset-launch-v10.mp4": "107eae578f8f4f5b3e6a7b356c2ec6590f9f66485ca090d15d46617248860ec0",
+    ".publication/sunset-launch-v11/render/sunset-launch-v11.mp4": "e2e438b46dd73aeffeb0ccdc46a2935f8bdfa8501bbbc953c8a8ccba67680b1d"
+  },
+  "generated_media_ignored": true,
+  "app_changes": false,
+  "new_resource_implemented": false,
+  "contract_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_sent": false,
+  "submission_sent": false,
+  "limits": [
+    "Script and style are proposals; no user creative approval or audience response is claimed.",
+    "The preview is silent and illustrative; the proposed workshop download/check sequence is not yet captured.",
+    "Documented resource practices do not establish SUNSET adoption or sponsor willingness."
+  ]
+}

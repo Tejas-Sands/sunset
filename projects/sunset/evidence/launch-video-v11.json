@@ -1,7 +1,14 @@
 {
   "checked_at": "2026-11-04T05:52:57.948757+00:00",
   "version": 11,
-  "status": "prepared_locally_verified_not_posted",
+  "status": "operator_rejected_misleading_example_and_requested_script_reset",
+  "operator_feedback_2026_11_05": {
+    "problem": "Git commands in the sample resource make SUNSET look as though terminal commands are required to use it. The main script was rejected.",
+    "requested_order": ["research actual uses", "show the new main script", "show the animation style"],
+    "proposal": "../media/launch-v12/SCRIPT_DRAFT.md",
+    "technical_evidence_preserved": true,
+    "creative_approval_claimed": false
+  },
   "film_path": ".publication/sunset-launch-v11/render/sunset-launch-v11.mp4",
   "sha256": "e2e438b46dd73aeffeb0ccdc46a2935f8bdfa8501bbbc953c8a8ccba67680b1d",
   "bytes": 9995783,

@@ -1,5 +1,7 @@
 # SUNSET v11 production review
 
+**Operator feedback,5 November:** the developer handbook/Git-command imagery made SUNSET look as though terminal commands were required. The main story was rejected. These technical and sampled visual checks are preserved as production evidence, not approval of that message. [The researched reset and proposed script](../launch-v12/SCRIPT_DRAFT.md) replace it as the current creative work.
+
 The operator explicitly chose spongy 3D objects and rejected intersecting or arbitrary motion. Passing older codec/readability checks did not settle that creative requirement. This correction keeps the useful handbook while replacing the flat document presentation with a physical cast, changing camera scale and contact-driven compression.
 
 ## Motion-proof gate

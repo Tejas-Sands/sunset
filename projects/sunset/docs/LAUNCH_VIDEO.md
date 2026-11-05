@@ -1,6 +1,12 @@
 # SUNSET launch film
 
-Current delivery: **v11 — 34 seconds, 1920×1080 at 30fps**, instrumental music and recorded effects only. The operator explicitly requested spongy, kinetic 3D objects with no intersections. The useful Open-source Maintainer Handbook remains the example.
+Current creative work: **v12 researched story and35-second creator-first script proposal**, followed by a short labelled visual style sample. The why is valuable lessons, workshop kits and guides shared freely while creators are compensated and can keep creating. [Use-case research](../media/launch-v12/RESEARCH.md), [main script draft](../media/launch-v12/SCRIPT_DRAFT.md) and [style direction](../media/launch-v12/STYLE.md). The workshop kit is one proposed example, not yet an implemented/funded new resource. No full v12 film is being presented for posting.
+
+The verified silent5.5-second preview is `.publication/sunset-launch-v12/sunset-style-concept.mp4`, with **Free to use. Creators paid.** and **Concept preview** labels. [Concept evidence](../evidence/launch-concept-v12.json) records native165-frame decode/geometry checks, exact identity and sampled visual-review limits. It shows materials/contact/camera direction rather than a real browser action or payment. Generated video remains ignored.
+
+The operator rejected V11's Git-facing story because it suggests readers need terminal commands. Readers open the downloaded resource in a browser. The V11 material below is an archived technical reference, not the approved launch message.
+
+Archived artifact: **v11 — 34 seconds,1920×1080 at30fps**, instrumental music and recorded effects only.
 
 ```sh
 xdg-open .publication/sunset-launch-v11/render/sunset-launch-v11.mp4
@@ -10,9 +16,9 @@ The coral SUNSET seal compresses against a padded handbook, mint sponsorship pie
 
 [Source/reproduction](../media/launch-v11/README.md), [script](../media/launch-v11/SCRIPT.md), [review](../media/launch-v11/REVIEW.md) and [artifact evidence](../evidence/launch-video-v11.json) identify the exact delivery. V10's technical evidence is preserved alongside the operator's request for this 3D revision; old technical passes are not creative approval.
 
-## Posting and audio
+## Archived V11 posting and audio
 
-Play the film with sound before posting. Attach it natively with [the main post](../media/launch-v11/x-post.txt), then [the full music-credit reply](../media/launch-v11/x-reply-credits.txt). The post includes demo/repository links, event wording/tags and a feedback invitation. Neither a product URL nor a credit block is burned into the movie. Retain the public post URL for [submission](SUBMISSION.md). Nothing has been posted or submitted by the assistant.
+The archived [main post](../media/launch-v11/x-post.txt) and [music-credit reply](../media/launch-v11/x-reply-credits.txt) remain for provenance. They are not a recommendation to post the rejected film. A final chosen film needs native upload, demo/repository links, feedback invitation and any required attribution; retain the public URL for [submission](SUBMISSION.md). Nothing has been posted or submitted by the assistant.
 
 Backbay Lounge by Kevin MacLeod (CC BY4.0), edited 16–50s, supplies the music. Ten placements of a recorded pillow contact and one recorded page movement follow the physical action. [Credits](../media/launch-v11/CREDITS.md) disclose source, license and edits. Encoded audio measures −15.05LUFS/−2.48dBTP. The full master and separate pre-master music/Foley stems are in `.publication/sunset-launch-v11/audio/`; the proof has its own `audio-proof/`. No voice was generated. A later voice recording needs a fresh mix. Perceptual listening remains unassessed.
 
