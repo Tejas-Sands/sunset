@@ -1,6 +1,12 @@
 {
   "checked_at": "2026-11-05T07:54:18.447804+00:00",
-  "status": "verified_original_eight_second_editorial_style_concept",
+  "status": "operator_rejected_reference_fidelity; technical_artifact_checks_preserved",
+  "operator_review": {
+    "date": "2026-11-05",
+    "feedback": "NOTHING LIKE THE VDEOS I SHOWED YOU!",
+    "failure": "Three poster layouts joined by generic wipes did not reproduce either supplied reference's changing composition and timing.",
+    "replacement": "../media/launch-v14/README.md"
+  },
   "reference_study": "reference-study-2026-11-05.json",
   "reference_frame_coverage": 595,
   "source": "../media/launch-v13/README.md",

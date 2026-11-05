@@ -308,15 +308,19 @@
   "browser_showcase": "browser-showcase.json",
   "operator_control": "All financial roles share one operator; separate IDs prove authority checks, not independent people.",
   "launch_media": {
-    "status": "reference_study_complete_and_verified_v13_editorial_style_concept",
+    "status": "v13_operator_rejected; separate_v14_reference_timed_tests_rendered_with_qualified_visual_review",
     "reference_study": "reference-study-2026-11-05.json",
     "native_reference_frames_studied": 595,
     "delivery_guide": "../docs/LAUNCH_VIDEO.md",
     "proposed_main_script": "../media/launch-v12/SCRIPT_DRAFT.md",
-    "current_style_evidence": "launch-concept-v13.json",
-    "style_preview_seconds": 8,
+    "current_style_evidence": "launch-motion-v14.json",
+    "style_test_seconds": [
+      8,
+      10.833333333333334
+    ],
     "full_new_launch_film_rendered": false,
-    "previous_style_evidence": "launch-concept-v12.json",
+    "previous_style_evidence": "launch-concept-v13.json",
+    "previous_style_status": "operator_rejected_reference_fidelity",
     "latest_full_film": {
       "version": 11,
       "evidence": "launch-video-v11.json",

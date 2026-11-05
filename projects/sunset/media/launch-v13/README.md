@@ -1,5 +1,7 @@
 # SUNSET — reference-driven editorial motion study
 
+**Rejected by the operator on 5 November:** “NOTHING LIKE THE VDEOS I SHOWED YOU!” The three-layout composition and generic wipes did not reproduce either reference's spatial changes or timing. Technical checks below describe the retained artifact, not creative suitability. [V14](../launch-v14/README.md) replaces the blended treatment with two separate source-timed reconstructions.
+
 Eight-second silent concept following the operator's two exact new references. [Complete595-frame reference study](../reference-study-2026-11-05/README.md), [observed-to-original treatment](../reference-study-2026-11-05/SUNSET_TRANSLATION.md), [actual direction](DIRECTION.md) and [original artwork/prompt](ASSETS.md).
 
 The picture changes what the viewer understands: useful lesson/workshop/guide examples → a person doing the work → free access alongside creator compensation. Large integrated type, tactile original paper/photo collage, a macro-to-triptych reframing, an established print-rule reveal and a disc/FREE aperture supply the editing language. Quiet held phrases provide reading time. The earlier persistent padded-book orbit is preserved as an earlier material test.

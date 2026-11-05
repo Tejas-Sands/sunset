@@ -1,0 +1,153 @@
+{
+  "checked_at": "2026-11-05T08:46:25.934631+00:00",
+  "status": "two_separate_reference_timed_tests_rendered; qualified_visual_review_with_departures",
+  "reason": "Operator rejected V13 as unlike the supplied references; its technical passes are preserved separately.",
+  "source": "../media/launch-v14/README.md",
+  "visual_review": "../media/launch-v14/FIDELITY.md",
+  "reference_study": "reference-study-2026-11-05.json",
+  "source_scopes": {
+    "collage": "Feel Good f000-159, first8seconds only",
+    "minimal": "Intelligence f000-194, full supplied picture"
+  },
+  "outputs": [
+    {
+      "path": ".publication/sunset-launch-v14/collage/sunset-collage-motion-match-8s.mp4",
+      "sha256": "04869be8eb247ef39912e9e7d6a74d3806aa36b744be640778ed72c13a7d1c4e",
+      "bytes": 19511232,
+      "width": 1920,
+      "height": 1440,
+      "fps": 20,
+      "frames": 160,
+      "duration": 8.0,
+      "audio_streams": 0,
+      "full_decode_passed": true,
+      "atoms": [
+        "ftyp",
+        "moov",
+        "free",
+        "mdat"
+      ],
+      "color_space": "bt709",
+      "color_range": "tv",
+      "color_primaries": "bt709",
+      "color_transfer": "bt709",
+      "private_comparison": {
+        "path": ".publication/sunset-launch-v14/collage/PRIVATE-source-vs-study.mp4",
+        "sha256": "cee42675875527b56beadb2c02db4339852553841a31e70235f4b7d8910fea1d",
+        "bytes": 7877632,
+        "width": 1920,
+        "height": 764,
+        "fps": 20,
+        "frames": 160,
+        "duration": 8.0,
+        "audio_streams": 0,
+        "full_decode_passed": true,
+        "atoms": [
+          "ftyp",
+          "moov",
+          "free",
+          "mdat"
+        ],
+        "color_space": "bt709",
+        "color_range": "tv",
+        "color_primaries": null,
+        "color_transfer": null
+      }
+    },
+    {
+      "path": ".publication/sunset-launch-v14/minimal/sunset-minimal-motion-match.mp4",
+      "sha256": "c783fa9078a1ffb76d9b2f3517caef3d95efa1f746c352f82688c0b4bf7b5b57",
+      "bytes": 1292902,
+      "width": 1920,
+      "height": 1080,
+      "fps": 18,
+      "frames": 195,
+      "duration": 10.833333333333334,
+      "audio_streams": 0,
+      "full_decode_passed": true,
+      "atoms": [
+        "ftyp",
+        "moov",
+        "free",
+        "mdat"
+      ],
+      "color_space": "bt709",
+      "color_range": "tv",
+      "color_primaries": "bt709",
+      "color_transfer": "bt709",
+      "private_comparison": {
+        "path": ".publication/sunset-launch-v14/minimal/PRIVATE-source-vs-study.mp4",
+        "sha256": "4030d073ec39534be5096bf0cb9cdb27f704432536964c0f031ba83550450bf9",
+        "bytes": 801271,
+        "width": 1920,
+        "height": 584,
+        "fps": 18,
+        "frames": 195,
+        "duration": 10.833333333333334,
+        "audio_streams": 0,
+        "full_decode_passed": true,
+        "atoms": [
+          "ftyp",
+          "moov",
+          "free",
+          "mdat"
+        ],
+        "color_space": "bt709",
+        "color_range": "tv",
+        "color_primaries": null,
+        "color_transfer": null
+      }
+    }
+  ],
+  "total_original_output_frames": 355,
+  "main_script_proposal": "../media/launch-v12/SCRIPT_DRAFT.md",
+  "full_new_launch_film_rendered": false,
+  "visual_observations": {
+    "root": "Reviewed actual source-matched keypose and transition sheets, then sampled decoded output sheets.",
+    "separate_reviewer": "Qualified visual gates: source-specific montage chapters and minimal cut/container/type sequence are recognisable. No exact or finished match claimed.",
+    "remaining_collage_limits": [
+      "f117 figure is flatter/less integrated than the source full-body corridor.",
+      "f052 type is thinner/narrower and farther right than the source heavy oblique word mass."
+    ],
+    "minimal_departures": [
+      "Original authored still-image composites with independently moving ink/sheet layers replace natural filmed footage.",
+      "Longer FREE/FAIR/PAID wording widens bracket groups; coral replaces source accent."
+    ],
+    "continuous_human_playback_assessed": false,
+    "operator_creative_approval_claimed": false
+  },
+  "original_asset_hashes": {
+    ".publication/sunset-launch-v13/assets/creator-cutout.png": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f",
+    ".publication/sunset-launch-v14/assets/creator-portrait.png": "a68f23e7b9578f569cfdbaeb5bd2cef4efa31e8d3052f2ae4815ab5710d08d47",
+    ".publication/sunset-launch-v14/assets/workroom.png": "5838dbf289d795b5e900e9d26241afc1c00fe1318ce81e808c79f1561bbc0465"
+  },
+  "asset_prompts": "../media/launch-v14/ASSETS.md",
+  "source_hashes_at_verification": {
+    "projects/sunset/media/launch-v14/ASSETS.md": "8908133f33bd41596c5ffbdb432186f5e8c21509f45e4af044f0c55dd34f5238",
+    "projects/sunset/media/launch-v14/COLLAGE.md": "8d1ac5fb7eb7479ccf7e126e660159af74515e2a3b6b162ab04ff8527761717e",
+    "projects/sunset/media/launch-v14/FIDELITY.md": "93fa19b3842a1ab1ffce9ea01804ee46212598e092cda1ae190f57487667effd",
+    "projects/sunset/media/launch-v14/MINIMAL.md": "250db714592ab371bf21557ab8ac513cfa4353ef796f90ef7ce1e4a4d6134aa7",
+    "projects/sunset/media/launch-v14/README.md": "08d80a86fe62d1ce497622bb6c2446179f24b0d57206924d93c0fb8d8874d4f3",
+    "projects/sunset/media/launch-v14/collage-match.py": "0d08b1c0516d079e9e768a095f83f0e9d649d6832e34c595a4bfec974c0db7fa",
+    "projects/sunset/media/launch-v14/minimal-match.py": "55094ba1d6e9c78b2cfd8fcae74fef01db8d18f5dcbc25ccf7666c3f13bfe854",
+    "projects/sunset/media/launch-v14/verify-and-compare.py": "91a91afad375a92939583a274de66564f17dfd9be6e1015622fa38724694a536"
+  },
+  "render_inputs": {
+    "collage_renderer_sha256": "0d08b1c0516d079e9e768a095f83f0e9d649d6832e34c595a4bfec974c0db7fa",
+    "minimal_actual_render_snapshot_sha256": "672a5e1411f92d67d4911f7e6dcd3c03e3f75d5496f9056f747cd7825c88384c",
+    "minimal_reproduction_source_sha256": "55094ba1d6e9c78b2cfd8fcae74fef01db8d18f5dcbc25ccf7666c3f13bfe854",
+    "minimal_tag_repair": "One image encode; metadata-only stream-copy repair, all195 decoded-frame MD5s equal. Original pre-repair file inode not retained; exact former hash/probe recorded privately.",
+    "collage_event_count": 74,
+    "minimal_event_count": 14
+  },
+  "older_movies_verified_unchanged": 13,
+  "older_movie_hash_record": "launch-concept-v13.json",
+  "reference_pixels_or_audio_in_original_tests": false,
+  "private_comparisons_contain_reference_pixels": true,
+  "audio_in_tests_or_comparisons": false,
+  "generated_media_ignored": true,
+  "app_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_or_submission_sent": false
+}
