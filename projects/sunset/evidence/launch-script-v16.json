@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-11-05T17:31:11.699815+00:00",
+  "status": "replacement_script_and_motion_direction; no_new_video",
+  "reason": "Operator rejected V15 as not kinetic enough and requested another reference study and better script.",
+  "script": "../media/launch-v16/SCRIPT.md",
+  "motion_direction": "../media/launch-v16/MOTION.md",
+  "proposed_duration_seconds": 29.5,
+  "contiguous_timed_beats": 10,
+  "hook": "FREE DIDN'T MAKE ITSELF.",
+  "payoff": "Make the next free thing possible.",
+  "reference_review_scope": "Both supplied overviews/native-frame atlases, including Feel Good active material beyond8s, compared with V15 decoded story/boundary sheets and renderer. Frame inspection; no continuous human playback/listening claim.",
+  "main_changes": [
+    "Maker effort first; prepared-resource public sponsorship remains explicit.",
+    "One connected custody/release/credit/withdrawal-confirmation passage instead of separate administrative chapters.",
+    "2.7-second genuine reader insert, original elapsed speed; no shortened-cut reload claim.",
+    "One minimal closing punctuation; final logo landing at most1.5s.",
+    "Legible main phrases span changing compositions."
+  ],
+  "source_hashes": {
+    "projects/sunset/media/launch-v16/MOTION.md": "85227e446493c4c29ee0cbdf790dbb5c75edfc9d70289f99879f5aea235ec3a8",
+    "projects/sunset/media/launch-v16/SCRIPT.md": "86e3efdb8b645eb37fdd9773d72617753623087f84495dca72d3cfb81a2ca762"
+  },
+  "source_UI_window": [
+    0,
+    2.7
+  ],
+  "proposed_film_UI_window": [
+    16.4,
+    19.1
+  ],
+  "new_video_rendered": false,
+  "operator_script_approval_claimed": false,
+  "previous_movie_preserved_sha256": "c68e17876b78c29f352d066279333780c3defeb16a100bb900c7485255a34046",
+  "app_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_or_submission_sent": false
+}

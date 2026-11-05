@@ -1,5 +1,7 @@
 # SUNSET launch film
 
+**Current status:** the operator rejected V15 as insufficiently kinetic. The [29.5-second replacement script](../media/launch-v16/SCRIPT.md) and [reference-based motion notes](../media/launch-v16/MOTION.md) are the current creative work. [Script evidence](../evidence/launch-script-v16.json) records this writing-only stage; no V16 film has been rendered. The V15 delivery below is preserved as a rejected iteration, not a posting recommendation.
+
 Latest delivery: [V15 collage/minimal fusion](../media/launch-v15/README.md), **40 seconds, 1920×1080 at 30 fps**, instrumental music and recorded effects, no generated narration. The operator approved both V14 studies and requested this fusion. [Script](../media/launch-v15/SCRIPT.md), [final review](../media/launch-v15/REVIEW.md) and [artifact evidence](../evidence/launch-video-v15.json) distinguish that style approval from approval of the new full film.
 
 Open `.publication/sunset-launch-v15/sunset-launch-fusion.mp4`. The story keeps valuable work free to use while its creator is compensated. Financial animation is labelled **NEAR testnet · illustration**: release creates credit, a separate confirmed withdrawal precedes Paid, and a separate missed-conditions branch permits sponsor refund claims. A fresh command-free capture of the existing downloaded handbook shows a real checkbox and saved state after offline reload. This local example is not a new funded workshop/handbook release.

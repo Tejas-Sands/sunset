@@ -1,5 +1,7 @@
 # SUNSET V15 independent review
 
+**Operator rejected V15's kinetic quality.** The earlier export/source/still-frame checks below did not establish the movement the operator wanted. The replacement [script and motion direction](../launch-v16/SCRIPT.md) are current; no V16 movie is claimed.
+
 **Final verdict: qualified; no blocking visual, story or source finding remains in the inspected final output.** This is a visual and story review of rendered pixels, not a claim that technical metadata proves aesthetics or that the operator has approved the finished film.
 
 Reviewed movie: `.publication/sunset-launch-v15/sunset-launch-fusion.mp4`, SHA-256 `c68e17876b78c29f352d066279333780c3defeb16a100bb900c7485255a34046`. The corrected native gate qualified before encoding; the final decoded inspection below preserves that verdict.

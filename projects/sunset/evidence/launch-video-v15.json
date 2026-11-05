@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-11-05T10:01:57.281982+00:00",
-  "status": "40_second_fusion_rendered; qualified_final_visual_review; independent_export_and_genuine_UI_checks_passed",
+  "status": "operator_rejected_kinetic_quality; technical_verification_preserved",
   "source": "../media/launch-v15/README.md",
   "script": "../media/launch-v15/SCRIPT.md",
   "review": "../media/launch-v15/REVIEW.md",
@@ -164,5 +164,12 @@
   "app_changes": false,
   "chain_mutations": 0,
   "deployment_performed": false,
-  "public_post_or_submission_sent": false
+  "public_post_or_submission_sent": false,
+  "operator_review": {
+    "date": "2026-11-05",
+    "feedback": "NOT KINETIC ENOUGH",
+    "request": "Reopen the references and improve the script.",
+    "follow_up": "launch-script-v16.json"
+  },
+  "historical_source_hashes_note": "Hashes at original verification remain the historical snapshot. README/review were later annotated with operator rejection; actual renderer and movie are unchanged."
 }
