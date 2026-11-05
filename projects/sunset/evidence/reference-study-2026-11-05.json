@@ -1,0 +1,90 @@
+{
+  "checked_at": "2026-11-05T07:45:57.348061+00:00",
+  "status": "complete_native_frame_extraction_and_all_atlas_frame_study",
+  "references": [
+    {
+      "alias": "feel-good",
+      "source_basename": "feel good inc 2.0 (wear \ud83c\udfa7)probably my last entry in this gorillaz miniseries ive had going on .mp4",
+      "sha256": "768e13d8359c7eb39b45c8cb2089b235e6fd675bd5325f16c95f913a4c200fa6",
+      "frames": 400,
+      "dimensions": [
+        960,
+        720
+      ],
+      "encoded_frame_rate": "20/1",
+      "visual_duration_seconds": 20.0,
+      "container_duration_seconds": 20.137375,
+      "atlas_count": 14,
+      "native_index": {
+        "path": ".publication/sunset-reference-study-20261105/feel-good/index.json",
+        "sha256": "69c60ca0f809f0c0b209c12aa3b9372ed94d373f32f03da423abd3453b932e1b"
+      }
+    },
+    {
+      "alias": "intelligence",
+      "source_basename": "when intelligence is everywhere, what makes us human.mp4",
+      "sha256": "289999ba2aa77973d302be6d23414613d51b3f708df11be2f89d9a8cbbe6a699",
+      "frames": 195,
+      "dimensions": [
+        1276,
+        720
+      ],
+      "encoded_frame_rate": "18/1",
+      "visual_duration_seconds": 10.833333,
+      "container_duration_seconds": 10.910522,
+      "atlas_count": 7,
+      "native_index": {
+        "path": ".publication/sunset-reference-study-20261105/intelligence/index.json",
+        "sha256": "84b0361a1e62766cb3f47ae92e7338938cdb6a2bfc912f9ea7b2259d2e2286fc"
+      }
+    }
+  ],
+  "total_native_frames": 595,
+  "total_complete_atlases": 21,
+  "shot_annotation_ranges": 27,
+  "spatial_review": "All595decodedframes viewed through dense indexed atlases; selected frames additionally enlarged at native resolution.",
+  "visual_coverage_report": {
+    "feel-good": "../media/reference-study-2026-11-05/FEEL_GOOD_STUDY.md",
+    "intelligence": "../media/reference-study-2026-11-05/INTELLIGENCE_STUDY.md"
+  },
+  "translation": "../media/reference-study-2026-11-05/SUNSET_TRANSLATION.md",
+  "viewer": {
+    "path": ".publication/sunset-reference-study-20261105/reference-study.html",
+    "sha256": "85fafa3f772cb0576dac3bcd945611bb32aa776759d713aa18735754b5af7a66",
+    "browser_qa": {
+      "path": ".publication/sunset-reference-study-20261105/viewer-qa.json",
+      "sha256": "93446652dac2d5b81e7a037aed3ceddd343c61896a4e7fa071245c35e38f38af"
+    },
+    "exercised": [
+      "native first/nextframe for bothreferences",
+      "reference selector",
+      "final intelligenceframe194",
+      "shot notes and correct native dimensions"
+    ]
+  },
+  "source_hashes": {
+    "projects/sunset/media/reference-study-2026-11-05/FEEL_GOOD_STUDY.md": "2fbc2ea19b48f243fbc89cb9e742daf63f147c75cdc5276a8ca3534b9cc87ba3",
+    "projects/sunset/media/reference-study-2026-11-05/INTELLIGENCE_STUDY.md": "d659727ca6d6bd02a03efeba42f493548a664d037bf57d9bc565f5fe7f272a3b",
+    "projects/sunset/media/reference-study-2026-11-05/README.md": "0268b1dbb6aaa76aa508566df803da3344347f142bde8871c69992e01431486a",
+    "projects/sunset/media/reference-study-2026-11-05/SUNSET_TRANSLATION.md": "8d8386f6cdf5bf5db6c2247f75b12617694de2256b15640cd3a8be3a12775045",
+    "projects/sunset/media/reference-study-2026-11-05/extract.py": "993ebdd7c3e9e14c043e0a7f8b2174b94ee95f92dbf5e464e7b385a1b3ca61e1",
+    "projects/sunset/media/reference-study-2026-11-05/viewer.py": "5bf57310e6f5a2bbbc6332b539ac0cac43f9645c8344ea6dd72b3f41f3e1e399"
+  },
+  "audio_method": {
+    "human_listening_claimed": false,
+    "analysis": "48kmono PCM,2048-sample Hann FFT/RMS with480-samplehop; positive spectralflux and energy curves only.",
+    "musical_intent_or_perceptual_sync_claimed": false
+  },
+  "source_files_preserved": true,
+  "reference_media_ignored": true,
+  "reference_pixels_audio_authorised_as_film_assets": false,
+  "new_app_or_contract_features": false,
+  "chain_mutations": 0,
+  "social_post_or_submission_sent": false,
+  "limits": [
+    "File cadence is not original authoring cadence.",
+    "Frame-change scores nominate inspection points; they do not certify cuts.",
+    "Observed pixels and inferred implementation methods are labelled separately.",
+    "All-frame atlas inspection is not a claim of viewing every frame at native pixel size or continuous human playback."
+  ]
+}
