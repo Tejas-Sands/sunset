@@ -1,0 +1,155 @@
+{
+  "checked_at": "2026-11-05T07:54:18.447804+00:00",
+  "status": "verified_original_eight_second_editorial_style_concept",
+  "reference_study": "reference-study-2026-11-05.json",
+  "reference_frame_coverage": 595,
+  "source": "../media/launch-v13/README.md",
+  "direction": "../media/launch-v13/DIRECTION.md",
+  "assets_and_exact_prompt": "../media/launch-v13/ASSETS.md",
+  "main_script_proposal": "../media/launch-v12/SCRIPT_DRAFT.md",
+  "full_v13_film_rendered": false,
+  "style_preview": {
+    "path": ".publication/sunset-launch-v13/sunset-v13-style-proof.mp4",
+    "sha256": "830b1fbfcb46b9efe3072764b7d343ce87049bb73f273310e9e7e13ca5f41193",
+    "bytes": 3997322,
+    "duration": 8,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "frames": 240,
+    "silent": true,
+    "crf": 14,
+    "encode_passes": 1,
+    "codec": "H264/yuv420p BT709 limited",
+    "faststart": true,
+    "mp4_atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ]
+  },
+  "stable_reading_windows": [
+    {
+      "id": "value",
+      "window": [
+        0.35,
+        2.15
+      ],
+      "lines": [
+        "Useful work.",
+        "Shared freely."
+      ],
+      "minimum": 1.7
+    },
+    {
+      "id": "maker",
+      "window": [
+        2.95,
+        4.7
+      ],
+      "lines": [
+        "Help creators",
+        "keep creating."
+      ],
+      "minimum": 1.7
+    },
+    {
+      "id": "promise",
+      "window": [
+        5.4,
+        8.0
+      ],
+      "lines": [
+        "Free to use.",
+        "Creators paid."
+      ],
+      "minimum": 2.45
+    }
+  ],
+  "decoded_verification": {
+    "pass": true,
+    "movie_sha256": "830b1fbfcb46b9efe3072764b7d343ce87049bb73f273310e9e7e13ca5f41193",
+    "decoded_native_images_inspected": 240,
+    "authored_png_identities_checked": 240,
+    "stable_encoded_glyph_core_probes": 368,
+    "minimum_measured_encoded_contrast": 10.1744,
+    "method": "Derive opaque stroke-core positions from actual authored raster; sample those foreground/background points in every stable encoded caption frame.",
+    "safe_bbox_checked": [
+      90,
+      70,
+      1830,
+      1010
+    ],
+    "source_identities_checked": true,
+    "limits": [
+      "One core probe per stable line is not OCR or exhaustive glyph-edge inspection.",
+      "Decoded visual review and operator creative approval remain separate."
+    ],
+    "verifier_sha256": "982ce8b5304e1b8f31a19ee28548b7323b89924b4102b9531e958e4592fa5afb"
+  },
+  "visual_review": {
+    "status": "sampled_decoded_review_complete; user_approval_not_claimed",
+    "root": [
+      "decoded-beat-sheet.jpg",
+      "rule-mask-100ms.jpg",
+      "circle-mask-100ms.jpg",
+      "native corrected motion/circle gates"
+    ],
+    "separate_reference_reviewer": "Stable text and semantic sequence are clear; anchored handoffs and quiet holds carry over. Denser/warmer than the minimal reference; moving still rather than natural footage; brief mixed text resolves outside reading window.",
+    "renderer_review": "Inspected actual decoded beat/cut/transition sheets.",
+    "limits": [
+      "No exact style match or audience/user creative approval is claimed.",
+      "Illustrative creator-work still, not a real SUNSET user or recorded activity.",
+      "Silent style concept; no audio audition, full mechanism demonstration or new paid resource."
+    ]
+  },
+  "source_hashes": {
+    "projects/sunset/media/launch-v13/ASSETS.md": "0a8916c1f753f228a30b5678254964a7d69b33ce6f2c64ddb477bc8dbe34f604",
+    "projects/sunset/media/launch-v13/DIRECTION.md": "ef36080ee07201487f015a2131977efbabf12a53810cb364d8587b3b893853e8",
+    "projects/sunset/media/launch-v13/README.md": "dc45a817cf08e5d1149f8a40fc42de6e5d6c6d4c2096be6c64fc81b8b7477b3b",
+    "projects/sunset/media/launch-v13/render-proof.py": "566ab871a4505852d63607a764d07ba52fa8ac60c8822daec6210de99e3b5d8c",
+    "projects/sunset/media/launch-v13/verify-proof.py": "982ce8b5304e1b8f31a19ee28548b7323b89924b4102b9531e958e4592fa5afb"
+  },
+  "render_input_hashes": {
+    "projects/sunset/media/launch-v13/render-proof.py": "566ab871a4505852d63607a764d07ba52fa8ac60c8822daec6210de99e3b5d8c",
+    ".publication/sunset-launch-v6/fonts/BricolageGrotesque-VF.ttf": "413e7357809ddd12fd80a96a8a396de0e401638d4acd3cb3e37532f0472ac682",
+    ".publication/sunset-launch-v1/render/Geist.ttf": "bf9f16bf572900fbdaf975b87e8c7b6abfe4b071c3bbb82a8d8f33357f3276ef",
+    ".publication/sunset-launch-v13/assets/creator-cutout.png": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f",
+    "projects/sunset/public/icon.svg": "9b4f0a6f633385739440c96a9ab7c8f6b72ad065557a9d5538d7f2194a1e6cf5"
+  },
+  "original_creator_asset": {
+    "path": ".publication/sunset-launch-v13/assets/creator-cutout.png",
+    "sha256": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f",
+    "generation": "built-in imagegen; original illustrative bitmap; prompt recorded in ASSETS.md",
+    "alpha_preserved": true
+  },
+  "renderer_report": {
+    "path": ".publication/sunset-launch-v13/render-report.json",
+    "sha256": "0c0f9ea8c64290aceac25a40b1512562d6e1e6c7acc89d8601773f6614031c0d"
+  },
+  "reference_pixels_or_audio_used": false,
+  "spatial_model": "Intentional2D collage/mask occlusion; no3D collision simulation claim.",
+  "preserved_movies": {
+    ".publication/sunset-launch-v1/render/sunset-launch.mp4": "24e49095284f165a4346adbca0e2653bbea1080f8bf902b98c95a8700b866ad0",
+    ".publication/sunset-launch-v2/sunset-launch-v2.mp4": "769948d737168652fdcf531faf47fd7ec183432d862b8149dff7e8d36bbef934",
+    ".publication/sunset-launch-v3/sunset-launch-v3.mp4": "cf2eff815d253b2114d5745fcdd4edeef1a492d4e579df99ceed69f1b4dae1cb",
+    ".publication/sunset-launch-v4/sunset-launch-v4.mp4": "d9d1c4b74e867da221cc6d8a97e0524576e0575e25e7899dd74db3e246bad42b",
+    ".publication/sunset-launch-v5/sunset-launch-v5.mp4": "a90c5b30c86575db8d0960fa3e2a2b41d0d7e52d0e30db46245552628ab4204d",
+    ".publication/sunset-launch-v6/sunset-launch-v6.mp4": "5ef32187788c9126d2a548c19b38243863aab2a99289b776672b6e3345b371d1",
+    ".publication/sunset-launch-v7/sunset-launch-v7.mp4": "8c1f850dce269c420ca9553b548a3a030107a2be2dec31864cf30819a210de44",
+    ".publication/sunset-launch-v8/sunset-launch-v8.mp4": "b2a96e376a2ab97c7cb8e82e69018eb6f004a5796c9ba45d15eaa29f691058a2",
+    ".publication/sunset-launch-v9/render/sunset-launch-v9.mp4": "f2f4d2e9cc7733af1c7dfa2491b2148217ba9857addd544931e1d710c5592319",
+    ".publication/sunset-launch-v10/render/sunset-launch-v10.mp4": "107eae578f8f4f5b3e6a7b356c2ec6590f9f66485ca090d15d46617248860ec0",
+    ".publication/sunset-launch-v11/render/sunset-launch-v11.mp4": "e2e438b46dd73aeffeb0ccdc46a2935f8bdfa8501bbbc953c8a8ccba67680b1d",
+    ".publication/sunset-launch-v12/sunset-style-concept.mp4": "6194ac262950683c78e731574cb951dfd8d065cee931289d5b2e0ab4f1ae8d79"
+  },
+  "generated_media_ignored": true,
+  "app_changes": false,
+  "new_resource_implemented": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_or_submission_sent": false
+}
