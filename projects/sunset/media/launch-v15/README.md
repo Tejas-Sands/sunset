@@ -1,6 +1,6 @@
 # SUNSET — collage/minimal fusion
 
-**Operator rejected V15's kinetic quality.** The earlier export/source/still-frame checks below did not establish the movement the operator wanted. The replacement [script and motion direction](../launch-v16/SCRIPT.md) are current; no V16 movie is claimed.
+**Operator rejected V15's kinetic quality.** The earlier export/source/still-frame checks below did not establish the movement the operator wanted. The replacement [V16 HyperFrames film](../launch-v16/README.md) is the current delivery for operator review; this V15 record remains historical.
 
 The operator approved both V14 studies and requested their fusion. This new 40-second film follows one page and its maker through freely shared work, sponsorship, release/payment rules, genuine offline use and continued making. Collage supplies changing print/photo compositions; minimal circle/point/type passages let the meaning land. The V14 movies are not consumed or joined together by the renderer.
 

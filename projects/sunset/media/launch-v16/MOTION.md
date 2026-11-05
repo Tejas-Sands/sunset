@@ -1,6 +1,6 @@
 # Motion direction after reopening the references
 
-V15's codec checks and qualified still-frame review did not establish the kinetic quality the operator wanted. The operator explicitly rejected that result. The new script changes the edit's structure before another render is attempted.
+V15's codec checks and qualified still-frame review did not establish the kinetic quality the operator wanted. The operator explicitly rejected that result. The approved replacement changes the edit's structure and is implemented with actual local HyperFrames and a registered GSAP timeline; [delivery and evidence](README.md) record the resulting artifact separately.
 
 Reopened both supplied reference overviews and native-frame atlases, including Feel Good's later active section rather than only its first eight seconds. Compared them with V15's actual decoded story/boundary sheets and renderer. These observations come from frames and sequences; continuous human playback/listening is not claimed.
 
@@ -25,4 +25,4 @@ Keep a main phrase readable across several changing compositions. Foreground, mi
 
 There is one minimal payoff at 23–26 seconds. Funding and release stay inside the travelling material world; the white circle does not restart the explanation. The real reader action is 2.7 seconds at actual elapsed speed. The logo is reached through a transformation and has at most a 1.5-second final hold.
 
-Any later moving version must be assessed through contiguous motion and object handoffs, alongside the approved V14 movement, before a full-film suitability claim. Still sheets, file dimensions, loudness and successful encoding remain separate checks. This batch produces the replacement script and direction only.
+The moving version must be assessed through contiguous motion and object handoffs, alongside the approved V14 movement, before a full-film suitability claim. Still sheets, file dimensions, loudness and successful encoding remain separate checks. The earlier writing-only snapshot is preserved in [script evidence](../../evidence/launch-script-v16.json); production outcomes belong to the separate delivery record.

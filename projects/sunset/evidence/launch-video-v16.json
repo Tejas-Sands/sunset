@@ -1,0 +1,272 @@
+{
+  "checked_at": "2026-11-05T18:57:45.101297+00:00",
+  "status": "rendered_verified; qualified_decoded_motion_review_complete; operator_final_film_review_pending",
+  "source": "../media/launch-v16/README.md",
+  "script": "../media/launch-v16/SCRIPT.md",
+  "review": "../media/launch-v16/REVIEW.md",
+  "credits": "../media/launch-v16/CREDITS.md",
+  "post_draft": "../media/launch-v16/x-post.txt",
+  "credit_reply": "../media/launch-v16/x-reply-credits.txt",
+  "operator_approval": {
+    "script_and_implementation": true,
+    "final_film": false,
+    "execution_quote": "LETS FREAKING DO IT!!!!!!!!!!!",
+    "scope": "Approved creator-first script, V14 collage/minimal direction and Brag/HyperFrames execution. Finished-film approval is not inferred."
+  },
+  "movie": {
+    "path": ".publication/sunset-launch-v16/sunset-launch-hyperframes-final.mp4",
+    "sha256": "76c7a4b8223aa982ea186164a7d2b0e05854e3835754208f649e825bbc30819e",
+    "bytes": 35937445,
+    "duration": 29.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 885,
+    "codec": "H264 High/yuv420p TV BT709; AAC48kHz stereo; faststart",
+    "atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ]
+  },
+  "poster": {
+    "path": ".publication/sunset-launch-v16/poster-final.png",
+    "sha256": "88ff416c740536e11cb905d743e441bdb4ef0dbd64e8909298633c5045e703a9",
+    "film_at": 28.5
+  },
+  "runtime": {
+    "engine": "HyperFrames",
+    "version": "0.9.16",
+    "animation": "GSAP 3.15.1",
+    "actual_cli_render": true,
+    "brag": "Pinned full workflow applied locally; not a separate render engine",
+    "hyperframes_source_commit": "35cbca99274907c914e4e083f30684060e3b4c58",
+    "brag_source_commit": "669ab9286aa28b6c3ee30e75f181ee74319d012a",
+    "effects": [
+      "Independent elastic typography",
+      "CSS perspective cameras and depth layers",
+      "SVG stroke drawing",
+      "3D page hinge",
+      "Deterministic Canvas 2D ink/smear accents"
+    ],
+    "three_js": false,
+    "physical_soft_body_solver": false,
+    "global_profile_changes": false,
+    "provider_usage": false
+  },
+  "prepared_composition": {
+    "path": ".publication/sunset-launch-v16/composition-delivery/index.html",
+    "sha256": "67e922c7e7990586f992cbde0552645dd84166c801a93be53730ff5810096626"
+  },
+  "render_manifest": {
+    "path": ".publication/sunset-launch-v16/composition-delivery/source-manifest.json",
+    "sha256": "f3e341920ef481f89e04321ba837b647adc027210fffb5753850fb73c6416027"
+  },
+  "geometry": {
+    "path": ".publication/sunset-launch-v16/geometry-delivery/ui-geometry.json",
+    "sha256": "645685b11c58103434601ec03f6d8b3964458ed63f64b1b0500b706412a1c00d",
+    "method": "81 actual compiled HyperFrames renderSeek calls with seek barriers and DOM measurements",
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  "verification": {
+    "full_decode": true,
+    "decoded_frames": 885,
+    "source_inputs_verified": true,
+    "encoded_integrated_lufs": -15.1,
+    "encoded_true_peak_dbtp": -2.3,
+    "genuine_UI_frames": 81,
+    "max_genuine_UI_mean_channel_error_255": 3.65146,
+    "checkbox_correct_max_MAE": 13.52032,
+    "checkbox_opposite_min_MAE": 80.37473,
+    "older_movie_identities_verified": 16,
+    "report": {
+      "path": ".publication/sunset-launch-v16/verification-delivery/final-report.json",
+      "sha256": "3d58f6caab8f3757b9a316bba0f09db75a225d0ccbad8481f1aef499aed651a8"
+    },
+    "hyperframes_check": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 5
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 23
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "craft": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 1
+      }
+    },
+    "check_report": {
+      "path": ".publication/sunset-launch-v16/check-delivery.json",
+      "sha256": "742468e0c2d8253581808836d9d791b7f4ebead8bfa12a809cb798a81e8a1bd2"
+    }
+  },
+  "initial_v16_full": {
+    "path": ".publication/sunset-launch-v16/sunset-launch-hyperframes.mp4",
+    "sha256": "ce8e37ba302ed18085a4669aad2a5bec4b14848522268e0c4ae10f8693057ae5",
+    "preserved": true,
+    "status": "Funding caption lost contrast over cream cover. Final changes only its dark edge/shadow; timing and geometry unchanged."
+  },
+  "genuine_browser": {
+    "resource": "Open-source Maintainer Handbook",
+    "existing_downloaded_HTML_sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a",
+    "capture": {
+      "path": ".publication/sunset-launch-v15/capture/capture-provenance.json",
+      "sha256": "f9d9f9b858bee7596777aa31a775507209c584dd073893aaa22b0a1c3379339e"
+    },
+    "source_window": [
+      0,
+      2.7
+    ],
+    "film_window": [
+      16.4,
+      19.1
+    ],
+    "playback_speed": 1,
+    "actual_input_film": [
+      17.600145381,
+      17.624610837
+    ],
+    "checked_source_sample_at": 1.4736603630008176,
+    "first_checked_output_frame": 537,
+    "method": "Two original timed PNG states; no continuous browser-video claim",
+    "offline_scope": "Browser offline before file load; file: and zero-resource checks; not an OS adapter toggle",
+    "performed_underlying_handbook_procedure": false,
+    "reload_claimed": false,
+    "new_funded_handbook_campaign": false,
+    "share_meaning": "Redistribute the licensed downloaded resource, not a fabricated Share app control"
+  },
+  "finance": {
+    "label": "NEAR testnet \u00b7 illustration",
+    "label_window": [
+      7,
+      16.4
+    ],
+    "events": {
+      "target_complete": 8.4,
+      "matched_key": 12.45,
+      "public_release": 12.6,
+      "creator_credit": 13.4,
+      "withdrawal": 14.3,
+      "confirmation": 15.45,
+      "paid": 15.8
+    },
+    "scope": "Prepared resource exists before sponsorship. Success path only; separate withdrawal and successful confirmation precede Paid. Conditional refunds remain documented in the product."
+  },
+  "audio": {
+    "master": {
+      "path": ".publication/sunset-launch-v16/audio/mix.wav",
+      "sha256": "6eb7803b92ce20d475ff04137820e2dc2f19d5b4d9fda68433585fe7f7b50184"
+    },
+    "cue_count": 30,
+    "licensed_music": "Origami \u2014 Scott Buckley, CC BY4.0",
+    "source_excerpt": [
+      32.18,
+      61.68
+    ],
+    "recorded_Foley": true,
+    "voice_present": false,
+    "perceptual_listening_assessed": false
+  },
+  "visual_review": {
+    "root": "Actual corrected opening, final decoded story sheet, native funding/UI/poster and independent contiguous-sequence review",
+    "independent_review": "../media/launch-v16/REVIEW.md",
+    "limits": [
+      "Decoded frame/sequence inspection is not continuous human playback or perceptual listening.",
+      "Two object handoffs use graphic cuts rather than literal continuous transformations.",
+      "Short lesson phrase and small prop text remain creative tradeoffs; retained engine warnings are not hidden.",
+      "No operator approval of the finished film is claimed."
+    ],
+    "independent_verdict": "Ready to present to the operator; funding-caption blocker resolved in final native/100ms/390px samples.",
+    "review_sha256": "3801e50d0ed881c6dea0b71a71ee6ae5be395af48ad829007685de8d25dfdce2"
+  },
+  "source_hashes_at_verification": {
+    "projects/sunset/media/launch-v16/CREDITS.md": "456a0091e0b1cef3503baed169c29ab18de949336dcaa7947e17fe288b2ff963",
+    "projects/sunset/media/launch-v16/MOTION.md": "3ba0108b6bfc2d38d4c8ef741df8566c1e3db867a7c0409e4432e237c3fe151b",
+    "projects/sunset/media/launch-v16/PLAN.md": "64523ed20abca30b41833e3d12941716d6c14e402127a74cf996ecdd3149c898",
+    "projects/sunset/media/launch-v16/README.md": "664f7d593a4b5165151b8b9269dcc2c099d854129fc20b08e8c1947774422cab",
+    "projects/sunset/media/launch-v16/REVIEW.md": "3801e50d0ed881c6dea0b71a71ee6ae5be395af48ad829007685de8d25dfdce2",
+    "projects/sunset/media/launch-v16/SCRIPT.md": "a02aebaf952a224311219bc21b3b80518035c9f6c22318bcc0d743e9013b4f81",
+    "projects/sunset/media/launch-v16/audio.py": "c1ccf50405dc323cdd13f52765820e5b56d776bbbfa0f3a9e707fd4f37035e6c",
+    "projects/sunset/media/launch-v16/film.css": "599afafd77ed0fe1bf3f41b4e0195bfa5e3cb1d68e869d2bdefdfd0f007cfa85",
+    "projects/sunset/media/launch-v16/film.html": "fc3b1abf50d91b964015de96328723441e42106710d503a84c42f756404c17e6",
+    "projects/sunset/media/launch-v16/film.js": "c0181918a0fc3c79b83ac346e2e07a423a13b0a60d8d71765b500a93af5eff9c",
+    "projects/sunset/media/launch-v16/pipeline.py": "04ac77f76d937e5655a8399297158ebb4fb4f6f1653485fe294fee9ece5e3f3e",
+    "projects/sunset/media/launch-v16/verify.py": "1c5283aa5eb4e2265f728514704c50159ce15d0ef6ae7cb41bd685128edfef1c",
+    "projects/sunset/media/launch-v16/x-post.txt": "b8dea435b51a32963fc6c0adcd9a92e8095edd1596954055558bba138bd3d81b",
+    "projects/sunset/media/launch-v16/x-reply-credits.txt": "bb9730d48378d22b0d248a1ee20cae6164601f3064344a37088269b266b38556"
+  },
+  "original_assets": {
+    "creators.png": {
+      "path": ".publication/sunset-launch-v14/assets/creator-portrait.png",
+      "sha256": "a68f23e7b9578f569cfdbaeb5bd2cef4efa31e8d3052f2ae4815ab5710d08d47"
+    },
+    "workroom.png": {
+      "path": ".publication/sunset-launch-v14/assets/workroom.png",
+      "sha256": "5838dbf289d795b5e900e9d26241afc1c00fe1318ce81e808c79f1561bbc0465"
+    },
+    "hands.png": {
+      "path": ".publication/sunset-launch-v13/assets/creator-cutout.png",
+      "sha256": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f"
+    },
+    "unchecked.png": {
+      "path": ".publication/sunset-launch-v15/capture/unchecked.png",
+      "sha256": "db312ca87fb82aeff8fbd2683bf8f46b4d2c65061a06ba6146688eef89e8b7e1"
+    },
+    "checked.png": {
+      "path": ".publication/sunset-launch-v15/capture/checked.png",
+      "sha256": "3df2cdf571d86334dd0709ecc1a1c20dd0dfd0c589537666fe77b087ef219cfa"
+    },
+    "display.otf": {
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf",
+      "sha256": "7f33328e6b4d4cd21b45fa625791928c9407dc702db6780e56b09ca9a3ecaa67"
+    },
+    "display-italic.otf": {
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-BoldItalic.otf",
+      "sha256": "3f47fb34fcb7de09f8cbc9f305191340ddebf7a068419f4bb5f49287dea59b87"
+    },
+    "sans.otf": {
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf",
+      "sha256": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08"
+    },
+    "gsap.min.js": {
+      "path": ".publication/sunset-launch-v16/toolchain/node_modules/gsap/dist/gsap.min.js",
+      "sha256": "3d1bea374ab1b703cc5c4105358eec63c4465efdc573931dc116e34a0a190c1b"
+    },
+    "score.wav": {
+      "path": ".publication/sunset-launch-v16/audio/mix.wav",
+      "sha256": "6eb7803b92ce20d475ff04137820e2dc2f19d5b4d9fda68433585fe7f7b50184"
+    }
+  },
+  "reference_pixels_or_audio_in_output": false,
+  "finished_old_movies_consumed": false,
+  "generated_media_ignored": true,
+  "app_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_or_submission_sent": false,
+  "source_publication": "Verified local commit only; operator pushes from normal laptop terminal."
+}

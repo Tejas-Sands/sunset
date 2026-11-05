@@ -1,6 +1,6 @@
 # SUNSET — free didn't make itself
 
-**29.5-second replacement script, for review.** The operator rejected V15 as insufficiently kinetic and requested another look at the references and a better script. This revision is writing and direction; no V16 film has been rendered. V14's two styles remain the approved visual anchors.
+**Approved 29.5-second production script.** The operator rejected V15 as insufficiently kinetic, approved this replacement and then explicitly requested execution with Brag and HyperFrames. V14's two styles remain the approved visual anchors. The [delivery record](README.md) separates script approval from review of the resulting film.
 
 **Premise:** free work takes real human effort. Sponsor its public release, compensate the maker, and help the next useful thing exist.
 
