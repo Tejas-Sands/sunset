@@ -1,0 +1,251 @@
+{
+  "checked_at": "2026-11-06T10:52:36.702491+00:00",
+  "status": "rendered_verified; qualified_encoded_motion_review_complete; operator_final_review_pending",
+  "source": "../media/launch-v17/README.md",
+  "design": "../media/launch-v17/DESIGN.md",
+  "script": "../media/launch-v17/SCRIPT.md",
+  "review": "../media/launch-v17/REVIEW.md",
+  "credits": "../media/launch-v17/CREDITS.md",
+  "post_draft": "../media/launch-v17/x-post.txt",
+  "credit_reply": "../media/launch-v17/x-reply-credits.txt",
+  "operator_request": {
+    "changes": [
+      "Animated sunset intro replaces giant opening FREE",
+      "Elegant clearly visible editorial typography",
+      "Keep matching-key/public-page opening",
+      "One symbolic creator-credit card with sleek claim/payment animation"
+    ],
+    "execution": "continue and implement the video animation properly",
+    "font_choice": "Geist selected by builder from existing product font",
+    "finished_film_approved": false
+  },
+  "movie": {
+    "path": ".publication/sunset-launch-v17/sunset-launch-v17.mp4",
+    "sha256": "fe5932ee08748cc80bc69fd39c1f04596f052b2a0f362770e45a5e804751f4d4",
+    "bytes": 31557257,
+    "duration": 29.5,
+    "frames": 885,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "H264/yuv420p TV BT709; AAC48kHz stereo; faststart",
+    "atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ]
+  },
+  "poster": {
+    "path": ".publication/sunset-launch-v17/poster.png",
+    "sha256": "b02f8cc19cd6675a20e9fe427165398fadf93e24cb93cfe046ae92ebd91623aa",
+    "film_at": 1.2
+  },
+  "runtime": {
+    "hyperframes": "0.9.16",
+    "gsap": "3.15.1",
+    "actual_cli_render": true,
+    "toolchain_reused_from_v16": true,
+    "new_packages": false,
+    "global_profile_changes": false,
+    "paid_model_provider_usage": false,
+    "compiler_public_font_fetches": {
+      "family": "Inter",
+      "faces": 11,
+      "cache": "Ignored V16 toolchain cache",
+      "visible_editorial_font_verified": "Geist",
+      "strictly_offline_initial_render": false
+    }
+  },
+  "prepared_composition": {
+    "path": ".publication/sunset-launch-v17/composition-delivery/index.html",
+    "sha256": "731fae79bb49d0f6b0479e44716cb12cbda9e7e0eb04c3e2622aa18b6d07bf1f"
+  },
+  "manifest": {
+    "path": ".publication/sunset-launch-v17/composition-delivery/source-manifest.json",
+    "sha256": "6504ddc365d455de900cf216a00d46746b3e15dbfd3f136efede718068d78d10"
+  },
+  "source_inputs": [
+    {
+      "path": "projects/sunset/media/launch-v17/film.html",
+      "sha256": "124ec280b5d9e5d20dfebfcd28d3cc566223717bb85f28cfa013afffc49a8c45"
+    },
+    {
+      "path": "projects/sunset/media/launch-v17/film.css",
+      "sha256": "5e6ae748004f07b50b02f06616b2643fa63d82f2663a61272eddb3db1fe19ab9"
+    },
+    {
+      "path": "projects/sunset/media/launch-v17/film.js",
+      "sha256": "2caf26e49a9c73e2185d4cb86ec996445c6cec498f1870e513ca3bb189ca1270"
+    }
+  ],
+  "assets": {
+    "creators.png": {
+      "path": ".publication/sunset-launch-v14/assets/creator-portrait.png",
+      "sha256": "a68f23e7b9578f569cfdbaeb5bd2cef4efa31e8d3052f2ae4815ab5710d08d47"
+    },
+    "workroom.png": {
+      "path": ".publication/sunset-launch-v14/assets/workroom.png",
+      "sha256": "5838dbf289d795b5e900e9d26241afc1c00fe1318ce81e808c79f1561bbc0465"
+    },
+    "hands.png": {
+      "path": ".publication/sunset-launch-v13/assets/creator-cutout.png",
+      "sha256": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f"
+    },
+    "unchecked.png": {
+      "path": ".publication/sunset-launch-v15/capture/unchecked.png",
+      "sha256": "db312ca87fb82aeff8fbd2683bf8f46b4d2c65061a06ba6146688eef89e8b7e1"
+    },
+    "checked.png": {
+      "path": ".publication/sunset-launch-v15/capture/checked.png",
+      "sha256": "3df2cdf571d86334dd0709ecc1a1c20dd0dfd0c589537666fe77b087ef219cfa"
+    },
+    "geist.woff2": {
+      "path": "projects/sunset/public/fonts/geist-latin-variable.woff2",
+      "sha256": "19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1"
+    },
+    "gsap.min.js": {
+      "path": ".publication/sunset-launch-v16/toolchain/node_modules/gsap/dist/gsap.min.js",
+      "sha256": "3d1bea374ab1b703cc5c4105358eec63c4465efdc573931dc116e34a0a190c1b"
+    },
+    "score.wav": {
+      "path": ".publication/sunset-launch-v17/audio/mix.wav",
+      "sha256": "6eb7803b92ce20d475ff04137820e2dc2f19d5b4d9fda68433585fe7f7b50184"
+    }
+  },
+  "font_license": "../public/fonts/OFL-Geist.txt",
+  "geometry": {
+    "path": ".publication/sunset-launch-v17/geometry-delivery/ui-geometry.json",
+    "sha256": "8cb1188fe9ec75f62b610f3a2b20d06254611cf5f3c359ec4afccc01a5145423",
+    "method": "81 fresh actual compiled HyperFrames renderSeek calls plus 23 exact intro/reading/key/card/reader/closing PNGs",
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  "verification": {
+    "full_decode": true,
+    "decoded_frames": 885,
+    "encoded_integrated_lufs": -15.1,
+    "encoded_true_peak_dbtp": -2.3,
+    "genuine_UI_frames": 81,
+    "max_genuine_UI_mean_channel_error_255": 3.65868,
+    "checkbox_correct_max_MAE": 13.52379,
+    "checkbox_opposite_min_MAE": 80.33333,
+    "canonical_prior_films_preserved": 17,
+    "report": {
+      "path": ".publication/sunset-launch-v17/verification-delivery/final-report.json",
+      "sha256": "e2c346c5bced805add6a64a07e14b6586492ded1d5a3da4bce40209e420f3d21"
+    },
+    "engine_check": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 4
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 10
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "craft": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 4
+      }
+    }
+  },
+  "payment_logic": {
+    "illustration_label": "NEAR testnet \u00b7 illustration",
+    "prepared_resource_exists_before_sponsorship": true,
+    "completed_target": 8.4,
+    "matched_key": 12.45,
+    "public_release": 12.6,
+    "creator_credit": 13.4,
+    "deliberate_claim": 14.3,
+    "successful_confirmation": 15.45,
+    "paid": 15.8,
+    "paid_clear_until": 16.3,
+    "no_new_signature": true,
+    "not_live_wallet_UI": true
+  },
+  "genuine_reader": {
+    "capture": {
+      "path": ".publication/sunset-launch-v15/capture/capture-provenance.json",
+      "sha256": "f9d9f9b858bee7596777aa31a775507209c584dd073893aaa22b0a1c3379339e"
+    },
+    "source_window": [
+      0,
+      2.7
+    ],
+    "film_window": [
+      16.4,
+      19.1
+    ],
+    "playback_speed": 1,
+    "first_checked_output_frame": 537,
+    "actual_input_film": [
+      17.600145381,
+      17.624610837
+    ],
+    "method": "Two original timed PNG states, not continuous browser video",
+    "offline_scope": "Browser offline emulation before local file load; not OS network-adapter toggle",
+    "reload_claimed": false,
+    "underlying_procedure_performed": false,
+    "new_funded_resource": false
+  },
+  "audio": {
+    "master": {
+      "path": ".publication/sunset-launch-v17/audio/mix.wav",
+      "sha256": "6eb7803b92ce20d475ff04137820e2dc2f19d5b4d9fda68433585fe7f7b50184"
+    },
+    "unchanged_from_v16": true,
+    "recorded_Foley_placements": 30,
+    "voice_present": false,
+    "perceptual_listening_assessed": false
+  },
+  "review_scope": {
+    "preview": "All 23 native poses and 390px versions; protected primary copy, normal Geist, key conditions and single-card state order inspected.",
+    "encoded": "26 chronological intro samples +48 key/card samples at100ms;18 decoded reading poses;8 exact390px readbacks. No blocking finding in reviewed frames.",
+    "operator_final_approval": false,
+    "review_sha256": "03fdfe2758f52efe884aaf76fa8ce22ad62a087e5c78007b3f2f8f0c45ddd49f"
+  },
+  "source_hashes_at_verification": {
+    "projects/sunset/media/launch-v17/CREDITS.md": "7aa7deadfaef98c4921b4461c70375bb7d51f79f0c2cafe6d7448da8696bc04e",
+    "projects/sunset/media/launch-v17/DESIGN.md": "61389a7c7df24e1d9041095458d32404e30cd2d8bbf444c438d8d1c5e45e1c73",
+    "projects/sunset/media/launch-v17/PLAN.md": "70f2e4f854283467894938f88fbee6f0cd52c773b69e22e8c40404119afd52b3",
+    "projects/sunset/media/launch-v17/README.md": "db57b56454c79b5dd4f22111611218ac6e445e0decbd6a0d4012b5d8d853fb05",
+    "projects/sunset/media/launch-v17/REVIEW.md": "03fdfe2758f52efe884aaf76fa8ce22ad62a087e5c78007b3f2f8f0c45ddd49f",
+    "projects/sunset/media/launch-v17/SCRIPT.md": "50d7c72dca941326ce4d81db0bc6e594c26cf69ce192040bbef745704f3183b0",
+    "projects/sunset/media/launch-v17/film.css": "5e6ae748004f07b50b02f06616b2643fa63d82f2663a61272eddb3db1fe19ab9",
+    "projects/sunset/media/launch-v17/film.html": "124ec280b5d9e5d20dfebfcd28d3cc566223717bb85f28cfa013afffc49a8c45",
+    "projects/sunset/media/launch-v17/film.js": "2caf26e49a9c73e2185d4cb86ec996445c6cec498f1870e513ca3bb189ca1270",
+    "projects/sunset/media/launch-v17/pipeline.py": "a29b1dad9767f6c7b5c14d1f9d06180a24a4d49192feb663498073947c0da6cf",
+    "projects/sunset/media/launch-v17/verify.py": "8283effe55cdb8405e5da3f06f6ee397aa141166ba9cc9c16148daea36279e69",
+    "projects/sunset/media/launch-v17/x-post.txt": "b8dea435b51a32963fc6c0adcd9a92e8095edd1596954055558bba138bd3d81b",
+    "projects/sunset/media/launch-v17/x-reply-credits.txt": "bb9730d48378d22b0d248a1ee20cae6164601f3064344a37088269b266b38556"
+  },
+  "generated_media_ignored": true,
+  "reference_pixels_or_audio_in_output": false,
+  "old_rendered_films_consumed": false,
+  "app_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_or_submission_sent": false,
+  "source_publication": "Verified local source commit; operator pushes from normal laptop terminal."
+}

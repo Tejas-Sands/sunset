@@ -1,18 +1,18 @@
 # SUNSET launch film
 
-Current delivery: [V16 — Free didn't make itself](../media/launch-v16/README.md), **29.5 seconds, 1920×1080 at 30 fps**, rendered by the actual local HyperFrames 0.9.16 engine with GSAP 3.15.1. Independent paper/type/depth layers, camera travel, SVG drawing and selective Canvas accents follow the creator-first story. Licensed instrumental music and recorded Foley supply sound; no generated narration.
+Current delivery: [V17 — sunset first, clear creator credit](../media/launch-v17/README.md), **29.5 seconds, 1080p30**, rendered with the existing HyperFrames/GSAP runtime. The operator requested a sunset introduction instead of the giant FREE page, elegant clearly visible type, preservation of the key opening, and one symbolic creator-credit card. This version implements those corrections.
 
-Open `.publication/sunset-launch-v16/sunset-launch-hyperframes-final.mp4`. The separate poster is `.publication/sunset-launch-v16/poster-final.png`. [Script](../media/launch-v16/SCRIPT.md), [motion direction](../media/launch-v16/MOTION.md), [review](../media/launch-v16/REVIEW.md) and [exact artifact evidence](../evidence/launch-video-v16.json) identify the delivery. The operator approved the script and execution; approval of the finished film is not inferred.
+Open .publication/sunset-launch-v17/sunset-launch-v17.mp4. The poster is .publication/sunset-launch-v17/poster.png. [Script changes](../media/launch-v17/SCRIPT.md), [review](../media/launch-v17/REVIEW.md), [credits](../media/launch-v17/CREDITS.md) and [artifact evidence](../evidence/launch-video-v17.json) identify the result. The finished film has not received operator approval merely because its source, codec and reader checks pass.
 
-Financial artwork is labelled **NEAR testnet · illustration**: the prepared resource and completed target precede timely matching-key release; creator credit precedes a separate withdrawal and confirmation; Paid follows confirmation. The shorter film follows the success path. A genuine downloaded-reader insert uses source 0–2.7s at 1×, with actual checkbox input and visible checked/saved state. It demonstrates local reader state, not performance of the underlying procedure, reload, a new funded resource or initial recovery without networking. No commands appear in the reader crop.
+The key/public-page animation remains. One front-facing card then progresses through ready credit, deliberate claim, successful confirmation and Paid, with the last state kept clear until 16.3s. Finance stays labelled **NEAR testnet · illustration**; no new transaction or actual signing UI is shown. The genuine existing handbook insert retains source 0–2.7s at 1× during 16.4–19.1s, including actual input/checked/saved state. It shows no reload, procedure completion, new funded handbook or initial recovery without networking.
 
-Full decode/format/885-frame checks, encoded audio, all 81 native-reader comparisons and prior-film identities pass. Actual decoded motion review caught and corrected portal/hand/caption/portrait issues, including funding copy that the engine's automated contrast check missed. Technical passes remain separate from aesthetic approval and perceptual listening.
+Use the [post draft](../media/launch-v17/x-post.txt) with a native video upload and the [required music-credit reply](../media/launch-v17/x-reply-credits.txt). Links, feedback, recorded hackathon wording/tags and attribution stay in accompanying text. No generated voice, product URL or credit block appears in picture. No public post or submission has been sent.
 
-Use the [main post](../media/launch-v16/x-post.txt), with the video uploaded natively, plus the [credit reply](../media/launch-v16/x-reply-credits.txt). They contain demo/repository links, feedback invitation, recorded hackathon wording/tags and required music attribution. [Full credits](../media/launch-v16/CREDITS.md) disclose sources and edits. No URL or music-credit block is in picture. No public post or submission has been sent.
-
-All generated media, raw captures, recordings, fonts, dependencies and caches stay ignored. This media batch changes no app, contract, campaign, signer or deployment. Source commits are local; the operator pushes. These are production tools, not instructions for using SUNSET.
+Generated media, recordings, font copies, dependencies and caches remain ignored. Only verified source/evidence are committed locally; the operator pushes. These production commands are not SUNSET user steps. No app, contract, campaign, signer or deployment changed.
 
 ## Earlier iterations
+
+[V16](../media/launch-v16/README.md) and its exact output remain preserved. The operator requested the opening, font and payment-card corrections now implemented in V17; its key-opening movement was explicitly retained.
 
 [V15](../media/launch-v15/README.md) remains preserved with its explicit operator rejection as insufficiently kinetic; its technical checks are historical evidence, not a posting recommendation. The [original V16 writing-only evidence](../evidence/launch-script-v16.json) remains the snapshot before script approval and implementation.
 
