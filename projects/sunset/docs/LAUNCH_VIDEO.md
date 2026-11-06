@@ -1,18 +1,20 @@
 # SUNSET launch film
 
-Current delivery: [V18 — original identity, elegant resource moment](../media/launch-v18/README.md), **29.5 seconds, 1080p30**. V17 was considered smooth and almost final. This bounded revision animates the exact existing striped icon and original horizontal lockup, uses lighter product typography and removes the checklist/progress passage.
+Current delivery: [V19 — purpose, key and clean resource opening](../media/launch-v19/README.md), **29.5 seconds, 1080p30**. The approved flow, original striped logo and music remain. The existing scenes now explain the product, sponsorship benefit and NEAR's conditional role; key contact/turn/hinge is refined, and the Search panel is completely replaced.
 
-Open .publication/sunset-launch-v18/sunset-launch-v18.mp4. Poster: .publication/sunset-launch-v18/poster.png. [Script changes](../media/launch-v18/SCRIPT.md), [review](../media/launch-v18/REVIEW.md), [credits](../media/launch-v18/CREDITS.md) and [artifact evidence](../evidence/launch-video-v18.json) identify the result. Runtime, codec, logo and reader checks are not automatic approval of the finished film.
+Open .publication/sunset-launch-v19/sunset-launch-v19.mp4. Poster: .publication/sunset-launch-v19/poster.png. [Locked script](../media/launch-v19/SCRIPT.md), [review](../media/launch-v19/REVIEW.md), [credits](../media/launch-v19/CREDITS.md) and [artifact evidence](../evidence/launch-video-v19.json) record the actual delivery. Narration is explicitly deferred; no voice was generated.
 
-The key/public-page opening, creator-credit card and world/camera timing remain. Finance stays labelled **NEAR testnet · illustration**; deliberate claim and successful confirmation precede Paid. No new signature or actual wallet UI is shown.
+“Help creators make useful work free” connects to sponsorship of a prepared release. After public release, FREE FOR EVERYONE and creator credit connect the audience benefit with compensation. “NEAR holds funds. Timely release unlocks creator credit” spans custody, matching key and the ready-credit card. A separate claim and successful confirmation still precede Paid. Finance remains labelled **NEAR testnet · illustration**, not newly executed signing.
 
-The new 16.4–19.1s insert uses an actual offline search for successor, which automatically narrows the handbook to the maintainership chapter. Two synchronized native crops show search/status and the chapter title/first paragraph. They contain no checkboxes, progress footer, Git commands or invented controls. Source 0–2.7s plays at 1× with no future state. It proves local navigation, not a separate chapter click, reload, underlying procedure completion, new funded resource or initial recovery without networking.
+The 16.4–19.1s insert uses a real click on the existing landing CTA followed by the actual opened handbook header. Native crops contain no Search, checklist, progress, commands, paragraphs, app chrome or invented cursor/control. Source 0–2.7s plays at 1×; frame 537 is the first completed result. It is local online navigation with a transparently warmed route, qualified Existing handbook example. The general offline-capability line refers to separate downloaded-reader evidence, not this capture.
 
-Use the [post draft](../media/launch-v18/x-post.txt) with a native video upload and the [required music-credit reply](../media/launch-v18/x-reply-credits.txt). Demo/repository links, feedback invitation, recorded hackathon wording/tags and attribution stay in accompanying text. No generated voice, product URL or music-credit block appears in picture. Nothing has been posted or submitted.
+Use the [post draft](../media/launch-v19/x-post.txt) and [required music-credit reply](../media/launch-v19/x-reply-credits.txt) with native video upload. Demo/repository links, feedback, recorded hackathon wording/tags and attribution remain in accompanying text; no URL or credit block appears in picture. No public post or submission has been sent.
 
-Generated media, captures, font copies, dependencies and caches remain ignored. Verified source/evidence are committed locally; the operator pushes. Production commands are not SUNSET user steps. No app, contract, campaign, signer or deployment changed.
+All 885 frames fully decode; original-logo/source identities, 81 state-specific native crop comparisons, encoded audio and 19 canonical prior-film hashes pass. Actual decoded reference-informed motion/readability review is a qualified pass; cold-viewer comprehension, physical devices, uninterrupted playback/listening and operator final approval are not inferred. Generated media/captures/tooling remain ignored. Source commits are local; the operator pushes. No app, contract, campaign, signer, content or deployment changed.
 
 ## Earlier iterations
+
+[V18](../media/launch-v18/README.md) remains intact. The operator retained its flow and requested the purpose/key/resource refinements now implemented in V19.
 
 [V17](../media/launch-v17/README.md) remains preserved with its exact output and technical review. The operator liked its smoothness and requested the narrow logo/type/reader corrections implemented in V18.
 

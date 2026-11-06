@@ -308,15 +308,15 @@
   "browser_showcase": "browser-showcase.json",
   "operator_control": "All financial roles share one operator; separate IDs prove authority checks, not independent people.",
   "launch_media": {
-    "status": "v18_rendered_verified; qualified_encoded_motion_review_complete; operator_review_pending",
+    "status": "v19_rendered_verified; qualified_encoded_motion_review_complete; narration_deferred; operator_review_pending",
     "delivery_guide": "../docs/LAUNCH_VIDEO.md",
-    "current_script": "../media/launch-v18/SCRIPT.md",
-    "current_script_evidence": "launch-video-v18.json",
+    "current_script": "../media/launch-v19/SCRIPT.md",
+    "current_script_evidence": "launch-video-v19.json",
     "new_film_rendered": true,
     "latest_full_film": {
-      "version": 18,
-      "evidence": "launch-video-v18.json",
-      "status": "rendered_for_operator_review"
+      "version": 19,
+      "evidence": "launch-video-v19.json",
+      "status": "rendered_for_operator_review; narration_deferred"
     },
     "previous_v15": {
       "evidence": "launch-video-v15.json",
@@ -331,11 +331,16 @@
       "status": "opening_type_and_payment_card_revision_requested; key_opening_retained"
     },
     "original_script_evidence": "launch-script-v16.json",
-    "current_design": "../media/launch-v18/DESIGN.md",
+    "current_design": "../media/launch-v19/DESIGN.md",
     "previous_v17": {
       "evidence": "launch-video-v17.json",
       "status": "operator_liked_smoothness; original_logo_type_reader_refinements_requested"
-    }
+    },
+    "previous_v18": {
+      "evidence": "launch-video-v18.json",
+      "status": "flow_retained; key_purpose_resource_refinements_requested"
+    },
+    "narration_deferred": true
   },
   "fresh_e2e_audit": "e2e-2026-11-03.json",
   "testnet_refunds": "testnet-refunds.json",
