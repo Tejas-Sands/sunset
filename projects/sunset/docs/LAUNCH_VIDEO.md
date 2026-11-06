@@ -1,16 +1,20 @@
 # SUNSET launch film
 
-Current delivery: [V17 — sunset first, clear creator credit](../media/launch-v17/README.md), **29.5 seconds, 1080p30**, rendered with the existing HyperFrames/GSAP runtime. The operator requested a sunset introduction instead of the giant FREE page, elegant clearly visible type, preservation of the key opening, and one symbolic creator-credit card. This version implements those corrections.
+Current delivery: [V18 — original identity, elegant resource moment](../media/launch-v18/README.md), **29.5 seconds, 1080p30**. V17 was considered smooth and almost final. This bounded revision animates the exact existing striped icon and original horizontal lockup, uses lighter product typography and removes the checklist/progress passage.
 
-Open .publication/sunset-launch-v17/sunset-launch-v17.mp4. The poster is .publication/sunset-launch-v17/poster.png. [Script changes](../media/launch-v17/SCRIPT.md), [review](../media/launch-v17/REVIEW.md), [credits](../media/launch-v17/CREDITS.md) and [artifact evidence](../evidence/launch-video-v17.json) identify the result. The finished film has not received operator approval merely because its source, codec and reader checks pass.
+Open .publication/sunset-launch-v18/sunset-launch-v18.mp4. Poster: .publication/sunset-launch-v18/poster.png. [Script changes](../media/launch-v18/SCRIPT.md), [review](../media/launch-v18/REVIEW.md), [credits](../media/launch-v18/CREDITS.md) and [artifact evidence](../evidence/launch-video-v18.json) identify the result. Runtime, codec, logo and reader checks are not automatic approval of the finished film.
 
-The key/public-page animation remains. One front-facing card then progresses through ready credit, deliberate claim, successful confirmation and Paid, with the last state kept clear until 16.3s. Finance stays labelled **NEAR testnet · illustration**; no new transaction or actual signing UI is shown. The genuine existing handbook insert retains source 0–2.7s at 1× during 16.4–19.1s, including actual input/checked/saved state. It shows no reload, procedure completion, new funded handbook or initial recovery without networking.
+The key/public-page opening, creator-credit card and world/camera timing remain. Finance stays labelled **NEAR testnet · illustration**; deliberate claim and successful confirmation precede Paid. No new signature or actual wallet UI is shown.
 
-Use the [post draft](../media/launch-v17/x-post.txt) with a native video upload and the [required music-credit reply](../media/launch-v17/x-reply-credits.txt). Links, feedback, recorded hackathon wording/tags and attribution stay in accompanying text. No generated voice, product URL or credit block appears in picture. No public post or submission has been sent.
+The new 16.4–19.1s insert uses an actual offline search for successor, which automatically narrows the handbook to the maintainership chapter. Two synchronized native crops show search/status and the chapter title/first paragraph. They contain no checkboxes, progress footer, Git commands or invented controls. Source 0–2.7s plays at 1× with no future state. It proves local navigation, not a separate chapter click, reload, underlying procedure completion, new funded resource or initial recovery without networking.
 
-Generated media, recordings, font copies, dependencies and caches remain ignored. Only verified source/evidence are committed locally; the operator pushes. These production commands are not SUNSET user steps. No app, contract, campaign, signer or deployment changed.
+Use the [post draft](../media/launch-v18/x-post.txt) with a native video upload and the [required music-credit reply](../media/launch-v18/x-reply-credits.txt). Demo/repository links, feedback invitation, recorded hackathon wording/tags and attribution stay in accompanying text. No generated voice, product URL or music-credit block appears in picture. Nothing has been posted or submitted.
+
+Generated media, captures, font copies, dependencies and caches remain ignored. Verified source/evidence are committed locally; the operator pushes. Production commands are not SUNSET user steps. No app, contract, campaign, signer or deployment changed.
 
 ## Earlier iterations
+
+[V17](../media/launch-v17/README.md) remains preserved with its exact output and technical review. The operator liked its smoothness and requested the narrow logo/type/reader corrections implemented in V18.
 
 [V16](../media/launch-v16/README.md) and its exact output remain preserved. The operator requested the opening, font and payment-card corrections now implemented in V17; its key-opening movement was explicitly retained.
 

@@ -308,14 +308,14 @@
   "browser_showcase": "browser-showcase.json",
   "operator_control": "All financial roles share one operator; separate IDs prove authority checks, not independent people.",
   "launch_media": {
-    "status": "v17_rendered_verified; qualified_encoded_motion_review_complete; operator_review_pending",
+    "status": "v18_rendered_verified; qualified_encoded_motion_review_complete; operator_review_pending",
     "delivery_guide": "../docs/LAUNCH_VIDEO.md",
-    "current_script": "../media/launch-v17/SCRIPT.md",
-    "current_script_evidence": "launch-video-v17.json",
+    "current_script": "../media/launch-v18/SCRIPT.md",
+    "current_script_evidence": "launch-video-v18.json",
     "new_film_rendered": true,
     "latest_full_film": {
-      "version": 17,
-      "evidence": "launch-video-v17.json",
+      "version": 18,
+      "evidence": "launch-video-v18.json",
       "status": "rendered_for_operator_review"
     },
     "previous_v15": {
@@ -331,7 +331,11 @@
       "status": "opening_type_and_payment_card_revision_requested; key_opening_retained"
     },
     "original_script_evidence": "launch-script-v16.json",
-    "current_design": "../media/launch-v17/DESIGN.md"
+    "current_design": "../media/launch-v18/DESIGN.md",
+    "previous_v17": {
+      "evidence": "launch-video-v17.json",
+      "status": "operator_liked_smoothness; original_logo_type_reader_refinements_requested"
+    }
   },
   "fresh_e2e_audit": "e2e-2026-11-03.json",
   "testnet_refunds": "testnet-refunds.json",

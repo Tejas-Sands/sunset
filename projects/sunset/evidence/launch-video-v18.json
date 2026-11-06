@@ -1,0 +1,374 @@
+{
+  "checked_at": "2026-11-06T12:46:30.732253+00:00",
+  "status": "rendered_verified; qualified_encoded_motion_review_complete; operator_final_review_pending",
+  "source": "../media/launch-v18/README.md",
+  "design": "../media/launch-v18/DESIGN.md",
+  "script": "../media/launch-v18/SCRIPT.md",
+  "review": "../media/launch-v18/REVIEW.md",
+  "credits": "../media/launch-v18/CREDITS.md",
+  "post_draft": "../media/launch-v18/x-post.txt",
+  "credit_reply": "../media/launch-v18/x-reply-credits.txt",
+  "operator_request": {
+    "v17_smooth_almost_final": true,
+    "changes": [
+      "Animate original logo rather than a redesigned sun",
+      "Refine typography while retaining kinetics",
+      "Remove strange checklist passage"
+    ],
+    "final_film_approved": false
+  },
+  "movie": {
+    "path": ".publication/sunset-launch-v18/sunset-launch-v18.mp4",
+    "sha256": "ac8fbfe6f1db209e551047bc5fc3e48d66613d0f5b34e6f350aee35fcf50bf03",
+    "bytes": 28738604,
+    "duration": 29.5,
+    "frames": 885,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "H264/yuv420p TV BT709; AAC48kHz stereo; faststart",
+    "atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ]
+  },
+  "poster": {
+    "path": ".publication/sunset-launch-v18/poster.png",
+    "sha256": "49b928b716ec4ca5070b35c733f2093a95d332ff52bf26b7892acc971c201f2f",
+    "film_at": 28.2
+  },
+  "runtime": {
+    "hyperframes": "0.9.16",
+    "gsap": "3.15.1",
+    "actual_cli_render": true,
+    "reuses_v16_toolchain": true,
+    "new_packages": false,
+    "paid_model_provider": false,
+    "global_profile_changes": false,
+    "offline_production_claimed": false
+  },
+  "original_logo": {
+    "source": "projects/sunset/public/icon.svg",
+    "sha256": "9b4f0a6f633385739440c96a9ab7c8f6b72ad065557a9d5538d7f2194a1e6cf5",
+    "source_staged_loaded_bytes_identical": true,
+    "viewBox": "0 0 64 64",
+    "natural_and_rendered_square": true,
+    "uniform_scale": true,
+    "original_lockup_base": {
+      "icon": 36,
+      "gap": 12,
+      "font": 26,
+      "weight": 680,
+      "tracking": 3,
+      "colour": "#292d27"
+    },
+    "intro_factor": 4,
+    "end_factor": 6,
+    "geometry": [
+      {
+        "time": 1.2,
+        "loadedBytesSha256": "9b4f0a6f633385739440c96a9ab7c8f6b72ad065557a9d5538d7f2194a1e6cf5",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "renderedBounds": {
+          "x": 618.3125,
+          "y": 448,
+          "width": 144,
+          "height": 144,
+          "top": 448,
+          "right": 762.3125,
+          "bottom": 592,
+          "left": 618.3125
+        },
+        "scaleX": 1,
+        "scaleY": 1,
+        "fontSize": 104,
+        "iconWidth": 144,
+        "gap": 48,
+        "tracking": 12,
+        "weight": 680,
+        "word": "SUNSET",
+        "colour": "rgb(41, 45, 39)",
+        "fontFamily": "Geist, Arial, sans-serif",
+        "clipPath": "inset(0% 0px 0px)"
+      },
+      {
+        "time": 28.2,
+        "loadedBytesSha256": "9b4f0a6f633385739440c96a9ab7c8f6b72ad065557a9d5538d7f2194a1e6cf5",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "renderedBounds": {
+          "x": 447.46875,
+          "y": 390,
+          "width": 216,
+          "height": 216,
+          "top": 390,
+          "right": 663.46875,
+          "bottom": 606,
+          "left": 447.46875
+        },
+        "scaleX": 1,
+        "scaleY": 1,
+        "fontSize": 156,
+        "iconWidth": 216,
+        "gap": 72,
+        "tracking": 18,
+        "weight": 680,
+        "word": "SUNSET",
+        "colour": "rgb(41, 45, 39)",
+        "fontFamily": "Geist, Arial, sans-serif",
+        "clipPath": "inset(0% 0px 0px)"
+      }
+    ]
+  },
+  "typography": {
+    "family": "Existing product Geist",
+    "editorial_primary_weight": 500,
+    "main_size": 120,
+    "line_height": 1.12,
+    "tracking_em": -0.02,
+    "brand_wordmark_weight": 680,
+    "preserves_contrast": true
+  },
+  "prepared_composition": {
+    "path": ".publication/sunset-launch-v18/composition-delivery/index.html",
+    "sha256": "e0071de11475b066f3c6ba29f0a6e360f68a47a3fc3a7392614b5f0d8b723ffc"
+  },
+  "manifest": {
+    "path": ".publication/sunset-launch-v18/composition-delivery/source-manifest.json",
+    "sha256": "e73408def75efcd387b98a65f4377d2862ff81886866c3165fc343c999777997"
+  },
+  "source_inputs": [
+    {
+      "path": "projects/sunset/media/launch-v18/film.html",
+      "sha256": "7f78faac2db17660c0b9055a8f52a6eaf9f83ddcbed3a33255dc2d29a9508990"
+    },
+    {
+      "path": "projects/sunset/media/launch-v18/film.css",
+      "sha256": "5b2448c76a1dd225db86655136f5f2bda155de1c441f9c03611ee50b57e3ca16"
+    },
+    {
+      "path": "projects/sunset/media/launch-v18/film.js",
+      "sha256": "cecbbc28eb95ebeaedb45bd117334a2773a6322c58bc89b80700580f23daacaa"
+    }
+  ],
+  "assets": {
+    "creators.png": {
+      "path": ".publication/sunset-launch-v14/assets/creator-portrait.png",
+      "sha256": "a68f23e7b9578f569cfdbaeb5bd2cef4efa31e8d3052f2ae4815ab5710d08d47"
+    },
+    "workroom.png": {
+      "path": ".publication/sunset-launch-v14/assets/workroom.png",
+      "sha256": "5838dbf289d795b5e900e9d26241afc1c00fe1318ce81e808c79f1561bbc0465"
+    },
+    "hands.png": {
+      "path": ".publication/sunset-launch-v13/assets/creator-cutout.png",
+      "sha256": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f"
+    },
+    "search-empty.png": {
+      "path": ".publication/sunset-launch-v18/capture/search-empty.png",
+      "sha256": "911a9069e9b7feb45127fdee3d058daf4e83cc2783c742792d3327d3335d3136"
+    },
+    "search-successor.png": {
+      "path": ".publication/sunset-launch-v18/capture/search-successor.png",
+      "sha256": "2510e2c2cd058532e6a456946bf1d42179003438207d4192257caa2cf3d1431c"
+    },
+    "original-logo.svg": {
+      "path": "projects/sunset/public/icon.svg",
+      "sha256": "9b4f0a6f633385739440c96a9ab7c8f6b72ad065557a9d5538d7f2194a1e6cf5"
+    },
+    "geist.woff2": {
+      "path": "projects/sunset/public/fonts/geist-latin-variable.woff2",
+      "sha256": "19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1"
+    },
+    "gsap.min.js": {
+      "path": ".publication/sunset-launch-v16/toolchain/node_modules/gsap/dist/gsap.min.js",
+      "sha256": "3d1bea374ab1b703cc5c4105358eec63c4465efdc573931dc116e34a0a190c1b"
+    },
+    "score.wav": {
+      "path": ".publication/sunset-launch-v18/audio/mix.wav",
+      "sha256": "6eb7803b92ce20d475ff04137820e2dc2f19d5b4d9fda68433585fe7f7b50184"
+    }
+  },
+  "geometry": {
+    "path": ".publication/sunset-launch-v18/geometry-delivery/ui-geometry.json",
+    "sha256": "f8671bd86c2d460ce2f5e1db7213c8fd321ffa4661e4414bef2245fd34fc9b10",
+    "method": "81 fresh actual compiled HyperFrames exact seeks with two native fragments per frame, plus24native pose screenshots and brand/text audit",
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  "verification": {
+    "full_decode": true,
+    "decoded_frames": 885,
+    "encoded_integrated_lufs": -15.1,
+    "encoded_true_peak_dbtp": -2.3,
+    "genuine_UI_frames": 81,
+    "native_fragment_comparisons": 162,
+    "max_genuine_UI_mean_channel_error_255": 2.23956,
+    "max_local_state_correct_MAE": 2.36571,
+    "min_local_opposite_state_MAE": 8.64379,
+    "min_local_state_winning_margin": 7.238119999999999,
+    "canonical_prior_films_preserved": 18,
+    "report": {
+      "path": ".publication/sunset-launch-v18/verification-delivery/final-report.json",
+      "sha256": "82db93af961b4edf6b014e4d1a674ece012ffe06f6b18e4307a78f8a764e5a05"
+    },
+    "engine_check": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 4
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 27
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "craft": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 4
+      }
+    }
+  },
+  "genuine_reader": {
+    "resource": "Open-source Maintainer Handbook",
+    "capture": {
+      "path": ".publication/sunset-launch-v18/capture/capture-provenance.json",
+      "sha256": "3c471ac77543411d22850c442651b81d61cc1bafcf03701c9dfc7bc987443d9b"
+    },
+    "unchanged_downloaded_HTML": {
+      "path": ".publication/sunset-launch-v10/footage/downloads-146396/maintainer-handbook-offline.html",
+      "sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a",
+      "bytes": 17862
+    },
+    "source_window": [
+      0,
+      2.7
+    ],
+    "film_window": [
+      16.4,
+      19.1
+    ],
+    "playback_speed": 1,
+    "input_source": [
+      1.2003899450010067,
+      1.2300860850009485
+    ],
+    "input_film": [
+      17.600389945001005,
+      17.63008608500095
+    ],
+    "result_source_sample_at": 1.3277030990011554,
+    "first_result_output_frame": 532,
+    "action": "Real fill of search with successor; native filter automatically selects Hand over maintainership",
+    "separate_chapter_click_claimed": false,
+    "native_ROIs": {
+      "search": [
+        350,
+        305,
+        610,
+        425
+      ],
+      "chapter": [
+        630,
+        305,
+        1562,
+        525
+      ]
+    },
+    "localized_state_ROIs": {
+      "query": [
+        360,
+        340,
+        596,
+        385
+      ],
+      "chapter_title": [
+        665,
+        337,
+        1220,
+        383
+      ]
+    },
+    "query_before": "",
+    "query_after": "successor",
+    "title_before": "Prepare a public release",
+    "title_after": "Hand over maintainership",
+    "checklist_progress_or_Git_command_pixels_in_crops": false,
+    "method": "Two original timed PNG states, each shown through two synchronized editorial fragments; not continuous browser video",
+    "offline_scope": "Browser offline before local file navigation; file: and zero external resources before/after; not OS adapter toggle",
+    "reload_claimed": false,
+    "underlying_procedure_performed": false,
+    "new_funded_resource": false
+  },
+  "finance": {
+    "label": "NEAR testnet \u00b7 illustration",
+    "key_opening_preserved": true,
+    "creator_credit": 13.4,
+    "deliberate_claim": 14.3,
+    "confirmation": 15.45,
+    "paid": 15.8,
+    "paid_clear_until": 16.3,
+    "new_signature": false,
+    "live_wallet_UI": false
+  },
+  "audio": {
+    "master": {
+      "path": ".publication/sunset-launch-v18/audio/mix.wav",
+      "sha256": "6eb7803b92ce20d475ff04137820e2dc2f19d5b4d9fda68433585fe7f7b50184"
+    },
+    "unchanged_from_v17": true,
+    "recorded_Foley_placements": 30,
+    "voice_present": false,
+    "perceptual_listening_assessed": false
+  },
+  "review_scope": {
+    "preview": "All 24 native poses and 390px sheets; exact logo, lighter primary copy, key/card and checklist-free search/result inspected.",
+    "encoded": "93 chronological 100ms samples covering changed intro/search/closing; 22 reading poses, exact frames531/532 and eight390px readbacks. No blocking finding in reviewed samples.",
+    "operator_final_approval": false,
+    "review_sha256": "decb14961f69a07b12766d2dec86ce9995d4595aa52780d6878cd9b57d4a0b87"
+  },
+  "source_hashes_at_verification": {
+    "projects/sunset/media/launch-v18/CREDITS.md": "227a5bac92b245ee3213712a9185c5ee07f983f1c079bc67de713c0b73b9ff8c",
+    "projects/sunset/media/launch-v18/DESIGN.md": "392dad674ed0c2a5f6c6dde77ad673575635c8a99f730649b84fb1f87467a00f",
+    "projects/sunset/media/launch-v18/PLAN.md": "16aa5c3ed39623e83a480f146e85ef8821070ef5835e8baaa8d41a65f6c5d61a",
+    "projects/sunset/media/launch-v18/README.md": "a45694f658268fca1d8a0787ac511233644907dd318e2a1262a09269d6e7475e",
+    "projects/sunset/media/launch-v18/REVIEW.md": "decb14961f69a07b12766d2dec86ce9995d4595aa52780d6878cd9b57d4a0b87",
+    "projects/sunset/media/launch-v18/SCRIPT.md": "6b44245d0a3efaa93c8cd290b5d042b2ab3f01f4be0e49e99f7d40a8b1ae396c",
+    "projects/sunset/media/launch-v18/film.css": "5b2448c76a1dd225db86655136f5f2bda155de1c441f9c03611ee50b57e3ca16",
+    "projects/sunset/media/launch-v18/film.html": "7f78faac2db17660c0b9055a8f52a6eaf9f83ddcbed3a33255dc2d29a9508990",
+    "projects/sunset/media/launch-v18/film.js": "cecbbc28eb95ebeaedb45bd117334a2773a6322c58bc89b80700580f23daacaa",
+    "projects/sunset/media/launch-v18/pipeline.py": "66229756b8812b106efe744a7c3761bda56ac906d28ad993542bf78554502738",
+    "projects/sunset/media/launch-v18/verify.py": "2b545e048c530f407665aacbc0b570d275b56ebc8d5429ccfd5d3548b767a289",
+    "projects/sunset/media/launch-v18/x-post.txt": "b8dea435b51a32963fc6c0adcd9a92e8095edd1596954055558bba138bd3d81b",
+    "projects/sunset/media/launch-v18/x-reply-credits.txt": "bb9730d48378d22b0d248a1ee20cae6164601f3064344a37088269b266b38556"
+  },
+  "generated_media_ignored": true,
+  "reference_pixels_or_audio_in_output": false,
+  "old_rendered_films_consumed": false,
+  "app_changes": false,
+  "chain_mutations": 0,
+  "deployment_performed": false,
+  "public_post_or_submission_sent": false,
+  "source_publication": "Verified local source commit; operator pushes from normal laptop terminal."
+}
