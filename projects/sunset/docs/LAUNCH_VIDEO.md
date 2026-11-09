@@ -1,6 +1,16 @@
 # SUNSET launch film
 
-Current delivery: [V22 — narrated workshop story](../media/launch-v22/README.md), **44.667 seconds, 1080p30**. Local movie: `.publication/sunset-launch-v22/sunset-launch-v22.mp4`. The operator-selected warm synthetic voice A carries one coherent maker/resource story. The actual [workshop kit](../public/try-workshop-kit.html) is a usable 45-minute CC0 guide. Projected paper, camera pushes, copy handoffs and the foreground pass retain the kinetic direction.
+Current delivery: [V23 — dark protocol world](../media/launch-v23/README.md), **44.667 seconds, 1080p30**. Open `.publication/sunset-launch-v23/sunset-launch-v23.mp4`. The operator-approved V22 script, warm synthetic voice and overall story remain unchanged; all 2,095 AAC packets and timestamps are identical. The operator selected deep green/black, luminous coral and glass geometry.
+
+The same workshop kit moves through contribution orbits and shared custody. A continuous camera recenters the assembly, moves into the visible matching-key receiver, then pulls back into the open resource and creator credit. Claim, confirmation and Paid remain separate. Refunds use an expressly alternative, centered claim-path diagram; copies spread across the shared space. The earlier Lantern Trail proof remains qualified. The ending contains the original logo/tagline, without URL or CTA.
+
+Full decode, 159 brand comparisons, 233 sampled native poses, 105 clean ending frames, exact approved sound, 23 earlier movies, source hashes and BT.709/faststart pass. Encoded sound remains −15.0 LUFS/−2.5 dBTP. Fresh independent source/43-frame and phone/chronological review found no blocking issue. [Script](../media/launch-v23/SCRIPT.md), [review and limits](../media/launch-v23/REVIEW.md), [credits](../media/launch-v23/CREDITS.md) and [evidence](../evidence/launch-video-v23.json) distinguish sampled inspection from continuous playback/listening or final V23 creative approval.
+
+This is native projected geometry using existing helpers, without new browser execution. No app, resource, protocol action, deployment, shared authentication or public post changed. Keep the [existing post](../media/launch-v22/x-post.txt) and [required music-credit reply](../media/launch-v22/x-reply-credits.txt) as drafts; attribution stays outside the picture. Generated media remain ignored; the operator pushes verified local source commits.
+
+## Archived V22 revision
+
+Archived V22 delivery: [V22 — narrated workshop story](../media/launch-v22/README.md), **44.667 seconds, 1080p30**. Local movie: `.publication/sunset-launch-v22/sunset-launch-v22.mp4`. The operator-selected warm synthetic voice A carries one coherent maker/resource story. The actual [workshop kit](../public/try-workshop-kit.html) is a usable 45-minute CC0 guide. Projected paper, camera pushes, copy handoffs and the foreground pass retain the kinetic direction.
 
 The original sponsorship/custody/key/card footage preserves release credit, deliberate claim, confirmation and Paid. An explicitly alternative refund branch explains missed conditions and a separate refund claim/withdrawal. The proof identifies the **prior Lantern Trail** run: 2 November 2026, 0.1 testNEAR payout, recorded offline reader, one operator. It is not the new kit's payment history. **The ending contains only the original SUNSET logo and tagline, with no URL or CTA.**
 
