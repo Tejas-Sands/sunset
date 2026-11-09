@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-11-09T06:23:59.617852+00:00",
+  "status": "rendered_verified; sampled_source_visual_review_pass; operator_review_and_narration_pending",
+  "source": "../media/launch-v21/README.md",
+  "script": "../media/launch-v21/SCRIPT.md",
+  "review": {
+    "generated_decoded_material_frames": 139,
+    "fresh_reviewer_independently_decoded_frames": 50,
+    "findings": "No blocker or important source/visual issue; more kinetic depth and readable primary benefits; sampled ending has no URL.",
+    "minor_limits": [
+      "24.5s is an intentional montage cut into the older circle artwork, not a seamless object match.",
+      "Native paragraph is supporting art, not required phone reading."
+    ],
+    "scope_limits": [
+      "Sampled inspection, not uninterrupted human playback/listening, physical-device validation, audience testing or operator approval.",
+      "Native excerpt is prior browser-offline evidence, not a new capture/action/resource.",
+      "Illustration does not establish adoption, livelihood outcomes or new financial execution."
+    ]
+  },
+  "credits": "../media/launch-v21/CREDITS.md",
+  "recommendations": "../media/launch-v21/LAUNCH_RECOMMENDATIONS.md",
+  "movie": {
+    "path": ".publication/sunset-launch-v21/sunset-launch-v21.mp4",
+    "sha256": "0d543ed9e0a8cdbc3e48f380b83759f00120968d213112694962bb1f635a2385",
+    "bytes": 26632625,
+    "frames": 930,
+    "duration_seconds": 31,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "H.264",
+    "colour": "BT.709 limited",
+    "audio": "AAC stereo48kHz",
+    "faststart": true
+  },
+  "poster": {
+    "path": ".publication/sunset-launch-v21/poster.png",
+    "sha256": "d5b18a55614430944886b9811a9c0842e7834c8a201fc00712830e98d4bb5dae",
+    "frame": 929
+  },
+  "requested_changes": {
+    "ending_link_removed": true,
+    "ending_cta_removed": true,
+    "ending_original_logo_and_tagline_only": true,
+    "kinetic_changes": [
+      "Perspective copy fan",
+      "Two camera pushes/pulls",
+      "Independent portrait/draft/hands/prints planes",
+      "Near foreground paper pass",
+      "Opposing whole-phrase entrances"
+    ],
+    "approved_main_words_retained": true,
+    "essential_text_protected": true
+  },
+  "production": {
+    "method": "Native Pillow/FFmpeg perspective collage using exact V19 master and unchanged V20 helpers; no new browser render.",
+    "source_manifest_sha256": "732ca06eff2aaa6d178b9f605f2b5d2c60d569f754895b7aa1282d3bb389fd5e",
+    "frame_map_sha256": "9c8478888b17b79152f1c626f64dcaa28c3be08865d724e3b41e45eb94ec0c0c",
+    "extra_reading_holds_seconds": {
+      "ready_credit": 0.4,
+      "paid": 0.3
+    },
+    "retained_animation_speed": 1,
+    "new_packages": false,
+    "voice_generated": false
+  },
+  "verification": {
+    "full_decode": true,
+    "source_comparisons": 636,
+    "max_source_mae_255": 2.00979,
+    "native_stable_comparisons": 97,
+    "max_native_mae_255": 4.6455,
+    "full_closing_comparisons": 99,
+    "empty_footer_comparisons": 99,
+    "footer_minimum_channel": 236,
+    "url_negative_control_detects_v20": true,
+    "preserved_prior_movies": 21,
+    "encoded_lufs": -15.0,
+    "encoded_true_peak_dbtp": -2.4,
+    "recorded_foley_cues": 32,
+    "report": ".publication/sunset-launch-v21/verification/report.json",
+    "report_sha256": "a13478f3d40a4386893bcc2c32155e70727ab63cfb3fa0c319c205b695b6d1ad"
+  },
+  "proposed_launch_additions_implemented": false,
+  "app_contract_campaign_signer_deployment_changed": false,
+  "public_post_or_submission_sent": false,
+  "publication": "Verified local source commit only; media stay ignored and operator pushes."
+}
