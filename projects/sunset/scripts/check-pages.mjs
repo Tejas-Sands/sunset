@@ -37,6 +37,14 @@ assert.ok(links.some(url => url.origin === origin && url.pathname === '/try-lant
   'Landing must link to the standalone sample');
 assert.ok(links.some(url => url.origin === origin && url.pathname === '/try-maintainer-handbook.html'), 'Landing must expose the original handbook sample');
 const app = await readFile(resolve(output, 'app/index.html'), 'utf8');
+for (const [name, html] of [['landing', landing], ['workspace', app]]) {
+  assert.match(html, /<script\b[^>]*id="sunset-theme"/, `${name} needs the before-paint theme bootstrap`);
+  assert.ok(html.indexOf('id="sunset-theme"') < html.indexOf('<body'), `${name} must restore its theme before the body`);
+  assert.match(html, /class="theme-toggle"/, `${name} needs an accessible theme switch`);
+  assert.match(html, /Switch to dark mode/);
+  assert.match(html, /Switch to light mode/);
+  assert.match(html, /<a\b[^>]*href="\/"[^>]*aria-label="SUNSET home"/, `${name} logo must link to the landing page`);
+}
 const sample = await readFile(resolve(output, 'try-lantern-trail.html'), 'utf8');
 const packData = sample.match(/<script\b[^>]*\bid="pack-data"[^>]*>([\s\S]*?)<\/script>/i)?.[1];
 assert.ok(packData, 'Standalone sample must contain its own pack data');

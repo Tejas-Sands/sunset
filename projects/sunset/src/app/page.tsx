@@ -1,10 +1,9 @@
 import Image from 'next/image';
+import Sun from '../components/SunsetMark';
+import ThemeToggle from '../components/ThemeToggle';
 
 function Arrow({diagonal=false}:{diagonal?:boolean}){
   return <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={diagonal?'M6 18 18 6M6 6h12v12':'M4 12h15m-6-6 6 6-6 6'}/></svg>;
-}
-function Sun({className=''}:{className?:string}){
-  return <svg className={className} width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M5 22a15 15 0 0 1 30 0" fill="currentColor"/><path d="M5 26h30M8 31h24M13 36h14" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/></svg>;
 }
 function Symbol({name}:{name:'people'|'release'|'offline'|'leaf'|'play'}){
   const path={people:'M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8-1a2.5 2.5 0 1 0 0-5M2 20v-2a6 6 0 0 1 12 0v2m2-7a5 5 0 0 1 5 5v2',release:'M7 10V7a5 5 0 0 1 10 0m-13 8h16v11H4V10Zm5 5 2 2 4-4',offline:'M5 3h14v18H5V3Zm4 4h6m-6 4h6m-6 5 2 2 4-4',leaf:'M19 4C8 1 2 9 7 15s14-1 12-11ZM5 21 15 9',play:'m9 5 11 7-11 7V5Z'}[name];
@@ -39,7 +38,7 @@ export default function Landing(){
     <header className="lp-header lp-container">
       <a className="lp-brand" href="/" aria-label="SUNSET home"><Sun/><span>SUNSET</span></a>
       <nav className="lp-nav" aria-label="Website navigation"><a href="#commons">The commons</a><a href="#how-it-works">How it works</a><a href="#for-creators">For creators</a><a href="#questions">Questions</a></nav>
-      <a className="lp-button lp-button-dark lp-nav-cta" href="/app/">Open the app <Arrow diagonal/></a>
+      <div className="lp-header-actions"><ThemeToggle/><a className="lp-button lp-button-dark lp-nav-cta" href="/app/">Open the app <Arrow diagonal/></a></div>
     </header>
 
     <main id="content">

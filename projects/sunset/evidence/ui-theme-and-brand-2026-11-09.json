@@ -1,0 +1,290 @@
+{
+  "schema": 1,
+  "date": "2026-11-09",
+  "status": "implemented_and_verified_locally_not_deployed",
+  "baseline_commit": "b5075b4",
+  "requested": [
+    "Simple light/dark mode on website and app",
+    "Correct tapered-line sunset logo",
+    "Logo click returns to landing page",
+    "Improve UI within the established SUNSET identity"
+  ],
+  "implementation": {
+    "initial_mode": "Valid saved choice, otherwise device preference, otherwise light",
+    "toggle": "Native accessible button; target mode label updates through theme CSS",
+    "persistence": "Optional sunset-theme localStorage entry; rehearsal/progress keys untouched",
+    "first_paint": "Static theme bootstrap in document head before the body; root hydration warning suppressed for the changed data attribute",
+    "branding": "Shared original landing SVG: semicircle and three progressively shorter horizontal strokes; favicon geometry aligned; loading/desktop/mobile brand links use /",
+    "styles": [
+      "Warm cream/coral light palette",
+      "Deep forest/coral dark palette",
+      "Paired landing/workspace/form/modal/status/hosted-guide surfaces",
+      "Refined card hierarchy, header actions, navigation/focus and mobile wrapping",
+      "Original cream hero artwork framed in dark mode"
+    ],
+    "new_dependencies": false
+  },
+  "verification": {
+    "application_tests_passed": 66,
+    "theme_runtime_tests_passed": 3,
+    "theme_cases": [
+      "System light and dark defaults",
+      "Saved light/dark overrides system",
+      "Invalid saved value falls back",
+      "Preference survives new page/navigation",
+      "Unrelated rehearsal data retained",
+      "Storage read/write exceptions and blocked accessor preserve in-tab switching"
+    ],
+    "typecheck_passed": true,
+    "local_workflow_scenarios_passed": 9,
+    "wasm_host_scenarios_passed": 11,
+    "artifact_digests_matched": true,
+    "production_build_passed": true,
+    "static_page_checks_passed": true,
+    "theme_bootstrap_before_body_checked": true,
+    "theme_buttons_and_home_anchors_checked_in_both_exports": true,
+    "contrast_token_pairs": {
+      "light": [
+        {
+          "foreground": "ink",
+          "background": "bg",
+          "ratio": 11.79,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "ink",
+          "background": "surface",
+          "ratio": 12.65,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "muted",
+          "background": "bg",
+          "ratio": 5.1,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "muted",
+          "background": "surface",
+          "ratio": 5.47,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "muted",
+          "background": "soft",
+          "ratio": 4.78,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "accent",
+          "background": "bg",
+          "ratio": 4.9,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "on-accent",
+          "background": "accent",
+          "ratio": 5.26,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "on-strong",
+          "background": "strong",
+          "ratio": 11.17,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "green",
+          "background": "surface",
+          "ratio": 9.4,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "warning-ink",
+          "background": "warning-bg",
+          "ratio": 5.7,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "success-ink",
+          "background": "success-bg",
+          "ratio": 6.45,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "danger-ink",
+          "background": "danger-bg",
+          "ratio": 5.94,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "purple-ink",
+          "background": "purple-bg",
+          "ratio": 5.9,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "sidebar-active-ink",
+          "background": "sidebar-active",
+          "ratio": 10.41,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "line-strong",
+          "background": "bg",
+          "ratio": 3.31,
+          "minimum": 3
+        },
+        {
+          "foreground": "line-strong",
+          "background": "surface",
+          "ratio": 3.55,
+          "minimum": 3
+        },
+        {
+          "foreground": "line-strong",
+          "background": "soft",
+          "ratio": 3.1,
+          "minimum": 3
+        }
+      ],
+      "dark": [
+        {
+          "foreground": "ink",
+          "background": "bg",
+          "ratio": 15.59,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "ink",
+          "background": "surface",
+          "ratio": 13.65,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "muted",
+          "background": "bg",
+          "ratio": 9.98,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "muted",
+          "background": "surface",
+          "ratio": 8.73,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "muted",
+          "background": "soft",
+          "ratio": 7.77,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "accent",
+          "background": "bg",
+          "ratio": 7.2,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "on-accent",
+          "background": "accent",
+          "ratio": 6.44,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "on-strong",
+          "background": "strong",
+          "ratio": 12.24,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "green",
+          "background": "surface",
+          "ratio": 10.44,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "warning-ink",
+          "background": "warning-bg",
+          "ratio": 9.27,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "success-ink",
+          "background": "success-bg",
+          "ratio": 8.22,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "danger-ink",
+          "background": "danger-bg",
+          "ratio": 8.74,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "purple-ink",
+          "background": "purple-bg",
+          "ratio": 8.56,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "sidebar-active-ink",
+          "background": "sidebar-active",
+          "ratio": 10.47,
+          "minimum": 4.5
+        },
+        {
+          "foreground": "line-strong",
+          "background": "bg",
+          "ratio": 4.61,
+          "minimum": 3
+        },
+        {
+          "foreground": "line-strong",
+          "background": "surface",
+          "ratio": 4.03,
+          "minimum": 3
+        },
+        {
+          "foreground": "line-strong",
+          "background": "soft",
+          "ratio": 3.59,
+          "minimum": 3
+        }
+      ]
+    },
+    "independent_source_review": "No remaining Critical/Important defect after scoped GuideReader fix. No browser QA claimed."
+  },
+  "browser_verification": {
+    "performed": false,
+    "bridge": "No running Chrome instance",
+    "local_server": "Socket creation denied with EPERM",
+    "cli": "Daemon failed startup even with a writable /tmp socket/profile directory",
+    "limits": "No rendered screenshot, interactive browser, layout-at-viewport or physical-device pass is claimed. Contrast is measured from source token pairs, not every rendered pixel."
+  },
+  "preserved": [
+    "Protocol/cryptography/recovery/rehearsal logic",
+    "Rehearsal data storage key",
+    "Standalone original samples and guide exports",
+    "Testnet/public evidence and private operator backups",
+    "Accepted launch film and frozen assets"
+  ],
+  "source_sha256": {
+    "src/app/theme.css": "eedc13720c3212f728091fe3a2e9c310cf97db61887da49ee805eb3fb078eec5",
+    "src/lib/theme.mjs": "7282dd1d8d374315a219fcd65acb261a48d5e8aa8329d0627dd1452e50f24022",
+    "src/components/SunsetMark.tsx": "b6e2c9db7f819b8a35e5ab2bd4789f5e16ca8db4eeb0d6c30a98586c45315cc2",
+    "src/components/ThemeToggle.tsx": "e9ac0c1a81c8bff99a566f7060babfa6a3176401d4fd425a066d155d3a02c3a8",
+    "src/app/layout.tsx": "313c9dd9e82bf271636e2d09c79d1dda91bdb054b835ed22976841ef48896b38",
+    "src/app/page.tsx": "a7de43ee027c1380c8ca232341e163212265e4eca0201095773247279f9ea9f3",
+    "src/app/app/page.tsx": "a63d3593f65d9920fd9fab2a85e7262b1f8aea36df81ab1db7e52a90b22b64da",
+    "public/icon.svg": "d99a5ac1a78fcfae6a34f7893d5fe0b54d57f7316abfd2d696f394d77a1700c4",
+    "tests/theme.test.mjs": "704dc467b2422f04a068586b482c0673c2b55e1a3f70a3655f1405d56b60950b",
+    "scripts/check-pages.mjs": "ee7945ba04f136b64dcf27359c343318f1dda320531479483ffc73c4edae54e5",
+    "src/app/globals.css": "1e97367503fa7fed9cb883ce994c579b6c485bfa60bc709d9b694cfea311d4e7"
+  },
+  "deployed": false,
+  "pushed": false,
+  "signed_actions": false,
+  "posted": false,
+  "submitted": false
+}
