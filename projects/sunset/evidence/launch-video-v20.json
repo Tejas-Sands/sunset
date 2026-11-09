@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-11-09T05:57:13.496187+00:00",
+  "status": "rendered_verified; sampled_author_and_independent_review_pass; operator_visual_review_and_narration_pending",
+  "source": "../media/launch-v20/README.md",
+  "script": "../media/launch-v20/SCRIPT.md",
+  "review": "../media/launch-v20/REVIEW.md",
+  "credits": "../media/launch-v20/CREDITS.md",
+  "movie": {
+    "path": ".publication/sunset-launch-v20/sunset-launch-v20.mp4",
+    "sha256": "e8c62d367b86fa31847432d7ed63467160b992f8096dce5b7b8161e881f942ce",
+    "bytes": 23682076,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 1020,
+    "duration_seconds": 34,
+    "codec": "H.264",
+    "colour": "BT.709 limited",
+    "audio": "AAC stereo48kHz",
+    "faststart": true
+  },
+  "poster": {
+    "path": ".publication/sunset-launch-v20/poster.png",
+    "sha256": "4b2ec03b8549568f256fffa7c74d2449c945d5326c7c395ad8722e8f5798066b",
+    "frame": 1019
+  },
+  "story_sheet": {
+    "path": ".publication/sunset-launch-v20/story-sheet.jpg",
+    "sha256": "472228b2fedeb9a09657f7a2a1c843093715a1513db7070602d0f30b5c44da33"
+  },
+  "production": {
+    "method": "Deterministic Pillow/FFmpeg finishing edit of the exact verified V19 HyperFrames MP4. No new browser/HyperFrames render.",
+    "master_path": ".publication/sunset-launch-v19/sunset-launch-v19.mp4",
+    "master_sha256": "14bce15346a508f90970f15fbb8b0d5243bceedb23179ff8bf9e267900698718",
+    "source_manifest_sha256": "fe4c50c125acac1da0037361278a5b12c6a218bcfd9053f7ad07c41b3924e72b",
+    "frame_map_sha256": "32a1a4c2eafe5fd46477be713285240fa60efd9c895e016d9587d24829f27537",
+    "explicit_extra_holds_seconds": {
+      "ready_credit": 0.7,
+      "paid": 0.6,
+      "closing": 1
+    },
+    "retained_animation_speed": 1,
+    "new_packages": false,
+    "new_model_or_voice": false,
+    "new_transactions": false
+  },
+  "native_excerpt": {
+    "source": ".publication/sunset-launch-v15/capture/unchecked.png",
+    "sha256": "db312ca87fb82aeff8fbd2683bf8f46b4d2c65061a06ba6146688eef89e8b7e1",
+    "roi": [
+      665,
+      350,
+      1445,
+      500
+    ],
+    "destination": [
+      310,
+      511,
+      1610,
+      761
+    ],
+    "uniform_scale": 1.6666666666666667,
+    "film_interval_seconds": [
+      17.7,
+      21.9
+    ],
+    "frames_checked": 126,
+    "max_mean_channel_error_255": 3.52693,
+    "scope": "Still excerpt of prior genuine browser-offline capture; not new screen footage, input, download or procedure completion. Existing example, not the testnet released pack.",
+    "commands_search_checklist_visible": false
+  },
+  "verification": {
+    "full_decode": true,
+    "source_and_asset_hashes": true,
+    "retained_frame_comparisons": 690,
+    "max_retained_mean_channel_error_255": 2.00979,
+    "native_frame_comparisons": 126,
+    "preserved_prior_movie_count": 20,
+    "encoded_lufs": -15.0,
+    "encoded_true_peak_dbtp": -2.4,
+    "report_path": ".publication/sunset-launch-v20/verification/report.json",
+    "report_sha256": "aa20569bfcb4dee24ba34c6ea08e18962d039a85d3d1c8d0ebbf1574120b0c8d",
+    "initial_colour_tag_failure": "Unspecified H.264 primaries/transfer; diagnosed by SPS trace and fixed by lossless VUI stream copy. Final full check passes."
+  },
+  "review_scope": {
+    "decoded_review_material_distinct_frames": 124,
+    "independent_directly_decoded_frames": 21,
+    "independent_findings": "No blocking or important issue; 25.8s leaf-motif cut coherent, same maker, ordered financial states, clear paired payoff and URL.",
+    "limits": [
+      "Supporting paragraph/provenance cannot be fully read in4.2s at phone size; large headline/benefits carry the message.",
+      "No uninterrupted human playback/listening, cold-viewer comprehension test, physical-phone comfort assessment or operator creative approval.",
+      "No adoption, livelihood outcomes or new onchain payment established by the film."
+    ]
+  },
+  "narration_generated": false,
+  "public_post_sent": false,
+  "submission_sent": false,
+  "app_or_contract_or_campaign_changed": false,
+  "publication": "Verified local source commit only; generated media stay ignored and operator pushes."
+}
