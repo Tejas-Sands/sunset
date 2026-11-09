@@ -1,6 +1,18 @@
 # SUNSET launch film
 
-Current delivery: [V23 — dark protocol world](../media/launch-v23/README.md), **44.667 seconds, 1080p30**. Open `.publication/sunset-launch-v23/sunset-launch-v23.mp4`. The operator-approved V22 script, warm synthetic voice and overall story remain unchanged; all 2,095 AAC packets and timestamps are identical. The operator selected deep green/black, luminous coral and glass geometry.
+Current delivery: [V24 — one continuous world](../media/launch-v24/README.md), **44.667 seconds,1080p30**. Open `.publication/sunset-launch-v24/delivery/sunset-launch-v24.mp4`. The voice, spoken script, timing and encoded V22 sound are unchanged.
+
+The intro and outro now share the selected dark green stage, original coral sun foreground and Geist lockup. One absolute camera/object clock carries the same kit from the maker through sponsorship, the restored smaller key/clasp turn and fixed-spine opening, payment, copies and proof. The credit tab grows beside the open kit; the hypothetical refund pan keeps the open/Paid success witness visible. Prior Lantern Trail evidence enters as a separate archive, then yields to the same maker and copies gathering into the closing sun. The ending has no URL/CTA.
+
+[Script](../media/launch-v24/SCRIPT.md), [review](../media/launch-v24/REVIEW.md), [credits](../media/launch-v24/CREDITS.md) and [artifact evidence](../evidence/launch-video-v24.json) preserve checks and limits. The unprotected first V24 payoff was caught in review; final delivery protects both phrases with dark backplates while world motion continues. The first pass/source snapshots remain local for provenance.
+
+No app/resource/protocol action, browser execution, deployment, shared authentication, public post or submission changed. Generated media remain ignored; the operator pushes verified local source commits. Keep the [post](../media/launch-v22/x-post.txt) and [required music-credit reply](../media/launch-v22/x-reply-credits.txt) as drafts; links/attribution stay outside the picture.
+
+## Archived V23 revision
+
+The operator requested the same theme in its bookends, the earlier key opening and improved continuity after finding V23's sections disconnected. Its technical/sample-review passes did not establish creative acceptance.
+
+Archived V23 delivery: [V23 — dark protocol world](../media/launch-v23/README.md), **44.667 seconds, 1080p30**. Open `.publication/sunset-launch-v23/sunset-launch-v23.mp4`. The operator-approved V22 script, warm synthetic voice and overall story remain unchanged; all 2,095 AAC packets and timestamps are identical. The operator selected deep green/black, luminous coral and glass geometry.
 
 The same workshop kit moves through contribution orbits and shared custody. A continuous camera recenters the assembly, moves into the visible matching-key receiver, then pulls back into the open resource and creator credit. Claim, confirmation and Paid remain separate. Refunds use an expressly alternative, centered claim-path diagram; copies spread across the shared space. The earlier Lantern Trail proof remains qualified. The ending contains the original logo/tagline, without URL or CTA.
 

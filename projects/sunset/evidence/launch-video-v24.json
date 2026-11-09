@@ -1,0 +1,333 @@
+{
+  "date": "2026-11-09",
+  "version": "V24",
+  "kind": "completed local continuity/theming/key revision",
+  "operator_request": "Same dark theme in intro/outro, earlier key-opening choreography, and a connected video.",
+  "movie": ".publication/sunset-launch-v24/delivery/sunset-launch-v24.mp4",
+  "sha256": "57348b1f7fea925c31b61650808bcc65f47b70d74b1889831674e8bb2e48022f",
+  "bytes": 23121135,
+  "frames": 1340,
+  "duration_seconds": 44.666666666666664,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "changes": [
+    "One absolute camera/object timeline; persistent resource and shared stage.",
+    "Dark original-sun/Geist bookends, without URL/CTA.",
+    "Smaller original key into attached clasp,14-degree turn and fixed left-spine hinge to−154 degrees.",
+    "Credit, explicit alternative refund path, outward copies, qualified prior archive and maker return enter the same world.",
+    "Open/Paid success witness remains throughout refunds.",
+    "Copies converge into the closing sun; payoff text has protected dark backing."
+  ],
+  "unchanged": {
+    "voice": "af_bella",
+    "synthetic": true,
+    "spoken_script": true,
+    "timeline_and_subtitles": true,
+    "audio_packet_count": 2095,
+    "aac_content_pts_sizes_flags_identical": true,
+    "regenerated_voice": false,
+    "time_stretch": false,
+    "source_movie": ".publication/sunset-launch-v22/sunset-launch-v22.mp4"
+  },
+  "verification": {
+    "full_video_audio_decode": true,
+    "native_comparisons": 472,
+    "max_native_mae_255": 1.71063,
+    "closing_full_frame_comparisons": 105,
+    "dark_intro_outro_corner_checks": 159,
+    "prior_cream_endpoint_negative_control": true,
+    "ending_url_negative_control": true,
+    "fixed_hinge_key_contact": true,
+    "open_paid_refund_witness": true,
+    "boundary_anchor_pose_velocity_checks": [
+      {
+        "frame": 54,
+        "max_anchor_step": 10.506334814814863,
+        "max_velocity_change": 0.3464533333331019
+      },
+      {
+        "frame": 185,
+        "max_anchor_step": 0.48516952584600403,
+        "max_velocity_change": 0.06074743645831404
+      },
+      {
+        "frame": 299,
+        "max_anchor_step": 0.311610125817694,
+        "max_velocity_change": 0.015782965682134886
+      },
+      {
+        "frame": 402,
+        "max_anchor_step": 0.07415629381358713,
+        "max_velocity_change": 0.020748393087757222
+      },
+      {
+        "frame": 486,
+        "max_anchor_step": 0.0,
+        "max_velocity_change": 0.0
+      },
+      {
+        "frame": 549,
+        "max_anchor_step": 6.254080255708914,
+        "max_velocity_change": 0.15604857860168408
+      },
+      {
+        "frame": 609,
+        "max_anchor_step": 0.0,
+        "max_velocity_change": 0.0
+      },
+      {
+        "frame": 683,
+        "max_anchor_step": 10.893192997684537,
+        "max_velocity_change": 0.041787281493498085
+      },
+      {
+        "frame": 809,
+        "max_anchor_step": 9.991109078900081,
+        "max_velocity_change": 0.1127876848051983
+      },
+      {
+        "frame": 935,
+        "max_anchor_step": 4.0770370370372575,
+        "max_velocity_change": 0.711111111110597
+      },
+      {
+        "frame": 1049,
+        "max_anchor_step": 1.994814814815122,
+        "max_velocity_change": 0.004444444444025919
+      },
+      {
+        "frame": 1163,
+        "max_anchor_step": 0.7084088888888687,
+        "max_velocity_change": 0.040106666666645197
+      },
+      {
+        "frame": 1235,
+        "max_anchor_step": 0.0,
+        "max_velocity_change": 0.0
+      }
+    ],
+    "boundary_pixel_checks": [
+      {
+        "frame": 54,
+        "full_mae": 2.1718930041152262,
+        "world_mae": 3.495962962962963,
+        "neighbour_median_world_mae": 3.3421296296296292,
+        "allowed_world_mae": 6.015833333333333
+      },
+      {
+        "frame": 185,
+        "full_mae": 2.68429012345679,
+        "world_mae": 3.5062592592592594,
+        "neighbour_median_world_mae": 3.40362962962963,
+        "allowed_world_mae": 6.126533333333334
+      },
+      {
+        "frame": 299,
+        "full_mae": 0.6476234567901235,
+        "world_mae": 0.6078888888888889,
+        "neighbour_median_world_mae": 0.550962962962963,
+        "allowed_world_mae": 4
+      },
+      {
+        "frame": 402,
+        "full_mae": 0.3431687242798354,
+        "world_mae": 0.22544444444444445,
+        "neighbour_median_world_mae": 0.2373148148148148,
+        "allowed_world_mae": 4
+      },
+      {
+        "frame": 486,
+        "full_mae": 0.33343621399176954,
+        "world_mae": 0.20012962962962963,
+        "neighbour_median_world_mae": 0.3558703703703704,
+        "allowed_world_mae": 4
+      },
+      {
+        "frame": 549,
+        "full_mae": 4.477901234567901,
+        "world_mae": 4.9377407407407405,
+        "neighbour_median_world_mae": 5.45125925925926,
+        "allowed_world_mae": 9.812266666666668
+      },
+      {
+        "frame": 609,
+        "full_mae": 1.4888271604938272,
+        "world_mae": 2.0532777777777778,
+        "neighbour_median_world_mae": 0.06936111111111111,
+        "allowed_world_mae": 4
+      },
+      {
+        "frame": 683,
+        "full_mae": 7.949866255144033,
+        "world_mae": 11.89548148148148,
+        "neighbour_median_world_mae": 12.477268518518517,
+        "allowed_world_mae": 22.459083333333332
+      },
+      {
+        "frame": 809,
+        "full_mae": 6.654670781893004,
+        "world_mae": 9.467537037037037,
+        "neighbour_median_world_mae": 9.111425925925925,
+        "allowed_world_mae": 16.400566666666666
+      },
+      {
+        "frame": 935,
+        "full_mae": 4.226882716049383,
+        "world_mae": 5.997444444444445,
+        "neighbour_median_world_mae": 6.611805555555556,
+        "allowed_world_mae": 11.901250000000001
+      },
+      {
+        "frame": 1049,
+        "full_mae": 6.4042078189300415,
+        "world_mae": 8.736574074074074,
+        "neighbour_median_world_mae": 8.579416666666667,
+        "allowed_world_mae": 15.442950000000002
+      },
+      {
+        "frame": 1163,
+        "full_mae": 3.319804526748971,
+        "world_mae": 4.959148148148148,
+        "neighbour_median_world_mae": 3.6230092592592595,
+        "allowed_world_mae": 6.521416666666667
+      },
+      {
+        "frame": 1235,
+        "full_mae": 0.25935185185185183,
+        "world_mae": 0.3635925925925926,
+        "neighbour_median_world_mae": 0.4006296296296296,
+        "allowed_world_mae": 4
+      }
+    ],
+    "continuity_metric": "Boundary change is compared with neighbouring sustained motion; isolated resets rejected above max(4,1.8×neighbour median), plus analytic pose/velocity guard. This is not an audience-perception test.",
+    "prior_actual_v23_reset_mae": 48.136722222222225,
+    "prior_v23_reset_neighbour_median_mae": 4.319907407407407,
+    "payoff_reading_checks": [
+      {
+        "frame": 1175,
+        "core_text_to_backplate_contrast": [
+          15.35206197909604,
+          6.555063824145087
+        ]
+      },
+      {
+        "frame": 1185,
+        "core_text_to_backplate_contrast": [
+          15.35206197909604,
+          6.555063824145087
+        ]
+      },
+      {
+        "frame": 1200,
+        "core_text_to_backplate_contrast": [
+          15.35206197909604,
+          6.555063824145087
+        ]
+      },
+      {
+        "frame": 1215,
+        "core_text_to_backplate_contrast": [
+          15.35206197909604,
+          6.555063824145087
+        ]
+      }
+    ],
+    "unprotected_first_pass_payoff_negative_control": [
+      1.0115667606645076,
+      0.3773933449650603
+    ],
+    "encoded_lufs": -15.0,
+    "encoded_true_peak_dbtp": -2.5,
+    "codec_colour": "H.264 yuv420p / BT.709 limited / AAC48k stereo / faststart",
+    "canonical_prior_movies_preserved": 24,
+    "first_v24_pass_preserved": {
+      "movie": ".publication/sunset-launch-v24/sunset-launch-v24.mp4",
+      "sha256": "a4268b1421312e39f6bee7b098ea13be6f45c2fe7ec4de9745bdf4330deac553"
+    },
+    "inspection_frames_available": 393,
+    "report_sha256": "a8452f184f7f580a4e1930f2a5b95f134c8a4d76807526925468cd12a38844ec",
+    "source_manifest_sha256": "e7934902f970bae42b34159a92ab232f052fda1c3b782d4b442c0e442a1c84b9",
+    "verifier_sha256": "f9e04c01f82fbf293c763e3a3f25fb561dc4f449ae4f400ad8ecc0e81f755c1a",
+    "python_compile": true
+  },
+  "review": {
+    "independent_study_decoded_frames": 51,
+    "independent_first_full_decoded_frames": 105,
+    "independent_first_full_phone_readbacks": 12,
+    "root_review": [
+      "native key/contact/hinge/refund/brand layouts",
+      "first encoded story sheet",
+      "actual unprotected payoff39.5s, regraded/fixed for reading",
+      "final encoded payoff1185",
+      "final encoded archive and closing handoffs"
+    ],
+    "blocking_or_important_issue_remaining": false,
+    "remaining_minor_limits": [
+      "Helpers briefly meet the swinging cover around546–552.",
+      "Credit549 is growth onset, fully readable later.",
+      "Supporting footers are small at phone width."
+    ],
+    "continuous_human_playback": false,
+    "perceptual_listening_claimed": false,
+    "physical_device_testing": false,
+    "cold_viewer_validation": false,
+    "final_operator_creative_approval": false,
+    "independent_final_revised_frames": [
+      1175,
+      1185,
+      1200,
+      1215,
+      1235,
+      1280,
+      1339
+    ],
+    "independent_final_revised_phone_readbacks": 7,
+    "independent_final_sha_verified": true,
+    "final_targeted_readability_continuity_pass": true
+  },
+  "scope": {
+    "native_projection": true,
+    "browser_executed": false,
+    "new_physics_solver": false,
+    "new_image_generation": false,
+    "app_changes": false,
+    "resource_changes": false,
+    "new_protocol_actions": false,
+    "new_campaign": false,
+    "deployment": false,
+    "shared_auth_change": false,
+    "public_post": false,
+    "submission": false,
+    "proof_is_prior_lantern_trail": true,
+    "proof_roles_one_operator": true,
+    "copies_are_illustration": true,
+    "generated_media_ignored": true,
+    "operator_pushes": true
+  },
+  "production_inputs": {
+    ".publication/sunset-launch-v19/sunset-launch-v19.mp4": "14bce15346a508f90970f15fbb8b0d5243bceedb23179ff8bf9e267900698718",
+    ".publication/sunset-launch-v15/capture/unchecked.png": "db312ca87fb82aeff8fbd2683bf8f46b4d2c65061a06ba6146688eef89e8b7e1",
+    ".publication/sunset-launch-v15/capture/capture-provenance.json": "f9d9f9b858bee7596777aa31a775507209c584dd073893aaa22b0a1c3379339e",
+    ".publication/sunset-launch-v10/footage/downloads-146396/maintainer-handbook-offline.html": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a",
+    ".publication/sunset-launch-v14/assets/creator-portrait.png": "a68f23e7b9578f569cfdbaeb5bd2cef4efa31e8d3052f2ae4815ab5710d08d47",
+    ".publication/sunset-launch-v14/assets/workroom.png": "5838dbf289d795b5e900e9d26241afc1c00fe1318ce81e808c79f1561bbc0465",
+    ".publication/sunset-launch-v13/assets/creator-cutout.png": "d88f268d9044448951d19b8bcc08018e906d1f7a7ae3b1e15675d7371926522f",
+    ".publication/sunset-launch-v1/render/Geist.ttf": "bf9f16bf572900fbdaf975b87e8c7b6abfe4b071c3bbb82a8d8f33357f3276ef",
+    "projects/sunset/public/icon.svg": "9b4f0a6f633385739440c96a9ab7c8f6b72ad065557a9d5538d7f2194a1e6cf5",
+    "projects/sunset/media/launch-v20/finish.py": "4c9ad394823cf31023e48f3ae2927781cd32c96e7bea525133f41becf4fc8fc3",
+    "projects/sunset/media/launch-v23/produce.py": "e60cd0cbfbae3c58cdfa0a3e5b1710d3ab0b1b4c9eba9fb617670f4776599aa2",
+    "projects/sunset/media/launch-v22/produce.py": "137d18555a071f033b1c1e3ec5f9f2e1d8ae2ce95a6fd1383f82188b0880f918",
+    "projects/sunset/media/launch-v21/produce.py": "51da74d523e10fd8dacdd79aabee141db8f4ad9f9b95ff0a5cf32149bc67b81a",
+    "projects/sunset/media/launch-v22/narration.json": "5b5213cd4957ec253c50770db822920cf7adc5c5740ef053ae4b6deeaa508cf1",
+    "projects/sunset/public/packs/workshop-kit.json": "e32e101f57160bc7f00d1f56b66cbd2a279d9e5672507f413b2a1396c948db1e",
+    "projects/sunset/evidence/testnet-showcase.json": "47980c36c7eb93f77b5d0d2a3b67239346778a400290d69bcd7d2919f02ce6ab",
+    "projects/sunset/evidence/browser-showcase.json": "96734478793407dcc49d2b146550407762f365f840d4d6badb59fe5730ee132e",
+    "projects/sunset/evidence/testnet-refunds.json": "c01c4a380a196ac6212f31ddababb76ef14fe5977a4790da67c2095cc042a2fa",
+    ".publication/sunset-launch-v22/sunset-launch-v22.mp4": "95fb51bb914c790f584481a5fb1a10dfd5ee449af8fd92ac09af8dafeac7a088",
+    ".publication/sunset-launch-v22/timeline.json": "453f722028d173458725cdc982537b84bea3f25b98cb2fb7c3aba1e03b7fe3c3",
+    ".publication/sunset-launch-v22/audio/qa.json": "fb43ad8f405a2ecc7212d253f9b91ef8089f7e9ab49bfb87a1c887eea1375791",
+    ".publication/sunset-launch-v22/voice/takes.json": "19e25cf8192a45cdc0a77e9a713af92d19e308337f98f14ed93dfb2bba288027",
+    "projects/sunset/media/launch-v24/produce.py": "674e29e6b28395fb27f4d3e73a5dd127872321b5e60ea7ff5a0f2209a83f7442"
+  }
+}
