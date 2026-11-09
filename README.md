@@ -2,7 +2,7 @@
 
 SUNSET pools capped adult sponsorship to release a finished learning resource. A matching key published on time credits the agreed creator; missed funding or release deadlines allow contributor refunds. Learners keep a self-contained game without a wallet. A transferable NEAR stewardship NFT hands over verified mirror-maintenance authority while the resource stays public.
 
-[Try the hosted app](https://sunset-lemon.vercel.app) · [Product and setup](projects/sunset/README.md) · [Fresh end-to-end audit](projects/sunset/docs/E2E_AUDIT_2026-11-03.md) · [Submission guide](projects/sunset/docs/SUBMISSION.md)
+[Try the hosted app](https://sunset-lemon.vercel.app) · [Product and setup](projects/sunset/README.md) · [Final project review](projects/sunset/docs/FINAL_REVIEW_2026-11-09.md) · [Submission package](projects/sunset/docs/SUBMISSION_PACKAGE.md)
 
 ## Try it: do this, see this
 
@@ -31,4 +31,4 @@ Open `http://127.0.0.1:3000` for the landing page or `/app/` for the workspace. 
 
 Primary track candidates: **Open Innovation**, **NFTs That Do Something**, and **Social Money**, subject to organizer judgment. No autonomous-agent, trading or player-token economy is claimed. [Council decision](research/2026-11-01-council/README.md) · [Tokenization research](research/2026-11-01-tokenization/RESEARCH.md) · [Research archive](research/README.md)
 
-Software: MIT. Original sample: CC0-1.0. Generated launch videos and private release files are ignored; renderer sources and public verification evidence are tracked.
+Software: [MIT](projects/sunset/LICENSE). Original sample: CC0-1.0. Generated launch videos and private release files are ignored; renderer sources and public verification evidence are tracked.

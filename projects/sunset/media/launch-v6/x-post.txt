@@ -1,9 +1,0 @@
-Good learning deserves to stick around.
-
-SUNSET funds public learning packs through @NEARProtocol escrow.
-Built at NEAR HACKATHON. Testnet demo:
-https://sunset-lemon.vercel.app
-#NEARHackathon
-
-Music: Origami — Scott Buckley, CC BY 4.0
-https://www.scottbuckley.com.au/library/origami/

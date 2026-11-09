@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "checked_on": "2026-11-09",
+  "status": "local_release_prepared_not_submitted",
+  "scope": "Local final project checks, preserved dated protocol/browser evidence, production cleanup and submission preparation. No signed transaction, push, deployment, post or submission.",
+  "application": {
+    "tests_passed": 63,
+    "typecheck_passed": true,
+    "local_workflow_scenarios_passed": 9,
+    "simulated_near_conserved": "21.8",
+    "production_build_passed": true,
+    "static_targets_passed": 16,
+    "fonts_checked": 1
+  },
+  "contract": {
+    "native_tests_passed": 19,
+    "wasm_host_tests_passed": 11,
+    "format_passed": true,
+    "clippy_warnings_denied_passed": true,
+    "source_digests_matched": 8,
+    "wasm_bytes": 270188,
+    "wasm_sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
+    "fresh_locked_offline_path_remapped_build_matched": true,
+    "host_tests_are_protocol_runtime": false
+  },
+  "launch": {
+    "file": "sunset-launch.mp4",
+    "sha256": "57348b1f7fea925c31b61650808bcc65f47b70d74b1889831674e8bb2e48022f",
+    "bytes": 23121135,
+    "frames": 1340,
+    "fps": 30,
+    "duration": 44.666666666666664,
+    "operator_creatively_accepted": true,
+    "path": ".publication/sunset-final/sunset-launch.mp4",
+    "required_bundle_files_verified": 16,
+    "complete_decode_passed": true,
+    "aac_packets_matched": 2095,
+    "native_identity_frames_matched": 48,
+    "encoded_native_samples": 204,
+    "max_encoded_native_mae": 1.63165,
+    "encoded_lufs": -15.0,
+    "legacy_production_folders_required": false
+  },
+  "cleanup": {
+    "manifest": "production-cleanup-2026-11-09.json",
+    "total_removed_bytes": 5227458749,
+    "git_history_retained": true,
+    "private_operator_backups_retained": true,
+    "genuine_browser_captures_retained": true
+  },
+  "publication_checks": {
+    "repository": "https://github.com/Tejas-Sands/sunset",
+    "anonymous_html_http_status": 200,
+    "public_badge": true,
+    "observed_remote_commit": "22fe1a4ba393e772ada8138f0fec0ed91153ef14",
+    "github_api_http_status": 403,
+    "hosted_app": "https://sunset-lemon.vercel.app/app/",
+    "hosted_app_http_status": 200,
+    "hosted_app_matches_current_local_chunks": false,
+    "final_batch_pushed": false,
+    "fresh_interactive_browser_verified": false,
+    "fresh_rpc_read_verified": false,
+    "limits": "Native fetch failed DNS. Browser daemon failed startup, including with a writable temporary socket directory. HTTP reachability is not functional browser verification."
+  },
+  "public_release_checks": {
+    "public_text_files_scanned": 237,
+    "secret_pattern_findings": [],
+    "relative_markdown_links_checked": 359,
+    "missing_markdown_targets": [],
+    "private_build_paths_excluded": true
+  },
+  "historical_secret_pattern_scan": {
+    "text_blobs_scanned": 723,
+    "findings": [],
+    "limits": "Pattern scan is not proof that arbitrary secrets never existed. Private ignored files are neither opened nor scanned."
+  },
+  "independent_reviews": {
+    "code": "No critical/important defect found in bounded read-only review; controlled original/mirror replay matched historical standalone bytes. Not a fresh live observation.",
+    "media": "No material closure issue; exact movie/assets/prompts retained and legacy dependencies removed.",
+    "submission": "No material rule, factual or send-gating gap in the prepared draft."
+  },
+  "prior_actual_evidence": [
+    "testnet-deployment.json",
+    "testnet-showcase.json",
+    "testnet-refunds.json",
+    "browser-showcase.json"
+  ],
+  "unverified": [
+    "Maximum-state NEAR protocol gas",
+    "Failed native/NFT transfer and callback recovery under real protocol",
+    "NEAR Sandbox",
+    "Independent operators/educator/sponsor demand evidence",
+    "Broad physical-device, accessibility and cross-browser QA",
+    "Mainnet readiness",
+    "Fresh deployed interactive recovery after final publication"
+  ],
+  "submission": {
+    "guide_checked_on": "2026-11-09",
+    "official_rules": "https://nearhackathon.com/HACKATHON.md",
+    "deadline_utc": "2026-11-14T23:59:00Z",
+    "prepared_packet": "../docs/SUBMISSION_PACKAGE.md",
+    "missing_human_fields": [
+      "leadName",
+      "email",
+      "size",
+      "tracks confirmation",
+      "nearAddress mainnet",
+      "demoUrl public X post",
+      "contact consent",
+      "exact payload approval"
+    ],
+    "posted": false,
+    "submitted": false
+  },
+  "current_launch_source_sha256": {
+    "projects/sunset/media/launch/ARTWORK.md": "038043356fa57451fe6e3724c31d6d88252d1c25f79db5dadbb786a9f51809e4",
+    "projects/sunset/media/launch/CREDITS.md": "c29c5420f7746ad6463cd4e5a09b064d3a86721f8bcc20580ff3f296dc6f3bcc",
+    "projects/sunset/media/launch/README.md": "ce05f597ccdf94269d0576b6459e647bc7f900c279f12353aa4c97cdadb4fb92",
+    "projects/sunset/media/launch/SCRIPT.md": "e2d13e7594cedfc16a061af8090a080d5608ebf45a978712507f6a59f9b2bca7",
+    "projects/sunset/media/launch/audio-provenance.json": "d3805834bca3da70ce913b197bef1eb076e8b5fdcd9a375d0ada596f19a4320c",
+    "projects/sunset/media/launch/bundle.json": "8b0b30af05ef54e7743e0639caa6aceae34edb8b20efc906d909360038590bd7",
+    "projects/sunset/media/launch/licenses/Geist-OFL.txt": "f12f59163d92084b0473315ae4566cde0c1233d940ae464f5225a69c347cc691",
+    "projects/sunset/media/launch/licenses/Kokoro-Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "projects/sunset/media/launch/licenses/kokoro-onnx-MIT.txt": "f61fdd0217de9ece8fa699912848d91187d84879fc2e689f0906d0c1299e955e",
+    "projects/sunset/media/launch/native.py": "e5d3936ee2924c5a00f0b6c7e8f3990127dd9c2f1a71951c179394aa50f062c9",
+    "projects/sunset/media/launch/produce.py": "34fc4bb21511b461dcb2fc1ac3e3131dc79d9b43333fce8d8bb1e243114307d9",
+    "projects/sunset/media/launch/verify.py": "1ba7398952dbb7a8028086e943283b0b200268cdecbc446dbce36a60388ad37a",
+    "projects/sunset/media/launch/x-post.txt": "7e15e752149a17d1a622a1205aa8972e3f7d8311769a0a96abd19c6e6f9d52ef",
+    "projects/sunset/media/launch/x-reply-credits.txt": "61712694658fcd90031ef493aabc01946fed45377444130add92babb33ee143f"
+  }
+}

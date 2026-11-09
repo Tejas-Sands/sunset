@@ -1,6 +1,6 @@
 # SUNSET submission guide
 
-Rules checked on **3 November 2026** against the [live organizer instructions](https://nearhackathon.com/HACKATHON.md) and [submission checklist](https://github.com/nearai/near-hackathon-prompt-examples/blob/main/SUBMITTING.md). Recheck the live instructions before sending.
+Rules rechecked on **9 November 2026** against the [live organizer instructions](https://nearhackathon.com/HACKATHON.md). The [submission checklist](https://github.com/nearai/near-hackathon-prompt-examples/blob/main/SUBMITTING.md) is a secondary overview; the live guide governs any difference. Recheck the live instructions before sending.
 
 Submit by **14 November 2026, 23:59 UTC — 15 November, 05:29 IST**. There is no advance registration. Testnet projects are eligible; a paid domain is unnecessary for the existing hosted demo.
 
@@ -8,7 +8,7 @@ Submit by **14 November 2026, 23:59 UTC — 15 November, 05:29 IST**. There is n
 
 1. Publish the reviewed code, license and reproducible README in the [public repository](https://github.com/Tejas-Sands/sunset). Keep it public through judging. Check the repository history for secrets before publication.
 2. The human publishes a public X demo with attached video or screenshots, the build-at-NEAR-HACKATHON statement, `@NEARProtocol` and `#NEARHackathon`. Include an actual action and visible result, NEAR's concrete role, and links to the [hosted demo](https://sunset-lemon.vercel.app) and repository.
-3. Confirm the human fields below, select defensible tracks, then use the [final submission form](https://nearhackathon.com/#apply). An agent may instead use the [official API contract](https://nearhackathon.com/HACKATHON.md), after showing the complete payload and receiving explicit approval. One submission per project; it cannot be edited afterward.
+3. Confirm the human fields below, select defensible tracks, then use the [final submission form](https://nearhackathon.com/#apply). An agent may instead use the [official API contract](https://nearhackathon.com/HACKATHON.md), after showing the complete payload and receiving explicit approval. One submission per project. Saved submissions cannot be edited directly; the human can [request organizer-reviewed corrections](https://nearhackathon.com/request-changes). Never resubmit the same project.
 
 Keep the hosted demo up through 18 November, ideally 25 November, following the organizer's availability guidance.
 
@@ -30,7 +30,7 @@ Read this contact notice verbatim before recording consent:
 
 > I agree that the organizers may use these details to review our submission and contact us about this hackathon.
 
-A 201 response confirms submission. For 400, correct the listed fields with the same request ID; for 503 or a network error, retain that ID. Stop on 403 or 409 and inspect the response rather than creating a duplicate submission.
+A 201 response confirms submission. If a saved submission needs correction, use the human [request-changes page](https://nearhackathon.com/request-changes), not another submission. For 400, correct the listed fields with the same request ID; for 503 or a network error, retain that ID. Stop on 403 or 409 and inspect the response rather than creating a duplicate submission.
 
 ## Track selection and evidence limits
 

@@ -2,9 +2,9 @@
   "status": "draft_not_submitted",
   "format": "Internal preparation document, not an official API payload",
   "event": "NEAR Hackathon 2026",
-  "title": "SUNSET — Support once. Share forever.",
+  "title": "SUNSET \u2014 Support once. Share forever.",
   "short_description": "Pool capped sponsorship to release a verified offline learning resource, or claim a refund. Transfer a stewardship NFT to hand over recovery-mirror maintenance without restricting public access or changing who receives the funds.",
-  "problem": "Shared resources can remain dependent on their original operator even after funding. Communities need an inspectable release agreement and a way to maintain discovery after hosting changes.",
+  "problem": "Useful lessons and practical guides are often unpaid or paywalled, and their future availability can depend on one operator. Communities need a capped public-release agreement that compensates makers, permits refunds when conditions fail and lets someone else maintain recovery.",
   "demonstration": [
     "Open the verified live Released campaign and inspect the pinned contract/code hash.",
     "Show finalized 0.06 + 0.04 testNEAR funding, matching release and native 0.1-testNEAR creator payout with completed callback.",
@@ -70,15 +70,16 @@
     "live_expiry_refunds": "../evidence/testnet-refunds.json"
   },
   "repository_verification": {
-    "source": "Anonymous GitHub repository API",
+    "source": "Anonymous GitHub repository HTML, fetched 9 November 2026 (API returned 403)",
     "full_name": "Tejas-Sands/sunset",
     "private": false,
     "default_branch": "main",
-    "pushed_at": "2026-11-02T11:55:56Z",
-    "evidence_scope": "Public repository verified by coordinator; new showcase documentation/media still await operator push."
+    "evidence_scope": "Repository is publicly visible. Current final changes still await an operator push; the observed remote commit is not this local batch.",
+    "checked_on": "2026-11-09",
+    "observed_commit": "22fe1a4ba393e772ada8138f0fec0ed91153ef14"
   },
   "official_rules": {
-    "checked_on": "2026-11-03",
+    "checked_on": "2026-11-09",
     "source": "https://nearhackathon.com/HACKATHON.md",
     "checklist": "https://github.com/nearai/near-hackathon-prompt-examples/blob/main/SUBMITTING.md",
     "submission_form": "https://nearhackathon.com/#apply",
@@ -87,7 +88,8 @@
     "deadline_ist": "2026-11-15T05:29:00+05:30",
     "guide": "SUBMISSION.md",
     "testnet_eligible": true,
-    "submission_limit": "One submission per project; final submissions cannot be edited."
+    "submission_limit": "One submission per project; at most two independent, disclosed projects per person/email. Saved entries need human organizer-reviewed correction requests, never resubmission.",
+    "request_changes": "https://nearhackathon.com/request-changes"
   },
   "official_submission_requirements": [
     "Public repository by the deadline, remaining public through judging, with a license and reproducible README; check history for secrets.",
@@ -110,5 +112,21 @@
     "human_publishes": true,
     "posted": false
   },
-  "contact_notice": "I agree that the organizers may use these details to review our submission and contact us about this hackathon."
+  "contact_notice": "I agree that the organizers may use these details to review our submission and contact us about this hackathon.",
+  "launch": {
+    "operator_accepted": true,
+    "movie": ".publication/sunset-final/sunset-launch.mp4",
+    "sha256": "57348b1f7fea925c31b61650808bcc65f47b70d74b1889831674e8bb2e48022f",
+    "source": "../media/launch/README.md",
+    "package": "SUBMISSION_PACKAGE.md",
+    "illustration_scope": "Workshop-kit animation; qualified prior Lantern Trail testnet proof. Supplement with genuine dated browser evidence; no new live transaction or screen recording is implied."
+  },
+  "hosting_verification": {
+    "checked_on": "2026-11-09",
+    "app_http_status": 200,
+    "current_local_chunk_identity_matches": false,
+    "fresh_interactive_browser_verified": false,
+    "fresh_rpc_read_verified": false,
+    "limits": "HTTP availability is not an interactive recovery check. Browser daemon startup failed; application RPC fetch failed DNS. Use earlier dated receipts/browser evidence and recheck deployment from the operator browser."
+  }
 }

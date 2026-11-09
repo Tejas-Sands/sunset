@@ -1,0 +1,348 @@
+{
+  "schema": 1,
+  "date": "2026-11-09",
+  "status": "completed",
+  "authorization": "Operator accepted the final film and requested removal of production waste and final submission preparation.",
+  "history_commit_before_cleanup": "6fcd6300403f1dd7424f234084c49baade16d40a",
+  "removed": [
+    {
+      "path": ".publication/static-deployment-files.json",
+      "files": 1,
+      "bytes": 1887741
+    },
+    {
+      "path": ".publication/sunset-launch-v1",
+      "files": 101,
+      "bytes": 40395457
+    },
+    {
+      "path": ".publication/sunset-launch-v10",
+      "files": 389,
+      "bytes": 137912046
+    },
+    {
+      "path": ".publication/sunset-launch-v11",
+      "files": 1026,
+      "bytes": 401424667
+    },
+    {
+      "path": ".publication/sunset-launch-v12",
+      "files": 193,
+      "bytes": 89045342
+    },
+    {
+      "path": ".publication/sunset-launch-v13",
+      "files": 519,
+      "bytes": 424067055
+    },
+    {
+      "path": ".publication/sunset-launch-v14",
+      "files": 321,
+      "bytes": 256031443
+    },
+    {
+      "path": ".publication/sunset-launch-v15",
+      "files": 247,
+      "bytes": 144085220
+    },
+    {
+      "path": ".publication/sunset-launch-v16",
+      "files": 6066,
+      "bytes": 511830715
+    },
+    {
+      "path": ".publication/sunset-launch-v17",
+      "files": 196,
+      "bytes": 148663696
+    },
+    {
+      "path": ".publication/sunset-launch-v18",
+      "files": 208,
+      "bytes": 112817732
+    },
+    {
+      "path": ".publication/sunset-launch-v19",
+      "files": 201,
+      "bytes": 218568466
+    },
+    {
+      "path": ".publication/sunset-launch-v2",
+      "files": 71,
+      "bytes": 18903759
+    },
+    {
+      "path": ".publication/sunset-launch-v20",
+      "files": 59,
+      "bytes": 120639582
+    },
+    {
+      "path": ".publication/sunset-launch-v21",
+      "files": 65,
+      "bytes": 126528519
+    },
+    {
+      "path": ".publication/sunset-launch-v22",
+      "files": 141,
+      "bytes": 285286562
+    },
+    {
+      "path": ".publication/sunset-launch-v23",
+      "files": 127,
+      "bytes": 86071824
+    },
+    {
+      "path": ".publication/sunset-launch-v24",
+      "files": 236,
+      "bytes": 175212366
+    },
+    {
+      "path": ".publication/sunset-launch-v3",
+      "files": 59,
+      "bytes": 26946784
+    },
+    {
+      "path": ".publication/sunset-launch-v4",
+      "files": 1438,
+      "bytes": 220383247
+    },
+    {
+      "path": ".publication/sunset-launch-v5",
+      "files": 5240,
+      "bytes": 738377894
+    },
+    {
+      "path": ".publication/sunset-launch-v6",
+      "files": 125,
+      "bytes": 58301913
+    },
+    {
+      "path": ".publication/sunset-launch-v7",
+      "files": 113,
+      "bytes": 65386509
+    },
+    {
+      "path": ".publication/sunset-launch-v8",
+      "files": 146,
+      "bytes": 67551775
+    },
+    {
+      "path": ".publication/sunset-launch-v9",
+      "files": 324,
+      "bytes": 155978615
+    },
+    {
+      "path": ".publication/sunset-reference-study-20261105",
+      "files": 626,
+      "bytes": 162648710
+    },
+    {
+      "path": ".publication/sunset.bundle",
+      "files": 1,
+      "bytes": 817244
+    },
+    {
+      "path": "projects/sunset/media/launch/narration.txt",
+      "files": 1,
+      "bytes": 1039
+    },
+    {
+      "path": "projects/sunset/media/launch/pitch.md",
+      "files": 1,
+      "bytes": 2357
+    },
+    {
+      "path": "projects/sunset/media/launch/render.py",
+      "files": 1,
+      "bytes": 17290
+    },
+    {
+      "path": "projects/sunset/media/launch/storyboard.json",
+      "files": 1,
+      "bytes": 4681
+    },
+    {
+      "path": "projects/sunset/media/launch/timing.json",
+      "files": 1,
+      "bytes": 5166
+    },
+    {
+      "path": "projects/sunset/media/launch/x-post.txt",
+      "files": 1,
+      "bytes": 244
+    },
+    {
+      "path": "projects/sunset/media/launch/x-thread.txt",
+      "files": 1,
+      "bytes": 1313
+    },
+    {
+      "path": "projects/sunset/media/launch-v10",
+      "files": 19,
+      "bytes": 188914
+    },
+    {
+      "path": "projects/sunset/media/launch-v11",
+      "files": 25,
+      "bytes": 182047
+    },
+    {
+      "path": "projects/sunset/media/launch-v12",
+      "files": 6,
+      "bytes": 31974
+    },
+    {
+      "path": "projects/sunset/media/launch-v13",
+      "files": 5,
+      "bytes": 30069
+    },
+    {
+      "path": "projects/sunset/media/launch-v14",
+      "files": 10,
+      "bytes": 188061
+    },
+    {
+      "path": "projects/sunset/media/launch-v15",
+      "files": 11,
+      "bytes": 81023
+    },
+    {
+      "path": "projects/sunset/media/launch-v16",
+      "files": 16,
+      "bytes": 157227
+    },
+    {
+      "path": "projects/sunset/media/launch-v17",
+      "files": 13,
+      "bytes": 95348
+    },
+    {
+      "path": "projects/sunset/media/launch-v18",
+      "files": 13,
+      "bytes": 97470
+    },
+    {
+      "path": "projects/sunset/media/launch-v19",
+      "files": 13,
+      "bytes": 102945
+    },
+    {
+      "path": "projects/sunset/media/launch-v2",
+      "files": 7,
+      "bytes": 41932
+    },
+    {
+      "path": "projects/sunset/media/launch-v20",
+      "files": 14,
+      "bytes": 99789
+    },
+    {
+      "path": "projects/sunset/media/launch-v21",
+      "files": 15,
+      "bytes": 106540
+    },
+    {
+      "path": "projects/sunset/media/launch-v22",
+      "files": 22,
+      "bytes": 191151
+    },
+    {
+      "path": "projects/sunset/media/launch-v23",
+      "files": 10,
+      "bytes": 117757
+    },
+    {
+      "path": "projects/sunset/media/launch-v24",
+      "files": 10,
+      "bytes": 117554
+    },
+    {
+      "path": "projects/sunset/media/launch-v3",
+      "files": 6,
+      "bytes": 35757
+    },
+    {
+      "path": "projects/sunset/media/launch-v4",
+      "files": 10,
+      "bytes": 84965
+    },
+    {
+      "path": "projects/sunset/media/launch-v5",
+      "files": 15,
+      "bytes": 116462
+    },
+    {
+      "path": "projects/sunset/media/launch-v6",
+      "files": 12,
+      "bytes": 130321
+    },
+    {
+      "path": "projects/sunset/media/launch-v7",
+      "files": 9,
+      "bytes": 56679
+    },
+    {
+      "path": "projects/sunset/media/launch-v8",
+      "files": 12,
+      "bytes": 144648
+    },
+    {
+      "path": "projects/sunset/media/launch-v9",
+      "files": 16,
+      "bytes": 190391
+    },
+    {
+      "path": "projects/sunset/media/reference-study-2026-11-05",
+      "files": 6,
+      "bytes": 46711
+    }
+  ],
+  "removed_bytes": 4798432708,
+  "removed_files": 18541,
+  "accepted_movie": {
+    "path": ".publication/sunset-final/sunset-launch.mp4",
+    "file": "sunset-launch.mp4",
+    "sha256": "57348b1f7fea925c31b61650808bcc65f47b70d74b1889831674e8bb2e48022f",
+    "bytes": 23121135,
+    "frames": 1340,
+    "fps": 30,
+    "duration": 44.666666666666664,
+    "operator_creatively_accepted": true
+  },
+  "retained": [
+    "Consolidated final renderer, exact film/assets and licenses",
+    "Genuine 3 November browser/offline captures",
+    "Public protocol/browser/review evidence and sample resources",
+    "Git history",
+    "Private operator release backups and wallet material"
+  ],
+  "limits": "Superseded generated movies/toolchains are deleted. Their historical measurements remain dated evidence. Prior tracked source is recoverable from Git history. No protocol, public post, submission or push is performed.",
+  "rebuildable_caches_removed": [
+    {
+      "path": "projects/sunset/.next/cache",
+      "files": 37,
+      "bytes": 92578727
+    },
+    {
+      "path": "projects/sunset/.next/dev",
+      "files": 158,
+      "bytes": 75087230
+    },
+    {
+      "path": "projects/sunset/contracts/sunset/target",
+      "files": 618,
+      "bytes": 193297277
+    },
+    {
+      "path": "/tmp/sunset-final-contract-rebuild",
+      "files": 279,
+      "bytes": 68011671
+    },
+    {
+      "path": "projects/sunset/media/launch/__pycache__",
+      "files": 2,
+      "bytes": 51136
+    }
+  ],
+  "total_removed_bytes_including_caches": 5227458749,
+  "total_removed_files_including_caches": 19635
+}

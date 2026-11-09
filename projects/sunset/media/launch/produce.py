@@ -1,0 +1,308 @@
+#!/usr/bin/env python3
+"""Reproduce the accepted SUNSET pictures from the bounded final asset bundle."""
+import argparse
+from functools import lru_cache
+import json
+import math
+from pathlib import Path
+import subprocess
+
+from PIL import Image, ImageDraw
+
+import native
+from native import ROOT,BUNDLE,W,H,FPS,FRAMES,DURATION,WHITE,DARK,MINT,CORAL,QUIET,EVENTS,font,text,sha,ramp,lerp
+
+SOURCE = Path(__file__).resolve().parent
+
+
+def track(t,knots):
+    if t<=knots[0][0]:return knots[0][1]
+    for (a,start),(b,end) in zip(knots,knots[1:]):
+        if t<=b:
+            p=ramp(t,a,b)
+            return lerp(start,end,p) if isinstance(start,tuple) else start+(end-start)*p
+    return knots[-1][1]
+
+
+def camera(t):
+    return track(t,[(0,(1330,540,-120,0)),(1.35,(1330,540,-120,0)),
+        (2.6,(1040,540,20,-8)),(6.4,(1040,540,50,-5)),(9.4,(1060,540,65,-9)),
+        (13.5,(1080,550,120,-4)),(16,(1180,560,240,2)),(17.2,(1180,560,240,2)),
+        (18.9,(1320,550,10,0)),(22,(1320,550,10,0)),(23.6,(1670,550,-200,2)),
+        (26.2,(1670,550,-200,2)),(28,(1300,540,-160,-4)),(31,(1280,550,-140,0)),
+        (32,(1280,550,20,0)),(34,(1280,550,20,0)),(36,(1260,550,-60,-3)),
+        (38.3,(1330,540,-140,0)),(40.8,(1330,540,-80,0)),(DURATION,(1330,540,-80,0))])
+
+
+def window(t,a,b,c,d):
+    return ramp(t,a,b)*(1-ramp(t,c,d))
+
+
+def fade(texture,alpha):
+    if alpha>=.999:return texture
+    result=texture.copy();result.putalpha(texture.getchannel('A').point([round(i*max(0,alpha)) for i in range(256)]))
+    return result
+
+
+def sprite(frame,texture,center,size,cam,opacity=1,ry=0,rz=0):
+    if opacity>.001:native.sheet(frame,fade(texture,opacity),center,size,cam,ry=ry,rz=rz)
+
+
+@lru_cache(maxsize=1)
+def art():
+    return {name: Image.open(BUNDLE/'assets'/(name+'.png')).convert('RGBA')
+            for name in ['creator','hands','kit-cover','kit-agenda','back','clasp','key','archive','mark']}
+
+
+def book_pose(t):
+    center=track(t,[(0,(1330,540,0)),(1.35,(1330,540,0)),(2.6,(1180,730,-30)),
+        (6.4,(1330,590,0)),(38.3,(1330,590,0)),(41,(1330,540,0)),(DURATION,(1330,540,0))])
+    scale=track(t,[(0,.15),(1.35,.15),(2.6,.67),(6.4,1),(38.3,1),(41,.04),(DURATION,.04)])
+    angle=-154*ramp(t,17.5,18.22)
+    return center,scale,angle
+
+
+def book(frame,cam,t,center=None,scale=None,angle=None,opacity=1):
+    a=art();default_center,default_scale,default_angle=book_pose(t)
+    x,y,z=center if center is not None else default_center
+    scale=default_scale if scale is None else scale;angle=default_angle if angle is None else angle
+    w,h=450*scale,585*scale;spine=x-w/2;theta=math.radians(angle)
+    sprite(frame,a['kit-agenda'],(x,y,z+5),(w,h),cam,opacity)
+    # The left edge stays fixed in world space through the complete cover hinge.
+    cover_center=(spine+w/2*math.cos(theta),y,z-30-w/2*math.sin(theta))
+    sprite(frame,a['kit-cover'] if angle>=-90 else a['back'],cover_center,(w,h),cam,opacity,ry=angle)
+    return (spine,y,z-30)
+
+
+def wirebox(frame,cam,center,half,opacity):
+    if opacity<.002:return
+    x,y,z=center;w,h,depth=half
+    points=[native.point(x+a*w,y+b*h,z+c*depth,cam) for a,b,c in [(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),(-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]]
+    colour=tuple(round(a+(b-a)*opacity) for a,b in zip((7,26,23),(112,169,141)))
+    for a,b in [(0,1),(1,2),(2,3),(3,0),(4,5),(5,6),(6,7),(7,4),(0,4),(1,5),(2,6),(3,7)]:native.line(frame,[points[a],points[b]],colour,2)
+
+
+def key_pose(t):
+    turn=14*ramp(t,500/30,500/30+.15)
+    dx=(650-360)/720*350;dy=(175-165)/330*160;theta=math.radians(turn)
+    insert=ramp(t,16.2,500/30)
+    return (1105-dx*math.cos(theta)+dy*math.sin(theta)-140*(1-insert),638-dx*math.sin(theta)-dy*math.cos(theta),-85),turn
+
+
+@lru_cache(maxsize=80)
+def credit_texture(state,progress,tap):
+    panel=Image.new('RGBA',(820,560),'#14372c');d=ImageDraw.Draw(panel)
+    d.rectangle((1,1,818,558),outline=MINT,width=3);text(panel,(60,55),'Creator credit',43,QUIET)
+    text(panel,(60,165 if state=='Paid' else 195),state,150 if state=='Paid' else 87,MINT if state in ['Confirmed','Paid'] else WHITE)
+    d.line((60,360,760,360),fill='#426f55',width=2)
+    if state=='Ready to claim':
+        text(panel,(60,418),'Claim payment',47,WHITE)
+        d.line([(665,449),(745,449),(720,425)],fill=WHITE,width=4);d.line([(745,449),(720,473)],fill=WHITE,width=4)
+        if tap:d.ellipse((705-tap,449-tap,705+tap,449+tap),outline=CORAL,width=4)
+    elif state=='Claiming…':d.line((60,432,60+700*progress/16,432),fill=MINT,width=10)
+    else:
+        d.line([(65,440),(90,465),(145,405)],fill=MINT,width=9);text(panel,(205,414),'FREE FOR EVERYONE',36,QUIET)
+    return panel
+
+
+def credit_pose(t):
+    center=track(t,[(0,(1370,780,0)),(18.22,(1370,780,0)),(19.05,(1740,660,-30)),
+        (22.25,(1740,660,-30)),(23.3,(1580,850,0)),(30.8,(1580,850,0)),(32,(1030,855,60)),(DURATION,(1030,855,60))])
+    scale=track(t,[(0,.03),(18.22,.03),(19.05,1),(22.25,1),(23.3,.50),(DURATION,.50)])
+    return center,scale
+
+
+def copies(frame,cam,t,opacity):
+    destinations=[(730,820,430),(1120,420,680),(2090,420,680),(2250,820,430)]
+    for i,end in enumerate(destinations):
+        depart=ramp(t,27.05+i*.18,29.2+i*.18);gather=ramp(t,38.5+i*.10,41.15)
+        origin=(1330,590,50);center=lerp(lerp(origin,end,depart),(1330,540,0),gather)
+        local=opacity*ramp(t,27+i*.18,27.5+i*.18)*(1-ramp(t,41,41.6))
+        width=300*(1-.91*gather)
+        a,b=native.point(*origin,cam),native.point(*center,cam)
+        if local>.002:
+            native.line(frame,[a,(b[0],a[1]),b],'#365f4b',2)
+            sprite(frame,art()['kit-cover'],center,(width,width*1200/920),cam,local,ry=[-12,8,-9,12][i]*(1-gather),rz=[-6,5,-4,5][i]*(1-gather))
+
+
+CAPTIONS=[(1.8,6.1666666667,['Help creators make','useful work free.']),
+    (6.1666666667,9.9666666667,['A useful workshop.','Ready to share.']),
+    (9.9666666667,13.4,['Sponsor a','public release.']),(13.4,16.2,['NEAR holds','funds.']),
+    (16.2,18.3,['Timely release']),(18.3,20.3,['unlocks','creator credit.']),
+    (20.3,22.7666666667,['Creator claims','payment.']),
+    (22.7666666667,26.9666666667,['Missed conditions.','Refunds claimable.']),
+    (26.9666666667,31.1666666667,['Use it. Share it.','Offline.']),
+    (31.1666666667,34.9666666667,['Core flow,','verified.']),
+    (34.9666666667,38.7666666667,['Make the next','free thing possible.'])]
+
+
+def captions(frame,t):
+    for start,end,words in CAPTIONS:
+        opacity=window(t,start,start+.20,end-.20,end)
+        if opacity<.001:continue
+        layer=Image.new('RGBA',(1060,385));d=ImageDraw.Draw(layer)
+        for x in range(1060):
+            a=round(225*(1-ramp(x,780,1060)));d.line((x,0,x,385),fill=(7,26,23,a))
+        layer=layer.convert('RGBA')
+        d=ImageDraw.Draw(layer);dy=round(14*(1-ramp(t,start,start+.2)))
+        d.line((108,126+dy,182,126+dy),fill=CORAL,width=4)
+        for i,line in enumerate(words):d.text((104,145+dy+i*110),line,font=font(86),fill=WHITE)
+        frame.paste(fade(layer,opacity),(0,0),fade(layer,opacity))
+    if 22.3<t<27:
+        alpha=window(t,22.3,22.6,26.7,27)
+        overlay=Image.new('RGBA',(740,75));text(overlay,(108,8),'Alternative outcome',37,CORAL)
+        frame.paste(fade(overlay,alpha),(0,62),fade(overlay,alpha))
+
+
+def brand(frame,t,start,end):
+    local=t-start;remaining=end-t
+    opacity=ramp(local,0,.28)*(1-ramp(remaining,0,.40)) if start<2 else ramp(local,0,.40)
+    if start<2:opacity=ramp(local,0,.28)*(1-ramp(local,1.5,2.15))
+    if opacity<.001:return
+    assemble=ramp(local,.22,1.26);size=round(170+46*assemble)
+    word='SUNSET';tracking=18;f=font(156,680)
+    width=sum(f.getlength(c) for c in word)+tracking*(len(word)-1)
+    left=(W-(216+72+width))/2;mark_x=960+(left+108-960)*assemble
+    mark=art()['mark'].resize((size,size),Image.Resampling.LANCZOS)
+    frame.paste(fade(mark,opacity),(round(mark_x-size/2),round(540-size/2)),fade(mark,opacity))
+    letters=Image.new('RGBA',(round(width+60),230));d=ImageDraw.Draw(letters);cursor=0
+    for c in word:d.text((cursor,25),c,font=f,fill=WHITE);cursor+=f.getlength(c)+tracking
+    alpha=opacity*assemble
+    frame.paste(fade(letters,alpha),(round(left+288+35*(1-assemble)),448),fade(letters,alpha))
+    if start>2:
+        tag=Image.new('RGBA',(1000,80));text(tag,(500,0),'Support once. Share forever.',42,WHITE,anchor='mt')
+        frame.paste(fade(tag,alpha),(460,690),fade(tag,alpha))
+
+
+def picture(phase,n):
+    t=n/FPS;cam=camera(t);frame=native.stage(t,cam)
+    world=window(t,.95,2.0,40.55,42.1)
+    # The stage, hero and camera use absolute time through every caption/phase boundary.
+    if world>.001:
+        geometry=frame.copy();native.orbit(geometry,cam,t,500,alpha=1,complete=t>=341/30);native.platform(geometry,cam,690)
+        frame=Image.blend(frame,geometry,world)
+        cage_alpha=window(t,8.7,10,17.5,18.6)*world
+        wirebox(frame,cam,(1330,585,40),(310,335,140),cage_alpha)
+        actor=track(t,[(0,0),(1.7,0),(2.35,1),(5.6,1),(9.2,.4),(33.2,.4),(36,1),(38.8,1),(41,0)])*world
+        actor_center=track(t,[(0,(1660,560,270)),(5.6,(1660,560,270)),(9.2,(3200,550,1100)),
+            (33.2,(3200,550,1100)),(36,(1660,560,270)),(38.8,(1660,560,270)),(41,(1330,540,700))])
+        sprite(frame,art()['creator'],actor_center,(570,685),cam,actor,ry=-6,rz=-3)
+        hands=window(t,1.7,2.3,5.7,7.2)*world
+        sprite(frame,art()['hands'],(1220,990,-180),(800,533),cam,hands,ry=-3,rz=-2)
+        agenda=window(t,6.0,6.6,8.7,9.9)*world
+        pos=track(t,[(0,(1330,620,100)),(6,(1330,620,100)),(7.2,(1740,620,100)),(8.7,(1740,620,100)),(9.9,(1330,590,20)),(DURATION,(1330,590,20))])
+        sprite(frame,art()['kit-agenda'],pos,(420,520),cam,agenda)
+        copies(frame,cam,t,world)
+        book(frame,cam,t,opacity=world*ramp(t,1.35,2.1))
+        if 9.8<t<18.2:
+            contributions=frame.copy()
+            for i in range(8):
+                a=math.tau*i/8+.3;arrive=ramp(t,10.05+i*.12,11.15+i*.02)
+                far=(1330+650*math.cos(a),725+65*math.sin(a),100+340*math.sin(a));near=(1330+330*math.cos(a),825,110+210*math.sin(a))
+                native.block(contributions,lerp(far,near,arrive),42,cam)
+            frame=Image.blend(frame,contributions,window(t,9.8,10.2,17.5,18.2))
+        key_alpha=window(t,15.5,16.0,17.1,17.5)
+        sprite(frame,art()['clasp'],(1105,638,-85),(70,78),cam,window(t,8.7,10,17.5,17.72))
+        if key_alpha>.001:
+            center,turn=key_pose(t);sprite(frame,art()['key'],center,(350,160),cam,key_alpha,rz=turn)
+        card_alpha=window(t,18.22,18.65,39.2,40.8)*world
+        if card_alpha>.001:
+            state=native.state(n);progress=max(0,min(16,round((n-609)/(644-609)*16)))
+            tap=round(28-14*(n-603)/6) if 603<=n<609 else 0
+            panel=credit_texture(state,progress,tap) if n>=549 else Image.new('RGBA',(820,560),'#14372c')
+            center,scale=credit_pose(t);sprite(frame,panel,center,(650*scale,444*scale),cam,card_alpha)
+        alternative=window(t,22.3,23.1,26.7,27.8)*world
+        if alternative>.001:
+            wirebox(frame,cam,(2180,600,50),(220,280,110),alternative)
+            book(frame,cam,t,center=(2180,600,30),scale=.72,angle=0,opacity=alternative)
+            for dx in [-240,240]:
+                route=[native.point(2180,860,50,cam),native.point(2180+dx,860,50,cam),native.point(2180+dx,930,50,cam)]
+                colour=tuple(round(a+(b-a)*alternative) for a,b in zip((7,26,23),(244,123,80)))
+                native.line(frame,route,colour,3);x,y=route[-1]
+                native.line(frame,[(x-10,y-15),(x,y),(x+10,y-15)],colour,3)
+        archive=window(t,30.85,31.5,34.7,35.8)*world
+        if archive>.001:
+            center=track(t,[(0,(2050,650,350)),(30.85,(2050,650,350)),(31.7,(1740,585,-70)),(34.5,(1740,585,-70)),(35.8,(2210,650,450)),(DURATION,(2210,650,450))])
+            sprite(frame,art()['archive'],center,(780,700),cam,archive,ry=6*(1-ramp(t,30.85,31.7)))
+    captions(frame,t)
+    if 16<t<18.6:
+        layer=Image.new('RGBA',(700,125));text(layer,(108,5),'TARGET COMPLETE',34,MINT)
+        text(layer,(108,57),'MATCHED KEY · ON TIME' if n>=500 else 'MATCHING KEY',34,CORAL)
+        alpha=window(t,16,16.2,18.3,18.6);frame.paste(fade(layer,alpha),(0,420),fade(layer,alpha))
+    if 1.8<t<40:
+        footer='Workshop kit · local example'
+        if 9.8<t<22.3:footer='NEAR testnet · protocol illustration · local example'
+        elif 22.3<=t<27.8:footer='Alternative outcome · separate refund claim and withdrawal'
+        elif 27.8<=t<30.85:footer='Illustrated retained copies · same local kit'
+        elif 30.85<=t<35.8:footer='Prior Lantern Trail evidence · separate earlier sample'
+        native.label(frame,footer)
+    if 38.65<t<41.2:
+        alpha=window(t,38.65,39.15,40.65,41.2)
+        payoff=Image.new('RGBA',(1200,320))
+        d=ImageDraw.Draw(payoff)
+        for words,y,colour in [('[ FREE TO USE ]',0,WHITE),('[ CREATOR PAID ]',155,CORAL)]:
+            width=d.textlength(words,font=font(89));d.rectangle((600-width/2-24,y-5,600+width/2+24,y+116),fill=DARK)
+            text(payoff,(600,y),words,89,colour,anchor='mt')
+        frame.paste(fade(payoff,alpha),(360,300),fade(payoff,alpha))
+    brand(frame,t,0,2.15)
+    if t>=41.1:brand(frame,t,41.1,DURATION)
+    return frame
+
+
+
+def prepare():
+    timeline=json.loads((BUNDLE/'timeline.json').read_text())
+    assert timeline['frames']==FRAMES and timeline['synthetic_voice']=='af_bella'
+    mapping=[{'frame':n,'phase':p['id']} for p in timeline['phases']
+             for n in range(round(p['start']*FPS),round(p['end']*FPS))]
+    assert [r['frame'] for r in mapping]==list(range(FRAMES))
+    return timeline,mapping
+
+
+def encode(movie,mapping,timeline):
+    assert not movie.exists(),f'Refusing to overwrite {movie}'
+    raw=movie.with_name(movie.stem+'-before-tags.mp4')
+    assert not raw.exists()
+    phases={p['id']:p for p in timeline['phases']}
+    movie.parent.mkdir(parents=True,exist_ok=True)
+    with movie.with_suffix('.log').open('x') as log:
+        command=['ffmpeg','-v','warning','-n','-f','rawvideo','-pix_fmt','rgb24','-s','1920x1080','-r','30','-i','-',
+                 '-i',str(BUNDLE/'assets/soundtrack.m4a'),'-map','0:v','-map','1:a','-c:v','libx264','-preset','medium',
+                 '-crf','15','-pix_fmt','yuv420p','-vf','scale=in_range=pc:out_range=tv:out_color_matrix=bt709',
+                 '-c:a','copy','-movflags','+faststart','-t',str(len(mapping)/FPS),str(raw)]
+        encoder=subprocess.Popen(command,stdin=subprocess.PIPE,stderr=log)
+        try:
+            for i,row in enumerate(mapping):
+                encoder.stdin.write(picture(phases[row['phase']],row['frame']).tobytes())
+                if i%180==0:print(f'Rendered {i}/{len(mapping)}',flush=True)
+            encoder.stdin.close()
+            assert encoder.wait()==0
+        finally:
+            if encoder.poll() is None:encoder.terminate();encoder.wait()
+    subprocess.run(['ffmpeg','-v','error','-n','-i',str(raw),'-map','0','-c','copy',
+                    '-bsf:v','h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1:video_full_range_flag=0',
+                    '-movflags','+faststart',str(movie)],check=True)
+    raw.unlink()
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command',choices=['stills','render'])
+    parser.add_argument('--output',type=Path,help='New review directory (stills) or new MP4 path (render).')
+    args=parser.parse_args()
+    timeline,mapping=prepare()
+    if args.command=='render':
+        assert args.output and args.output.suffix=='.mp4','Render requires --output NEW_FILE.mp4'
+        assert args.output.resolve()!=(BUNDLE/'sunset-launch.mp4').resolve(),'The accepted movie is immutable'
+        encode(args.output,mapping,timeline)
+        print(args.output)
+        return
+    target=args.output or BUNDLE/'review'
+    target.mkdir(parents=True,exist_ok=False)
+    for phase in timeline['phases']:
+        n=min(round((phase['start']+1.5)*FPS),round(phase['end']*FPS)-1)
+        picture(phase,n).save(target/(phase['id']+'.png'))
+    print(target)
+
+
+if __name__=='__main__':main()

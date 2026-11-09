@@ -1,8 +1,0 @@
-Fund it once. Share it freely.
-
-SUNSET helps fund learning packs for public release. Creators get paid; learners keep an offline game—no wallet.
-
-NEAR powers the release and payout rules.
-Built at NEAR HACKATHON on testnet.
-@NEARProtocol #NEARHackathon
-https://sunset-lemon.vercel.app

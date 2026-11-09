@@ -1,0 +1,565 @@
+{
+  "synthetic": true,
+  "voice": "af_bella",
+  "generation_speed": 0.97,
+  "source_take_sample_rate": 24000,
+  "time_stretched": false,
+  "model": "Kokoro-82M v1.0, ONNX FP16 conversion, model-files-v1.1",
+  "model_license": "Apache-2.0",
+  "wrapper_license": "MIT",
+  "model_assets": [
+    {
+      "name": "kokoro-v1.0.fp16.onnx",
+      "source_url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/kokoro-v1.0.fp16.onnx",
+      "bytes": 163527961,
+      "sha256": "f3a290d384fbb27966d462905c71a46cef9e5fd00516b40df32a0b4afe77ac96"
+    },
+    {
+      "name": "voices-v1.0.bin",
+      "source_url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/voices-v1.0.bin",
+      "bytes": 28214398,
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  ],
+  "sources": [
+    {
+      "id": "music",
+      "title": "Origami",
+      "artist": "Scott Buckley",
+      "page": "https://www.scottbuckley.com.au/library/origami/",
+      "download": "https://www.scottbuckley.com.au/library/wp-content/uploads/2025/10/Origami.mp3",
+      "sha256": "8b8edd81ee2110a62169b48e3233e1556c0f9de10003b21f41a28e5b4bcbfe14",
+      "bytes": 7572590,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "'Origami' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au",
+      "excerpt_seconds": [
+        32.18,
+        76.84666666666666
+      ],
+      "changes": "One continuous 32.18\u201376.846667s excerpt, EQ, speech ducking/fades, recorded editorial Foley and mastering."
+    },
+    {
+      "id": "page-turn-1",
+      "author": "OwlStorm",
+      "sound_id": 151220,
+      "source": "https://freesound.org/people/OwlStorm/sounds/151220/",
+      "download": "https://cdn.freesound.org/previews/151/151220_140737-hq.mp3",
+      "sha256": "41f51725007894483999812091faf74d0d341092c0a24c55c0778fe245ea45f4",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV"
+    },
+    {
+      "id": "page-turn-2",
+      "author": "OwlStorm",
+      "sound_id": 151221,
+      "source": "https://freesound.org/people/OwlStorm/sounds/151221/",
+      "download": "https://cdn.freesound.org/previews/151/151221_140737-hq.mp3",
+      "sha256": "0e6737d635998d90f015249c0215691d3cb63d2ff37d49949914284160b6e9e0",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV"
+    },
+    {
+      "id": "mouse-clicks",
+      "author": "Breviceps",
+      "sound_id": 447938,
+      "source": "https://freesound.org/people/Breviceps/sounds/447938/",
+      "download": "https://cdn.freesound.org/previews/447/447938_9159316-hq.mp3",
+      "sha256": "bbbddc66710313d67f0c8d8dc37f68c62728c041ccb3820f04c45554dd9f46e5",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_representation": "Official Freesound HQ MP3 preview; not original uploaded WAV"
+    }
+  ],
+  "takes": [
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "Useful work can be free, without leaving its creator unpaid.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 3.936,
+      "sha256": "7207fd239dbc1e180f116d36742d1a92213f6a0b74febba50312befcff1a1b97",
+      "id": "why",
+      "index": 0
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "Like a workshop kit that helps a community learn together.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 3.3386666666666667,
+      "sha256": "cafe9effb4d3aca33692aa3e6fff70c6a947298267e81723ffbeba21baf46518",
+      "id": "kit",
+      "index": 1
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "Sunset lets people sponsor its public release.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 3.014,
+      "sha256": "48907a2cc0629eebe4b6d3c28a351262d8709cb36c9d7db49d98b71709bb6f23",
+      "id": "sponsor",
+      "index": 2
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "Near holds the funds.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 1.4086666666666667,
+      "sha256": "71405ff2024c41dc144cab13428ed0b6142a4de43e738875df10e154db3e22a5",
+      "id": "custody",
+      "index": 3
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "Meet the target, and publish the matching key on time.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 3.4566666666666666,
+      "sha256": "cebd9c5e608e9561d66472edb18801260644159eb87d9755fa5eb03fde2eed98",
+      "id": "release",
+      "index": 4
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "The creator can then claim payment.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 2.0366666666666666,
+      "sha256": "a1e1a7c33cf6acc9a46af09b6ab9fd65abd34c697b8602ee6024fc53673f19af",
+      "id": "claim",
+      "index": 5
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "If those conditions are missed, sponsors can claim refunds.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 3.7013333333333334,
+      "sha256": "e62e372c5d9e6843a30be4c65523fa13ad99259d28f8d8a3c38e44c7b2eaa26b",
+      "id": "refund",
+      "index": 6
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "People keep a copy, use it, and share it. Even offline.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 3.7712916666666665,
+      "sha256": "26854e400f73e6a01e566dd0b0bee29987a5f7ee55c904b03272477bcaf5ecfa",
+      "id": "use",
+      "index": 7
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "That core flow has already been verified on testnet.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 3.358,
+      "sha256": "07f261cba3ce372fdba0246fd4a0a345a04c4fc35de4ac5a08d98a30de63cddb",
+      "id": "proof",
+      "index": 8
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "So creators can make the next free thing possible.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 2.8686666666666665,
+      "sha256": "17b12673ea986c6704cee1d36472f26fe4f084469d210a2662e1e6544ce489c2",
+      "id": "next",
+      "index": 9
+    },
+    {
+      "voice": "af_bella",
+      "synthetic": true,
+      "text": "Sunset. Support once. Share forever.",
+      "speed": 0.97,
+      "sample_rate": 24000,
+      "duration": 2.6285416666666666,
+      "sha256": "9764ecfd049839f2e2753b63bbd20ca685703a76e4cbc8349cc7f38b0a690516",
+      "id": "closing",
+      "index": 10
+    }
+  ],
+  "voice_placements": [
+    {
+      "id": "why",
+      "start": 1.8,
+      "end": 6.166666666666667,
+      "frames": 131,
+      "voice_start": 1.92,
+      "voice_end": 5.856,
+      "spoken": "Useful work can be free, without leaving its creator unpaid.",
+      "take_sha256": "7207fd239dbc1e180f116d36742d1a92213f6a0b74febba50312befcff1a1b97"
+    },
+    {
+      "id": "kit",
+      "start": 6.166666666666667,
+      "end": 9.966666666666667,
+      "frames": 114,
+      "voice_start": 6.286666666666667,
+      "voice_end": 9.625333333333334,
+      "spoken": "Like a workshop kit that helps a community learn together.",
+      "take_sha256": "cafe9effb4d3aca33692aa3e6fff70c6a947298267e81723ffbeba21baf46518"
+    },
+    {
+      "id": "sponsor",
+      "start": 9.966666666666667,
+      "end": 13.4,
+      "frames": 103,
+      "voice_start": 10.086666666666666,
+      "voice_end": 13.100666666666665,
+      "spoken": "Sunset lets people sponsor its public release.",
+      "take_sha256": "48907a2cc0629eebe4b6d3c28a351262d8709cb36c9d7db49d98b71709bb6f23"
+    },
+    {
+      "id": "custody",
+      "start": 13.4,
+      "end": 16.2,
+      "frames": 84,
+      "voice_start": 13.52,
+      "voice_end": 14.928666666666667,
+      "spoken": "Near holds the funds.",
+      "take_sha256": "71405ff2024c41dc144cab13428ed0b6142a4de43e738875df10e154db3e22a5"
+    },
+    {
+      "id": "release",
+      "start": 16.2,
+      "end": 20.3,
+      "frames": 123,
+      "voice_start": 16.32,
+      "voice_end": 19.776666666666667,
+      "spoken": "Meet the target, and publish the matching key on time.",
+      "take_sha256": "cebd9c5e608e9561d66472edb18801260644159eb87d9755fa5eb03fde2eed98"
+    },
+    {
+      "id": "claim",
+      "start": 20.3,
+      "end": 22.766666666666666,
+      "frames": 74,
+      "voice_start": 20.42,
+      "voice_end": 22.456666666666667,
+      "spoken": "The creator can then claim payment.",
+      "take_sha256": "a1e1a7c33cf6acc9a46af09b6ab9fd65abd34c697b8602ee6024fc53673f19af"
+    },
+    {
+      "id": "refund",
+      "start": 22.766666666666666,
+      "end": 26.966666666666665,
+      "frames": 126,
+      "voice_start": 22.886666666666667,
+      "voice_end": 26.588,
+      "spoken": "If those conditions are missed, sponsors can claim refunds.",
+      "take_sha256": "e62e372c5d9e6843a30be4c65523fa13ad99259d28f8d8a3c38e44c7b2eaa26b"
+    },
+    {
+      "id": "use",
+      "start": 26.966666666666665,
+      "end": 31.166666666666668,
+      "frames": 126,
+      "voice_start": 27.086666666666666,
+      "voice_end": 30.857958333333332,
+      "spoken": "People keep a copy, use it, and share it. Even offline.",
+      "take_sha256": "26854e400f73e6a01e566dd0b0bee29987a5f7ee55c904b03272477bcaf5ecfa"
+    },
+    {
+      "id": "proof",
+      "start": 31.166666666666668,
+      "end": 34.96666666666667,
+      "frames": 114,
+      "voice_start": 31.28666666666667,
+      "voice_end": 34.644666666666666,
+      "spoken": "That core flow has already been verified on testnet.",
+      "take_sha256": "07f261cba3ce372fdba0246fd4a0a345a04c4fc35de4ac5a08d98a30de63cddb"
+    },
+    {
+      "id": "next",
+      "start": 34.96666666666667,
+      "end": 38.766666666666666,
+      "frames": 114,
+      "voice_start": 35.086666666666666,
+      "voice_end": 37.955333333333336,
+      "spoken": "So creators can make the next free thing possible.",
+      "take_sha256": "17b12673ea986c6704cee1d36472f26fe4f084469d210a2662e1e6544ce489c2"
+    },
+    {
+      "id": "closing",
+      "start": 41.166666666666664,
+      "end": 44.666666666666664,
+      "frames": 105,
+      "voice_start": 41.46666666666666,
+      "voice_end": 44.095208333333325,
+      "spoken": "Sunset. Support once. Share forever.",
+      "take_sha256": "9764ecfd049839f2e2753b63bbd20ca685703a76e4cbc8349cc7f38b0a690516"
+    }
+  ],
+  "recorded_editorial_foley_cues": [
+    {
+      "id": "hook-paper-punch",
+      "source": "page-turn-2",
+      "peak_seconds": 0.2,
+      "source_crop_seconds": [
+        0.66,
+        0.91
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "ticket-left",
+      "source": "page-turn-1",
+      "peak_seconds": 10.366666666666667,
+      "source_crop_seconds": [
+        0.14,
+        0.3
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "ticket-right",
+      "source": "page-turn-2",
+      "peak_seconds": 11.166666666666666,
+      "source_crop_seconds": [
+        0.69,
+        0.88
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "funding-cap-contact",
+      "source": "mouse-clicks",
+      "peak_seconds": 13.066666666666666,
+      "source_crop_seconds": [
+        0.02,
+        0.11
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "ticket-perforation",
+      "source": "page-turn-2",
+      "peak_seconds": 13.4,
+      "source_crop_seconds": [
+        0.55,
+        1.0
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "deposit-seats",
+      "source": "page-turn-1",
+      "peak_seconds": 14.0,
+      "source_crop_seconds": [
+        0.14,
+        0.3
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "custody-fixed-stop",
+      "source": "mouse-clicks",
+      "peak_seconds": 14.8,
+      "source_crop_seconds": [
+        0.36,
+        0.46
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "binding-to-key",
+      "source": "page-turn-2",
+      "peak_seconds": 15.666666666666666,
+      "source_crop_seconds": [
+        0.66,
+        1.04
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "matching-key",
+      "source": "page-turn-1",
+      "peak_seconds": 16.2,
+      "source_crop_seconds": [
+        0.02,
+        0.4
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "public-page",
+      "source": "page-turn-2",
+      "peak_seconds": 17.5,
+      "source_crop_seconds": [
+        0.58,
+        1.04
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "claimable-slip",
+      "source": "page-turn-1",
+      "peak_seconds": 18.3,
+      "source_crop_seconds": [
+        0.14,
+        0.3
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "deliberate-withdrawal",
+      "source": "mouse-clicks",
+      "peak_seconds": 20.3,
+      "source_crop_seconds": [
+        0.36,
+        0.46
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "withdrawal-confirmed",
+      "source": "mouse-clicks",
+      "peak_seconds": 21.466666666666665,
+      "source_crop_seconds": [
+        0.7,
+        0.82
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "sunset-expansion",
+      "source": "page-turn-1",
+      "peak_seconds": 41.166666666666664,
+      "source_crop_seconds": [
+        0.02,
+        0.46
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "mark-finishes",
+      "source": "page-turn-2",
+      "peak_seconds": 42.43333333333333,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "why-paper-entry",
+      "source": "page-turn-2",
+      "peak_seconds": 2.2,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "kit-paper-entry",
+      "source": "page-turn-2",
+      "peak_seconds": 6.566666666666667,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "kit-paper-discovery",
+      "source": "page-turn-1",
+      "peak_seconds": 7.966666666666667,
+      "source_crop_seconds": [
+        0.02,
+        0.28
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "refund-paper-entry",
+      "source": "page-turn-2",
+      "peak_seconds": 23.166666666666664,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "use-paper-entry",
+      "source": "page-turn-2",
+      "peak_seconds": 27.366666666666664,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "use-paper-discovery",
+      "source": "page-turn-1",
+      "peak_seconds": 28.766666666666666,
+      "source_crop_seconds": [
+        0.02,
+        0.28
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "proof-paper-entry",
+      "source": "page-turn-2",
+      "peak_seconds": 31.566666666666666,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "next-paper-entry",
+      "source": "page-turn-2",
+      "peak_seconds": 35.36666666666667,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "next-paper-discovery",
+      "source": "page-turn-1",
+      "peak_seconds": 36.766666666666666,
+      "source_crop_seconds": [
+        0.02,
+        0.28
+      ],
+      "recorded_editorial_effect": true
+    },
+    {
+      "id": "payoff-paper-entry",
+      "source": "page-turn-2",
+      "peak_seconds": 39.166666666666664,
+      "source_crop_seconds": [
+        0.66,
+        0.92
+      ],
+      "recorded_editorial_effect": true
+    }
+  ],
+  "soundtrack": "Exact accepted AAC stream; all packet content, PTS, DTS, durations, sizes, flags and side data preserved.",
+  "scope": "Provenance metadata, not runtime model/take/source-recording dependencies. No new synthesis, cloning or perceptual listening."
+}
