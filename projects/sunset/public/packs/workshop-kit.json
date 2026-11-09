@@ -1,0 +1,59 @@
+{
+  "schema": 2,
+  "kind": "guide",
+  "id": "workshop-kit",
+  "title": "The Community Skill-Swap Kit",
+  "description": "Run a 45-minute workshop where adults share one small, useful skill, practise in pairs and leave able to teach it to someone else. All you need is paper, pens and willing participants.",
+  "license": "CC0-1.0",
+  "sections": [
+    {
+      "id": "prepare",
+      "title": "Prepare a welcoming session",
+      "body": "Start with 4–12 adults and one facilitator. Invite people with: Bring one small thing you can show someone how to do. No expert knowledge is needed; watching or passing is welcome. Set out paper and pens where people can sit together and hear each other. Leave clear space for anyone who needs to move or sit differently.\n\nChoose a skill that can be shown in ten minutes and practised with the materials here. Offer a paper-folding trick, a simple memory aid or a way to make a useful task list. Avoid activities needing special tools or personal information. Ask the demonstrator to show just three steps, slowly enough to copy.\n\nKeep this fallback ready: turn a vague task into a three-step task card. Write Organise a community meeting at the top of a sheet. Under it, write: Ask two neighbours which evening works. Write the agreed time and place on one invitation. Give the invitation to two neighbours. Explain that each step begins with an action and makes the next move clear. Participants will make their own cards.\n\nRead the whole agenda before starting. Choose a facilitator to call the transitions and help anyone without a partner. Let people write, draw or dictate their ideas; nobody has to read aloud.",
+      "checklist": [
+        {
+          "id": "prepare-materials",
+          "text": "Put paper and pens within reach and check that people can hear and participate."
+        },
+        {
+          "id": "prepare-demo",
+          "text": "Prepare a three-step demonstration and keep the task-card fallback ready."
+        }
+      ]
+    },
+    {
+      "id": "session",
+      "title": "Run the 45-minute workshop",
+      "body": "TIMED AGENDA\n00–05 minutes: Welcome and choose one useful small skill.\n05–15 minutes: Watch a three-step demonstration.\n15–30 minutes: Practise in pairs.\n30–40 minutes: Teach the skill back.\n40–45 minutes: Wrap up and choose a next step.\n\nWELCOME — 5 minutes\nSay: We are sharing a small skill, not testing anyone. You may ask, observe or pass. Invite two or three brief offers and agree on one skill the group wants to try. Use the task-card fallback if there is no suitable offer. Name a concrete result: By the end, each person can make a three-step task card and explain how it works. Adapt that sentence if the group chooses another skill.\n\nDEMONSTRATION — 10 minutes\nShow the finished result first. Then show each of the three steps, pausing after each for questions. For the task card, choose a small task, write three actions in order, then check that someone else knows how to begin. Show one correction: replace Get organised with Write the meeting date on the invitation. Leave the example visible on paper.\n\nPAIRED PRACTICE — 15 minutes\nForm pairs; make one trio if the number is odd. Give everyone a sheet. In each pair, one person tries the skill while the other listens and asks what comes next. Swap roles halfway through. In a trio, rotate three five-minute turns. For task cards, each person chooses a real small task and writes or dictates three actions. Partners ask: What would I do first? The facilitator visits each pair and helps with one stuck step.\n\nTEACH-BACK — 10 minutes\nEach person explains or demonstrates the steps to their partner without following the example. Partners name one clear step and ask one useful question. Let anyone who wants to share show a result to the group; passing is fine. Ask: Which part was hardest to explain? Repeat that part together. Success means someone can show a next step, not produce a perfect page.\n\nWRAP-UP — 5 minutes\nInvite each person to name one place they could use the skill, aloud or on their page. Ask what to change next time. People keep their own pages. Invite a volunteer to host the next session with a different small skill.",
+      "checklist": [
+        {
+          "id": "session-practice",
+          "text": "Offer every participant a practice turn and an equal chance to teach back."
+        },
+        {
+          "id": "session-clarify",
+          "text": "Repeat a difficult step after hearing the teach-back questions."
+        },
+        {
+          "id": "session-next-step",
+          "text": "Invite one practical next use and one improvement for the next session."
+        }
+      ]
+    },
+    {
+      "id": "hand-over",
+      "title": "Hand over the kit and share it",
+      "body": "Make a short host note on paper: the skill chosen, the example used, the step that needed another explanation and one change to try next time. Record useful observations without names or personal stories. Ask before copying anyone's page; participants decide what they share.\n\nGive the next facilitator this guide and the host note. Walk through the demonstration together and ask them to explain the first step back to you. Agree who will bring paper and pens and how people will hear about the next session. A suggested skill is enough; nobody needs to promise to teach.\n\nKeep this complete guide as an HTML file if using the digital kit. Give someone a copy of the file, or copy the agenda and instructions onto paper. A bookmark alone is not a copy. The original guide is CC0: you can copy, adapt and share it. Keep a dated note of your changes so the next host knows which version they have.",
+      "checklist": [
+        {
+          "id": "handover-note",
+          "text": "Write an anonymous host note with the difficult step and one suggested improvement."
+        },
+        {
+          "id": "handover-copy",
+          "text": "Give the next host the complete guide and rehearse the opening demonstration together."
+        }
+      ]
+    }
+  ]
+}

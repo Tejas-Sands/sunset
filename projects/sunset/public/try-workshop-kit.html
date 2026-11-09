@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>SUNSET offline handbook</title><style>body{margin:0;background:#f5f0e6}.modal-backdrop .modal.guide-modal{width:1240px}.guide-modal .guide-toolbar{padding:24px 80px 0 28px}.sunset-guide{--guide-ink:#233a32;--guide-paper:#fffdf7;--guide-muted:#526458;--guide-line:#d9ded1;color:var(--guide-ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;max-width:1260px;margin:0 auto;padding:32px 28px;box-sizing:border-box;container-type:inline-size}
+.sunset-guide *{box-sizing:border-box}.sunset-guide .guide-eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--guide-muted);font-weight:650}
+.sunset-guide .guide-title{font-size:clamp(30px,4.1vw,52px);line-height:1.12;letter-spacing:-.035em;margin:12px 0 16px;max-width:25ch;color:var(--guide-ink);font-family:inherit}
+.sunset-guide .guide-description{max-width:78ch;margin:0 0 28px;font-size:17px;line-height:1.65}
+.sunset-guide .guide-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
+.sunset-guide .guide-rail{position:sticky;top:20px;min-width:0}.sunset-guide .guide-search-label{display:block;font-size:14px;font-weight:650;margin-bottom:7px}
+.sunset-guide input[type=search]{width:100%;min-height:46px;border:1px solid #99a993;border-radius:8px;background:var(--guide-paper);padding:10px 12px;font:inherit;color:inherit;margin:0}
+.sunset-guide .guide-search-status{font-size:13px;color:var(--guide-muted);margin:9px 0 14px;min-height:22px}.sunset-guide .guide-nav{display:flex;flex-direction:column;gap:6px}
+.sunset-guide .guide-nav button{width:100%;min-height:48px;border:1px solid transparent;border-radius:8px;background:transparent;padding:12px;text-align:left;font:inherit;font-size:14px;line-height:1.45;color:inherit;cursor:pointer;white-space:normal}
+.sunset-guide .guide-nav button:hover{background:#e7eddf}.sunset-guide .guide-nav button[aria-current=page]{background:#e1eadc;border-color:#99a993;font-weight:650}
+.sunset-guide .guide-chapter-number{display:block;font-size:11px;color:var(--guide-muted);letter-spacing:.1em;margin-bottom:4px}
+.sunset-guide .guide-chapter{min-width:0;background:var(--guide-paper);border:1px solid var(--guide-line);border-radius:12px;padding:30px 34px}
+.sunset-guide .guide-chapter .guide-section-title{font:700 clamp(25px,3vw,34px)/1.2 system-ui,sans-serif;letter-spacing:-.025em;margin:0 0 24px;color:var(--guide-ink)}
+.sunset-guide .guide-body{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.75;max-width:72ch;margin:0 0 30px}
+.sunset-guide fieldset{padding:18px 0 0;border:0;border-top:1px solid var(--guide-line);margin:0;min-width:0}.sunset-guide legend{font-size:14px;font-weight:700;padding:0 12px 0 0}
+.sunset-guide .guide-check{display:flex;gap:12px;align-items:flex-start;padding:12px 0;min-height:48px;font-size:16px;font-weight:400;line-height:1.6;cursor:pointer;margin:0;overflow-wrap:anywhere}
+.sunset-guide input[type=checkbox]{accent-color:#2b6149;width:21px;height:21px;min-width:21px;margin:3px 0 0;cursor:pointer}
+.sunset-guide .guide-progress{font-size:14px;line-height:1.6;margin:22px 0 0;color:var(--guide-muted);border-top:1px solid var(--guide-line);padding-top:17px}
+.sunset-guide .guide-footer{margin-top:28px;font-size:13px;color:var(--guide-muted);max-width:90ch}
+.sunset-guide :is(button,input):focus-visible{outline:3px solid #bc4829;outline-offset:3px}.sunset-guide .guide-section-title:focus{outline:none}
+@media(max-width:760px){.sunset-guide{padding:24px 18px}.sunset-guide .guide-layout{grid-template-columns:1fr;gap:22px}.sunset-guide .guide-rail{position:static}.sunset-guide .guide-nav{display:grid;grid-template-columns:1fr 1fr}.sunset-guide .guide-chapter{padding:24px 20px}.sunset-guide .guide-description{font-size:16px}.sunset-guide .guide-body{font-size:17px}.sunset-guide .guide-nav button{padding:10px;font-size:13px}}
+@container(max-width:760px){.sunset-guide .guide-layout{grid-template-columns:1fr;gap:22px}.sunset-guide .guide-rail{position:static}.sunset-guide .guide-nav{display:grid;grid-template-columns:1fr 1fr}}
+@media print{.sunset-guide .guide-rail{display:none}.sunset-guide .guide-layout{display:block}.sunset-guide .guide-chapter{border:0;padding:0}.sunset-guide .guide-footer{display:none}}</style></head><body><main class="sunset-guide" id="guide-reader"><header><div class="guide-eyebrow">SUNSET · Your offline copy</div><h1 class="guide-title" id="guide-title"></h1><p class="guide-description" id="guide-description"></p></header><div class="guide-layout"><aside class="guide-rail"><label class="guide-search-label" for="guide-search">Search handbook</label><input id="guide-search" type="search" placeholder="Find a procedure" autocomplete="off"><p class="guide-search-status" id="guide-search-status" role="status" aria-live="polite"></p><nav class="guide-nav" id="guide-chapters" aria-label="Handbook chapters"></nav></aside><div><article class="guide-chapter" id="guide-chapter" aria-labelledby="guide-section-title"></article><p class="guide-progress" id="guide-progress" role="status" aria-live="polite" aria-atomic="true"></p></div></div><footer class="guide-footer">Content: CC0-1.0 · Runtime: MIT. This self-contained guide needs no SUNSET server, wallet, account or network connection. Checklist progress stays on this device when browser storage is available. Commands are plain text; this guide never runs them.</footer></main><script type="application/json" id="pack-data">{"schema":2,"kind":"guide","id":"workshop-kit","title":"The Community Skill-Swap Kit","description":"Run a 45-minute workshop where adults share one small, useful skill, practise in pairs and leave able to teach it to someone else. All you need is paper, pens and willing participants.","license":"CC0-1.0","sections":[{"id":"prepare","title":"Prepare a welcoming session","body":"Start with 4–12 adults and one facilitator. Invite people with: Bring one small thing you can show someone how to do. No expert knowledge is needed; watching or passing is welcome. Set out paper and pens where people can sit together and hear each other. Leave clear space for anyone who needs to move or sit differently.\n\nChoose a skill that can be shown in ten minutes and practised with the materials here. Offer a paper-folding trick, a simple memory aid or a way to make a useful task list. Avoid activities needing special tools or personal information. Ask the demonstrator to show just three steps, slowly enough to copy.\n\nKeep this fallback ready: turn a vague task into a three-step task card. Write Organise a community meeting at the top of a sheet. Under it, write: Ask two neighbours which evening works. Write the agreed time and place on one invitation. Give the invitation to two neighbours. Explain that each step begins with an action and makes the next move clear. Participants will make their own cards.\n\nRead the whole agenda before starting. Choose a facilitator to call the transitions and help anyone without a partner. Let people write, draw or dictate their ideas; nobody has to read aloud.","checklist":[{"id":"prepare-materials","text":"Put paper and pens within reach and check that people can hear and participate."},{"id":"prepare-demo","text":"Prepare a three-step demonstration and keep the task-card fallback ready."}]},{"id":"session","title":"Run the 45-minute workshop","body":"TIMED AGENDA\n00–05 minutes: Welcome and choose one useful small skill.\n05–15 minutes: Watch a three-step demonstration.\n15–30 minutes: Practise in pairs.\n30–40 minutes: Teach the skill back.\n40–45 minutes: Wrap up and choose a next step.\n\nWELCOME — 5 minutes\nSay: We are sharing a small skill, not testing anyone. You may ask, observe or pass. Invite two or three brief offers and agree on one skill the group wants to try. Use the task-card fallback if there is no suitable offer. Name a concrete result: By the end, each person can make a three-step task card and explain how it works. Adapt that sentence if the group chooses another skill.\n\nDEMONSTRATION — 10 minutes\nShow the finished result first. Then show each of the three steps, pausing after each for questions. For the task card, choose a small task, write three actions in order, then check that someone else knows how to begin. Show one correction: replace Get organised with Write the meeting date on the invitation. Leave the example visible on paper.\n\nPAIRED PRACTICE — 15 minutes\nForm pairs; make one trio if the number is odd. Give everyone a sheet. In each pair, one person tries the skill while the other listens and asks what comes next. Swap roles halfway through. In a trio, rotate three five-minute turns. For task cards, each person chooses a real small task and writes or dictates three actions. Partners ask: What would I do first? The facilitator visits each pair and helps with one stuck step.\n\nTEACH-BACK — 10 minutes\nEach person explains or demonstrates the steps to their partner without following the example. Partners name one clear step and ask one useful question. Let anyone who wants to share show a result to the group; passing is fine. Ask: Which part was hardest to explain? Repeat that part together. Success means someone can show a next step, not produce a perfect page.\n\nWRAP-UP — 5 minutes\nInvite each person to name one place they could use the skill, aloud or on their page. Ask what to change next time. People keep their own pages. Invite a volunteer to host the next session with a different small skill.","checklist":[{"id":"session-practice","text":"Offer every participant a practice turn and an equal chance to teach back."},{"id":"session-clarify","text":"Repeat a difficult step after hearing the teach-back questions."},{"id":"session-next-step","text":"Invite one practical next use and one improvement for the next session."}]},{"id":"hand-over","title":"Hand over the kit and share it","body":"Make a short host note on paper: the skill chosen, the example used, the step that needed another explanation and one change to try next time. Record useful observations without names or personal stories. Ask before copying anyone's page; participants decide what they share.\n\nGive the next facilitator this guide and the host note. Walk through the demonstration together and ask them to explain the first step back to you. Agree who will bring paper and pens and how people will hear about the next session. A suggested skill is enough; nobody needs to promise to teach.\n\nKeep this complete guide as an HTML file if using the digital kit. Give someone a copy of the file, or copy the agenda and instructions onto paper. A bookmark alone is not a copy. The original guide is CC0: you can copy, adapt and share it. Keep a dated note of your changes so the next host knows which version they have.","checklist":[{"id":"handover-note","text":"Write an anonymous host note with the difficult step and one suggested improvement."},{"id":"handover-copy","text":"Give the next host the complete guide and rehearse the opening demonstration together."}]}]}</script><script>
+function filterGuideSections(pack, query) {
+  const needle=query.trim().toLocaleLowerCase();
+  return pack.sections.filter(s=>[s.title,s.body,...s.checklist.map(i=>i.text)].join('\n').toLocaleLowerCase().includes(needle));
+}
+function loadGuideProgress(pack, storage) {
+  const fresh={section:pack.sections[0].id,checked:[],persistent:false};
+  try {
+    const saved=JSON.parse(storage.getItem('sunset-guide-progress:'+pack.id));
+    fresh.persistent=true;
+    if (!saved || saved.version!==JSON.stringify(pack) || !Array.isArray(saved.checked) || saved.checked.length>2048) return fresh;
+    const valid=new Set(pack.sections.flatMap(s=>s.checklist.map(i=>i.id)));
+    return {section:pack.sections.some(s=>s.id===saved.section)?saved.section:fresh.section,
+      checked:[...new Set(saved.checked.filter(id=>typeof id==='string'&&valid.has(id)))],persistent:true};
+  } catch { return fresh; }
+}
+function saveGuideProgress(pack, state, storage) {
+  try {
+    storage.setItem('sunset-guide-progress:'+pack.id,JSON.stringify({version:JSON.stringify(pack),section:state.section,checked:state.checked}));
+    return true;
+  } catch { return false; }
+}
+(function startGuideReader() {
+  const pack=JSON.parse(document.getElementById('pack-data').textContent),byId=id=>document.getElementById(id);
+  let storage;
+  try { storage=localStorage; } catch {}
+  let state=loadGuideProgress(pack,storage);
+  const total=pack.sections.reduce((n,s)=>n+s.checklist.length,0);
+  byId('guide-title').textContent=pack.title;
+  byId('guide-description').textContent=pack.description;
+  document.title=pack.title+' · Offline';
+  function status() {
+    byId('guide-progress').textContent=state.checked.length+' of '+total+' checks complete. '+(state.persistent?'Saved on this device.':'Browser storage is unavailable. Checks stay for this open tab only.');
+  }
+  function save() { state.persistent=saveGuideProgress(pack,state,storage);status(); }
+  function render() {
+    const matches=filterGuideSections(pack,byId('guide-search').value),section=matches.find(s=>s.id===state.section)||matches[0];
+    if (section) state.section=section.id;
+    byId('guide-search-status').textContent=matches.length+' of '+pack.sections.length+' chapters';
+    const nav=byId('guide-chapters');nav.replaceChildren();
+    for (const s of matches) {
+      const b=document.createElement('button');b.type='button';b.dataset.sectionId=s.id;
+      if (s===section) b.setAttribute('aria-current','page');
+      const n=document.createElement('span');n.className='guide-chapter-number';n.textContent='CHAPTER '+String(pack.sections.indexOf(s)+1).padStart(2,'0');
+      const label=document.createElement('span');label.textContent=s.title;b.append(n,label);
+      b.addEventListener('click',()=>{state.section=s.id;save();render();byId('guide-section-title').focus()});nav.append(b);
+    }
+    const article=byId('guide-chapter');article.replaceChildren();
+    const heading=document.createElement('h2');heading.id='guide-section-title';heading.className='guide-section-title';heading.tabIndex=-1;
+    heading.textContent=section?section.title:'No matching chapters';article.append(heading);
+    if (section) {
+      const body=document.createElement('p');body.className='guide-body';body.textContent=section.body;article.append(body);
+      if (section.checklist.length) {
+        const list=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent='Procedure checklist';list.append(legend);
+        for (const item of section.checklist) {
+          const label=document.createElement('label');label.className='guide-check';
+          const input=document.createElement('input');input.type='checkbox';input.id='check-'+item.id;input.dataset.checkId=item.id;input.checked=state.checked.includes(item.id);
+          const text=document.createElement('span');text.textContent=item.text;label.append(input,text);
+          input.addEventListener('change',()=>{state.checked=input.checked?[...state.checked.filter(id=>id!==item.id),item.id]:state.checked.filter(id=>id!==item.id);save()});list.append(label);
+        }
+        article.append(list);
+      }
+    }
+    status();
+  }
+  byId('guide-search').addEventListener('input',render);
+  render();
+})();
+</script></body></html>

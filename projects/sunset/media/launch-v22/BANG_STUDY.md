@@ -1,0 +1,11 @@
+# Bang Motion application and provenance
+
+Primary source: [bangtutorial/bang-motion](https://github.com/bangtutorial/bang-motion), v1.19.0. On 9 November 2026, GitHub's main commit evidence resolved to `c1aa65e921c970d858705fcb4a53a8294d1a4131`. Reviewed the root skill, explainer/techniques/architecture references, `assets/starter-explainer-kartun.html`, `scripts/export-frames.mjs`, `snap.mjs` and `serve.py`.
+
+The useful direction is one persistent subject in a shared world, meaningful wide/medium/macro changes, and object handoffs that explain the story. V22 applies that to the same maker, actual kit cover and usable agenda. Large phrases remain the primary reading. Original SUNSET identity and the approved key/card animation take precedence over generic starter styling.
+
+[browser.py](browser.py) adapts the actual collage starter's world, camera and `OPENER` seek/play/pause interface. It replaces remote fonts/assets with local ones, bounds animation to the film duration, synchronizes pause/scrub with audio, awaits image/video/font readiness, provides serialized frame seeks, preserves the finance source mapping and extends the paper background for camera travel. [BANG_LICENSE.txt](BANG_LICENSE.txt) preserves Bang Tutorial's MIT notice; the generated companion embeds it too.
+
+Upstream's exporter uses Puppeteer to save PNGs from a local HTTP page. It does not itself encode or mix the film. Local server/socket creation and both available Chrome launch paths were blocked by the sandbox; direct headless startup failed before any page rendered. There was no successful Bang/Puppeteer export. V22 therefore delivers a native Pillow/FFmpeg MP4 plus the separately editable browser source, with no claim that their geometry matches.
+
+The ignored `bang-study/PROVENANCE.json` records URLs, local cache hashes, syntax checks and retrieval limits. Cached source was reconstructed from the web reader's line-numbered raw-main text; it is not a byte-verified Git checkout of that commit. Generated JavaScript syntax, deterministic source, local references and phase/finance mapping checks pass. They establish source integrity, not browser playback, rendering or perceptual audio quality.

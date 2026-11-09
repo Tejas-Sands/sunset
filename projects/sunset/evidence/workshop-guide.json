@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-09",
+  "kind": "original local guide example",
+  "title": "The Community Skill-Swap Kit",
+  "id": "workshop-kit",
+  "license": "CC0-1.0",
+  "schema": 2,
+  "duration_minutes": 45,
+  "chapters": 3,
+  "checks": 7,
+  "agenda_minutes": [
+    5,
+    10,
+    15,
+    10,
+    5
+  ],
+  "materials": [
+    "paper",
+    "pens"
+  ],
+  "sources": {
+    "public/packs/workshop-kit.json": {
+      "bytes": 6078,
+      "sha256": "e32e101f57160bc7f00d1f56b66cbd2a279d9e5672507f413b2a1396c948db1e"
+    },
+    "public/try-workshop-kit.html": {
+      "bytes": 15731,
+      "sha256": "0f34db33d30589e0c89fd31c594e0fb67a4c77172a680913e759ba7d12812d73"
+    },
+    "scripts/export-workshop-kit.mjs": {
+      "bytes": 670,
+      "sha256": "a6d6a75b126168aae6f867e1f75627ecbb314efe1277f8eed293431ffa0d08a5"
+    },
+    "tests/workshop-kit.test.mjs": {
+      "bytes": 2268,
+      "sha256": "7d479c7431e875398d297f86123713aa277926483b20b859e5ac48dfa51c72f1"
+    }
+  },
+  "verification": {
+    "node_suite": {
+      "command": "npm test",
+      "passed": 63,
+      "failed": 0
+    },
+    "standalone_matches_export": true,
+    "encrypted_exact_bytes_roundtrip": true,
+    "wrong_recovery_key_rejected": true,
+    "separate_process_recovery": {
+      "command": "node scripts/recover-pack.mjs artifact.json private-backup.json offline-resource.html",
+      "output_sha256": "0f34db33d30589e0c89fd31c594e0fb67a4c77172a680913e759ba7d12812d73",
+      "byte_identical_to_standalone": true
+    }
+  },
+  "limits": {
+    "new_browser_execution": false,
+    "new_offline_browser_evidence": false,
+    "new_campaign": false,
+    "onchain_release": false,
+    "hosted_update": false,
+    "human_workshop_observed": false
+  }
+}

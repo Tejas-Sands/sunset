@@ -1,0 +1,17 @@
+# V22 delivery review
+
+The operator selected warm synthetic voice A. A complete local film was rendered with the same fictional maker and a real new workshop kit, preserving the original SUNSET logo, Geist and key/card logic. The ending contains no URL or CTA. This records production review, not final operator creative approval.
+
+The new kit is a complete original CC0 guide with three chapters, seven checks and a 45-minute session using paper and pens. All 63 Node tests pass. Exact export, strict content validation, encrypted byte preservation, rejected wrong backup and separate-process command-line recovery pass. The recovered standalone HTML is byte-identical to the checked-in sample. No new browser/offline-use observation, participant adoption or kit-specific onchain action is inferred.
+
+Root inspected native draft maker/kit/refund/use/proof/next poses and 390px samples. An independent reviewer inspected source and 18 independently decoded MP4 frames: 330, 420, 530, 600, 617, 645, 668, 683, 746, 808, 850, 935, 980, 1048, 1100, 1190, 1280 and 1339. No blocking issue was found. Ready credit, deliberate claim, confirmation and Paid stay ordered; the first refund pose explicitly identifies the alternative outcome. Prior Lantern Trail testnet metadata remains present at the proof's beginning, middle and end. The same maker returns; sampled final logo/tagline frames have no CTA.
+
+Full encoded verification passed: all 1,340 video frames and audio decode; 543 retained-source comparisons (maximum mean channel error 2.11559/255); 147 sampled custom-render comparisons (2.07519/255); all 105 original closing frames and empty-footer checks, with a negative control that detects V20's URL. BT.709 limited colour, H.264/AAC 48 kHz stereo, 30 fps and faststart pass. Twenty-two earlier canonical movies and ten inherited input identities remain unchanged. Encoded audio measures −15.0 LUFS / −2.5 dBTP; its waveform correlation with the mix is 0.99999189. Root also inspected the actual encoded story sheet and dense refund/use/proof/next/payoff boards.
+
+The large phrases and narration carry the story. Minor craft limits remain: the use scene's large strip overlaps part of the agenda subheading, while all five steps remain readable; secondary receipt qualifiers are small on a phone; several transitions are graphic cuts rather than seamless physical handoffs. No uninterrupted human playback, perceptual listening, cold-viewer comprehension, physical-device QA or final operator approval is claimed.
+
+Sound uses naturally timed local synthetic takes, continuous licensed music ducked under every phrase and 25 recorded editorial Foley cues. The PCM mix measures −15.11 LUFS / −2.50 dBTP with a minimum voice-to-music RMS margin of 11.99 dB. These are measurements, not a claim of listening.
+
+Bang Motion's shared subject/camera direction informs the native film. The optional Bang-adapted browser source passes JavaScript syntax, deterministic source, local asset and timeline/finance checks. Chrome/server startup was blocked in this sandbox; browser playback/rendering and pixel matching to the MP4 remain unverified.
+
+No new protocol transaction, campaign, signature, deployment, shared authentication, public post or submission occurred. Earlier movie and asset identities are preserved. Generated media and recovery fixtures remain ignored; the operator pushes local source commits.

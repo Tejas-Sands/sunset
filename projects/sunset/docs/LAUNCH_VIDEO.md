@@ -1,6 +1,16 @@
 # SUNSET launch film
 
-Current delivery: [V21 — kinetic collage and clean brand ending](../media/launch-v21/README.md), **31 seconds,1080p30**. The original logo, approved main words and V19 key/card logic remain. Perspective copy fans, two camera pushes/pulls, near foreground paper and opposing whole-phrase arrivals increase movement while protecting main reading landings.
+Current delivery: [V22 — narrated workshop story](../media/launch-v22/README.md), **44.667 seconds, 1080p30**. Local movie: `.publication/sunset-launch-v22/sunset-launch-v22.mp4`. The operator-selected warm synthetic voice A carries one coherent maker/resource story. The actual [workshop kit](../public/try-workshop-kit.html) is a usable 45-minute CC0 guide. Projected paper, camera pushes, copy handoffs and the foreground pass retain the kinetic direction.
+
+The original sponsorship/custody/key/card footage preserves release credit, deliberate claim, confirmation and Paid. An explicitly alternative refund branch explains missed conditions and a separate refund claim/withdrawal. The proof identifies the **prior Lantern Trail** run: 2 November 2026, 0.1 testNEAR payout, recorded offline reader, one operator. It is not the new kit's payment history. **The ending contains only the original SUNSET logo and tagline, with no URL or CTA.**
+
+[Script](../media/launch-v22/SCRIPT.md), [review](../media/launch-v22/REVIEW.md), [credits](../media/launch-v22/CREDITS.md), [Bang study](../media/launch-v22/BANG_STUDY.md) and [evidence](../evidence/launch-video-v22.json) preserve source identities and verification limits. The MP4 uses local Pillow/FFmpeg. The separate Bang-adapted browser companion passes static source/input checks; sandbox restrictions prevented browser execution. No Bang/Puppeteer export or pixel matching is claimed.
+
+Sound uses local synthetic narration, a continuous licensed instrumental ducked under speech, and 25 recorded editorial Foley placements. Optional sentence-aligned subtitles are in `.publication/sunset-launch-v22/narration.srt`. [Post](../media/launch-v22/x-post.txt) and [required music-credit reply](../media/launch-v22/x-reply-credits.txt) are drafts; links remain outside the picture. No social post, submission, deployment or new protocol action occurred. Generated media remain ignored; the operator pushes verified local commits.
+
+## Archived V21 revision
+
+Archived V21 delivery: [V21 — kinetic collage and clean brand ending](../media/launch-v21/README.md), **31 seconds,1080p30**. The original logo, approved main words and V19 key/card logic remain. Perspective copy fans, two camera pushes/pulls, near foreground paper and opposing whole-phrase arrivals increase movement while protecting main reading landings.
 
 Open `.publication/sunset-launch-v21/sunset-launch-v21.mp4`. Poster: `.publication/sunset-launch-v21/poster.png`. [Script](../media/launch-v21/SCRIPT.md), [review](../media/launch-v21/REVIEW.md), [credits](../media/launch-v21/CREDITS.md) and [artifact evidence](../evidence/launch-video-v21.json) record exact delivery. **The ending contains only the original SUNSET logo and tagline, without URL or CTA overlay.**
 
@@ -32,7 +42,7 @@ The earlier two [V14 motion studies](../media/launch-v14/README.md) remain prese
 
 V14 files: `.publication/sunset-launch-v14/collage/sunset-collage-motion-match-8s.mp4` and `.publication/sunset-launch-v14/minimal/sunset-minimal-motion-match.mp4`. Each directory also contains `PRIVATE-source-vs-study.mp4`: supplied reference left, original study right. These comparisons contain reference images and remain local/ignored. [V14 evidence](../evidence/launch-motion-v14.json) and [fidelity review](../media/launch-v14/FIDELITY.md) preserve their independent scope.
 
-The earlier [35-second script proposal](../media/launch-v12/SCRIPT_DRAFT.md) and [use-case research](../media/launch-v12/RESEARCH.md) retain the creator-first motivation. The approved V16 script supersedes that timing. The workshop kit remains a proposal, not an implemented/funded resource.
+The earlier [35-second script proposal](../media/launch-v12/SCRIPT_DRAFT.md) and [use-case research](../media/launch-v12/RESEARCH.md) retain the creator-first motivation. The approved V16 script supersedes that timing. V22 now implements a separate local workshop kit; no kit-specific funded release is claimed.
 
 The earlier silent 5.5-second material test remains `.publication/sunset-launch-v12/sunset-style-concept.mp4`. [V12 evidence](../evidence/launch-concept-v12.json) preserves its native 165-frame decode/geometry checks and exact identity. The rejected V13 proof and its [technical evidence](../evidence/launch-concept-v13.json) are retained too. Technical passes are not evidence of creative suitability. Generated video remains ignored.
 

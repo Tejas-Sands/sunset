@@ -24,7 +24,7 @@ A ready-to-open standalone sample is [public/try-lantern-trail.html](public/try-
 
 The [testnet showcase guide](docs/TESTNET_SHOWCASE.md) now replays the completed `lantern-trail-testnet-v1` campaign through read-only checks and actual receipt links. Reviewer/sponsor accounts exist, the campaign is `Released`, creator `paid` is 0.1 testNEAR with no pending withdrawal, and the NFT holder is `reviewer.shiftultra.testnet`. Do not repeat its signed actions. Two separate campaigns now verify both real-time expiry paths and exact native refunds; do not repeat their completed actions either.
 
-The [V21 kinetic launch revision](media/launch-v21/README.md) removes the ending URL and keeps the original logo, approved words and key/card logic. Its 31-second edit adds a perspective copy fan, camera pushes through the same maker and printed-work layers, foreground paper passes and opposing payoff phrases, with protected reading landings. [Script](media/launch-v21/SCRIPT.md), [review](media/launch-v21/REVIEW.md), [evidence](evidence/launch-video-v21.json), [launch recommendations](media/launch-v21/LAUNCH_RECOMMENDATIONS.md) and [delivery guide](docs/LAUNCH_VIDEO.md) distinguish verified output from proposed additions and operator approval. Narration is deferred. Earlier source/films remain intact; generated media stay ignored. No app, campaign, deployment, public post or submission changed.
+The [V22 narrated launch film](media/launch-v22/README.md) follows one real workshop kit from the same fictional maker to public use. The 44.667-second kinetic collage adds the operator-selected warm synthetic voice, an explicit alternative refund path and a qualified receipt from the earlier Lantern Trail testnet run. The original logo, key/card logic and link-free ending remain. [Script](media/launch-v22/SCRIPT.md), [review](media/launch-v22/REVIEW.md), [credits](media/launch-v22/CREDITS.md), [evidence](evidence/launch-video-v22.json), [Bang Motion study](media/launch-v22/BANG_STUDY.md) and [delivery guide](docs/LAUNCH_VIDEO.md) record scope. Earlier films remain intact; generated media stay ignored. No new campaign, deployment, public post or submission occurred.
 
 ## Landing and workspace
 
@@ -41,6 +41,12 @@ The new [Open-source Maintainer Handbook](public/packs/maintainer-handbook.json)
 Creator Studio and the existing encryption/recovery pipeline accept the strictly validated `schema:2, kind:"guide"` format alongside unchanged numeric quiz packs. Content remains inert bounded plain text; no uploaded scripts, markup or remote resources. The same reader handles verified guides and reviewer previews. No contract rewrite is needed because commitments bind content bytes rather than parse lessons.
 
 This is a locally verified new example. It does not replace the content named by earlier finalized testnet transactions, and no handbook-specific onchain release or hosted update is claimed. [Guide checks and actual browser evidence](evidence/handbook-guide.json) include desktop/mobile download/offline/search/check/reload, exact independent encrypted-file recovery, and legacy byte preservation. [Content sources and limits](docs/MAINTAINER_HANDBOOK_SOURCES.md) explain the original CC0 material.
+
+## Community workshop kit
+
+[The Community Skill-Swap Kit](public/try-workshop-kit.html) is an original CC0 guide for a 45-minute adult session with paper and pens: welcome, demonstration, paired practice, teach-back and a next step. Its [source JSON](public/packs/workshop-kit.json) has three chapters and seven local checks. Open the standalone HTML directly, or upload the JSON through the existing Creator Studio. Regenerate the file with `node scripts/export-workshop-kit.mjs`.
+
+Strict content validation, exact self-contained export, encryption and separate-process retained-file recovery pass; [evidence](evidence/workshop-guide.json) records the hashes and 63-test suite. This is a new local example. No new browser/offline-use observation, kit campaign, live payment or hosted update is claimed.
 
 ## Rehearse the complete story
 
