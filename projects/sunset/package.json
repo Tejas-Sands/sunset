@@ -13,10 +13,14 @@
     "check:artifact": "node scripts/check-artifact.mjs",
     "check": "npm test && npm run typecheck && npm run verify:local && npm run check:artifact && npm run test:contract",
     "test:pages": "node scripts/check-pages.mjs",
-    "export:handbook": "node scripts/export-handbook.mjs"
+    "export:handbook": "node scripts/export-handbook.mjs",
+    "test:rust": "cargo test --locked --offline --manifest-path contracts/sunset/Cargo.toml && cargo fmt --manifest-path contracts/sunset/Cargo.toml --check && cargo clippy --locked --offline --manifest-path contracts/sunset/Cargo.toml --all-targets -- -D warnings && bash contracts/sunset/scripts/build.sh && npm run check:artifact",
+    "test:browser": "node scripts/test-browser.mjs",
+    "test:release:local": "npm run check && npm run build && npm run test:pages && npm run test:rust",
+    "test:release": "npm run test:release:local && npm audit --audit-level=high && npm run test:browser"
   },
   "dependencies": {
-    "next": "16.2.10",
+    "next": "16.4.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },

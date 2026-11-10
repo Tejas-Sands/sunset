@@ -73,6 +73,8 @@ The `5810ddd` application build passed production export and static page checks.
 
 For a generic static host, upload **only `out/`** as its document root. For Vercel's repository integration, use the **Next.js** preset and leave its output directory at the framework default, as described above. Verify `/`, `/app/`, `/app/?view=Discover` and `/try-lantern-trail.html` over HTTPS. No application environment variables are required for the existing rehearsal.
 
+The 10 November live check found that Vercel served standalone samples at clean paths such as `/try-maintainer-handbook/`, while literal `.html` links returned 404. `projects/sunset/vercel.json` now supplies three exact permanent redirects from the legacy `.html` URLs to their clean paths. This host-only configuration leaves Next dev and Python’s literal-file hosting intact. Deploy the current batch, then run `npm run test:browser -- --url https://sunset-lemon.vercel.app`: its HTTP preflight requires all three public URLs to return the exact original file bytes before any browser pass can be reported. The local static check validates the redirect configuration; it does not prove that the new rules are deployed. [Routing configuration reference](https://vercel.com/docs/project-configuration/vercel-json#redirects).
+
 On a socket-capable local machine, `npm start` serves `out/` at `http://127.0.0.1:3000`. Check desktop/mobile layout, keyboard/dialog behavior, persistence and errors. Download the standalone game, close the application, disable networking and complete the downloaded file in a fresh browser session. A cached website tab is insufficient evidence. See the [demonstration guide](DEMO.md).
 
 ## 2. Verify the contract in a real protocol runtime

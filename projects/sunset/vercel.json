@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/try-lantern-trail.html", "destination": "/try-lantern-trail/", "permanent": true },
+    { "source": "/try-maintainer-handbook.html", "destination": "/try-maintainer-handbook/", "permanent": true },
+    { "source": "/try-workshop-kit.html", "destination": "/try-workshop-kit/", "permanent": true }
+  ]
+}

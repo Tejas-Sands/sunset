@@ -102,6 +102,7 @@ input::placeholder, textarea::placeholder { color: var(--ui-muted); opacity: 1; 
 .sunmark { width: 36px; height: 36px; color: var(--ui-logo); }
 .loading .brand { display: inline-flex; }
 .loading .theme-toggle { margin-top: 12px; }
+.loading .secondary { color: var(--ui-green); border-color: var(--ui-line-strong); }
 .shell .footer-logo { width: 25px; height: 25px; flex-shrink: 0; color: var(--ui-logo); }
 
 /* Quieter chrome, clear actions and a shared rhythm in both themes. */

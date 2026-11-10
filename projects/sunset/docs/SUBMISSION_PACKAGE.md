@@ -2,6 +2,8 @@
 
 Prepared **9 November 2026**. The operator accepted the launch film; the project has **not been submitted**. Submit by **14 November, 23:59 UTC / 15 November, 05:29 IST**. [Official rules](https://nearhackathon.com/HACKATHON.md) and the [submission guide](SUBMISSION.md) govern the final send.
 
+Before public sign-off, deploy the [10 November release fixes](RELEASE_READINESS_2026-11-10.md) and pass `npm run test:browser -- --url https://sunset-lemon.vercel.app`. That audit found a literal `.html` download-routing failure on the previously deployed build. The package below remains prepared material, not evidence of the new deployment passing.
+
 ## Ready to review
 
 - Public repository: <https://github.com/Tejas-Sands/sunset>. Anonymous GitHub HTML confirmed the repository is public on 9 November, at commit `22fe1a4ba393e772ada8138f0fec0ed91153ef14`. The operator must push the final local commits and confirm that the published branch updates before sending.

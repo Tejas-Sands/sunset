@@ -2,7 +2,7 @@
 
 SUNSET pools capped adult sponsorship to release a finished learning resource. A matching key published on time credits the agreed creator; missed funding or release deadlines allow contributor refunds. Learners keep a self-contained game without a wallet. A transferable NEAR stewardship NFT hands over verified mirror-maintenance authority while the resource stays public.
 
-[Try the hosted app](https://sunset-lemon.vercel.app) · [Product and setup](projects/sunset/README.md) · [Final project review](projects/sunset/docs/FINAL_REVIEW_2026-11-09.md) · [Submission package](projects/sunset/docs/SUBMISSION_PACKAGE.md)
+[Try the hosted app](https://sunset-lemon.vercel.app) · [Product and setup](projects/sunset/README.md) · [Release readiness](projects/sunset/docs/RELEASE_READINESS_2026-11-10.md) · [Submission package](projects/sunset/docs/SUBMISSION_PACKAGE.md)
 
 ## Try it: do this, see this
 
@@ -13,7 +13,7 @@ SUNSET pools capped adult sponsorship to release a finished learning resource. A
 
 ## Verified scope and limits
 
-The reviewed Rust contract is deployed on NEAR testnet. The main pack received 0.06 + 0.04 testNEAR, released, paid its fixed creator 0.1 native testNEAR, and transferred stewardship with enforced mirror authority. Two separate real-expiry cases returned 0.01 + 0.02 native testNEAR with successful callbacks and no pending withdrawal. Fresh desktop/mobile-width recovery and cold-browser offline gameplay passed; one mirror fetch timed out and succeeded on a bounded retry.
+The reviewed Rust contract is deployed on NEAR testnet. The main pack received 0.06 + 0.04 testNEAR, released, paid its fixed creator 0.1 native testNEAR, and transferred stewardship with enforced mirror authority. Two separate real-expiry cases returned 0.01 + 0.02 native testNEAR with successful callbacks and no pending withdrawal. Recorded desktop/mobile-width recovery and cold-browser offline gameplay passed on 3 November; one mirror fetch timed out and succeeded on a bounded retry.
 
 **Browser financial controls are rehearsal or unsigned plans; actual transactions were signed through the local CLI.** The live browser viewer verifies and recovers public data. All demo roles share one operator; mirror paths share one host. Maximum-state protocol gas, failed transfer/callback handling, NEAR Sandbox, independent human validation and broad accessibility/device QA remain open. Testnet only; no external audit, immutable deployment, mainnet readiness or final hackathon submission is claimed.
 

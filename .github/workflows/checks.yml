@@ -30,6 +30,14 @@ jobs:
       - run: npm run check
       - run: npm run build
       - run: npm run test:pages
+      - name: Check dependency advisories
+        run: npm audit --audit-level=high
+      - name: Install the pinned browser smoke tool
+        run: npm install --global agent-browser@0.37.1 --no-audit --no-fund
+      - name: Install Chromium and its Linux dependencies
+        run: agent-browser install --with-deps
+      - name: Exercise the real browser and offline downloads
+        run: npm run test:browser
   contract:
     runs-on: ubuntu-24.04
     timeout-minutes: 20

@@ -37,6 +37,13 @@ assert.ok(links.some(url => url.origin === origin && url.pathname === '/try-lant
   'Landing must link to the standalone sample');
 assert.ok(links.some(url => url.origin === origin && url.pathname === '/try-maintainer-handbook.html'), 'Landing must expose the original handbook sample');
 const app = await readFile(resolve(output, 'app/index.html'), 'utf8');
+const hosting = JSON.parse(await readFile(fileURLToPath(new URL('../vercel.json', import.meta.url)), 'utf8'));
+for (const filename of ['try-lantern-trail.html', 'try-maintainer-handbook.html', 'try-workshop-kit.html']) {
+  assert.ok((await stat(resolve(output, filename))).isFile(), `Missing standalone export: ${filename}`);
+  assert.ok(hosting.redirects.some(rule => rule.source === `/${filename}`
+    && rule.destination === `/${filename.replace(/\.html$/, '/')}` && rule.permanent === true),
+    `Vercel must preserve the literal HTML link: ${filename}`);
+}
 for (const [name, html] of [['landing', landing], ['workspace', app]]) {
   assert.match(html, /<script\b[^>]*id="sunset-theme"/, `${name} needs the before-paint theme bootstrap`);
   assert.ok(html.indexOf('id="sunset-theme"') < html.indexOf('<body'), `${name} must restore its theme before the body`);

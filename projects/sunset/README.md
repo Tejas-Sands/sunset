@@ -91,6 +91,10 @@ This verifies manifest, ciphertext, key and plaintext commitments before writing
 
 ## Verification
 
+The [10 November release-readiness audit](docs/RELEASE_READINESS_2026-11-10.md) records the latest checks, browser-data fixes, Next.js 16.4.6 security update and hosted standalone-download redirects. `npm run test:release:local` runs the complete local application/build/Rust/artifact checks. `npm run test:release` additionally requires the live npm advisory service and real Chromium (`agent-browser` 0.37.1 plus its installed browser). Both fail nonzero on an unavailable required step. The revised GitHub Actions workflow runs browser/advisory gates as well as native/WASM checks; its remote execution and the post-deployment browser pass remain pending. The [audit](docs/RELEASE_READINESS_2026-11-10.md) explains setup and scope.
+
+Invalid saved rehearsal data is retained for private recovery export instead of being overwritten. A temporary sample stays read-only until an explicit reset. Stale-tab saves are rejected rather than replacing a newer draft; this local cache is not an atomic multi-process database.
+
 ```sh
 npm run check
 npm run build

@@ -1,0 +1,266 @@
+{
+  "schema": 1,
+  "checked_on": "2026-11-10",
+  "baseline_commit": "8af5341c99b6ddafd8b22cf817f570173cfbbb1f",
+  "status": "local_release_checks_passed_public_runtime_gates_pending",
+  "scope": "Supported public testnet demo and local rehearsal. No blanket production, mainnet, zero-failure or independent-user assurance.",
+  "fixed_findings": [
+    {
+      "id": "saved-state",
+      "severity": "P2",
+      "symptom": "Conserving but malformed saved state crashed render/recovery controls",
+      "fix": "Schema/shape validation; original raw state preserved; temporary read-only sample; recovery export and explicit guarded reset",
+      "verified_by": [
+        "8 new state/persistence unit regressions",
+        "Actual Home controlled-hook/render/click probes"
+      ]
+    },
+    {
+      "id": "stale-tab",
+      "severity": "P2",
+      "symptom": "Stale tab overwrote a newer draft/artifact/key",
+      "fix": "Previous raw-snapshot equality required before every persisted mutation, migration, first seed and reset",
+      "limit": "Optimistic stale-write protection; not atomic multi-process locking",
+      "verified_by": [
+        "New draft/artifact/key retained under stale contribution attempt",
+        "First-seed race rejected",
+        "Raw snapshot unit regressions"
+      ]
+    },
+    {
+      "id": "prototype-account",
+      "severity": "P2",
+      "symptom": "Valid constructor account inherited a function as credit and crashed views/ledger actions",
+      "fix": "Own-property lookups for balance, credits, contributions and refunded markers; account remains valid",
+      "verified_by": [
+        "Economic unit regression including refund/replay/withdrawal/release and conservation",
+        "Actual Home Activity and Access budgets render probes"
+      ]
+    },
+    {
+      "id": "hosted-html",
+      "severity": "P2",
+      "symptom": "All3 standalone .html URLs returned404 on previously deployed version",
+      "fix": "3 exact host-only permanent redirects to proven clean paths; original file bytes untouched",
+      "verification": "Local configuration/static checks pass; clean remote handbook path returned exact17862bytes; new deployed rules require post-push runtime verification"
+    }
+  ],
+  "local_tests": {
+    "application_passed": 75,
+    "application_failed": 0,
+    "wasm_host_scenarios_passed": 11,
+    "rust_tests_passed": 19,
+    "workflow_scenarios_passed": 9,
+    "simulated_near_conserved": "21.8",
+    "additional_controlled_integrity_checks_passed": 34,
+    "typecheck_passed": true,
+    "production_build": {
+      "version": "16.4.6",
+      "passed": true,
+      "typescript_mode": "Supported compiler API; strict independent tsc retained; no build-error suppression"
+    },
+    "static_pages_passed": true,
+    "static_targets": 16,
+    "format_passed": true,
+    "clippy_native_passed": true,
+    "clippy_wasm_target_passed": true,
+    "fresh_locked_offline_wasm_rebuild": {
+      "passed": true,
+      "bytes": 270188,
+      "sha256": "7a65f94c90eb11c7e7865362ea3386656e9d89334512b12b7ce313e5ed606c6f",
+      "source_digests_matched": 8
+    },
+    "commands": [
+      "npm run test:release:local",
+      "npm run test:rust (including added rebuild check)",
+      "node --test --test-isolation=none tests/rehearsal-storage.test.mjs",
+      "Actual component and integrity probes retained in ignored audit directory"
+    ]
+  },
+  "dependency_security": {
+    "checkedAt": "2026-11-10T09:33:23.433Z",
+    "next": "16.4.6",
+    "postcss": "8.5.23",
+    "sharp": "0.35.5",
+    "helpers": "0.5.23",
+    "fullLockPackageNames": 60,
+    "installedPackageNames": 28,
+    "registryEndpoint": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+    "fullLockAdvisories": {},
+    "installedAdvisories": {},
+    "verified": [
+      "npm ci --ignore-scripts --offline in isolated staging directory exit 0",
+      "npm ls --all in staging exit 0",
+      "Installed package versions and integrity values match portable lock",
+      "Next.js --version reports 16.4.6",
+      "Sharp native PNG encoding succeeded, libvips 8.18.7",
+      "Fresh official registry manifests match new Next/env/SWC/PostCSS/helpers/Sharp integrity values",
+      "Every package lock resolution uses registry.npmjs.org HTTPS and SHA-512",
+      "Downloaded tarballs SHA-512 verified before cache import"
+    ],
+    "lockSha256": "ebb6aa64bf1fffd452ca7327696a2db944f527c45de99dba1cbda411e34ea351",
+    "limits": [
+      "Direct npm install/audit network client fails EAI_AGAIN here; approved curl transport used for official registry responses",
+      "No push or deployment"
+    ]
+  },
+  "public_observations": {
+    "repository_public": true,
+    "observed_remote_commit": "8af5341c99b6ddafd8b22cf817f570173cfbbb1f",
+    "http_200_paths": [
+      "/app/",
+      "/_next/static/css/3503d802e62594f5.css",
+      "/_next/static/chunks/app/app/page-687630d88d2bcb2a.js",
+      "/fonts/geist-latin-variable.woff2",
+      "/icon.svg",
+      "/testnet/lantern-trail-v1/manifest.json",
+      "/testnet/lantern-trail-v1/ciphertext.sunset",
+      "/testnet/lantern-trail-mirror-v1/manifest.json",
+      "/testnet/lantern-trail-mirror-v1/ciphertext.sunset"
+    ],
+    "literal_html_http_404": [
+      "/try-lantern-trail.html",
+      "/try-maintainer-handbook.html",
+      "/try-workshop-kit.html"
+    ],
+    "clean_handbook_final_http_status": 200,
+    "clean_handbook_bytes": 17862,
+    "clean_handbook_sha256": "7133b9acd18dc6ee55256d817fbd7872e9e2ec4f2cd625a88fff6ab6b69a621a",
+    "new_fixes_deployed": false
+  },
+  "fresh_contract_and_recovery": {
+    "block_hash": "D41TYNuA2oiFVMnEwuEFnGpp4o1gt6F2gmTeKg5CXVNb",
+    "height": 277048545,
+    "reviewed_code_hash": "9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx",
+    "rows": [
+      {
+        "uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-v1/manifest.json",
+        "pack": "The Lantern Trail",
+        "manifest_sha256": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "ciphertext_sha256": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "offline_bytes": 7246,
+        "offline_sha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738"
+      },
+      {
+        "uri": "https://sunset-lemon.vercel.app/testnet/lantern-trail-mirror-v1/manifest.json",
+        "pack": "The Lantern Trail",
+        "manifest_sha256": "f808d7472f2e5d31749d02b42f89771e1be26ea80c985422ff8e3ed3e7e9656d",
+        "ciphertext_sha256": "465542a09861e53c92463407a59f41cedf773f4119937ba413a63701e7543c38",
+        "offline_bytes": 7246,
+        "offline_sha256": "fbe1df06b5eb4a93aae1eb12009f4d910e3ba432862918e3c254fc013ab79738"
+      }
+    ],
+    "scope": "Fresh read-only RPC block plus HTTP-downloaded original/mirror bytes. Existing app verifier replayed with controlled streaming Response objects. No fresh interactive browser, browser CORS or signed transaction execution.",
+    "campaigns": [
+      {
+        "id": "lantern-trail-testnet-v1",
+        "state": "Released",
+        "escrow": "0"
+      },
+      {
+        "id": "refund-funding-20261103-v1",
+        "state": "Refundable",
+        "escrow": "0"
+      },
+      {
+        "id": "refund-release-20261103-v1",
+        "state": "Refundable",
+        "escrow": "0"
+      }
+    ],
+    "creator_paid": "100000000000000000000000",
+    "creator_pending": null,
+    "sponsor_paid": "30000000000000000000000",
+    "sponsor_pending": null,
+    "withdrawn": "130000000000000000000000"
+  },
+  "runtime_gates": {
+    "browser_smoke": "blocked_socket_EPERM_no_pass",
+    "native_npm_audit": "DNS unavailable; official direct bulk lookup succeeded",
+    "vercel_team_logs": "Connector403; owning-team access unchanged",
+    "new_redirects_on_published_host": "pending_operator_push_deploy_and_browser_smoke",
+    "github_workflow": "prepared_not_executed_remotely_in_this_session",
+    "near_sandbox": "runtime_absent_and_loopback_socket_denied",
+    "real_protocol_failure_and_max_state_gas": "unverified"
+  },
+  "test_suite": {
+    "offline_local": "npm run test:release:local",
+    "full_gate": "npm run test:release",
+    "deployed": "npm run test:browser -- --url https://sunset-lemon.vercel.app",
+    "browser_tool": "agent-browser0.37.1 with installed Chromium",
+    "behavior": "Required failures exit nonzero; no silent skips; isolated profile and no signed transactions"
+  },
+  "production_limits": [
+    "Browser financial state is local rehearsal, not wallet authentication or protocol authority",
+    "5campaign/100permanent-account contract ceilings and participant-slot exhaustion",
+    "Actual failed transfers/callbacks and maximum-state scheduled15Tgas sufficiency unverified",
+    "NFT receiver/resolver protocol receipt chains unverified",
+    "Upgradeable contract authority retained",
+    "All showcase roles share one operator; mirror paths share one host",
+    "Broad device/accessibility/cross-browser and independent demand validation incomplete"
+  ],
+  "independent_review": "No remaining demonstrated Critical/Important source defect after the fixes, within reviewed scope; no browser execution claimed",
+  "accepted_film_sha256": "57348b1f7fea925c31b61650808bcc65f47b70d74b1889831674e8bb2e48022f",
+  "source_sha256": {
+    "package.json": "3ad8f8390742f89456ee727eceb588e4449c32b27c71fab691d70539275d4f23",
+    "package-lock.json": "ebb6aa64bf1fffd452ca7327696a2db944f527c45de99dba1cbda411e34ea351",
+    "next.config.ts": "162f2eb5ca390b44fb66f69beaab54b4b13101690bd2f297f9c0068acc25a3d5",
+    "vercel.json": "575a9955b1670bf8d78d8718495f34455287d54d92b46c55dc4c2345c3ad65a2",
+    "scripts/test-browser.mjs": "41aab889bf685ce997be5362edd16a0e591703a4c5ca571f002fd2592dd7887d",
+    "scripts/check-pages.mjs": "ef204245c929f7c5e4334a3aa63563e08ab3c9cb24280395ee576f5ceec814dc",
+    "src/lib/rehearsal.mjs": "8617159210cbf195a87f2c478872d2d243ebf555f199f62695cf1326ef2d7c12",
+    "src/lib/ledger.mjs": "8c652a17213beba3f1013c7f30ca67d1f3af7ef2917d687e6df97e4030fdf4c7",
+    "src/app/app/page.tsx": "34b6456bb684d04c452273a7bdd5c85217bde1344006e84b39672418a87a49b7",
+    "src/app/theme.css": "1d0eb083e36b6f9b62566933e9c081149d50fa30e2e5c1b4d9d08fbc102c8e3e",
+    "src/components/Stewardship.tsx": "ef455afae25102b0b7c7ba1e1b85cf80238d8995b91ec1405ed972e1255f0df1",
+    "tests/rehearsal-storage.test.mjs": "7cfb8498d34168593860c750db49d1f54552c44986c25932ec4842141fd2f09e",
+    "tests/ledger.test.mjs": "bbbeb8327484343d8539f67c7b7113a2b5780be32759be2b84335f0844b9f1de"
+  },
+  "log_sha256": {
+    "final-local-suite.log": "114471958e9f792dc1c8141e1175e1a4d98355dc39b6efc061a08635fe9be5da",
+    "final-rust-suite.log": "c6b75bf57ef8a6dafa6aaf53aa4e1991873bd7ff463f8a288a16e6cf9d9e2836",
+    "final-browser-attempt.log": "ba70333e7aa77f2e8a925d7d20073a8cca9ac749ed4e3cb83267d5162a71265a",
+    "reader/storage-results-fixed.json": "06455e4ba38abcabc4bb51a0e8d04fb50e30557695cf0b40bab26662901e3060",
+    "reader/multi-tab-results-fixed.json": "3dafa4d4e948503425b48f0f0f761a092d8a392b20374542297afb216c7429ac",
+    "reader/recovery-flow-results-fixed.json": "3bd37935f20b9b424bac97ecc0a89a715302dbd7d568cd12887d0a25ab7ff564",
+    "reader/constructor-results-fixed.json": "c87721bbf388e352b85e1406e574516698db2390d0f8b9c09f0c58ab880905c8",
+    "reader/boundary-results.json": "a43769b98d1aec4f40e83f5e767325d8b9d0cff2155bcc70affb6a90023c563b"
+  },
+  "pushed": false,
+  "deployed": false,
+  "signed_actions": false,
+  "posted": false,
+  "submitted": false,
+  "temporary_build_dependency_caches_removed": [
+    {
+      "path": ".publication/release-2026-11-10/node_modules-before-security-patch",
+      "bytes": 342158107,
+      "files": 9992
+    },
+    {
+      "path": ".publication/release-2026-11-10/npm-cache",
+      "bytes": 245963315,
+      "files": 195
+    },
+    {
+      "path": ".publication/release-2026-11-10/dependency-stage",
+      "bytes": 34754,
+      "files": 2
+    },
+    {
+      "path": "projects/sunset/.next/cache",
+      "bytes": 95465944,
+      "files": 16
+    },
+    {
+      "path": "/tmp/sunset-contract-audit-20261110",
+      "bytes": 413994300,
+      "files": 1023
+    }
+  ],
+  "workflow_sha256": "fc9dd1ec27d1c763a160485fd97855fcefa6c12ba0511cbd9ed1564b574262d0",
+  "public_document_checks": {
+    "relative_markdown_links": 368,
+    "missing_targets": 0
+  }
+}

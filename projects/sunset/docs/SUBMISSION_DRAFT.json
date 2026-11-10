@@ -70,13 +70,13 @@
     "live_expiry_refunds": "../evidence/testnet-refunds.json"
   },
   "repository_verification": {
-    "source": "Anonymous GitHub repository HTML, fetched 9 November 2026 (API returned 403)",
+    "source": "Anonymous GitHub repository HTML",
     "full_name": "Tejas-Sands/sunset",
     "private": false,
     "default_branch": "main",
-    "evidence_scope": "Repository is publicly visible. Current final changes still await an operator push; the observed remote commit is not this local batch.",
-    "checked_on": "2026-11-09",
-    "observed_commit": "22fe1a4ba393e772ada8138f0fec0ed91153ef14"
+    "evidence_scope": "Public repository contains the theme/identity batch. The 10 November release audit fixes/security update remain local pending operator push.",
+    "checked_on": "2026-11-10",
+    "observed_commit": "8af5341c99b6ddafd8b22cf817f570173cfbbb1f"
   },
   "official_rules": {
     "checked_on": "2026-11-09",
@@ -122,11 +122,15 @@
     "illustration_scope": "Workshop-kit animation; qualified prior Lantern Trail testnet proof. Supplement with genuine dated browser evidence; no new live transaction or screen recording is implied."
   },
   "hosting_verification": {
-    "checked_on": "2026-11-09",
+    "checked_on": "2026-11-10",
     "app_http_status": 200,
     "current_local_chunk_identity_matches": false,
     "fresh_interactive_browser_verified": false,
-    "fresh_rpc_read_verified": false,
-    "limits": "HTTP availability is not an interactive recovery check. Browser daemon startup failed; application RPC fetch failed DNS. Use earlier dated receipts/browser evidence and recheck deployment from the operator browser."
-  }
+    "fresh_rpc_read_verified": true,
+    "limits": "App availability, current code hash/state and resource bytes were freshly read. Three standalone .html links need the prepared host redirects deployed. Interactive browser/CORS verification is pending. The 10 November fixes are not yet published.",
+    "theme_bootstrap_present": true,
+    "literal_standalone_html_http_status": 404,
+    "clean_handbook_http_status": 200
+  },
+  "latest_release_review": "RELEASE_READINESS_2026-11-10.md"
 }
