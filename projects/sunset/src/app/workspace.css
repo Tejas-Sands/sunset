@@ -318,6 +318,7 @@
 
 .toast {
   background: var(--green);
+  pointer-events: none;
   color: #fffdf7;
   padding: 17px 22px;
   border: 1px solid #52634d;

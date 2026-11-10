@@ -58,6 +58,10 @@ function assertFits() {
   assert.equal(evaluate('Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) <= innerWidth + 1'),
     true, 'Page must fit the viewport without horizontal overflow');
 }
+function assertPassiveNotifications() {
+  assert.equal(evaluate('Array.from(document.querySelectorAll(".toast")).every(node => getComputedStyle(node).pointerEvents === "none")'),
+    true, 'Status notifications must leave the controls underneath clickable');
+}
 function assertNoPageErrors() {
   const {errors} = browser('errors');
   assert.deepEqual(errors, [], 'Browser runtime errors');
@@ -210,9 +214,11 @@ try {
   act('download', '[role="dialog"] .button-row .secondary', gameFile);
   const sample = {...introPack, id: 'pebble-market', title: 'The Pebble Market'};
   assert.equal(await readFile(gameFile, 'utf8'), createOfflineHtml(sample), 'Actual downloaded game must contain the exact pack/runtime');
+  assertPassiveNotifications();
   clickName('Open resource');
   waitFor('document.querySelector("#game-heading")?.textContent === "The Pebble Market"');
   for (const [index, question] of sample.questions.entries()) {
+    assertPassiveNotifications();
     waitFor(`document.querySelector(".question")?.textContent === ${JSON.stringify(question.prompt)}`);
     clickName(question.answer);
     waitFor('document.querySelector(".answer-feedback strong")?.textContent === "A little brighter!"');
