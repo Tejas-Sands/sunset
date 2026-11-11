@@ -77,7 +77,7 @@ export default function WalletProvider({children}:{children:React.ReactNode}){
   function report(result:any,id:string){
     if(!alive.current||id!==current.current)return;
     readPending(id);
-    if(result.intent?.hash)setReceipt({hash:result.intent.hash,status:result.status});
+    setReceipt(result.intent?.hash?{hash:result.intent.hash,status:result.status}:null);
     if(result.snapshot?.account?.account_id===id){setSnapshot(result.snapshot);setLoading(false);}
     const messages:Record<string,string>={contribute:'Sponsorship confirmed onchain.',approve_campaign:'Review approved onchain. This campaign can now receive sponsorship.',
       create_campaign:'Campaign created. Its named reviewer can now inspect and approve it.',publish_release:'Resource released. Creator credit is available to withdraw.',

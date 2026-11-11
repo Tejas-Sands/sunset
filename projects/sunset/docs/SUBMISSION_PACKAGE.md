@@ -2,7 +2,7 @@
 
 Prepared **9 November 2026**. The operator accepted the launch film; the project has **not been submitted**. Submit by **14 November, 23:59 UTC / 15 November, 05:29 IST**. [Official rules](https://nearhackathon.com/HACKATHON.md) and the [submission guide](SUBMISSION.md) govern the final send.
 
-Before public sign-off, deploy the [10 November release fixes](RELEASE_READINESS_2026-11-10.md) and pass `npm run test:browser -- --url https://sunset-lemon.vercel.app`. That audit found a literal `.html` download-routing failure on the previously deployed build. The package below remains prepared material, not evidence of the new deployment passing.
+Before public sign-off, deploy the [11 November live-wallet/technical-commons implementation](LIVE_WALLET_2026-11-11.md) and pass `npm run test:browser -- --url https://sunset-lemon.vercel.app`. Its six-download and wallet/resource suite supersedes the earlier public rehearsal journey. The package below remains prepared material, not evidence of the new deployment passing.
 
 ## Ready to review
 
@@ -16,12 +16,12 @@ For a stronger action-to-result demonstration, the human can record the read-onl
 
 ## Three-minute judge path
 
-1. Open `/app/`, choose **Testnet setup**, and verify `sunset.shiftultra.testnet` against code hash `9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx`. Inspect `lantern-trail-testnet-v1` as Released.
-2. Under **Public resources**, recover the original or steward-selected mirror. The commitments must verify before play/export. Answer **12** to the first question and see **A little brighter!**
-3. Download the standalone HTML, open that file in a fresh browser with browser networking disabled before load, and finish the five questions. See **All 5 lanterns are lit.** No learner wallet or account is needed.
+1. Open **Transformer Attention Lab** from the landing page. Try the causal mask, search/check a chapter and download its full guide. The AI/math library is free material, separate from earlier campaign receipts.
+2. Open `/app/?view=Funding`, expand released `lantern-trail-testnet-v1` in the archive and select **Read resource**. Choose original or steward mirror under **Recovery source**. Code/content checks run automatically.
+3. Download its standalone HTML, open it in a fresh browser with browser networking disabled before load, and finish the five questions. No learner wallet or account is needed. The [current demo](DEMO.md) provides the full resource/lab path.
 4. Inspect the [release/payout/stewardship receipts](../evidence/testnet-showcase.json) and [both actual expiry refunds](../evidence/testnet-refunds.json). These completed testnet actions must not be rerun.
 
-All demonstration roles share one operator and both mirror paths share a host. Browser financial controls are local rehearsal or unsigned plans. Protocol failure/max-state gas, Sandbox, independent users, broad physical-device/accessibility QA and mainnet readiness are unverified. The practical workshop kit in the film is a separate illustrative resource, not the content paid for in the Lantern Trail receipts.
+All earlier demonstration roles share one operator and both mirror paths share a host. The new browser controls request real testnet wallet approvals, with controlled signing-path automation; a new human-wallet journey remains pending deployment/acceptance. Protocol failure/max-state gas, Sandbox, independent users, broad physical-device/accessibility QA and mainnet readiness are unverified. The practical workshop kit in the film is separate from the Lantern Trail receipts.
 
 ## Proposed project description
 

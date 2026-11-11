@@ -1,5 +1,7 @@
 # SUNSET testnet showcase — shiftultra
 
+**UI update, 11 November 2026:** after deploying the [live-wallet implementation](LIVE_WALLET_2026-11-11.md), use **Funding → Onchain archive → Read resource** or **Stewardship** for the recorded campaign. Code/content checks are automatic. The execution record below remains the original CLI-signed showcase; the new browser signing integration does not establish new signed transactions. Do not replay completed operations.
+
 Updated 3 November 2026. The main release, native creator payout and stewardship handover are complete on **`sunset.shiftultra.testnet`**. [Finalized showcase evidence](../evidence/testnet-showcase.json) records eleven transactions: ten successes and one intentional former-owner authority rejection. [Browser evidence](../evidence/browser-showcase.json) records actual hosted original/mirror recovery, downloads and cold-browser offline completion. The earlier [deployment record](../evidence/testnet-deployment.json) preserves its initial zero-campaign snapshot.
 
 **Do not repeat the completed account creation, contribution, release, withdrawal, NFT transfer or mirror-update commands.** Demonstrate this campaign through read-only views and existing finalized receipts. Both actual expiry refunds and their native principal withdrawals are also completed; see section 5.
