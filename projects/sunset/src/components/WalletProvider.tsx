@@ -4,12 +4,14 @@ import type {NearConnector,NearWalletBase,EventMap} from '@hot-labs/near-connect
 import {DEPLOYMENT,loadLiveSnapshot} from '../lib/live.mjs';
 import {sendWalletAction,checkWalletIntent,loadPendingIntent,forgetUnsubmittedIntent,pendingStorageKey,transactionHashFromUrl} from '../lib/wallet.mjs';
 import {download} from '../lib/download.mjs';
+import {createWalletMetadataStorage} from '../lib/wallet-storage.mjs';
 
 let connectorPromise:Promise<NearConnector>|null=null;
 async function getConnector(){
   if(!connectorPromise)connectorPromise=import('@hot-labs/near-connect').then(({NearConnector})=>new NearConnector({
     network:'testnet',autoConnect:false,features:{testnet:true,signAndSendTransaction:true,signInWithoutAddKey:true},
-    excludedWallets:['mynearwallet','my-near-wallet'],footerBranding:null
+    excludedWallets:['mynearwallet','my-near-wallet'],footerBranding:null,
+    storage:createWalletMetadataStorage(()=>window.localStorage)
   })).catch(error=>{connectorPromise=null;throw error;});
   return connectorPromise;
 }
@@ -32,7 +34,7 @@ export default function WalletProvider({children}:{children:React.ReactNode}){
   async function refresh(){
     const id=current.current,token=++generation.current;
     setLoading(true);setSnapshot((previous:any)=>previous?{...previous,account:null}:null);
-    try{const result=await loadLiveSnapshot(id||undefined);if(alive.current&&token===generation.current&&id===current.current){setSnapshot(result);setError('');return result;}}
+    try{const result=await loadLiveSnapshot(id||undefined);if(alive.current&&token===generation.current&&id===current.current){setSnapshot(result);setError('');if(id)readPending(id);return result;}}
     catch(e){if(alive.current&&token===generation.current){setSnapshot(null);setError((e as Error).message);}}
     finally{if(alive.current&&token===generation.current)setLoading(false);}
     return null;
@@ -92,8 +94,8 @@ export default function WalletProvider({children}:{children:React.ReactNode}){
     const id=connection.accountId;working.current=true;setBusy(true);setError('');setMessage('Preparing your wallet request…');
     try{const result=await sendWalletAction({wallet:connection.wallet,signer:id,method,args,key,storage:browserStorage(),
       isCurrent:()=>alive.current&&current.current===id,onIntent:value=>{if(alive.current&&current.current===id){setPending(value);if(value)setMessage(value.hash?'Waiting for NEAR confirmation…':'Confirm this request in your wallet.');}}});report(result,id);return result;
-    }catch(e){if(alive.current&&current.current===id){readPending(id);setMessage('');setError((e as Error).message);}return null;}
-    finally{working.current=false;if(alive.current)setBusy(false);}
+    }catch(e){if(alive.current&&current.current===id){if((e as Error&{code?:string}).code==='SUNSET_WALLET_CHANGED')select(null,'');else readPending(id);setMessage('');setError((e as Error).message);}return null;}
+    finally{working.current=false;if(alive.current){setBusy(false);void syncConnection();}}
   }
   async function checkPending(hash?:string){
     const id=current.current;if(!id||working.current)return;
@@ -102,7 +104,7 @@ export default function WalletProvider({children}:{children:React.ReactNode}){
       if(transactionHashFromUrl(window.location.href)===result.intent.hash){const url=new URL(window.location.href);for(const key of ['transactionHashes','transactionHash','transaction_hash'])url.searchParams.delete(key);window.history.replaceState(null,'',url.href);}
     }
     catch(e){if(alive.current&&current.current===id){readPending(id);setError((e as Error).message);}}
-    finally{working.current=false;if(alive.current)setBusy(false);}
+    finally{working.current=false;if(alive.current){setBusy(false);void syncConnection();}}
   }
   function forgetPending(){
     if(!current.current||working.current||!window.confirm('First inspect your wallet activity. Clear this local reference only if no transaction was submitted. A confirmed payment cannot be undone here.'))return;
@@ -122,7 +124,7 @@ export function WalletStatus(){
   const wallet=useWallet(),[hash,setHash]=useState('');
   useEffect(()=>setHash(wallet.pending?.hash||''),[wallet.pending?.hash,wallet.accountId]);
   return <>{wallet.error&&<div className="p-notice p-notice-error" role="alert">{wallet.error}</div>}{wallet.message&&<div className="p-notice" role="status">{wallet.message}{wallet.receipt&&!wallet.pending&&<a href={`https://explorer.testnet.near.org/transactions/${wallet.receipt.hash}`} target="_blank" rel="noreferrer"> View receipt ↗</a>}</div>}
-    {(wallet.pending||wallet.pendingDamaged)&&<section className="p-panel p-transaction" aria-label="Pending wallet request"><div><span className="p-kicker">WALLET REQUEST</span><h2>{wallet.pendingDamaged?'Recover a saved transaction reference':'Track your transaction'}</h2><p>Keep this request until its result is clear. Transaction checks are read-only.</p></div>
+    {(wallet.pending||wallet.pendingDamaged)&&<section className="p-panel p-transaction" aria-label="Pending wallet request"><div><span className="p-kicker">WALLET REQUEST</span><h2>{wallet.pendingDamaged?'Wallet request tracking needs attention':'Track your transaction'}</h2><p>{wallet.pendingDamaged?'Allow browser storage or retain and inspect any existing reference before sending a new request.':'Keep this request until its result is clear. Transaction checks are read-only.'}</p></div>
       {!wallet.pendingDamaged&&<><label>Transaction hash<input value={hash} onChange={e=>setHash(e.target.value)} placeholder="Copy from your wallet activity" spellCheck={false} autoComplete="off" disabled={wallet.busy||!!wallet.pending?.hash}/></label><div className="p-actions"><button className="p-button p-button-accent" disabled={wallet.busy||!hash} onClick={()=>void wallet.checkPending(hash)}>{wallet.busy?'Checking…':'Check status'}</button>{wallet.pending?.hash&&<a className="p-button" href={`https://explorer.testnet.near.org/transactions/${wallet.pending.hash}`} target="_blank" rel="noreferrer">View receipt ↗</a>}</div></>}
       <div className="p-actions"><button className="p-text-button" onClick={wallet.savePending}>Save transaction reference</button>{!wallet.pending?.hash&&<button className="p-text-button" disabled={wallet.busy} onClick={wallet.forgetPending}>I checked: no transaction was sent</button>}</div>
     </section>}</>;

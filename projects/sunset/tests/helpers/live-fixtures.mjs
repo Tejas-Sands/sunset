@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 export const contract='sunset.shiftultra.testnet',signer='sponsor.testnet',blockHash='H'.repeat(44);
+export const inclusionBlockHash='J'.repeat(44);
 export const hashes={manifest_hash:'a'.repeat(64),plaintext_hash:'b'.repeat(64),ciphertext_hash:'c'.repeat(64),key_commitment:'d'.repeat(64),license_hash:'e'.repeat(64)};
 export function snapshot(state='Active',registered=true){return {
  contract,network:'testnet',codeHash:'9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx',blockHash,height:50,timestampNs:'100000000000',
@@ -12,10 +13,10 @@ export function response(value){return new Response(JSON.stringify(value),{heade
 export function rpcFixture(s,mutate=()=>{}){return async(url,options)=>{
  const q=JSON.parse(options.body);let result;
  if(q.method==='status')result={chain_id:'testnet'};
- else if(q.method==='block')result={header:{hash:blockHash,height:s.height,timestamp_nanosec:s.timestampNs}};
+ else if(q.method==='block')result=q.params.block_id===inclusionBlockHash?{header:{hash:inclusionBlockHash,height:s.height+1,timestamp_nanosec:(BigInt(s.timestampNs)+1n).toString()}}:{header:{hash:blockHash,height:s.height,timestamp_nanosec:s.timestampNs}};
  else if(q.params.request_type==='view_account')result={block_hash:blockHash,block_height:s.height,code_hash:s.codeHash};
  else {assert.equal(q.params.block_id,blockHash);const value={get_config:s.config,list_campaigns:s.campaigns,get_account:s.account}[q.params.method_name];assert.notEqual(value,undefined);result={block_hash:blockHash,block_height:s.height,result:[...new TextEncoder().encode(JSON.stringify(value))]};}
  mutate(q,result);return response({jsonrpc:'2.0',id:q.id,result});
 };}
 export async function withFetch(fetcher,work){const original=globalThis.fetch;globalThis.fetch=fetcher;try{return await work();}finally{globalThis.fetch=original;}}
-export function outcome(plan){const p=plan.actions[0].params;return {final_execution_status:'FINAL',transaction:{hash:'T'.repeat(44),signer_id:plan.expectedSignerId,receiver_id:plan.receiverId,actions:[{FunctionCall:{method_name:p.methodName,args:btoa(JSON.stringify(p.args)),gas:p.gas,deposit:p.deposit}}]},transaction_outcome:{outcome:{status:{SuccessReceiptId:'receipt'}}},status:{SuccessValue:''},receipts_outcome:[{outcome:{status:{SuccessValue:''}}}]};}
+export function outcome(plan){const p=plan.actions[0].params;return {final_execution_status:'FINAL',transaction:{hash:'T'.repeat(44),signer_id:plan.expectedSignerId,receiver_id:plan.receiverId,actions:[{FunctionCall:{method_name:p.methodName,args:btoa(JSON.stringify(p.args)),gas:p.gas,deposit:p.deposit}}]},transaction_outcome:{block_hash:inclusionBlockHash,outcome:{status:{SuccessReceiptId:'receipt'}}},status:{SuccessValue:''},receipts_outcome:[{outcome:{status:{SuccessValue:''}}}]};}

@@ -92,3 +92,35 @@ test('a failed withdrawal callback retains the transaction reference while the o
   assert.equal(result.status,'pending');assert.equal(loadPendingIntent(store,signer).hash,receipt.transaction.hash);
  });
 });
+
+test('an identical historical receipt cannot resolve a newer interrupted request or erase its reference',async()=>{
+ const s=snapshot(),store=storage(),receipt=outcome(buildLivePlan(s,signer,'contribute',args));
+ receipt.transaction_outcome.block_hash='J'.repeat(44);
+ const fetcher=chain(s,receipt);
+ await withFetch((url,options)=>{
+  const q=JSON.parse(options.body);
+  if(q.method==='block'&&q.params.block_id===receipt.transaction_outcome.block_hash)
+   return Promise.resolve(response({jsonrpc:'2.0',id:q.id,result:{header:{hash:q.params.block_id,height:s.height-1,timestamp_nanosec:'90000000000'}}}));
+  return fetcher(url,options);
+ },async()=>{
+  assert.equal((await sendWalletAction(sendOptions(store,wallet(async()=>undefined)))).status,'pending');
+  const original=store.getItem('sunset-pending-v1:'+signer);
+  await assert.rejects(()=>checkWalletIntent({storage:store,signer,hash:receipt.transaction.hash}),/predate|preflight|earlier|before/i);
+  assert.equal(store.getItem('sunset-pending-v1:'+signer),original);
+ });
+});
+test('legacy references without a chain boundary remain recoverable and cannot accept an ambiguous receipt',async()=>{
+ const s=snapshot(),store=storage(),plan=buildLivePlan(s,signer,'contribute',args),receipt=outcome(plan);
+ const legacy={...await createIntent(plan,s),schema:1,hash:receipt.transaction.hash};delete legacy.preflight;
+ const original=JSON.stringify(legacy);store.setItem('sunset-pending-v1:'+signer,original);
+ assert.equal(loadPendingIntent(store,signer).hash,receipt.transaction.hash);
+ await withFetch(chain(s,receipt),async()=>{await assert.rejects(()=>checkWalletIntent({storage:store,signer}),/older|legacy|preflight|boundary/i);});
+ assert.equal(store.getItem('sunset-pending-v1:'+signer),original);
+ assert.throws(()=>forgetUnsubmittedIntent(store,signer,{confirmed:true}),/submitted|hash|status/i);
+});
+test('an account switch on the second account read rejects preflight without persisting or signing',async()=>{
+ let reads=0,sent=0;const store=storage(),w=wallet(async()=>{sent++;});
+ w.getAccounts=async()=>[{accountId:++reads===1?signer:'other.testnet'}];
+ await withFetch(rpcFixture(snapshot()),async()=>{await assert.rejects(()=>sendWalletAction(sendOptions(store,w)),error=>error.code==='SUNSET_WALLET_CHANGED'&&/account changed/i.test(error.message));});
+ assert.equal(reads,2);assert.equal(sent,0);assert.equal(store.values.size,0);
+});

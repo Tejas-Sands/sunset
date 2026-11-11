@@ -26,9 +26,10 @@ function clearPending(storage,signer,previous){
   storage.removeItem(pendingStorageKey(signer));
 }
 async function checkAccount(wallet,signer,isCurrent){
-  if(!isCurrent())throw Error('Wallet account changed. Please try again with the current account.');
+  const changed=()=>Object.assign(Error('Wallet account changed. Please reconnect before continuing.'),{code:'SUNSET_WALLET_CHANGED'});
+  if(!isCurrent())throw changed();
   const accounts=await wallet.getAccounts({network:'testnet'});
-  if(!isCurrent()||!Array.isArray(accounts)||!accounts.some(a=>a.accountId===signer))throw Error('Wallet account changed. Please reconnect before continuing.');
+  if(!isCurrent()||!Array.isArray(accounts)||!accounts.some(a=>a.accountId===signer))throw changed();
 }
 
 /** @param {{wallet:any,signer:string,method:string,args:any,key?:string,storage:any,isCurrent:()=>boolean,onIntent?:(value:any)=>void}} options */

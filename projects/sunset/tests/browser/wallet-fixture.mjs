@@ -6,7 +6,8 @@ export function installWalletFixture(data, allowedOrigin) {
   const add = (a, b) => (BigInt(a) + BigInt(b)).toString();
   const originalFetch = window.fetch.bind(window);
   const state = {...copy(data), connected: false, signer: 'sponsor.testnet', requests: [], receipts: {},
-    reject: false, delay: 0, outage: false, errors: [], hostedManifest: null, hostedEnvelope: null, privateBackup: null};
+    reject: false, delay: 0, outage: false, accountReads: 0, switchOnAccountRead: 0,
+    errors: [], hostedManifest: null, hostedEnvelope: null, privateBackup: null};
   window.__sunsetQA = state;
   window.addEventListener('error', event => state.errors.push(event.message));
   window.addEventListener('unhandledrejection', event => state.errors.push(String(event.reason)));
@@ -21,7 +22,8 @@ export function installWalletFixture(data, allowedOrigin) {
       const q = JSON.parse(options.body), s = state.snapshot;
       let result;
       if (q.method === 'status') result = {chain_id: 'testnet'};
-      else if (q.method === 'block') result = {header: {hash: s.blockHash, height: s.height, timestamp_nanosec: s.timestampNs}};
+      else if (q.method === 'block') result = {header: {hash: q.params.block_id,
+        height: s.height + (q.params.block_id === s.blockHash ? 0 : 1), timestamp_nanosec: s.timestampNs}};
       else if (q.method === 'tx') result = state.receipts[q.params.tx_hash];
       else if (q.params.request_type === 'view_account') result = {block_hash: s.blockHash, block_height: s.height, code_hash: s.codeHash};
       else {
@@ -58,7 +60,14 @@ export function installWalletFixture(data, allowedOrigin) {
       description: 'Controlled frontend verification; no signatures.', permissions: {},
       icon: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ccircle cx="12" cy="12" r="10" fill="%23e98764"/%3E%3C/svg%3E',
       features: {testnet: true, mainnet: false, signAndSendTransaction: true, signInWithoutAddKey: true}},
-    getAccounts: async () => state.connected ? [{accountId: state.signer}] : [],
+    getAccounts: async () => {
+      if (!state.connected) return [];
+      if (++state.accountReads === state.switchOnAccountRead) {
+        state.signer = 'other.testnet';
+        window.dispatchEvent(new Event('focus'));
+      }
+      return [{accountId: state.signer}];
+    },
     signIn: async ({network}) => {
       if (network !== 'testnet') throw Error('Wrong controlled wallet network');
       state.connected = true;
@@ -110,7 +119,7 @@ export function installWalletFixture(data, allowedOrigin) {
       const result = {final_execution_status: 'FINAL', transaction: {hash, signer_id: request.signerId,
         receiver_id: request.receiverId, actions: [{FunctionCall: {method_name: p.methodName,
           args: btoa(JSON.stringify(args)), gas: p.gas, deposit: p.deposit}}]},
-        transaction_outcome: {outcome: {status: {SuccessReceiptId: 'receipt'}}},
+        transaction_outcome: {block_hash: 'J'.repeat(44), outcome: {status: {SuccessReceiptId: 'receipt'}}},
         status: {SuccessValue: ''}, receipts_outcome: [{outcome: {status: {SuccessValue: ''}}}]};
       state.receipts[hash] = result;
       return result;

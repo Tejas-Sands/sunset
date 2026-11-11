@@ -18,7 +18,7 @@ No contract code, state layout or existing campaign was changed. The original pu
 
 ## Automated and browser evidence
 
-The local gate passed 101 application tests, TypeScript, nine model workflow scenarios, artifact/source checks and 11 compiled-WASM host scenarios. Native Rust tests passed 19/19, with formatting, Clippy and an identical reproducible WASM rebuild. The production export generated landing, app and all three resource routes; static checks verified 20 local targets and six exact downloads.
+The final local gate passed 109 application tests, TypeScript, nine model workflow scenarios, artifact/source checks and 11 compiled-WASM host scenarios. Native Rust tests passed 19/19, with formatting, Clippy and an identical reproducible WASM rebuild. The production export generated landing, app and all three resource routes; static checks verified 20 local targets and six exact downloads.
 
 `npm audit` could not resolve the registry in the restricted Node executor. The complete locked-package map was instead sent with the approved HTTP client to npm's official bulk-advisory endpoint; it returned `{}` for 61 locked package names, including the wallet SDK. This is an advisory lookup, not a claim that the unavailable npm command passed.
 
@@ -29,6 +29,8 @@ An owned MCP Chromium session did run interaction checks against the actual prod
 Observed browser checks include both themes, native search/empty states, saved chapter/check restoration, all three numerical labs, genuine chooser open/Escape cancellation, and controlled sponsorship/rejection/withdrawal/reviewer/release/mirror/NFT controls. Owner Studio also prepared files, required a saved-backup check and created a Draft with the exact 0.05-testNEAR deposit; no content key appeared in persistent storage. Studio file/date setup used test-only DataTransfer/input events, followed by native prepare/download/confirmation/create clicks. A connection reset of the sponsorship input was reproduced (0.23→0.1), fixed and retested (0.23 retained, zero requests). A cancellation's stale prior receipt link was reproduced, removed and retested. These observations do not establish a real wallet signature, actual new protocol settlement, complete deployed browser coverage or broad accessibility certification. [Structured evidence](../evidence/live-wallet-2026-11-11.json).
 
 ## Operator deployment and acceptance
+
+A fresh whole-change review found three important recovery/review defects, all fixed with reproducing tests: historical identical receipts cannot resolve a new unknown request because inclusion must follow the saved finalized preflight block; account changes during preflight clear old account data and reconcile after work settles; legacy question previews expose all choices and declared answers. An observed SDK startup error with unavailable storage was also fixed using metadata-only memory fallback; financial tracking still requires durable storage. Native retests verified the new account/zero balance, no unauthorized request and a clear blocked-storage reason. Legacy transaction references without a chain boundary remain retained and unresolved rather than silently accepted. Final verification passed after these changes.
 
 1. From the repository root, publish the verified local commits:
 

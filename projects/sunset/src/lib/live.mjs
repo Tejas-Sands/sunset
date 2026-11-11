@@ -142,12 +142,14 @@ export async function createIntent(plan,snapshot){
   const action=plan.actions[0].params;
   const checked=buildLivePlan(snapshot,plan.expectedSignerId,action.methodName,action.args);
   requireValue(JSON.stringify(canonical(checked.actions))===JSON.stringify(canonical(plan.actions)),'Signing plan changed after preflight');
-  return {schema:1,signer:plan.expectedSignerId,receiverId:plan.receiverId,method:action.methodName,gas:action.gas,deposit:action.deposit,
+  return {schema:2,signer:plan.expectedSignerId,receiverId:plan.receiverId,method:action.methodName,gas:action.gas,deposit:action.deposit,
+    preflight:{height:snapshot.height,hash:snapshot.blockHash},
     argsHash:await argumentHash(action.args),resourceId:action.args.id??action.args.token_id??null,startedAt:Date.now(),
     ...(action.methodName==='withdraw'?{withdrawAmount:action.args.amount,paidBefore:snapshot.account.paid,creditBefore:snapshot.account.credit}:{})};
 }
 export function validateIntent(intent){
-  requireValue(intent?.schema===1&&accountId(intent.signer)&&intent.receiverId===DEPLOYMENT.contract&&methods.has(intent.method)&&hash(intent.argsHash)&&Number.isSafeInteger(intent.startedAt)&&intent.startedAt>0,'Saved transaction reference is invalid. Inspect wallet activity before sending again.');
+  requireValue([1,2].includes(intent?.schema)&&accountId(intent.signer)&&intent.receiverId===DEPLOYMENT.contract&&methods.has(intent.method)&&hash(intent.argsHash)&&Number.isSafeInteger(intent.startedAt)&&intent.startedAt>0,'Saved transaction reference is invalid. Inspect wallet activity before sending again.');
+  if(intent.schema===2)requireValue(Number.isSafeInteger(intent.preflight?.height)&&intent.preflight.height>0&&transactionHash(intent.preflight?.hash),'Saved preflight block is invalid. Keep the reference and inspect wallet activity.');
   uint(intent.gas,64);uint(intent.deposit);
   if(intent.hash!==undefined)requireValue(transactionHash(intent.hash),'Invalid transaction hash');
   if(intent.method==='withdraw'){requireValue(uint(intent.withdrawAmount)>0n,'Invalid withdrawal reference');uint(intent.paidBefore);uint(intent.creditBefore);}
@@ -164,6 +166,12 @@ export async function verifyIntentOutcome(outcome,intent){
   const args=JSON.parse(decoder.decode(Uint8Array.from(atob(action.args),c=>c.charCodeAt(0))));
   requireValue(await argumentHash(args)===intent.argsHash,'Transaction arguments differ from the wallet request.');
   if(outcome.final_execution_status!=='FINAL')return 'pending';
+  requireValue(intent.schema===2,'This older transaction reference has no preflight block boundary. Keep it and inspect wallet activity before sending again.');
+  const inclusion=outcome.transaction_outcome?.block_hash;
+  requireValue(transactionHash(inclusion),'The transaction inclusion block is unavailable. Keep this request and check again.');
+  const {header}=await rpc('block',{block_id:inclusion});
+  requireValue(header?.hash===inclusion&&Number.isSafeInteger(header.height)&&header.height>intent.preflight.height,
+    'This transaction predates the wallet request or its preflight block could not be confirmed. Keep the pending reference.');
   const plan={receiverId:intent.receiverId,expectedSignerId:intent.signer,actions:[{type:'FunctionCall',params:{methodName:intent.method,args,gas:intent.gas,deposit:intent.deposit}}]};
   return verifyPlannedOutcome(outcome,plan,intent.signer);
 }

@@ -263,6 +263,16 @@ try {
   waitFor('document.body.innerText.includes("Native payout confirmed.")');
   assert.equal(evaluate('__sunsetQA.requests[1].actions[0].params.methodName'), 'withdraw');
   assert.equal(evaluate('__sunsetQA.accounts["sponsor.testnet"].paid'), '400000000000000000000000');
+  act('click', '.p-app-nav a[href="/app/?view=Funding"]');
+  evaluate('__sunsetQA.switchOnAccountRead = __sunsetQA.accountReads + 2');
+  clickName('Sponsor public release ↗');
+  waitFor('document.querySelector(".wallet-account")?.textContent.includes("other.testnet")');
+  waitFor('!document.querySelector(".p-refresh").disabled');
+  assert.equal(evaluate('__sunsetQA.requests.length'), 2, 'A mid-preflight account switch must not sign another request');
+  act('click', '.p-app-nav a[href="/app/?view=My%20activity"], .p-app-nav a[href="/app/?view=My activity"]');
+  waitFor('!!document.querySelector(".p-account-stats")');
+  assert.equal(evaluate('document.querySelector(".p-account-label").textContent'), 'other.testnet');
+  assert.equal(evaluate('document.querySelector(".p-account-stats").textContent.includes("0.4")'), false, 'Previous account credit must not remain displayed');
   act('click', '.p-app-nav a[href="/app/?view=Explore"]');
   evaluate('__sunsetQA.outage = true');
   clickName('Refresh state');
@@ -270,7 +280,7 @@ try {
   assert.equal(evaluate('document.querySelectorAll(".p-resource-card").length'), 3, 'Reading library must remain available during an RPC outage');
   assert.deepEqual(evaluate('__sunsetQA.errors'), []);
   assertFits(); assertNoPageErrors();
-  passed('CONTROLLED wallet: preserved amount, exact sponsorship, rejection, receipt-bound withdrawal and outage reading');
+  passed('CONTROLLED wallet: preserved amount, exact sponsorship, rejection, receipt-bound withdrawal, account-switch reconciliation and outage reading');
   console.log('Browser smoke passed. Real page/RPC/chooser and controlled wallet coverage are separate. Browser offline emulation only; no real wallet transaction or OS network toggle was tested.');
 } catch (error) {
   console.error(`FAIL ${stage}: ${error.message}`);

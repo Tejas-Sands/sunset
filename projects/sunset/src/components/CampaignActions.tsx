@@ -12,7 +12,7 @@ import {download} from '../lib/download.mjs';
 
 export function PackContent({pack}:{pack:any}){
   if(pack.kind==='guide')return <GuideReader pack={pack as GuidePack}/>;
-  return <section className="p-legacy-reader"><h3>{pack.title}</h3><p>{pack.description}</p>{pack.questions.map((q:any)=><details key={q.id}><summary>{q.prompt}</summary><p>{q.explanation}</p></details>)}</section>;
+  return <section className="p-legacy-reader"><h3>{pack.title}</h3><p>{pack.description}</p>{pack.questions.map((q:any)=><details key={q.id}><summary>{q.prompt}</summary><ul aria-label="Answer choices">{q.choices.map((choice:number)=><li key={choice}>{choice}</li>)}</ul><p><strong>Correct answer: {q.answer}</strong></p><p>{q.explanation}</p></details>)}</section>;
 }
 const date=(ns:string)=>new Date(Number(BigInt(ns)/1000000n)).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});
 function duration(ns:string){const n=BigInt(ns);for(const [unit,label] of [[3600000000000n,'hours'],[60000000000n,'minutes'],[1000000000n,'seconds']] as const)if(n%unit===0n)return `${n/unit} ${label}`;return `${n} nanoseconds`;}

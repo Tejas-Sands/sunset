@@ -86,7 +86,7 @@ test('redirect intent binds exact args without retaining the unreleased content 
  const secret=btoa('x'.repeat(32)),plan=live.buildLivePlan(s,signer,'publish_release',{id:'resource',key_base64:secret});
  const intent=JSON.parse(JSON.stringify(await live.createIntent(plan,s)));
  assert.equal(JSON.stringify(intent).includes(secret),false);
- assert.equal(await live.verifyIntentOutcome(outcome(plan),intent),'success');
+ await withFetch(rpcFixture(s),async()=>{assert.equal(await live.verifyIntentOutcome(outcome(plan),intent),'success');});
  for(const mutate of [
   r=>{r.transaction.signer_id='other.testnet';},r=>{r.transaction.receiver_id='other.testnet';},
   r=>{r.transaction.actions[0].FunctionCall.deposit='1';},r=>{r.transaction.actions[0].FunctionCall.gas='1';},
@@ -94,7 +94,7 @@ test('redirect intent binds exact args without retaining the unreleased content 
   r=>{r.transaction.actions[0].FunctionCall.args=btoa(JSON.stringify({id:'resource',key_base64:btoa('z'.repeat(32))}));}
  ]){const r=outcome(plan);mutate(r);await assert.rejects(()=>live.verifyIntentOutcome(r,intent));}
  const failed=outcome(plan);failed.receipts_outcome[0].outcome.status={Failure:{error:'failed'}};
- assert.equal(await live.verifyIntentOutcome(failed,intent),'failure');
+ await withFetch(rpcFixture(s),async()=>{assert.equal(await live.verifyIntentOutcome(failed,intent),'failure');});
  assert.equal(await live.verifyIntentOutcome({transaction:outcome(plan).transaction},intent),'pending');
 });
 test('withdrawal UI distinguishes callback-pending credit restoration and actual native payout',async()=>{
@@ -103,4 +103,14 @@ test('withdrawal UI distinguishes callback-pending credit restoration and actual
  assert.equal(live.withdrawalState(intent,{...s.account,credit:'400000000000000000000000'}),'restored');
  assert.equal(live.withdrawalState(intent,{...s.account,credit:'300000000000000000000000',paid:'100000000000000000000000'}),'paid');
  assert.throws(()=>live.withdrawalState(intent,{...s.account,account_id:'other.testnet'}));
+});
+test('final receipt requires an identified inclusion block strictly after the saved preflight boundary',async()=>{
+ const s=snapshot(),plan=live.buildLivePlan(s,signer,'contribute',{id:'resource',amount:'1'}),intent=await live.createIntent(plan,s);
+ const missing=outcome(plan);delete missing.transaction_outcome.block_hash;
+ await assert.rejects(()=>live.verifyIntentOutcome(missing,intent),/inclusion block/i);
+ for(const change of [header=>header.hash='K'.repeat(44),header=>header.height=s.height]){
+  await withFetch(rpcFixture(s,(q,r)=>{if(q.method==='block')change(r.header);}),async()=>{
+   await assert.rejects(()=>live.verifyIntentOutcome(outcome(plan),intent),/predate|preflight/i);
+  });
+ }
 });

@@ -32,7 +32,7 @@
     "pending_storage": "Per-account localStorage; argument digest only, no raw arguments or unreleased content key"
   },
   "checks": {
-    "application_tests": {"passed": 101, "failed": 0, "skipped": 0},
+    "application_tests": {"passed": 109, "failed": 0, "skipped": 0},
     "typescript": "passed",
     "model_workflow_scenarios": 9,
     "wasm_host_scenarios": {"passed": 11, "failed": 0},
@@ -82,11 +82,23 @@
     "visual_review": "Exact static production HTML/body and emitted CSS, scripts removed only in ignored visual copies; dark/light desktop and responsive iframe previews",
     "local_artifacts": ".publication/live-wallet-2026-11-11/"
   },
+  "review": {
+    "scope": "Fresh-context read-only whole-change review of 05fa299..c332d67; no second review",
+    "initial_findings": {"critical": 0, "important": 3, "minor": 1},
+    "resolution": "One fix pass, each with RED/GREEN evidence and final 109-test/type/workflow/WASM/build/static gate",
+    "fixed": [
+      "New schema2 intents retain finalized preflight identity; matching final receipts must resolve to a strictly later inclusion block. Older identical receipts are rejected; legacy references are preserved unresolved.",
+      "Second-read account switch prevents signing, immediately clears stale account data and reconciles the actual SDK account after work settles. Native retest displays other.testnet and zero balances, with zero requests.",
+      "Legacy learning-pack reviewer previews display every choice, declared correct answer and explanation. Answer-key-only mutation now changes inspectable output.",
+      "Storage exception promoted to Important because startup emitted an uncaught error and a refresh hid the signing-block reason. SDK metadata gets a memory fallback; financial tracking still requires durable storage. Native denied-storage retest shows the reason, disables sponsorship, emits no errors and sends no request."
+    ],
+    "deferred_minors": [],
+    "declined_to_judge": ["New actual remote-wallet settlement remains authorized human acceptance after deployment", "Physical-device and broad cross-browser coverage remains outside observed desktop/iframe evidence"]
+  },
   "resources": ["transformer-attention", "backpropagation", "low-rank-adapters"],
   "resource_funding_claim": "None: original CC0 free library material, separate from existing campaign receipts",
   "preserved": ["Original three standalone files", "Original WASM and contract sources", "Private retained backups", "Historical testnet and browser evidence", "Accepted launch film"],
   "pending": [
-    "Fresh whole-change independent review and final relevant verification",
     "Operator push and Vercel deployment of this implementation",
     "New CI/full deployed browser suite success",
     "New human-wallet signed journey after deployment",
