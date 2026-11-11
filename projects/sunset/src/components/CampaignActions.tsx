@@ -24,7 +24,7 @@ export default function CampaignActions({campaign:c,snapshot,onRefresh}:{campaig
   const epoch=useRef(0);
   useEffect(()=>{epoch.current++;setKey('');setInspection(null);setAccepted(false);setError('');setWorking(false);},[c.id,c.agreement_digest,wallet.accountId]);
   useEffect(()=>{setPack(null);setUri(c.stewardship?.mirror_uri||c.manifest_uri);setMirror(c.stewardship?.mirror_uri||c.manifest_uri);return()=>{epoch.current++;};},[c.id,c.agreement_digest,c.stewardship?.mirror_uri]);
-  const blocked=working||wallet.busy||!!wallet.pending||wallet.pendingDamaged;
+  const blocked=working||wallet.busy||wallet.loading||!!wallet.pending||wallet.pendingDamaged;
   const account=snapshot.account?.account_id===wallet.accountId?snapshot.account:null;
   const contribution=account?.contributions.find((entry:any)=>entry.campaign_id===c.id);
   async function work(action:()=>Promise<void>){const token=epoch.current;setWorking(true);setError('');try{await action();}catch(e){if(epoch.current===token)setError((e as Error).message);}finally{if(epoch.current===token)setWorking(false);}}

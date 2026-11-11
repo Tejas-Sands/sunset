@@ -4,7 +4,7 @@ import WalletProvider,{useWallet,WalletControl,WalletStatus} from '../../compone
 import CampaignActions from '../../components/CampaignActions';
 import CreatorStudio from '../../components/CreatorStudio';
 import SunsetMark from '../../components/SunsetMark';
-import ThemeToggle from '../../components/ThemeToggle';
+import {SiteHeader,SiteFooter,ResourceCard} from '../../components/Protocol';
 import {resources} from '../../lib/library.mjs';
 import {formatNear,toYocto} from '../../lib/ledger.mjs';
 import {DEPLOYMENT} from '../../lib/live.mjs';
@@ -51,18 +51,18 @@ function Stewardship(){
 function Explore(){
   const wallet=useWallet(),s=wallet.snapshot;
   return <section><div className="p-section-heading"><div><span className="p-kicker">THE OPEN KNOWLEDGE COMMONS</span><h1>Useful ideas.<br/>Yours to keep.</h1></div><p>Original technical guides. Worked examples. Real calculations. No wallet to read.</p></div>
-    <div className="p-resource-grid">{resources.map(r=><a className="p-resource-card" href={r.href} key={r.id}><div className={'p-resource-art p-resource-art-'+r.index}><span className="p-kicker">{r.topic}</span><strong>{r.formula}</strong><span className="p-art-index">0{r.index+1} / OPEN RESOURCE</span></div><div className="p-resource-body"><div className="p-resource-meta"><span>CC0 · FREE TO READ</span><span>{r.duration}</span></div><h2>{r.title}</h2><p>{r.description}</p><span className="p-card-action">Open the resource <span aria-hidden="true">↗</span></span></div></a>)}</div>
+    <div className="p-resource-grid">{resources.map(resource=><ResourceCard key={resource.id} resource={resource}/>)}</div>
     <div className="p-chain-band"><div><span className="p-kicker">THE RELEASE LAYER</span><h2>Backed by actual chain state.</h2><p>Wallet actions use the existing NEAR testnet contract. New campaigns are curated by its creator account.</p><a className="p-button" href="/app/?view=Funding">Explore onchain campaigns ↗</a></div>{s?<dl><div><dt>Live campaigns</dt><dd>{s.campaigns.length}</dd></div><div><dt>Open releases</dt><dd>{s.campaigns.filter((c:any)=>c.state==='Released').length}</dd></div><div><dt>Active rounds</dt><dd>{s.campaigns.filter((c:any)=>c.state==='Active').length}</dd></div></dl>:<LiveState/>}</div>
   </section>;
 }
 function LiveApp(){
   const wallet=useWallet(),[view,setView]=useState('Explore'),[campaignId,setCampaignId]=useState('');
   useEffect(()=>{function read(){const query=new URLSearchParams(location.search),requested=query.get('view')||'Explore';if(requested==='Handbook'){location.replace('/try-maintainer-handbook.html');return;}if(requested==='How it works'){location.replace('/#how-it-works');return;}setView(views.includes(requested)?requested:legacy[requested]||'Explore');setCampaignId(query.get('campaign')||'');}read();window.addEventListener('popstate',read);return()=>window.removeEventListener('popstate',read);},[]);
-  function navigate(event:React.MouseEvent<HTMLAnchorElement>,next:string){if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();history.pushState(null,'',`/app/?view=${encodeURIComponent(next)}`);setView(next);setCampaignId('');window.scrollTo({top:0,behavior:'instant'});}
-  return <div className="protocol-site p-app"><a className="p-skip" href="#app-content">Skip to content</a><header className="p-header p-container"><a className="p-brand" href="/" aria-label="SUNSET home"><SunsetMark/><span>SUNSET</span></a><a className="p-back-home" href="/">The commons ↗</a><div className="p-header-actions"><span className={'p-network '+(wallet.snapshot?'p-network-ready':'')}><span className="p-live-dot"/>NEAR TESTNET</span><ThemeToggle/><WalletControl/></div></header>
+  function navigate(event:React.MouseEvent<HTMLAnchorElement>,next:string){if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();history.pushState(null,'',`/app/?view=${encodeURIComponent(next)}`);setView(next);setCampaignId('');window.scrollTo({top:0,behavior:'auto'});requestAnimationFrame(()=>document.getElementById('app-content')?.focus({preventScroll:true}));}
+  return <div className="protocol-site p-app"><a className="p-skip" href="#app-content">Skip to content</a><SiteHeader compact wallet={<WalletControl/>} network={<span className={'p-network '+(wallet.snapshot?'p-network-ready':'')}><span className="p-live-dot"/>NEAR TESTNET</span>}/>
     <nav className="p-app-nav p-container" aria-label="App navigation">{views.map(item=><a key={item} href={`/app/?view=${encodeURIComponent(item)}`} aria-current={view===item?'page':undefined} onClick={event=>navigate(event,item)}>{item}</a>)}<button className="p-text-button p-refresh" disabled={wallet.loading||wallet.busy} onClick={()=>void wallet.refresh()}>{wallet.loading?'Reading chain…':'Refresh state'}</button></nav>
-    <main id="app-content" className="p-container p-app-main"><WalletStatus/>{view==='Explore'?<Explore/>:view==='Funding'?<Funding campaignId={campaignId}/>:view==='My activity'?<Activity/>:view==='Studio'?<CreatorStudio snapshot={wallet.snapshot} onRefresh={()=>void wallet.refresh()}/>:<Stewardship/>}</main>
-    <footer className="p-footer p-container"><a className="p-brand" href="/" aria-label="SUNSET home"><SunsetMark/><span>SUNSET</span></a><p>Support once. Share forever.</p><a href={`https://explorer.testnet.near.org/accounts/${DEPLOYMENT.contract}`} target="_blank" rel="noreferrer">NEAR testnet · {wallet.snapshot?`block ${wallet.snapshot.height}`:'network connection pending'} ↗</a></footer>
+    <main id="app-content" className="p-container p-app-main" tabIndex={-1}><WalletStatus/>{view==='Explore'?<Explore/>:view==='Funding'?<Funding campaignId={campaignId}/>:view==='My activity'?<Activity/>:view==='Studio'?<CreatorStudio snapshot={wallet.snapshot} onRefresh={()=>void wallet.refresh()}/>:<Stewardship/>}</main>
+    <SiteFooter network={<a href={`https://explorer.testnet.near.org/accounts/${DEPLOYMENT.contract}`} target="_blank" rel="noreferrer">NEAR testnet · {wallet.snapshot?`block ${wallet.snapshot.height}`:'network connection pending'} ↗</a>}/>
   </div>;
 }
 export default function App(){return <WalletProvider><LiveApp/></WalletProvider>;}

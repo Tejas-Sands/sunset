@@ -31,9 +31,9 @@ export default function WalletProvider({children}:{children:React.ReactNode}){
   }
   async function refresh(){
     const id=current.current,token=++generation.current;
-    setLoading(true);setSnapshot(null);
+    setLoading(true);setSnapshot((previous:any)=>previous?{...previous,account:null}:null);
     try{const result=await loadLiveSnapshot(id||undefined);if(alive.current&&token===generation.current&&id===current.current){setSnapshot(result);setError('');return result;}}
-    catch(e){if(alive.current&&token===generation.current)setError((e as Error).message);}
+    catch(e){if(alive.current&&token===generation.current){setSnapshot(null);setError((e as Error).message);}}
     finally{if(alive.current&&token===generation.current)setLoading(false);}
     return null;
   }
@@ -116,7 +116,7 @@ export function WalletControl(){
   const wallet=useWallet();
   if(!wallet.accountId)return <button className="p-button p-button-accent wallet-connect" disabled={wallet.connecting||wallet.busy} onClick={()=>void wallet.connect()}>{wallet.connecting?'Opening wallet…':'Connect wallet'}<span aria-hidden="true">↗</span></button>;
   return <details className="wallet-menu"><summary className="p-button wallet-account" aria-label={`Wallet ${wallet.accountId}`}><span className="p-live-dot"/><span>{wallet.accountId}</span><span aria-hidden="true">⌄</span></summary>
-    <div><span className="p-kicker">NEAR TESTNET</span><strong>{wallet.accountId}</strong><button disabled={wallet.busy||wallet.connecting} onClick={()=>void wallet.connect()}>Change wallet</button><button disabled={wallet.busy||wallet.connecting} onClick={()=>void wallet.disconnect()}>Disconnect</button></div></details>;
+    <div><span className="p-kicker">NEAR TESTNET</span><strong>{wallet.accountId}</strong><button disabled={wallet.busy||wallet.connecting} onClick={event=>{event.currentTarget.closest('details')?.removeAttribute('open');void wallet.connect();}}>Change wallet</button><button disabled={wallet.busy||wallet.connecting} onClick={()=>void wallet.disconnect()}>Disconnect</button></div></details>;
 }
 export function WalletStatus(){
   const wallet=useWallet(),[hash,setHash]=useState('');

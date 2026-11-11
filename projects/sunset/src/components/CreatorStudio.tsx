@@ -13,7 +13,7 @@ export default function CreatorStudio({snapshot,onRefresh}:{snapshot:any,onRefre
   const wallet=useWallet(),[pack,setPack]=useState<any>(null),[prepared,setPrepared]=useState<any>(null),[saved,setSaved]=useState(false),[backupRequested,setBackupRequested]=useState(false);
   const [working,setWorking]=useState(false),[error,setError]=useState(''),[form,setForm]=useState({reviewer:'',manifestUri:'',target:'0.1',deadline:'',releaseHours:'24'}),epoch=useRef(0);
   const owner=snapshot?.config.owner,isOwner=!!owner&&owner===wallet.accountId;
-  const blocked=working||wallet.busy||!!wallet.pending||wallet.pendingDamaged;
+  const blocked=working||wallet.busy||wallet.loading||!!wallet.pending||wallet.pendingDamaged;
   useEffect(()=>{epoch.current++;setPrepared(null);setSaved(false);setBackupRequested(false);setWorking(false);return()=>{epoch.current++;};},[wallet.accountId]);
   function update(name:keyof typeof form,value:string){epoch.current++;setForm(previous=>({...previous,[name]:value}));setPrepared(null);setSaved(false);setBackupRequested(false);setError('');}
   async function upload(file:File){const token=++epoch.current;setError('');setPack(null);setPrepared(null);setSaved(false);setBackupRequested(false);try{if(file.size>5*1024*1024)throw Error('Resource exceeds the 5 MiB limit.');const value=validatePack(JSON.parse(await file.text()));if(token===epoch.current)setPack(value);}catch(e){if(token===epoch.current){setPack(null);setError((e as Error).message);}}}
