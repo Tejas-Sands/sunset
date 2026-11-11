@@ -3,6 +3,9 @@
   "redirects": [
     { "source": "/try-lantern-trail.html", "destination": "/try-lantern-trail/", "permanent": true },
     { "source": "/try-maintainer-handbook.html", "destination": "/try-maintainer-handbook/", "permanent": true },
-    { "source": "/try-workshop-kit.html", "destination": "/try-workshop-kit/", "permanent": true }
+    { "source": "/try-workshop-kit.html", "destination": "/try-workshop-kit/", "permanent": true },
+    { "source": "/library/transformer-attention.html", "destination": "/library/transformer-attention/", "permanent": true },
+    { "source": "/library/backpropagation.html", "destination": "/library/backpropagation/", "permanent": true },
+    { "source": "/library/low-rank-adapters.html", "destination": "/library/low-rank-adapters/", "permanent": true }
   ]
 }

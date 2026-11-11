@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "kind": "guide",
+  "id": "backpropagation",
+  "title": "Backpropagation Field Notes",
+  "description": "Follow a binary classifier from a forward pass to its exact gradients, one parameter update and a finite-difference check. A compact derivation you can reproduce on paper.",
+  "license": "CC0-1.0",
+  "sections": [
+    {
+      "id": "forward-pass",
+      "title": "Build the computation graph",
+      "body": "Consider one scalar input x, a weight w, a bias b and a binary label y. The logit is z = w x + b. Convert it to a probability with p = sigmoid(z) = 1 / (1 + exp(−z)). Binary cross-entropy is L = −y log(p) − (1 − y) log(1 − p), using natural logarithms.\n\nChoose x = 2, w = 0.5, b = −1 and y = 1. The logit is zero, the predicted probability is 0.5, and the loss is log(2), approximately 0.6931471806. This is one logistic output unit. It is useful for understanding a network's local derivatives, but it is not an example of training an entire language model.\n\nDraw the graph as x,w → multiplication → addition with b → sigmoid → loss. Every arrow is a dependency. During the backward pass, each node combines its local derivative with the gradient arriving from its consumer. If a value feeds several branches, its gradient receives the sum of those branches' contributions.",
+      "checklist": [
+        {
+          "id": "backprop-forward",
+          "text": "Recompute the logit, probability and loss for the chosen example."
+        },
+        {
+          "id": "backprop-graph",
+          "text": "Draw every dependency, including the bias, before differentiating."
+        }
+      ]
+    },
+    {
+      "id": "chain-rule",
+      "title": "Derive the backward pass",
+      "body": "For sigmoid, dp/dz = p(1 − p). For binary cross-entropy, dL/dp = −y/p + (1 − y)/(1 − p). Combining them by the chain rule simplifies to dL/dz = p − y. This cancellation is specific to this loss/activation pair; do not assume every output layer has the same derivative.\n\nThe affine node contributes dz/dw = x and dz/db = 1, so:\ndL/dw = (p − y) x\ndL/db = p − y\ndL/dx = (p − y) w\n\nFor our example, p − y = −0.5. Therefore dL/dw = −1, dL/db = −0.5 and dL/dx = −0.25.\n\nThe negative weight gradient means that a sufficiently small increase in w lowers the local loss, holding the other inputs fixed. A derivative describes a local rate of change. It does not say that an arbitrarily large update is safe.\n\nFor a batch mean loss, gradients are averaged across examples. Accidentally summing instead of averaging changes their scale and interacts with the learning rate.",
+      "checklist": [
+        {
+          "id": "backprop-chain",
+          "text": "Derive p − y from the two unsimplified derivatives."
+        },
+        {
+          "id": "backprop-input",
+          "text": "Compute the gradient with respect to x as well as w and b."
+        }
+      ]
+    },
+    {
+      "id": "gradient-step",
+      "title": "Take one step and check it",
+      "body": "Gradient descent updates parameters in the direction opposite their loss gradient. With learning rate η = 0.1:\nw_new = 0.5 − 0.1 × (−1) = 0.6\nb_new = −1 − 0.1 × (−0.5) = −0.95\n\nRecompute with the updated parameters and the same x and y. The new logit is 0.25, the probability is approximately 0.5621765009, and the loss is approximately 0.5759394199. The loss fell for this example and this step. Larger learning rates or different objectives can behave differently.\n\nCheck the weight gradient independently with central finite differences:\ng_numeric = [L(w + h, b) − L(w − h, b)] / (2h)\n\nUsing h = 0.00001 gives a value close to −1. Perturb only w for this check; keep b, x and y fixed. The analytic and numerical gradients should agree within an appropriate floating-point tolerance. A useful relative-error measure divides their absolute difference by max(1, |g_numeric|, |g_analytic|).\n\nFinite differences are a debugging tool. They become expensive when repeated separately for millions of parameters.",
+      "checklist": [
+        {
+          "id": "backprop-update",
+          "text": "Use both updated parameters in the second forward pass."
+        },
+        {
+          "id": "backprop-finite",
+          "text": "Verify the weight gradient by perturbing w in both directions."
+        }
+      ]
+    },
+    {
+      "id": "numerical-stability",
+      "title": "Debug numerics before scaling up",
+      "body": "Computing log(sigmoid(z)) directly can lose accuracy when the logit has large magnitude. For a binary label, an equivalent stable loss is:\nL = max(z, 0) − y z + log(1 + exp(−|z|))\n\nThe interactive lab uses this logit-space form. Stable evaluation matters even when the symbolic derivative is correct. Inspect finite losses and gradients before increasing model size.\n\nFor a real network, verify tensor shapes, label conventions, loss reduction and parameter sharing. Check gradients on a tiny deterministic example with dropout disabled, compare finite differences away from nondifferentiable boundaries, and confirm that the optimizer updates the intended trainable tensors. A tensor that was deliberately frozen should not be updated.\n\nA falling training loss is a useful diagnostic, not proof of generalization or correctness on unseen data. Keep evaluation data separate and check a task-appropriate metric.\n\nPrimary reference: Stanford CS231n course notes, Backpropagation, Intuitions. The scalar classifier, calculations and exercises in this guide are original CC0 material.",
+      "checklist": [
+        {
+          "id": "backprop-stable",
+          "text": "Compare the stable loss to cross-entropy at z = 0."
+        },
+        {
+          "id": "backprop-debug",
+          "text": "Name one shape error, one reduction error and one numerical error to check."
+        }
+      ]
+    }
+  ]
+}

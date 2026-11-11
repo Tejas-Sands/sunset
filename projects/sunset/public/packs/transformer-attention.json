@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "kind": "guide",
+  "id": "transformer-attention",
+  "title": "Transformer Attention Lab",
+  "description": "Work through a complete attention head: tensor shapes, scaled logits, stable softmax, causal masking and the cost of a longer context. Original examples for readers comfortable with vectors.",
+  "license": "CC0-1.0",
+  "sections": [
+    {
+      "id": "queries-keys-values",
+      "title": "Queries, keys and values",
+      "body": "Start with a sequence represented by X, a T × d_model matrix. One attention head learns three projections: Q = X W_Q, K = X W_K and V = X W_V. For this head, Q and K have width d_k; V has width d_v. Multiplying Q Kᵀ produces one score for every query/key pair, so its shape is T × T. The output of softmax(Q Kᵀ / √d_k) V has shape T × d_v.\n\nA query asks which positions matter for its current representation. A key participates in the matching score. A value supplies the vector that is mixed into the output. These roles describe the computation; they are not three separate copies of a sentence stored in a database.\n\nFor the following example, use one query and three keys. Choose d_k = 2 and d_v = 2. The query is q = [√2, 0]. The keys are k₁ = [1, 0], k₂ = [0, 1] and k₃ = [1, 1]. The values are v₁ = [1, 0], v₂ = [0, 2] and v₃ = [3, 1]. These independently chosen vectors are an arithmetic example, not activations recorded from a trained language model.",
+      "checklist": [
+        {
+          "id": "attention-shapes",
+          "text": "Derive the shapes of Q Kᵀ and the output without using the example numbers."
+        },
+        {
+          "id": "attention-roles",
+          "text": "Explain why values may have a different width from queries and keys."
+        }
+      ]
+    },
+    {
+      "id": "scaled-softmax",
+      "title": "Compute one attention output",
+      "body": "The raw dot products for our query are [√2, 0, √2]. Divide by √d_k = √2 to obtain the logits s = [1, 0, 1].\n\nStable softmax subtracts the largest logit before exponentiation. Here the exponentials become [1, exp(−1), 1]. Their sum is approximately 2.367879441. The resulting attention weights are approximately [0.4223187983, 0.1553624035, 0.4223187983]. Subtracting the maximum changes neither the mathematical probabilities nor their sum; it prevents avoidable overflow in a numerical implementation.\n\nNow mix the values coordinate by coordinate:\no₁ = 0.4223187983 × 1 + 0.1553624035 × 0 + 0.4223187983 × 3\n   ≈ 1.6892751930\no₂ = 0.4223187983 × 0 + 0.1553624035 × 2 + 0.4223187983 × 1\n   ≈ 0.7330436052\n\nThe result is the vector [1.6892751930, 0.7330436052], not the most-attended token's ID. Attention creates a weighted representation. Later projections and network layers still have work to do.\n\nThe √d_k factor controls dot-product scale under common initialization assumptions. It is not a guarantee about all trained score distributions.",
+      "checklist": [
+        {
+          "id": "attention-weights",
+          "text": "Recompute the three normalized weights and verify that they sum to one."
+        },
+        {
+          "id": "attention-output",
+          "text": "Recover both output coordinates, keeping the values separate from the keys."
+        }
+      ]
+    },
+    {
+      "id": "causal-mask",
+      "title": "Apply a causal mask",
+      "body": "Suppose this query is at the second position of a three-token sequence during autoregressive training. It may attend to positions one and two, but position three is in its future. Apply the mask to the logits before softmax: [1, 0, −∞]. The masked exponential is zero, so the weights become approximately [0.7310585786, 0.2689414214, 0].\n\nWith the same values, the new output is approximately [0.7310585786, 0.5378828427]. Masking after softmax without renormalizing would leave weights that do not sum to one and produce a different computation.\n\nThe mask is about information access. Multiplying a future value by a small nonzero probability still leaks future information. Padding positions need suitable masking too. A row with every key masked has no valid probability distribution; a production implementation needs an explicit policy for that case.\n\nIn the interactive lab, enabling the causal mask hides the third key for this one query. A complete decoder constructs a corresponding mask for every query row.",
+      "checklist": [
+        {
+          "id": "attention-mask",
+          "text": "Derive the two allowed probabilities from exp(1) and exp(0)."
+        },
+        {
+          "id": "attention-leak",
+          "text": "Explain why zeroing a value after an unmasked softmax is insufficient."
+        }
+      ]
+    },
+    {
+      "id": "context-cost",
+      "title": "Context cost and what attention does not prove",
+      "body": "An explicitly materialized dense score matrix has T² entries per head. At T = 4096, that is 16,777,216 entries. At two bytes per entry, one head's score matrix alone occupies 33,554,432 bytes, or 32 MiB. Doubling T to 8192 gives 67,108,864 entries and 128 MiB per head: four times the score storage.\n\nThis is a count of one explicit matrix. It excludes Q/K/V, other heads, layers, gradients, optimizer state and temporary buffers. Kernels can avoid storing the entire score matrix, so do not treat this worksheet as a prediction of a particular model's GPU usage.\n\nThe computation above does not establish that a token caused a prediction, that the network understood the sentence, or that an attention weight is a complete feature attribution. It isolates one operation so its mechanics can be checked.\n\nPrimary reference: Vaswani and colleagues, Attention Is All You Need (2017), arXiv:1706.03762. This original study guide and its chosen numerical examples are CC0; the cited paper retains its own license.",
+      "checklist": [
+        {
+          "id": "attention-memory",
+          "text": "Recompute the 4096-token and 8192-token matrix sizes in MiB."
+        },
+        {
+          "id": "attention-limits",
+          "text": "List three allocations excluded from the score-matrix estimate."
+        }
+      ]
+    }
+  ]
+}

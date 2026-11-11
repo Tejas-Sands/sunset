@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "kind": "guide",
+  "id": "low-rank-adapters",
+  "title": "Low-Rank Adaptation Notebook",
+  "description": "Derive a LoRA update, count the trainable parameters and weight bytes, and test the rank constraint with an explicit matrix. Separate useful savings from total-memory claims.",
+  "license": "CC0-1.0",
+  "sections": [
+    {
+      "id": "factorized-update",
+      "title": "Replace a dense update with two factors",
+      "body": "Let a frozen linear layer use W₀ with shape d_out × d_in. A low-rank adapter represents its change as ΔW = (α/r) B A, where A has shape r × d_in and B has shape d_out × r. The layer computes W₀ x + (α/r) B(Ax). The base weights stay frozen while the factors are trained.\n\nThe factorization uses r(d_in + d_out) trainable parameters. A separate full dense update would use d_in d_out parameters. The ratio is favorable when r is small relative to both dimensions. The rank of B A cannot exceed r, so the smaller parameter count also restricts the updates that can be represented.\n\nFor a concrete shape check, choose d_in = 4, d_out = 3 and r = 2. A maps a four-dimensional input to two dimensions; B maps those two dimensions to three. Their product has the same 3 × 4 shape as W₀.\n\nThis notebook describes the core linear-algebra construction. Actual adapter configurations choose which layers to target and may include other trained parameters.",
+      "checklist": [
+        {
+          "id": "lora-shapes",
+          "text": "Write the dimensions of A, B, Ax and B(Ax) for the 4-to-3 example."
+        },
+        {
+          "id": "lora-rank",
+          "text": "Explain why the rank bound applies to the update, not necessarily to W₀ + ΔW."
+        }
+      ]
+    },
+    {
+      "id": "parameter-budget",
+      "title": "Count a realistic projection's parameters",
+      "body": "Take a 4096 × 4096 projection and adapter rank r = 8. The base matrix contains:\n4096 × 4096 = 16,777,216 parameters\n\nThe two factors contain:\n8 × 4096 + 4096 × 8 = 65,536 trainable parameters\n\nThat is 1/256 of the dense matrix's parameter count, or 0.390625 percent. This comparison is for this one projection and this adapter configuration. Applying adapters to more projections, or training additional layers, changes the total.\n\nAt two bytes per stored weight, the base matrix occupies 33,554,432 bytes = 32 MiB. The factors occupy 131,072 bytes = 128 KiB. Use binary units here: 1 MiB is 1,048,576 bytes.\n\nThese are weight-storage counts. They exclude activations, gradients, optimizer states, any full-precision master weights and temporary buffers. A frozen base is still present in memory unless another storage/execution strategy changes that. Do not equate a 256-fold reduction in this layer's trainable parameter count with a 256-fold reduction in total GPU memory.",
+      "checklist": [
+        {
+          "id": "lora-count",
+          "text": "Recompute the factor count and the 0.390625 percent fraction."
+        },
+        {
+          "id": "lora-bytes",
+          "text": "Convert the two-byte factor storage to KiB without including the base matrix."
+        }
+      ]
+    },
+    {
+      "id": "rank-one-example",
+      "title": "Test the rank constraint explicitly",
+      "body": "Use a two-dimensional example with r = 1 and α = 1. Choose A = [1, −1] and B = [2, 3]ᵀ. Their product is:\nB A = [[2, −2],\n       [3, −3]]\n\nThe second column is the negative of the first, and the determinant is zero. The matrix has rank one. For input x = [1, 1]ᵀ, Ax is zero, so the adapter contributes nothing. For x = [1, 0]ᵀ, Ax is one and the adapter contribution is [2, 3]ᵀ.\n\nNow take W₀ to be the 2 × 2 identity. W₀ + B A can still have full rank; a low-rank change does not force the entire adapted layer to have low rank. In this example, its determinant is zero only if the chosen update happens to cancel a base direction; for our chosen factors the determinant is 0, because 1 + A B = 1 + (2 − 3) = 0.\n\nAs a contrast, replace B by [2, 2]ᵀ. Then 1 + A B = 1, so the adapted matrix is invertible although the update remains rank one.",
+      "checklist": [
+        {
+          "id": "lora-nullspace",
+          "text": "Verify both input examples by multiplying A first and then B."
+        },
+        {
+          "id": "lora-base-rank",
+          "text": "Check the adapted determinant for both choices of B."
+        }
+      ]
+    },
+    {
+      "id": "scaling-and-merging",
+      "title": "Scaling, merging and practical limits",
+      "body": "The multiplier α/r controls the update's scale in the original LoRA formulation. With α = 16 and r = 8, the scale is 2. A rank setting does not by itself determine update magnitude; the learned factor values and scaling both matter.\n\nFor an ordinary compatible linear layer, one can form W_merged = W₀ + (α/r) B A and use the merged matrix for inference. This is an algebraic statement. Quantized representations, precision choices, serving systems and adapter-switching needs affect whether a particular deployment should merge and what its memory/latency costs will be.\n\nThe frozen base can still require intermediate activations to compute gradients for the adapters. Optimizer-state savings concern the trained parameters, and exact storage depends on the optimizer and dtype choices. Record the target layers, adapter rank, alpha, trainable count, numeric formats and measurement method when reporting an experiment.\n\nPrimary reference: Hu and colleagues, LoRA: Low-Rank Adaptation of Large Language Models (2021), arXiv:2106.09685. This guide's shapes, matrix examples and parameter-budget exercises are original CC0 material. No benchmark or universal quality guarantee is claimed.",
+      "checklist": [
+        {
+          "id": "lora-scale",
+          "text": "Compute α/r and identify where it enters the layer output."
+        },
+        {
+          "id": "lora-report",
+          "text": "Separate a measured total-memory result from a parameter-count calculation."
+        }
+      ]
+    }
+  ]
+}
