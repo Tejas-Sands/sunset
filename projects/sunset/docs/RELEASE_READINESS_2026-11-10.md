@@ -1,5 +1,7 @@
 # SUNSET release readiness — 10 November 2026
 
+**11 November follow-up:** [GitHub Actions](https://github.com/Tejas-Sands/sunset/actions/runs/42976384037) now passed the complete CI browser/advisory and contract gates on `e963c6f`. A focused Vercel browser check confirmed passive download notifications and completed all five hosted rehearsal questions with normal clicks. The operator's repeated notification failure was not reproduced; a full deployed smoke rerun remains required. [Exact scope and diagnostic verification](../evidence/browser-smoke-followup-2026-11-11.json). The dated findings below retain their original audit scope.
+
 The supported local journeys pass the release checks after fixing three browser-data defects and preparing the hosted-download routing fix. The security dependency update is installed and verified. **Public sign-off remains conditional on deploying this batch and passing the real-browser test against that deployment.** These checks do not establish mainnet or unrestricted fundraising readiness.
 
 [Machine-readable evidence](../evidence/release-readiness-2026-11-10.json) separates local checks, fresh public reads, controlled component probes and blocked coverage. No signed action, push, deployment, public post or submission was performed during this audit.

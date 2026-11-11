@@ -59,8 +59,17 @@ function assertFits() {
     true, 'Page must fit the viewport without horizontal overflow');
 }
 function assertPassiveNotifications() {
-  assert.equal(evaluate('Array.from(document.querySelectorAll(".toast")).every(node => getComputedStyle(node).pointerEvents === "none")'),
-    true, 'Status notifications must leave the controls underneath clickable');
+  const state = evaluate(`({
+    url: location.href,
+    viewport: {width: innerWidth, height: innerHeight},
+    stylesheets: Array.from(document.styleSheets, sheet => sheet.href),
+    notifications: Array.from(document.querySelectorAll('.toast'), node => ({
+      tag: node.tagName, className: node.className, role: node.getAttribute('role'),
+      pointerEvents: getComputedStyle(node).pointerEvents, inlineStyle: node.getAttribute('style')
+    }))
+  })`);
+  assert.equal(state.notifications.every(node => node.pointerEvents === 'none'), true,
+    `Status notifications must leave the controls underneath clickable. Browser evidence: ${JSON.stringify(state)}`);
 }
 function assertNoPageErrors() {
   const {errors} = browser('errors');

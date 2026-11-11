@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "checked_on": "2026-11-11",
+  "checked_at": "2026-11-11 07:21:51 UTC",
+  "baseline_commit": "e963c6ff9e40379da69c9960491f959571650dfb",
+  "status": "full_ci_smoke_passed_focused_live_check_passed_operator_failure_not_reproduced",
+  "operator_run": {
+    "first_four_groups_passed": true,
+    "failed_at": "released rehearsal sample play and download",
+    "message": "Status notifications must leave the controls underneath clickable",
+    "cause": "Not established from the boolean-only output; the current live browser does not reproduce it."
+  },
+  "github_actions": {
+    "run_url": "https://github.com/Tejas-Sands/sunset/actions/runs/42976384037",
+    "head_sha": "e963c6ff9e40379da69c9960491f959571650dfb",
+    "application_job_url": "https://github.com/Tejas-Sands/sunset/actions/runs/42976384037/job/130376344094",
+    "application_conclusion": "success",
+    "contract_conclusion": "success",
+    "completed_at": "2026-11-11T07:01:57Z",
+    "browser_step": "Exercise the real browser and offline downloads",
+    "browser_step_conclusion": "success",
+    "scope": "Pinned agent-browser 0.37.1/installed Chromium against the CI static export, not the Vercel origin.",
+    "all_smoke_groups_passed": [
+      "Exact public standalone URL bytes",
+      "Damaged saved-data recovery",
+      "Desktop/mobile navigation, theme persistence and viewport fit",
+      "Handbook search, persisted checks and exact on-disk download",
+      "Released rehearsal resource, five hosted questions and exact on-disk download",
+      "Cold file loads with browser offline, wrong-answer recovery, game completion and handbook checks"
+    ],
+    "dependency_advisory_step": "success"
+  },
+  "live_browser": {
+    "origin": "https://sunset-lemon.vercel.app",
+    "session_scope": "Owned isolated Chrome profile; ordinary native clicks, no forced clicks or toast hiding.",
+    "observation": {
+      "audit": [
+        {
+          "hitClass": "button primary",
+          "openButtonAtCenter": true,
+          "pointerEvents": "none",
+          "styles": [
+            "https://sunset-lemon.vercel.app/_next/static/css/58bceb9e793e0706.css"
+          ],
+          "text": "Offline resource downloaded. Open the HTML file with networking disabled."
+        }
+      ],
+      "completion": "☼You made it to the clearing.You lit 5 of 5 lanterns. Every adventure is a chance to try again.Play again Keep this adventure",
+      "styles": [
+        "https://sunset-lemon.vercel.app/_next/static/css/58bceb9e793e0706.css"
+      ],
+      "url": "https://sunset-lemon.vercel.app/app/?view=Discover&campaign=pebble-market",
+      "viewport": {
+        "height": 577,
+        "width": 1280
+      }
+    },
+    "full_deployed_smoke": "Not executed by the assistant; the focused live download/open/game path passed.",
+    "limits": [
+      "1280x577 CSS viewport; outer-window resize did not establish a mobile viewport",
+      "Download button clicked normally; this focused check did not verify a saved file's bytes or run it offline",
+      "No runtime-error listener was installed for this focused check; no error-free-console claim",
+      "No wallet or signed protocol action"
+    ]
+  },
+  "runner_change": {
+    "behavior": "Same strict computed pointer-events invariant and normal clicks; failures now include public URL, viewport, stylesheet URLs and each notification's computed/inline styles.",
+    "verified_by": {
+      "actualLiveStates": [
+        {
+          "notifications": [
+            {
+              "className": "toast",
+              "inlineStyle": null,
+              "pointerEvents": "none",
+              "role": "status",
+              "tag": "DIV"
+            }
+          ],
+          "stylesheets": [
+            "https://sunset-lemon.vercel.app/_next/static/css/58bceb9e793e0706.css"
+          ],
+          "url": "https://sunset-lemon.vercel.app/app/?view=Discover&campaign=pebble-market",
+          "viewport": {
+            "height": 577,
+            "width": 1280
+          }
+        }
+      ],
+      "livePassed": true,
+      "blockingNegativeControl": {
+        "syntheticFixture": true,
+        "failedAsRequired": true,
+        "message": "Status notifications must leave the controls underneath clickable. Browser evidence: {\"notifications\":[{\"className\":\"toast\",\"inlineStyle\":null,\"pointerEvents\":\"auto\",\"role\":\"status\",\"tag\":\"DIV\"}],\"stylesheets\":[\"https://sunset-lemon.vercel.app/_next/static/css/58bceb9e793e0706.css\",null],\"url\":\"https://sunset-lemon.vercel.app/app/?view=Discover&campaign=pebble-market\",\"viewport\":{\"height\":577,\"width\":1280}}"
+      },
+      "fixtureRemoved": true
+    },
+    "syntax_check": "node --check projects/sunset/scripts/test-browser.mjs passed",
+    "production_css_changed": false
+  },
+  "next_gate": "Run npm --prefix projects/sunset run test:browser -- --url https://sunset-lemon.vercel.app against the deployed site. A full deployed pass is still required.",
+  "protocol_actions": false,
+  "shared_auth_changed": false,
+  "assistant_push": false
+}
