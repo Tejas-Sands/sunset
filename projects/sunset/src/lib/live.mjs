@@ -2,6 +2,7 @@ import {RPC,ACCOUNT_STORAGE,CAMPAIGN_STORAGE,isCampaignCatalog} from './chain.mj
 import {buildTransactionPlan,verifyPlannedOutcome} from './plans.mjs';
 import {fetchVerifiedMirror} from './mirror.mjs';
 import {hashBytes} from './pack.mjs';
+import {validateMirrorUri} from './stewardship.mjs';
 
 export const DEPLOYMENT=Object.freeze({network:'testnet',contract:'sunset.shiftultra.testnet',
   codeHash:'9Envfh1ieixUpUoe3egVPSHphJdRuDnyGfEhWcLe46fx',owner:'shiftultra.testnet'});
@@ -56,6 +57,8 @@ function validateSnapshot(s){
     requireValue(uint(campaign.target)>0n&&uint(campaign.total_contributed)<=uint(campaign.target)&&uint(campaign.escrow)<=uint(campaign.total_contributed),'Invalid campaign accounting');
     for(const k of ['funding_deadline_ns','release_window_ns','funded_at_ns'])uint(campaign[k],64);
     if(campaign.release_deadline_ns!==null)uint(campaign.release_deadline_ns,64);
+    validateMirrorUri(campaign.manifest_uri);
+    if(campaign.stewardship){requireValue(accountId(campaign.stewardship.owner_id),'Invalid steward account');validateMirrorUri(campaign.stewardship.mirror_uri);}
   }
   if(s.account!==null)validateAccount(s.account,s.account?.account_id);
   return s;
