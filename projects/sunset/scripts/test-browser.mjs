@@ -47,7 +47,8 @@ function browser(...command) {
 const evaluate = code => browser('eval', '-b', Buffer.from(code).toString('base64')).result;
 const waitFor = code => browser('wait', '--fn', code);
 function act(command, ...values) { browser('snapshot', '-i'); return browser(command, ...values); }
-const clickName = name => act('find', 'role', 'button', 'click', '--name', name, '--exact');
+// Actions are disabled while a chain refresh is in flight; a click during that window is silently dropped.
+const clickName = name => { waitFor('!document.querySelector(".p-refresh")?.disabled'); return act('find', 'role', 'button', 'click', '--name', name, '--exact'); };
 function open(path) { browser('open', new URL(path, base).href); }
 function appReady() { waitFor('!!document.querySelector(".p-app-nav")'); }
 function assertFits() {
@@ -246,12 +247,12 @@ try {
   waitFor('document.querySelector(".wallet-account")?.textContent.includes("sponsor.testnet") && !document.querySelector(".p-refresh").disabled');
   assert.equal(evaluate('document.querySelector(".p-campaign label input[inputmode=decimal]").value'), '0.23', 'Wallet connection must preserve entered sponsorship');
   assert.equal(evaluate('__sunsetQA.requests.length'), 0);
-  clickName('Sponsor public release ↗');
+  clickName('Sponsor public release');
   waitFor('document.body.innerText.includes("Sponsorship confirmed onchain.")');
   assert.equal(evaluate('__sunsetQA.requests[0].actions[0].params.deposit'), '230000000000000000000000');
   assert.equal(evaluate('__sunsetQA.requests.length'), 1);
   evaluate('__sunsetQA.reject = true');
-  clickName('Sponsor public release ↗');
+  clickName('Sponsor public release');
   waitFor('document.body.innerText.includes("Wallet request cancelled.")');
   assert.equal(evaluate('__sunsetQA.requests.length'), 1, 'Explicit rejection must not create another request');
   assert.equal(evaluate('!!document.querySelector("[role=status] a")'), false, 'Cancellation must not link to a previous successful receipt');
@@ -259,13 +260,13 @@ try {
   evaluate('__sunsetQA.reject = false');
   act('click', '.p-app-nav a[href="/app/?view=My%20activity"], .p-app-nav a[href="/app/?view=My activity"]');
   waitFor('!!document.querySelector(".p-account-stats")');
-  clickName('Withdraw credit ↗');
+  clickName('Withdraw credit');
   waitFor('document.body.innerText.includes("Native payout confirmed.")');
   assert.equal(evaluate('__sunsetQA.requests[1].actions[0].params.methodName'), 'withdraw');
   assert.equal(evaluate('__sunsetQA.accounts["sponsor.testnet"].paid'), '400000000000000000000000');
   act('click', '.p-app-nav a[href="/app/?view=Funding"]');
   evaluate('__sunsetQA.switchOnAccountRead = __sunsetQA.accountReads + 2');
-  clickName('Sponsor public release ↗');
+  clickName('Sponsor public release');
   waitFor('document.querySelector(".wallet-account")?.textContent.includes("other.testnet")');
   waitFor('!document.querySelector(".p-refresh").disabled');
   assert.equal(evaluate('__sunsetQA.requests.length'), 2, 'A mid-preflight account switch must not sign another request');

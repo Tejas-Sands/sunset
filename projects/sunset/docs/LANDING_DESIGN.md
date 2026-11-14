@@ -12,4 +12,15 @@ Homepage links use allowlisted `view` values and existing campaign IDs. Existing
 
 Validation: production export, TypeScript, existing application/compiled-Wasm checks, PostCSS parsing and static page/asset/deep-link checks. The checker was also shown to reject missing rendered headings, changed Creator studio links and missing font files in a temporary export copy. These checks do not substitute for a browser screenshot or interaction test. Browser/server startup remains blocked by OS socket restrictions; no visual browser QA, deployment or successful GitHub push is claimed.
 
+## Interface revision, 14 November 2026
+
+The landing, app and reader were redesigned without changing contract, wallet, ledger or content logic. The palette tokens and the approved SUNSET mark are unchanged.
+
+- Type: Bricolage Grotesque (locally hosted variable WOFF2, about 77 KB, OFL text retained) sets headings; Geist stays for interface and body text. Uppercase tracked labels and decorative arrow glyphs were removed; sentence-case labels and one icon set replace them.
+- Landing: the hero is an interactive release path. Its four steps (commit, fund, release, deadline missed) move a sun toward a goal line using the figures of the completed Lantern Trail showcase; on release the scene forms the SUNSET mark. The mechanism section states the two possible endings. No adoption figures or testimonials were added.
+- App: compact page titles, a sticky tab bar that scrolls on small screens, and a chain status with block height beside the refresh action. Campaign rows show raised amount against goal, a progress bar and the deadline or outcome; an opened campaign shows its review, funding and release stages, including which deadline was missed. Empty states name the next useful action. Sponsor, withdraw and transaction-tracking forms keep their validation and add inline guidance. The studio shows its three steps and why the next action is unavailable.
+- Reader: shorter line length, chapter previous/next controls and a checklist progress bar in the hosted reader. The offline export and its bytes are unchanged.
+
+Validation on 14 November: 109 unit tests, TypeScript, production export, `npm run check`, `npm run test:pages` and `npm run test:browser` passed locally, including the controlled wallet stage. That stage failed on the unmodified tree because a click could land while actions were disabled during a chain refresh; the smoke test now waits for the refresh before clicking. Screenshots were reviewed at 1440 and 390 pixels in both themes. No real wallet transaction, deployment or independent accessibility audit is claimed.
+
 [Hero asset and exact generation prompt](../public/images/README.md) · [Geist license](../public/fonts/OFL-Geist.txt) · [Current product](../README.md)

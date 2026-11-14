@@ -1,26 +1,51 @@
 import {resources} from '../lib/library.mjs';
 import SunsetMark from '../components/SunsetMark';
-import {SiteHeader,SiteFooter,Arrow,ResourceCard,ProtocolScene} from '../components/Protocol';
+import ReleasePath from '../components/ReleasePath';
+import {SiteHeader,SiteFooter,Icon,ResourceCard} from '../components/Protocol';
 
+const steps=[
+  ['Commit the work','The creator prepares the finished resource, keeps a private release backup and names a reviewer. The agreement fixes the beneficiary, goal, deadlines and CC0 license.'],
+  ['Fund its release','Once the reviewer approves, sponsors connect their own wallets and add to the pool. Each wallet request is explicit and shows the exact deposit.'],
+  ['Open it for good','The creator publishes the matching key on time. Anyone can then read the resource without an account and download a copy that works offline.']
+];
 const questions=[
-  ['Do I need a wallet?', 'Reading, using the interactive labs and downloading a resource are open to everyone. Connect a NEAR testnet wallet when you want to sponsor, publish, withdraw credit or manage a stewardship token.'],
-  ['What exactly does sponsorship fund?', 'A creator commits an already prepared resource to a fixed release agreement. Sponsors pool support up to its goal. Publishing the matching key on time opens the resource and credits the fixed creator, who can then withdraw.'],
-  ['What happens when release conditions are missed?', 'When a funding or release deadline is missed, contributors can claim their eligible principal as credit, then withdraw it to their own wallet. Network gas and storage allowances are separate from sponsorship.'],
-  ['Are the AI guides funded campaigns?', 'The three technical guides are original free resources available now. They are separate from the live campaign catalog. The app reads the existing contract for actual campaign states and never presents these guides as funded releases.'],
-  ['Can anyone publish a campaign?', 'Publishing on this testnet contract is curated by its configured creator account. A named reviewer approves the committed content. Public sponsorship is available when an approved campaign is active.'],
-  ['What survives if this website disappears?', 'A downloaded guide contains its content and reading runtime in one HTML file. You can keep and share that copy. Onchain releases also retain content commitments and a transferable right to maintain a matching recovery mirror.']
+  ['Do I need a wallet?','No, not to read. The guides, their interactive labs and the offline downloads are open to everyone. Connect a NEAR testnet wallet only to sponsor, publish, withdraw credit or manage a stewardship token.'],
+  ['What exactly does sponsorship fund?','A creator commits an already finished resource to a fixed release agreement. Sponsors pool support up to its goal. Publishing the matching key on time opens the resource and credits the creator, who can then withdraw.'],
+  ['What happens when a deadline is missed?','The campaign becomes refundable. Contributors claim their contribution as credit, then withdraw it to their own wallet. Network gas and storage allowances are separate from sponsorship.'],
+  ['Are the three guides funded campaigns?','No. They are original free resources, available now and separate from the campaign catalog. The app reads the contract for actual campaign states and never presents these guides as funded releases.'],
+  ['Can anyone publish a campaign?','Not on this deployment. Publishing on the testnet contract is curated by its configured creator account, and a named reviewer approves the committed content. Sponsorship is open to anyone while a campaign is active.'],
+  ['What survives if this website disappears?','Your copy. A downloaded guide holds its content and reader in one HTML file you can keep and share. Released campaigns also keep their content commitments onchain, plus a transferable right to maintain a matching recovery mirror.']
 ];
 export default function Landing(){return <div className="protocol-site p-landing"><a className="p-skip" href="#content">Skip to content</a><SiteHeader/>
-  <main id="content"><section className="p-hero p-container" aria-labelledby="hero-title"><div className="p-hero-copy"><span className="p-kicker"><span className="p-live-dot"/>THE OPEN KNOWLEDGE COMMONS</span><h1 id="hero-title">Good work.<br/><span>Open to everyone.</span></h1><p>Creators set a goal. Communities fund the release. Everyone keeps the knowledge.</p><div className="p-actions"><a className="p-button p-button-accent" href="#commons">Explore the commons <Arrow/></a><a className="p-button" href="/app/?view=Funding">Open live app <Arrow/></a></div><div className="p-hero-details"><span>BUILT ON NEAR</span><span>CC0 RESOURCES</span><span>YOURS TO KEEP</span></div></div><ProtocolScene/></section>
-    <div className="p-principles p-container"><span className="p-kicker">ONE SHARED FUTURE.</span><span><b>01</b> Fund the work.</span><span><b>02</b> Open the knowledge.</span><span><b>03</b> Keep it independently.</span></div>
-    <section id="commons" className="p-commons p-container" aria-labelledby="commons-title"><div className="p-section-heading"><div><span className="p-kicker">OPEN NOW. WORTH YOUR TIME.</span><h2 id="commons-title">Serious ideas.<br/><span>Wide-open possibilities.</span></h2></div><div><p>Attention. Gradients. Efficient adaptation.<br/>Original guides with working calculations and copies you can keep.</p><a className="p-text-button" href="/app/">Explore the app <Arrow/></a></div></div><div className="p-resource-grid">{resources.map(resource=><ResourceCard key={resource.id} resource={resource}/>)}</div></section>
-    <section id="how-it-works" className="p-mechanism" aria-labelledby="mechanism-title"><div className="p-container"><div className="p-section-heading"><div><span className="p-kicker">THE RELEASE MECHANISM</span><h2 id="mechanism-title">A finite goal.<br/><span>An open-ended future.</span></h2></div><p>Community sponsorship becomes public access through a clear onchain agreement.</p></div><div className="p-mechanism-grid">{[
-      ['01','Commit the work.','The creator prepares the exact resource, retains a release backup and chooses a reviewer. The agreement fixes the beneficiary, goal, deadlines and CC0 release.','COMMITTED CONTENT'],
-      ['02','Fund its release.','Sponsors connect their own wallets and support an active campaign. A timely key release credits the creator. Missed conditions make eligible contributions refundable.','WALLET → CONTRACT'],
-      ['03','Let it outlast the site.','Read the public resource without an account. Download a self-contained copy. A transferable steward can maintain a matching recovery mirror.','PUBLIC, BY DESIGN']
-    ].map(([n,title,copy,label])=><article key={n}><div className="p-mechanism-top"><span>{n}</span><span className="p-mechanism-line"/></div><h3>{title}</h3><p>{copy}</p><span className="p-kicker">{label}</span></article>)}</div><div className="p-mechanism-bottom"><span>NEAR TESTNET · FIXED TERMS · EXPLICIT WALLET APPROVAL</span><a className="p-text-button" href="/app/?view=Funding">See actual campaigns <Arrow/></a></div></div></section>
-    <section id="stewardship" className="p-stewardship p-container" aria-labelledby="stewardship-title"><div className="p-steward-visual" aria-hidden="true"><div className="p-token-orbit"/><div className="p-token-orbit p-token-orbit-two"/><div className="p-steward-card"><span className="p-kicker">A ROLE TO CARRY FORWARD</span><SunsetMark/><strong>STEWARDSHIP</strong><span>MAINTAIN THE MIRROR.<br/>KEEP THE COMMONS OPEN.</span></div><span className="p-steward-label">NEAR / TRANSFERABLE MAINTENANCE RIGHT</span></div><div><span className="p-kicker">OWN THE RESPONSIBILITY.</span><h2 id="stewardship-title">The home can change.<br/><span>The knowledge stays open.</span></h2><p>The stewardship NFT gives its holder a practical job: maintain the preferred recovery mirror. Transfer it, and that responsibility moves to the next holder.</p><p>Readers keep their copies. The creator’s beneficiary stays fixed.</p><a className="p-button" href="/app/?view=Stewardship">Explore stewardship <Arrow/></a></div></section>
-    <section id="questions" className="p-faq p-container" aria-labelledby="faq-title"><div><span className="p-kicker">A LITTLE CLARITY</span><h2 id="faq-title">The useful<br/>questions.</h2><p>Understand what happens before you connect a wallet.</p></div><div>{questions.map(([question,answer])=><details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
-    <section className="p-final p-container" aria-labelledby="final-title"><div><span className="p-kicker">SOME THINGS GET BETTER WHEN SHARED.</span><SunsetMark/></div><h2 id="final-title">Fund a beginning.<br/><span>Leave something open.</span></h2><div><p>A useful idea deserves a public future.</p><a className="p-button p-button-accent" href="/app/">Enter the commons <Arrow/></a></div></section>
+  <main id="content">
+    <section className="p-hero p-container" aria-labelledby="hero-title">
+      <div className="p-hero-copy"><h1 id="hero-title">Fund a work once.<br/>It stays open to everyone.</h1>
+        <p>Creators commit a finished resource and a goal. Sponsors pool testNEAR on NEAR. When the release key is published on time, the work enters the public domain. If a deadline is missed, sponsors get their contributions back.</p>
+        <div className="p-actions"><a className="p-button p-button-accent p-button-large" href="#commons">Read the library</a><a className="p-button p-button-large" href="/app/?view=Funding">See live campaigns<Icon name="forward"/></a></div>
+        <p className="p-hero-aside">No wallet or account is needed to read.</p></div>
+      <ReleasePath/>
+    </section>
+    <section id="commons" className="p-commons p-container" aria-labelledby="commons-title">
+      <div className="p-section-heading"><h2 id="commons-title">The open library</h2><p>Three original guides with working calculations: attention, gradients and low-rank adaptation. Read them here or keep a copy that works offline.</p></div>
+      <div className="p-resource-grid">{resources.map(resource=><ResourceCard key={resource.id} resource={resource}/>)}</div>
+    </section>
+    <section id="how-it-works" className="p-mechanism" aria-labelledby="mechanism-title"><div className="p-container">
+      <div className="p-section-heading"><h2 id="mechanism-title">How a release works</h2><p>One fixed agreement, enforced by a contract on NEAR testnet. There are only two ways a campaign can end.</p></div>
+      <ol className="p-steps">{steps.map(([title,copy],i)=><li key={title}><span className="p-step-number" aria-hidden="true">{i+1}</span><h3>{title}</h3><p>{copy}</p></li>)}</ol>
+      <div className="p-outcomes">
+        <article className="p-outcome p-outcome-open"><span className="p-outcome-icon"><Icon name="check" size={20}/></span><div><h3>Released on time</h3><p>The resource is public under CC0. The creator is credited the pooled amount and a stewardship token is created.</p></div></article>
+        <article className="p-outcome p-outcome-refund"><span className="p-outcome-icon"><Icon name="clock" size={20}/></span><div><h3>A deadline is missed</h3><p>The resource stays encrypted. Every sponsor can claim their contribution and withdraw it to their wallet.</p></div></article>
+      </div>
+      <a className="p-text-button" href="/app/?view=Funding">See both outcomes on testnet<Icon name="forward"/></a>
+    </div></section>
+    <section id="stewardship" className="p-stewardship p-container" aria-labelledby="stewardship-title">
+      <div><h2 id="stewardship-title">The host can change. The work stays open.</h2>
+        <p>Each release creates one stewardship NFT. Its holder has a practical job: keep the preferred recovery mirror current. Transfer the token and that job moves to the next holder.</p>
+        <a className="p-button" href="/app/?view=Stewardship">View stewardship tokens<Icon name="forward"/></a></div>
+      <div className="p-steward-card"><div className="p-steward-card-head"><SunsetMark/><div><strong>Stewardship token</strong><span>One per released resource, transferable</span></div></div>
+        <dl><div><dt>The holder controls</dt><dd>The preferred recovery mirror</dd></div><div><dt>The holder never controls</dt><dd>Who can read, or the CC0 license</dd></div><div><dt>Stays fixed on transfer</dt><dd>The creator’s payout and sponsor refunds</dd></div></dl></div>
+    </section>
+    <section id="questions" className="p-faq p-container" aria-labelledby="faq-title"><div><h2 id="faq-title">Questions</h2><p>What to know before you connect a wallet.</p></div><div>{questions.map(([question,answer])=><details key={question}><summary>{question}<Icon name="chevron"/></summary><p>{answer}</p></details>)}</div></section>
+    <section className="p-final p-container" aria-labelledby="final-title"><div><h2 id="final-title">Start with something you can read today.</h2><p>The library is free. Campaigns are live on NEAR testnet.</p></div><div className="p-actions"><a className="p-button p-button-accent p-button-large" href="#commons">Read the library</a><a className="p-button p-button-large" href="/app/">Open the app</a></div></section>
   </main><SiteFooter/>
 </div>;}

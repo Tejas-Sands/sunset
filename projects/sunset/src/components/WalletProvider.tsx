@@ -5,6 +5,7 @@ import {DEPLOYMENT,loadLiveSnapshot} from '../lib/live.mjs';
 import {sendWalletAction,checkWalletIntent,loadPendingIntent,forgetUnsubmittedIntent,pendingStorageKey,transactionHashFromUrl} from '../lib/wallet.mjs';
 import {download} from '../lib/download.mjs';
 import {createWalletMetadataStorage} from '../lib/wallet-storage.mjs';
+import {Icon} from './Protocol';
 
 let connectorPromise:Promise<NearConnector>|null=null;
 async function getConnector(){
@@ -115,17 +116,22 @@ export default function WalletProvider({children}:{children:React.ReactNode}){
 }
 
 export function WalletControl(){
-  const wallet=useWallet();
-  if(!wallet.accountId)return <button className="p-button p-button-accent wallet-connect" disabled={wallet.connecting||wallet.busy} onClick={()=>void wallet.connect()}>{wallet.connecting?'Opening wallet…':'Connect wallet'}<span aria-hidden="true">↗</span></button>;
-  return <details className="wallet-menu"><summary className="p-button wallet-account" aria-label={`Wallet ${wallet.accountId}`}><span className="p-live-dot"/><span>{wallet.accountId}</span><span aria-hidden="true">⌄</span></summary>
-    <div><span className="p-kicker">NEAR TESTNET</span><strong>{wallet.accountId}</strong><button disabled={wallet.busy||wallet.connecting} onClick={event=>{event.currentTarget.closest('details')?.removeAttribute('open');void wallet.connect();}}>Change wallet</button><button disabled={wallet.busy||wallet.connecting} onClick={()=>void wallet.disconnect()}>Disconnect</button></div></details>;
+  const wallet=useWallet(),menu=useRef<HTMLDetailsElement>(null);
+  useEffect(()=>{
+    const close=(event:Event)=>{const node=menu.current;if(node?.open&&(event.type==='keydown'?(event as KeyboardEvent).key==='Escape':!node.contains(event.target as Node)))node.open=false;};
+    document.addEventListener('pointerdown',close);document.addEventListener('keydown',close);
+    return()=>{document.removeEventListener('pointerdown',close);document.removeEventListener('keydown',close);};
+  },[]);
+  if(!wallet.accountId)return <button className="p-button p-button-accent wallet-connect" disabled={wallet.connecting||wallet.busy} onClick={()=>void wallet.connect()}>{wallet.connecting?'Opening wallet…':'Connect wallet'}</button>;
+  return <details className="wallet-menu" ref={menu}><summary className="p-button wallet-account" aria-label={`Wallet ${wallet.accountId}`}><span className="p-live-dot"/><span>{wallet.accountId}</span><Icon name="chevron" size={16}/></summary>
+    <div><span className="p-menu-label">Connected on NEAR testnet</span><strong>{wallet.accountId}</strong><button disabled={wallet.busy||wallet.connecting} onClick={event=>{event.currentTarget.closest('details')?.removeAttribute('open');void wallet.connect();}}>Change wallet</button><button disabled={wallet.busy||wallet.connecting} onClick={()=>void wallet.disconnect()}>Disconnect</button></div></details>;
 }
 export function WalletStatus(){
   const wallet=useWallet(),[hash,setHash]=useState('');
   useEffect(()=>setHash(wallet.pending?.hash||''),[wallet.pending?.hash,wallet.accountId]);
-  return <>{wallet.error&&<div className="p-notice p-notice-error" role="alert">{wallet.error}</div>}{wallet.message&&<div className="p-notice" role="status">{wallet.message}{wallet.receipt&&!wallet.pending&&<a href={`https://explorer.testnet.near.org/transactions/${wallet.receipt.hash}`} target="_blank" rel="noreferrer"> View receipt ↗</a>}</div>}
-    {(wallet.pending||wallet.pendingDamaged)&&<section className="p-panel p-transaction" aria-label="Pending wallet request"><div><span className="p-kicker">WALLET REQUEST</span><h2>{wallet.pendingDamaged?'Wallet request tracking needs attention':'Track your transaction'}</h2><p>{wallet.pendingDamaged?'Allow browser storage or retain and inspect any existing reference before sending a new request.':'Keep this request until its result is clear. Transaction checks are read-only.'}</p></div>
-      {!wallet.pendingDamaged&&<><label>Transaction hash<input value={hash} onChange={e=>setHash(e.target.value)} placeholder="Copy from your wallet activity" spellCheck={false} autoComplete="off" disabled={wallet.busy||!!wallet.pending?.hash}/></label><div className="p-actions"><button className="p-button p-button-accent" disabled={wallet.busy||!hash} onClick={()=>void wallet.checkPending(hash)}>{wallet.busy?'Checking…':'Check status'}</button>{wallet.pending?.hash&&<a className="p-button" href={`https://explorer.testnet.near.org/transactions/${wallet.pending.hash}`} target="_blank" rel="noreferrer">View receipt ↗</a>}</div></>}
-      <div className="p-actions"><button className="p-text-button" onClick={wallet.savePending}>Save transaction reference</button>{!wallet.pending?.hash&&<button className="p-text-button" disabled={wallet.busy} onClick={wallet.forgetPending}>I checked: no transaction was sent</button>}</div>
+  return <>{wallet.error&&<div className="p-notice p-notice-error" role="alert"><Icon name="alert"/><span>{wallet.error}</span></div>}{wallet.message&&<div className={'p-notice'+(wallet.receipt&&!wallet.pending?' p-notice-success':'')} role="status">{wallet.busy?<span className="p-spinner"/>:<Icon name={wallet.receipt&&!wallet.pending?'check':'info'}/>}<span>{wallet.message}{wallet.receipt&&!wallet.pending&&<a href={`https://explorer.testnet.near.org/transactions/${wallet.receipt.hash}`} target="_blank" rel="noreferrer"> View receipt</a>}</span></div>}
+    {(wallet.pending||wallet.pendingDamaged)&&<section className="p-panel p-transaction" aria-label="Pending wallet request"><div><h2>{wallet.pendingDamaged?'Wallet request tracking needs attention':'Track your transaction'}</h2><p>{wallet.pendingDamaged?'Allow browser storage, or keep and inspect any existing reference, before sending a new request.':'Keep this request until its result is clear. Checking a transaction is read-only.'}</p></div>
+      {!wallet.pendingDamaged&&<div className="p-inline-form"><label>Transaction hash<input value={hash} onChange={e=>setHash(e.target.value)} placeholder="Copy it from your wallet activity" spellCheck={false} autoComplete="off" disabled={wallet.busy||!!wallet.pending?.hash}/></label><button className="p-button p-button-accent" disabled={wallet.busy||!hash} onClick={()=>void wallet.checkPending(hash)}>{wallet.busy?'Checking…':'Check status'}</button>{wallet.pending?.hash&&<a className="p-button" href={`https://explorer.testnet.near.org/transactions/${wallet.pending.hash}`} target="_blank" rel="noreferrer">View receipt<Icon name="external" size={16}/></a>}</div>}
+      <div className="p-actions"><button className="p-text-button" onClick={wallet.savePending}><Icon name="download"/>Save transaction reference</button>{!wallet.pending?.hash&&<button className="p-text-button" disabled={wallet.busy} onClick={wallet.forgetPending}>I checked: no transaction was sent</button>}</div>
     </section>}</>;
 }
