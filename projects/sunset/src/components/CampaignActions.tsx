@@ -10,6 +10,7 @@ import {formatNear,toYocto} from '../lib/ledger.mjs';
 import {ACCOUNT_STORAGE} from '../lib/chain.mjs';
 import {download} from '../lib/download.mjs';
 import {Icon} from './Protocol';
+import {Address,CopyChip,Fingerprint} from './Onchain';
 
 export function PackContent({pack}:{pack:any}){
   if(pack.kind==='guide')return <GuideReader pack={pack as GuidePack}/>;
@@ -64,6 +65,6 @@ export default function CampaignActions({campaign:c,snapshot,onRefresh}:{campaig
       </details>}
     </>}
     {error&&<p className="p-notice p-notice-error" role="alert"><Icon name="alert"/><span>{error}</span></p>}
-    <details className="p-agreement"><summary>Release agreement and content commitment</summary><dl><div><dt>Creator</dt><dd>{c.creator}</dd></div><div><dt>Reviewer</dt><dd>{c.reviewer}</dd></div><div><dt>Funding goal</dt><dd>{formatNear(c.target)} testNEAR</dd></div><div><dt>Funding deadline</dt><dd>{date(c.funding_deadline_ns)}</dd></div><div><dt>Release window</dt><dd>{duration(c.release_window_ns)} after funding</dd></div><div><dt>License</dt><dd>CC0-1.0 on release</dd></div><div><dt>Content commitment</dt><dd className="p-hash">{c.plaintext_hash}</dd></div></dl></details>
+    <details className="p-agreement"><summary>Release agreement and content commitment</summary><dl><div><dt>Creator</dt><dd><Address id={c.creator}/></dd></div><div><dt>Reviewer</dt><dd><Address id={c.reviewer}/></dd></div><div><dt>Funding goal</dt><dd>{formatNear(c.target)} testNEAR</dd></div><div><dt>Funding deadline</dt><dd>{date(c.funding_deadline_ns)}</dd></div><div><dt>Release window</dt><dd>{duration(c.release_window_ns)} after funding</dd></div><div><dt>License</dt><dd>CC0-1.0 on release</dd></div><div><dt>Content commitment (SHA-256)</dt><dd className="p-commitment"><Fingerprint hash={c.plaintext_hash} size={32}/><CopyChip value={c.plaintext_hash} label="content commitment" head={16} tail={16}/></dd></div></dl></details>
   </div>;
 }

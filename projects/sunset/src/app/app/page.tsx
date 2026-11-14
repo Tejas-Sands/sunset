@@ -8,6 +8,8 @@ import {SiteHeader,SiteFooter,ResourceCard,Icon} from '../../components/Protocol
 import {resources} from '../../lib/library.mjs';
 import {formatNear,toYocto} from '../../lib/ledger.mjs';
 import {DEPLOYMENT} from '../../lib/live.mjs';
+import {Address,CopyChip,Fingerprint} from '../../components/Onchain';
+import {accountUrl} from '../../lib/proof.mjs';
 
 const views=['Explore','Funding','My activity','Studio','Stewardship'];
 const legacy:Record<string,string>={Discover:'Explore','Creator studio':'Studio',Activity:'My activity','My library':'Explore','Access budgets':'My activity'};
@@ -43,7 +45,7 @@ function Campaign({campaign:c,open=false}:{campaign:any,open?:boolean}){
   const percent=BigInt(c.target)>0n?Math.min(100,Number(BigInt(c.total_contributed)*100n/BigInt(c.target))):0;
   const note=c.state==='Active'?`Closes ${date(c.funding_deadline_ns)}`:c.state==='Funded'?`Release due ${date(c.release_deadline_ns)}`:c.state==='Released'?'Public under CC0':c.state==='Refundable'?'Contributions refundable':`Reviewer: ${c.reviewer}`;
   return <details className={'p-campaign p-campaign-'+c.state.toLowerCase()} id={'campaign-'+c.id} open={open}><summary>
-      <span className="p-campaign-main"><span className={'p-state p-state-'+c.state.toLowerCase()}>{stateLabels[c.state]}</span><strong>{c.title}</strong><small>by {c.creator}</small></span>
+      <Fingerprint hash={c.plaintext_hash}/><span className="p-campaign-main"><span className={'p-state p-state-'+c.state.toLowerCase()}>{stateLabels[c.state]}</span><strong>{c.title}</strong><small>by {c.creator}</small></span>
       <span className="p-campaign-funding"><span><b>{formatNear(c.total_contributed)}</b> of {formatNear(c.target)} testNEAR</span><span className="p-meter" aria-hidden="true"><i style={{width:percent+'%'}}/></span><small>{note}</small></span>
       <span className="p-campaign-expand" aria-hidden="true"><Icon name="chevron" size={20}/></span></summary>
     <div className="p-campaign-body"><Stages campaign={c}/><CampaignActions campaign={c} snapshot={wallet.snapshot} onRefresh={()=>void wallet.refresh()}/></div>
@@ -81,13 +83,14 @@ function Stewardship(){
   const head=<PageHead title="Stewardship">Each released resource has one transferable token. Its holder maintains the recovery mirror; readers keep their copies either way.</PageHead>;
   if(!s)return <section>{head}<LiveState/></section>;
   const tokens=s.campaigns.filter((c:any)=>c.state==='Released');
-  return <section>{head}{tokens.length?tokens.map((c:any)=>{const mine=wallet.accountId===c.stewardship.owner_id;return <article className="p-panel p-token" key={c.id}><div className="p-token-heading"><SunsetMark/><div><h2>{c.title}</h2><p>Stewardship token{mine&&<span className="p-state p-state-released">You hold this</span>}</p></div></div><dl><div><dt>Current steward</dt><dd>{c.stewardship.owner_id}</dd></div><div><dt>Token ID</dt><dd>{c.id}</dd></div><div><dt>Preferred mirror</dt><dd>{host(c.stewardship.mirror_uri||c.manifest_uri)}</dd></div></dl>{!mine&&<p className="p-small">Only the current steward’s wallet can transfer this token or change its mirror.</p>}<CampaignActions campaign={c} snapshot={s} onRefresh={()=>void wallet.refresh()}/></article>;}):<div className="p-empty"><span className="p-empty-icon"><SunsetMark/></span><h2>No stewardship tokens yet.</h2><p>A token is created when a campaign releases its resource.</p><ViewLink view="Funding" className="p-button">Browse campaigns</ViewLink></div>}</section>;
+  return <section>{head}{tokens.length?tokens.map((c:any)=>{const mine=wallet.accountId===c.stewardship.owner_id;return <article className="p-panel p-token" key={c.id}><div className="p-token-heading"><SunsetMark/><div><h2>{c.title}</h2><p>Stewardship token{mine&&<span className="p-state p-state-released">You hold this</span>}</p></div></div><dl><div><dt>Current steward</dt><dd><Address id={c.stewardship.owner_id}/></dd></div><div><dt>Token ID</dt><dd>{c.id}</dd></div><div><dt>Preferred mirror</dt><dd>{host(c.stewardship.mirror_uri||c.manifest_uri)}</dd></div></dl>{!mine&&<p className="p-small">Only the current steward’s wallet can transfer this token or change its mirror.</p>}<CampaignActions campaign={c} snapshot={s} onRefresh={()=>void wallet.refresh()}/></article>;}):<div className="p-empty"><span className="p-empty-icon"><SunsetMark/></span><h2>No stewardship tokens yet.</h2><p>A token is created when a campaign releases its resource.</p><ViewLink view="Funding" className="p-button">Browse campaigns</ViewLink></div>}</section>;
 }
 function Explore(){
   const wallet=useWallet(),s=wallet.snapshot;
   return <section><PageHead title="Library">Original technical guides with worked examples and calculations you can change. No wallet needed to read.</PageHead>
     <div className="p-resource-grid">{resources.map(resource=><ResourceCard key={resource.id} resource={resource} heading="h2"/>)}</div>
-    <div className="p-chain-band"><div><h2>Funded releases on NEAR testnet</h2><p>Campaigns are read from the live contract. Sponsoring, refunds and withdrawals are signed in your own wallet.</p><ViewLink view="Funding" className="p-button">Browse campaigns<Icon name="forward"/></ViewLink></div>{s?<dl><div><dt>Campaigns</dt><dd>{s.campaigns.length}</dd></div><div><dt>Released</dt><dd>{s.campaigns.filter((c:any)=>c.state==='Released').length}</dd></div><div><dt>Open now</dt><dd>{s.campaigns.filter((c:any)=>c.state==='Active').length}</dd></div></dl>:<LiveState/>}</div>
+    <div className="p-chain-band"><div><h2>Funded releases on NEAR testnet</h2><p>Campaigns are read from the live contract. Sponsoring, refunds and withdrawals are signed in your own wallet.</p><ViewLink view="Funding" className="p-button">Browse campaigns<Icon name="forward"/></ViewLink>
+      <div className="p-band-proof"><span>Contract</span><CopyChip value={DEPLOYMENT.contract} label="contract address" href={accountUrl(DEPLOYMENT.contract)} head={24} tail={0}/>{s&&<span className="p-verified"><Icon name="check" size={14}/>Code hash verified</span>}</div></div>{s?<dl><div><dt>Campaigns</dt><dd>{s.campaigns.length}</dd></div><div><dt>Released</dt><dd>{s.campaigns.filter((c:any)=>c.state==='Released').length}</dd></div><div><dt>Open now</dt><dd>{s.campaigns.filter((c:any)=>c.state==='Active').length}</dd></div></dl>:<LiveState/>}</div>
   </section>;
 }
 function LiveApp(){

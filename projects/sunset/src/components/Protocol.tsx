@@ -16,6 +16,8 @@ const paths:Record<string,string>={
   clock:'M12 7v5l3 2m6-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
   lock:'M7 11V8a5 5 0 0 1 10 0v3M6 11h12v9H6z',
   wallet:'M4 7h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10M16 13.5h.5',
+  copy:'M9 9h10v11H9zM5 15V4h10',
+  block:'M12 3 4 7.5v9L12 21l8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9',
   file:'M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zm0 0v5h5M9 13h6m-6 4h4'
 };
 export function Icon({name,size=18}:{name:string,size?:number}){
@@ -23,7 +25,7 @@ export function Icon({name,size=18}:{name:string,size?:number}){
 }
 export function Arrow({down=false}:{down?:boolean}){return <Icon name={down?'download':'forward'}/>;}
 
-const siteLinks=[['#commons','Library'],['#how-it-works','How it works'],['#stewardship','Stewardship'],['#questions','Questions']];
+const siteLinks=[['#commons','Library'],['#how-it-works','How it works'],['#onchain','Onchain'],['#stewardship','Stewardship'],['#questions','Questions']];
 export function SiteHeader({wallet,compact=false,children}:{wallet?:React.ReactNode,compact?:boolean,children?:React.ReactNode}){
   return <header className={'p-header'+(compact?' p-header-compact':'')}><div className="p-header-row p-container">
     <a className="p-brand" href="/" aria-label="SUNSET home"><SunsetMark/><span>SUNSET</span></a>
