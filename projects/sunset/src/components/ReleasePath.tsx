@@ -37,8 +37,10 @@ export default function ReleasePath(){
     </svg>
     <div className="p-path-tabs" role="tablist" aria-label="Steps of a release" onKeyDown={keys}>{stages.map((s,i)=><button key={s.id} ref={node=>{tabs.current[i]=node;}} type="button" role="tab" id={'path-tab-'+s.id} aria-selected={i===index} aria-controls="path-panel" tabIndex={i===index?0:-1} onClick={()=>setIndex(i)}>{s.tab}</button>)}</div>
     <div className="p-path-panel" role="tabpanel" id="path-panel" aria-labelledby={'path-tab-'+stage.id}>
-      <p className="p-path-title">{stage.title}</p><p>{stage.body}</p>
-      <dl>{stage.facts.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+      <div key={stage.id} className="p-path-swap">
+        <p className="p-path-title">{stage.title}</p><p>{stage.body}</p>
+        <dl>{stage.facts.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+      </div>
     </div>
     <p className="p-path-note">Figures from The Lantern Trail, funded and released on NEAR testnet.</p>
   </div>;

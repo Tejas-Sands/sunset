@@ -41,7 +41,7 @@ export default function GuideReader({pack,titleId='guide-title'}:{pack:GuidePack
         </button>)}</nav>
       </aside>
       <div>
-        <article className="guide-chapter" id="guide-chapter" aria-labelledby="guide-section-title">
+        <article key={section?.id||"none"} className="guide-chapter" id="guide-chapter" aria-labelledby="guide-section-title">
           <h2 className="guide-section-title" id="guide-section-title" ref={heading} tabIndex={-1}>{section?.title||'No matching chapters'}</h2>
           {section&&<><p className="guide-body">{section.body}</p>{section.checklist.length>0&&<fieldset><legend>Procedure checklist</legend>{section.checklist.map(item=><label className="guide-check" key={item.id}>
             <input id={'check-'+item.id} data-check-id={item.id} type="checkbox" checked={progress.checked.includes(item.id)} onChange={e=>update({...progress,checked:e.target.checked?[...progress.checked.filter(id=>id!==item.id),item.id]:progress.checked.filter(id=>id!==item.id)})}/><span>{item.text}</span>
