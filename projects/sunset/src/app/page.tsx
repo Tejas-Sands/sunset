@@ -2,8 +2,9 @@ import {resources} from '../lib/library.mjs';
 import SunsetMark from '../components/SunsetMark';
 import ReleasePath from '../components/ReleasePath';
 import MotionReveal from '../components/MotionReveal';
-import {CopyChip} from '../components/Onchain';
-import {PROOF,accountUrl,shorten,transactionUrl} from '../lib/proof.mjs';
+import {BlockChain,CopyChip,NodeField} from '../components/Onchain';
+import ChainPulse from '../components/ChainPulse';
+import {PROOF,accountUrl} from '../lib/proof.mjs';
 import {SiteHeader,SiteFooter,Icon,ResourceCard} from '../components/Protocol';
 
 const steps=[
@@ -22,12 +23,13 @@ const questions=[
 export default function Landing(){return <div className="protocol-site p-landing"><a className="p-skip" href="#content">Skip to content</a><MotionReveal/><SiteHeader/>
   <main id="content">
     <section className="p-hero p-container" aria-labelledby="hero-title">
-      <div className="p-hero-copy"><h1 id="hero-title">Fund a work once.<br/>It stays open to everyone.</h1>
+      <div className="p-hero-copy"><a className="p-badge" href="#onchain"><Icon name="block" size={16}/>Built on NEAR<span>live on testnet</span></a><h1 id="hero-title">Fund a work once.<br/>It stays open to everyone.</h1>
         <p>Creators commit a finished resource and a goal. Sponsors pool testNEAR on NEAR. When the release key is published on time, the work enters the public domain. If a deadline is missed, sponsors get their contributions back.</p>
         <div className="p-actions"><a className="p-button p-button-accent p-button-large" href="#commons">Read the library</a><a className="p-button p-button-large" href="/app/?view=Funding">See live campaigns<Icon name="forward"/></a></div>
         <p className="p-hero-aside">No wallet or account is needed to read.</p></div>
       <ReleasePath/>
     </section>
+    <ChainPulse/>
     <section id="commons" className="p-commons p-container" aria-labelledby="commons-title">
       <div className="p-section-heading" data-reveal=""><h2 id="commons-title">The open library</h2><p>Three original guides with working calculations: attention, gradients and low-rank adaptation. Read them here or keep a copy that works offline.</p></div>
       <div className="p-resource-grid" data-reveal="stagger">{resources.map(resource=><ResourceCard key={resource.id} resource={resource}/>)}</div>
@@ -41,14 +43,14 @@ export default function Landing(){return <div className="protocol-site p-landing
       </div>
       <a className="p-text-button" href="/app/?view=Funding">See both outcomes on testnet<Icon name="forward"/></a>
     </div></section>
-    <section id="onchain" className="p-onchain p-container" aria-labelledby="onchain-title">
-      <div className="p-onchain-intro" data-reveal=""><h2 id="onchain-title">Every step is a transaction you can check</h2>
-        <p>Nothing here asks for trust. The agreement, the pooled funds, the released key and the payout are finalized records on NEAR testnet. Open any of them in a block explorer.</p>
-        <dl className="p-contract-card"><div><dt>Contract</dt><dd><CopyChip value={PROOF.contract} label="contract address" href={accountUrl(PROOF.contract)} head={24} tail={0}/></dd></div><div><dt>Code hash</dt><dd><CopyChip value={PROOF.codeHash} label="code hash" head={8} tail={8}/></dd></div><div><dt>Verified at block</dt><dd>{PROOF.verifiedBlock.toLocaleString('en-US')}</dd></div></dl>
-        <p className="p-small">The app compares the deployed code hash with this one before it shows any campaign. All demo accounts are run by one operator.</p></div>
-      <div className="p-ledger"><h3>The Lantern Trail, funded and released</h3><ol className="p-ledger-list" data-reveal="stagger">{PROOF.release.map((row,i)=><li key={row.hash}><span className="p-ledger-node" aria-hidden="true">{i+1}</span><div><strong>{row.label}</strong><small>{row.detail}</small></div><span className="p-ledger-signer">{shorten(row.signer,10,8)}</span><a className="p-ledger-hash" href={transactionUrl(row.hash)} target="_blank" rel="noreferrer" aria-label={`${row.label}: transaction ${row.hash}`}><code>{shorten(row.hash,6,4)}</code><Icon name="external" size={13}/></a></li>)}</ol>
-        <h3>A missed deadline, refunded</h3><ol className="p-ledger-list p-ledger-refund" data-reveal="stagger">{PROOF.refund.map((row,i)=><li key={row.hash}><span className="p-ledger-node" aria-hidden="true">{i+1}</span><div><strong>{row.label}</strong><small>{row.detail}</small></div><span className="p-ledger-signer">{shorten(row.signer,10,8)}</span><a className="p-ledger-hash" href={transactionUrl(row.hash)} target="_blank" rel="noreferrer" aria-label={`${row.label}: transaction ${row.hash}`}><code>{shorten(row.hash,6,4)}</code><Icon name="external" size={13}/></a></li>)}</ol></div>
-    </section>
+    <section id="onchain" className="p-onchain" aria-labelledby="onchain-title"><NodeField/><div className="p-container">
+      <div className="p-onchain-top" data-reveal="stagger"><div className="p-onchain-intro"><h2 id="onchain-title">Every step is a transaction you can check</h2>
+        <p>Nothing here asks for trust. The agreement, the pooled funds, the released key and the payout are finalized records on NEAR testnet. Open any block below in the explorer.</p></div>
+        <div><dl className="p-contract-card"><div><dt>contract</dt><dd><CopyChip value={PROOF.contract} label="contract address" href={accountUrl(PROOF.contract)} head={24} tail={0}/></dd></div><div><dt>code_hash</dt><dd><CopyChip value={PROOF.codeHash} label="code hash" head={8} tail={8}/></dd></div><div><dt>verified_at_block</dt><dd>{PROOF.verifiedBlock.toLocaleString('en-US')}</dd></div></dl>
+        <p className="p-small">The app compares the deployed code hash with this one before it shows any campaign. All demo accounts are run by one operator.</p></div></div>
+      <BlockChain rows={PROOF.release} title="The Lantern Trail, funded and released"/>
+      <BlockChain rows={PROOF.refund} title="A missed deadline, refunded" tone="p-blocks-refund"/>
+    </div></section>
     <section id="stewardship" className="p-stewardship p-container" aria-labelledby="stewardship-title" data-reveal="stagger">
       <div><h2 id="stewardship-title">The host can change. The work stays open.</h2>
         <p>Each release creates one stewardship NFT. Its holder has a practical job: keep the preferred recovery mirror current. Transfer the token and that job moves to the next holder.</p>

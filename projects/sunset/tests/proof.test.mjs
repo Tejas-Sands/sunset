@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {PROOF,fingerprintCells,shorten,transactionUrl} from '../src/lib/proof.mjs';
+import {PROOF,fingerprintCells,seedHex,shorten,transactionUrl} from '../src/lib/proof.mjs';
 
 const evidence=async name=>JSON.parse(await readFile(new URL('../evidence/'+name,import.meta.url),'utf8'));
 
@@ -15,6 +15,7 @@ test('every displayed onchain record matches the finalized testnet evidence',asy
     assert.ok(tx,`Missing showcase step ${row.step}`);
     assert.equal(tx.transaction_hash,row.hash);assert.equal(tx.signer_id,row.signer);
     assert.equal(tx.final_execution_status,'FINAL');assert.equal(tx.intentional_authority_failure,false);
+    assert.equal(tx.outcomes[0].block_hash,row.block);
   }
   const amounts=showcase.transactions.filter(item=>item.step.startsWith('contribute-')).map(item=>item.actions[0].FunctionCall.args_json.amount);
   assert.deepEqual(amounts,['60000000000000000000000','40000000000000000000000']);
@@ -23,7 +24,7 @@ test('every displayed onchain record matches the finalized testnet evidence',asy
     const tx=refunds.transactions.find(item=>item.case==='funding'&&item.step===row.step);
     assert.ok(tx,`Missing refund step ${row.step}`);
     assert.equal(tx.transaction_hash,row.hash);assert.equal(tx.signer_id,row.signer);assert.equal(tx.final_execution_status,'FINAL');
-    assert.equal(tx.explorer_url,transactionUrl(row.hash));
+    assert.equal(tx.explorer_url,transactionUrl(row.hash));assert.equal(tx.receipt_outcomes[0].block_hash,row.block);
   }
 });
 
@@ -33,5 +34,6 @@ test('fingerprints are deterministic, mirrored and differ between digests',()=>{
   assert.notDeepEqual(fingerprintCells(a),fingerprintCells(b));
   for(const cell of fingerprintCells(a))assert.ok(fingerprintCells(a).some(other=>other.y===cell.y&&other.x===4-cell.x),'pattern must mirror');
   assert.deepEqual(fingerprintCells('not a digest'),[]);
+  assert.match(seedHex('sponsor.testnet'),/^[0-9a-f]{64}$/);assert.equal(seedHex('sponsor.testnet'),seedHex('sponsor.testnet'));assert.notEqual(seedHex('sponsor.testnet'),seedHex('reviewer.testnet'));
   assert.equal(shorten('sunset.shiftultra.testnet',8,7),'sunset.s…testnet');assert.equal(shorten('short'),'short');
 });

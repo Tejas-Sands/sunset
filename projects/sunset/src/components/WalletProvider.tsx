@@ -6,6 +6,7 @@ import {sendWalletAction,checkWalletIntent,loadPendingIntent,forgetUnsubmittedIn
 import {download} from '../lib/download.mjs';
 import {createWalletMetadataStorage} from '../lib/wallet-storage.mjs';
 import {Icon} from './Protocol';
+import {Avatar} from './Onchain';
 
 let connectorPromise:Promise<NearConnector>|null=null;
 async function getConnector(){
@@ -123,8 +124,8 @@ export function WalletControl(){
     return()=>{document.removeEventListener('pointerdown',close);document.removeEventListener('keydown',close);};
   },[]);
   if(!wallet.accountId)return <button className="p-button p-button-accent wallet-connect" disabled={wallet.connecting||wallet.busy} onClick={()=>void wallet.connect()}>{wallet.connecting?'Opening wallet…':'Connect wallet'}</button>;
-  return <details className="wallet-menu" ref={menu}><summary className="p-button wallet-account" aria-label={`Wallet ${wallet.accountId}`}><span className="p-live-dot"/><span>{wallet.accountId}</span><Icon name="chevron" size={16}/></summary>
-    <div><span className="p-menu-label">Connected on NEAR testnet</span><strong>{wallet.accountId}</strong><button disabled={wallet.busy||wallet.connecting} onClick={event=>{event.currentTarget.closest('details')?.removeAttribute('open');void wallet.connect();}}>Change wallet</button><button disabled={wallet.busy||wallet.connecting} onClick={()=>void wallet.disconnect()}>Disconnect</button></div></details>;
+  return <details className="wallet-menu" ref={menu}><summary className="p-button wallet-account" aria-label={`Wallet ${wallet.accountId}`}><Avatar id={wallet.accountId}/><span>{wallet.accountId}</span><Icon name="chevron" size={16}/></summary>
+    <div><span className="p-menu-label">Connected on NEAR testnet</span><strong><Avatar id={wallet.accountId} size={28}/>{wallet.accountId}</strong><button disabled={wallet.busy||wallet.connecting} onClick={event=>{event.currentTarget.closest('details')?.removeAttribute('open');void wallet.connect();}}>Change wallet</button><button disabled={wallet.busy||wallet.connecting} onClick={()=>void wallet.disconnect()}>Disconnect</button></div></details>;
 }
 export function WalletStatus(){
   const wallet=useWallet(),[hash,setHash]=useState('');
